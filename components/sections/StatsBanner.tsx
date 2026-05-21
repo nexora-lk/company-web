@@ -1,28 +1,57 @@
-import CountUpNumber from '@/components/ui/CountUpNumber';
+import type { Certification, Stat } from "@/types/content";
 
-export default function StatsBanner() {
-  const stats = [
-    { icon: '🌿', value: '15+', label: 'Plantation Projects' },
-    { icon: '👥', value: '50,000+', label: 'Community Members' },
-    { icon: '📍', value: '25+', label: 'Branch Locations' },
-    { icon: '📈', value: '18–24%', label: 'Investment Returns', static: true },
-  ];
+// Audited-metrics band: hairline-bounded 4-up stat grid plus the
+// "certified by" logo row. Border classes are position-derived.
 
+const STAT_BORDER_BY_INDEX = [
+  "border-b lg:border-b-0 lg:border-r border-line",
+  "border-b lg:border-b-0 lg:border-r border-line",
+  "lg:border-r border-line",
+  "",
+];
+
+export default function StatsBanner({
+  stats,
+  certifications,
+}: {
+  stats: Stat[];
+  certifications: Certification[];
+}) {
   return (
-    <section className="stats-banner">
-      <div className="container">
-        {stats.map((stat) => (
-          <div key={stat.label} className="stat-item">
-            <div className="stat-icon">{stat.icon}</div>
-            {stat.static ? (
-              <div className="stat-number">{stat.value}</div>
-            ) : (
-              <CountUpNumber target={stat.value} className="stat-number" />
-            )}
-            <div className="stat-label">{stat.label}</div>
-          </div>
-        ))}
+    <>
+      <div className="hairline"></div>
+      <div className="grid grid-cols-2 lg:grid-cols-4">
+        {stats.map((s, i) => {
+          const border = STAT_BORDER_BY_INDEX[i] ?? "";
+          return (
+            <div
+              key={s.label}
+              className={`p-8 lg:p-10${border ? ` ${border}` : ""}`}
+            >
+              <div className="num mb-6">{s.label}</div>
+              <div className="stat-num">
+                {s.value}
+                <em>{s.em}</em>
+              </div>
+              <div className="text-[12.5px] text-mute mt-3">{s.note}</div>
+            </div>
+          );
+        })}
       </div>
-    </section>
+      <div className="hairline"></div>
+
+      <div className="mt-10 flex flex-wrap items-center justify-between gap-6 text-mute">
+        <span className="text-[12px] uppercase tracking-[0.18em]">
+          Audited &amp; certified by
+        </span>
+        <div className="flex flex-wrap items-center gap-x-10 gap-y-3 font-display text-[22px]">
+          {certifications.map((c) => (
+            <span key={c.name} className={c.italic ? "italic" : undefined}>
+              {c.name}
+            </span>
+          ))}
+        </div>
+      </div>
+    </>
   );
 }

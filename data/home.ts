@@ -1,96 +1,98 @@
-export interface Service {
-  category: string;
-  tag: string;
-  icon: string;
-  title: string;
-  description: string;
-  metric: string;
-  href: string;
-}
+// Static content for the home route. Leaf module: types + data only.
+import type {
+  Certification,
+  ContactRow,
+  MarqueeItem,
+  Stat,
+  Value,
+} from "@/types/content";
 
-export const SERVICES: Service[] = [
+export const marqueeItems: MarqueeItem[] = [
+  { label: "Plantation", italic: false },
+  { label: "Micro-finance", italic: true },
+  { label: "Gem & Jewellery", italic: false },
+  { label: "Hospitality", italic: true },
+  { label: "Real Estate", italic: false },
+  { label: "Agri-Export", italic: true },
+];
+
+export const values: Value[] = [
   {
-    category: 'plantation',
-    tag: 'Agriculture',
-    icon: '🌿',
-    title: 'Plantation & Cultivation',
-    description: 'Cultivating high-value crops like ginger, banana, and mango across Sri Lanka for local and export markets.',
-    metric: '✔ 137+ Active Acres Under Management',
-    href: '/our-plantation',
+    no: "01",
+    aside: "— Always",
+    title: ["Innovation, ", "tempered", "."],
+    body: "We adopt new methods only once they survive a generation of stewardship — then we deploy them at scale across every estate.",
   },
   {
-    category: 'finance',
-    tag: 'Finance',
-    icon: '💰',
-    title: 'Micro Finance — Next Investment',
-    description: 'Providing inclusive financial support for rural entrepreneurs and small-scale farmers through tailored loan products. Est. 2013.',
-    metric: '✔ 5,000+ SMEs Supported',
-    href: '/microfinance',
+    no: "02",
+    aside: "— Soil first",
+    title: ["Sustainability as ", "policy", "."],
+    body: "Every operation budgets a regeneration line: water tables, soil carbon, and biodiversity audited against the year before.",
   },
   {
-    category: 'gems',
-    tag: 'Luxury Export',
-    icon: '💎',
-    title: 'Gem & Jewelry Export',
-    description: 'Certified gem trading and export business offering authentic Sri Lankan gemstones to global markets including Dubai, Japan, and Europe.',
-    metric: '✔ 20+ Export Destinations',
-    href: '/events',
+    no: "03",
+    aside: "— No exceptions",
+    title: ["Quality, line by ", "line", "."],
+    body: "Every export carton, every loan ticket, every set stone is graded against a global benchmark — and the benchmark is ours.",
   },
   {
-    category: 'fmcg',
-    tag: 'Consumer Goods',
-    icon: '📦',
-    title: 'FMCG — PGG Fresh Foods',
-    description: 'Processing and distributing value-added fresh fruits and herbal products under the PGG Fresh Foods brand.',
-    metric: '✔ 50+ Product SKUs',
-    href: '/events',
+    no: "04",
+    aside: "— Listening loop",
+    title: ["Customers, in ", "conversation", "."],
+    body: "We answer the line, we visit the buyer, we walk the field. Reliability is a habit before it is a clause.",
   },
   {
-    category: 'ngo',
-    tag: 'Social Impact',
-    icon: '🤝',
-    title: 'NGO & Social Projects',
-    description: 'Driving social change through education, rehabilitation, and income generation projects funded by global partners.',
-    metric: '✔ 25+ Active Projects',
-    href: '/corporate-information',
+    no: "05",
+    aside: "— Public ledger",
+    title: ["Integrity, on ", "paper", "."],
+    body: "Transparency isn't a virtue we claim — it's the audited disclosures we publish four times a year.",
   },
   {
-    category: 'realestate',
-    tag: 'Property',
-    icon: '🏗️',
-    title: 'Agri Real Estate',
-    description: 'Developing and managing commercial agricultural lands and estate projects to maximize asset value and investor returns.',
-    metric: '✔ 200+ Acres Developed',
-    href: '/investment-plans',
+    no: "06",
+    aside: "— Outward",
+    title: ["Excellence, ", "global", "."],
+    body: "We measure ourselves against Geneva and Tokyo, not Colombo — and we take the island with us when we travel.",
   },
 ];
 
-export interface CoreValue {
-  num: string;
-  icon: string;
-  title: string;
-  description: string;
-}
-
-export const CORE_VALUES: CoreValue[] = [
-  { num: '01', icon: '💡', title: 'Innovation', description: 'We embrace creativity and continuous improvement to drive transformative solutions across all sectors.' },
-  { num: '02', icon: '🌱', title: 'Sustainability', description: 'Our operations prioritize environmental stewardship and long-term socio-economic impact.' },
-  { num: '03', icon: '⭐', title: 'Quality', description: 'We deliver only high-standard products and services that meet global benchmarks.' },
-  { num: '04', icon: '😊', title: 'Customer Satisfaction', description: 'We are committed to exceeding customer expectations through responsiveness, reliability, and value.' },
-  { num: '05', icon: '🛡️', title: 'Integrity', description: 'We uphold transparency, fairness, and ethical practices in all business dealings.' },
-  { num: '06', icon: '🌍', title: 'Global Excellence', description: 'We aim for internationally recognized performance, partnerships, and market reach.' },
+export const stats: Stat[] = [
+  {
+    label: "Years of stewardship",
+    value: "28",
+    em: ".",
+    note: "Founded 1998 · 3rd generation",
+  },
+  {
+    label: "Smallholder partners",
+    value: "28",
+    em: "K",
+    note: "Across 9 provinces of Sri Lanka",
+  },
+  {
+    label: "Saplings distributed",
+    value: "21",
+    em: "K",
+    note: "2025 reforestation programme",
+  },
+  {
+    label: "Loan repayment rate",
+    value: "96",
+    em: ".4",
+    note: "Across 11,200 active borrowers",
+  },
 ];
 
-export const HIGHLIGHTS = [
-  { icon: '🌿', text: 'Sustainable Agriculture' },
-  { icon: '🌍', text: 'Global Market Access' },
-  { icon: '❤️', text: 'Community Upliftment' },
-  { icon: '🛡️', text: 'Ethical Business Practices' },
-] as const;
+export const certifications: Certification[] = [
+  { name: "KPMG", italic: false },
+  { name: "Rainforest Alliance", italic: true },
+  { name: "Fairtrade SL", italic: false },
+  { name: "GIA", italic: true },
+  { name: "ISO 9001:2015", italic: false },
+];
 
-export const TRUST_BADGES = [
-  { icon: '🔒', text: '100% Transparent' },
-  { icon: '📜', text: 'Legally Registered' },
-  { icon: '📈', text: 'Proven Returns' },
-  { icon: '🤝', text: 'Dedicated Support' },
-] as const;
+export const contactRows: ContactRow[] = [
+  { label: "Head office", value: "62 Maitland Crescent, Colombo 07" },
+  { label: "Investor desk", value: "invest@prestigeglamour.lk" },
+  { label: "Trade enquiries", value: "trade@prestigeglamour.lk" },
+  { label: "Telephone", value: "+94 11 207 6651" },
+];

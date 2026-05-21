@@ -1,0 +1,87 @@
+name: Test Suite
+
+on:
+    push:
+        branches: [main, develop]
+    pull_request:
+        branches: [main, develop]
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+
+        strategy:
+            matrix:
+                node-version: [18.x, 20.x]
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: ${{ matrix.node-version }}
+                  cache: 'npm'
+
+            - name: Install dependencies
+              run: npm ci
+
+            - name: Run linter
+              run: npm run lint
+              continue-on-error: true
+
+            - name: Run unit tests
+              run: npm run test:unit
+
+            - name: Run integration tests
+              run: npm run test:integration
+
+            - name: Generate coverage report
+              run: npm run test:coverage
+
+            - name: Upload coverage to Codecov
+              uses: codecov/codecov-action@v4
+              with:
+                  files: ./coverage/lcov.info
+                  flags: unittests
+                  name: codecov-umbrella
+                  fail_ci_if_error: false
+
+            - name: Comment coverage on PR
+              if: github.event_name == 'pull_request'
+              uses: romeovs/lcov-reporter-action@v0.3.1
+              with:
+                  lcov-file: ./coverage/lcov.info
+              continue-on-error: true
+
+            - name: Archive test results
+              if: always()
+              uses: actions/upload-artifact@v3
+              with:
+                  name: test-results-${{ matrix.node-version }}
+                  path: coverage/
+
+    coverage-check:
+        needs: test
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Download coverage
+              uses: actions/download-artifact@v3
+              with:
+                  name: test-results-18.x
+
+            - name: Check coverage thresholds
+              run: |
+                  if [ ! -f coverage/coverage-summary.json ]; then
+                    echo "Coverage file not found"
+                    exit 1
+                  fi
+
+                  STATEMENTS=$(grep -o '"statements".*' coverage/coverage-summary.json | head -1 | grep -o '[0-9.]*' | head -1)
+                  if (( $(echo "$STATEMENTS < 80" | bc -l) )); then
+                    echo "❌ Statement coverage is $STATEMENTS%, minimum is 80%"
+                    exit 1
+                  fi
+                  echo "✅ Coverage check passed: $STATEMENTS%"

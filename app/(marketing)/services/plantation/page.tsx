@@ -1,11 +1,77 @@
+import type { Metadata } from 'next';
+import GallerySection from '../../../../components/sections/services/plantation/gallery';
 import HeroSection from '../../../../components/sections/services/plantation/hero';
 import OverviewSection from '../../../../components/sections/services/plantation/overview';
-import GallerySection from '../../../../components/sections/services/plantation/gallery';
 import PortfolioSection from '../../../../components/sections/services/plantation/portfolio';
+
+export const metadata: Metadata = {
+    title: 'Plantation Services | Premium Highland Crops | Prestige Glamour',
+    description:
+        'Premium plantation management in Sri Lanka highlands. Sustainable cultivation of tea, cinnamon, and export-quality crops with proven track record.',
+    alternates: {
+        canonical: 'https://www.prestigeglamourgroupofcompany.com/services/plantation',
+    },
+    openGraph: {
+        title: 'Plantation Services & Highland Crops',
+        description:
+            'Premium plantation management with sustainable practices across Sri Lankan highlands.',
+        url: 'https://www.prestigeglamourgroupofcompany.com/services/plantation',
+        type: 'website',
+    },
+};
 
 export default function PlantationPage() {
     return (
         <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        '@context': 'https://schema.org',
+                        '@type': 'BreadcrumbList',
+                        itemListElement: [
+                            {
+                                '@type': 'ListItem',
+                                position: 1,
+                                name: 'Home',
+                                item: 'https://www.prestigeglamourgroupofcompany.com',
+                            },
+                            {
+                                '@type': 'ListItem',
+                                position: 2,
+                                name: 'Services',
+                                item: 'https://www.prestigeglamourgroupofcompany.com/#services',
+                            },
+                            {
+                                '@type': 'ListItem',
+                                position: 3,
+                                name: 'Plantation',
+                                item: 'https://www.prestigeglamourgroupofcompany.com/services/plantation',
+                            },
+                        ],
+                    }),
+                }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        '@context': 'https://schema.org',
+                        '@type': 'LocalBusiness',
+                        name: 'Prestige Glamour - Plantation Services',
+                        description: 'Premium highland plantation management in Sri Lanka.',
+                        url: 'https://www.prestigeglamourgroupofcompany.com/services/plantation',
+                        areaServed: 'LK',
+                        knowsAbout: [
+                            'Tea Plantation',
+                            'Cinnamon',
+                            'Export Crops',
+                            'Sustainable Agriculture',
+                        ],
+                        serviceArea: 'Sri Lanka Highlands',
+                    }),
+                }}
+            />
             <HeroSection />
             <OverviewSection />
             <GallerySection />

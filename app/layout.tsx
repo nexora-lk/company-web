@@ -97,6 +97,10 @@ export default function RootLayout({
             <head>
                 <link rel="preconnect" href="https://images.unsplash.com" crossOrigin="" />
                 <link rel="dns-prefetch" href="https://images.unsplash.com" />
+                <meta
+                    name="google-site-verification"
+                    content="FYgdAmWULb4nRgIMS8lGbU1F7-3muEXQMJLDPIOACIA"
+                />
             </head>
             <body className="font-body text-ink">
                 <GoogleAnalytics gaId="G-43N120Q5GW" />

@@ -57,7 +57,7 @@ export default function AllProgrammesSection() {
                     <div className="col-span-12 lg:col-span-4 evt-img">
                         <figure className="rounded-[14px] overflow-hidden aspect-[4/3]">
                             <Photo
-                                src="https://images.unsplash.com/photo-1579621970795-87facc2f976d?w=1000&q=80&auto=format&fit=crop"
+                                src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779442665/event-prog-1_gw2r3c.jpg"
                                 alt=""
                                 className="w-full h-full object-cover"
                             />
@@ -69,7 +69,7 @@ export default function AllProgrammesSection() {
                     <div className="col-span-12 lg:col-span-4 evt-img order-2 lg:order-1">
                         <figure className="rounded-[14px] overflow-hidden aspect-[4/3]">
                             <Photo
-                                src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1000&q=80&auto=format&fit=crop"
+                                src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                                 alt=""
                                 className="w-full h-full object-cover"
                             />
@@ -134,7 +134,7 @@ export default function AllProgrammesSection() {
                     <div className="col-span-12 lg:col-span-4 evt-img">
                         <figure className="rounded-[14px] overflow-hidden aspect-[4/3]">
                             <Photo
-                                src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=1000&q=80&auto=format&fit=crop"
+                                src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                                 alt=""
                                 className="w-full h-full object-cover"
                             />
@@ -146,7 +146,7 @@ export default function AllProgrammesSection() {
                     <div className="col-span-12 lg:col-span-4 evt-img order-2 lg:order-1">
                         <figure className="rounded-[14px] overflow-hidden aspect-[4/3]">
                             <Photo
-                                src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=1000&q=80&auto=format&fit=crop"
+                                src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                                 alt=""
                                 className="w-full h-full object-cover"
                             />
@@ -213,7 +213,7 @@ export default function AllProgrammesSection() {
                     <div className="col-span-12 lg:col-span-4 evt-img">
                         <figure className="rounded-[14px] overflow-hidden aspect-[4/3]">
                             <Photo
-                                src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1000&q=80&auto=format&fit=crop"
+                                src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                                 alt=""
                                 className="w-full h-full object-cover"
                             />
@@ -225,7 +225,7 @@ export default function AllProgrammesSection() {
                     <div className="col-span-12 lg:col-span-4 evt-img order-2 lg:order-1">
                         <figure className="rounded-[14px] overflow-hidden aspect-[4/3]">
                             <Photo
-                                src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1000&q=80&auto=format&fit=crop"
+                                src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                                 alt=""
                                 className="w-full h-full object-cover"
                             />
@@ -291,7 +291,7 @@ export default function AllProgrammesSection() {
                     <div className="col-span-12 lg:col-span-4 evt-img">
                         <figure className="rounded-[14px] overflow-hidden aspect-[4/3]">
                             <Photo
-                                src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1000&q=80&auto=format&fit=crop"
+                                src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                                 alt=""
                                 className="w-full h-full object-cover"
                             />

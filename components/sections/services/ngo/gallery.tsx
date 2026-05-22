@@ -6,13 +6,13 @@ export default function GallerySection() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-1.5 px-1.5">
                 <figure className="aspect-[4/5] lg:aspect-[3/4] rounded-[14px]">
                     <Photo
-                        src="https://images.unsplash.com/photo-1559027615-cd2628902d4a?w=1600&q=80&auto=format&fit=crop"
+                        src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                         alt="Children in a rural school classroom"
                     />
                 </figure>
                 <figure className="aspect-[4/5] lg:aspect-[3/4] rounded-[14px]">
                     <Photo
-                        src="https://images.unsplash.com/photo-1559966662-77eba49cd646?w=1600&q=80&auto=format&fit=crop"
+                        src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                         alt="Community members in a group discussion"
                     />
                 </figure>

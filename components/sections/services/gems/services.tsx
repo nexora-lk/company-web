@@ -1,8 +1,5 @@
 import { gemServices, heritageInfo } from '@/data/gems';
 
-/**
- * Gem Services Section - Core services offered
- */
 export default function GemServicesSection() {
     return (
         <section className="py-24 lg:py-32 bg-surface">

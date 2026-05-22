@@ -1,10 +1,10 @@
 import ProductCategoriesSection from '@/components/sections/services/gems/product-categories';
 import RoughGemsSection from '@/components/sections/services/gems/rough-gems';
 import type { Metadata } from 'next';
-import GallerySection from '../../../../components/sections/services/gems/gallery';
-import OverviewSection from '../../../../components/sections/services/gems/overview';
-import GemServicesSection from '../../../../components/sections/services/gems/services';
-import WhyChooseUsSection from '../../../../components/sections/services/gems/why-choose-us';
+import GallerySection from '@/components/sections/services/gems/gallery';
+import OverviewSection from '@/components/sections/services/gems/overview';
+import GemServicesSection from '@/components/sections/services/gems/services';
+import WhyChooseUsSection from '@/components/sections/services/gems/why-choose-us';
 
 export const metadata: Metadata = {
     title: 'Gems & Jewellery Services | Premium Sapphires | Sri Lanka',

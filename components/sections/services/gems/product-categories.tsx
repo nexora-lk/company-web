@@ -1,6 +1,3 @@
-/**
- * Product Categories Section - Main gem types from Glamour Opal Gem
- */
 export default function ProductCategoriesSection() {
     const categories = [
         {

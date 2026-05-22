@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
-import GallerySection from '../../../../components/sections/services/fmcg/gallery';
-import HeroSection from '../../../../components/sections/services/fmcg/hero';
-import OverviewSection from '../../../../components/sections/services/fmcg/overview';
-import ProductsSection from '../../../../components/sections/services/fmcg/products';
+import GallerySection from '@/components/sections/services/fmcg/gallery';
+import HeroSection from '@/components/sections/services/fmcg/hero';
+import OverviewSection from '@/components/sections/services/fmcg/overview';
+import ProductsSection from '@/components/sections/services/fmcg/products';
 
 export const metadata: Metadata = {
     title: 'FMCG Products & Distribution | Sri Lanka',

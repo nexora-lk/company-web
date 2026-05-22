@@ -1,8 +1,5 @@
 import type { Certification, Stat } from "@/types/content";
 
-// Audited-metrics band: hairline-bounded 4-up stat grid plus the
-// "certified by" logo row. Border classes are position-derived.
-
 const STAT_BORDER_BY_INDEX = [
   "border-b lg:border-b-0 lg:border-r border-line",
   "border-b lg:border-b-0 lg:border-r border-line",

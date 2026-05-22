@@ -1,5 +1,5 @@
-import Photo from '@/components/ui/Photo';
 import SectionEyebrow from '@/components/sections/SectionEyebrow';
+import Photo from '@/components/ui/Photo';
 
 export default function AboutSection() {
     return (
@@ -9,7 +9,7 @@ export default function AboutSection() {
                     <div className="col-span-12 lg:col-span-6 relative">
                         <figure className="rounded-[18px] overflow-hidden aspect-[4/5]">
                             <Photo
-                                src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=1100&q=80&auto=format&fit=crop"
+                                src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                                 alt="Colonial estate house in the Sri Lankan highlands"
                                 className="w-full h-full object-cover"
                             />

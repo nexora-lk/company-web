@@ -70,7 +70,7 @@ export default function OverviewSection() {
 
                         <figure className="absolute -bottom-6 -left-6 w-[58%] aspect-[4/3] rounded-[14px] overflow-hidden border border-line bg-surface hidden lg:block">
                             <Photo
-                                src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=900&q=80&auto=format&fit=crop"
+                                src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                                 alt="A seedling held above a home"
                                 priority
                                 className="w-full h-full object-cover"

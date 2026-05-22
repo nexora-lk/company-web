@@ -28,19 +28,19 @@ export default function ProductsSection() {
                         {
                             title: 'Fresh-Cut Fruit',
                             desc: 'Vacuum-packed tropical fruits cut daily from our own estates. Delivered fresh to retail partners across Sri Lanka.',
-                            img: 'https://images.unsplash.com/photo-1584099000835-52c5e8f3bb51?w=1100&q=80&auto=format&fit=crop',
+                            img: 'https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg',
                             alt: 'Fresh cut tropical fruits',
                         },
                         {
                             title: 'Herbal & Spice Blends',
                             desc: 'Proprietary blends of ginger, turmeric, and cinnamon sourced from our plantation network. No additives or fillers.',
-                            img: 'https://images.unsplash.com/photo-1599599810694-b3c7cb1f4311?w=1100&q=80&auto=format&fit=crop',
+                            img: 'https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg',
                             alt: 'Herbal spice blend products',
                         },
                         {
                             title: 'Cold-Pressed Juices',
                             desc: 'Fresh-pressed single-fruit and blend juices. No concentrates, no pasteurization. Available in 6-month frozen contracts.',
-                            img: 'https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=1100&q=80&auto=format&fit=crop',
+                            img: 'https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg',
                             alt: 'Cold pressed juice bottles',
                         },
                     ].map((product, idx) => (

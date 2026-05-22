@@ -1,7 +1,6 @@
 import { gemstoneCollection } from '@/data/gems';
 
 export default function CollectionSection() {
-    // Display first 6 gemstones in a responsive grid
     const displayedGems = gemstoneCollection.slice(0, 6);
 
     return (

@@ -1,38 +1,59 @@
-import Image from "next/image";
+import { CldImage } from 'next-cloudinary';
+import Image from 'next/image';
 
 type PhotoProps = {
-  src: string;
-  alt: string;
-  /** Set on the LCP / above-the-fold hero image of a page. */
-  priority?: boolean;
-  /** Responsive sizes hint; falls back to a sensible site-wide default. */
-  sizes?: string;
-  className?: string;
+    src: string;
+    alt: string;
+    width?: number;
+    height?: number;
+    priority?: boolean;
+    sizes?: string;
+    className?: string;
+    crop?: {
+        type: 'auto';
+        source: true;
+    };
 };
 
-/**
- * Optimized remote image. Wraps next/image so every photo on the site gets
- * AVIF/WebP, responsive srcset and lazy-loading via the Next image optimizer
- * (configured in next.config.ts). Visual sizing is still driven entirely by
- * the surrounding CSS (`.ph img`, `w-full h-full object-cover`, etc.); the
- * intrinsic width/height below only set the aspect ratio to avoid layout shift.
- */
 export default function Photo({
-  src,
-  alt,
-  priority = false,
-  sizes = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
-  className,
+    src,
+    alt,
+    width = 1600,
+    height = 1067,
+    priority = false,
+    sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw',
+    className,
+    crop = {
+        type: 'auto',
+        source: true,
+    },
 }: PhotoProps) {
-  return (
-    <Image
-      src={src}
-      alt={alt}
-      width={1600}
-      height={1067}
-      priority={priority}
-      sizes={sizes}
-      className={className}
-    />
-  );
+    const cloudName = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME;
+
+    if (!cloudName) {
+        return (
+            <Image
+                src={src}
+                alt={alt}
+                width={width}
+                height={height}
+                priority={priority}
+                sizes={sizes}
+                className={className}
+            />
+        );
+    }
+
+    return (
+        <CldImage
+            src={src}
+            alt={alt}
+            width={width}
+            height={height}
+            priority={priority}
+            sizes={sizes}
+            className={className}
+            crop={crop}
+        />
+    );
 }

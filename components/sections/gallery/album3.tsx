@@ -30,49 +30,49 @@ export default function Album3Section() {
                 <div className="grid grid-cols-12 auto-rows-[120px] gap-3">
                     <div className="ph col-span-8 row-span-4">
                         <Photo
-                            src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1600&q=80&auto=format&fit=crop"
+                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                             alt=""
                         />
                         <div className="ph-meta">01 · Provincial heads, all in one room</div>
                     </div>
                     <div className="ph col-span-4 row-span-2">
                         <Photo
-                            src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=900&q=80&auto=format&fit=crop"
+                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                             alt=""
                         />
                         <div className="ph-meta">02 · Reception</div>
                     </div>
                     <div className="ph col-span-4 row-span-2">
                         <Photo
-                            src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=900&q=80&auto=format&fit=crop"
+                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                             alt=""
                         />
                         <div className="ph-meta">03 · Lamp lighting</div>
                     </div>
                     <div className="ph col-span-3 row-span-2">
                         <Photo
-                            src="https://images.unsplash.com/photo-1525909002-1b05e0c869d8?w=900&q=80&auto=format&fit=crop"
+                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                             alt=""
                         />
                         <div className="ph-meta">04 · Garland</div>
                     </div>
                     <div className="ph col-span-3 row-span-2">
                         <Photo
-                            src="https://images.unsplash.com/photo-1531058020387-3be344556be6?w=900&q=80&auto=format&fit=crop"
+                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                             alt=""
                         />
                         <div className="ph-meta">05 · Cake</div>
                     </div>
                     <div className="ph col-span-3 row-span-2">
                         <Photo
-                            src="https://images.unsplash.com/photo-1543269865-cbf427effbad?w=900&q=80&auto=format&fit=crop"
+                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                             alt=""
                         />
                         <div className="ph-meta">06 · Speeches</div>
                     </div>
                     <div className="ph col-span-3 row-span-2">
                         <Photo
-                            src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=900&q=80&auto=format&fit=crop"
+                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                             alt=""
                         />
                         <div className="ph-meta">07 · Handshake</div>

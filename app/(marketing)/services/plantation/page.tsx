@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
-import GallerySection from '../../../../components/sections/services/plantation/gallery';
-import HeroSection from '../../../../components/sections/services/plantation/hero';
-import OverviewSection from '../../../../components/sections/services/plantation/overview';
-import PortfolioSection from '../../../../components/sections/services/plantation/portfolio';
+import GallerySection from '@/components/sections/services/plantation/gallery';
+import HeroSection from '@/components/sections/services/plantation/hero';
+import OverviewSection from '@/components/sections/services/plantation/overview';
+import PortfolioSection from '@/components/sections/services/plantation/portfolio';
 
 export const metadata: Metadata = {
     title: 'Plantation Services | Premium Highland Crops | Prestige Glamour',

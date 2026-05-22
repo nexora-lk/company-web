@@ -1,11 +1,11 @@
-import SectionEyebrow from '@/components/sections/SectionEyebrow';
-import HeroSlider from '@/features/hero-slider/HeroSlider';
 import Marquee from '@/components/sections/Marquee';
+import SectionEyebrow from '@/components/sections/SectionEyebrow';
 import { marqueeItems } from '@/data/home';
+import HeroSlider from '@/features/hero-slider/HeroSlider';
 
 export default function HeroSection() {
     return (
-        <section className="relative overflow-hidden">
+        <section className="relative overflow-hidden" aria-label="Hero">
             <div className="max-w-content mx-auto px-6 lg:px-10 pt-16 lg:pt-24 pb-20 lg:pb-32">
                 <div className="grid grid-cols-12 gap-6 lg:gap-10 items-end">
                     <div className="col-span-12 lg:col-span-7">

@@ -6,7 +6,7 @@ export default function InvestSection() {
             <div className="max-w-content mx-auto px-6 lg:px-10">
                 <div className="relative rounded-[24px] overflow-hidden min-h-[440px] flex items-end">
                     <Photo
-                        src="https://images.unsplash.com/photo-1597318181409-cf64d0b5d8a2?w=1800&q=80&auto=format&fit=crop"
+                        src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                         alt="Investment opportunity with Prestige Glamour Group - compound growth in Sri Lankan conglomerate"
                         className="absolute inset-0 w-full h-full object-cover"
                     />

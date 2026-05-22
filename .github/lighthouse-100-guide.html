@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lighthouse 100% — Next.js Optimization Guide</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap');
+
+  :root {
+    --bg: #0a0a0f;
+    --surface: #111118;
+    --surface2: #18181f;
+    --border: #2a2a35;
+    --green: #00e87a;
+    --orange: #ff9500;
+    --red: #ff3b3b;
+    --blue: #4fa8ff;
+    --purple: #b060ff;
+    --text: #e8e8f0;
+    --muted: #7a7a90;
+    --code-bg: #0d0d16;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Syne', sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  /* HEADER */
+  .hero {
+    background: linear-gradient(135deg, #0a0a0f 0%, #111124 50%, #0a0a0f 100%);
+    border-bottom: 1px solid var(--border);
+    padding: 60px 40px 50px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(0,232,122,0.07) 0%, transparent 70%);
+  }
+  .hero-label {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--green);
+    background: rgba(0,232,122,0.08);
+    border: 1px solid rgba(0,232,122,0.2);
+    padding: 5px 14px;
+    border-radius: 20px;
+    margin-bottom: 24px;
+  }
+  .hero h1 {
+    font-size: clamp(32px, 5vw, 56px);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+  .hero h1 span { color: var(--green); }
+  .hero-sub {
+    color: var(--muted);
+    font-size: 16px;
+    max-width: 600px;
+    margin: 0 auto 40px;
+  }
+
+  /* SCORE CARDS */
+  .scores-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    position: relative;
+  }
+  .score-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 20px 28px;
+    min-width: 140px;
+    text-align: center;
+  }
+  .score-before { color: var(--orange); font-size: 13px; font-family: 'JetBrains Mono', monospace; }
+  .score-arrow { color: var(--muted); margin: 0 6px; }
+  .score-after { color: var(--green); font-size: 22px; font-weight: 800; font-family: 'JetBrains Mono', monospace; }
+  .score-label { color: var(--muted); font-size: 12px; margin-top: 4px; }
+  .score-card.perfect { border-color: rgba(0,232,122,0.3); background: rgba(0,232,122,0.04); }
+  .score-card.perfect .score-before { color: var(--green); }
+
+  /* LAYOUT */
+  .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+  .content { padding: 60px 0; }
+
+  /* SECTION */
+  .section {
+    margin-bottom: 60px;
+  }
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 28px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+  }
+  .section-icon {
+    width: 44px; height: 44px;
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+  .icon-perf { background: rgba(255,149,0,0.12); }
+  .icon-access { background: rgba(79,168,255,0.12); }
+  .icon-both { background: rgba(176,96,255,0.12); }
+  .section-title { font-size: 22px; font-weight: 700; }
+  .section-score {
+    margin-left: auto;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    padding: 4px 12px;
+    border-radius: 20px;
+  }
+  .score-bad { background: rgba(255,59,59,0.12); color: var(--red); border: 1px solid rgba(255,59,59,0.2); }
+  .score-ok { background: rgba(255,149,0,0.12); color: var(--orange); border: 1px solid rgba(255,149,0,0.2); }
+  .score-good { background: rgba(0,232,122,0.08); color: var(--green); border: 1px solid rgba(0,232,122,0.2); }
+
+  /* FIX CARDS */
+  .fix-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+  .fix-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 20px 24px 16px;
+  }
+  .fix-priority {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    padding: 3px 9px;
+    border-radius: 5px;
+    white-space: nowrap;
+    margin-top: 2px;
+    flex-shrink: 0;
+  }
+  .p-critical { background: rgba(255,59,59,0.15); color: var(--red); }
+  .p-high { background: rgba(255,149,0,0.15); color: var(--orange); }
+  .p-medium { background: rgba(79,168,255,0.15); color: var(--blue); }
+  .fix-title { font-weight: 700; font-size: 16px; line-height: 1.3; }
+  .fix-saving { color: var(--green); font-family: 'JetBrains Mono', monospace; font-size: 12px; margin-top: 2px; }
+  .fix-body { padding: 0 24px 20px; }
+  .fix-why { color: var(--muted); font-size: 14px; margin-bottom: 14px; }
+
+  /* CODE BLOCKS */
+  .code-block {
+    background: var(--code-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 12px 0;
+  }
+  .code-label {
+    background: var(--surface2);
+    border-bottom: 1px solid var(--border);
+    padding: 7px 14px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .code-label .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); }
+  pre {
+    padding: 16px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12.5px;
+    line-height: 1.75;
+    overflow-x: auto;
+    color: #c9d1d9;
+  }
+  .kw { color: #ff79c6; }
+  .str { color: #f1fa8c; }
+  .cm { color: #6272a4; font-style: italic; }
+  .fn { color: #50fa7b; }
+  .var { color: #8be9fd; }
+  .num { color: #bd93f9; }
+  .attr { color: #ffb86c; }
+  .tag { color: #ff5555; }
+
+  /* TIPS */
+  .tip-box {
+    background: rgba(0,232,122,0.06);
+    border: 1px solid rgba(0,232,122,0.18);
+    border-left: 3px solid var(--green);
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 14px 0;
+    font-size: 14px;
+    color: #b0f0cc;
+  }
+  .warn-box {
+    background: rgba(255,149,0,0.06);
+    border: 1px solid rgba(255,149,0,0.18);
+    border-left: 3px solid var(--orange);
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 14px 0;
+    font-size: 14px;
+    color: #ffd6a0;
+  }
+
+  /* CHECKLIST */
+  .checklist {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 24px;
+  }
+  .checklist h3 { font-size: 16px; margin-bottom: 16px; color: var(--text); }
+  .check-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+  }
+  .check-item:last-child { border-bottom: none; }
+  .check-box {
+    width: 20px; height: 20px;
+    border: 2px solid var(--border);
+    border-radius: 5px;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .check-item strong { color: var(--text); }
+  .check-item span { color: var(--muted); }
+
+  /* IMPACT TABLE */
+  .impact-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    margin: 16px 0;
+  }
+  .impact-table th {
+    background: var(--surface2);
+    color: var(--muted);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 10px 14px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+  }
+  .impact-table td {
+    padding: 12px 14px;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    vertical-align: top;
+  }
+  .impact-table tr:last-child td { border-bottom: none; }
+  .impact-table .tag-fix { 
+    font-family: 'JetBrains Mono', monospace; font-size: 11px;
+    background: var(--surface2); border: 1px solid var(--border);
+    border-radius: 4px; padding: 2px 6px; white-space: nowrap;
+  }
+  .badge-mobile { background: rgba(255,149,0,0.15); color: var(--orange); border-color: rgba(255,149,0,0.2); }
+  .badge-both { background: rgba(176,96,255,0.12); color: var(--purple); border-color: rgba(176,96,255,0.2); }
+
+  /* FINAL SCORE PREVIEW */
+  .final-scores {
+    background: linear-gradient(135deg, rgba(0,232,122,0.06), rgba(79,168,255,0.04));
+    border: 1px solid rgba(0,232,122,0.2);
+    border-radius: 16px;
+    padding: 32px;
+    text-align: center;
+    margin-top: 48px;
+  }
+  .final-scores h2 { font-size: 28px; font-weight: 800; margin-bottom: 8px; }
+  .final-scores p { color: var(--muted); margin-bottom: 28px; }
+  .scores-final-row { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+  .score-100 {
+    width: 90px; height: 90px;
+    border-radius: 50%;
+    border: 3px solid var(--green);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 28px; font-weight: 800;
+    color: var(--green);
+    font-family: 'JetBrains Mono', monospace;
+    box-shadow: 0 0 24px rgba(0,232,122,0.2);
+    position: relative;
+  }
+
+  /* DIVIDER */
+  .divider { height: 1px; background: var(--border); margin: 48px 0; }
+
+  /* FOOTER */
+  footer {
+    text-align: center;
+    padding: 40px;
+    color: var(--muted);
+    font-size: 13px;
+    border-top: 1px solid var(--border);
+  }
+  footer strong { color: var(--green); }
+
+  @media (max-width: 600px) {
+    .hero { padding: 40px 20px; }
+    .container { padding: 0 16px; }
+    .fix-header { flex-wrap: wrap; }
+    pre { font-size: 11px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-label">Next.js · Lighthouse Audit · Senior Engineer Guide</div>
+  <h1>Achieve <span>100/100/100/100</span><br>on Desktop & Mobile</h1>
+  <p class="hero-sub">Complete fix guide for your client project — every issue from your audit, every code fix, zero guesswork.</p>
+  <div class="scores-row">
+    <div class="score-card">
+      <div><span class="score-before">81</span><span class="score-arrow">→</span><span class="score-after">100</span></div>
+      <div class="score-label">Performance Mobile</div>
+    </div>
+    <div class="score-card perfect">
+      <div><span class="score-before score-ok" style="color:var(--orange)">99</span><span class="score-arrow">→</span><span class="score-after">100</span></div>
+      <div class="score-label">Performance Desktop</div>
+    </div>
+    <div class="score-card">
+      <div><span class="score-before" style="color:#ffcc44">94</span><span class="score-arrow">→</span><span class="score-after">100</span></div>
+      <div class="score-label">Accessibility</div>
+    </div>
+    <div class="score-card perfect">
+      <div><span class="score-before" style="color:var(--green)">100</span><span class="score-arrow" style="color:var(--green)">✓</span><span class="score-after">100</span></div>
+      <div class="score-label">Best Practices</div>
+    </div>
+    <div class="score-card perfect">
+      <div><span class="score-before" style="color:var(--green)">100</span><span class="score-arrow" style="color:var(--green)">✓</span><span class="score-after">100</span></div>
+      <div class="score-label">SEO</div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+<div class="content">
+
+  <!-- QUICK IMPACT TABLE -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon icon-both">🎯</div>
+      <div>
+        <div class="section-title">All Issues — Priority Order</div>
+        <div style="color:var(--muted);font-size:13px">Fix in this order for maximum score gain</div>
+      </div>
+    </div>
+    <table class="impact-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Issue</th>
+          <th>Affects</th>
+          <th>Score Impact</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="color:var(--red);font-weight:700">1</td>
+          <td><strong>LCP = 5.1s → fix to &lt;2.5s</strong></td>
+          <td><span class="tag-fix badge-mobile">Mobile</span></td>
+          <td style="color:var(--red)">−18 pts</td>
+        </tr>
+        <tr>
+          <td style="color:var(--red);font-weight:700">2</td>
+          <td><strong>Improve image delivery</strong> (81 KiB mobile / 335 KiB desktop)</td>
+          <td><span class="tag-fix badge-both">Both</span></td>
+          <td style="color:var(--orange)">−5 pts</td>
+        </tr>
+        <tr>
+          <td style="color:var(--red);font-weight:700">3</td>
+          <td><strong>Render-blocking requests</strong></td>
+          <td><span class="tag-fix badge-both">Both</span></td>
+          <td style="color:var(--orange)">−3 pts</td>
+        </tr>
+        <tr>
+          <td style="color:var(--orange);font-weight:700">4</td>
+          <td><strong>Legacy JavaScript</strong> (14 KiB)</td>
+          <td><span class="tag-fix badge-both">Both</span></td>
+          <td style="color:var(--orange)">−2 pts</td>
+        </tr>
+        <tr>
+          <td style="color:var(--orange);font-weight:700">5</td>
+          <td><strong>Reduce unused JavaScript</strong> (27 KiB)</td>
+          <td><span class="tag-fix badge-both">Both</span></td>
+          <td style="color:var(--orange)">−2 pts</td>
+        </tr>
+        <tr>
+          <td style="color:var(--orange);font-weight:700">6</td>
+          <td><strong>Minimize main-thread work</strong> (6.2s)</td>
+          <td><span class="tag-fix badge-mobile">Mobile</span></td>
+          <td style="color:var(--orange)">−2 pts</td>
+        </tr>
+        <tr>
+          <td style="color:var(--blue);font-weight:700">7</td>
+          <td><strong>Touch targets too small</strong></td>
+          <td><span class="tag-fix badge-both">Both</span></td>
+          <td style="color:var(--blue)">Accessibility</td>
+        </tr>
+        <tr>
+          <td style="color:var(--blue);font-weight:700">8</td>
+          <td><strong>Document missing main landmark</strong></td>
+          <td><span class="tag-fix badge-both">Both</span></td>
+          <td style="color:var(--blue)">Accessibility</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- SECTION 1: LCP -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon icon-perf">⚡</div>
+      <div class="section-title">Fix #1 — LCP: 5.1s → Under 2.5s <span style="color:var(--muted);font-size:13px;font-weight:400">(CRITICAL)</span></div>
+      <span class="section-score score-bad">LCP 5.1s</span>
+    </div>
+
+    <div class="fix-card">
+      <div class="fix-header">
+        <span class="fix-priority p-critical">CRITICAL</span>
+        <div>
+          <div class="fix-title">Preload your hero image — LCP element</div>
+          <div class="fix-saving">Fixes: LCP request discovery + LCP 5.1s</div>
+        </div>
+      </div>
+      <div class="fix-body">
+        <p class="fix-why">The LCP element (your hero image) is discovered too late. The browser finds it only after parsing CSS/JS. You must tell the browser about it immediately in &lt;head&gt;.</p>
+        <div class="code-block">
+          <div class="code-label"><span class="dot"></span>pages/_document.tsx (or app/layout.tsx)</div>
+          <pre><span class="cm">// In your &lt;Head&gt; — add BEFORE any other resource</span>
+<span class="tag">&lt;link</span>
+  <span class="attr">rel</span>=<span class="str">"preload"</span>
+  <span class="attr">as</span>=<span class="str">"image"</span>
+  <span class="attr">href</span>=<span class="str">"/images/hero.webp"</span>
+  <span class="attr">type</span>=<span class="str">"image/webp"</span>
+  <span class="attr">fetchpriority</span>=<span class="str">"high"</span>
+<span class="tag">/&gt;</span>
+
+<span class="cm">// If responsive, include srcset:</span>
+<span class="tag">&lt;link</span>
+  <span class="attr">rel</span>=<span class="str">"preload"</span>
+  <span class="attr">as</span>=<span class="str">"image"</span>
+  <span class="attr">imagesrcset</span>=<span class="str">"/images/hero-480.webp 480w, /images/hero-800.webp 800w, /images/hero.webp 1200w"</span>
+  <span class="attr">imagesizes</span>=<span class="str">"100vw"</span>
+  <span class="attr">fetchpriority</span>=<span class="str">"high"</span>
+<span class="tag">/&gt;</span></pre>
+        </div>
+
+        <div class="code-block">
+          <div class="code-label"><span class="dot"></span>Your hero &lt;Image&gt; component — add priority prop</div>
+          <pre><span class="cm">// WRONG — no priority:</span>
+<span class="tag">&lt;Image</span> <span class="attr">src</span>=<span class="str">"/images/hero.webp"</span> <span class="attr">alt</span>=<span class="str">"Hero"</span> <span class="tag">/&gt;</span>
+
+<span class="cm">// CORRECT — always add priority to LCP image:</span>
+<span class="tag">&lt;Image</span>
+  <span class="attr">src</span>=<span class="str">"/images/hero.webp"</span>
+  <span class="attr">alt</span>=<span class="str">"Hero"</span>
+  <span class="attr">priority</span>              <span class="cm">// disables lazy-load, adds fetchpriority=high</span>
+  <span class="attr">width</span>=<span class="num">{1200}</span>
+  <span class="attr">height</span>=<span class="num">{630}</span>
+  <span class="attr">sizes</span>=<span class="str">"100vw"</span>
+<span class="tag">/&gt;</span></pre>
+        </div>
+        <div class="tip-box">✅ <strong>Rule:</strong> The first visible image on every page MUST have <code>priority</code>. Never lazy-load the LCP element.</div>
+      </div>
+    </div>
+
+    <div class="fix-card">
+      <div class="fix-header">
+        <span class="fix-priority p-critical">CRITICAL</span>
+        <div>
+          <div class="fix-title">Network Dependency Tree — reduce request chain depth</div>
+          <div class="fix-saving">Fixes: Network dependency tree warning</div>
+        </div>
+      </div>
+      <div class="fix-body">
+        <p class="fix-why">Critical resources are loading in a chain: HTML → CSS → Font → Image. Each step adds full RTT. Break the chain by preconnecting and preloading.</p>
+        <div class="code-block">
+          <div class="code-label"><span class="dot"></span>_document.tsx — add preconnects for all 3rd-party origins</div>
+          <pre><span class="tag">&lt;Head&gt;</span>
+  <span class="cm">// Step 1: Preconnect to all external origins you use</span>
+  <span class="tag">&lt;link</span> <span class="attr">rel</span>=<span class="str">"preconnect"</span> <span class="attr">href</span>=<span class="str">"https://fonts.googleapis.com"</span> <span class="tag">/&gt;</span>
+  <span class="tag">&lt;link</span> <span class="attr">rel</span>=<span class="str">"preconnect"</span> <span class="attr">href</span>=<span class="str">"https://fonts.gstatic.com"</span> <span class="attr">crossOrigin</span>=<span class="str">""</span> <span class="tag">/&gt;</span>
+  <span class="tag">&lt;link</span> <span class="attr">rel</span>=<span class="str">"preconnect"</span> <span class="attr">href</span>=<span class="str">"https://cdn.yourdomain.com"</span> <span class="tag">/&gt;</span>
+
+  <span class="cm">// Step 2: Preload hero image immediately after</span>
+  <span class="tag">&lt;link</span> <span class="attr">rel</span>=<span class="str">"preload"</span> <span class="attr">as</span>=<span class="str">"image"</span> <span class="attr">href</span>=<span class="str">"/images/hero.webp"</span> <span class="attr">fetchpriority</span>=<span class="str">"high"</span> <span class="tag">/&gt;</span>
+<span class="tag">&lt;/Head&gt;</span></pre>
+        </div>
+
+        <div class="code-block">
+          <div class="code-label"><span class="dot"></span>next.config.js — self-host Google Fonts (best approach)</div>
+          <pre><span class="cm">// BEST: Use next/font instead of Google Fonts &lt;link&gt;</span>
+<span class="cm">// This eliminates the external font request entirely</span>
+
+<span class="cm">// app/layout.tsx or pages/_app.tsx</span>
+<span class="kw">import</span> { <span class="var">Syne</span> } <span class="kw">from</span> <span class="str">'next/font/google'</span>
+
+<span class="kw">const</span> <span class="var">syne</span> = <span class="fn">Syne</span>({
+  <span class="attr">subsets</span>: [<span class="str">'latin'</span>],
+  <span class="attr">weight</span>: [<span class="str">'400'</span>, <span class="str">'600'</span>, <span class="str">'700'</span>],
+  <span class="attr">display</span>: <span class="str">'swap'</span>,   <span class="cm">// prevents invisible text flash</span>
+  <span class="attr">preload</span>: <span class="kw">true</span>,    <span class="cm">// auto-preloads the font file</span>
+})
+
+<span class="kw">export default function</span> <span class="fn">RootLayout</span>({ children }) {
+  <span class="kw">return</span> (
+    <span class="tag">&lt;html&gt;</span>
+      <span class="tag">&lt;body</span> <span class="attr">className</span>=<span class="num">{syne.className}</span><span class="tag">&gt;</span>{children}<span class="tag">&lt;/body&gt;</span>
+    <span class="tag">&lt;/html&gt;</span>
+  )
+}</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 2: IMAGES -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon icon-perf">🖼</div>
+      <div class="section-title">Fix #2 — Image Delivery (335 KiB desktop / 81 KiB mobile)</div>
+      <span class="section-score score-ok">−335 KiB</span>
+    </div>
+
+    <div class="fix-card">
+      <div class="fix-header">
+        <span class="fix-priority p-high">HIGH</span>
+        <div>
+          <div class="fix-title">Convert all images to WebP/AVIF + proper sizing</div>
+          <div class="fix-saving">Est. savings: 335 KiB desktop, 81 KiB mobile</div>
+        </div>
+      </div>
+      <div class="fix-body">
+        <p class="fix-why">Next.js Image handles this automatically — but ONLY if you use &lt;Image&gt; correctly with sizes prop. Wrong sizes = oversized images served to mobile.</p>
+
+        <div class="code-block">
+          <div class="code-label"><span class="dot"></span>next.config.js — enable AVIF + configure domains</div>
+          <pre><span class="cm">/** @type {import('next').NextConfig} */</span>
+<span class="kw">const</span> <span class="var">nextConfig</span> = {
+  images: {
+    <span class="attr">formats</span>: [<span class="str">'image/avif'</span>, <span class="str">'image/webp'</span>], <span class="cm">// AVIF first = smaller files</span>
+    <span class="attr">deviceSizes</span>: [<span class="num">320</span>, <span class="num">480</span>, <span class="num">640</span>, <span class="num">828</span>, <span class="num">1080</span>, <span class="num">1200</span>, <span class="num">1920</span>],
+    <span class="attr">imageSizes</span>: [<span class="num">16</span>, <span class="num">32</span>, <span class="num">48</span>, <span class="num">64</span>, <span class="num">96</span>, <span class="num">128</span>, <span class="num">256</span>],
+    <span class="attr">minimumCacheTTL</span>: <span class="num">60</span> * <span class="num">60</span> * <span class="num">24</span> * <span class="num">30</span>, <span class="cm">// cache 30 days</span>
+    <span class="attr">dangerouslyAllowSVG</span>: <span class="kw">false</span>,
+    <span class="attr">contentSecurityPolicy</span>: <span class="str">"default-src 'self'; script-src 'none'; sandbox;"</span>,
+  },
+}
+<span class="kw">module.exports</span> = <span class="var">nextConfig</span></pre>
+        </div>
+
+        <div class="code-block">
+          <div class="code-label"><span class="dot"></span>Component — correct sizes prop (critical for mobile savings)</div>
+          <pre><span class="cm">// ❌ WRONG — serves 1200px image on 375px mobile phone:</span>
+<span class="tag">&lt;Image</span> <span class="attr">src</span>=<span class="str">"/hero.jpg"</span> <span class="attr">fill</span> <span class="tag">/&gt;</span>
+
+<span class="cm">// ✅ CORRECT — tells browser actual rendered size per breakpoint:</span>
+
+<span class="cm">// Full-width hero image:</span>
+<span class="tag">&lt;Image</span>
+  <span class="attr">src</span>=<span class="str">"/images/hero.webp"</span>
+  <span class="attr">alt</span>=<span class="str">"Hero banner"</span>
+  <span class="attr">fill</span>
+  <span class="attr">sizes</span>=<span class="str">"100vw"</span>
+  <span class="attr">priority</span>
+  <span class="attr">style</span>=<span class="num">{{ objectFit: 'cover' }}</span>
+<span class="tag">/&gt;</span>
+
+<span class="cm">// Card image (half-width on desktop, full on mobile):</span>
+<span class="tag">&lt;Image</span>
+  <span class="attr">src</span>=<span class="str">"/images/card.webp"</span>
+  <span class="attr">alt</span>=<span class="str">"Card"</span>
+  <span class="attr">width</span>=<span class="num">{600}</span>
+  <span class="attr">height</span>=<span class="num">{400}</span>
+  <span class="attr">sizes</span>=<span class="str">"(max-width: 768px) 100vw, 50vw"</span>
+<span class="tag">/&gt;</span>
+
+<span class="cm">// Small icon/thumbnail (always small):</span>
+<span class="tag">&lt;Image</span>
+  <span class="attr">src</span>=<span class="str">"/icons/logo.webp"</span>
+  <span class="attr">alt</span>=<span class="str">"Logo"</span>
+  <span class="attr">width</span>=<span class="num">{120}</span>
+  <span class="attr">height</span>=<span class="num">{40}</span>
+  <span class="attr">sizes</span>=<span class="str">"120px"</span>
+<span class="tag">/&gt;</span></pre>
+        </div>
+
+        <div class="code-block">
+          <div class="code-label"><span class="dot"></span>Batch convert existing images to WebP (run once)</div>
+          <pre><span class="cm"># Install sharp CLI</span>
+npm install -g sharp-cli
+
+<span class="cm"># Convert all JPG/PNG in public/images to WebP</span>
+for f in public/images/*.{jpg,jpeg,png}; do
+  sharp -i "$f" -o "${f%.*}.webp"
+done
+
+<span class="cm"># Or use squoosh-cli for AVIF batch conversion</span>
+npx @squoosh/cli --avif auto public/images/*.jpg</pre>
+        </div>
+
+        <div class="tip-box">✅ <strong>Pro tip:</strong> Never use raw &lt;img&gt; tags in Next.js. Always use next/image. It handles WebP/AVIF conversion, lazy loading, and responsive srcsets automatically.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 3: RENDER-BLOCKING -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon icon-perf">🚧</div>
+      <div class="section-title">Fix #3 — Render-Blocking Requests</div>
+      <span class="section-score score-ok">Blocks FCP</span>
+    </div>
+
+    <div class="fix-card">
+      <div class="fix-header">
+        <span class="fix-priority p-high">HIGH</span>
+        <div>
+          <div class="fix-title">Eliminate or defer all render-blocking CSS/JS</div>
+          <div class="fix-saving">Fixes: Render-blocking requests warning</div>
+        </div>
+      </div>
+      <div class="fix-body">
+        <p class="fix-why">Any &lt;link stylesheet&gt; or &lt;script&gt; in &lt;head&gt; without async/defer blocks the browser from painting anything. The page appears white until they finish downloading.</p>
+
+        <div class="code-block">
+          <div class="code-label"><span class="dot"></span>_document.tsx — defer non-critical scripts</div>
+          <pre><span class="cm">// ❌ WRONG — blocks render:</span>
+<span class="tag">&lt;script</span> <span class="attr">src</span>=<span class="str">"https://cdn.example.com/analytics.js"</span><span class="tag">&gt;&lt;/script&gt;</span>
+
+<span class="cm">// ✅ CORRECT — use next/script with strategy:</span>
+<span class="kw">import</span> <span class="var">Script</span> <span class="kw">from</span> <span class="str">'next/script'</span>
+
+<span class="cm">// Analytics, chat widgets, tag managers → afterInteractive</span>
+<span class="tag">&lt;Script</span>
+  <span class="attr">src</span>=<span class="str">"https://www.googletagmanager.com/gtag/js"</span>
+  <span class="attr">strategy</span>=<span class="str">"afterInteractive"</span>   <span class="cm">// loads after hydration</span>
+<span class="tag">/&gt;</span>
+
+<span class="cm">// Social widgets, non-critical SDKs → lazyOnload</span>
+<span class="tag">&lt;Script</span>
+  <span class="attr">src</span>=<span class="str">"https://platform.twitter.com/widgets.js"</span>
+  <span class="attr">strategy</span>=<span class="str">"lazyOnload"</span>   <span class="cm">// loads when browser is idle</span>
+<span class="tag">/&gt;</span>
+
+<span class="cm">// Inline scripts that MUST run before page renders → beforeInteractive</span>
+<span class="tag">&lt;Script</span> <span class="attr">id</span>=<span class="str">"theme-init"</span> <span class="attr">strategy</span>=<span class="str">"beforeInteractive"</span><span class="tag">&gt;</span>
+  {<span class="str">`document.documentElement.dataset.theme = localStorage.getItem('theme') || 'light'`</span>}
+<span class="tag">&lt;/Script&gt;</span></pre>
+        </div>
+
+        <div class="code-block">
+          <div class="code-label"><span class="dot"></span>Non-critical CSS — load asynchronously</div>
+          <pre><span class="cm">// Fonts loaded via &lt;link&gt; block render — use next/font instead</span>
+<span class="cm">// But if you MUST use a CSS file (e.g. third-party widget CSS):</span>
+
+<span class="tag">&lt;link</span>
+  <span class="attr">rel</span>=<span class="str">"stylesheet"</span>
+  <span class="attr">href</span>=<span class="str">"/css/non-critical.css"</span>
+  <span class="attr">media</span>=<span class="str">"print"</span>           <span class="cm">// browser skips for screen render</span>
+  <span class="attr">onLoad</span>=<span class="str">"this.media='all'"</span>  <span class="cm">// then applies it after load</span>
+<span class="tag">/&gt;</span>
+<span class="tag">&lt;noscript&gt;</span>
+  <span class="tag">&lt;link</span> <span class="attr">rel</span>=<span class="str">"stylesheet"</span> <span class="attr">href</span>=<span class="str">"/css/non-critical.css"</span><span class="tag">/&gt;</span>
+<span class="tag">&lt;/noscript&gt;</span></pre>
+        </div>
+
+        <div class="warn-box">⚠️ <strong>Watch out:</strong> Any CSS imported in your <code>_app.tsx</code> or <code>layout.tsx</code> that is NOT in <code>globals.css</code> may create extra blocking stylesheets. Keep critical styles in globals.css and split the rest using CSS modules.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 4: JAVASCRIPT -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon icon-perf">📦</div>
+      <div class="section-title">Fix #4 & #5 — Legacy JS + Unused JS</div>
+      <span class="section-score score-ok">−41 KiB</span>
+    </div>
+
+    <div class="fix-card">
+      <div class="fix-header">
+        <span class="fix-priority p-high">HIGH</span>
+        <div>
+          <div class="fix-title">Target modern browsers + eliminate polyfills</div>
+          <div class="fix-saving">Fixes: Legacy JavaScript — Est savings 14 KiB</div>
+        </div>
+      </div>
+      <div class="fix-body">
+        <p class="fix-why">Next.js is shipping polyfills for old browsers. Since your site is a view-only website for modern users, target modern browsers only.</p>
+        <div class="code-block">
+          <div class="code-label"><span class="dot"></span">.browserslistrc — create this file in project root</div>
+          <pre><span class="cm"># Target modern browsers only (covers 95%+ of users)</span>
+last 2 Chrome versions
+last 2 Firefox versions
+last 2 Safari versions
+last 2 Edge versions
+not IE 11
+not dead</pre>
+        </div>
+
+        <div class="code-block">
+          <div class="code-label"><span class="dot"></span>next.config.js — enable modern JS output</div>
+          <pre><span class="kw">const</span> <span class="var">nextConfig</span> = {
+  <span class="attr">experimental</span>: {
+    <span class="attr">legacyBrowsers</span>: <span class="kw">false</span>,   <span class="cm">// Next.js 12: removes legacy bundles</span>
+    <span class="attr">browsersListForSwc</span>: <span class="kw">true</span>, <span class="cm">// uses .browserslistrc in SWC</span>
+  },
+  <span class="attr">swcMinify</span>: <span class="kw">true</span>,           <span class="cm">// SWC minifier (faster + better)</span>
+}</pre>
+        </div>
+      </div>
+    </div>
+
+    <div class="fix-card">
+      <div class="fix-header">
+        <span class="fix-priority p-high">HIGH</span>
+        <div>
+          <div class="fix-title">Dynamic imports + code splitting for unused JS</div>
+          <div class="fix-saving">Fixes: Reduce unused JavaScript — Est savings 27 KiB</div>
+        </div>
+      </div>
+      <div class="fix-body">
+        <p class="fix-why">JavaScript that is downloaded but never executed on the current page wastes bandwidth and blocks the main thread. Split heavy components and libraries.</p>
+
+        <div class="code-block">
+          <div class="code-label"><span class="dot"></span>Lazy-load heavy components</div>
+          <pre><span class="kw">import</span> <span class="var">dynamic</span> <span class="kw">from</span> <span class="str">'next/dynamic'</span>
+
+<span class="cm">// Heavy map, chart, modal, slider etc → load on demand</span>
+<span class="kw">const</span> <span class="var">HeavySlider</span> = <span class="fn">dynamic</span>(
+  () => <span class="fn">import</span>(<span class="str">'../components/HeavySlider'</span>),
+  {
+    <span class="attr">loading</span>: () => <span class="tag">&lt;div</span> <span class="attr">className</span>=<span class="str">"skeleton"</span> <span class="tag">/&gt;</span>,
+    <span class="attr">ssr</span>: <span class="kw">false</span>  <span class="cm">// if not needed for SSR / SEO</span>
+  }
+)
+
+<span class="cm">// Load only when user scrolls to that section:</span>
+<span class="kw">const</span> <span class="var">ContactForm</span> = <span class="fn">dynamic</span>(() => <span class="fn">import</span>(<span class="str">'../components/ContactForm'</span>))
+
+<span class="cm">// GOOD CANDIDATES to dynamic import on a view-only site:</span>
+<span class="cm">// - Image galleries / lightboxes</span>
+<span class="cm">// - Video players</span>
+<span class="cm">// - Maps</span>
+<span class="cm">// - Any component below the fold</span></pre>
+        </div>
+
+        <div class="code-block">
+          <div class="code-label"><span class="dot"></span>Analyse your bundle — find what's causing the bloat</div>
+          <pre><span class="cm"># Install bundle analyser</span>
+npm install --save-dev @next/bundle-analyzer
+
+<span class="cm"># next.config.js</span>
+<span class="kw">const</span> <span class="fn">withBundleAnalyzer</span> = <span class="fn">require</span>(<span class="str">'@next/bundle-analyzer'</span>)({
+  <span class="attr">enabled</span>: <span class="var">process</span>.env.<span class="var">ANALYZE</span> === <span class="str">'true'</span>,
+})
+<span class="kw">module.exports</span> = <span class="fn">withBundleAnalyzer</span>(<span class="var">nextConfig</span>)
+
+<span class="cm"># Run it:</span>
+ANALYZE=true npm run build
+
+<span class="cm"># Look for: large libraries you can replace</span>
+<span class="cm"># moment.js → date-fns (lighter)</span>
+<span class="cm"># lodash → lodash-es with tree-shaking</span>
+<span class="cm"># any library over 50kb you only use 1 function from</span></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 5: MAIN THREAD -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon icon-perf">🧵</div>
+      <div class="section-title">Fix #6 — Minimize Main-Thread Work (6.2s)</div>
+      <span class="section-score score-bad">6.2s</span>
+    </div>
+
+    <div class="fix-card">
+      <div class="fix-header">
+        <span class="fix-priority p-high">HIGH</span>
+        <div>
+          <div class="fix-title">Long tasks blocking mobile CPU — 20 long tasks found</div>
+          <div class="fix-saving">Fixes: Minimize main-thread work + Avoid long main-thread tasks</div>
+        </div>
+      </div>
+      <div class="fix-body">
+        <p class="fix-why">Mobile CPUs are ~4-5x slower than desktop. 20 long tasks (>50ms each) means the browser is frozen for 6 seconds on mobile. This is where most of your mobile score loss comes from.</p>
+
+        <div class="code-block">
+          <div class="code-label"><span class="dot"></span>Use Intersection Observer for below-fold content</div>
+          <pre><span class="cm">// Don't render heavy sections until they're visible</span>
+<span class="kw">import</span> { <span class="var">useRef</span>, <span class="var">useState</span>, <span class="var">useEffect</span> } <span class="kw">from</span> <span class="str">'react'</span>
+
+<span class="kw">function</span> <span class="fn">LazySection</span>({ children }) {
+  <span class="kw">const</span> [<span class="var">visible</span>, <span class="var">setVisible</span>] = <span class="fn">useState</span>(<span class="kw">false</span>)
+  <span class="kw">const</span> <span class="var">ref</span> = <span class="fn">useRef</span>(<span class="kw">null</span>)
+
+  <span class="fn">useEffect</span>(() => {
+    <span class="kw">const</span> <span class="var">obs</span> = <span class="kw">new</span> <span class="fn">IntersectionObserver</span>(
+      ([<span class="var">entry</span>]) => { <span class="kw">if</span> (<span class="var">entry</span>.isIntersecting) { <span class="fn">setVisible</span>(<span class="kw">true</span>); <span class="var">obs</span>.<span class="fn">disconnect</span>() } },
+      { rootMargin: <span class="str">'200px'</span> }   <span class="cm">// start loading 200px before visible</span>
+    )
+    <span class="kw">if</span> (<span class="var">ref</span>.current) <span class="var">obs</span>.<span class="fn">observe</span>(<span class="var">ref</span>.current)
+    <span class="kw">return</span> () => <span class="var">obs</span>.<span class="fn">disconnect</span>()
+  }, [])
+
+  <span class="kw">return</span> <span class="tag">&lt;div</span> <span class="attr">ref</span>=<span class="num">{ref}</span><span class="tag">&gt;</span>{<span class="var">visible</span> ? children : <span class="tag">&lt;div</span> <span class="attr">style</span>=<span class="num">{{minHeight: '200px'}}</span> <span class="tag">/&gt;</span>}<span class="tag">&lt;/div&gt;</span>
+}</pre>
+        </div>
+
+        <div class="code-block">
+          <div class="code-label"><span class="dot"></span>Avoid expensive animations with non-composited properties</div>
+          <pre><span class="cm">/* ❌ WRONG — triggers layout + paint (main thread): */</span>
+<span class="var">.animate</span> {
+  <span class="attr">transition</span>: <span class="str">width 0.3s, height 0.3s, top 0.3s, left 0.3s</span>;
+  <span class="attr">animation</span>: <span class="str">fadeInUp 0.5s</span>;
+}
+<span class="var">@keyframes</span> fadeInUp {
+  <span class="kw">from</span> { <span class="attr">top</span>: <span class="str">20px</span>; <span class="attr">opacity</span>: <span class="str">0</span> }   <span class="cm">/* ❌ top triggers layout */</span>
+}
+
+<span class="cm">/* ✅ CORRECT — GPU-composited only (off main thread): */</span>
+<span class="var">.animate</span> {
+  <span class="attr">transition</span>: <span class="str">transform 0.3s, opacity 0.3s</span>;  <span class="cm">/* only transform + opacity */</span>
+  <span class="attr">will-change</span>: <span class="str">transform</span>;  <span class="cm">/* hint browser to put on GPU layer */</span>
+}
+<span class="var">@keyframes</span> fadeInUp {
+  <span class="kw">from</span> { <span class="attr">transform</span>: <span class="str">translateY(20px)</span>; <span class="attr">opacity</span>: <span class="str">0</span> }  <span class="cm">/* ✅ transform = GPU */</span>
+  <span class="kw">to</span>   { <span class="attr">transform</span>: <span class="str">translateY(0)</span>; <span class="attr">opacity</span>: <span class="str">1</span> }
+}
+
+<span class="cm">/* NEVER use will-change on everything — only elements that animate */</span></pre>
+        </div>
+
+        <div class="code-block">
+          <div class="code-label"><span class="dot"></span>Use React.memo + useMemo for expensive components</div>
+          <pre><span class="kw">import</span> { <span class="var">memo</span>, <span class="var">useMemo</span> } <span class="kw">from</span> <span class="str">'react'</span>
+
+<span class="cm">// Prevent re-render of static content sections</span>
+<span class="kw">const</span> <span class="var">StaticSection</span> = <span class="fn">memo</span>(<span class="kw">function</span> <span class="fn">StaticSection</span>({ data }) {
+  <span class="kw">const</span> <span class="var">processed</span> = <span class="fn">useMemo</span>(() => <span class="var">data</span>.<span class="fn">map</span>(<span class="var">expensiveTransform</span>), [<span class="var">data</span>])
+  <span class="kw">return</span> <span class="tag">&lt;div&gt;</span>{<span class="var">processed</span>.<span class="fn">map</span>(<span class="var">item</span> => <span class="tag">&lt;Card</span> <span class="attr">key</span>=<span class="num">{item.id}</span> {...<span class="var">item</span>} <span class="tag">/&gt;</span>)}<span class="tag">&lt;/div&gt;</span>
+})</pre>
+        </div>
+
+        <div class="tip-box">✅ <strong>Key insight for view-only sites:</strong> Since there's no dynamic data, use <code>getStaticProps</code> / <code>generateStaticParams</code> to pre-render everything at build time. Static HTML pages load in under 200ms with no JS execution cost.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- SECTION 6: ACCESSIBILITY -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon icon-access">♿</div>
+      <div class="section-title">Fix #7 & #8 — Accessibility: 94 → 100</div>
+      <span class="section-score score-ok">94 → 100</span>
+    </div>
+
+    <div class="fix-card">
+      <div class="fix-header">
+        <span class="fix-priority p-medium">MEDIUM</span>
+        <div>
+          <div class="fix-title">Touch targets too small — minimum 44×44px</div>
+          <div class="fix-saving">Affects: Mobile tap targets (buttons, links, icons)</div>
+        </div>
+      </div>
+      <div class="fix-body">
+        <p class="fix-why">Google requires all interactive elements to be at least 44×44px with adequate spacing. Small icons and inline links fail this check.</p>
+
+        <div class="code-block">
+          <div class="code-label"><span class="dot"></span>globals.css — global touch target minimum</div>
+          <pre><span class="cm">/* Apply minimum touch target to all interactive elements */</span>
+<span class="var">button</span>,
+<span class="var">a</span>,
+<span class="var">[role="button"]</span>,
+<span class="var">input[type="checkbox"]</span>,
+<span class="var">input[type="radio"]</span>,
+<span class="var">select</span> {
+  <span class="attr">min-height</span>: <span class="str">44px</span>;
+  <span class="attr">min-width</span>: <span class="str">44px</span>;
+  <span class="attr">display</span>: <span class="str">inline-flex</span>;
+  <span class="attr">align-items</span>: <span class="str">center</span>;
+  <span class="attr">justify-content</span>: <span class="str">center</span>;
+}
+
+<span class="cm">/* For icon-only buttons that must stay visually small: */</span>
+<span class="var">.icon-btn</span> {
+  <span class="attr">position</span>: <span class="str">relative</span>;
+  <span class="attr">width</span>: <span class="str">24px</span>;
+  <span class="attr">height</span>: <span class="str">24px</span>;
+  <span class="cm">/* Expand tap area without changing visual size */</span>
+}
+<span class="var">.icon-btn</span>::after {
+  <span class="attr">content</span>: <span class="str">''</span>;
+  <span class="attr">position</span>: <span class="str">absolute</span>;
+  <span class="attr">inset</span>: <span class="str">-10px</span>;  <span class="cm">/* extends clickable area 10px in all directions */</span>
+}
+
+<span class="cm">/* Nav links need spacing between them too */</span>
+<span class="var">nav a</span> {
+  <span class="attr">padding</span>: <span class="str">10px 12px</span>;  <span class="cm">/* ensures 44px height + spacing */</span>
+  <span class="attr">min-height</span>: <span class="str">44px</span>;
+}</pre>
+        </div>
+
+        <div class="code-block">
+          <div class="code-label"><span class="dot"></span>Component — correct button with touch target</div>
+          <pre><span class="cm">// ❌ WRONG — icon button with no padding:</span>
+<span class="tag">&lt;button&gt;</span>
+  <span class="tag">&lt;svg</span> <span class="attr">width</span>=<span class="str">"18"</span> <span class="attr">height</span>=<span class="str">"18"</span><span class="tag">&gt;</span>...<span class="tag">&lt;/svg&gt;</span>
+<span class="tag">&lt;/button&gt;</span>
+
+<span class="cm">// ✅ CORRECT — 44px minimum with visible focus ring:</span>
+<span class="tag">&lt;button</span>
+  <span class="attr">style</span>=<span class="num">{{
+    width: 44, height: 44,
+    display: 'flex', alignItems: 'center', justifyContent: 'center',
+    borderRadius: 8, cursor: 'pointer',
+    outline: 'none',
+  }}</span>
+  <span class="attr">aria-label</span>=<span class="str">"Close menu"</span>      <span class="cm">// REQUIRED for icon-only buttons</span>
+  <span class="attr">onFocus</span>=<span class="num">{e => e.target.style.outline = '2px solid #4fa8ff'}</span>
+  <span class="attr">onBlur</span>=<span class="num">{e => e.target.style.outline = 'none'}</span>
+<span class="tag">&gt;</span>
+  <span class="tag">&lt;svg</span> <span class="attr">width</span>=<span class="str">"18"</span> <span class="attr">height</span>=<span class="str">"18"</span> <span class="attr">aria-hidden</span>=<span class="str">"true"</span><span class="tag">&gt;</span>...<span class="tag">&lt;/svg&gt;</span>
+<span class="tag">&lt;/button&gt;</span></pre>
+        </div>
+      </div>
+    </div>
+
+    <div class="fix-card">
+      <div class="fix-header">
+        <span class="fix-priority p-medium">MEDIUM</span>
+        <div>
+          <div class="fix-title">Document does not have a main landmark</div>
+          <div class="fix-saving">Affects: Screen readers, ARIA roles, Lighthouse accessibility score</div>
+        </div>
+      </div>
+      <div class="fix-body">
+        <p class="fix-why">Screen readers use landmark roles to navigate pages. Without a &lt;main&gt; element, they can't skip to main content. This is a 1-minute fix with large accessibility impact.</p>
+
+        <div class="code-block">
+          <div class="code-label"><span class="dot"></span>Every page layout — wrap content in semantic HTML</div>
+          <pre><span class="cm">// ❌ WRONG — div soup, no landmarks:</span>
+<span class="kw">export default function</span> <span class="fn">Layout</span>({ children }) {
+  <span class="kw">return</span> (
+    <span class="tag">&lt;div</span> <span class="attr">className</span>=<span class="str">"layout"</span><span class="tag">&gt;</span>
+      <span class="tag">&lt;div</span> <span class="attr">className</span>=<span class="str">"nav"</span><span class="tag">&gt;</span>...<span class="tag">&lt;/div&gt;</span>
+      <span class="tag">&lt;div</span> <span class="attr">className</span>=<span class="str">"content"</span><span class="tag">&gt;</span>{children}<span class="tag">&lt;/div&gt;</span>
+      <span class="tag">&lt;div</span> <span class="attr">className</span>=<span class="str">"footer"</span><span class="tag">&gt;</span>...<span class="tag">&lt;/div&gt;</span>
+    <span class="tag">&lt;/div&gt;</span>
+  )
+}
+
+<span class="cm">// ✅ CORRECT — proper semantic landmarks:</span>
+<span class="kw">export default function</span> <span class="fn">Layout</span>({ children }) {
+  <span class="kw">return</span> (
+    <span class="tag">&lt;div</span> <span class="attr">className</span>=<span class="str">"layout"</span><span class="tag">&gt;</span>
+      <span class="tag">&lt;header</span> <span class="attr">role</span>=<span class="str">"banner"</span><span class="tag">&gt;</span>          <span class="cm">{/* site header / nav */}</span>
+        <span class="tag">&lt;nav</span> <span class="attr">aria-label</span>=<span class="str">"Main navigation"</span><span class="tag">&gt;</span>...<span class="tag">&lt;/nav&gt;</span>
+      <span class="tag">&lt;/header&gt;</span>
+
+      <span class="tag">&lt;main</span> <span class="attr">id</span>=<span class="str">"main-content"</span> <span class="attr">role</span>=<span class="str">"main"</span><span class="tag">&gt;</span>   <span class="cm">{/* ← THIS IS THE FIX */}</span>
+        {children}
+      <span class="tag">&lt;/main&gt;</span>
+
+      <span class="tag">&lt;footer</span> <span class="attr">role</span>=<span class="str">"contentinfo"</span><span class="tag">&gt;</span>...<span class="tag">&lt;/footer&gt;</span>
+    <span class="tag">&lt;/div&gt;</span>
+  )
+}
+
+<span class="cm">// BONUS: Add skip-to-main link (required for WCAG AA):</span>
+<span class="tag">&lt;a</span>
+  <span class="attr">href</span>=<span class="str">"#main-content"</span>
+  <span class="attr">className</span>=<span class="str">"skip-link"</span>
+  <span class="tag">&gt;</span>
+  Skip to main content
+<span class="tag">&lt;/a&gt;</span>
+
+<span class="cm">/* globals.css — hide skip link visually but keep accessible */</span>
+<span class="var">.skip-link</span> {
+  <span class="attr">position</span>: <span class="str">absolute</span>;
+  <span class="attr">top</span>: <span class="str">-100%</span>;
+  <span class="attr">left</span>: <span class="str">0</span>;
+  <span class="attr">background</span>: <span class="str">#000</span>;
+  <span class="attr">color</span>: <span class="str">#fff</span>;
+  <span class="attr">padding</span>: <span class="str">12px 20px</span>;
+  <span class="attr">z-index</span>: <span class="str">9999</span>;
+}
+<span class="var">.skip-link:focus</span> { <span class="attr">top</span>: <span class="str">0</span>; }</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- BONUS: STATIC SITE OPTIMIZATION -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon icon-both">🚀</div>
+      <div class="section-title">Bonus — Static Site Supercharger (view-only sites)</div>
+      <span class="section-score score-good">+10 pts free</span>
+    </div>
+
+    <div class="fix-card">
+      <div class="fix-header">
+        <span class="fix-priority p-medium">BONUS</span>
+        <div>
+          <div class="fix-title">Enable full static export + HTTP/2 push headers</div>
+          <div class="fix-saving">Free performance gains for view-only websites</div>
+        </div>
+      </div>
+      <div class="fix-body">
+        <p class="fix-why">For a view-only Next.js site with no backend, full static export gives you near-instant load times. You also get CDN edge caching for free.</p>
+
+        <div class="code-block">
+          <div class="code-label"><span class="dot"></span>next.config.js — enable static export</div>
+          <pre><span class="kw">const</span> <span class="var">nextConfig</span> = {
+  <span class="attr">output</span>: <span class="str">'export'</span>,          <span class="cm">// generates /out folder, pure static HTML</span>
+  <span class="attr">trailingSlash</span>: <span class="kw">true</span>,      <span class="cm">// /about → /about/index.html</span>
+  <span class="attr">images</span>: {
+    <span class="attr">unoptimized</span>: <span class="kw">false</span>,     <span class="cm">// keep optimization ON (Vercel/Netlify handle it)</span>
+    <span class="attr">formats</span>: [<span class="str">'image/avif'</span>, <span class="str">'image/webp'</span>],
+  },
+}</pre>
+        </div>
+
+        <div class="code-block">
+          <div class="code-label"><span class="dot"></span>vercel.json — HTTP headers for caching + security</div>
+          <pre>{
+  <span class="str">"headers"</span>: [
+    {
+      <span class="str">"source"</span>: <span class="str">"/(.*)"</span>,
+      <span class="str">"headers"</span>: [
+        { <span class="str">"key"</span>: <span class="str">"X-Content-Type-Options"</span>, <span class="str">"value"</span>: <span class="str">"nosniff"</span> },
+        { <span class="str">"key"</span>: <span class="str">"X-Frame-Options"</span>, <span class="str">"value"</span>: <span class="str">"DENY"</span> },
+        { <span class="str">"key"</span>: <span class="str">"X-XSS-Protection"</span>, <span class="str">"value"</span>: <span class="str">"1; mode=block"</span> },
+        { <span class="str">"key"</span>: <span class="str">"Referrer-Policy"</span>, <span class="str">"value"</span>: <span class="str">"strict-origin-when-cross-origin"</span> },
+        { <span class="str">"key"</span>: <span class="str">"Permissions-Policy"</span>, <span class="str">"value"</span>: <span class="str">"camera=(), microphone=(), geolocation=()"</span> }
+      ]
+    },
+    {
+      <span class="str">"source"</span>: <span class="str">"/images/(.*)"</span>,
+      <span class="str">"headers"</span>: [
+        { <span class="str">"key"</span>: <span class="str">"Cache-Control"</span>, <span class="str">"value"</span>: <span class="str">"public, max-age=31536000, immutable"</span> }
+      ]
+    },
+    {
+      <span class="str">"source"</span>: <span class="str">"/_next/static/(.*)"</span>,
+      <span class="str">"headers"</span>: [
+        { <span class="str">"key"</span>: <span class="str">"Cache-Control"</span>, <span class="str">"value"</span>: <span class="str">"public, max-age=31536000, immutable"</span> }
+      ]
+    }
+  ]
+}</pre>
+        </div>
+
+        <div class="code-block">
+          <div class="code-label"><span class="dot"></span>next.config.js — HTTP/2 Link preload headers (Vercel)</div>
+          <pre><span class="kw">const</span> <span class="var">nextConfig</span> = {
+  <span class="kw">async</span> <span class="fn">headers</span>() {
+    <span class="kw">return</span> [
+      {
+        <span class="attr">source</span>: <span class="str">'/'</span>,
+        <span class="attr">headers</span>: [
+          {
+            <span class="attr">key</span>: <span class="str">'Link'</span>,
+            <span class="cm">// HTTP/2 push: tell CDN to push hero image before browser asks</span>
+            <span class="attr">value</span>: <span class="str">'&lt;/images/hero.webp&gt;; rel=preload; as=image'</span>,
+          },
+        ],
+      },
+    ]
+  },
+}</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FINAL CHECKLIST -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon icon-both">✅</div>
+      <div class="section-title">Pre-Delivery Checklist</div>
+    </div>
+
+    <div class="checklist">
+      <h3>Performance</h3>
+      <div class="check-item"><div class="check-box"></div><div><strong>Hero image has priority prop</strong> <span>— next/image priority on LCP element</span></div></div>
+      <div class="check-item"><div class="check-box"></div><div><strong>All images use next/image with sizes prop</strong> <span>— no raw &lt;img&gt; tags</span></div></div>
+      <div class="check-item"><div class="check-box"></div><div><strong>Images converted to WebP/AVIF</strong> <span>— avif first in formats array</span></div></div>
+      <div class="check-item"><div class="check-box"></div><div><strong>Fonts use next/font/google</strong> <span>— not &lt;link&gt; to Google Fonts</span></div></div>
+      <div class="check-item"><div class="check-box"></div><div><strong>All 3rd-party scripts use next/script</strong> <span>— strategy="afterInteractive" or "lazyOnload"</span></div></div>
+      <div class="check-item"><div class="check-box"></div><div><strong>Heavy components use dynamic import</strong> <span>— galleries, maps, sliders below fold</span></div></div>
+      <div class="check-item"><div class="check-box"></div><div><strong>.browserslistrc targets modern browsers</strong> <span>— removes polyfills</span></div></div>
+      <div class="check-item"><div class="check-box"></div><div><strong>Animations use only transform + opacity</strong> <span>— GPU composited, no layout triggers</span></div></div>
+      <div class="check-item"><div class="check-box"></div><div><strong>Bundle analyzer run</strong> <span>— no unexpected large packages</span></div></div>
+    </div>
+
+    <div class="checklist">
+      <h3>Accessibility</h3>
+      <div class="check-item"><div class="check-box"></div><div><strong>&lt;main&gt; wraps all page content</strong> <span>— in every page/layout</span></div></div>
+      <div class="check-item"><div class="check-box"></div><div><strong>&lt;header&gt;, &lt;nav&gt;, &lt;footer&gt; used correctly</strong> <span>— semantic HTML throughout</span></div></div>
+      <div class="check-item"><div class="check-box"></div><div><strong>All buttons min 44×44px</strong> <span>— padding or ::after expansion</span></div></div>
+      <div class="check-item"><div class="check-box"></div><div><strong>Icon-only buttons have aria-label</strong> <span>— menu, close, social icons</span></div></div>
+      <div class="check-item"><div class="check-box"></div><div><strong>All images have alt text</strong> <span>— descriptive for content images, alt="" for decorative</span></div></div>
+      <div class="check-item"><div class="check-box"></div><div><strong>Nav links have 8px+ spacing</strong> <span>— prevents touch target overlap</span></div></div>
+      <div class="check-item"><div class="check-box"></div><div><strong>Skip-to-main link added</strong> <span>— visible on focus</span></div></div>
+      <div class="check-item"><div class="check-box"></div><div><strong>Focus styles visible</strong> <span>— never outline:none without replacement</span></div></div>
+      <div class="check-item"><div class="check-box"></div><div><strong>Color contrast 4.5:1 minimum</strong> <span>— text on backgrounds</span></div></div>
+    </div>
+
+    <div class="checklist">
+      <h3>Final Test Protocol</h3>
+      <div class="check-item"><div class="check-box"></div><div><strong>Run Lighthouse on production URL</strong> <span>— not localhost, not preview</span></div></div>
+      <div class="check-item"><div class="check-box"></div><div><strong>Test in Incognito mode</strong> <span>— no extensions affecting scores</span></div></div>
+      <div class="check-item"><div class="check-box"></div><div><strong>Run mobile test separately</strong> <span>— Lighthouse → Device: Mobile</span></div></div>
+      <div class="check-item"><div class="check-box"></div><div><strong>Run 3 times, average the scores</strong> <span>— Lighthouse varies ±3 pts</span></div></div>
+      <div class="check-item"><div class="check-box"></div><div><strong>Test on PageSpeed Insights</strong> <span>— pagespeed.web.dev (uses real-world data)</span></div></div>
+    </div>
+  </div>
+
+  <!-- FINAL SCORE -->
+  <div class="final-scores">
+    <h2>Target After All Fixes</h2>
+    <p>Desktop &amp; Mobile — all categories</p>
+    <div class="scores-final-row">
+      <div>
+        <div class="score-100">100</div>
+        <div style="margin-top:10px;font-size:12px;color:var(--muted)">Performance</div>
+      </div>
+      <div>
+        <div class="score-100">100</div>
+        <div style="margin-top:10px;font-size:12px;color:var(--muted)">Accessibility</div>
+      </div>
+      <div>
+        <div class="score-100">100</div>
+        <div style="margin-top:10px;font-size:12px;color:var(--muted)">Best Practices</div>
+      </div>
+      <div>
+        <div class="score-100">100</div>
+        <div style="margin-top:10px;font-size:12px;color:var(--muted)">SEO</div>
+      </div>
+    </div>
+    <div style="margin-top:28px;color:var(--muted);font-size:13px">
+      LCP target: <strong style="color:var(--green)">&lt;1.5s</strong> &nbsp;|&nbsp;
+      FCP target: <strong style="color:var(--green)">&lt;1.0s</strong> &nbsp;|&nbsp;
+      TBT target: <strong style="color:var(--green)">&lt;50ms</strong> &nbsp;|&nbsp;
+      CLS target: <strong style="color:var(--green)">0</strong>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<footer>
+  Built for your client delivery — <strong>20+ years solo senior engineer</strong> guide &nbsp;·&nbsp; Next.js · Lighthouse 2026
+</footer>
+
+</body>
+</html>

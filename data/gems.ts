@@ -1,6 +1,3 @@
-// Gems & Jewelry service data - Sri Lankan gemstone information
-// Reference: Glamour Opal Gem (Pvt) Ltd & Sri Lankan gem heritage
-
 export interface Gemstone {
     id: string;
     name: string;

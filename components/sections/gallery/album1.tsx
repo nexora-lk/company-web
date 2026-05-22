@@ -30,7 +30,7 @@ export default function Album1Section() {
                 <div className="grid grid-cols-12 auto-rows-[100px] gap-3">
                     <div className="ph col-span-6 row-span-4">
                         <Photo
-                            src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1400&q=80&auto=format&fit=crop"
+                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                             alt="Ribbon-cutting at the new head office"
                             priority
                         />
@@ -38,77 +38,77 @@ export default function Album1Section() {
                     </div>
                     <div className="ph col-span-3 row-span-2">
                         <Photo
-                            src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=900&q=80&auto=format&fit=crop"
+                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                             alt=""
                         />
                         <div className="ph-meta">02 · Team group</div>
                     </div>
                     <div className="ph col-span-3 row-span-2">
                         <Photo
-                            src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=900&q=80&auto=format&fit=crop"
+                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                             alt=""
                         />
                         <div className="ph-meta">03 · Lamp lighting</div>
                     </div>
                     <div className="ph col-span-3 row-span-2">
                         <Photo
-                            src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=900&q=80&auto=format&fit=crop"
+                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                             alt=""
                         />
                         <div className="ph-meta">04 · Welcome desk</div>
                     </div>
                     <div className="ph col-span-3 row-span-2">
                         <Photo
-                            src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=900&q=80&auto=format&fit=crop"
+                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                             alt=""
                         />
                         <div className="ph-meta">05 · The new boardroom</div>
                     </div>
                     <div className="ph col-span-4 row-span-3">
                         <Photo
-                            src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=900&q=80&auto=format&fit=crop"
+                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                             alt=""
                         />
                         <div className="ph-meta">06 · East wing, ground floor</div>
                     </div>
                     <div className="ph col-span-4 row-span-3">
                         <Photo
-                            src="https://images.unsplash.com/photo-1531058020387-3be344556be6?w=900&q=80&auto=format&fit=crop"
+                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                             alt=""
                         />
                         <div className="ph-meta">07 · Family of staff</div>
                     </div>
                     <div className="ph col-span-4 row-span-3">
                         <Photo
-                            src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=900&q=80&auto=format&fit=crop"
+                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                             alt=""
                         />
                         <div className="ph-meta">08 · Evening reception</div>
                     </div>
                     <div className="ph col-span-3 row-span-2">
                         <Photo
-                            src="https://images.unsplash.com/photo-1543269865-cbf427effbad?w=900&q=80&auto=format&fit=crop"
+                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                             alt=""
                         />
                         <div className="ph-meta">09 · Community partners</div>
                     </div>
                     <div className="ph col-span-3 row-span-2">
                         <Photo
-                            src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=900&q=80&auto=format&fit=crop"
+                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                             alt=""
                         />
                         <div className="ph-meta">10 · Handshake</div>
                     </div>
                     <div className="ph col-span-3 row-span-2">
                         <Photo
-                            src="https://images.unsplash.com/photo-1525909002-1b05e0c869d8?w=900&q=80&auto=format&fit=crop"
+                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                             alt=""
                         />
                         <div className="ph-meta">11 · Saree procession</div>
                     </div>
                     <div className="ph col-span-3 row-span-2">
                         <Photo
-                            src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=900&q=80&auto=format&fit=crop"
+                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                             alt=""
                         />
                         <div className="ph-meta">12 · Director's portrait</div>

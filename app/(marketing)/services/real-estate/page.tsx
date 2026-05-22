@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
-import GallerySection from '../../../../components/sections/services/real-estate/gallery';
-import HeroSection from '../../../../components/sections/services/real-estate/hero';
-import OverviewSection from '../../../../components/sections/services/real-estate/overview';
-import PortfolioSection from '../../../../components/sections/services/real-estate/portfolio';
+import GallerySection from '@/components/sections/services/real-estate/gallery';
+import HeroSection from '@/components/sections/services/real-estate/hero';
+import OverviewSection from '@/components/sections/services/real-estate/overview';
+import PortfolioSection from '@/components/sections/services/real-estate/portfolio';
 
 export const metadata: Metadata = {
     title: 'Real Estate & Hospitality | Premium Properties | Sri Lanka',

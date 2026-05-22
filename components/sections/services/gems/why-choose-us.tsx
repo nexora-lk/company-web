@@ -1,6 +1,3 @@
-/**
- * Why Choose Us - PGG Gems differentiators
- */
 export default function WhyChooseUsSection() {
     return (
         <section className="py-24 lg:py-32 bg-surface">

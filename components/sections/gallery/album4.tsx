@@ -31,49 +31,49 @@ export default function Album4Section() {
                 <div className="grid grid-cols-12 auto-rows-[140px] gap-3">
                     <div className="ph col-span-5 row-span-3">
                         <Photo
-                            src="https://images.unsplash.com/photo-1597318181409-cf64d0b5d8a2?w=1400&q=80&auto=format&fit=crop"
+                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                             alt=""
                         />
                         <div className="ph-meta">01 · The highland tea, at sunrise</div>
                     </div>
                     <div className="ph col-span-4 row-span-3">
                         <Photo
-                            src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=1000&q=80&auto=format&fit=crop"
+                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                             alt=""
                         />
                         <div className="ph-meta">02 · Workshop tent, morning</div>
                     </div>
                     <div className="ph col-span-3 row-span-2">
                         <Photo
-                            src="https://images.unsplash.com/photo-1579621970795-87facc2f976d?w=900&q=80&auto=format&fit=crop"
+                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                             alt=""
                         />
                         <div className="ph-meta">03 · Sapling line</div>
                     </div>
                     <div className="ph col-span-3 row-span-1">
                         <Photo
-                            src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=900&q=80&auto=format&fit=crop"
+                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                             alt=""
                         />
                         <div className="ph-meta">04 · Tasting</div>
                     </div>
                     <div className="ph col-span-4 row-span-2">
                         <Photo
-                            src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1000&q=80&auto=format&fit=crop"
+                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                             alt=""
                         />
                         <div className="ph-meta">05 · Lowland field</div>
                     </div>
                     <div className="ph col-span-4 row-span-2">
                         <Photo
-                            src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=900&q=80&auto=format&fit=crop"
+                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                             alt=""
                         />
                         <div className="ph-meta">06 · Community welcome</div>
                     </div>
                     <div className="ph col-span-4 row-span-2">
                         <Photo
-                            src="https://images.unsplash.com/photo-1564507592333-c60657eea523?w=900&q=80&auto=format&fit=crop"
+                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                             alt=""
                         />
                         <div className="ph-meta">07 · Field worker, mid-shift</div>

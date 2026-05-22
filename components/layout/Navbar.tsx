@@ -1,8 +1,8 @@
 'use client';
 
 import MobileMenu from '@/components/layout/MobileMenu';
+import Photo from '@/components/ui/Photo';
 import { brand, primaryNav } from '@/data/navigation';
-import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -14,8 +14,8 @@ export default function Navbar() {
             <div className="max-w-content mx-auto px-6 lg:px-10 h-16 flex items-center justify-between gap-4">
                 <Link href="/" className="flex items-center gap-2.5 group shrink-0">
                     <div className="relative w-10 h-10 overflow-hidden flex items-center justify-center p-1">
-                        <Image
-                            src="/logo.png"
+                        <Photo
+                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779442467/logo_eszhjw.png"
                             alt={brand.name}
                             width={32}
                             height={32}
@@ -67,12 +67,12 @@ export default function Navbar() {
                                         </svg>
                                     </button>
                                     <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 translate-y-2 pointer-events-none transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto">
-                                        <div className="bg-bg border border-line rounded-[16px] shadow-sm p-2 w-[180px] flex flex-col gap-1">
+                                        <div className="bg-bg border border-line rounded-2xl shadow-sm p-2 w-45 flex flex-col gap-1">
                                             {link.children.map((child) => (
                                                 <Link
                                                     key={child.label}
                                                     href={child.href}
-                                                    className="px-4 py-2.5 rounded-[10px] text-[13px] text-mute hover:text-ink hover:bg-surface transition-colors"
+                                                    className="px-4 py-2.5 rounded-md text-[13px] text-mute hover:text-ink hover:bg-surface transition-colors"
                                                 >
                                                     {child.label}
                                                 </Link>

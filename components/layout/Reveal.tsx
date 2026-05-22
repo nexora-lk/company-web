@@ -3,25 +3,6 @@
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 
-/**
- * Premium scroll-reveal driver — GSAP + ScrollTrigger.
- *
- * ┌──────────────────────────────────────────────────────────────────┐
- * │  WHAT IT DOES                                                   │
- * ├──────────────────────────────────────────────────────────────────┤
- * │  1. Fade-up reveal   — every heading, paragraph, card, image    │
- * │  2. Clip-path wipe   — gallery photos wipe-up into view         │
- * │  3. Hero choreography — hero h1 lines stagger in with blur      │
- * │  4. Parallax images   — hero + portfolio images float on scroll  │
- * │  5. Value card cascade — 6 values stagger in row by row          │
- * │  6. Stats entrance    — numbers scale-up from zero               │
- * │  7. CTA section pop   — investment CTA slides from bottom        │
- * └──────────────────────────────────────────────────────────────────┘
- *
- * Everything is scoped in `gsap.context` and reverted on route change.
- * Honours `prefers-reduced-motion`.
- */
-
 /* ── Selectors ─────────────────────────────────────────────────────── */
 
 // General fade-up candidates

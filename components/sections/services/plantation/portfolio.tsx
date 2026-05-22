@@ -28,19 +28,19 @@ export default function PortfolioSection() {
                         {
                             title: 'Ampara Estate',
                             desc: 'Dry-zone cultivation focusing on hardy fruits and specialty crops. Centre of our ginger and mango growing programme.',
-                            img: 'https://images.unsplash.com/photo-1574226516831-e1dff420e562?w=1100&q=80&auto=format&fit=crop',
+                            img: 'https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg',
                             alt: 'Banana plantation in production',
                         },
                         {
                             title: 'Kandy Estate',
                             desc: 'Highland cultivation for temperature-sensitive crops. Our largest avocado and pomegranate growing zone.',
-                            img: 'https://images.unsplash.com/photo-1563114773-84221bd62daa?w=1100&q=80&auto=format&fit=crop',
+                            img: 'https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg',
                             alt: 'Terraced hill cultivation',
                         },
                         {
                             title: 'Kalutara Estate',
                             desc: 'Western zone cultivation. Co-op managed with local stakeholder partnerships. Primary watermelon and spice growing centre.',
-                            img: 'https://images.unsplash.com/photo-1488459716781-6818f2af1d1e?w=1100&q=80&auto=format&fit=crop',
+                            img: 'https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg',
                             alt: 'Agricultural field harvesting',
                         },
                     ].map((estate, idx) => (

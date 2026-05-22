@@ -28,19 +28,19 @@ export default function ProjectsSection() {
                         {
                             title: 'Rural Education',
                             desc: 'Building and renovating schools in underserved districts. 6 schools completed. 2,400 students reached annually.',
-                            img: 'https://images.unsplash.com/photo-1427504494785-cdec8e8ae81b?w=1100&q=80&auto=format&fit=crop',
+                            img: 'https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg',
                             alt: 'Rural school classroom',
                         },
                         {
                             title: "Women's Empowerment",
                             desc: 'Vocational training and microfinance for female entrepreneurs. 8,500+ women trained. 94% employment rate after training.',
-                            img: 'https://images.unsplash.com/photo-1532909277876-21e367b70af0?w=1100&q=80&auto=format&fit=crop',
+                            img: 'https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg',
                             alt: 'Women in vocational training',
                         },
                         {
                             title: 'Environmental Rehab',
                             desc: 'Watershed restoration and reforestation. 420,000+ trees planted. 12 water sources rehabilitated.',
-                            img: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1100&q=80&auto=format&fit=crop',
+                            img: 'https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg',
                             alt: 'Environmental rehabilitation project',
                         },
                     ].map((program, idx) => (

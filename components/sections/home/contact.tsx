@@ -1,4 +1,4 @@
-import ContactForm from '../../forms/homeContactForm';
+import ContactForm from '@/components/forms/homeContactForm';
 import { contactRows } from '@/data/home';
 import SectionEyebrow from '@/components/sections/SectionEyebrow';
 

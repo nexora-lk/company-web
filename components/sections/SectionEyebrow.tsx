@@ -1,13 +1,7 @@
-// The "[ 0X ] —— EYEBROW" index row that opens almost every section.
-// Reproduces the existing markup exactly; only the dynamic bits are props.
-
 type SectionEyebrowProps = {
-  /** Shown as `[ {index} ]`, e.g. "01". */
   index: string;
   label: string;
-  /** Wrapper classes — defaults match the common in-section spacing. */
   className?: string;
-  /** Hairline rule classes — two variants exist in the design. */
   hairlineClassName?: string;
 };
 

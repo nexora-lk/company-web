@@ -1,9 +1,6 @@
 import { Fragment } from "react";
 import type { MarqueeItem } from "@/types/content";
 
-// The scrolling industries band. Two identical rows: the second is
-// aria-hidden so the seamless loop isn't announced twice.
-
 function Row({
   items,
   hidden,

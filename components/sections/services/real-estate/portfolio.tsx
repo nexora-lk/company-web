@@ -26,7 +26,7 @@ export default function PortfolioSection() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                     <article className="svc-card group relative rounded-[20px] overflow-hidden bg-surface min-h-[380px]">
                         <Photo
-                            src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=1100&q=80&auto=format&fit=crop"
+                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                             alt="Agricultural land"
                             className="absolute inset-0 w-full h-full object-cover"
                         />
@@ -47,7 +47,7 @@ export default function PortfolioSection() {
                     </article>
                     <article className="svc-card group relative rounded-[20px] overflow-hidden bg-surface min-h-[380px]">
                         <Photo
-                            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1100&q=80&auto=format&fit=crop"
+                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                             alt="Heritage home restoration"
                             className="absolute inset-0 w-full h-full object-cover"
                         />
@@ -67,7 +67,7 @@ export default function PortfolioSection() {
                     </article>
                     <article className="svc-card group relative rounded-[20px] overflow-hidden bg-surface min-h-[380px]">
                         <Photo
-                            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1100&q=80&auto=format&fit=crop"
+                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                             alt="Commercial development site"
                             className="absolute inset-0 w-full h-full object-cover"
                         />

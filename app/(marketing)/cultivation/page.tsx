@@ -272,7 +272,7 @@ export default function Page() {
                         <aside className="col-span-12 lg:col-span-5 space-y-4">
                             <figure className="rounded-[18px] overflow-hidden aspect-[4/3]">
                                 <Photo
-                                    src="https://images.unsplash.com/photo-1563114773-84221bd62daa?w=1200&q=80&auto=format&fit=crop"
+                                    src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779442665/cultivation-tea_st9k3j.jpg"
                                     alt="Watermelon field at harvest"
                                     priority
                                     className="w-full h-full object-cover"
@@ -280,7 +280,7 @@ export default function Page() {
                             </figure>
                             <figure className="rounded-[18px] overflow-hidden aspect-[4/3]">
                                 <Photo
-                                    src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1200&q=80&auto=format&fit=crop"
+                                    src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779442665/cultivation-farm_uv4d8r.jpg"
                                     alt="Field of corn"
                                     className="w-full h-full object-cover"
                                 />
@@ -313,7 +313,7 @@ export default function Page() {
                         <aside className="col-span-12 lg:col-span-5 space-y-4 order-2 lg:order-1">
                             <figure className="rounded-[18px] overflow-hidden aspect-[4/3]">
                                 <Photo
-                                    src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=1200&q=80&auto=format&fit=crop"
+                                    src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779442665/cultivation-leaves_wq5j2n.jpg"
                                     alt="Ginger and fresh roots from the field"
                                     className="w-full h-full object-cover"
                                 />
@@ -508,14 +508,14 @@ export default function Page() {
                         <aside className="col-span-12 lg:col-span-5 space-y-4">
                             <figure className="rounded-[18px] overflow-hidden aspect-[4/3]">
                                 <Photo
-                                    src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1200&q=80&auto=format&fit=crop"
+                                    src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779442665/cultivation-harvest_kx8m1o.jpg"
                                     alt="King coconut on the palm"
                                     className="w-full h-full object-cover"
                                 />
                             </figure>
                             <figure className="rounded-[18px] overflow-hidden aspect-[4/3]">
                                 <Photo
-                                    src="https://images.unsplash.com/photo-1605027990121-cbae9e0642db?w=1200&q=80&auto=format&fit=crop"
+                                    src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779442665/cultivation-process_dy3p5k.jpg"
                                     alt="Mango orchard"
                                     className="w-full h-full object-cover"
                                 />
@@ -612,7 +612,7 @@ export default function Page() {
                 <div className="max-w-content mx-auto px-6 lg:px-10">
                     <div className="relative rounded-[24px] overflow-hidden bg-ink text-ondark">
                         <Photo
-                            src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1800&q=80&auto=format&fit=crop"
+                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779442665/cultivation-banner_hs7n6j.jpg"
                             alt=""
                             className="absolute inset-0 w-full h-full object-cover opacity-40"
                         />

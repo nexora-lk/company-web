@@ -337,7 +337,7 @@ export default function Page() {
                 <div className="max-w-content mx-auto px-6 lg:px-10">
                     <div className="relative rounded-[24px] overflow-hidden min-h-[320px] flex items-end">
                         <Photo
-                            src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1800&q=80&auto=format&fit=crop"
+                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779442665/corporate-office_lq3x7m.jpg"
                             alt=""
                             priority
                             className="absolute inset-0 w-full h-full object-cover"

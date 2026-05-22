@@ -4,12 +4,12 @@ import Navbar from '@/components/layout/Navbar';
 import PageTransition from '@/components/layout/PageTransition';
 import Reveal from '@/components/layout/Reveal';
 import SmoothScroll from '@/components/layout/SmoothScroll';
+import { GoogleAnalytics } from '@next/third-parties/google';
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata } from 'next';
 import { Geist, Instrument_Serif, Manrope, Newsreader } from 'next/font/google';
 import './globals.css';
-import { GoogleAnalytics } from '@next/third-parties/google';
 
 const instrument = Instrument_Serif({
     weight: '400',
@@ -95,14 +95,20 @@ export default function RootLayout({
             className={`${instrument.variable} ${newsreader.variable} ${geist.variable} ${manrope.variable}`}
         >
             <head>
-                <link rel="preconnect" href="https://images.unsplash.com" crossOrigin="" />
-                <link rel="dns-prefetch" href="https://images.unsplash.com" />
+                <link rel="preconnect" href="https://res.cloudinary.com" crossOrigin="" />
+                <link rel="dns-prefetch" href="https://res.cloudinary.com" />
                 <meta
                     name="google-site-verification"
                     content="FYgdAmWULb4nRgIMS8lGbU1F7-3muEXQMJLDPIOACIA"
                 />
             </head>
             <body className="font-body text-ink">
+                <a
+                    href="#main-content"
+                    className="absolute -top-full left-0 z-9999 bg-ink text-bg px-4 py-2 focus:top-0"
+                >
+                    Skip to main content
+                </a>
                 <GoogleAnalytics gaId="G-43N120Q5GW" />
                 <SpeedInsights />
                 <Analytics />

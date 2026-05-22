@@ -1,9 +1,9 @@
 import FeaturedSection from '@/components/sections/events/featured';
 import HeroSection from '@/components/sections/events/hero';
 import type { Metadata } from 'next';
-import AllProgrammesSection from '../../../components/sections/events/all_programmes';
-import Banersection from '../../../components/sections/events/baner';
-import BankAccountDetailsSection from '../../../components/sections/events/bank_account_details';
+import AllProgrammesSection from '@/components/sections/events/all_programmes';
+import Banersection from '@/components/sections/events/baner';
+import BankAccountDetailsSection from '@/components/sections/events/bank_account_details';
 
 export const metadata: Metadata = {
     title: 'Upcoming Events & Programs | Prestige Glamour Group',

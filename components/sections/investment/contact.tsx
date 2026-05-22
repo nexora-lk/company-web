@@ -1,5 +1,5 @@
-import Photo from '@/components/ui/Photo';
 import InvestmentContactForm from '@/components/forms/InvestmentContactForm';
+import Photo from '@/components/ui/Photo';
 
 export default function ModelsSection() {
     return (
@@ -7,7 +7,7 @@ export default function ModelsSection() {
             <div className="max-w-content mx-auto px-6 lg:px-10">
                 <div className="relative rounded-[24px] overflow-hidden bg-ink text-ondark">
                     <Photo
-                        src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1800&q=80&auto=format&fit=crop"
+                        src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                         alt=""
                         className="absolute inset-0 w-full h-full object-cover opacity-30"
                     />

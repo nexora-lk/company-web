@@ -1,4 +1,3 @@
-// Static content for the home route. Leaf module: types + data only.
 import type {
   Certification,
   ContactRow,

@@ -7,7 +7,7 @@ export default function FeaturedSection() {
                 <div className="grid grid-cols-12 gap-6 lg:gap-12 items-stretch">
                     <figure className="col-span-12 lg:col-span-7 rounded-[20px] overflow-hidden aspect-[5/4] lg:aspect-auto">
                         <Photo
-                            src="https://images.unsplash.com/photo-1597318181409-cf64d0b5d8a2?w=1600&q=80&auto=format&fit=crop"
+                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                             alt="Plantation workers tending tea bushes"
                             priority
                             className="w-full h-full object-cover"

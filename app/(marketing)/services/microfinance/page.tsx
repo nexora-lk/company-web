@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
-import GallerySection from '../../../../components/sections/services/microfinance/gallery';
-import HeroSection from '../../../../components/sections/services/microfinance/hero';
-import OverviewSection from '../../../../components/sections/services/microfinance/overview';
-import ProductsSection from '../../../../components/sections/services/microfinance/products';
+import GallerySection from '@/components/sections/services/microfinance/gallery';
+import HeroSection from '@/components/sections/services/microfinance/hero';
+import OverviewSection from '@/components/sections/services/microfinance/overview';
+import ProductsSection from '@/components/sections/services/microfinance/products';
 
 export const metadata: Metadata = {
     title: 'Microfinance Services | Small Business Loans | Sri Lanka',

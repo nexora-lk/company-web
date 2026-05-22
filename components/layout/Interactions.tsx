@@ -3,19 +3,6 @@
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 
-/**
- * Site-wide GSAP interaction layer — premium, GPU-composited effects.
- *
- * ┌──────────────────────────────────────────────────────────────────┐
- * │  1. Smart navbar   — hides on scroll-down, shows on scroll-up   │
- * │  2. Anchor scroll  — buttery GSAP-powered in-page scrolling     │
- * │  3. Stat count-up  — numbers animate when entering viewport     │
- * │  4. Magnetic CTA   — buttons subtly pull toward cursor          │
- * │  5. Portfolio tilt  — 3D perspective tilt on hover              │
- * │  6. Marquee sync   — marquee speeds up with scroll velocity     │
- * └──────────────────────────────────────────────────────────────────┘
- */
-
 const HEADER_OFFSET = 72;
 
 export default function Interactions() {
@@ -244,7 +231,7 @@ export default function Interactions() {
         /* ═══════════════════════════════════════════════════════════
          * 6. MARQUEE (Scroll-velocity boost removed to prevent jitter)
          * ═══════════════════════════════════════════════════════════ */
-        // We removed the scroll listener that dynamically changed the 
+        // We removed the scroll listener that dynamically changed the
         // animation-duration on scroll, as CSS animations jump when
         // duration is updated mid-flight.
 

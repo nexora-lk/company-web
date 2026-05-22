@@ -28,35 +28,35 @@ export default function GallerySection() {
                 <div className="grid grid-cols-12 gap-4">
                     <figure className="gal col-span-12 sm:col-span-8 lg:col-span-7 rounded-[14px] overflow-hidden aspect-[16/10]">
                         <Photo
-                            src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1400&q=80&auto=format&fit=crop"
+                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                             alt="Prestige Glamour plantations - lush agricultural fields during harvest season"
                             className="w-full h-full object-cover"
                         />
                     </figure>
                     <figure className="gal col-span-12 sm:col-span-4 lg:col-span-5 rounded-[14px] overflow-hidden aspect-[16/10]">
                         <Photo
-                            src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1100&q=80&auto=format&fit=crop"
+                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                             alt="Prestige Glamour workshop - skilled artisans crafting premium products"
                             className="w-full h-full object-cover"
                         />
                     </figure>
                     <figure className="gal col-span-6 sm:col-span-3 rounded-[14px] overflow-hidden aspect-[4/5]">
                         <Photo
-                            src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=900&q=80&auto=format&fit=crop"
+                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                             alt="Prestige Glamour gemstone and jewellery collection - premium sapphires and precious stones"
                             className="w-full h-full object-cover"
                         />
                     </figure>
                     <figure className="gal col-span-6 sm:col-span-3 rounded-[14px] overflow-hidden aspect-[4/5]">
                         <Photo
-                            src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=900&q=80&auto=format&fit=crop"
+                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                             alt="Prestige Glamour hospitality and real estate projects - luxury property development"
                             className="w-full h-full object-cover"
                         />
                     </figure>
                     <figure className="gal col-span-12 sm:col-span-6 rounded-[14px] overflow-hidden aspect-[4/5]">
                         <Photo
-                            src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1100&q=80&auto=format&fit=crop"
+                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                             alt="Prestige Glamour agri-export operations - premium export-quality crops from Sri Lanka"
                             className="w-full h-full object-cover"
                         />

@@ -1,6 +1,3 @@
-/**
- * Rough Gems Section - Direct-from-mine sourcing and raw gemstones
- */
 export default function RoughGemsSection() {
     return (
         <section className="py-24 lg:py-32 bg-bg">

@@ -28,7 +28,7 @@ export default function ServicesSection() {
                         className="svc-card group col-span-12 lg:col-span-7 relative rounded-[20px] overflow-hidden bg-surface min-h-[440px]"
                     >
                         <Photo
-                            src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=1400&q=80&auto=format&fit=crop"
+                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                             alt="Lush green plantation fields at sunrise"
                             className="absolute inset-0 w-full h-full object-cover"
                         />
@@ -65,7 +65,7 @@ export default function ServicesSection() {
                             className="svc-card group relative rounded-[20px] overflow-hidden bg-surface"
                         >
                             <Photo
-                                src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=1100&q=80&auto=format&fit=crop"
+                                src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                                 alt="Hands exchanging seeds — rural finance empowerment"
                                 className="absolute inset-0 w-full h-full object-cover"
                             />
@@ -90,7 +90,7 @@ export default function ServicesSection() {
                             className="svc-card group relative rounded-[20px] overflow-hidden bg-surface"
                         >
                             <Photo
-                                src="https://images.unsplash.com/photo-1551751299-1b51cab2694c?w=1100&q=80&auto=format&fit=crop"
+                                src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                                 alt="Gemstones and jewels on display"
                                 className="absolute inset-0 w-full h-full object-cover"
                             />
@@ -117,7 +117,7 @@ export default function ServicesSection() {
                         className="svc-card group col-span-12 md:col-span-4 relative rounded-[20px] overflow-hidden bg-surface min-h-[320px]"
                     >
                         <Photo
-                            src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?w=1100&q=80&auto=format&fit=crop"
+                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                             alt="Fresh tropical fruits and herbal products"
                             className="absolute inset-0 w-full h-full object-cover"
                         />
@@ -142,7 +142,7 @@ export default function ServicesSection() {
                         className="svc-card group col-span-12 md:col-span-4 relative rounded-[20px] overflow-hidden bg-surface min-h-[320px]"
                     >
                         <Photo
-                            src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1100&q=80&auto=format&fit=crop"
+                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                             alt="Community education and social development"
                             className="absolute inset-0 w-full h-full object-cover"
                         />
@@ -167,7 +167,7 @@ export default function ServicesSection() {
                         className="svc-card group col-span-12 md:col-span-4 relative rounded-[20px] overflow-hidden bg-surface min-h-[320px]"
                     >
                         <Photo
-                            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1100&q=80&auto=format&fit=crop"
+                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                             alt="Modern commercial real estate development"
                             className="absolute inset-0 w-full h-full object-cover"
                         />

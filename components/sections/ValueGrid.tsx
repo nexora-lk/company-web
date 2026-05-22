@@ -1,9 +1,5 @@
 import type { Value } from "@/types/content";
 
-// The six "core values" cards. Border classes form a 3-col grid that
-// collapses cleanly at each breakpoint — derived from card position so the
-// rules live in one place instead of being hand-written six times.
-
 const BORDER_BY_INDEX = [
   "border-b border-line lg:border-r",
   "border-b border-line lg:border-r",

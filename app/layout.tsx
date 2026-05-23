@@ -6,7 +6,7 @@ import { GoogleAnalytics } from '@next/third-parties/google';
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata } from 'next';
-import { Geist, Instrument_Serif, Manrope, Newsreader } from 'next/font/google';
+import { Instrument_Serif, Manrope } from 'next/font/google';
 import './globals.css';
 
 const instrument = Instrument_Serif({
@@ -14,21 +14,6 @@ const instrument = Instrument_Serif({
     style: ['normal', 'italic'],
     subsets: ['latin'],
     variable: '--font-instrument',
-    display: 'swap',
-    preload: true,
-});
-
-const newsreader = Newsreader({
-    subsets: ['latin'],
-    style: ['normal', 'italic'],
-    variable: '--font-newsreader',
-    display: 'swap',
-    preload: true,
-});
-
-const geist = Geist({
-    subsets: ['latin'],
-    variable: '--font-geist',
     display: 'swap',
     preload: true,
 });
@@ -94,7 +79,7 @@ export default function RootLayout({
     return (
         <html
             lang="en"
-            className={`${instrument.variable} ${newsreader.variable} ${geist.variable} ${manrope.variable}`}
+            className={`${instrument.variable} ${manrope.variable}`}
         >
             <head>
                 <link rel="preconnect" href="https://res.cloudinary.com" crossOrigin="" />
@@ -113,14 +98,15 @@ export default function RootLayout({
                 >
                     Skip to main content
                 </a>
-                <GoogleAnalytics gaId="G-43N120Q5GW" />
-                <SpeedInsights />
-                <Analytics />
                 <SmoothScroll>
                     <Navbar />
                     <PageTransition>{children}</PageTransition>
                     <Footer />
                 </SmoothScroll>
+                {/* Analytics deferred below content — non-blocking */}
+                <GoogleAnalytics gaId="G-43N120Q5GW" />
+                <SpeedInsights />
+                <Analytics />
             </body>
         </html>
     );

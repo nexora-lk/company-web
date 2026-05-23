@@ -14,6 +14,12 @@ export default function PageTransition({ children }: { children: ReactNode }) {
         const el = ref.current;
         if (!el) return;
 
+        // First paint: content is already visible via CSS animation — skip GSAP.
+        if (initial.current) {
+            initial.current = false;
+            return;
+        }
+
         let cleanup: (() => void) | undefined;
         let cancelled = false;
 
@@ -21,35 +27,18 @@ export default function PageTransition({ children }: { children: ReactNode }) {
             const { gsap } = await import('gsap');
             if (cancelled) return;
 
-            if (initial.current) {
-                // First paint: fade in from nothing.
-                gsap.fromTo(
-                    el,
-                    { autoAlpha: 0, y: 12 },
-                    {
-                        autoAlpha: 1,
-                        y: 0,
-                        duration: 0.7,
-                        ease: 'power3.out',
-                        delay: 0.05,
-                        clearProps: 'willChange',
-                    }
-                );
-                initial.current = false;
-            } else {
-                // Subsequent navigations: quick fade-in.
-                gsap.fromTo(
-                    el,
-                    { autoAlpha: 0, y: 8 },
-                    {
-                        autoAlpha: 1,
-                        y: 0,
-                        duration: 0.5,
-                        ease: 'power2.out',
-                        clearProps: 'willChange',
-                    }
-                );
-            }
+            // Subsequent navigations: quick fade-in.
+            gsap.fromTo(
+                el,
+                { autoAlpha: 0, y: 8 },
+                {
+                    autoAlpha: 1,
+                    y: 0,
+                    duration: 0.5,
+                    ease: 'power2.out',
+                    clearProps: 'willChange',
+                }
+            );
 
             cleanup = () => {
                 gsap.killTweensOf(el);
@@ -63,7 +52,11 @@ export default function PageTransition({ children }: { children: ReactNode }) {
     }, [pathname]);
 
     return (
-        <main id="main-content" ref={ref} style={{ opacity: 0 }}>
+        <main
+            id="main-content"
+            ref={ref}
+            className="page-enter"
+        >
             {children}
         </main>
     );

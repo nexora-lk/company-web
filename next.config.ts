@@ -39,6 +39,8 @@ const nextConfig: NextConfig = {
 
     // Modern formats + long cache for next/image (CDN in use)
     images: {
+        loader: 'custom',
+        loaderFile: './lib/cloudinary-loader.ts',
         formats: ['image/avif', 'image/webp'],
         minimumCacheTTL: 2678400, // 31 days
         remotePatterns: [

@@ -12,8 +12,8 @@
     --c-ondark: #f1ece0;
     /* --font-display:var(--font-instrument), var(--font-newsreader), 'Newsreader', serif;
   --font-body:var(--font-geist), var(--font-manrope), system-ui, sans-serif; */
-    --font-display: var(--font-display), 'Playfair Display', Georgia, serif;
-    --font-body: var(--font-body), 'Cormorant Garamond', Georgia, serif;
+    --font-display: var(--font-instrument), 'Playfair Display', Georgia, serif;
+    --font-body: var(--font-manrope), system-ui, -apple-system, sans-serif;
     --max-content: 1240px;
 }
 
@@ -49,10 +49,28 @@
         transform: scaleX(1);
     }
 }
+@keyframes page-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 /* Hero slider dot progress indicator */
 .hero-progress {
     animation: hero-progress-fill linear forwards;
+}
+
+/* Page enter fade-in animation for initial paint */
+@media (prefers-reduced-motion: no-preference) {
+    .page-enter {
+        animation: page-fade-in 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        will-change: transform, opacity;
+    }
 }
 
 /* Base element styling */

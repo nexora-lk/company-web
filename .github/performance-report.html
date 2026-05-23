@@ -1,0 +1,1380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Performance Optimization Report — Prestige Glamour Group</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Lato:wght@300;400;700&display=swap');
+
+  :root {
+    --bg: #0a0a0f;
+    --bg2: #111118;
+    --bg3: #1a1a24;
+    --border: #2a2a3a;
+    --accent: #7c5cfc;
+    --accent2: #00e5ff;
+    --green: #00e676;
+    --yellow: #ffea00;
+    --red: #ff5252;
+    --orange: #ff9100;
+    --text: #e8e8f0;
+    --muted: #8888aa;
+    --card: #13131e;
+  }
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  /* HEADER */
+  .header {
+    background: linear-gradient(135deg, #0d0d18 0%, #16103a 50%, #0d0d18 100%);
+    border-bottom: 1px solid var(--border);
+    padding: 60px 60px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+  .header::before {
+    content:'';
+    position:absolute;
+    top:-100px; right:-100px;
+    width:400px; height:400px;
+    background: radial-gradient(circle, rgba(124,92,252,0.15) 0%, transparent 70%);
+    border-radius:50%;
+  }
+  .header::after {
+    content:'';
+    position:absolute;
+    bottom:-80px; left:200px;
+    width:300px; height:300px;
+    background: radial-gradient(circle, rgba(0,229,255,0.08) 0%, transparent 70%);
+    border-radius:50%;
+  }
+  .header-badge {
+    display:inline-flex; align-items:center; gap:8px;
+    background: rgba(124,92,252,0.15);
+    border: 1px solid rgba(124,92,252,0.3);
+    border-radius:4px;
+    padding:4px 14px;
+    font-family:'JetBrains Mono', monospace;
+    font-size:11px;
+    color: var(--accent);
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin-bottom:20px;
+  }
+  .header h1 {
+    font-family:'Syne', sans-serif;
+    font-size:42px;
+    font-weight:800;
+    line-height:1.1;
+    background: linear-gradient(90deg, #fff 0%, #c4b5fd 60%, #7c5cfc 100%);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
+    margin-bottom:12px;
+  }
+  .header-sub {
+    color: var(--muted);
+    font-size:14px;
+    font-family:'JetBrains Mono', monospace;
+  }
+  .header-meta {
+    display:flex; gap:40px; margin-top:32px; flex-wrap:wrap;
+  }
+  .meta-item { }
+  .meta-label { font-size:11px; letter-spacing:1.5px; text-transform:uppercase; color:var(--muted); margin-bottom:4px; }
+  .meta-value { font-family:'Syne', sans-serif; font-weight:700; font-size:18px; color:var(--text); }
+
+  /* SCORES BANNER */
+  .scores-banner {
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:0;
+    border-bottom: 1px solid var(--border);
+  }
+  .score-cell {
+    padding:28px 24px;
+    border-right:1px solid var(--border);
+    display:flex; align-items:center; gap:16px;
+  }
+  .score-cell:last-child { border-right:none; }
+  .score-ring {
+    width:56px; height:56px;
+    border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Syne', sans-serif;
+    font-size:18px;
+    font-weight:800;
+    flex-shrink:0;
+    position:relative;
+  }
+  .score-ring.green  { background:rgba(0,230,118,0.1); border:3px solid var(--green);  color:var(--green);  }
+  .score-ring.yellow { background:rgba(255,145,0,0.1);  border:3px solid var(--orange); color:var(--orange); }
+  .score-ring.red    { background:rgba(255,82,82,0.1);  border:3px solid var(--red);    color:var(--red);    }
+  .score-label { font-family:'Syne',sans-serif; font-weight:700; font-size:13px; color:var(--muted); text-transform:uppercase; letter-spacing:1px; }
+  .score-device { font-size:11px; color:var(--muted); opacity:0.6; font-family:'JetBrains Mono',monospace; }
+
+  /* LAYOUT */
+  .container { max-width:1300px; margin:0 auto; padding:0 40px; }
+  .section { padding:48px 60px; border-bottom:1px solid var(--border); }
+  .section:last-child { border-bottom:none; }
+
+  /* SECTION HEADING */
+  .section-title {
+    font-family:'Syne', sans-serif;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:var(--accent);
+    margin-bottom:6px;
+  }
+  .section-h2 {
+    font-family:'Syne', sans-serif;
+    font-size:28px;
+    font-weight:800;
+    color:#fff;
+    margin-bottom:24px;
+    line-height:1.2;
+  }
+
+  /* ALERT CARDS */
+  .alert-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:24px; }
+  .alert-card {
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:8px;
+    padding:20px;
+    position:relative;
+    overflow:hidden;
+  }
+  .alert-card::before {
+    content:'';
+    position:absolute; left:0; top:0; bottom:0;
+    width:3px;
+  }
+  .alert-card.critical::before { background:var(--red); }
+  .alert-card.warning::before  { background:var(--orange); }
+  .alert-card.info::before     { background:var(--accent2); }
+  .alert-card.pass::before     { background:var(--green); }
+  .alert-icon { font-size:18px; margin-bottom:8px; display:block; }
+  .alert-title { font-family:'Syne',sans-serif; font-weight:700; font-size:14px; margin-bottom:4px; }
+  .alert-saving { font-size:12px; font-family:'JetBrains Mono',monospace; }
+  .alert-saving.red    { color:var(--red); }
+  .alert-saving.orange { color:var(--orange); }
+  .alert-saving.green  { color:var(--green); }
+  .alert-desc { font-size:13px; color:var(--muted); margin-top:6px; }
+
+  /* CODE BLOCKS */
+  pre {
+    background:#0d0d14;
+    border:1px solid var(--border);
+    border-radius:8px;
+    padding:20px 24px;
+    overflow-x:auto;
+    font-family:'JetBrains Mono', monospace;
+    font-size:13px;
+    line-height:1.6;
+    margin:16px 0;
+    position:relative;
+  }
+  pre .file-label {
+    position:absolute;
+    top:8px; right:12px;
+    font-size:10px;
+    color:var(--accent);
+    opacity:0.7;
+    letter-spacing:1px;
+  }
+  .kw  { color:#c084fc; }
+  .fn  { color:#60a5fa; }
+  .str { color:#34d399; }
+  .cm  { color:#4b5563; font-style:italic; }
+  .num { color:#f59e0b; }
+  .tag { color:#f87171; }
+  .attr{ color:#fbbf24; }
+  .val { color:#34d399; }
+
+  /* STEPS */
+  .steps { counter-reset:step; }
+  .step {
+    display:flex; gap:20px;
+    padding:24px 0;
+    border-bottom:1px solid rgba(255,255,255,0.04);
+    position:relative;
+  }
+  .step:last-child { border-bottom:none; }
+  .step-num {
+    counter-increment:step;
+    width:36px; height:36px; flex-shrink:0;
+    background:linear-gradient(135deg,var(--accent),#5b21b6);
+    border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Syne',sans-serif; font-weight:800; font-size:14px;
+    color:#fff;
+    margin-top:2px;
+  }
+  .step-content { flex:1; }
+  .step-title {
+    font-family:'Syne',sans-serif; font-weight:700; font-size:16px;
+    margin-bottom:6px; color:#fff;
+  }
+  .step-desc { color:var(--muted); font-size:14px; margin-bottom:10px; }
+  .step-impact {
+    display:inline-flex; align-items:center; gap:6px;
+    font-size:11px; font-family:'JetBrains Mono',monospace;
+    padding:3px 10px;
+    border-radius:4px;
+    margin-bottom:12px;
+  }
+  .impact-high { background:rgba(255,82,82,0.12); color:var(--red); border:1px solid rgba(255,82,82,0.25); }
+  .impact-med  { background:rgba(255,145,0,0.12); color:var(--orange); border:1px solid rgba(255,145,0,0.25); }
+  .impact-low  { background:rgba(0,229,255,0.10); color:var(--accent2); border:1px solid rgba(0,229,255,0.25); }
+
+  /* TABLE */
+  table {
+    width:100%;
+    border-collapse:collapse;
+    font-size:14px;
+    margin:16px 0;
+  }
+  th {
+    text-align:left;
+    padding:12px 16px;
+    font-family:'Syne',sans-serif; font-weight:700; font-size:11px;
+    letter-spacing:1.5px; text-transform:uppercase; color:var(--muted);
+    border-bottom:2px solid var(--border);
+    background:var(--bg2);
+  }
+  td {
+    padding:12px 16px;
+    border-bottom:1px solid rgba(255,255,255,0.04);
+    vertical-align:top;
+  }
+  tr:hover td { background:rgba(255,255,255,0.02); }
+  .td-code { font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--accent2); }
+  .td-green { color:var(--green); font-weight:700; }
+  .td-red   { color:var(--red);   font-weight:700; }
+  .td-orange{ color:var(--orange);font-weight:700; }
+
+  /* CALLOUT */
+  .callout {
+    background:rgba(124,92,252,0.08);
+    border:1px solid rgba(124,92,252,0.25);
+    border-radius:8px;
+    padding:20px 24px;
+    margin:20px 0;
+    display:flex; gap:14px;
+    align-items:flex-start;
+  }
+  .callout-icon { font-size:20px; flex-shrink:0; margin-top:1px; }
+  .callout-text { font-size:14px; color:#c4b5fd; }
+  .callout-text strong { color:#fff; }
+
+  /* CHECKLIST */
+  .checklist { list-style:none; display:flex; flex-direction:column; gap:10px; margin:16px 0; }
+  .checklist li {
+    display:flex; align-items:flex-start; gap:12px;
+    font-size:14px; color:var(--text);
+  }
+  .checklist li::before {
+    content:'';
+    width:18px; height:18px; flex-shrink:0;
+    border:2px solid var(--accent);
+    border-radius:4px;
+    margin-top:2px;
+    background: rgba(124,92,252,0.1);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .checklist li.done::before {
+    content:'✓';
+    background:var(--green);
+    border-color:var(--green);
+    color:#000; font-weight:bold;
+    font-size:11px;
+    display:flex; align-items:center; justify-content:center;
+  }
+
+  /* METRIC BAR */
+  .metric-bar-wrap { margin:6px 0; }
+  .metric-bar-label { display:flex; justify-content:space-between; margin-bottom:4px; font-size:12px; }
+  .metric-bar { height:6px; background:var(--border); border-radius:4px; overflow:hidden; }
+  .metric-fill { height:100%; border-radius:4px; }
+
+  /* VERDICT BANNER */
+  .verdict {
+    background:linear-gradient(135deg, rgba(0,230,118,0.08) 0%, rgba(0,229,255,0.05) 100%);
+    border:1px solid rgba(0,230,118,0.2);
+    border-radius:12px;
+    padding:32px;
+    margin:24px 0;
+    text-align:center;
+  }
+  .verdict h3 { font-family:'Syne',sans-serif; font-size:22px; font-weight:800; color:var(--green); margin-bottom:8px; }
+  .verdict p { color:var(--muted); font-size:14px; }
+
+  /* TOC */
+  .toc {
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:10px;
+    padding:28px 32px;
+    margin-bottom:0;
+  }
+  .toc-title { font-family:'Syne',sans-serif; font-weight:800; font-size:16px; margin-bottom:16px; color:#fff; }
+  .toc ol { padding-left:20px; display:flex; flex-direction:column; gap:8px; }
+  .toc li { font-size:13px; }
+  .toc a { color:var(--accent); text-decoration:none; }
+  .toc a:hover { color:var(--accent2); }
+
+  /* PRIORITY TABLE */
+  .priority-tag {
+    display:inline-block;
+    padding:2px 10px; border-radius:4px;
+    font-size:11px; font-family:'JetBrains Mono',monospace;
+    font-weight:700; text-transform:uppercase; letter-spacing:1px;
+  }
+  .p1 { background:rgba(255,82,82,0.15); color:var(--red); border:1px solid rgba(255,82,82,0.3); }
+  .p2 { background:rgba(255,145,0,0.15); color:var(--orange); border:1px solid rgba(255,145,0,0.3); }
+  .p3 { background:rgba(0,229,255,0.10); color:var(--accent2); border:1px solid rgba(0,229,255,0.25); }
+
+  /* FOOTER */
+  .footer {
+    background:var(--bg2);
+    border-top:1px solid var(--border);
+    padding:32px 60px;
+    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;
+  }
+  .footer-brand { font-family:'Syne',sans-serif; font-weight:800; font-size:14px; color:var(--muted); }
+  .footer-date  { font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--muted); }
+
+  /* NETWORK STATS */
+  .network-grid { display:grid; grid-template-columns:repeat(5,1fr); gap:12px; margin:16px 0; }
+  .network-stat {
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:8px;
+    padding:16px;
+    text-align:center;
+  }
+  .network-stat .nval { font-family:'Syne',sans-serif; font-weight:800; font-size:22px; color:#fff; }
+  .network-stat .nlbl { font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:1px; margin-top:4px; }
+  .network-stat .nval.bad  { color:var(--red);    }
+  .network-stat .nval.warn { color:var(--orange);  }
+  .network-stat .nval.good { color:var(--green);   }
+
+  @media print {
+    body { background:#fff; color:#000; }
+    .header { background:#6d28d9; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-badge">⚡ Senior Performance Audit · 20+ YRS</div>
+  <h1>Next.js Performance<br>Optimization Report</h1>
+  <div class="header-sub">www.prestigeglamourgroupofcompany.com · Deployed on Vercel Free Tier</div>
+  <div class="header-meta">
+    <div class="meta-item"><div class="meta-label">Stack</div><div class="meta-value">Next.js · Vercel</div></div>
+    <div class="meta-item"><div class="meta-label">Target Load</div><div class="meta-value">10,000 concurrent</div></div>
+    <div class="meta-item"><div class="meta-label">Content Type</div><div class="meta-value">Static Site</div></div>
+    <div class="meta-item"><div class="meta-label">Audit Date</div><div class="meta-value">May 2026</div></div>
+  </div>
+</div>
+
+<!-- SCORES -->
+<div class="scores-banner">
+  <div class="score-cell">
+    <div class="score-ring yellow">81</div>
+    <div><div class="score-label">Performance</div><div class="score-device">📱 Mobile</div></div>
+  </div>
+  <div class="score-cell">
+    <div class="score-ring green">99</div>
+    <div><div class="score-label">Performance</div><div class="score-device">🖥️ Desktop</div></div>
+  </div>
+  <div class="score-cell">
+    <div class="score-ring green">96</div>
+    <div><div class="score-label">Accessibility</div><div class="score-device">Both</div></div>
+  </div>
+  <div class="score-cell">
+    <div class="score-ring green">100</div>
+    <div><div class="score-label">Best Practices + SEO</div><div class="score-device">Both — Perfect ✓</div></div>
+  </div>
+</div>
+
+<!-- SECTION 1 — CURRENT STATE -->
+<div class="section" id="s1">
+  <div class="section-title">Section 01</div>
+  <h2 class="section-h2">Current State Analysis</h2>
+
+  <div class="network-grid">
+    <div class="network-stat"><div class="nval bad">77</div><div class="nlbl">Total Requests</div></div>
+    <div class="network-stat"><div class="nval good">19.4 kB</div><div class="nlbl">Transferred</div></div>
+    <div class="network-stat"><div class="nval warn">2.3 MB</div><div class="nlbl">Resources</div></div>
+    <div class="network-stat"><div class="nval bad">27.17 s</div><div class="nlbl">Finish Time</div></div>
+    <div class="network-stat"><div class="nval good">206 ms</div><div class="nlbl">DOMContentLoaded</div></div>
+  </div>
+
+  <div class="callout">
+    <div class="callout-icon">🔍</div>
+    <div class="callout-text">
+      <strong>Key Observation:</strong> DOMContentLoaded at 206 ms is excellent — your HTML shell loads instantly thanks to Next.js SSG/ISR. However, a <strong>27-second finish time</strong> reveals deferred JS chunks, fonts, and unoptimized images loading lazily. The 2.3 MB resource size vs 19.4 kB transferred confirms aggressive caching is working, but the raw assets are too large and too numerous.
+    </div>
+  </div>
+
+  <div class="alert-grid">
+    <div class="alert-card critical">
+      <span class="alert-icon">🔴</span>
+      <div class="alert-title">Reduce Unused JavaScript</div>
+      <div class="alert-saving red">Est. savings: 90 KiB</div>
+      <div class="alert-desc">Dead JS bundles shipped to every visitor. Tree-shaking and dynamic imports needed.</div>
+    </div>
+    <div class="alert-card critical">
+      <span class="alert-icon">🔴</span>
+      <div class="alert-title">Minimize Main-Thread Work</div>
+      <div class="alert-saving red">4.0 seconds blocked</div>
+      <div class="alert-desc">JS parsing, evaluation, and layout thrashing on mobile CPUs killing TBT score.</div>
+    </div>
+    <div class="alert-card critical">
+      <span class="alert-icon">🔴</span>
+      <div class="alert-title">Reduce JS Execution Time</div>
+      <div class="alert-saving red">1.8 seconds</div>
+      <div class="alert-desc">Heavy synchronous script evaluation on page load. Break into smaller deferred chunks.</div>
+    </div>
+    <div class="alert-card warning">
+      <span class="alert-icon">🟠</span>
+      <div class="alert-title">Improve Image Delivery</div>
+      <div class="alert-saving orange">Mobile: 96 KiB · Desktop: 283 KiB savings</div>
+      <div class="alert-desc">Images not using next/image properly or wrong sizes/formats served.</div>
+    </div>
+    <div class="alert-card warning">
+      <span class="alert-icon">🟠</span>
+      <div class="alert-title">Render-Blocking Requests</div>
+      <div class="alert-saving orange">Delaying First Paint</div>
+      <div class="alert-desc">Fonts and non-critical CSS blocking initial render. Use font-display:swap and inline critical CSS.</div>
+    </div>
+    <div class="alert-card warning">
+      <span class="alert-icon">🟠</span>
+      <div class="alert-title">Legacy JavaScript</div>
+      <div class="alert-saving orange">Est. savings: 14 KiB</div>
+      <div class="alert-desc">Polyfills shipping to modern browsers. Configure browserslist correctly.</div>
+    </div>
+  </div>
+
+  <div class="callout">
+    <div class="callout-icon">💡</div>
+    <div class="callout-text">
+      <strong>Mobile gap (81 vs 99 desktop)</strong> is almost entirely explained by: slower CPU (mobile = 4× throttle in Lighthouse), heavier JS execution, and images not sized for mobile viewports. Fix these three and you reach 95+ on mobile.
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 2 — IMAGE OPTIMIZATION -->
+<div class="section" id="s2">
+  <div class="section-title">Section 02 · HIGH PRIORITY</div>
+  <h2 class="section-h2">Image Optimization — Save 283 KiB</h2>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num"></div>
+      <div class="step-content">
+        <div class="step-title">Always use next/image — Never &lt;img&gt; tags</div>
+        <div class="step-impact impact-high">🔴 CRITICAL — 283 KiB Savings</div>
+        <div class="step-desc">next/image automatically serves WebP/AVIF, lazy-loads, adds width/height to prevent CLS, and generates srcsets for responsive images.</div>
+<pre>
+<span class="cm">// ❌ WRONG — raw img tag, no optimization</span>
+&lt;<span class="tag">img</span> <span class="attr">src</span>=<span class="str">"/beach-boat.jpg"</span> <span class="attr">alt</span>=<span class="str">"boat"</span> /&gt;
+
+<span class="cm">// ✅ CORRECT — next/image with all required props</span>
+<span class="kw">import</span> Image <span class="kw">from</span> <span class="str">'next/image'</span>;
+
+<span class="cm">// For hero / above-the-fold images — PRIORITY!</span>
+&lt;<span class="tag">Image</span>
+  <span class="attr">src</span>=<span class="str">"/beach-boat.jpg"</span>
+  <span class="attr">alt</span>=<span class="str">"Prestige Glamour luxury boat"</span>
+  <span class="attr">width</span>=<span class="num">{1920}</span>
+  <span class="attr">height</span>=<span class="num">{1080}</span>
+  <span class="attr">priority</span>           <span class="cm">// preloads this image, no lazy-load</span>
+  <span class="attr">quality</span>=<span class="num">{85}</span>       <span class="cm">// sweet spot: quality vs size</span>
+  <span class="attr">sizes</span>=<span class="str">"(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1920px"</span>
+/&gt;
+
+<span class="cm">// For below-fold images — let them lazy load</span>
+&lt;<span class="tag">Image</span>
+  <span class="attr">src</span>=<span class="str">"/gallery-item.jpg"</span>
+  <span class="attr">alt</span>=<span class="str">"Gallery"</span>
+  <span class="attr">width</span>=<span class="num">{800}</span>
+  <span class="attr">height</span>=<span class="num">{600}</span>
+  <span class="attr">loading</span>=<span class="str">"lazy"</span>     <span class="cm">// default, explicit for clarity</span>
+  <span class="attr">quality</span>=<span class="num">{75}</span>
+  <span class="attr">placeholder</span>=<span class="str">"blur"</span>
+  <span class="attr">blurDataURL</span>=<span class="str">"data:image/jpeg;base64,..."</span>
+/&gt;
+</pre>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num"></div>
+      <div class="step-content">
+        <div class="step-title">Configure next.config.js for AVIF + WebP</div>
+        <div class="step-impact impact-high">🔴 CRITICAL — Up to 50% smaller than WebP</div>
+<pre>
+<span class="cm">// next.config.js</span>
+<span class="kw">const</span> nextConfig = {
+  images: {
+    formats: [<span class="str">'image/avif'</span>, <span class="str">'image/webp'</span>], <span class="cm">// AVIF first — 50% smaller</span>
+    minimumCacheTTL: <span class="num">31536000</span>,           <span class="cm">// 1 year cache</span>
+    deviceSizes: [<span class="num">640</span>, <span class="num">750</span>, <span class="num">828</span>, <span class="num">1080</span>, <span class="num">1200</span>, <span class="num">1920</span>],
+    imageSizes: [<span class="num">16</span>, <span class="num">32</span>, <span class="num">48</span>, <span class="num">64</span>, <span class="num">96</span>, <span class="num">128</span>, <span class="num">256</span>, <span class="num">384</span>],
+    dangerouslyAllowSVG: <span class="kw">false</span>,
+    contentSecurityPolicy: <span class="str">"default-src 'self'; script-src 'none'; sandbox;"</span>,
+  },
+  <span class="cm">// Enable gzip + brotli compression</span>
+  compress: <span class="kw">true</span>,
+};
+
+<span class="kw">module</span>.exports = nextConfig;
+</pre>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num"></div>
+      <div class="step-content">
+        <div class="step-title">Pre-optimize source images before upload</div>
+        <div class="step-impact impact-med">🟠 IMPORTANT — Reduce source file size</div>
+        <div class="step-desc">next/image cannot compress beyond the source. Start with optimized originals.</div>
+<pre>
+<span class="cm"># Install Sharp (required for Vercel image optimization)</span>
+npm install sharp
+
+<span class="cm"># Use squoosh-cli or imagemin for batch processing</span>
+npm install -D @squoosh/cli
+
+<span class="cm"># Optimize all images in /public/images/</span>
+npx @squoosh/cli --avif -d public/images/optimized public/images/*.jpg
+npx @squoosh/cli --webp -d public/images/optimized public/images/*.jpg
+
+<span class="cm"># Target sizes:
+# Hero images:     max 200 KB
+# Gallery images:  max 80 KB
+# Thumbnails:      max 20 KB</span>
+</pre>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 3 — JAVASCRIPT OPTIMIZATION -->
+<div class="section" id="s3">
+  <div class="section-title">Section 03 · HIGH PRIORITY</div>
+  <h2 class="section-h2">JavaScript Optimization — Remove 90+ KiB</h2>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num"></div>
+      <div class="step-content">
+        <div class="step-title">Analyze your bundle — know what you're shipping</div>
+        <div class="step-impact impact-high">🔴 REQUIRED FIRST STEP</div>
+<pre>
+<span class="cm"># Install bundle analyzer</span>
+npm install -D @next/bundle-analyzer
+
+<span class="cm">// next.config.js</span>
+<span class="kw">const</span> withBundleAnalyzer = require(<span class="str">'@next/bundle-analyzer'</span>)({
+  enabled: process.env.ANALYZE === <span class="str">'true'</span>,
+});
+
+<span class="kw">module</span>.exports = withBundleAnalyzer(nextConfig);
+
+<span class="cm"># Run analysis — opens browser with treemap</span>
+ANALYZE=true npm run build
+</pre>
+        <div class="step-desc">Look for: duplicate libraries, massive icon packs loaded entirely, moment.js, lodash full builds, un-tree-shaken packages.</div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num"></div>
+      <div class="step-content">
+        <div class="step-title">Dynamic imports for non-critical components</div>
+        <div class="step-impact impact-high">🔴 CRITICAL — Reduces initial JS parse time</div>
+<pre>
+<span class="kw">import</span> dynamic <span class="kw">from</span> <span class="str">'next/dynamic'</span>;
+
+<span class="cm">// ❌ WRONG — loads ALL components upfront</span>
+<span class="kw">import</span> Gallery   <span class="kw">from</span> <span class="str">'@/components/Gallery'</span>;
+<span class="kw">import</span> VideoPlayer <span class="kw">from</span> <span class="str">'@/components/VideoPlayer'</span>;
+<span class="kw">import</span> ContactForm <span class="kw">from</span> <span class="str">'@/components/ContactForm'</span>;
+
+<span class="cm">// ✅ CORRECT — load only when needed</span>
+<span class="kw">const</span> Gallery = dynamic(() => <span class="kw">import</span>(<span class="str">'@/components/Gallery'</span>), {
+  loading: () => &lt;<span class="tag">div</span> <span class="attr">className</span>=<span class="str">"skeleton"</span> /&gt;,
+  ssr: <span class="kw">false</span>, <span class="cm">// gallery doesn't need SSR</span>
+});
+
+<span class="kw">const</span> VideoPlayer = dynamic(() => <span class="kw">import</span>(<span class="str">'@/components/VideoPlayer'</span>), {
+  ssr: <span class="kw">false</span>,
+});
+
+<span class="cm">// Heavy UI libraries — load on interaction</span>
+<span class="kw">const</span> ContactForm = dynamic(() => <span class="kw">import</span>(<span class="str">'@/components/ContactForm'</span>));
+
+<span class="cm">// Icons — NEVER import whole library!</span>
+<span class="cm">// ❌ import { FaInstagram, FaFacebook } from 'react-icons/fa'</span>
+<span class="cm">// ✅ import FaInstagram from 'react-icons/fa/FaInstagram'</span>
+<span class="kw">import</span> FaInstagram <span class="kw">from</span> <span class="str">'react-icons/fa/FaInstagram'</span>;
+</pre>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num"></div>
+      <div class="step-content">
+        <div class="step-title">Fix Legacy JavaScript — Update browserslist</div>
+        <div class="step-impact impact-med">🟠 SAVES 14 KiB — Remove unnecessary polyfills</div>
+<pre>
+<span class="cm">// package.json — add browserslist</span>
+{
+  <span class="str">"browserslist"</span>: [
+    <span class="str">"chrome >= 96"</span>,
+    <span class="str">"firefox >= 96"</span>,
+    <span class="str">"safari >= 15"</span>,
+    <span class="str">"edge >= 96"</span>
+  ]
+}
+
+<span class="cm">// next.config.js — skip old browser transforms</span>
+<span class="kw">const</span> nextConfig = {
+  experimental: {
+    optimizePackageImports: [
+      <span class="str">'lucide-react'</span>,
+      <span class="str">'react-icons'</span>,
+      <span class="str">'@heroicons/react'</span>,
+      <span class="str">'framer-motion'</span>,   <span class="cm">// if used</span>
+    ],
+  },
+};
+</pre>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num"></div>
+      <div class="step-content">
+        <div class="step-title">Defer heavy third-party scripts</div>
+        <div class="step-impact impact-high">🔴 CRITICAL — Directly reduces main-thread work</div>
+<pre>
+<span class="cm">// Use next/script for ALL third-party scripts</span>
+<span class="kw">import</span> Script <span class="kw">from</span> <span class="str">'next/script'</span>;
+
+<span class="cm">// ❌ NEVER put these in &lt;head&gt; directly</span>
+<span class="cm">// &lt;script src="https://www.googletagmanager.com/gtag/js"&gt;&lt;/script&gt;</span>
+
+<span class="cm">// ✅ CORRECT — lazyOnload = loads after everything else</span>
+&lt;<span class="tag">Script</span>
+  <span class="attr">src</span>=<span class="str">"https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"</span>
+  <span class="attr">strategy</span>=<span class="str">"lazyOnload"</span>
+/&gt;
+
+<span class="cm">// Analytics inline — also lazyOnload</span>
+&lt;<span class="tag">Script</span> <span class="attr">id</span>=<span class="str">"google-analytics"</span> <span class="attr">strategy</span>=<span class="str">"lazyOnload"</span>&gt;{`
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX', { page_path: window.location.pathname });
+`}&lt;/<span class="tag">Script</span>&gt;
+
+<span class="cm">// Chat widgets, Intercom, HotJar — afterInteractive</span>
+&lt;<span class="tag">Script</span>
+  <span class="attr">src</span>=<span class="str">"https://widget.example.com/widget.js"</span>
+  <span class="attr">strategy</span>=<span class="str">"afterInteractive"</span>
+/&gt;
+</pre>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num"></div>
+      <div class="step-content">
+        <div class="step-title">Replace heavy libraries with lightweight alternatives</div>
+        <div class="step-impact impact-med">🟠 IMPORTANT — Easy wins</div>
+        <table>
+          <thead><tr><th>Remove</th><th>Replace With</th><th>Savings</th></tr></thead>
+          <tbody>
+            <tr><td class="td-code">moment.js (67 KB)</td><td class="td-code">date-fns (only import what's needed)</td><td class="td-green">~60 KB</td></tr>
+            <tr><td class="td-code">lodash full (71 KB)</td><td class="td-code">lodash-es (tree-shakeable) or native JS</td><td class="td-green">~60 KB</td></tr>
+            <tr><td class="td-code">react-icons/fa full</td><td class="td-code">Individual imports or SVG icons</td><td class="td-green">~40 KB</td></tr>
+            <tr><td class="td-code">axios (11 KB)</td><td class="td-code">Native fetch() — built into Next.js</td><td class="td-green">~11 KB</td></tr>
+            <tr><td class="td-code">jquery (87 KB)</td><td class="td-code">Remove entirely — use React</td><td class="td-green">~87 KB</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 4 — FONTS -->
+<div class="section" id="s4">
+  <div class="section-title">Section 04 · MEDIUM PRIORITY</div>
+  <h2 class="section-h2">Font Optimization — Fix Render-Blocking</h2>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num"></div>
+      <div class="step-content">
+        <div class="step-title">Use next/font — Zero Render Blocking, Zero Layout Shift</div>
+        <div class="step-impact impact-high">🔴 CRITICAL — Eliminates render-blocking font requests</div>
+        <div class="step-desc">Your network tab shows 3 woff2 font files being fetched from external CDN. Replace all of them with next/font.</div>
+<pre>
+<span class="cm">// app/layout.tsx or pages/_app.tsx</span>
+<span class="kw">import</span> { Playfair_Display, Lato } <span class="kw">from</span> <span class="str">'next/font/google'</span>;
+
+<span class="kw">const</span> playfair = Playfair_Display({
+  subsets: [<span class="str">'latin'</span>],
+  weight: [<span class="str">'400'</span>, <span class="str">'600'</span>, <span class="str">'700'</span>],
+  display: <span class="str">'swap'</span>,           <span class="cm">// show fallback font immediately</span>
+  preload: <span class="kw">true</span>,
+  variable: <span class="str">'--font-heading'</span>,
+});
+
+<span class="kw">const</span> lato = Lato({
+  subsets: [<span class="str">'latin'</span>],
+  weight: [<span class="str">'300'</span>, <span class="str">'400'</span>, <span class="str">'700'</span>],
+  display: <span class="str">'swap'</span>,
+  variable: <span class="str">'--font-body'</span>,
+});
+
+<span class="cm">// Apply to root layout</span>
+<span class="kw">export default function</span> <span class="fn">RootLayout</span>({ children }) {
+  <span class="kw">return</span> (
+    &lt;<span class="tag">html</span> <span class="attr">lang</span>=<span class="str">"en"</span> <span class="attr">className</span>=<span class="str">{`${playfair.variable} ${lato.variable}`</span>}&gt;
+      &lt;<span class="tag">body</span>&gt;{children}&lt;/<span class="tag">body</span>&gt;
+    &lt;/<span class="tag">html</span>&gt;
+  );
+}
+
+<span class="cm">/* globals.css */</span>
+body { font-family: var(--font-body), sans-serif; }
+h1, h2, h3 { font-family: var(--font-heading), serif; }
+</pre>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 5 — STATIC SITE + CACHING -->
+<div class="section" id="s5">
+  <div class="section-title">Section 05 · CRITICAL FOR 10K USERS</div>
+  <h2 class="section-h2">Static Generation + Caching Strategy</h2>
+
+  <div class="callout">
+    <div class="callout-icon">🚀</div>
+    <div class="callout-text">
+      <strong>This is your #1 weapon for 10,000 concurrent users.</strong> A purely static Next.js site on Vercel's CDN can handle millions of requests with no backend load. Every page must be pre-rendered at build time. Zero server-side work per request = infinite scalability on the free tier.
+    </div>
+  </div>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num"></div>
+      <div class="step-content">
+        <div class="step-title">Ensure all pages use Static Generation (SSG)</div>
+        <div class="step-impact impact-high">🔴 CRITICAL — Serves from CDN edge, not server</div>
+<pre>
+<span class="cm">// app/page.tsx — App Router (Next.js 13+)</span>
+<span class="cm">// Force static — no dynamic server-side work</span>
+<span class="kw">export const</span> dynamic = <span class="str">'force-static'</span>;
+<span class="kw">export const</span> revalidate = <span class="num">86400</span>; <span class="cm">// Revalidate once per day</span>
+
+<span class="kw">export default async function</span> <span class="fn">HomePage</span>() {
+  <span class="cm">// Data fetching here runs ONLY at build time</span>
+  <span class="kw">const</span> data = <span class="kw">await</span> fetch(<span class="str">'https://api.example.com/content'</span>, {
+    next: { revalidate: <span class="num">86400</span> }, <span class="cm">// ISR: rebuild daily</span>
+  });
+  <span class="kw">return</span> &lt;<span class="tag">main</span>&gt;...&lt;/<span class="tag">main</span>&gt;;
+}
+
+<span class="cm">// pages/ Router (older Next.js)</span>
+<span class="kw">export async function</span> <span class="fn">getStaticProps</span>() {
+  <span class="kw">return</span> {
+    props: { <span class="cm">/* your data */</span> },
+    revalidate: <span class="num">86400</span>, <span class="cm">// ISR</span>
+  };
+}
+</pre>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num"></div>
+      <div class="step-content">
+        <div class="step-title">Add Vercel Cache-Control headers</div>
+        <div class="step-impact impact-high">🔴 CRITICAL — CDN caches assets for 10K users</div>
+<pre>
+<span class="cm">// next.config.js</span>
+<span class="kw">const</span> nextConfig = {
+  async <span class="fn">headers</span>() {
+    <span class="kw">return</span> [
+      {
+        <span class="cm">// Static assets: JS, CSS, images — 1 year immutable</span>
+        source: <span class="str">'/:path*.(js|css|woff2|png|jpg|jpeg|webp|avif|svg|ico)'</span>,
+        headers: [
+          { key: <span class="str">'Cache-Control'</span>, value: <span class="str">'public, max-age=31536000, immutable'</span> },
+        ],
+      },
+      {
+        <span class="cm">// HTML pages — short cache, revalidate on CDN</span>
+        source: <span class="str">'/:path*'</span>,
+        headers: [
+          { key: <span class="str">'Cache-Control'</span>, value: <span class="str">'public, s-maxage=86400, stale-while-revalidate=604800'</span> },
+          { key: <span class="str">'X-Content-Type-Options'</span>, value: <span class="str">'nosniff'</span> },
+          { key: <span class="str">'X-Frame-Options'</span>, value: <span class="str">'DENY'</span> },
+          { key: <span class="str">'X-XSS-Protection'</span>, value: <span class="str">'1; mode=block'</span> },
+        ],
+      },
+    ];
+  },
+};
+</pre>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num"></div>
+      <div class="step-content">
+        <div class="step-title">vercel.json — Edge config for maximum CDN performance</div>
+        <div class="step-impact impact-high">🔴 CRITICAL — Route all static assets to CDN edge</div>
+<pre>
+<span class="cm">// vercel.json — place in project root</span>
+{
+  <span class="str">"framework"</span>: <span class="str">"nextjs"</span>,
+  <span class="str">"buildCommand"</span>: <span class="str">"next build"</span>,
+  <span class="str">"outputDirectory"</span>: <span class="str">".next"</span>,
+  <span class="str">"headers"</span>: [
+    {
+      <span class="str">"source"</span>: <span class="str">"/_next/static/(.*)"</span>,
+      <span class="str">"headers"</span>: [
+        { <span class="str">"key"</span>: <span class="str">"Cache-Control"</span>, <span class="str">"value"</span>: <span class="str">"public, max-age=31536000, immutable"</span> }
+      ]
+    },
+    {
+      <span class="str">"source"</span>: <span class="str">"/images/(.*)"</span>,
+      <span class="str">"headers"</span>: [
+        { <span class="str">"key"</span>: <span class="str">"Cache-Control"</span>, <span class="str">"value"</span>: <span class="str">"public, max-age=31536000, immutable"</span> }
+      ]
+    }
+  ],
+  <span class="str">"rewrites"</span>: [],
+  <span class="str">"regions"</span>: [<span class="str">"sin1"</span>]  <span class="cm">// Singapore — closest to Sri Lanka</span>
+}
+</pre>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 6 — CRITICAL CSS -->
+<div class="section" id="s6">
+  <div class="section-title">Section 06 · MEDIUM PRIORITY</div>
+  <h2 class="section-h2">Critical CSS + Render Path Optimization</h2>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num"></div>
+      <div class="step-content">
+        <div class="step-title">Inline Critical CSS — Eliminate render-blocking stylesheets</div>
+        <div class="step-impact impact-med">🟠 IMPORTANT — Fixes render-blocking insights flag</div>
+<pre>
+<span class="cm">// Install critters for automatic critical CSS inlining</span>
+npm install critters
+
+<span class="cm">// next.config.js</span>
+<span class="kw">const</span> nextConfig = {
+  experimental: {
+    optimizeCss: <span class="kw">true</span>, <span class="cm">// Inlines critical CSS automatically</span>
+  },
+};
+
+<span class="cm">/* For Tailwind CSS — purge aggressively */</span>
+<span class="cm">// tailwind.config.js</span>
+<span class="kw">module</span>.exports = {
+  content: [
+    <span class="str">'./pages/**/*.{js,ts,jsx,tsx,mdx}'</span>,
+    <span class="str">'./components/**/*.{js,ts,jsx,tsx,mdx}'</span>,
+    <span class="str">'./app/**/*.{js,ts,jsx,tsx,mdx}'</span>,
+  ],
+  <span class="cm">// Remove ALL unused utilities at build time</span>
+};
+</pre>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num"></div>
+      <div class="step-content">
+        <div class="step-title">Optimize metadata &amp; preload hints in layout</div>
+        <div class="step-impact impact-med">🟠 IMPORTANT — LCP improvement</div>
+<pre>
+<span class="cm">// app/layout.tsx</span>
+<span class="kw">export const</span> metadata = {
+  title: <span class="str">'Prestige Glamour Group of Company'</span>,
+  description: <span class="str">'Your description here'</span>,
+};
+
+<span class="kw">export default function</span> <span class="fn">RootLayout</span>({ children }) {
+  <span class="kw">return</span> (
+    &lt;<span class="tag">html</span> <span class="attr">lang</span>=<span class="str">"en"</span>&gt;
+      &lt;<span class="tag">head</span>&gt;
+        <span class="cm">{/* Preconnect to external origins you NEED */}</span>
+        &lt;<span class="tag">link</span> <span class="attr">rel</span>=<span class="str">"preconnect"</span> <span class="attr">href</span>=<span class="str">"https://fonts.googleapis.com"</span> /&gt;
+        &lt;<span class="tag">link</span> <span class="attr">rel</span>=<span class="str">"preconnect"</span> <span class="attr">href</span>=<span class="str">"https://fonts.gstatic.com"</span> <span class="attr">crossOrigin</span>=<span class="str">"anonymous"</span> /&gt;
+
+        <span class="cm">{/* DNS-prefetch for analytics */}</span>
+        &lt;<span class="tag">link</span> <span class="attr">rel</span>=<span class="str">"dns-prefetch"</span> <span class="attr">href</span>=<span class="str">"https://www.google-analytics.com"</span> /&gt;
+
+        <span class="cm">{/* Preload hero image for LCP */}</span>
+        &lt;<span class="tag">link</span>
+          <span class="attr">rel</span>=<span class="str">"preload"</span>
+          <span class="attr">as</span>=<span class="str">"image"</span>
+          <span class="attr">href</span>=<span class="str">"/images/hero.webp"</span>
+          <span class="attr">type</span>=<span class="str">"image/webp"</span>
+        /&gt;
+      &lt;/<span class="tag">head</span>&gt;
+      &lt;<span class="tag">body</span>&gt;{children}&lt;/<span class="tag">body</span>&gt;
+    &lt;/<span class="tag">html</span>&gt;
+  );
+}
+</pre>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 7 — 10K CONCURRENT USERS -->
+<div class="section" id="s7">
+  <div class="section-title">Section 07 · ARCHITECTURE</div>
+  <h2 class="section-h2">10,000 Concurrent Users on Vercel Free Tier</h2>
+
+  <div class="callout">
+    <div class="callout-icon">⚠️</div>
+    <div class="callout-text">
+      <strong>Vercel Free Tier limits:</strong> 100 GB bandwidth/month · 1,000 serverless function invocations/day · 6,000 build minutes/month. For 10K concurrent users, you <strong>must eliminate all serverless function calls</strong>. Every request must be served from CDN edge cache only.
+    </div>
+  </div>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num"></div>
+      <div class="step-content">
+        <div class="step-title">Full Static Export — The ultimate free tier strategy</div>
+        <div class="step-impact impact-high">🔴 ESSENTIAL FOR 10K USERS FREE</div>
+        <div class="step-desc">Export your entire Next.js site as static HTML files. Vercel serves them from CDN globally with no function invocations.</div>
+<pre>
+<span class="cm">// next.config.js — enable static export</span>
+<span class="kw">const</span> nextConfig = {
+  output: <span class="str">'export'</span>,              <span class="cm">// generates /out folder</span>
+  trailingSlash: <span class="kw">true</span>,          <span class="cm">// /about/ instead of /about</span>
+  skipTrailingSlashRedirect: <span class="kw">true</span>,
+  images: {
+    unoptimized: <span class="kw">false</span>,         <span class="cm">// keep next/image optimization via Vercel</span>
+  },
+};
+
+<span class="cm"># Build and preview locally</span>
+npm run build
+npx serve out
+
+<span class="cm"># IMPORTANT: Remove these features (incompatible with static export):
+# ❌ API routes (/api/*)
+# ❌ getServerSideProps
+# ❌ middleware that modifies responses
+# ✅ getStaticProps — works perfectly
+# ✅ getStaticPaths — works perfectly
+# ✅ ISR via revalidate — works on Vercel</span>
+</pre>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num"></div>
+      <div class="step-content">
+        <div class="step-title">Bandwidth math — will your free tier survive?</div>
+        <div class="step-impact impact-high">🔴 MUST CALCULATE BEFORE LAUNCH</div>
+        <table>
+          <thead><tr><th>Scenario</th><th>Page Size</th><th>Sessions/Day</th><th>Monthly Bandwidth</th><th>Free Tier</th></tr></thead>
+          <tbody>
+            <tr><td>Conservative</td><td>300 KB</td><td>5,000</td><td>~45 GB</td><td class="td-green">✓ OK</td></tr>
+            <tr><td>10K peak (1h)</td><td>300 KB</td><td>10,000</td><td>~90 GB</td><td class="td-orange">⚠ Near limit</td></tr>
+            <tr><td>Viral traffic</td><td>300 KB</td><td>50,000</td><td>~450 GB</td><td class="td-red">✗ Upgrade needed</td></tr>
+          </tbody>
+        </table>
+        <div class="callout" style="margin-top:12px">
+          <div class="callout-icon">💡</div>
+          <div class="callout-text"><strong>Target page size under 200 KB</strong> (after all optimizations). This gives you comfortable headroom for 10K daily visitors on the free tier. Current 2.3 MB resources is way too large — but cached assets won't re-download, so effective payload per return visitor is near zero.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num"></div>
+      <div class="step-content">
+        <div class="step-title">Contact forms without serverless functions</div>
+        <div class="step-impact impact-med">🟠 IMPORTANT — Replaces API routes</div>
+        <div class="step-desc">Static sites can't use /api routes under high load without hitting Vercel function limits. Use these free alternatives:</div>
+        <table>
+          <thead><tr><th>Service</th><th>Free Tier</th><th>How to use</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Formspree</strong></td><td>50 submissions/month</td><td class="td-code">action="https://formspree.io/f/YOUR_ID"</td></tr>
+            <tr><td><strong>Web3Forms</strong></td><td>250/month</td><td class="td-code">fetch('https://api.web3forms.com/submit')</td></tr>
+            <tr><td><strong>Netlify Forms</strong></td><td>100/month</td><td class="td-code">netlify attribute on form</td></tr>
+            <tr><td><strong>EmailJS</strong></td><td>200/month</td><td class="td-code">emailjs.send() from client</td></tr>
+          </tbody>
+        </table>
+<pre>
+<span class="cm">// Example: Web3Forms (generous free tier)</span>
+<span class="kw">const</span> <span class="fn">handleSubmit</span> = <span class="kw">async</span> (e) => {
+  e.preventDefault();
+  <span class="kw">const</span> response = <span class="kw">await</span> fetch(<span class="str">'https://api.web3forms.com/submit'</span>, {
+    method: <span class="str">'POST'</span>,
+    headers: { <span class="str">'Content-Type'</span>: <span class="str">'application/json'</span> },
+    body: JSON.stringify({
+      access_key: <span class="str">'YOUR_KEY'</span>,
+      name: formData.name,
+      email: formData.email,
+      message: formData.message,
+    }),
+  });
+};
+</pre>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 8 — ACCESSIBILITY -->
+<div class="section" id="s8">
+  <div class="section-title">Section 08 · ACCESSIBILITY</div>
+  <h2 class="section-h2">Accessibility — 96 → 100 (Fix 2 Remaining Issues)</h2>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num"></div>
+      <div class="step-content">
+        <div class="step-title">Common fixes for the missing 2 accessibility points</div>
+        <div class="step-impact impact-low">🔵 QUICK WINS</div>
+<pre>
+<span class="cm">/* Fix 1: Color contrast — ensure 4.5:1 ratio for text */</span>
+<span class="cm">/* Use: https://webaim.org/resources/contrastchecker/ */</span>
+.text-light-on-light {
+  color: <span class="num">#1a1a1a</span>; <span class="cm">/* Never use gray text on white bg below 4.5:1 */</span>
+}
+
+<span class="cm">/* Fix 2: Every image must have meaningful alt text */</span>
+<span class="cm">/* Fix 3: All form inputs need aria-labels */</span>
+&lt;<span class="tag">input</span>
+  <span class="attr">type</span>=<span class="str">"email"</span>
+  <span class="attr">aria-label</span>=<span class="str">"Email address"</span>
+  <span class="attr">placeholder</span>=<span class="str">"Enter your email"</span>
+/&gt;
+
+<span class="cm">/* Fix 4: Skip navigation link for keyboard users */</span>
+&lt;<span class="tag">a</span> <span class="attr">href</span>=<span class="str">"#main-content"</span> <span class="attr">className</span>=<span class="str">"sr-only focus:not-sr-only"</span>&gt;
+  Skip to main content
+&lt;/<span class="tag">a</span>&gt;
+
+<span class="cm">/* Fix 5: Landmark roles */</span>
+&lt;<span class="tag">header</span> <span class="attr">role</span>=<span class="str">"banner"</span>&gt;...&lt;/<span class="tag">header</span>&gt;
+&lt;<span class="tag">main</span>   <span class="attr">id</span>=<span class="str">"main-content"</span>&gt;...&lt;/<span class="tag">main</span>&gt;
+&lt;<span class="tag">nav</span>    <span class="attr">aria-label</span>=<span class="str">"Main navigation"</span>&gt;...&lt;/<span class="tag">nav</span>&gt;
+&lt;<span class="tag">footer</span> <span class="attr">role</span>=<span class="str">"contentinfo"</span>&gt;...&lt;/<span class="tag">footer</span>&gt;
+</pre>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 9 — MONITORING -->
+<div class="section" id="s9">
+  <div class="section-title">Section 09</div>
+  <h2 class="section-h2">Monitoring &amp; CI Performance Gates</h2>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num"></div>
+      <div class="step-content">
+        <div class="step-title">Lighthouse CI — fail builds that regress performance</div>
+        <div class="step-impact impact-med">🟠 IMPORTANT — Prevent regressions</div>
+<pre>
+<span class="cm"># Install Lighthouse CI</span>
+npm install -D @lhci/cli
+
+<span class="cm">// lighthouserc.js — project root</span>
+<span class="kw">module</span>.exports = {
+  ci: {
+    collect: {
+      url: [<span class="str">'http://localhost:3000'</span>],
+      numberOfRuns: <span class="num">3</span>,
+    },
+    assert: {
+      preset: <span class="str">'lighthouse:recommended'</span>,
+      assertions: {
+        <span class="str">'categories:performance'</span>:   [<span class="str">'error'</span>, { minScore: <span class="num">0.90</span> }],
+        <span class="str">'categories:accessibility'</span>: [<span class="str">'error'</span>, { minScore: <span class="num">0.95</span> }],
+        <span class="str">'categories:seo'</span>:           [<span class="str">'error'</span>, { minScore: <span class="num">1.00</span> }],
+        <span class="str">'first-contentful-paint'</span>:   [<span class="str">'error'</span>, { maxNumericValue: <span class="num">1500</span> }],
+        <span class="str">'interactive'</span>:              [<span class="str">'error'</span>, { maxNumericValue: <span class="num">3500</span> }],
+        <span class="str">'total-blocking-time'</span>:      [<span class="str">'error'</span>, { maxNumericValue: <span class="num">200</span> }],
+      },
+    },
+    upload: { target: <span class="str">'temporary-public-storage'</span> },
+  },
+};
+
+<span class="cm"># package.json scripts</span>
+{
+  <span class="str">"scripts"</span>: {
+    <span class="str">"lhci"</span>: <span class="str">"lhci autorun"</span>,
+    <span class="str">"perf"</span>: <span class="str">"npm run build && npm run lhci"</span>
+  }
+}
+</pre>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num"></div>
+      <div class="step-content">
+        <div class="step-title">Vercel Speed Insights — free real user monitoring</div>
+        <div class="step-impact impact-low">🔵 FREE — Real user Core Web Vitals</div>
+<pre>
+<span class="cm"># Install Vercel Speed Insights (free)</span>
+npm install @vercel/speed-insights
+
+<span class="cm">// app/layout.tsx</span>
+<span class="kw">import</span> { SpeedInsights } <span class="kw">from</span> <span class="str">'@vercel/speed-insights/next'</span>;
+
+<span class="kw">export default function</span> <span class="fn">RootLayout</span>({ children }) {
+  <span class="kw">return</span> (
+    &lt;<span class="tag">html</span>&gt;
+      &lt;<span class="tag">body</span>&gt;
+        {children}
+        &lt;<span class="tag">SpeedInsights</span> /&gt;  <span class="cm">{/* Zero performance cost */}</span>
+      &lt;/<span class="tag">body</span>&gt;
+    &lt;/<span class="tag">html</span>&gt;
+  );
+}
+
+<span class="cm"># Also add Vercel Analytics (free)</span>
+npm install @vercel/analytics
+
+<span class="kw">import</span> { Analytics } <span class="kw">from</span> <span class="str">'@vercel/analytics/react'</span>;
+<span class="cm">// Add &lt;Analytics /&gt; next to &lt;SpeedInsights /&gt;</span>
+</pre>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 10 — PRIORITY CHECKLIST -->
+<div class="section" id="s10">
+  <div class="section-title">Section 10 · ACTION PLAN</div>
+  <h2 class="section-h2">Implementation Priority &amp; Effort Matrix</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Priority</th>
+        <th>Task</th>
+        <th>Effort</th>
+        <th>Impact</th>
+        <th>Expected Gain</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="priority-tag p1">P1 — Do Now</span></td>
+        <td>Replace all &lt;img&gt; with next/image + priority on hero</td>
+        <td>2h</td>
+        <td class="td-red">Very High</td>
+        <td class="td-green">+8–12 mobile score</td>
+      </tr>
+      <tr>
+        <td><span class="priority-tag p1">P1 — Do Now</span></td>
+        <td>Add output:'export' + verify all pages static</td>
+        <td>1h</td>
+        <td class="td-red">Very High</td>
+        <td class="td-green">Handles 10K users</td>
+      </tr>
+      <tr>
+        <td><span class="priority-tag p1">P1 — Do Now</span></td>
+        <td>Switch fonts to next/font (remove woff2 requests)</td>
+        <td>1h</td>
+        <td class="td-red">Very High</td>
+        <td class="td-green">Eliminates render-blocking</td>
+      </tr>
+      <tr>
+        <td><span class="priority-tag p1">P1 — Do Now</span></td>
+        <td>Move all 3rd party scripts to next/script lazyOnload</td>
+        <td>1h</td>
+        <td class="td-red">Very High</td>
+        <td class="td-green">-2s main thread work</td>
+      </tr>
+      <tr>
+        <td><span class="priority-tag p2">P2 — This Week</span></td>
+        <td>Run bundle analyzer, remove unused packages</td>
+        <td>4h</td>
+        <td class="td-orange">High</td>
+        <td class="td-green">-90 KiB JS</td>
+      </tr>
+      <tr>
+        <td><span class="priority-tag p2">P2 — This Week</span></td>
+        <td>Dynamic imports for Gallery, Modal, ContactForm</td>
+        <td>2h</td>
+        <td class="td-orange">High</td>
+        <td class="td-green">Faster TTI</td>
+      </tr>
+      <tr>
+        <td><span class="priority-tag p2">P2 — This Week</span></td>
+        <td>Configure cache headers in vercel.json</td>
+        <td>30min</td>
+        <td class="td-orange">High</td>
+        <td class="td-green">CDN serves 10K users</td>
+      </tr>
+      <tr>
+        <td><span class="priority-tag p2">P2 — This Week</span></td>
+        <td>Pre-optimize all images (target &lt;200KB each)</td>
+        <td>3h</td>
+        <td class="td-orange">High</td>
+        <td class="td-green">-283 KiB per page load</td>
+      </tr>
+      <tr>
+        <td><span class="priority-tag p2">P2 — This Week</span></td>
+        <td>Update browserslist to modern browsers only</td>
+        <td>15min</td>
+        <td class="td-orange">Medium</td>
+        <td class="td-green">-14 KiB legacy JS</td>
+      </tr>
+      <tr>
+        <td><span class="priority-tag p3">P3 — Next Sprint</span></td>
+        <td>Add optimizeCss experimental + Tailwind purge</td>
+        <td>1h</td>
+        <td>Medium</td>
+        <td class="td-green">Smaller CSS bundle</td>
+      </tr>
+      <tr>
+        <td><span class="priority-tag p3">P3 — Next Sprint</span></td>
+        <td>Add Vercel Speed Insights + Analytics</td>
+        <td>30min</td>
+        <td>Low</td>
+        <td class="td-green">Real user monitoring</td>
+      </tr>
+      <tr>
+        <td><span class="priority-tag p3">P3 — Next Sprint</span></td>
+        <td>Set up Lighthouse CI in GitHub Actions</td>
+        <td>2h</td>
+        <td>Low</td>
+        <td class="td-green">Prevent regressions</td>
+      </tr>
+      <tr>
+        <td><span class="priority-tag p3">P3 — Next Sprint</span></td>
+        <td>Fix 2 remaining accessibility issues</td>
+        <td>1h</td>
+        <td>Low</td>
+        <td class="td-green">96 → 100 accessibility</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- SECTION 11 — EXPECTED RESULTS -->
+<div class="section" id="s11">
+  <div class="section-title">Section 11 · TARGETS</div>
+  <h2 class="section-h2">Expected Results After All Optimizations</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Metric</th>
+        <th>Current (Mobile)</th>
+        <th>Target (Mobile)</th>
+        <th>Current (Desktop)</th>
+        <th>Target (Desktop)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Performance Score</strong></td>
+        <td class="td-orange">81</td>
+        <td class="td-green">95+</td>
+        <td class="td-green">99</td>
+        <td class="td-green">99–100</td>
+      </tr>
+      <tr>
+        <td><strong>LCP</strong></td>
+        <td class="td-orange">~2.8s</td>
+        <td class="td-green">&lt; 1.5s</td>
+        <td class="td-green">~1.2s</td>
+        <td class="td-green">&lt; 1.0s</td>
+      </tr>
+      <tr>
+        <td><strong>TBT (Total Blocking Time)</strong></td>
+        <td class="td-red">~400ms</td>
+        <td class="td-green">&lt; 150ms</td>
+        <td class="td-green">~50ms</td>
+        <td class="td-green">&lt; 50ms</td>
+      </tr>
+      <tr>
+        <td><strong>CLS</strong></td>
+        <td class="td-green">~0</td>
+        <td class="td-green">0</td>
+        <td class="td-green">~0</td>
+        <td class="td-green">0</td>
+      </tr>
+      <tr>
+        <td><strong>JS Bundle Size</strong></td>
+        <td class="td-orange">~2.3 MB</td>
+        <td class="td-green">&lt; 800 KB</td>
+        <td class="td-orange">~2.3 MB</td>
+        <td class="td-green">&lt; 800 KB</td>
+      </tr>
+      <tr>
+        <td><strong>Accessibility</strong></td>
+        <td class="td-green">96</td>
+        <td class="td-green">100</td>
+        <td class="td-green">96</td>
+        <td class="td-green">100</td>
+      </tr>
+      <tr>
+        <td><strong>Concurrent Users (Free Tier)</strong></td>
+        <td colspan="2" style="text-align:center" class="td-green">10,000+ with proper static export + CDN caching</td>
+        <td colspan="2"></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="verdict">
+    <h3>🎯 Target: Mobile 95+ · Desktop 100 · 10K Users · Zero Downtime</h3>
+    <p>With the P1 optimizations alone (images, fonts, static export, script defer), you should reach <strong>Mobile 93+</strong> within one deployment cycle. Full P1+P2 completion brings you to <strong>Mobile 95–97, Desktop 99–100</strong> with the ability to serve 10,000 concurrent visitors from Vercel's global CDN edge — completely within the free tier for a static content website of this size.</p>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="footer-brand">Prestige Glamour Group — Performance Report · Senior Web Performance Audit</div>
+  <div class="footer-date">Generated: May 2026 · Next.js · Vercel Free Tier</div>
+</div>
+
+</body>
+</html>

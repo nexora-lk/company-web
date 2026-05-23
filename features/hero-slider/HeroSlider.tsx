@@ -191,7 +191,7 @@ export default function HeroSlider() {
                             key={i}
                             onClick={() => goTo(i)}
                             aria-label={`Go to slide ${i + 1}`}
-                            className={`relative w-2 h-2 rounded-full transition-all duration-500 ${
+                            className={`no-min-target touch-target-expand relative w-2 h-2 rounded-full transition-all duration-500 ${
                                 i === current ? 'bg-white w-6' : 'bg-white/50 hover:bg-white/80'
                             }`}
                         >
@@ -215,7 +215,7 @@ export default function HeroSlider() {
                     <button
                         onClick={goPrev}
                         aria-label="Previous slide"
-                        className="w-8 h-8 rounded-full border border-white/30 backdrop-blur-sm bg-white/10 flex items-center justify-center text-white hover:bg-white/25 transition-colors duration-300"
+                        className="no-min-target w-11 h-11 rounded-full border border-white/30 backdrop-blur-sm bg-white/10 flex items-center justify-center text-white hover:bg-white/25 transition-colors duration-300"
                     >
                         <svg
                             width="14"
@@ -232,7 +232,7 @@ export default function HeroSlider() {
                     <button
                         onClick={goNext}
                         aria-label="Next slide"
-                        className="w-8 h-8 rounded-full border border-white/30 backdrop-blur-sm bg-white/10 flex items-center justify-center text-white hover:bg-white/25 transition-colors duration-300"
+                        className="no-min-target w-11 h-11 rounded-full border border-white/30 backdrop-blur-sm bg-white/10 flex items-center justify-center text-white hover:bg-white/25 transition-colors duration-300"
                     >
                         <svg
                             width="14"

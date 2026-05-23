@@ -42,6 +42,9 @@ export default function Navbar() {
                             return (
                                 <div key={link.label} className="relative group">
                                     <button
+                                        aria-haspopup="true"
+                                        aria-expanded="false"
+                                        aria-label={`${link.label} menu`}
                                         className={`px-3.5 py-1.5 rounded-full text-[13px] transition-all duration-300 flex items-center gap-1 cursor-pointer border-none bg-transparent ${
                                             isActive
                                                 ? 'bg-bg text-ink font-medium shadow-xs'

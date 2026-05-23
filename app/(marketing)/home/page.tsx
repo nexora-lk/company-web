@@ -9,7 +9,7 @@ import VisionSection from '@/components/sections/home/vision';
 
 export default function HomePage() {
     return (
-        <main role="main">
+        <div>
             <HeroSection />
             <AboutSection />
             <ValuesSection />
@@ -18,6 +18,6 @@ export default function HomePage() {
             <GallerySection />
             <ImpactSection />
             <ContactSection />
-        </main>
+        </div>
     );
 }

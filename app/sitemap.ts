@@ -1,5 +1,8 @@
 import type { MetadataRoute } from 'next';
 
+export const dynamic = 'force-static';
+
+
 const baseUrl = 'https://www.prestigeglamourgroupofcompany.com';
 
 // Central route source (ONLY place you maintain)

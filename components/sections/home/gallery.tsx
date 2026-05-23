@@ -30,6 +30,7 @@ export default function GallerySection() {
                         <Photo
                             src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                             alt="Prestige Glamour plantations - lush agricultural fields during harvest season"
+                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 66vw, 58vw"
                             className="w-full h-full object-cover"
                         />
                     </figure>
@@ -37,6 +38,7 @@ export default function GallerySection() {
                         <Photo
                             src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                             alt="Prestige Glamour workshop - skilled artisans crafting premium products"
+                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 33vw, 42vw"
                             className="w-full h-full object-cover"
                         />
                     </figure>
@@ -44,6 +46,7 @@ export default function GallerySection() {
                         <Photo
                             src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                             alt="Prestige Glamour gemstone and jewellery collection - premium sapphires and precious stones"
+                            sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 25vw"
                             className="w-full h-full object-cover"
                         />
                     </figure>
@@ -51,6 +54,7 @@ export default function GallerySection() {
                         <Photo
                             src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                             alt="Prestige Glamour hospitality and real estate projects - luxury property development"
+                            sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 25vw"
                             className="w-full h-full object-cover"
                         />
                     </figure>
@@ -58,6 +62,7 @@ export default function GallerySection() {
                         <Photo
                             src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                             alt="Prestige Glamour agri-export operations - premium export-quality crops from Sri Lanka"
+                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 50vw"
                             className="w-full h-full object-cover"
                         />
                     </figure>

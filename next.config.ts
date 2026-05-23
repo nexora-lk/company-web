@@ -1,5 +1,4 @@
 import type { NextConfig } from 'next';
-import withBundleAnalyzer from '@next/bundle-analyzer';
 
 const nextConfig: NextConfig = {
     turbopack: { root: __dirname },
@@ -8,10 +7,15 @@ const nextConfig: NextConfig = {
     poweredByHeader: false,
     reactStrictMode: true,
     compress: true,
+    output: 'export',              // generates /out folder
+    trailingSlash: true,          // /about/ instead of /about
+    skipTrailingSlashRedirect: true,
+
 
     // Prevent GSAP chunking issues + optimize imports
     experimental: {
         optimizePackageImports: ['gsap', 'lenis'],
+        optimizeCss: true,
     },
 
     webpack: (config, { isServer }) => {
@@ -39,10 +43,11 @@ const nextConfig: NextConfig = {
 
     // Modern formats + long cache for next/image (CDN in use)
     images: {
+        unoptimized: false,
         loader: 'custom',
         loaderFile: './lib/cloudinary-loader.ts',
         formats: ['image/avif', 'image/webp'],
-        minimumCacheTTL: 2678400, // 31 days
+        minimumCacheTTL: 31536000,
         remotePatterns: [
             {
                 protocol: 'https',
@@ -53,18 +58,29 @@ const nextConfig: NextConfig = {
         // Optimize image delivery
         deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
         imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+        dangerouslyAllowSVG: false,
+        contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
     },
 
     // Security headers
     headers: async () => [
         {
+        // Static assets: JS, CSS, images — 1 year immutable
+            source: '/:path*.(js|css|woff2|png|jpg|jpeg|webp|avif|svg|ico)',
+            headers: [
+                { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+            ],
+        },
+        {
             source: '/:path*',
             headers: [
                 { key: 'X-Content-Type-Options', value: 'nosniff' },
-                { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
                 { key: 'X-XSS-Protection', value: '1; mode=block' },
                 { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
                 { key: 'Permissions-Policy', value: 'geolocation=(), microphone=(), camera=()' },
+                { key: 'Cache-Control', value: 'public, s-maxage=86400, stale-while-revalidate=604800' },
+                { key: 'X-Content-Type-Options', value: 'nosniff' },
+                { key: 'X-Frame-Options', value: 'DENY' },
             ],
         },
         {
@@ -86,8 +102,8 @@ const nextConfig: NextConfig = {
     ],
 };
 
-const configWithAnalyzer = process.env.ANALYZE === 'true'
-    ? withBundleAnalyzer({ enabled: true })(nextConfig)
-    : nextConfig;
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+});
 
-export default configWithAnalyzer;
+module.exports = withBundleAnalyzer(nextConfig);

@@ -28,7 +28,7 @@ const manrope = Manrope({
 
 // Force entire site to be static — CDN serves pre-built HTML
 export const dynamic = 'force-static';
-export const revalidate = false; // Never revalidate — rebuild to update
+export const revalidate = 86400; // Never revalidate — rebuild to update
 
 export const metadata: Metadata = {
     title: "Prestige Glamour — Cultivating Sri Lanka's enduring industries",
@@ -69,6 +69,27 @@ export const metadata: Metadata = {
             'max-image-preview': 'large',
             'max-snippet': -1,
         },
+    },
+    icons: {
+        icon: [
+            { url: 'https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779442467/logo_eszhjw.png', type: 'image/png' },
+            { url: 'https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779442467/logo_eszhjw.png', sizes: '16x16', type: 'image/png' },
+            { url: 'https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779442467/logo_eszhjw.png', sizes: '32x32', type: 'image/png' },
+            { url: 'https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779442467/logo_eszhjw.png', sizes: '96x96', type: 'image/png' },
+            { url: 'https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779442467/logo_eszhjw.png', sizes: '192x192', type: 'image/png' },
+        ],
+        shortcut: 'https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779442467/logo_eszhjw.png',
+        apple: [
+            { url: 'https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779442467/logo_eszhjw.png', sizes: '57x57', type: 'image/png' },
+            { url: 'https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779442467/logo_eszhjw.png', sizes: '60x60', type: 'image/png' },
+            { url: 'https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779442467/logo_eszhjw.png', sizes: '72x72', type: 'image/png' },
+            { url: 'https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779442467/logo_eszhjw.png', sizes: '76x76', type: 'image/png' },
+            { url: 'https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779442467/logo_eszhjw.png', sizes: '114x114', type: 'image/png' },
+            { url: 'https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779442467/logo_eszhjw.png', sizes: '120x120', type: 'image/png' },
+            { url: 'https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779442467/logo_eszhjw.png', sizes: '144x144', type: 'image/png' },
+            { url: 'https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779442467/logo_eszhjw.png', sizes: '152x152', type: 'image/png' },
+            { url: 'https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779442467/logo_eszhjw.png', sizes: '180x180', type: 'image/png' },
+        ],
     },
 };
 

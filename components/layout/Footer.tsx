@@ -43,11 +43,11 @@ export default function Footer() {
                     {footerColumns.map((col) => (
                         <div key={col.title} className="col-span-6 md:col-span-3 lg:col-span-2">
                             <div className="num text-ondark/60! mb-5">{col.title}</div>
-                            <ul className="space-y-3 text-[14px]">
+                            <ul className="space-y-1.5 text-[14px]">
                                 {col.links.map((link) => (
                                     <li key={link.label}>
                                         <Link
-                                            className="ulink hover:opacity-100 opacity-90"
+                                            className="ulink hover:opacity-100 opacity-90 py-2 inline-block"
                                             href={link.href}
                                         >
                                             {link.label}
@@ -62,10 +62,15 @@ export default function Footer() {
                         <div className="num text-ondark/60! mb-5">Newsletter — Quarterly only</div>
                         <div className="flex gap-2 border-b border-ondark/30 pb-3">
                             <input
+                                id="newsletter-email"
                                 className="bg-transparent flex-1 outline-none placeholder:text-ondark/40 text-[14px]"
                                 placeholder="you@company.com"
+                                aria-label="Email address for newsletter"
                             />
-                            <button className="text-[14px] flex items-center gap-2">
+                            <button
+                                className="no-min-target touch-target-expand text-[14px] flex items-center gap-2"
+                                aria-label="Subscribe to newsletter"
+                            >
                                 Subscribe <span className="arrow">→</span>
                             </button>
                         </div>
@@ -74,16 +79,26 @@ export default function Footer() {
                             trading floor.
                         </p>
 
-                        <div className="mt-8 flex items-center gap-3 text-[12px] text-ondark/70">
-                            <a className="ulink" href="#">
+                        <div className="mt-6 flex flex-wrap items-center gap-2 text-[12px] text-ondark/70 -ml-3">
+                            <a
+                                className="ulink px-3 py-3 inline-flex items-center min-h-[44px]"
+                                href="#"
+                                aria-label="Visit our Instagram page"
+                            >
                                 Instagram
                             </a>
-                            <span className="opacity-40">·</span>
-                            <a className="ulink" href="#">
+                            <a
+                                className="ulink px-3 py-3 inline-flex items-center min-h-[44px]"
+                                href="#"
+                                aria-label="Visit our LinkedIn page"
+                            >
                                 LinkedIn
                             </a>
-                            <span className="opacity-40">·</span>
-                            <a className="ulink" href="#">
+                            <a
+                                className="ulink px-3 py-3 inline-flex items-center min-h-[44px]"
+                                href="#"
+                                aria-label="Visit our YouTube channel"
+                            >
                                 YouTube
                             </a>
                         </div>
@@ -94,9 +109,13 @@ export default function Footer() {
 
                 <div className="mt-6 flex flex-wrap items-center justify-between gap-4 text-[12px] text-ondark/60">
                     <div>© 1998 – 2026 Prestige Glamour Group (Pvt) Ltd. Colombo, Sri Lanka.</div>
-                    <div className="flex items-center gap-5">
+                    <div className="flex flex-wrap items-center gap-2 -mr-3">
                         {footerLegal.map((link) => (
-                            <a key={link.label} className="ulink" href={link.href}>
+                            <a
+                                key={link.label}
+                                className="ulink px-3 py-3 inline-flex items-center min-h-[44px]"
+                                href={link.href}
+                            >
                                 {link.label}
                             </a>
                         ))}

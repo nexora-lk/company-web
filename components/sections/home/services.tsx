@@ -30,6 +30,7 @@ export default function ServicesSection() {
                         <Photo
                             src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                             alt="Lush green plantation fields at sunrise"
+                            sizes="(max-width: 1024px) 100vw, 58vw"
                             className="absolute inset-0 w-full h-full object-cover"
                         />
                         <div className="absolute inset-0 bg-linear-to-t from-ink/85 via-ink/30 to-transparent"></div>
@@ -67,6 +68,7 @@ export default function ServicesSection() {
                             <Photo
                                 src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                                 alt="Hands exchanging seeds — rural finance empowerment"
+                                sizes="(max-width: 1024px) 100vw, 42vw"
                                 className="absolute inset-0 w-full h-full object-cover"
                             />
                             <div className="absolute inset-0 bg-linear-to-t from-ink/80 via-ink/20 to-transparent"></div>
@@ -92,6 +94,7 @@ export default function ServicesSection() {
                             <Photo
                                 src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                                 alt="Gemstones and jewels on display"
+                                sizes="(max-width: 1024px) 100vw, 42vw"
                                 className="absolute inset-0 w-full h-full object-cover"
                             />
                             <div className="absolute inset-0 bg-linear-to-t from-ink/80 via-ink/20 to-transparent"></div>
@@ -119,6 +122,7 @@ export default function ServicesSection() {
                         <Photo
                             src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                             alt="Fresh tropical fruits and herbal products"
+                            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                             className="absolute inset-0 w-full h-full object-cover"
                         />
                         <div className="absolute inset-0 bg-linear-to-t from-ink/85 via-ink/25 to-transparent"></div>
@@ -144,6 +148,7 @@ export default function ServicesSection() {
                         <Photo
                             src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                             alt="Community education and social development"
+                            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                             className="absolute inset-0 w-full h-full object-cover"
                         />
                         <div className="absolute inset-0 bg-linear-to-t from-ink/85 via-ink/25 to-transparent"></div>
@@ -169,6 +174,7 @@ export default function ServicesSection() {
                         <Photo
                             src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                             alt="Modern commercial real estate development"
+                            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                             className="absolute inset-0 w-full h-full object-cover"
                         />
                         <div className="absolute inset-0 bg-linear-to-t from-ink/85 via-ink/25 to-transparent"></div>

@@ -5,6 +5,7 @@
     "scripts": {
         "dev": "next dev",
         "build": "next build",
+        "analyze": "next build --experimental-analyze",
         "start": "next start",
         "lint": "eslint",
         "test": "jest --watch",
@@ -35,6 +36,7 @@
         "react-dom": "19.2.4"
     },
     "devDependencies": {
+        "@next/bundle-analyzer": "^16.2.6",
         "@playwright/test": "^1.60.0",
         "@tailwindcss/postcss": "^4",
         "@testing-library/dom": "^10.0.0",

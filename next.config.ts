@@ -1,4 +1,5 @@
 import type { NextConfig } from 'next';
+import withBundleAnalyzer from '@next/bundle-analyzer';
 
 const nextConfig: NextConfig = {
     turbopack: { root: __dirname },
@@ -69,10 +70,22 @@ const nextConfig: NextConfig = {
             headers: [{ key: 'Cache-Control', value: 'public, immutable, max-age=31536000' }],
         },
         {
+            source: '/_next/static/:path*',
+            headers: [{ key: 'Cache-Control', value: 'public, immutable, max-age=31536000' }],
+        },
+        {
+            source: '/_next/image/:path*',
+            headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, stale-while-revalidate=86400' }],
+        },
+        {
             source: '/public/:path*',
             headers: [{ key: 'Cache-Control', value: 'public, max-age=2592000' }],
         },
     ],
 };
 
-export default nextConfig;
+const configWithAnalyzer = process.env.ANALYZE === 'true'
+    ? withBundleAnalyzer({ enabled: true })(nextConfig)
+    : nextConfig;
+
+export default configWithAnalyzer;

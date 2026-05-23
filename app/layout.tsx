@@ -1,8 +1,6 @@
 import Footer from '@/components/layout/Footer';
-import Interactions from '@/components/layout/Interactions';
 import Navbar from '@/components/layout/Navbar';
 import PageTransition from '@/components/layout/PageTransition';
-import Reveal from '@/components/layout/Reveal';
 import SmoothScroll from '@/components/layout/SmoothScroll';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { Analytics } from '@vercel/analytics/next';
@@ -41,6 +39,10 @@ const manrope = Manrope({
     display: 'swap',
     preload: true,
 });
+
+// Force entire site to be static — CDN serves pre-built HTML
+export const dynamic = 'force-static';
+export const revalidate = false; // Never revalidate — rebuild to update
 
 export const metadata: Metadata = {
     title: "Prestige Glamour — Cultivating Sri Lanka's enduring industries",
@@ -97,6 +99,8 @@ export default function RootLayout({
             <head>
                 <link rel="preconnect" href="https://res.cloudinary.com" crossOrigin="" />
                 <link rel="dns-prefetch" href="https://res.cloudinary.com" />
+                <link rel="preconnect" href="https://www.googletagmanager.com" />
+                <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
                 <meta
                     name="google-site-verification"
                     content="FYgdAmWULb4nRgIMS8lGbU1F7-3muEXQMJLDPIOACIA"
@@ -116,8 +120,6 @@ export default function RootLayout({
                     <Navbar />
                     <PageTransition>{children}</PageTransition>
                     <Footer />
-                    <Reveal />
-                    <Interactions />
                 </SmoothScroll>
             </body>
         </html>

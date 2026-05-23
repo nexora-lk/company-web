@@ -7,6 +7,7 @@ type PhotoProps = {
     width?: number;
     height?: number;
     priority?: boolean;
+    fetchPriority?: 'high' | 'low' | 'auto';
     sizes?: string;
     className?: string;
     crop?: {
@@ -21,6 +22,7 @@ export default function Photo({
     width = 1600,
     height = 1067,
     priority = false,
+    fetchPriority,
     sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw',
     className,
     crop = {
@@ -38,6 +40,7 @@ export default function Photo({
                 width={width}
                 height={height}
                 priority={priority}
+                fetchPriority={fetchPriority}
                 sizes={sizes}
                 className={className}
             />
@@ -51,6 +54,7 @@ export default function Photo({
             width={width}
             height={height}
             priority={priority}
+            fetchPriority={fetchPriority}
             sizes={sizes}
             className={className}
             crop={crop}

@@ -2,6 +2,10 @@
 
 import { usePathname } from 'next/navigation';
 import { createContext, useContext, useEffect, useRef, type ReactNode } from 'react';
+import dynamic from 'next/dynamic';
+
+const Reveal = dynamic(() => import('./Reveal'), { ssr: false });
+const Interactions = dynamic(() => import('./Interactions'), { ssr: false });
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const LenisCtx = createContext<any>(null);
@@ -93,5 +97,11 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
         }
     }, [pathname]);
 
-    return <LenisCtx.Provider value={lenisRef}>{children}</LenisCtx.Provider>;
+    return (
+        <LenisCtx.Provider value={lenisRef}>
+            {children}
+            <Reveal />
+            <Interactions />
+        </LenisCtx.Provider>
+    );
 }

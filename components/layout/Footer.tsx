@@ -11,7 +11,7 @@ export default function Footer() {
                         <div className="flex items-center gap-2.5 mb-8">
                             <div className="relative w-16 h-16 overflow-hidden flex items-center justify-center">
                                 <Photo
-                                    src="/logo.png"
+                                    src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779442467/logo_eszhjw.png"
                                     alt={brand.name}
                                     width={60}
                                     height={60}

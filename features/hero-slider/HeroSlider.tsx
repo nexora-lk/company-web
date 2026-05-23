@@ -171,6 +171,7 @@ export default function HeroSlider() {
                         alt={slide.alt}
                         fill
                         priority={i === 0}
+                        fetchPriority={i === 0 ? 'high' : 'low'}
                         sizes="(max-width: 768px) 100vw, 50vw"
                         className="object-cover"
                     />

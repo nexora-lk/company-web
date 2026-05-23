@@ -25,6 +25,7 @@ const manrope = Manrope({
     preload: true,
 });
 
+
 // Force entire site to be static — CDN serves pre-built HTML
 export const dynamic = 'force-static';
 export const revalidate = false; // Never revalidate — rebuild to update

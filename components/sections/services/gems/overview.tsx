@@ -47,7 +47,7 @@ export default function OverviewSection() {
                     <aside className="col-span-12 lg:col-span-5 space-y-4 lg:sticky lg:top-24">
                         <figure className="rounded-[18px] overflow-hidden aspect-4/5">
                             <Photo
-                                src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
+                                src="/sabrianna-Talnaz9Bug0-unsplash.jpg"
                                 alt="Premium sapphire gemstones"
                                 priority
                                 className="w-full h-full object-cover"

@@ -12,7 +12,6 @@ const routes = [
     { path: '/about', priority: 0.9, changeFrequency: 'monthly' as const },
     { path: '/corporate', priority: 0.8, changeFrequency: 'monthly' as const },
     { path: '/cultivation', priority: 0.8, changeFrequency: 'monthly' as const },
-    { path: '/events', priority: 0.85, changeFrequency: 'weekly' as const },
     { path: '/gallery', priority: 0.8, changeFrequency: 'weekly' as const },
     { path: '/investment', priority: 0.9, changeFrequency: 'weekly' as const },
     { path: '/services/plantation', priority: 0.85, changeFrequency: 'monthly' as const },

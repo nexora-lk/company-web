@@ -4,9 +4,9 @@ import Link from 'next/link';
 
 export default function Footer() {
     return (
-        <footer className="bg-ink text-ondark pt-20 pb-10">
-            <div className="max-w-content mx-auto px-6 lg:px-10">
-                <div className="grid grid-cols-12 gap-10 lg:gap-14">
+        <footer className="bg-ink text-ondark pt-16 sm:pt-20 md:pt-24 lg:pt-28 xl:pt-32 pb-8 sm:pb-10 lg:pb-12 xl:pb-14">
+            <div className="max-w-content mx-auto px-6 md:px-8 lg:px-10 xl:px-12">
+                <div className="grid grid-cols-12 gap-8 sm:gap-10 lg:gap-14 xl:gap-16">
                     <div className="col-span-12 md:col-span-6 lg:col-span-5">
                         <div className="flex items-center gap-2.5 mb-8">
                             <div className="relative w-16 h-16 overflow-hidden flex items-center justify-center">
@@ -22,12 +22,12 @@ export default function Footer() {
                                 <div className="font-display text-[20px]">{brand.name}</div>
                             </div>
                         </div>
-                        <p className="font-display text-[36px] lg:text-[44px] leading-[1.05] tracking-tightish max-w-110">
+                        <p className="font-display text-[32px] sm:text-[36px] md:text-[40px] lg:text-[44px] xl:text-[48px] leading-[1.05] tracking-tightish max-w-110">
                             Six businesses. One <em className="serif-em">island</em>.<br />
                             Cultivating the long return since 1998.
                         </p>
 
-                        <div className="mt-10 flex flex-wrap gap-3">
+                        <div className="mt-8 sm:mt-10 xl:mt-12 flex flex-wrap gap-3">
                             <Link className="btn bg-bg! text-ink!" href="/#contact">
                                 Speak with our team <span className="arrow">→</span>
                             </Link>
@@ -105,7 +105,7 @@ export default function Footer() {
                     </div>
                 </div>
 
-                <div className="hairline mt-16 bg-[rgba(241,236,224,0.18)]!"></div>
+                <div className="hairline mt-12 sm:mt-16 xl:mt-20 bg-[rgba(241,236,224,0.18)]!"></div>
 
                 <div className="mt-6 flex flex-wrap items-center justify-between gap-4 text-[12px] text-ondark/60">
                     <div>© 1998 – 2026 Prestige Glamour Group (Pvt) Ltd. Colombo, Sri Lanka.</div>

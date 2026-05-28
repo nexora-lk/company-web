@@ -5,7 +5,6 @@ export default function TeemSection() {
                 <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-12">
                     <div>
                         <div className="flex items-center gap-3 mb-6">
-                            <span className="num">[ 03 ]</span>
                             <span className="hairline-strong w-[120px]"></span>
                             <span className="eyebrow">Our Team Members</span>
                         </div>

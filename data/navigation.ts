@@ -1,8 +1,8 @@
 import type { NavLink, FooterColumn } from "@/types/navigation";
 
 export const brand = {
-  name: "Prestige Glamour Group of Company",
-  tagline: "Group · Est. 2012",
+  name: "PGGC",
+  tagline: "Group · Est. 2013",
   monogram: "P",
 } as const;
 
@@ -22,7 +22,6 @@ export const primaryNav: NavLink[] = [
       { label: "Real Estate", href: "/services/real-estate" },
     ]
   },
-  { label: "Events", href: "/events" },
   { label: "Gallery", href: "/gallery" },
   { label: "Investment Plans", href: "/investment" },
 ];
@@ -45,7 +44,6 @@ export const footerColumns: FooterColumn[] = [
       { label: "About", href: "/about" },
       { label: "Leadership", href: "/corporate" },
       { label: "Careers", href: "/corporate" },
-      { label: "Press room", href: "/events" },
       { label: "Investor relations", href: "/investment" },
     ],
   },

@@ -1,7 +1,9 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-    turbopack: { root: __dirname },
+    turbopack: {
+        root: __dirname,
+    },
 
     // Trim runtime overhead
     poweredByHeader: false,
@@ -63,43 +65,48 @@ const nextConfig: NextConfig = {
     },
 
     // Security headers
-    headers: async () => [
-        {
-        // Static assets: JS, CSS, images — 1 year immutable
-            source: '/:path*.(js|css|woff2|png|jpg|jpeg|webp|avif|svg|ico)',
-            headers: [
-                { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
-            ],
-        },
-        {
-            source: '/:path*',
-            headers: [
-                { key: 'X-Content-Type-Options', value: 'nosniff' },
-                { key: 'X-XSS-Protection', value: '1; mode=block' },
-                { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
-                { key: 'Permissions-Policy', value: 'geolocation=(), microphone=(), camera=()' },
-                { key: 'Cache-Control', value: 'public, s-maxage=86400, stale-while-revalidate=604800' },
-                { key: 'X-Content-Type-Options', value: 'nosniff' },
-                { key: 'X-Frame-Options', value: 'DENY' },
-            ],
-        },
-        {
-            source: '/fonts/:path*',
-            headers: [{ key: 'Cache-Control', value: 'public, immutable, max-age=31536000' }],
-        },
-        {
-            source: '/_next/static/:path*',
-            headers: [{ key: 'Cache-Control', value: 'public, immutable, max-age=31536000' }],
-        },
-        {
-            source: '/_next/image/:path*',
-            headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, stale-while-revalidate=86400' }],
-        },
-        {
-            source: '/public/:path*',
-            headers: [{ key: 'Cache-Control', value: 'public, max-age=2592000' }],
-        },
-    ],
+    headers: async () => {
+        if (process.env.NODE_ENV === 'development') {
+            return [];
+        }
+        return [
+            {
+            // Static assets: JS, CSS, images — 1 year immutable
+                source: '/:path*.(js|css|woff2|png|jpg|jpeg|webp|avif|svg|ico)',
+                headers: [
+                    { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+                ],
+            },
+            {
+                source: '/:path*',
+                headers: [
+                    { key: 'X-Content-Type-Options', value: 'nosniff' },
+                    { key: 'X-XSS-Protection', value: '1; mode=block' },
+                    { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+                    { key: 'Permissions-Policy', value: 'geolocation=(), microphone=(), camera=()' },
+                    { key: 'Cache-Control', value: 'public, s-maxage=86400, stale-while-revalidate=604800' },
+                    { key: 'X-Content-Type-Options', value: 'nosniff' },
+                    { key: 'X-Frame-Options', value: 'DENY' },
+                ],
+            },
+            {
+                source: '/fonts/:path*',
+                headers: [{ key: 'Cache-Control', value: 'public, immutable, max-age=31536000' }],
+            },
+            {
+                source: '/_next/static/:path*',
+                headers: [{ key: 'Cache-Control', value: 'public, immutable, max-age=31536000' }],
+            },
+            {
+                source: '/_next/image/:path*',
+                headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, stale-while-revalidate=86400' }],
+            },
+            {
+                source: '/public/:path*',
+                headers: [{ key: 'Cache-Control', value: 'public, max-age=2592000' }],
+            },
+        ];
+    },
 };
 
 const withBundleAnalyzer = require('@next/bundle-analyzer')({

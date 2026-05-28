@@ -10,9 +10,7 @@
     --c-accent: #2f5d4a;
     --c-accent-soft: #e6ede8;
     --c-ondark: #f1ece0;
-    /* --font-display:var(--font-instrument), var(--font-newsreader), 'Newsreader', serif;
-  --font-body:var(--font-geist), var(--font-manrope), system-ui, sans-serif; */
-    --font-display: var(--font-instrument), 'Playfair Display', Georgia, serif;
+    --font-display: var(--font-geist), system-ui, -apple-system, sans-serif;
     --font-body: var(--font-manrope), system-ui, -apple-system, sans-serif;
     --max-content: 1240px;
 }
@@ -124,12 +122,15 @@
 }
 @utility hairline-strong {
     height: 1px;
-    background: rgba(20, 24, 26, 0.32);
+    background: rgba(20, 24, 26, 0.32); 
 }
 @utility nav-blur {
-    backdrop-filter: blur(14px) saturate(140%);
-    -webkit-backdrop-filter: blur(14px) saturate(140%);
-    background: color-mix(in oklab, var(--c-bg) 78%, transparent);
+    background: transparent;
+    @media (max-width: 1023px) {
+        backdrop-filter: blur(14px) saturate(140%);
+        -webkit-backdrop-filter: blur(14px) saturate(140%);
+        background: color-mix(in oklab, var(--c-bg) 78%, transparent);
+    }
 }
 @utility num {
     font-family: var(--font-body);
@@ -314,40 +315,25 @@
         }
     }
 
-    /* Branch / checkmark list */
-    .branch {
-        position: relative;
-        padding-left: 24px;
+    /* Dot / bullet list */
+    .dot-list {
+        display: flex;
+        flex-direction: column;
     }
-    .branch::before {
+    .dot-list li {
+        position: relative;
+        padding-left: 15px;
+    }
+    .dot-list li::before {
         content: '';
         position: absolute;
         left: 0;
-        top: 0.55em;
-        width: 8px;
-        height: 8px;
-        border: 1px solid var(--c-accent);
-        border-right: 0;
-        border-top: 0;
-        transform: rotate(-45deg);
-        transform-origin: 25% 75%;
-    }
-    .branch li {
-        position: relative;
-        padding-left: 18px;
-    }
-    .branch li::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0.55em;
-        width: 8px;
-        height: 8px;
-        border: 1px solid var(--c-accent);
-        border-right: 0;
-        border-top: 0;
-        transform: rotate(-45deg);
-        transform-origin: 25% 75%;
+        top: 0.62em;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: var(--c-accent);
+        opacity: 0.85;
     }
 
     /* Reveal on scroll (GSAP-driven) — defaults cleared by JS after animation */
@@ -397,7 +383,7 @@
 
     .stat-num {
         font-family: var(--font-display);
-        font-size: clamp(60px, 9vw, 132px);
+        font-size: clamp(60px, 9vw, 95px);
         line-height: 0.9;
         letter-spacing: -0.03em;
     }
@@ -842,8 +828,7 @@
 }
 
 /* Performance: skip rendering below-fold sections until near viewport */
-section:nth-child(n+3) {
+section:nth-child(n + 3) {
     content-visibility: auto;
     contain-intrinsic-size: auto 800px;
 }
-

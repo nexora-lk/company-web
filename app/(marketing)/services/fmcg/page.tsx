@@ -3,6 +3,7 @@ import GallerySection from '@/components/sections/services/fmcg/gallery';
 import HeroSection from '@/components/sections/services/fmcg/hero';
 import OverviewSection from '@/components/sections/services/fmcg/overview';
 import ProductsSection from '@/components/sections/services/fmcg/products';
+import FutureProductsSection from '@/components/sections/services/fmcg/future-products';
 
 export const metadata: Metadata = {
     title: 'FMCG Products & Distribution | Sri Lanka',
@@ -75,6 +76,7 @@ export default function FMCGPage() {
             <OverviewSection />
             <GallerySection />
             <ProductsSection />
+            <FutureProductsSection />
         </>
     );
 }

@@ -1,6 +1,5 @@
 import AboutSection from '@/components/sections/home/about';
 import ContactSection from '@/components/sections/home/contact';
-import GallerySection from '@/components/sections/home/gallery';
 import HeroSection from '@/components/sections/home/hero';
 import ImpactSection from '@/components/sections/home/impact';
 import ServicesSection from '@/components/sections/home/services';
@@ -15,7 +14,6 @@ export default function HomePage() {
             <ValuesSection />
             <VisionSection />
             <ServicesSection />
-            <GallerySection />
             <ImpactSection />
             <ContactSection />
         </div>

@@ -5,6 +5,7 @@ import GallerySection from '@/components/sections/services/gems/gallery';
 import OverviewSection from '@/components/sections/services/gems/overview';
 import GemServicesSection from '@/components/sections/services/gems/services';
 import WhyChooseUsSection from '@/components/sections/services/gems/why-choose-us';
+import HeroSection from "@/components/sections/services/gems/hero";
 
 export const metadata: Metadata = {
     title: 'Gems & Jewellery Services | Premium Sapphires | Sri Lanka',
@@ -75,6 +76,7 @@ export default function GemsPage() {
                     }),
                 }}
             />
+            <HeroSection/>
             <OverviewSection />
             <GallerySection />
             <ProductCategoriesSection />

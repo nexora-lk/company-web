@@ -1,15 +1,8 @@
-import Link from 'next/link';
-
 export default function WhoWeAreSection() {
     return (
         <section className="relative overflow-hidden">
             <div className="max-w-content mx-auto px-6 lg:px-10 pt-16 lg:pt-24 pb-16 lg:pb-24">
                 <div className="flex items-center gap-3 mb-8">
-                    <Link href="/" className="num ulink">
-                        [ Home ]
-                    </Link>
-                    <span className="num">/</span>
-                    <span className="num">About</span>
                     <span className="hairline-strong flex-1 max-w-[120px] ml-2"></span>
                     <span className="eyebrow">Who We Are</span>
                 </div>

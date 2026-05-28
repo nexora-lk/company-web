@@ -5,7 +5,7 @@ export default function DirectorsSection() {
                 <div className="text-center max-w-[820px] mx-auto mb-14">
                     <div className="flex items-center gap-3 justify-center mb-6">
                         <span className="hairline-strong w-[60px]"></span>
-                        <span className="eyebrow">[ 02 ] Meet our team</span>
+                        <span className="eyebrow">Meet our team</span>
                         <span className="hairline-strong w-[60px]"></span>
                     </div>
                     <h2 className="font-display text-[44px] lg:text-[64px] leading-[0.98] tracking-tightish">

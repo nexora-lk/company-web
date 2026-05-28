@@ -3,7 +3,6 @@ import type { Certification, Stat } from "@/types/content";
 const STAT_BORDER_BY_INDEX = [
   "border-b lg:border-b-0 lg:border-r border-line",
   "border-b lg:border-b-0 lg:border-r border-line",
-  "lg:border-r border-line",
   "",
 ];
 
@@ -17,7 +16,7 @@ export default function StatsBanner({
   return (
     <>
       <div className="hairline"></div>
-      <div className="grid grid-cols-2 lg:grid-cols-4">
+      <div className="grid grid-cols-2 lg:grid-cols-3">
         {stats.map((s, i) => {
           const border = STAT_BORDER_BY_INDEX[i] ?? "";
           return (

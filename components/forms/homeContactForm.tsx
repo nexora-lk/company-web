@@ -52,7 +52,7 @@ export default function ContactForm() {
         >
             <div className="flex items-center justify-between mb-10">
                 <div>
-                    <div className="num mb-2">Inquiry · 01</div>
+                    <div className="num mb-2">Inquiry</div>
                     <div className="font-display text-[28px] leading-tight">
                         A quick form, hand-read.
                     </div>

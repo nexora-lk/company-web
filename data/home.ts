@@ -56,28 +56,22 @@ export const values: Value[] = [
 
 export const stats: Stat[] = [
   {
-    label: "Years of stewardship",
-    value: "28",
+    label: "Years of operation",
+    value: "14",
     em: ".",
-    note: "Founded 1998 · 3rd generation",
+    note: "Founded 2012",
   },
   {
-    label: "Smallholder partners",
-    value: "28",
-    em: "K",
-    note: "Across 9 provinces of Sri Lanka",
+    label: "Total Employees",
+    value: "800",
+    em: "+",
+    note: "",
   },
   {
-    label: "Saplings distributed",
-    value: "21",
-    em: "K",
-    note: "2025 reforestation programme",
-  },
-  {
-    label: "Loan repayment rate",
-    value: "96",
-    em: ".4",
-    note: "Across 11,200 active borrowers",
+    label: "Number of branches",
+    value: "23",
+    em: ".",
+    note: "",
   },
 ];
 
@@ -90,8 +84,7 @@ export const certifications: Certification[] = [
 ];
 
 export const contactRows: ContactRow[] = [
-  { label: "Head office", value: "62 Maitland Crescent, Colombo 07" },
-  { label: "Investor desk", value: "invest@prestigeglamour.lk" },
-  { label: "Trade enquiries", value: "trade@prestigeglamour.lk" },
-  { label: "Telephone", value: "+94 11 207 6651" },
+  { label: "Head office", value: "No 61,Daluwaththa,Payagala" },
+  { label: "Email", value: "info@prestigeglamourgroupofcompany.com " },
+  { label: "Telephone", value: "+94 75 169 3138" + " / " + "+94 75 203 8613"}
 ];

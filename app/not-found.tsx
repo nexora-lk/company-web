@@ -132,12 +132,6 @@ export default function NotFound() {
                                 Services
                             </Link>
                             <Link
-                                href="/events"
-                                className="text-[14px] text-mute hover:text-accent transition-colors duration-300 ulink"
-                            >
-                                Events
-                            </Link>
-                            <Link
                                 href="/gallery"
                                 className="text-[14px] text-mute hover:text-accent transition-colors duration-300 ulink"
                             >

@@ -7,7 +7,6 @@ export default function OverviewSection() {
                 <div className="grid grid-cols-12 gap-6 lg:gap-12 items-start">
                     <div className="col-span-12 lg:col-span-7">
                         <div className="flex items-center gap-3 mb-6">
-                            <span className="num">[ 01 ]</span>
                             <span className="hairline-strong w-[120px]"></span>
                             <span className="eyebrow">Overview · From the Chairman</span>
                         </div>

@@ -10,10 +10,10 @@ export default function Navbar() {
     const pathname = usePathname();
 
     return (
-        <header className="sticky top-0 z-40 nav-blur border-b border-line">
-            <div className="max-w-content mx-auto px-6 lg:px-10 h-16 flex items-center justify-between gap-4">
-                <Link href="/" className="flex items-center gap-2.5 group shrink-0">
-                    <div className="relative w-10 h-10 overflow-hidden flex items-center justify-center p-1">
+        <header className="fixed w-full top-0 z-50 nav-blur border-b border-line lg:border-transparent">
+            <div className="max-w-content mx-auto px-6 md:px-8 lg:px-10 xl:px-12 h-16 xl:h-20 flex items-center justify-between gap-4 xl:gap-6">
+                <Link href="/" className="flex items-center gap-2 sm:gap-2.5 group shrink-0">
+                    <div className="relative w-9 sm:w-10 xl:w-11 h-9 sm:h-10 xl:h-11 overflow-hidden flex items-center justify-center p-0.5 sm:p-1">
                         <Photo
                             src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779442467/logo_eszhjw.png"
                             alt={brand.name}
@@ -24,16 +24,16 @@ export default function Navbar() {
                         />
                     </div>
                     <span className="hidden sm:flex flex-col leading-none">
-                        <span className="font-display text-[15px] lg:text-[17px] tracking-tightish whitespace-nowrap transition-colors duration-300 group-hover:text-accent">
+                        <span className="font-display text-[14px] sm:text-[15px] lg:text-[17px] xl:text-[18px] tracking-tightish whitespace-nowrap transition-colors duration-300 group-hover:text-accent lg:text-white lg:drop-shadow-sm">
                             {brand.name}
                         </span>
-                        <span className="text-[10px] tracking-[0.22em] uppercase text-mute mt-0.5">
+                        <span className="text-[10px] tracking-[0.22em] uppercase text-mute lg:text-white/80 lg:drop-shadow-sm mt-0.5">
                             {brand.tagline}
                         </span>
                     </span>
                 </Link>
 
-                <nav className="hidden lg:flex items-center gap-1 bg-surface border border-line rounded-full px-1.5 py-1">
+                <nav className="hidden lg:flex items-center h-[44px] xl:h-[50px] gap-1 xl:gap-1.5 bg-surface border border-line rounded-full px-1.5 xl:px-2">
                     {primaryNav.map((link) => {
                         const isActive =
                             pathname === link.href || (link.href === '/' && pathname === '/');
@@ -45,7 +45,7 @@ export default function Navbar() {
                                         aria-haspopup="true"
                                         aria-expanded="false"
                                         aria-label={`${link.label} menu`}
-                                        className={`px-3.5 py-1.5 rounded-full text-[13px] transition-all duration-300 flex items-center gap-1 cursor-pointer border-none bg-transparent ${
+                                        className={`px-3.5 xl:px-4 h-[34px] xl:h-[40px] rounded-full text-[13px] xl:text-[14px] transition-all duration-300 flex items-center justify-center gap-1 cursor-pointer border-none bg-transparent ${
                                             isActive
                                                 ? 'bg-bg text-ink font-medium shadow-xs'
                                                 : 'text-mute hover:text-ink hover:bg-bg/50'
@@ -70,12 +70,12 @@ export default function Navbar() {
                                         </svg>
                                     </button>
                                     <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 translate-y-2 pointer-events-none transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto">
-                                        <div className="bg-bg border border-line rounded-2xl shadow-sm p-2 w-45 flex flex-col gap-1">
+                                        <div className="bg-bg border border-line rounded-2xl shadow-sm p-2 w-45 xl:w-52 flex flex-col gap-1">
                                             {link.children.map((child) => (
                                                 <Link
                                                     key={child.label}
                                                     href={child.href}
-                                                    className="px-4 py-2.5 rounded-md text-[13px] text-mute hover:text-ink hover:bg-surface transition-colors"
+                                                    className="px-4 py-2.5 rounded-md text-[13px] xl:text-[14px] text-mute hover:text-ink hover:bg-surface transition-colors"
                                                 >
                                                     {child.label}
                                                 </Link>
@@ -89,7 +89,7 @@ export default function Navbar() {
                         return (
                             <Link
                                 key={link.label}
-                                className={`px-3.5 py-1.5 rounded-full text-[13px] transition-all duration-300 ${
+                                className={`px-3.5 xl:px-4 h-[34px] xl:h-[40px] flex items-center justify-center rounded-full text-[13px] xl:text-[14px] transition-all duration-300 ${
                                     isActive
                                         ? 'bg-bg text-ink font-medium shadow-xs'
                                         : 'text-mute hover:text-ink hover:bg-bg/50'
@@ -104,7 +104,7 @@ export default function Navbar() {
 
                 <Link
                     href="/#contact"
-                    className="hidden lg:inline-flex items-center gap-2 whitespace-nowrap btn btn-primary text-sm px-4 py-2 transition-all duration-300 hover:gap-3 group"
+                    className="hidden lg:inline-flex items-center justify-center gap-2 whitespace-nowrap btn btn-primary !min-h-0 h-[44px] xl:h-[50px] text-[13px] xl:text-[14px] px-5 xl:px-6 rounded-full transition-all duration-300 hover:gap-3 group"
                 >
                     <span>Get in touch</span>
                     <span className="inline-block transform rotate-320 transition-transform duration-300 group-hover:translate-x-1">

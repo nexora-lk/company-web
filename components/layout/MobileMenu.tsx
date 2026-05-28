@@ -137,7 +137,7 @@ export default function MobileMenu() {
                 aria-label={open ? 'Close menu' : 'Open menu'}
                 aria-expanded={open}
                 aria-controls="mobile-nav"
-                className="grid place-items-center w-10 h-10 rounded-full border border-line text-ink"
+                className="grid place-items-center w-9 sm:w-10 h-9 sm:h-10 rounded-full border border-line text-ink"
             >
                 <span className="relative block w-4.5 h-3.5">
                     <span
@@ -163,7 +163,7 @@ export default function MobileMenu() {
                 ref={backdropRef}
                 onClick={close}
                 aria-hidden="true"
-                className="fixed inset-0 top-16 z-40 bg-ink/70 backdrop-blur-[2px]"
+                className="fixed inset-0 top-16 xl:top-20 z-40 bg-ink/70 backdrop-blur-[2px]"
                 style={{ visibility: 'hidden', pointerEvents: 'none', opacity: 0 }}
             />
 
@@ -174,10 +174,10 @@ export default function MobileMenu() {
                 role="dialog"
                 aria-modal="true"
                 aria-label="Site navigation"
-                className="fixed inset-x-0 top-16 z-40 origin-top border-b border-line bg-bg nav-blur"
+                className="fixed inset-x-0 top-16 xl:top-20 z-40 origin-top border-b border-line bg-bg nav-blur"
                 style={{ visibility: 'hidden', pointerEvents: 'none', opacity: 0 }}
             >
-                <div className="max-w-content mx-auto px-6 py-6 overflow-y-auto max-h-[calc(100vh-120px)]">
+                <div className="max-w-content mx-auto px-6 md:px-8 py-6 md:py-8 overflow-y-auto max-h-[calc(100vh-120px)] xl:max-h-[calc(100vh-140px)]">
                     <ul className="flex flex-col">
                         {primaryNav.map((link) => {
                             const isActive =
@@ -191,7 +191,7 @@ export default function MobileMenu() {
                                         <Link
                                             href={link.href}
                                             onClick={close}
-                                            className={`flex items-center justify-between py-3.5 font-display text-[22px] tracking-tightish transition-colors duration-200 ${
+                                            className={`flex items-center justify-between py-3.5 md:py-4 font-display text-[22px] md:text-[26px] tracking-tightish transition-colors duration-200 ${
                                                 isActive
                                                     ? 'text-accent font-medium'
                                                     : 'text-ink hover:text-accent'
@@ -211,7 +211,7 @@ export default function MobileMenu() {
                                                         <Link
                                                             href={child.href}
                                                             onClick={close}
-                                                            className="text-[15px] text-mute hover:text-ink transition-colors block py-1.5"
+                                                            className="text-[15px] md:text-[16px] text-mute hover:text-ink transition-colors block py-1.5 md:py-2"
                                                         >
                                                             — {child.label}
                                                         </Link>
@@ -229,7 +229,7 @@ export default function MobileMenu() {
                         <Link
                             href="/#contact"
                             onClick={close}
-                            className="btn btn-primary text-sm py-2! px-4!"
+                            className="btn btn-primary text-[14px] md:text-[15px] py-2! px-4! md:py-2.5! md:px-5!"
                         >
                             Get in touch <span className="arrow">→</span>
                         </Link>

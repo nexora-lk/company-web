@@ -6,6 +6,7 @@ import {
 } from '@/components/sections/about/directors';
 import OverviewSection from '@/components/sections/about/overview';
 import WhoWeAreSection from '@/components/sections/about/who_we_are';
+import OrganizationChart from '@/components/sections/about/organization_chart';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -85,6 +86,7 @@ export default function AboutPage() {
             <OverviewSection />
             <DirectorsSection />
             <TeemSection />
+            <OrganizationChart />
             <BranchSection />
             <CareersSection />
         </>

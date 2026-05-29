@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function HeroSection() {
     return (
-        <section className="relative overflow-hidden bg-cover bg-center bg-no-repeat" style={{backgroundImage: "url('/fmcg-hero.jpg')"}}>
+        <section className="relative overflow-hidden bg-cover bg-center bg-no-repeat min-h-screen flex flex-col justify-center" style={{backgroundImage: "url('/fmcg-hero.jpg')"}}>
             {/* Overlay layer for contrast and readability */}
             <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/35 to-black/20"></div>
             <div className="relative z-10 max-w-content mx-auto px-6 lg:px-10 pt-16 lg:pt-24 pb-14 lg:pb-20">

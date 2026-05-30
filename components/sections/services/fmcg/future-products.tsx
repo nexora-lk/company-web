@@ -1,0 +1,99 @@
+import Photo from '@/components/ui/Photo';
+
+export default function FutureProductsSection() {
+    const futureProducts = [
+        {
+            title: 'Premium Ginger Wine',
+            desc: 'A premium, non-alcoholic herbal vintage crafted from high-potency Horana ginger root. Perfectly double-fermented to retain its warm, signature spicy flavor and natural immunity benefits.',
+            img: 'https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780117566/Ginger_Wine_q3xurq.png',
+            alt: 'Premium Ginger Wine bottle and processing',
+            badge: 'R&D Phase',
+            metric: 'FORMULA 94% PERFECTED',
+        },
+        {
+            title: 'Mango Fruit Food',
+            desc: 'Zero-waste dehydrated tropical mango bites and nutrient-dense fruit leathers. Vacuum-packed at low temperatures to conserve dietary fibers, organic minerals, and pure sun-ripened flavor.',
+            img: 'https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780117540/Mango_Food_jkxurb.png',
+            alt: 'Slices of natural processed mango foods',
+            badge: 'Formulation',
+            metric: 'NUTRITION LAB TESTED',
+        },
+        {
+            title: 'Natural Mango Syrup',
+            desc: 'A rich, gold-standard 100% natural mango concentrate syrup. Zero artificial stabilizers, sugars, or colorants. Excellent as a natural sweetener for retail mixers and gourmet kitchen coatings.',
+            img: 'https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780117581/Mango_Syrup_e9h6xa.png',
+            alt: 'Amber colored natural mango syrup product',
+            badge: 'Quality Testing',
+            metric: 'SHELF-LIFE STABLE',
+        },
+    ];
+
+    return (
+        <section id="future-products" className="py-24 lg:py-32 bg-surface border-t border-line">
+            <div className="max-w-content mx-auto px-6 lg:px-10">
+                {/* Header Section */}
+                <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-16">
+                    <div>
+                        <div className="flex items-center gap-3 mb-6">
+                            <span className="num">[ 03 ]</span>
+                            <span className="hairline-strong w-[120px]"></span>
+                            <span className="eyebrow">Future Development</span>
+                        </div>
+                        <h2 className="font-display text-[44px] lg:text-[60px] leading-[0.98] tracking-tightish text-ink">
+                            Future developed <em className="serif-em">products</em>
+                            <br />
+                            under active formulation.
+                        </h2>
+                    </div>
+                    <p className="text-[14.5px] text-mute leading-[1.7] max-w-[380px] lg:pb-1">
+                        Our innovation kitchen and lab are continuously formulating clean-label,
+                        high-value consumer products using Sri Lankan plantation harvests to capture more value locally.
+                    </p>
+                </div>
+
+                {/* Products Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    {futureProducts.map((product, idx) => (
+                        <article
+                            key={idx}
+                            className="group relative flex flex-col justify-between overflow-hidden rounded-[24px] bg-bg/40 border border-line/40 p-5 transition-all duration-500 hover:-translate-y-2 hover:bg-surface hover:shadow-[0_24px_50px_rgba(47,93,74,0.06)] hover:border-accent/15"
+                        >
+                            {/* Visual Container */}
+                            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[16px] bg-bg/50">
+                                <Photo
+                                    src={product.img}
+                                    alt={product.alt}
+                                    className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                                />
+                                <span className="absolute top-4 right-4 z-10 rounded-full bg-accent/90 px-3 py-0.5 text-[10px] font-medium tracking-wide text-ondark backdrop-blur-xs">
+                                    {product.badge}
+                                </span>
+                            </div>
+
+                            {/* Info Container */}
+                            <div className="mt-7 flex flex-col justify-between flex-grow">
+                                <div>
+                                    <span className="num text-[11px] text-accent/80 block mb-2">{product.metric}</span>
+                                    <h3 className="font-display text-[26px] leading-[1.1] text-ink transition-colors duration-300 group-hover:text-accent">
+                                        {product.title}
+                                    </h3>
+                                    <p className="mt-3 text-[14px] leading-[1.6] text-mute">
+                                        {product.desc}
+                                    </p>
+                                </div>
+
+                                {/* Card Footer */}
+                                <div className="mt-6 pt-4 border-t border-line/30 flex items-center justify-between">
+                                    <span className="num text-[10px] tracking-wider text-mute/80">PROJECTED Q4 2026</span>
+                                    <span className="text-[13px] font-medium text-accent opacity-0 transition-all duration-300 transform translate-x-2 group-hover:opacity-100 group-hover:translate-x-0">
+                                        R&D Details <span className="inline-block transition-transform duration-200 group-hover:translate-x-1">→</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </article>
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
+}

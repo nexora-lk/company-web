@@ -52,7 +52,7 @@ export default function OverviewSection() {
                     <aside className="col-span-12 lg:col-span-5 lg:sticky lg:top-24">
                         <figure className="rounded-[14px] sm:rounded-2xl md:rounded-[18px] overflow-hidden aspect-4/5">
                             <Photo
-                                src="/microfinace-overview.jpg"
+                                src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780120332/microfinace-overview_fs7rza.jpg"
                                 alt="A seedling growing from a glass jar of coins — the Microfinance icon"
                                 priority
                                 className="w-full h-full object-cover"

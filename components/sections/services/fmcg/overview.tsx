@@ -66,7 +66,7 @@ export default function OverviewSection() {
                     <aside className="col-span-12 lg:col-span-5 space-y-4 lg:sticky lg:top-24">
                         <figure className="rounded-[18px] overflow-hidden aspect-[4/5]">
                             <Photo
-                                src="/fmcg-overview.jpg"
+                                src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780120160/pexels-gilmerdiaz-27097318_qzthhz.jpg"
                                 alt="Fresh tropical fruits ready for processing"
                                 priority
                                 className="w-full h-full object-cover"

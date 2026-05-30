@@ -2,7 +2,7 @@ import Photo from '@/components/ui/Photo';
 
 export default function OverviewSection() {
     return (
-        <section className="pb-24 lg:pb-36">
+        <section className="pb-24 pt-24 lg:pb-36">
             <div className="max-w-content mx-auto px-6 lg:px-10">
                 <div className="grid grid-cols-12 gap-6 lg:gap-12 items-start">
                     <div className="col-span-12 lg:col-span-7">

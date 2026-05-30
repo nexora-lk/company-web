@@ -1,6 +1,6 @@
-export default function WhoWeAreSection() {
+ export default function WhoWeAreSection() {
     return (
-        <section className="relative overflow-hidden bg-cover bg-center bg-no-repeat min-h-screen flex flex-col justify-center" style={{backgroundImage: "url('/about-hero.jpg')"}}>
+        <section className="relative overflow-hidden bg-cover bg-center bg-no-repeat min-h-screen flex flex-col justify-center" style={{backgroundImage: "url('https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780117526/about-hero_lvrtcj.jpg')"}}>
             {/* Overlay layer for contrast and readability */}
             <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/70"></div>
             <div className="relative z-10 max-w-content mx-auto px-6 lg:px-10 pt-16 lg:pt-24 pb-16 lg:pb-24">

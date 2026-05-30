@@ -22,120 +22,132 @@ export default function ServicesSection() {
                 </div>
 
                 <div className="grid grid-cols-12 gap-5">
-                    {/* ── Plantation — hero card ── */}
+                    {/* ── Plantation ── */}
                     <a
                         href="/services/plantation"
-                        className="svc-card group col-span-12 lg:col-span-7 relative rounded-[20px] overflow-hidden bg-surface min-h-[440px]"
+                        className="svc-card group col-span-12 md:col-span-4 relative rounded-[20px] overflow-hidden bg-surface min-h-[420px]"
                     >
                         <Photo
-                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
+                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780117630/plantation-home_dqqa3t.jpg"
                             alt="Lush green plantation fields at sunrise"
-                            sizes="(max-width: 1024px) 100vw, 58vw"
+                            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                             className="absolute inset-0 w-full h-full object-cover"
                         />
-                        <div className="absolute inset-0 bg-linear-to-t from-ink/85 via-ink/30 to-transparent"></div>
-                        <div className="relative h-full p-8 lg:p-10 flex flex-col justify-between text-ondark min-h-[440px]">
-                            <div className="flex items-center justify-between">
-                                <span className="num text-ondark/80!">01 — Plantation</span>
-                                <span className="num text-ondark/80!">Ginger · Banana · Mango</span>
-                            </div>
+                        <div className="absolute inset-0 bg-linear-to-t from-ink/95 via-ink/40 to-transparent"></div>
+                        <div className="relative h-full p-8 flex flex-col justify-between text-ondark min-h-[420px]">
+                            <span className="num text-white font-medium drop-shadow-sm">01 — Plantation</span>
                             <div>
-                                <h3 className="font-display text-[48px] lg:text-[72px] leading-[0.95] tracking-tightish max-w-[640px]">
-                                    Cultivating <em className="serif-em">high-value</em>
-                                    <br />
-                                    crops across the island.
+                                <h3 className="font-display text-[34px] leading-[0.98] tracking-tightish">
+                                    Cultivating <em className="serif-em">high-value</em> crops.
                                 </h3>
-                                <p className="mt-4 text-[14px] text-ondark/80 max-w-[480px] leading-[1.65]">
+                                <p className="mt-4 text-[13px] text-ondark/80 leading-[1.6]">
                                     Cultivating high-value crops like ginger, banana, and mango
                                     across Sri Lanka for local and export markets.
                                 </p>
                                 <div className="mt-6 flex items-center gap-3">
-                                    <span className="text-[14px] text-ondark/85">
+                                    <span className="text-[14px] text-white font-semibold drop-shadow-sm">
                                         Explore the estates
                                     </span>
-                                    <span className="arrow text-xl">→</span>
+                                    <span className="arrow text-xl text-white">→</span>
                                 </div>
                             </div>
                         </div>
                     </a>
 
-                    {/* ── Micro Finance + Gem & Jewelry — stacked ── */}
-                    <div className="col-span-12 lg:col-span-5 grid grid-rows-2 gap-5 min-h-[440px]">
-                        <a
-                            href="/services/microfinance"
-                            className="svc-card group relative rounded-[20px] overflow-hidden bg-surface"
-                        >
-                            <Photo
-                                src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
-                                alt="Hands exchanging seeds — rural finance empowerment"
-                                sizes="(max-width: 1024px) 100vw, 42vw"
-                                className="absolute inset-0 w-full h-full object-cover"
-                            />
-                            <div className="absolute inset-0 bg-linear-to-t from-ink/80 via-ink/20 to-transparent"></div>
-                            <div className="relative h-full p-7 flex flex-col justify-between text-ondark">
-                                <span className="num text-ondark/80!">02 — Micro Finance</span>
-                                <div>
-                                    <h3 className="font-display text-[34px] leading-[0.98] tracking-tightish">
-                                        Inclusive finance for <em className="serif-em">rural</em>{' '}
-                                        growth.
-                                    </h3>
-                                    <p className="mt-3 text-[12px] text-ondark/80 leading-[1.6]">
-                                        Providing inclusive financial support for rural
-                                        entrepreneurs and small-scale farmers through tailored loan
-                                        products.
-                                    </p>
+                    {/* ── Micro Finance ── */}
+                    <a
+                        href="/services/microfinance"
+                        className="svc-card group col-span-12 md:col-span-4 relative rounded-[20px] overflow-hidden bg-surface min-h-[420px]"
+                    >
+                        <Photo
+                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780121976/micro-finace-home_jmdbyi.jpg"
+                            alt="Hands exchanging seeds — rural finance empowerment"
+                            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                            className="absolute inset-0 w-full h-full object-cover"
+                        />
+                        <div className="absolute inset-0 bg-linear-to-t from-ink/95 via-ink/40 to-transparent"></div>
+                        <div className="relative h-full p-8 flex flex-col justify-between text-ondark min-h-[420px]">
+                            <span className="num text-white font-medium drop-shadow-sm">02 — Micro Finance</span>
+                            <div>
+                                <h3 className="font-display text-[34px] leading-[0.98] tracking-tightish">
+                                    Inclusive finance for <em className="serif-em">rural</em>{' '}
+                                    growth.
+                                </h3>
+                                <p className="mt-4 text-[13px] text-ondark/80 leading-[1.6]">
+                                    Providing inclusive financial support for rural
+                                    entrepreneurs and small-scale farmers through tailored loan
+                                    products.
+                                </p>
+                                <div className="mt-6 flex items-center gap-3">
+                                    <span className="text-[14px] text-white font-semibold drop-shadow-sm">
+                                        Learn more
+                                    </span>
+                                    <span className="arrow text-xl text-white">→</span>
                                 </div>
                             </div>
-                        </a>
-                        <a
-                            href="/services/gems"
-                            className="svc-card group relative rounded-[20px] overflow-hidden bg-surface"
-                        >
-                            <Photo
-                                src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
-                                alt="Gemstones and jewels on display"
-                                sizes="(max-width: 1024px) 100vw, 42vw"
-                                className="absolute inset-0 w-full h-full object-cover"
-                            />
-                            <div className="absolute inset-0 bg-linear-to-t from-ink/80 via-ink/20 to-transparent"></div>
-                            <div className="relative h-full p-7 flex flex-col justify-between text-ondark">
-                                <span className="num text-ondark/80!">03 — Gem &amp; Jewelry</span>
-                                <div>
-                                    <h3 className="font-display text-[34px] leading-[0.98] tracking-tightish">
-                                        Certified Sri Lankan <em className="serif-em">sapphires</em>
-                                        .
-                                    </h3>
-                                    <p className="mt-3 text-[12px] text-ondark/80 leading-[1.6]">
-                                        Certified gem trading and export business offering authentic
-                                        Sri Lankan gemstones to global markets.
-                                    </p>
+                        </div>
+                    </a>
+
+                    {/* ── Gem & Jewelry ── */}
+                    <a
+                        href="/services/gems"
+                        className="svc-card group col-span-12 md:col-span-4 relative rounded-[20px] overflow-hidden bg-surface min-h-[420px]"
+                    >
+                        <Photo
+                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780117514/gem-home_rsp4p8.jpg"
+                            alt="Gemstones and jewels on display"
+                            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                            className="absolute inset-0 w-full h-full object-cover"
+                        />
+                        <div className="absolute inset-0 bg-linear-to-t from-ink/95 via-ink/40 to-transparent"></div>
+                        <div className="relative h-full p-8 flex flex-col justify-between text-ondark min-h-[420px]">
+                            <span className="num text-white font-medium drop-shadow-sm">03 — Gem &amp; Jewelry</span>
+                            <div>
+                                <h3 className="font-display text-[34px] leading-[0.98] tracking-tightish">
+                                    Certified Sri Lankan <em className="serif-em">sapphires</em>.
+                                </h3>
+                                <p className="mt-4 text-[13px] text-ondark/80 leading-[1.6]">
+                                    Certified gem trading and export business offering authentic
+                                    Sri Lankan gemstones to global markets.
+                                </p>
+                                <div className="mt-6 flex items-center gap-3">
+                                    <span className="text-[14px] text-white font-semibold drop-shadow-sm">
+                                        View collections
+                                    </span>
+                                    <span className="arrow text-xl text-white">→</span>
                                 </div>
                             </div>
-                        </a>
-                    </div>
+                        </div>
+                    </a>
 
                     {/* ── FMCG ── */}
                     <a
                         href="/services/fmcg"
-                        className="svc-card group col-span-12 md:col-span-4 relative rounded-[20px] overflow-hidden bg-surface min-h-[320px]"
+                        className="svc-card group col-span-12 md:col-span-4 relative rounded-[20px] overflow-hidden bg-surface min-h-[420px]"
                     >
                         <Photo
-                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
+                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780117605/fmcg-home_m25qif.jpg"
                             alt="Fresh tropical fruits and herbal products"
                             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                             className="absolute inset-0 w-full h-full object-cover"
                         />
-                        <div className="absolute inset-0 bg-linear-to-t from-ink/85 via-ink/25 to-transparent"></div>
-                        <div className="relative h-full p-7 flex flex-col justify-between text-ondark min-h-[320px]">
-                            <span className="num text-ondark/80!">04 — FMCG</span>
+                        <div className="absolute inset-0 bg-linear-to-t from-ink/95 via-ink/40 to-transparent"></div>
+                        <div className="relative h-full p-8 flex flex-col justify-between text-ondark min-h-[420px]">
+                            <span className="num text-white font-medium drop-shadow-sm">04 — FMCG</span>
                             <div>
-                                <h3 className="font-display text-[30px] leading-[0.98] tracking-tightish">
+                                <h3 className="font-display text-[34px] leading-[0.98] tracking-tightish">
                                     PGG <em className="serif-em">Fresh</em> Foods.
                                 </h3>
-                                <p className="mt-3 text-[12px] text-ondark/80 leading-[1.6]">
+                                <p className="mt-4 text-[13px] text-ondark/80 leading-[1.6]">
                                     Processing and distributing value-added fresh fruits and herbal
                                     products under the PGG Fresh Foods brand.
                                 </p>
+                                <div className="mt-6 flex items-center gap-3">
+                                    <span className="text-[14px] text-white font-semibold drop-shadow-sm">
+                                        Explore products
+                                    </span>
+                                    <span className="arrow text-xl text-white">→</span>
+                                </div>
                             </div>
                         </div>
                     </a>
@@ -143,25 +155,31 @@ export default function ServicesSection() {
                     {/* ── NGO Projects ── */}
                     <a
                         href="/services/ngo"
-                        className="svc-card group col-span-12 md:col-span-4 relative rounded-[20px] overflow-hidden bg-surface min-h-[320px]"
+                        className="svc-card group col-span-12 md:col-span-4 relative rounded-[20px] overflow-hidden bg-surface min-h-[420px]"
                     >
                         <Photo
-                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
+                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780121247/ngo-home_natibv.jpg"
                             alt="Community education and social development"
                             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                             className="absolute inset-0 w-full h-full object-cover"
                         />
-                        <div className="absolute inset-0 bg-linear-to-t from-ink/85 via-ink/25 to-transparent"></div>
-                        <div className="relative h-full p-7 flex flex-col justify-between text-ondark min-h-[320px]">
-                            <span className="num text-ondark/80!">05 — NGO Projects</span>
+                        <div className="absolute inset-0 bg-linear-to-t from-ink/95 via-ink/40 to-transparent"></div>
+                        <div className="relative h-full p-8 flex flex-col justify-between text-ondark min-h-[420px]">
+                            <span className="num text-white font-medium drop-shadow-sm">05 — NGO Projects</span>
                             <div>
-                                <h3 className="font-display text-[30px] leading-[0.98] tracking-tightish">
+                                <h3 className="font-display text-[34px] leading-[0.98] tracking-tightish">
                                     Driving <em className="serif-em">social</em> change.
                                 </h3>
-                                <p className="mt-3 text-[12px] text-ondark/80 leading-[1.6]">
+                                <p className="mt-4 text-[13px] text-ondark/80 leading-[1.6]">
                                     Driving social change through education, rehabilitation, and
                                     income-generation projects funded by global partners.
                                 </p>
+                                <div className="mt-6 flex items-center gap-3">
+                                    <span className="text-[14px] text-white font-semibold drop-shadow-sm">
+                                        View impact
+                                    </span>
+                                    <span className="arrow text-xl text-white">→</span>
+                                </div>
                             </div>
                         </div>
                     </a>
@@ -169,25 +187,31 @@ export default function ServicesSection() {
                     {/* ── Real Estate ── */}
                     <a
                         href="/services/real-estate"
-                        className="svc-card group col-span-12 md:col-span-4 relative rounded-[20px] overflow-hidden bg-surface min-h-[320px]"
+                        className="svc-card group col-span-12 md:col-span-4 relative rounded-[20px] overflow-hidden bg-surface min-h-[420px]"
                     >
                         <Photo
-                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
+                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780117535/realstate-home_dxn1qj.jpg"
                             alt="Modern commercial real estate development"
                             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                             className="absolute inset-0 w-full h-full object-cover"
                         />
-                        <div className="absolute inset-0 bg-linear-to-t from-ink/85 via-ink/25 to-transparent"></div>
-                        <div className="relative h-full p-7 flex flex-col justify-between text-ondark min-h-[320px]">
-                            <span className="num text-ondark/80!">06 — Real Estate</span>
+                        <div className="absolute inset-0 bg-linear-to-t from-ink/95 via-ink/40 to-transparent"></div>
+                        <div className="relative h-full p-8 flex flex-col justify-between text-ondark min-h-[420px]">
+                            <span className="num text-white font-medium drop-shadow-sm">06 — Real Estate</span>
                             <div>
-                                <h3 className="font-display text-[30px] leading-[0.98] tracking-tightish">
+                                <h3 className="font-display text-[34px] leading-[0.98] tracking-tightish">
                                     Agricultural <em className="serif-em">estate</em> value.
                                 </h3>
-                                <p className="mt-3 text-[12px] text-ondark/80 leading-[1.6]">
+                                <p className="mt-4 text-[13px] text-ondark/80 leading-[1.6]">
                                     Developing and managing commercial agricultural lands and estate
                                     projects to increase asset value.
                                 </p>
+                                <div className="mt-6 flex items-center gap-3">
+                                    <span className="text-[14px] text-white font-semibold drop-shadow-sm">
+                                        View projects
+                                    </span>
+                                    <span className="arrow text-xl text-white">→</span>
+                                </div>
                             </div>
                         </div>
                     </a>

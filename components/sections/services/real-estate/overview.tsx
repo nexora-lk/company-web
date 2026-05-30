@@ -64,7 +64,7 @@ export default function OverviewSection() {
                     <aside className="col-span-12 lg:col-span-5 space-y-3 sm:space-y-4 lg:sticky lg:top-24">
                         <figure className="rounded-[14px] sm:rounded-2xl md:rounded-[18px] overflow-hidden aspect-4/5">
                             <Photo
-                                src="/real-estate-overview.jpg"
+                                src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780117617/real-estate-overview_oefayr.jpg"
                                 alt="Colonial estate house in the Sri Lankan highlands"
                                 priority
                                 className="w-full h-full object-cover"

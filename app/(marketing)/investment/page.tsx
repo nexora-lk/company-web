@@ -1,8 +1,8 @@
 import ContactSection from '@/components/sections/investment/contact';
 import HeroSection from '@/components/sections/investment/hero';
 import ModelsSection from '@/components/sections/investment/models';
+import CalculatorSection from '@/components/sections/investment/calculator';
 import WhySection from '@/components/sections/investment/why';
-import WorlSection from '@/components/sections/investment/work';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -65,7 +65,7 @@ export default function InvestmentPage() {
             <HeroSection />
             <WhySection />
             <ModelsSection />
-            <WorlSection />
+            <CalculatorSection />
             <ContactSection />
         </>
     );

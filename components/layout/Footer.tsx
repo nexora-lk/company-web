@@ -1,6 +1,7 @@
 import Photo from '@/components/ui/Photo';
 import { brand, footerColumns, footerLegal } from '@/data/navigation';
 import Link from 'next/link';
+import { WithdrawConsentButton } from '@/components/layout/WithdrawConsentButton';
 
 export default function Footer() {
     return (
@@ -119,6 +120,7 @@ export default function Footer() {
                                 {link.label}
                             </a>
                         ))}
+                        <WithdrawConsentButton />
                     </div>
                 </div>
             </div>

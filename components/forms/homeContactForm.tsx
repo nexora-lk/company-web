@@ -48,54 +48,54 @@ export default function ContactForm() {
         <form
             ref={formRef}
             onSubmit={handleSubmit}
-            className="col-span-12 lg:col-span-7 bg-surface rounded-[20px] border border-line p-8 lg:p-12"
+            className="col-span-12 lg:col-span-7 bg-surface rounded-[16px] sm:rounded-[20px] border border-line p-5 sm:p-8 lg:p-12"
         >
-            <div className="flex items-center justify-between mb-10">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8 sm:mb-10 gap-4">
                 <div>
-                    <div className="num mb-2">Inquiry</div>
-                    <div className="font-display text-[28px] leading-tight">
+                    <div className="num mb-1.5 sm:mb-2">Inquiry</div>
+                    <div className="font-display text-[24px] sm:text-[28px] leading-tight">
                         A quick form, hand-read.
                     </div>
                 </div>
-                <span className="pill">
+                <span className="pill self-start sm:self-auto text-[11px] sm:text-[12px]">
                     <span className="dot"></span>Reply within 1 working day
                 </span>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 lg:gap-x-8 gap-y-3 sm:gap-y-4">
                 <label className="block">
-                    <div className="num mb-1">01 — Your name</div>
+                    <div className="num mb-1 text-[10px] sm:text-[11px]">01 — Your name</div>
                     <input
                         name="user_name"
-                        className="field focus:outline-2 focus:outline-offset-2 focus:outline-accent"
+                        className="field focus:outline-2 focus:outline-offset-2 focus:outline-accent text-[13px] sm:text-[14px]"
                         placeholder="Full name"
                         required
                     />
                 </label>
                 <label className="block">
-                    <div className="num mb-1">02 — Email</div>
+                    <div className="num mb-1 text-[10px] sm:text-[11px]">02 — Email</div>
                     <input
                         name="user_email"
-                        className="field focus:outline-2 focus:outline-offset-2 focus:outline-accent"
+                        className="field focus:outline-2 focus:outline-offset-2 focus:outline-accent text-[13px] sm:text-[14px]"
                         type="email"
                         placeholder="you@company.com"
                         required
                     />
                 </label>
                 <label className="block">
-                    <div className="num mb-1">03 — Country</div>
+                    <div className="num mb-1 text-[10px] sm:text-[11px]">03 — Country</div>
                     <input
                         name="user_country"
-                        className="field focus:outline-2 focus:outline-offset-2 focus:outline-accent"
+                        className="field focus:outline-2 focus:outline-offset-2 focus:outline-accent text-[13px] sm:text-[14px]"
                         placeholder="Where are you writing from?"
                         required
                     />
                 </label>
                 <label className="block">
-                    <div className="num mb-1">04 — I am a…</div>
+                    <div className="num mb-1 text-[10px] sm:text-[11px]">04 — I am a…</div>
                     <select
                         name="user_role"
-                        className="field bg-transparent focus:outline-2 focus:outline-offset-2 focus:outline-accent"
+                        className="field bg-transparent focus:outline-2 focus:outline-offset-2 focus:outline-accent text-[13px] sm:text-[14px]"
                         required
                     >
                         <option value="">Select...</option>
@@ -106,11 +106,11 @@ export default function ContactForm() {
                         <option value="Other">Other</option>
                     </select>
                 </label>
-                <label className="block md:col-span-2 mt-4">
-                    <div className="num mb-1">05 — What would you like to discuss?</div>
+                <label className="block md:col-span-2 mt-2 sm:mt-4">
+                    <div className="num mb-1 text-[10px] sm:text-[11px]">05 — What would you like to discuss?</div>
                     <textarea
                         name="user_message"
-                        className="field resize-none focus:outline-2 focus:outline-offset-2 focus:outline-accent"
+                        className="field resize-none focus:outline-2 focus:outline-offset-2 focus:outline-accent text-[13px] sm:text-[14px]"
                         rows={3}
                         placeholder="A few lines is enough — we'll pick up the phone."
                         required
@@ -119,24 +119,24 @@ export default function ContactForm() {
             </div>
 
             {status === 'success' && (
-                <div className="mt-6 p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm">
+                <div className="mt-5 sm:mt-6 p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[13px] sm:text-sm">
                     Thank you! Your enquiry has been sent successfully. We will get back to you shortly.
                 </div>
             )}
 
             {status === 'error' && (
-                <div className="mt-6 p-4 rounded-xl bg-rose-500/10 border border-rose-500/20 text-rose-400 text-sm">
+                <div className="mt-5 sm:mt-6 p-4 rounded-xl bg-rose-500/10 border border-rose-500/20 text-rose-400 text-[13px] sm:text-sm">
                     {errorMessage}
                 </div>
             )}
 
-            <div className="mt-10 flex flex-wrap items-center justify-between gap-4">
-                <span className="text-[12px] text-mute">
+            <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <span className="text-[11px] sm:text-[12px] text-mute order-2 sm:order-1 text-center sm:text-left">
                     By submitting, you agree to our processing of your details.
                 </span>
                 <button
                     type="submit"
-                    className="btn btn-primary focus:outline-2 focus:outline-offset-2 focus:outline-accent"
+                    className="btn btn-primary focus:outline-2 focus:outline-offset-2 focus:outline-accent w-full sm:w-auto order-1 sm:order-2 justify-center"
                     disabled={status === 'submitting'}
                 >
                     {status === 'submitting' ? 'Sending...' : 'Send enquiry'} <span className="arrow">→</span>

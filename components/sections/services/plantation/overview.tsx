@@ -138,8 +138,6 @@ export default function OverviewSection() {
                                     </table>
                                 </div>
                             </div>
-
-
                         </div>
                     </div>
 
@@ -152,27 +150,6 @@ export default function OverviewSection() {
                                 className="w-full h-full object-cover"
                             />
                         </figure>
-                        <div className="rounded-[14px] sm:rounded-[16px] md:rounded-[18px] bg-ink text-ondark p-4 sm:p-5 md:p-6 lg:p-8">
-                            <div className="num text-ondark/70! mb-3 sm:mb-4 text-[10px] sm:text-xs md:text-sm">Why we plant for export</div>
-                            <p className="font-display text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] leading-tight">
-                                &ldquo;Every kilo we grow at home is a dollar that{' '}
-                                <em className="serif-em">does not leave</em> the country.&rdquo;
-                            </p>
-                            <div className="hairline mt-4 sm:mt-5 md:mt-6 bg-[rgba(241,236,224,0.18)]!"></div>
-                            <div className="mt-3 sm:mt-4 md:mt-4 flex items-center justify-between text-[11px] sm:text-xs opacity-70">
-                                <span>— Y. M. D. T. Yatawara</span>
-                                <span>Chairman, PGG</span>
-                            </div>
-                        </div>
-                        <div className="rounded-[14px] sm:rounded-[16px] md:rounded-[18px] bg-accent2 p-4 sm:p-5 md:p-6 lg:p-8">
-                            <div className="num mb-3 sm:mb-4 text-[10px] sm:text-xs md:text-sm">Operating model</div>
-                            <ul className="space-y-2 sm:space-y-2.5 md:space-y-3 text-[12px] sm:text-[13px] md:text-[14px] lg:text-[14px]">
-                                <li className="branch">Owned land or stakeholder-managed</li>
-                                <li className="branch">Regional manager + weekly walk-the-field</li>
-                                <li className="branch">KPMG quarterly audit on the same ledger</li>
-                                <li className="branch">Off-take through GPG&apos;s export desk</li>
-                            </ul>
-                        </div>
                     </aside>
                 </div>
             </div>

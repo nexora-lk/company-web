@@ -2,7 +2,8 @@ import Footer from '@/components/layout/Footer';
 import Navbar from '@/components/layout/Navbar';
 import PageTransition from '@/components/layout/PageTransition';
 import SmoothScroll from '@/components/layout/SmoothScroll';
-import { GoogleAnalytics } from '@next/third-parties/google';
+import Script from 'next/script';
+import CookieConsent from '@/components/layout/CookieConsent';
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata } from 'next';
@@ -146,6 +147,8 @@ export const metadata: Metadata = {
     },
 };
 
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID || "G-43N120Q5GW";
+
 export default function RootLayout({
     children,
 }: Readonly<{
@@ -162,6 +165,26 @@ export default function RootLayout({
                     name="google-site-verification"
                     content="FYgdAmWULb4nRgIMS8lGbU1F7-3muEXQMJLDPIOACIA"
                 />
+                {GA_ID && (
+                    <script
+                        dangerouslySetInnerHTML={{
+                            __html: `
+                                window.dataLayer = window.dataLayer || [];
+                                function gtag(){dataLayer.push(arguments);}
+                                gtag('js', new Date());
+
+                                // DEFAULT: deny everything until user consents
+                                gtag('consent', 'default', {
+                                    analytics_storage: 'denied',
+                                    ad_storage: 'denied',
+                                    functionality_storage: 'denied',
+                                    personalization_storage: 'denied',
+                                    wait_for_update: 2000
+                                });
+                            `,
+                        }}
+                    />
+                )}
             </head>
             <body className="font-body text-ink">
                 <a
@@ -175,10 +198,24 @@ export default function RootLayout({
                     <PageTransition>{children}</PageTransition>
                     <Footer />
                 </SmoothScroll>
-                {/* Analytics deferred below content — non-blocking */}
-                <GoogleAnalytics gaId="G-43N120Q5GW" />
+                {GA_ID && (
+                    <>
+                        <Script
+                            src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+                            strategy="afterInteractive"
+                        />
+                        <Script id="google-analytics-config" strategy="afterInteractive">
+                            {`
+                                window.dataLayer = window.dataLayer || [];
+                                function gtag(){dataLayer.push(arguments);}
+                                gtag('config', '${GA_ID}');
+                            `}
+                        </Script>
+                    </>
+                )}
                 <SpeedInsights />
                 <Analytics />
+                <CookieConsent />
             </body>
         </html>
     );

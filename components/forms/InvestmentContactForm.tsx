@@ -48,55 +48,55 @@ export default function InvestmentContactForm() {
         <form
             ref={formRef}
             onSubmit={handleSubmit}
-            className="col-span-12 lg:col-span-7 bg-bg text-ink rounded-[18px] p-8 lg:p-10"
+            className="col-span-12 lg:col-span-7 bg-bg text-ink rounded-[16px] sm:rounded-[18px] p-5 sm:p-8 lg:p-10"
         >
-            <div className="flex items-center justify-between mb-8">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-6 sm:mb-8 gap-4">
                 <div>
-                    <div className="num">Investment Inquiry · Form</div>
-                    <div className="font-display text-[26px] leading-tight mt-1">
+                    <div className="num mb-1.5 sm:mb-0">Investment Inquiry · Form</div>
+                    <div className="font-display text-[24px] sm:text-[26px] leading-tight mt-1">
                         Tell us where to start.
                     </div>
                 </div>
-                <span className="pill">
+                <span className="pill self-start sm:self-auto text-[11px] sm:text-[12px]">
                     <span className="dot"></span>Reply within 1 day
                 </span>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 lg:gap-x-8 gap-y-3 sm:gap-y-4">
                 <label className="block">
-                    <div className="num mb-1">01 — Name</div>
+                    <div className="num mb-1 text-[10px] sm:text-[11px]">01 — Name</div>
                     <input
                         name="user_name"
-                        className="field focus:outline-2 focus:outline-offset-2 focus:outline-accent"
+                        className="field focus:outline-2 focus:outline-offset-2 focus:outline-accent text-[13px] sm:text-[14px]"
                         placeholder="Full name"
                         required
                     />
                 </label>
                 <label className="block">
-                    <div className="num mb-1">02 — Phone</div>
+                    <div className="num mb-1 text-[10px] sm:text-[11px]">02 — Phone</div>
                     <input
                         name="user_phone"
-                        className="field focus:outline-2 focus:outline-offset-2 focus:outline-accent"
+                        className="field focus:outline-2 focus:outline-offset-2 focus:outline-accent text-[13px] sm:text-[14px]"
                         type="tel"
                         placeholder="+94 …"
                         required
                     />
                 </label>
                 <label className="block md:col-span-2">
-                    <div className="num mb-1">03 — Email</div>
+                    <div className="num mb-1 text-[10px] sm:text-[11px]">03 — Email</div>
                     <input
                         name="user_email"
-                        className="field focus:outline-2 focus:outline-offset-2 focus:outline-accent"
+                        className="field focus:outline-2 focus:outline-offset-2 focus:outline-accent text-[13px] sm:text-[14px]"
                         type="email"
                         placeholder="you@company.com"
                         required
                     />
                 </label>
                 <label className="block">
-                    <div className="num mb-1">04 — Model of interest</div>
+                    <div className="num mb-1 text-[10px] sm:text-[11px]">04 — Model of interest</div>
                     <select
                         name="user_model"
-                        className="field bg-transparent focus:outline-2 focus:outline-offset-2 focus:outline-accent"
+                        className="field bg-transparent focus:outline-2 focus:outline-offset-2 focus:outline-accent text-[13px] sm:text-[14px]"
                         required
                     >
                         <option value="">Select model...</option>
@@ -108,10 +108,10 @@ export default function InvestmentContactForm() {
                     </select>
                 </label>
                 <label className="block">
-                    <div className="num mb-1">05 — Ticket size</div>
+                    <div className="num mb-1 text-[10px] sm:text-[11px]">05 — Ticket size</div>
                     <select
                         name="user_ticket_size"
-                        className="field bg-transparent focus:outline-2 focus:outline-offset-2 focus:outline-accent"
+                        className="field bg-transparent focus:outline-2 focus:outline-offset-2 focus:outline-accent text-[13px] sm:text-[14px]"
                         required
                     >
                         <option value="">Select amount...</option>
@@ -121,11 +121,11 @@ export default function InvestmentContactForm() {
                         <option value="LKR 25M+">LKR 25M+</option>
                     </select>
                 </label>
-                <label className="block md:col-span-2 mt-3">
-                    <div className="num mb-1">06 — Message</div>
+                <label className="block md:col-span-2 mt-2 sm:mt-3">
+                    <div className="num mb-1 text-[10px] sm:text-[11px]">06 — Message</div>
                     <textarea
                         name="user_message"
-                        className="field resize-none focus:outline-2 focus:outline-offset-2 focus:outline-accent"
+                        className="field resize-none focus:outline-2 focus:outline-offset-2 focus:outline-accent text-[13px] sm:text-[14px]"
                         rows={3}
                         placeholder="A few lines on your investment goals."
                         required
@@ -134,24 +134,24 @@ export default function InvestmentContactForm() {
             </div>
 
             {status === 'success' && (
-                <div className="mt-6 p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm">
+                <div className="mt-5 sm:mt-6 p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[13px] sm:text-sm">
                     Thank you! Your investment inquiry has been sent successfully. We will get back to you shortly.
                 </div>
             )}
 
             {status === 'error' && (
-                <div className="mt-6 p-4 rounded-xl bg-rose-500/10 border border-rose-500/20 text-rose-400 text-sm">
+                <div className="mt-5 sm:mt-6 p-4 rounded-xl bg-rose-500/10 border border-rose-500/20 text-rose-400 text-[13px] sm:text-sm">
                     {errorMessage}
                 </div>
             )}
 
-            <div className="mt-8 flex flex-wrap items-center justify-between gap-3">
-                <span className="text-[12px] text-mute">
+            <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4 sm:gap-3">
+                <span className="text-[11px] sm:text-[12px] text-mute order-2 sm:order-1 text-center sm:text-left">
                     By submitting you agree to our quiet handling of your details.
                 </span>
                 <button
                     type="submit"
-                    className="btn btn-primary focus:outline-2 focus:outline-offset-2 focus:outline-accent"
+                    className="btn btn-primary focus:outline-2 focus:outline-offset-2 focus:outline-accent w-full sm:w-auto order-1 sm:order-2 justify-center"
                     disabled={status === 'submitting'}
                 >
                     {status === 'submitting' ? 'Submitting...' : 'Submit enquiry'} <span className="arrow">→</span>

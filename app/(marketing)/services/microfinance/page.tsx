@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import HeroSection from '@/components/sections/services/microfinance/hero';
 import OverviewSection from '@/components/sections/services/microfinance/overview';
 import ProductsSection from '@/components/sections/services/microfinance/products';
+import ModelsSection from '@/components/sections/services/microfinance/models';
 
 export const metadata: Metadata = {
     title: 'Microfinance Services | Small Business Loans | Sri Lanka',
@@ -73,7 +74,8 @@ export default function MicrofinancePage() {
             />
             <HeroSection />
             <OverviewSection />
-            <ProductsSection />
+            {/* <ProductsSection /> */}
+            <ModelsSection />
         </>
     );
 }

@@ -41,25 +41,28 @@ export default function OverviewSection() {
                         </div>
 
                         <h3 className="font-display text-[22px] sm:text-[26px] md:text-[30px] lg:text-[28px] mt-8 sm:mt-10 md:mt-12">
-                            Our <em className="serif-em">focus</em> areas.
+                            Our <em className="serif-em">Current &amp; Future</em> projects.
                         </h3>
-                        <ul className="mt-4 sm:mt-5 md:mt-6 grid grid-cols-2 sm:grid-cols-3 gap-x-4 sm:gap-x-5 md:gap-x-6 gap-y-2 sm:gap-y-3 max-w-160">
-                            <li className="branch text-[12px] sm:text-[13px] md:text-[14px] lg:text-[14.5px]">Rural education</li>
-                            <li className="branch text-[12px] sm:text-[13px] md:text-[14px] lg:text-[14.5px]">Women&apos;s empowerment</li>
-                            <li className="branch text-[12px] sm:text-[13px] md:text-[14px] lg:text-[14.5px]">Vocational training</li>
-                            <li className="branch text-[12px] sm:text-[13px] md:text-[14px] lg:text-[14.5px]">Health &amp; nutrition</li>
-                            <li className="branch text-[12px] sm:text-[13px] md:text-[14px] lg:text-[14.5px]">Environmental rehab</li>
-                            <li className="branch text-[12px] sm:text-[13px] md:text-[14px] lg:text-[14.5px]">Youth development</li>
-                            <li className="branch text-[12px] sm:text-[13px] md:text-[14px] lg:text-[14.5px]">Income generation</li>
-                            <li className="branch text-[12px] sm:text-[13px] md:text-[14px] lg:text-[14.5px]">Clean water access</li>
-                            <li className="branch text-[12px] sm:text-[13px] md:text-[14px] lg:text-[14.5px]">Disaster relief</li>
+                        <ul className="mt-4 sm:mt-5 md:mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-4 sm:gap-x-5 md:gap-x-6 gap-y-2 sm:gap-y-3 max-w-160">
+                            <li className="branch text-[12px] sm:text-[13px] md:text-[14px] lg:text-[14.5px]">
+                                <span className="text-accent font-medium mr-1">Current:</span> Plantation
+                            </li>
+                            <li className="branch text-[12px] sm:text-[13px] md:text-[14px] lg:text-[14.5px]">
+                                <span className="text-accent font-medium mr-1">Current:</span> Global warming release
+                            </li>
+                            <li className="branch text-[12px] sm:text-[13px] md:text-[14px] lg:text-[14.5px]">
+                                <span className="text-accent font-medium mr-1">Current:</span> Kadolana
+                            </li>
+                            <li className="branch text-[12px] sm:text-[13px] md:text-[14px] lg:text-[14.5px]">
+                                <span className="text-accent font-medium mr-1">Future:</span> Disable People help
+                            </li>
                         </ul>
 
                         <div className="mt-8 sm:mt-9 md:mt-10 flex flex-wrap gap-2 sm:gap-3">
-                            <a href="#projects" className="btn btn-ghost text-[13px] sm:text-[14px] md:text-base">
-                                Explore our projects <span className="arrow">→</span>
+                            <a href="#featured-project" className="btn btn-ghost text-[13px] sm:text-[14px] md:text-base">
+                                Explore Featured Project <span className="arrow">→</span>
                             </a>
-                            <a href="#support" className="btn btn-primary text-[13px] sm:text-[14px] md:text-base">
+                            <a href="#fund" className="btn btn-primary text-[13px] sm:text-[14px] md:text-base">
                                 Support our work <span className="arrow">→</span>
                             </a>
                         </div>
@@ -74,27 +77,6 @@ export default function OverviewSection() {
                                 className="w-full h-full object-cover"
                             />
                         </figure>
-                        <div className="rounded-[14px] sm:rounded-2xl md:rounded-[18px] bg-ink text-ondark p-4 sm:p-5 md:p-6 lg:p-8">
-                            <div className="num text-ondark/70! mb-3 sm:mb-4 text-[10px] sm:text-xs md:text-sm">Our approach</div>
-                            <p className="font-display text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] leading-tight">
-                                &ldquo;Impact is <em className="serif-em">measured</em>, not assumed.
-                                Accountability is everything.&rdquo;
-                            </p>
-                            <div className="hairline mt-4 sm:mt-5 md:mt-6 bg-[rgba(241,236,224,0.18)]!"></div>
-                            <div className="mt-3 sm:mt-4 md:mt-4 flex items-center justify-between text-[11px] sm:text-xs opacity-70">
-                                <span>— Executive Director</span>
-                                <span>PGG Foundation</span>
-                            </div>
-                        </div>
-                        <div className="rounded-[14px] sm:rounded-2xl md:rounded-[18px] bg-accent2 p-4 sm:p-5 md:p-6 lg:p-8">
-                            <div className="num mb-3 sm:mb-4 text-[10px] sm:text-xs md:text-sm">Our impact partners</div>
-                            <ul className="space-y-2 sm:space-y-2.5 md:space-y-3 text-[12px] sm:text-[13px] md:text-[14px] lg:text-[14px]">
-                                <li className="branch">UN Sustainable Development Goals</li>
-                                <li className="branch">International NGO networks</li>
-                                <li className="branch">World Bank regional programs</li>
-                                <li className="branch">Local government institutions</li>
-                            </ul>
-                        </div>
                     </aside>
                 </div>
             </div>

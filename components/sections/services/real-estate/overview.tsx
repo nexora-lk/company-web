@@ -7,7 +7,6 @@ export default function OverviewSection() {
                 <div className="grid grid-cols-12 gap-4 sm:gap-5 md:gap-6 lg:gap-8 xl:gap-12 items-start">
                     <div className="col-span-12 lg:col-span-7">
                         <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-5 md:mb-6">
-                            <span className="num text-[11px] sm:text-xs md:text-sm">[ 01 ]</span>
                             <span className="hairline-strong w-20 sm:w-25 md:w-30"></span>
                             <span className="eyebrow text-[10px] sm:text-[11px] md:text-sm">Real Estate Overview</span>
                         </div>
@@ -70,29 +69,6 @@ export default function OverviewSection() {
                                 className="w-full h-full object-cover"
                             />
                         </figure>
-                        <div className="rounded-[14px] sm:rounded-2xl md:rounded-[18px] bg-ink text-ondark p-4 sm:p-5 md:p-6 lg:p-8">
-                            <div className="num text-ondark/70! mb-3 sm:mb-4 text-[10px] sm:text-xs md:text-sm">Our philosophy</div>
-                            <p className="font-display text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] leading-tight">
-                                &ldquo;The best returns come from land that{' '}
-                                <em className="serif-em">produces</em>, not just appreciates.&rdquo;
-                            </p>
-                            <div className="hairline mt-4 sm:mt-5 md:mt-6 bg-[rgba(241,236,224,0.18)]!"></div>
-                            <div className="mt-3 sm:mt-4 md:mt-4 flex items-center justify-between text-[11px] sm:text-xs opacity-70">
-                                <span>— Managing Director</span>
-                                <span>PGG Properties</span>
-                            </div>
-                        </div>
-                        <div className="rounded-[14px] sm:rounded-2xl md:rounded-[18px] bg-accent2 p-4 sm:p-5 md:p-6 lg:p-8">
-                            <div className="num mb-3 sm:mb-4 text-[10px] sm:text-xs md:text-sm">Our expertise</div>
-                            <ul className="space-y-2 sm:space-y-2.5 md:space-y-3 text-[12px] sm:text-[13px] md:text-[14px] lg:text-[14px]">
-                                <li className="branch">
-                                    Title clearance &amp; legal due diligence
-                                </li>
-                                <li className="branch">Agricultural land conversion</li>
-                                <li className="branch">Heritage architecture restoration</li>
-                                <li className="branch">Sustainable off-grid development</li>
-                            </ul>
-                        </div>
                     </aside>
                 </div>
             </div>

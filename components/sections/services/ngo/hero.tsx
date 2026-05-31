@@ -62,7 +62,7 @@ export default function HeroSection() {
                         <div className="text-[10px] sm:text-[11px] md:text-xs text-white/75! mt-1 sm:mt-2">Rural education centres</div>
                     </div>
                 </div>
-                <div className="mt-12 sm:mt-14 md:mt-16 hairline bg-white/70!"></div>
+                <div className="hairline bg-white/70!"></div>
             </div>
         </section>
     );

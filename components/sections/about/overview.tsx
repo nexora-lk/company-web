@@ -66,15 +66,6 @@ export default function OverviewSection() {
                                 <span className="opacity-70">— pending</span>
                             </div>
                         </figure>
-
-                        <figure className="absolute -bottom-6 -left-6 w-[58%] aspect-[4/3] rounded-[14px] overflow-hidden border border-line bg-surface hidden lg:block">
-                            <Photo
-                                src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
-                                alt="A seedling held above a home"
-                                priority
-                                className="w-full h-full object-cover"
-                            />
-                        </figure>
                     </div>
                 </div>
             </div>

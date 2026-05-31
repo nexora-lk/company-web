@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import HeroSection from '@/components/sections/services/ngo/hero';
 import OverviewSection from '@/components/sections/services/ngo/overview';
-import ProgramsSection from '@/components/sections/services/ngo/programs';
+import ProjectSudeesaSection from '@/components/sections/services/ngo/project-sudeesa';
+import FundSection from '@/components/sections/services/ngo/fund';
 
 export const metadata: Metadata = {
     title: 'NGO Programs & Social Impact | Prestige Glamour',
@@ -72,7 +73,8 @@ export default function NGOPage() {
             />
             <HeroSection />
             <OverviewSection />
-            <ProgramsSection />
+            <ProjectSudeesaSection />
+            <FundSection />
         </>
     );
 }

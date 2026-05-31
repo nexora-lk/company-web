@@ -12,13 +12,13 @@ export default function DirectorsSection() {
                         Directors <em className="serif-em">Board</em>.
                     </h2>
                     <p className="mt-6 text-mute text-[15px] leading-[1.7] max-w-[480px] mx-auto">
-                        The two stewards who hold every quarterly review and sign every line of the
+                        The three stewards who hold every quarterly review and sign every line of the
                         audited statement. The true supporters of eco-friendliness — and of the
                         people who tend the soil.
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                     <article className="dir-card team-card">
                         <div className="portrait dark">
                             <span className="mono">YMDT</span>
@@ -49,6 +49,30 @@ export default function DirectorsSection() {
                         <div className="p-8 lg:p-10">
                             <div className="flex items-center justify-between mb-4">
                                 <span className="num text-ondark/70!">02 — Director</span>
+                                <span className="num text-ondark/70!">HR &amp; Finance</span>
+                            </div>
+                            <h3 className="font-display text-[34px] leading-tight">
+                                Mr. Nilanga <em className="serif-em">Amunugama</em>
+                            </h3>
+                            <div className="mt-2 text-[14px] text-accent">
+                                Executive Head of Marketing
+                            </div>
+                            <div className="hairline my-5 bg-[rgba(241,236,224,0.18)]!"></div>
+                            <p className="text-[13.5px] leading-[1.7] opacity-80">
+                                HR &amp; Finance. BCom Specialist, University of Jayewardenepura.
+                                Chartered Accountant. NILS — Labour Productivity Diploma in
+                                Information Technology.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article className="dir-card team-card">
+                        <div className="portrait dark">
+                            <span className="mono">NA</span>
+                        </div>
+                        <div className="p-8 lg:p-10">
+                            <div className="flex items-center justify-between mb-4">
+                                <span className="num text-ondark/70!">03 — Director</span>
                                 <span className="num text-ondark/70!">HR &amp; Finance</span>
                             </div>
                             <h3 className="font-display text-[34px] leading-tight">

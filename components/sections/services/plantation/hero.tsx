@@ -62,7 +62,7 @@ export default function HeroSection() {
                         </div>
                     </div>
                 </div>
-                <div className="mt-12 sm:mt-14 md:mt-16 hairline !bg-white/70"></div>
+                <div className="hairline !bg-white/70"></div>
             </div>
         </section>
     );

@@ -35,19 +35,6 @@ export default function StatsBanner({
         })}
       </div>
       <div className="hairline"></div>
-
-      <div className="mt-10 flex flex-wrap items-center justify-between gap-6 text-mute">
-        <span className="text-[12px] uppercase tracking-[0.18em]">
-          Audited &amp; certified by
-        </span>
-        <div className="flex flex-wrap items-center gap-x-10 gap-y-3 font-display text-[22px]">
-          {certifications.map((c) => (
-            <span key={c.name} className={c.italic ? "italic" : undefined}>
-              {c.name}
-            </span>
-          ))}
-        </div>
-      </div>
     </>
   );
 }

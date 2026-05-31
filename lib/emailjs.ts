@@ -4,15 +4,19 @@ export const EMAILJS_CONFIG = {
     templateId: process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || 'template_engu2do',
     investmentTemplateId:
         process.env.NEXT_PUBLIC_EMAILJS_INVESTMENT_TEMPLATE_ID || 'template_3x2tt7a',
+    careersTemplateId:
+        process.env.NEXT_PUBLIC_EMAILJS_CAREERS_TEMPLATE_ID || 'template_engu2do',
 } as const;
 
-export function getEmailJsConfig(type: 'home' | 'investment') {
+export function getEmailJsConfig(type: 'home' | 'investment' | 'careers') {
     return {
         serviceId: EMAILJS_CONFIG.serviceId,
         publicKey: EMAILJS_CONFIG.publicKey,
         templateId:
             type === 'investment'
                 ? EMAILJS_CONFIG.investmentTemplateId
-                : EMAILJS_CONFIG.templateId,
+                : type === 'careers'
+                    ? EMAILJS_CONFIG.careersTemplateId
+                    : EMAILJS_CONFIG.templateId,
     };
 }

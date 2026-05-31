@@ -7,7 +7,6 @@ export default function OverviewSection() {
                 <div className="grid grid-cols-12 gap-6 lg:gap-12 items-start">
                     <div className="col-span-12 lg:col-span-7">
                         <div className="flex items-center gap-3 mb-6">
-                            <span className="num">[ 01 ]</span>
                             <span className="hairline-strong w-[120px]"></span>
                             <span className="eyebrow">FMCG Overview</span>
                         </div>
@@ -66,33 +65,12 @@ export default function OverviewSection() {
                     <aside className="col-span-12 lg:col-span-5 space-y-4 lg:sticky lg:top-24">
                         <figure className="rounded-[18px] overflow-hidden aspect-[4/5]">
                             <Photo
-                                src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780120160/pexels-gilmerdiaz-27097318_qzthhz.jpg"
+                                src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780117514/fmcg-overview_eyrmnl.jpg"
                                 alt="Fresh tropical fruits ready for processing"
                                 priority
                                 className="w-full h-full object-cover"
                             />
                         </figure>
-                        <div className="rounded-[18px] bg-ink text-ondark p-6 lg:p-8">
-                            <div className="num text-ondark/70! mb-4">Our vision</div>
-                            <p className="font-display text-[26px] leading-tight">
-                                "Every fruit we pack <em className="serif-em">is a job</em> that
-                                stays on the island."
-                            </p>
-                            <div className="hairline mt-6 bg-[rgba(241,236,224,0.18)]!"></div>
-                            <div className="mt-4 flex items-center justify-between text-[12px] opacity-70">
-                                <span>— Operations Director</span>
-                                <span>PGG Fresh Foods</span>
-                            </div>
-                        </div>
-                        <div className="rounded-[18px] bg-accent2 p-6 lg:p-8">
-                            <div className="num mb-4">Certifications</div>
-                            <ul className="space-y-3 text-[14px]">
-                                <li className="branch">ISO 22000 Food Safety</li>
-                                <li className="branch">HACCP Certified</li>
-                                <li className="branch">Sri Lanka Standards Institution</li>
-                                <li className="branch">Organic Certification (in progress)</li>
-                            </ul>
-                        </div>
                     </aside>
                 </div>
             </div>

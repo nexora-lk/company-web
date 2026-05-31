@@ -9,12 +9,12 @@ export default function HeroSection() {
             <div className="max-w-content mx-auto px-6 lg:px-10 pt-16 lg:pt-24 pb-20 lg:pb-32">
                 <div className="grid grid-cols-12 gap-6 lg:gap-10 items-end">
                     <div className="col-span-12 lg:col-span-7">
-                        <SectionEyebrow
+                        {/* <SectionEyebrow
                             index="01"
                             label="A Sri Lankan Conglomerate"
                             className="flex items-center gap-3 mb-8"
                             hairlineClassName="hairline-strong flex-1 max-w-[120px]"
-                        />
+                        /> */}
 
                         <h1 className="font-display text-[56px] sm:text-[78px] lg:text-[112px] leading-[0.95] tracking-tightish">
                             Cultivating
@@ -61,7 +61,7 @@ export default function HeroSection() {
                 </div>
             </div>
 
-            <Marquee items={marqueeItems} />
+            {/* <Marquee items={marqueeItems} /> */}
         </section>
     );
 }

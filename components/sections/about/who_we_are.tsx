@@ -17,29 +17,27 @@
                     and six trades.
                 </h1>
 
-                <div className="mt-10 grid grid-cols-12 gap-8 lg:gap-12 items-end">
-                    <p className="col-span-12 lg:col-span-6 !text-white/95 text-[15.5px] sm:text-[16.5px] font-medium leading-[1.7] max-w-[520px] drop-shadow-md">
+                <div className="mt-12 lg:mt-20 flex flex-col lg:flex-row items-start justify-between gap-10 lg:gap-16">
+                    <p className="flex-1 !text-white/95 text-[15.5px] sm:text-[16.5px] font-medium leading-[1.7] max-w-[560px] drop-shadow-md">
                         Prestige Glamour Group was founded in 1998 to do one quiet thing well — to
                         keep Sri Lankan craft, soil and trade in Sri Lankan hands while opening
                         doors for it in the world's best rooms. Twenty-eight years on, we steward
                         six businesses from a single house in Colombo 07.
                     </p>
-                    <div className="col-span-12 lg:col-span-6">
-                        <div className="hairline mb-6 !bg-white/70 drop-shadow-md"></div>
-                        <div className="grid grid-cols-3 gap-6 text-[12.5px]">
-                            <div>
+                    <div className="flex-1 w-full">
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-[12.5px]">
+                            <div className="bg-white/10 sm:bg-transparent p-4 sm:p-0 rounded-xl sm:rounded-none backdrop-blur-sm sm:backdrop-blur-none border sm:border-none border-white/20 sm:border-l sm:pl-4 sm:border-white/30">
                                 <div className="num mb-2 !text-white drop-shadow-md">Founded</div>
-                                <div className="font-display text-[28px] leading-none !text-white drop-shadow-md">1998</div>
-                                <div className="text-[12px] !text-white/90 mt-2 drop-shadow-md font-medium">Colombo, Sri Lanka</div>
+                                <div className="font-display text-[28px] leading-none !text-white drop-shadow-md">2013</div>
                             </div>
-                            <div>
+                            <div className="bg-white/10 sm:bg-transparent p-4 sm:p-0 rounded-xl sm:rounded-none backdrop-blur-sm sm:backdrop-blur-none border sm:border-none border-white/20 sm:border-l sm:pl-4 sm:border-white/30">
                                 <div className="num mb-2 !text-white drop-shadow-md">Headcount</div>
-                                <div className="font-display text-[28px] leading-none !text-white drop-shadow-md">8,400</div>
+                                <div className="font-display text-[28px] leading-none !text-white drop-shadow-md">800 +</div>
                                 <div className="text-[12px] !text-white/90 mt-2 drop-shadow-md font-medium">Across nine provinces</div>
                             </div>
-                            <div>
+                            <div className="bg-white/10 sm:bg-transparent p-4 sm:p-0 rounded-xl sm:rounded-none backdrop-blur-sm sm:backdrop-blur-none border sm:border-none border-white/20 sm:border-l sm:pl-4 sm:border-white/30">
                                 <div className="num mb-2 !text-white drop-shadow-md">Branches</div>
-                                <div className="font-display text-[28px] leading-none !text-white drop-shadow-md">29</div>
+                                <div className="font-display text-[28px] leading-none !text-white drop-shadow-md">23</div>
                                 <div className="text-[12px] !text-white/90 mt-2 drop-shadow-md font-medium">Head office in Kalutara</div>
                             </div>
                         </div>

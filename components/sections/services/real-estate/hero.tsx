@@ -27,9 +27,7 @@ export default function HeroSection() {
                         the future.
                     </h1>
                     <p className="col-span-12 lg:col-span-4 text-white/85! text-[13px] sm:text-[14px] md:text-[15px] lg:text-[15.5px] leading-[1.6] sm:leading-[1.7] max-w-70 sm:max-w-87.5 md:max-w-100 lg:max-w-105 lg:pb-3">
-                        PGG Properties focuses on developing and managing commercial agricultural
-                        lands, heritage estate projects, and sustainable commercial developments
-                        across Sri Lanka. We build value that compounds with the land.
+                        PGG Properties specializes in a strategic <strong className="font-medium text-white!">Buy &amp; Sell</strong> model—acquiring land, adding significant value through careful development and restoration, and selling premium assets. We focus on commercial agriculture, heritage projects, and sustainable developments across Sri Lanka.
                     </p>
                 </div>
 
@@ -50,11 +48,11 @@ export default function HeroSection() {
                         <div className="text-[10px] sm:text-[11px] md:text-xs text-white/75! mt-1 sm:mt-2">Colonial estates</div>
                     </div>
                     <div className="p-4 sm:p-6 md:p-7 lg:p-8 border-r border-white/70 border-t lg:border-t-0">
-                        <div className="num text-white/90! mb-2 sm:mb-3 md:mb-4 text-[11px] sm:text-xs md:text-sm lg:text-base">Commercial sites</div>
+                        <div className="num text-white/90! mb-2 sm:mb-3 md:mb-4 text-[11px] sm:text-xs md:text-sm lg:text-base">Developing</div>
                         <div className="font-display text-[36px] sm:text-[44px] md:text-[52px] lg:text-[56px] leading-none tracking-tightish text-white!">
-                            12<em className="serif-em text-accent text-[18px] sm:text-[20px] md:text-[24px] lg:text-[20px]">.</em>
+                            100<em className="serif-em text-accent text-[18px] sm:text-[20px] md:text-[24px] lg:text-[20px]">+</em>
                         </div>
-                        <div className="text-[10px] sm:text-[11px] md:text-xs text-white/75! mt-1 sm:mt-2">Prime locations</div>
+                        <div className="text-[10px] sm:text-[11px] md:text-xs text-white/75! mt-1 sm:mt-2">Active properties</div>
                     </div>
                     <div className="p-4 sm:p-6 md:p-7 lg:p-8 border-t lg:border-t-0">
                         <div className="num text-white/90! mb-2 sm:mb-3 md:mb-4 text-[11px] sm:text-xs md:text-sm lg:text-base">Appreciation</div>
@@ -64,7 +62,7 @@ export default function HeroSection() {
                         <div className="text-[10px] sm:text-[11px] md:text-xs text-white/75! mt-1 sm:mt-2">Avg. annual yield</div>
                     </div>
                 </div>
-                <div className="mt-12 sm:mt-14 md:mt-16 hairline bg-white/70!"></div>
+                <div className="hairline bg-white/70!"></div>
             </div>
         </section>
     );

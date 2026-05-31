@@ -7,7 +7,7 @@ export default function CareersSection() {
             <div className="max-w-content mx-auto px-6 lg:px-10">
                 <div className="relative rounded-[24px] overflow-hidden min-h-[360px] flex items-end">
                     <Photo
-                        src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
+                        src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780154550/careers-about_phptqz.jpg"
                         alt=""
                         className="absolute inset-0 w-full h-full object-cover"
                     />
@@ -20,12 +20,12 @@ export default function CareersSection() {
                                 <h3 className="font-display text-[40px] lg:text-[64px] leading-[0.98] tracking-tightish mt-4">
                                     Looking for the <em className="serif-em">long</em> harvest?
                                     <br />
-                                    We're hiring quietly.
+                                    We&apos;re hiring quietly.
                                 </h3>
                             </div>
                             <div className="col-span-12 lg:col-span-4 flex flex-col gap-3 lg:items-end">
                                 <Link
-                                    href="/#contact"
+                                    href="/about/careers"
                                     className="btn bg-bg! text-ink! hover:bg-accent! hover:text-ondark!"
                                 >
                                     Open roles <span className="arrow">→</span>

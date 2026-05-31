@@ -39,7 +39,7 @@ export default function HeroSection() {
                     <div className="p-4 sm:p-6 md:p-7 lg:p-8 border-r border-white/70">
                         <div className="num text-white/90! mb-2 sm:mb-3 md:mb-4 text-[11px] sm:text-xs md:text-sm lg:text-base">SMEs supported</div>
                         <div className="font-display text-[36px] sm:text-[44px] md:text-[52px] lg:text-[56px] leading-none tracking-tightish text-white!">
-                            5,000<em className="serif-em text-accent text-[18px] sm:text-[20px] md:text-[24px] lg:text-[20px]">+</em>
+                            100<em className="serif-em text-accent text-[18px] sm:text-[20px] md:text-[24px] lg:text-[20px]">+</em>
                         </div>
                         <div className="text-[10px] sm:text-[11px] md:text-xs text-white/75! mt-1 sm:mt-2">Cumulative since 2013</div>
                     </div>
@@ -60,12 +60,12 @@ export default function HeroSection() {
                     <div className="p-4 sm:p-6 md:p-7 lg:p-8 border-t lg:border-t-0">
                         <div className="num text-white/90! mb-2 sm:mb-3 md:mb-4 text-[11px] sm:text-xs md:text-sm lg:text-base">Branch network</div>
                         <div className="font-display text-[36px] sm:text-[44px] md:text-[52px] lg:text-[56px] leading-none tracking-tightish text-white!">
-                            29<em className="serif-em text-accent text-[18px] sm:text-[20px] md:text-[24px] lg:text-[20px]">.</em>
+                            23<em className="serif-em text-accent text-[18px] sm:text-[20px] md:text-[24px] lg:text-[20px]">.</em>
                         </div>
                         <div className="text-[10px] sm:text-[11px] md:text-xs text-white/75! mt-1 sm:mt-2">Across nine provinces</div>
                     </div>
                 </div>
-                <div className="mt-12 sm:mt-14 md:mt-16 hairline bg-white/70!"></div>
+                <div className="hairline bg-white/70!"></div>
             </div>
         </section>
     );

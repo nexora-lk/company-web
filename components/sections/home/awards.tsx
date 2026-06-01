@@ -34,18 +34,20 @@ export default function AwardsSection() {
 
                     {/* Images */}
                     <div className="col-span-12 lg:col-span-7 relative order-1 lg:order-2 flex items-center justify-center gap-3 sm:gap-4 lg:gap-6 mt-4 lg:mt-0 py-6 sm:py-8">
-                        <figure className="w-1/2 rounded-[14px] sm:rounded-[18px] lg:rounded-[14px] overflow-hidden aspect-[4/3] transform translate-y-4 sm:translate-y-6 lg:translate-y-12 shadow-sm">
+                        {/* Medal — large, no border/shadow, shifted up */}
+                        <figure className="w-[65%] overflow-hidden aspect-[4/5] transform -translate-y-4 sm:-translate-y-6 lg:-translate-y-12">
                             <Photo
-                                src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780207747/IMG_20260524_135209_qk2ojj.jpg"
-                                alt="Certificate of Excellence"
+                                src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780278229/cuphh_ie4ez2.png"
+                                alt="Award Cup"
                                 className="w-full h-full object-cover"
                             />
                         </figure>
-                        <figure className="w-1/4 rounded-[14px] sm:rounded-[18px] lg:rounded-[14px] overflow-hidden aspect-[4/5] transform -translate-y-4 sm:-translate-y-6 lg:-translate-y-12 shadow-sm">
+                        {/* Certificate — smaller, shifted down */}
+                        <figure className="w-[45%] overflow-hidden aspect-[4/3] transform translate-y-4 sm:translate-y-6 lg:translate-y-12">
                             <Photo
-                                src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780207717/cup_syzeri.jpg"
-                                alt="Award Cup"
-                                className="w-full h-full object-cover"
+                                src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780278251/IMG_20260601_022245_wy6vzu.jpg"
+                                alt="Certificate of Excellence"
+                                className="w-full h-full object-cover mix-blend-multiply"
                             />
                         </figure>
                     </div>

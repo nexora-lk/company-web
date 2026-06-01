@@ -60,7 +60,7 @@ const services = [
 
 export default function ServicesSection() {
     return (
-        <section className="pb-20 sm:pb-24 md:pb-28 lg:pb-36 xl:pb-40">
+        <section id="services" className="pb-20 sm:pb-24 md:pb-28 lg:pb-36 xl:pb-40">
             <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-10">
 
                 {/* Header */}

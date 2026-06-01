@@ -1,62 +1,223 @@
-import SectionEyebrow from '@/components/sections/SectionEyebrow';
-import { marqueeItems } from '@/data/home';
-import HeroSlider from '@/features/hero-slider/HeroSlider';
+'use client';
+
+import { useEffect, useRef, useState } from 'react';
+
+// ── Background video playlist ───────────────────────────────────────────────
+const BG_VIDEOS = [
+    {
+        // User's actual uploaded video
+        src: 'https://res.cloudinary.com/ddxvnb0nk/video/upload/q_auto/f_auto/v1779376708/samples/elephants.mp4',
+        label: 'Wildlife · Sri Lanka',
+    },
+    {
+        // Demo placeholder video
+        src: 'https://res.cloudinary.com/demo/video/upload/q_auto/f_auto/v1712673000/samples/sea-turtle.mp4',
+        label: 'Ocean · Coastal Life',
+    },
+    {
+        // Demo placeholder video
+        src: 'https://res.cloudinary.com/demo/video/upload/q_auto/f_auto/v1712673000/samples/dance-2.mp4',
+        label: 'Culture · Heritage',
+    },
+    {
+        // Demo placeholder video
+        src: 'https://res.cloudinary.com/demo/video/upload/q_auto/f_auto/v1712673000/samples/look-up.mp4',
+        label: 'Landscape · Highlands',
+    },
+];
 
 export default function HeroSection() {
+    const [current, setCurrent] = useState(0);
+    const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+
+    // Advance to next video — wraps back to 0 (infinite loop)
+    const advance = (from: number) => {
+        setCurrent((prev) => {
+            // Only advance if the event came from the currently active video.
+            // This prevents background videos with 404 errors from skipping the active video.
+            if (prev !== from) return prev;
+            return (prev + 1) % BG_VIDEOS.length;
+        });
+    };
+
+    // Pause all → play active whenever current changes
+    useEffect(() => {
+        BG_VIDEOS.forEach((_, i) => {
+            const el = videoRefs.current[i];
+            if (!el) return;
+            if (i === current) {
+                el.currentTime = 0;
+                el.play().catch(() => {});
+            } else {
+                el.pause();
+            }
+        });
+    }, [current]);
+
     return (
-        <section className="relative overflow-hidden" aria-label="Hero">
-            <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-10 pt-16 sm:pt-20 lg:pt-24 xl:pt-28 pb-14 sm:pb-20 lg:pb-28 xl:pb-32">
-                <div className="grid grid-cols-12 gap-6 lg:gap-10 items-end">
+        <section
+            className="relative overflow-hidden min-h-[100svh] flex flex-col bg-[#14181a]"
+            aria-label="Hero"
+        >
+            {/* ── Background videos ──────────────────────────────────────── */}
+            <div className="absolute inset-0 z-0">
+                {BG_VIDEOS.map((v, i) => (
+                    <video
+                        key={v.src}
+                        ref={(el) => { videoRefs.current[i] = el; }}
+                        muted
+                        playsInline
+                        preload={i === 0 ? 'auto' : 'metadata'}
+                        onEnded={() => advance(i)}
+                        onError={() => advance(i)}
+                        className="absolute inset-0 w-full h-full min-w-full min-h-full max-w-none object-cover transition-opacity duration-700"
+                        style={{ opacity: i === current ? 1 : 0, pointerEvents: 'none' }}
+                    >
+                        <source src={v.src} type="video/mp4" />
+                    </video>
+                ))}
+                {/* Layered dark overlays for all screen sizes */}
+                <div className="absolute inset-0 bg-[#14181a]/55 sm:bg-[#14181a]/50" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#14181a]/90 via-[#14181a]/20 to-[#14181a]/25" />
+            </div>
 
-                    {/* Left: Headline + CTA */}
-                    <div className="col-span-12 lg:col-span-7">
-                        <h1 className="font-display text-[46px] sm:text-[64px] md:text-[80px] lg:text-[100px] xl:text-[112px] leading-[0.95] tracking-tightish">
-                            Cultivating
-                            <br />
-                            the <em className="serif-em">enduring</em>
-                            <br />
-                            industries of
-                            <br />a quiet island.
-                        </h1>
+            {/* ── Live scene badge — hidden on xs, visible sm+ ───────────── */}
+            <div className="absolute top-4 right-4 sm:top-6 sm:right-6 z-20 hidden sm:flex items-center gap-2 px-2.5 py-1.5 sm:px-3 rounded-full bg-[#f1ece0]/10 backdrop-blur-sm border border-[#f1ece0]/15">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#2f5d4a] shrink-0 animate-pulse" />
+                <span className="text-[10px] sm:text-[11px] font-medium text-[#f1ece0]/80 tracking-widest uppercase">
+                    {BG_VIDEOS[current].label}
+                </span>
+            </div>
 
-                        <div className="mt-6 sm:mt-8 lg:mt-10 max-w-full sm:max-w-[480px] text-mute text-[14px] sm:text-[15px] md:text-[15.5px] leading-[1.65]">
-                            From highland plantations to gem ateliers, micro-finance to hospitality
-                            — Prestige Glamour Group steward six businesses that together employ{' '}
-                            <span className="text-ink">8,400 Sri Lankans</span> and serve 28,000
-                            smallholder partners.
-                        </div>
+            {/* ── Hero content — vertically fills viewport ─────── */}
+            <div className="relative z-10 flex-1 flex flex-col items-center text-center
+                            px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20
+                            pt-16 sm:pt-24 md:pt-28 lg:pt-32
+                            pb-32 sm:pb-28 md:pb-32 lg:pb-36">
 
-                        <div className="mt-6 sm:mt-8 lg:mt-10 flex flex-wrap items-center gap-3">
-                            <a href="#services" className="btn btn-primary">
-                                Explore our services <span className="arrow">→</span>
-                            </a>
-                            <a href="#contact" className="btn btn-ghost">
-                                Speak with our team
-                            </a>
-                        </div>
+                {/* Mobile top spacer to push text to the visual center */}
+                <div className="flex-[1] sm:hidden" />
+
+                {/* Main Text Block */}
+                <div className="flex flex-col items-center w-full mt-0 sm:mt-auto">
+
+                    {/* Eyebrow */}
+                    <div className="flex items-center gap-2 sm:gap-3 mb-5 sm:mb-7 md:mb-8">
+                        <span className="h-px w-6 sm:w-8 md:w-10 bg-[#f1ece0]/30" />
+                        <span className="text-[9px] sm:text-[10px] md:text-[11px] tracking-[0.18em] sm:tracking-[0.2em] uppercase font-medium text-[#f1ece0]/60">
+                            Prestige Glamour Group of Company
+                        </span>
+                        <span className="h-px w-6 sm:w-8 md:w-10 bg-[#f1ece0]/30" />
                     </div>
 
-                    {/* Right: Slider */}
-                    <div className="col-span-12 lg:col-span-5 relative h-[320px] sm:h-[440px] md:h-[500px] lg:h-[580px] xl:h-[640px] mt-8 lg:mt-0">
-                        <div className="w-full h-full rounded-[14px] sm:rounded-[18px] overflow-hidden shadow-[0_30px_60px_-20px_rgba(20,24,26,0.25)]">
-                            <HeroSlider />
-                        </div>
+                    {/* Headline */}
+                    <h1 className="font-display
+                                   text-[52px]
+                                   xs:text-[60px]
+                                   sm:text-[66px]
+                                   md:text-[76px]
+                                   lg:text-[96px]
+                                   xl:text-[118px]
+                                   2xl:text-[128px]
+                                   leading-[0.9] tracking-tight text-[#f1ece0]
+                                   max-w-[13ch] sm:max-w-[14ch] md:max-w-[16ch] lg:max-w-[18ch] xl:max-w-none">
+                        Cultivating
+                        <br />
+                        the{' '}
+                        <em className="serif-em" style={{ color: '#a8c5b5' }}>enduring</em>
+                        <br />
+                        industries of
+                        <br />
+                        a quiet island.
+                    </h1>
 
-                        {/* Field report overlay */}
-                        <div className="absolute bottom-3 right-3 z-10 max-w-[200px] sm:max-w-[230px] bg-surface/95 backdrop-blur border border-line rounded-xl sm:rounded-2xl p-3 sm:p-4">
-                            <div className="flex items-center gap-2 mb-1.5 sm:mb-2">
-                                <span className="w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
-                                <span className="num text-[10px] sm:text-[11px]">Field report</span>
-                            </div>
-                            <div className="font-display text-[15px] sm:text-[17px] md:text-[19px] leading-tight">
-                                &quot;A jar of coins, a sapling — and 11,200 families since.&quot;
-                            </div>
-                            <div className="mt-1.5 sm:mt-2 text-[10px] sm:text-[11px] text-mute">— Nuwara Eliya, 2025</div>
-                        </div>
-                    </div>
+                    {/* Sub-paragraph */}
+                    <p className="mt-5 sm:mt-7 md:mt-8 lg:mt-9
+                                  max-w-[100%] xs:max-w-[95%] sm:max-w-[440px] md:max-w-[540px] lg:max-w-[640px] xl:max-w-[700px]
+                                  text-[#f1ece0]/75
+                                  text-[15px] xs:text-[16px] sm:text-[15.5px] md:text-[16px] lg:text-[17px] xl:text-[18px]
+                                  leading-[1.7] lg:leading-[1.75]">
+                        From highland plantations to gem ateliers, micro-finance to hospitality —
+                        employing{' '}
+                        <span className="text-[#f1ece0] font-medium">8,400 Sri Lankans</span>{' '}
+                        and serving 28,000 smallholder partners.
+                    </p>
 
                 </div>
+
+                {/* Mobile bottom spacer to push buttons to the bottom */}
+                <div className="flex-[1.5] sm:hidden" />
+
+                {/* CTAs */}
+                <div className="mt-8 sm:mt-9 md:mt-11 mb-0 sm:mb-auto
+                                flex flex-col sm:flex-row
+                                items-center gap-3 sm:gap-4 w-full sm:w-auto">
+                    <a
+                        href="#services"
+                        id="hero-cta-primary"
+                        className="btn btn-primary
+                                   w-full sm:w-auto
+                                   min-w-0 sm:min-w-[200px] lg:min-w-[220px]
+                                   justify-center
+                                   text-[15.5px] sm:text-[15px] lg:text-[15.5px]
+                                   py-[0.9rem] sm:py-[0.85rem] lg:py-[0.9rem]
+                                   shadow-lg sm:shadow-none"
+                    >
+                        Explore our services <span className="arrow">→</span>
+                    </a>
+                    <a
+                        href="#contact"
+                        id="hero-cta-secondary"
+                        className="btn
+                                   w-full sm:w-auto
+                                   min-w-0 sm:min-w-[200px] lg:min-w-[220px]
+                                   justify-center
+                                   text-[15.5px] sm:text-[15px] lg:text-[15.5px]
+                                   py-[0.9rem] sm:py-[0.85rem] lg:py-[0.9rem]"
+                        style={{
+                            background: 'rgba(20,24,26,0.3)',
+                            color: '#f1ece0',
+                            border: '1px solid rgba(241,236,224,0.15)',
+                            backdropFilter: 'blur(10px)',
+                        }}
+                    >
+                        Speak with our team
+                    </a>
+                </div>
             </div>
+
+            {/* ── Video dot indicators — bottom centre ─────────────────── */}
+            <div className="absolute bottom-5 sm:bottom-7 md:bottom-8 left-0 right-0 z-20 flex justify-center gap-2">
+                {BG_VIDEOS.map((v, i) => (
+                    <button
+                        key={i}
+                        id={`hero-video-dot-${i}`}
+                        aria-label={`Play video: ${v.label}`}
+                        onClick={() => setCurrent(i)}
+                        className={`h-1.5 rounded-full transition-all duration-300 no-min-target ${
+                            i === current
+                                ? 'bg-[#f1ece0] w-6 sm:w-7'
+                                : 'bg-[#f1ece0]/35 w-1.5 hover:bg-[#f1ece0]/60'
+                        }`}
+                    />
+                ))}
+            </div>
+
+            {/* ── Scroll nudge — md+ only ───────────────────────────────── */}
+            <div className="absolute bottom-7 right-5 sm:right-6 z-20 hidden md:flex flex-col items-center gap-2 text-[#f1ece0]/40">
+                <span className="text-[9px] sm:text-[10px] tracking-[0.18em] uppercase rotate-90 origin-center mb-2">Scroll</span>
+                <span
+                    className="w-px h-8 sm:h-10 bg-gradient-to-b from-[#f1ece0]/40 to-transparent"
+                    style={{ animation: 'scrollNudge 2s ease-in-out infinite' }}
+                />
+            </div>
+
+            <style>{`
+                @keyframes scrollNudge {
+                    0%, 100% { opacity: 0.4; transform: scaleY(1); }
+                    50%       { opacity: 1;   transform: scaleY(1.15); }
+                }
+            `}</style>
         </section>
     );
 }

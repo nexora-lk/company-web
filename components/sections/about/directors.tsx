@@ -1,3 +1,5 @@
+import Photo from '@/components/ui/Photo';
+
 export default function DirectorsSection() {
     return (
         <section className="pb-24 lg:pb-36">
@@ -20,9 +22,13 @@ export default function DirectorsSection() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                     <article className="dir-card team-card">
-                        <div className="portrait dark">
-                            <span className="mono">YMDT</span>
-                        </div>
+                        <figure className="portrait overflow-hidden">
+                            <Photo
+                                src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780278288/yatawarasir-profile_wroc25.jpg"
+                                alt="Mr. Y. M. D. T. Yatawara"
+                                className="w-full h-full object-cover"
+                            />
+                        </figure>
                         <div className="p-8 lg:p-10">
                             <div className="flex items-center justify-between mb-4">
                                 <span className="num text-ondark/70!">01 — Founder</span>
@@ -43,9 +49,13 @@ export default function DirectorsSection() {
                     </article>
 
                     <article className="dir-card team-card">
-                        <div className="portrait dark">
-                            <span className="mono">NA</span>
-                        </div>
+                        <figure className="portrait overflow-hidden">
+                            <Photo
+                                src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780278280/amunugammasirr-profile_tyvvsb.jpg"
+                                alt="Mr. Nilanga Amunugama"
+                                className="w-full h-full object-cover"
+                            />
+                        </figure>
                         <div className="p-8 lg:p-10">
                             <div className="flex items-center justify-between mb-4">
                                 <span className="num text-ondark/70!">02 — Director</span>
@@ -67,9 +77,13 @@ export default function DirectorsSection() {
                     </article>
 
                     <article className="dir-card team-card">
-                        <div className="portrait dark">
-                            <span className="mono">NA</span>
-                        </div>
+                        <figure className="portrait overflow-hidden">
+                            <Photo
+                                src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780278294/madams-profile_vckxlg.jpg"
+                                alt="Director"
+                                className="w-full h-full object-cover"
+                            />
+                        </figure>
                         <div className="p-8 lg:p-10">
                             <div className="flex items-center justify-between mb-4">
                                 <span className="num text-ondark/70!">03 — Director</span>

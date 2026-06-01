@@ -403,16 +403,6 @@
         position: relative;
         overflow: hidden;
     }
-    .portrait::before {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background: radial-gradient(
-            120% 80% at 50% 20%,
-            rgba(255, 255, 255, 0.55),
-            transparent 60%
-        );
-    }
     .portrait .mono {
         position: absolute;
         inset: 0;

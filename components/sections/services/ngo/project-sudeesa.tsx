@@ -14,7 +14,7 @@ export default function ProjectSudeesaSection() {
                     <div className="lg:col-span-8">
                         <div className="mb-6">
                             <Photo
-                                src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780201664/WhatsApp_Image_2026-05-24_at_14.45.23_skyizv.jpg"
+                                src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780278268/ngo-ag-logo_nczhjo.png"
                                 alt="Sudeesa Logo"
                                 className="w-24 sm:w-28 md:w-32 rounded-lg object-contain"
                             />

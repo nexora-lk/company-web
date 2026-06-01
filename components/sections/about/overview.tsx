@@ -59,12 +59,12 @@ export default function OverviewSection() {
                     </div>
 
                     <div className="col-span-12 lg:col-span-5 relative">
-                        <figure className="portrait dark aspect-[4/5] rounded-[18px]">
-                            <span className="mono">YMDT</span>
-                            <div className="pf-label flex items-center justify-between">
-                                <span>Chairman portrait</span>
-                                <span className="opacity-70">— pending</span>
-                            </div>
+                        <figure className="aspect-[4/5] rounded-[18px] overflow-hidden">
+                            <Photo
+                                src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780278280/amunugammasirr-profile_tyvvsb.jpg"
+                                alt="Chairman Y. M. D. T. Yatawara"
+                                className="w-full h-full object-cover"
+                            />
                         </figure>
                     </div>
                 </div>

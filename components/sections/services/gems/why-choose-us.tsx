@@ -5,14 +5,13 @@ export default function WhyChooseUsSection() {
 
                 <div className="mb-10 sm:mb-12 md:mb-14 lg:mb-16">
                     <div className="flex items-center gap-3 mb-5 sm:mb-6">
-                        <span className="num">[ 06 ]</span>
                         <span className="hairline-strong w-[80px] sm:w-[120px]" />
                         <span className="eyebrow">Why Choose PGG Gems</span>
                     </div>
                     <h2 className="font-display text-[30px] sm:text-[40px] md:text-[48px] lg:text-[54px] xl:text-[60px] leading-[0.98] tracking-tightish max-w-full md:max-w-4xl">
-                        Trusted for <em className="serif-em">quality.</em>
+                        Why investors <em className="serif-em">choose</em>
                         <br />
-                        Chosen for excellence.
+                        PGG Gems.
                     </h2>
                 </div>
 

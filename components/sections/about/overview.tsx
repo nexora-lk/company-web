@@ -2,70 +2,71 @@ import Photo from '@/components/ui/Photo';
 
 export default function OverviewSection() {
     return (
-        <section className="pb-24 pt-24 lg:pb-36">
-            <div className="max-w-content mx-auto px-6 lg:px-10">
-                <div className="grid grid-cols-12 gap-6 lg:gap-12 items-start">
+        <section className="pb-20 pt-20 lg:pb-36 lg:pt-32">
+            <div className="max-w-content mx-auto px-4 xs:px-6 lg:px-10">
+                <div className="grid grid-cols-12 gap-8 lg:gap-16 items-start">
                     <div className="col-span-12 lg:col-span-7">
-                        <div className="flex items-center gap-3 mb-6">
-                            <span className="hairline-strong w-[120px]"></span>
-                            <span className="eyebrow">Overview · From the Chairman</span>
+                        <div className="flex items-center gap-2 xs:gap-3 mb-5 sm:mb-6">
+                            <span className="hairline-strong w-16 xs:w-20 sm:w-24 lg:w-[120px]"></span>
+                            <span className="eyebrow text-[10px] xs:text-xs">Overview · From the Chairman</span>
                         </div>
 
-                        <h2 className="font-display text-[44px] lg:text-[68px] leading-[0.98] tracking-tightish">
+                        <h2 className="font-display text-3xl xs:text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[0.98] tracking-tightish text-ink">
                             A letter from <em className="serif-em">Mr. Y. M. D. T.</em>
                             <br />
                             Yatawara, Chairman.
                         </h2>
 
-                        <div className="mt-10 space-y-5 text-[15px] leading-[1.75] text-mute max-w-[640px]">
+                        <div className="mt-8 xs:mt-10 space-y-4 xs:space-y-6 text-[14px] xs:text-[15px] leading-relaxed sm:leading-[1.75] text-mute max-w-full sm:max-w-[640px] font-light">
                             <p>
-                                <span className="font-display text-[36px] text-ink float-left mr-2 leading-[0.85] mt-1">
-                                    A
+                                <span className="font-display text-4xl xs:text-5xl text-ink float-left mr-3 leading-[0.8] mt-1">
+                                    P
                                 </span>
-                                s a roots developer of the Prestige Glamour Group of Company, we go
-                                forward with unique and astonishing services and goods for our
-                                valuable stakeholders — emerging the level of{' '}
-                                <span className="text-ink">"Prestige &amp; Glamour"</span> for the
-                                word, while establishing the best working environment for our
-                                internal customers and the best products for those we serve outside.
+                                restige Glamour Working Capital Solutions was built on a simple belief:
+                                that investors deserve to see exactly where their money goes,
+                                and to receive returns that reflect real business performance — not projections or
+                                promises. Since 2013, we have operated seven divisions with full financial transparency,
+                                quarterly audits, and a commitment to paying every investor on time.
                             </p>
                             <p>
-                                We hold ourselves to an effective legal background and to the vision
-                                and mission of high-quality service and natural goods. Through our
-                                NGO programmes we focus on early-childhood development and on
-                                emerging a new generation of entrepreneurs from agriculture in the
-                                lowest-income rural corners of the island.
+                                Our 23 branches across 8 provinces are not just offices — they are the proof that
+                                we operate at scale, on the ground, with real people and real assets.
+                                Every investment with us is backed by land you can visit, crops you can see growing,
+                                gems you can hold in your hand, and loan books you can audit.
+                                That is our commitment to you.
                             </p>
                             <p>
-                                By taking our business scope abroad, we stop the outflow of dollars
-                                from Sri Lanka and increase the inflow back — a quiet support to the
-                                country's account of foreign-exchange balance payment. That, simply,
-                                is the work.
+                                By bringing overseas investment into Sri Lankan agriculture, gems, and enterprise,
+                                we increase the inflow of foreign exchange to the island while delivering strong
+                                returns to our investors. That is the work — and we do it openly, every quarter,
+                                with audited numbers.
                             </p>
                         </div>
 
-                        <div className="mt-10 flex items-center gap-6">
+                        <div className="mt-8 xs:mt-10 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8">
                             <div>
-                                <div className="font-display text-[26px] leading-none">
+                                <div className="font-display text-2xl xs:text-[26px] leading-none text-ink">
                                     Y. M. D. T. Yatawara
                                 </div>
-                                <div className="num mt-2">Chairman · Prestige Glamour Group</div>
+                                <div className="num mt-2 text-accent">Chairman · Prestige Glamour Group</div>
                             </div>
-                            <div className="hidden sm:block hairline-strong w-16"></div>
-                            <div className="hidden sm:block font-display italic text-[22px] text-mute">
+                            <div className="hidden md:block hairline-strong w-16"></div>
+                            <div className="hidden sm:block font-display italic text-xl xs:text-[22px] text-mute/60">
                                 — Colombo, 2026
                             </div>
                         </div>
                     </div>
 
-                    <div className="col-span-12 lg:col-span-5 relative">
-                        <figure className="aspect-[4/5] rounded-[18px] overflow-hidden">
+                    <div className="col-span-12 lg:col-span-5 relative mt-8 lg:mt-0">
+                        <figure className="aspect-[4/5] rounded-[18px] sm:rounded-[24px] overflow-hidden shadow-2xl">
                             <Photo
                                 src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780278280/amunugammasirr-profile_tyvvsb.jpg"
                                 alt="Chairman Y. M. D. T. Yatawara"
                                 className="w-full h-full object-cover"
                             />
                         </figure>
+                        {/* Decorative background element for desktop */}
+                        <div className="absolute -z-10 -bottom-6 -right-6 w-32 h-32 bg-accent/5 rounded-full blur-3xl hidden lg:block"></div>
                     </div>
                 </div>
             </div>

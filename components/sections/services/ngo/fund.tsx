@@ -5,19 +5,18 @@ export default function FundSection() {
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
                     <div className="lg:col-span-6">
                         <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-5 md:mb-6">
-                            <span className="num text-[11px] sm:text-xs md:text-sm">[ 03 ]</span>
                             <span className="hairline-strong w-20 sm:w-25 md:w-30"></span>
                             <span className="eyebrow text-[10px] sm:text-[11px] md:text-sm">Support Our Cause</span>
                         </div>
                         <h2 className="font-display text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] leading-[0.98] tracking-tightish mb-6">
-                            Help us build a <em className="serif-em">better</em>
+                            Support our <em className="serif-em">community</em>
                             <br />
-                            tomorrow.
+                            programmes
                         </h2>
                         <p className="text-[14px] sm:text-[15px] text-mute leading-[1.6] sm:leading-[1.7] max-w-lg mb-8">
-                            Your contributions directly fund our current and future programs, including plantation,
-                            mangrove conservation, and upcoming initiatives for disabled individuals. We ensure complete
-                            financial transparency for every donation.
+                            Your contributions directly fund our ongoing programmes — plantation development, mangrove
+                            conservation at Kadolana, and our upcoming disabled persons support initiative. Every donation
+                            is tracked and reported with the same transparency as our commercial businesses.
                         </p>
                     </div>
 

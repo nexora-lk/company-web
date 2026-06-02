@@ -4,89 +4,87 @@ import Photo from '@/components/ui/Photo';
 const services = [
     {
         href: '/services/plantation',
-        num: '01 — Plantation',
         img: 'https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780117630/plantation-home_dqqa3t.jpg',
         alt: 'Lush green plantation fields at sunrise',
-        h3: <>Cultivating <em className="serif-em">high-value</em> crops.</>,
-        body: 'Cultivating high-value crops like ginger, banana, and mango across Sri Lanka for local and export markets.',
-        cta: 'Explore the estates',
+        h3: <>01 - Plantation</>,
+        body: 'Invest in ginger, mango, and specialty crop cultivation across owned and leased estates. Quarterly returns from harvest cycles. Min. LKR 200,000 | Returns: 45-60% annually.',
+        cta: 'Learn more',
     },
     {
         href: '/services/microfinance',
-        num: '02 — Micro Finance',
         img: 'https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780121976/micro-finace-home_jmdbyi.jpg',
         alt: 'Hands exchanging seeds — rural finance empowerment',
-        h3: <>Inclusive finance for <em className="serif-em">rural</em>{' '}growth.</>,
-        body: 'Providing inclusive financial support for rural entrepreneurs and small-scale farmers through tailored loan products.',
+        h3: <>02 — Micro Finance</>,
+        body: 'Co-invest in our microfinance loan portfolio serving 11,200+ active borrowers. 96.4% repayment rate. Steady monthly income. Min. LKR 250,000 | Returns: 35-50% annually.',
         cta: 'Learn more',
     },
     {
         href: '/services/gems',
-        num: '03 — Gem & Jewelry',
         img: 'https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780117514/gem-home_rsp4p8.jpg',
         alt: 'Gemstones and jewels on display',
-        h3: <>Certified Sri Lankan <em className="serif-em">sapphires</em>.</>,
-        body: 'Certified gem trading and export business offering authentic Sri Lankan gemstones to global markets.',
-        cta: 'View collections',
+        h3: <>03 — Gems</>,
+        body: 'Invest in gem sourcing, cutting, certification, and export to 14 countries. High-margin, short-cycle returns. Min. LKR 1,000,000 | Returns: 50-65% annually.',
+        cta: 'Learn more',
     },
     {
         href: '/services/fmcg',
-        num: '04 — FMCG',
         img: 'https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780117605/fmcg-home_m25qif.jpg',
         alt: 'Fresh tropical fruits and herbal products',
-        h3: <>PGG <em className="serif-em">Fresh</em> Foods.</>,
-        body: 'Processing and distributing value-added fresh fruits and herbal products under the PGG Fresh Foods brand.',
-        cta: 'Explore products',
+        h3: <>04 — FMCG</>,
+        body: 'Co-invest in our plantation-to-shelf FMCG division. Products made from our own estate harvests. Quarterly profit distributions. Min. LKR 500,000 | Returns: 40-55% annually.',
+        cta: 'Learn more',
     },
     {
         href: '/services/ngo',
-        num: '05 — NGO Projects',
         img: 'https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780121247/ngo-home_natibv.jpg',
         alt: 'Community education and social development',
-        h3: <>Driving <em className="serif-em">social</em> change.</>,
-        body: 'Driving social change through education, rehabilitation, and income-generation projects funded by global partners.',
-        cta: 'View impact',
+        h3: <>05 — NGO Projects</>,
+        body: 'The PGG Foundation channels 5% of group profits into rural education, plantation programmes, and community development across 7 districts. Learn about our impact.',
+        cta: 'Learn more',
     },
     {
         href: '/services/real-estate',
-        num: '06 — Real Estate',
         img: 'https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780117535/realstate-home_dxn1qj.jpg',
         alt: 'Modern commercial real estate development',
-        h3: <>Agricultural <em className="serif-em">estate</em> value.</>,
-        body: 'Developing and managing commercial agricultural lands and estate projects to increase asset value.',
-        cta: 'View projects',
+        h3: <>06 — Real Estate</>,
+        body: 'Invest in land acquisition, value-add development, and sale. Buy low, develop, sell high. Fast capital cycles. Min. LKR 500,000 | Returns: 40-55% annually.',
+        cta: 'Learn more',
     },
 ];
 
 export default function ServicesSection() {
     return (
-        <section id="services" className="pb-20 sm:pb-24 md:pb-28 lg:pb-36 xl:pb-40">
-            <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-10">
+        <section id="services" className="pb-20 xs:pb-24 md:pb-32 lg:pb-40 xl:pb-48">
+            <div className="max-w-content mx-auto px-4 xs:px-6 lg:px-10">
 
                 {/* Header */}
-                <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-5 sm:gap-8 mb-10 sm:mb-12 lg:mb-16">
-                    <div>
-                        <SectionEyebrow index="04" label="Our Services" />
-                        <h2 className="font-display text-[30px] sm:text-[42px] md:text-[52px] lg:text-[58px] xl:text-[68px] leading-[0.98] tracking-tightish max-w-full md:max-w-[820px]">
-                            Our Diverse Portfolio of <em className="serif-em">Services</em>
+                <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 sm:gap-10 mb-12 sm:mb-16 lg:mb-20">
+                    <div className="max-w-full lg:max-w-3xl">
+                        <SectionEyebrow 
+                            index="04" 
+                            label="Our Services" 
+                            className="flex items-center gap-2 xs:gap-3 mb-6 sm:mb-8"
+                            hairlineClassName="hairline-strong w-16 xs:w-20 sm:w-24 lg:w-[120px]"
+                        />
+                        <h2 className="font-display text-3xl xs:text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[0.98] tracking-tightish text-ink">
+                            Six Ways to Invest <em className="serif-em text-accent">With Us</em>
                         </h2>
                     </div>
-                    <p className="text-[13.5px] sm:text-[14.5px] text-mute max-w-full sm:max-w-[440px] leading-[1.7] lg:text-right">
-                        We operate across multiple high-impact sectors delivering value,
-                        sustainability, and innovation to both local and global markets. From
-                        organic plantations and inclusive microfinance to luxury gem exports and
-                        FMCG distribution, our services are designed to uplift communities and
-                        enhance Sri Lanka&apos;s economic footprint.
-                    </p>
+                    <div className="max-w-full sm:max-w-[440px] lg:text-right">
+                        <p className="text-[14px] xs:text-[15px] sm:text-base text-mute leading-relaxed font-light">
+                            We operate seven active investment vehicles across Sri Lanka. Each division is
+                            independently managed, audited quarterly, and open to direct investor participation.
+                        </p>
+                    </div>
                 </div>
 
                 {/* Cards Grid: 1→2(sm)→3(md) */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 xs:gap-6 sm:gap-8">
                     {services.map((svc) => (
                         <a
                             key={svc.href}
                             href={svc.href}
-                            className="svc-card group relative rounded-[16px] sm:rounded-[20px] overflow-hidden bg-surface min-h-[340px] sm:min-h-[380px] md:min-h-[420px]"
+                            className="svc-card group relative rounded-[20px] sm:rounded-[24px] overflow-hidden bg-surface min-h-[360px] xs:min-h-[400px] sm:min-h-[440px] md:min-h-[480px] shadow-sm hover:shadow-xl transition-all duration-700"
                         >
                             <Photo
                                 src={svc.img}
@@ -95,22 +93,22 @@ export default function ServicesSection() {
                                 className="absolute inset-0 w-full h-full object-cover"
                             />
                             <div className="absolute inset-0 bg-linear-to-t from-ink/95 via-ink/40 to-transparent" />
-                            <div className="relative h-full p-5 sm:p-6 md:p-8 flex flex-col justify-between text-ondark min-h-[340px] sm:min-h-[380px] md:min-h-[420px]">
-                                <span className="num text-white font-medium drop-shadow-sm text-[10px] sm:text-[11px]">
-                                    {svc.num}
+                            <div className="relative h-full p-6 xs:p-8 sm:p-10 flex flex-col justify-between text-ondark">
+                                <span className="num text-white/60 font-medium text-[10px] xs:text-[11px] uppercase tracking-widest">
+                                    Service Tier
                                 </span>
                                 <div>
-                                    <h3 className="font-display text-[26px] sm:text-[28px] md:text-[30px] lg:text-[34px] leading-[0.98] tracking-tightish">
+                                    <h3 className="font-display text-[28px] xs:text-[32px] sm:text-[36px] leading-[0.98] tracking-tightish group-hover:text-accent transition-colors duration-300">
                                         {svc.h3}
                                     </h3>
-                                    <p className="mt-3 sm:mt-4 text-[12.5px] sm:text-[13px] text-ondark/80 leading-[1.6]">
+                                    <p className="mt-4 text-[13px] xs:text-[14px] text-ondark/80 leading-relaxed font-light max-w-[320px]">
                                         {svc.body}
                                     </p>
-                                    <div className="mt-4 sm:mt-6 flex items-center gap-2 sm:gap-3">
-                                        <span className="text-[13px] sm:text-[14px] text-white font-semibold drop-shadow-sm">
+                                    <div className="mt-6 xs:mt-8 flex items-center gap-3 group/btn">
+                                        <span className="text-[13px] xs:text-[14px] text-white font-semibold uppercase tracking-widest border-b border-white/20 pb-0.5 group-hover/btn:border-white transition-colors">
                                             {svc.cta}
                                         </span>
-                                        <span className="arrow text-lg sm:text-xl text-white">→</span>
+                                        <span className="arrow text-xl transition-transform duration-300 group-hover/btn:translate-x-2">→</span>
                                     </div>
                                 </div>
                             </div>

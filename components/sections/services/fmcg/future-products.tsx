@@ -3,24 +3,24 @@ import Photo from '@/components/ui/Photo';
 export default function FutureProductsSection() {
     const futureProducts = [
         {
-            title: 'Premium Ginger Wine',
-            desc: 'A premium, non-alcoholic herbal vintage crafted from high-potency Horana ginger root. Perfectly double-fermented to retain its warm, signature spicy flavor and natural immunity benefits.',
+            title: 'Premium Ginger Wine — In final R&D — Launching Q4 2026',
+            desc: 'A premium non-alcoholic herbal vintage crafted from high-potency ginger root grown on our own Horana estate. Double-fermented to retain its signature warm, spicy flavour and natural immunity-boosting properties.',
             img: 'https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780117566/Ginger_Wine_q3xurq.png',
             alt: 'Premium Ginger Wine bottle and processing',
             badge: 'R&D Phase',
             metric: 'FORMULA 94% PERFECTED',
         },
         {
-            title: 'Mango Fruit Food',
-            desc: 'Zero-waste dehydrated tropical mango bites and nutrient-dense fruit leathers. Vacuum-packed at low temperatures to conserve dietary fibers, organic minerals, and pure sun-ripened flavor.',
+            title: 'Mango Fruit Food — Nutrition-tested — Launching Q4 2026',
+            desc: 'Zero-waste dehydrated tropical mango bites and nutrient-dense fruit leathers from our Wellwaya and Mundalama mango estates. Vacuum-packed at low temperatures to preserve dietary fibres, organic minerals, and natural flavour.',
             img: 'https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780117540/Mango_Food_jkxurb.png',
             alt: 'Slices of natural processed mango foods',
             badge: 'Formulation',
             metric: 'NUTRITION LAB TESTED',
         },
         {
-            title: 'Natural Mango Syrup',
-            desc: 'A rich, gold-standard 100% natural mango concentrate syrup. Zero artificial stabilizers, sugars, or colorants. Excellent as a natural sweetener for retail mixers and gourmet kitchen coatings.',
+            title: 'Natural Mango Syrup — Shelf-life stable — Launching Q4 2026',
+            desc: '100% natural mango concentrate syrup from our own mango estates. Zero artificial stabilisers, sugars, or colorants. Positioned for retail mixers, food service, and export to gourmet markets.',
             img: 'https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780117581/Mango_Syrup_e9h6xa.png',
             alt: 'Amber colored natural mango syrup product',
             badge: 'Quality Testing',
@@ -36,14 +36,13 @@ export default function FutureProductsSection() {
                 <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-5 sm:gap-6 mb-10 sm:mb-12 md:mb-14 lg:mb-16">
                     <div>
                         <div className="flex items-center gap-3 mb-5 sm:mb-6">
-                            <span className="num">[ 03 ]</span>
                             <span className="hairline-strong w-[80px] sm:w-[120px]" />
                             <span className="eyebrow">Future Development</span>
                         </div>
                         <h2 className="font-display text-[30px] sm:text-[40px] md:text-[48px] lg:text-[54px] xl:text-[60px] leading-[0.98] tracking-tightish text-ink">
-                            Future developed <em className="serif-em">products</em>
+                            New products in <em className="serif-em">development</em>
                             <br />
-                            under active formulation.
+                            launching Q4 2026.
                         </h2>
                     </div>
                     <p className="text-[13.5px] sm:text-[14px] md:text-[14.5px] text-mute leading-[1.7] max-w-full sm:max-w-[440px] lg:max-w-[380px] lg:pb-1">
@@ -89,10 +88,6 @@ export default function FutureProductsSection() {
                                 <div className="mt-5 sm:mt-6 pt-3 sm:pt-4 border-t border-line/30 flex items-center justify-between">
                                     <span className="num text-[9px] sm:text-[10px] tracking-wider text-mute/80">
                                         PROJECTED Q4 2026
-                                    </span>
-                                    <span className="text-[12px] sm:text-[13px] font-medium text-accent opacity-0 transition-all duration-300 transform translate-x-2 group-hover:opacity-100 group-hover:translate-x-0">
-                                        R&D Details{' '}
-                                        <span className="inline-block transition-transform duration-200 group-hover:translate-x-1">→</span>
                                     </span>
                                 </div>
                             </div>

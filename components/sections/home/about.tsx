@@ -3,84 +3,75 @@ import Photo from '@/components/ui/Photo';
 
 export default function AboutSection() {
     return (
-        <section id="about" className="py-16 sm:py-20 md:py-24 lg:py-28 xl:py-36">
-            <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-10">
-                <div className="grid grid-cols-12 gap-6 md:gap-8 lg:gap-12 items-center">
+        <section id="about" className="py-16 xs:py-20 sm:py-24 lg:py-32 xl:py-40">
+            <div className="max-w-content mx-auto px-4 xs:px-6 lg:px-10">
+                <div className="grid grid-cols-12 gap-8 md:gap-10 lg:gap-16 items-center">
 
                     {/* Image — stacks on top on mobile */}
-                    <div className="col-span-12 lg:col-span-6 relative order-1 lg:order-1">
-                        <figure className="rounded-[14px] sm:rounded-[18px] overflow-hidden aspect-[4/3] sm:aspect-[4/4] lg:aspect-[4/5]">
+                    <div className="col-span-12 lg:col-span-6 relative order-1">
+                        <figure className="rounded-[16px] xs:rounded-[20px] sm:rounded-[24px] overflow-hidden aspect-[4/3] xs:aspect-[1/1] lg:aspect-[4/5] shadow-xl">
                             <Photo
-                                src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
+                                src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780117526/about-hero_lvrtcj.jpg"
                                 alt="Colonial estate house in the Sri Lankan highlands"
                                 className="w-full h-full object-cover"
+                                priority
                             />
                         </figure>
 
                         {/* Floating stat — desktop only */}
-                        <div className="hidden lg:block absolute -right-6 bottom-10 w-[240px] xl:w-[260px] rounded-2xl bg-surface border border-line p-5 xl:p-6">
+                        <div className="hidden lg:block absolute -right-6 bottom-10 w-[240px] xl:w-[280px] rounded-2xl bg-surface border border-line p-6 shadow-2xl">
                             <div className="flex items-center justify-between mb-3">
                                 <span className="num">Since</span>
-                                <span className="num">1998</span>
+                                <span className="num">2013</span>
                             </div>
-                            <div className="font-display text-[36px] xl:text-[40px] leading-none tracking-tightish">
-                                28<em className="serif-em">y</em>ears
+                            <div className="font-display text-[36px] xl:text-[42px] leading-none tracking-tightish text-ink">
+                                14<em className="serif-em text-accent">y</em>ears
                             </div>
-                            <div className="mt-3 text-[12px] xl:text-[13px] text-mute leading-relaxed">
-                                of compounding patient capital across six Sri Lankan industries.
+                            <div className="mt-4 text-[13px] xl:text-[14px] text-mute leading-relaxed font-light">
+                                of delivering real returns to 3,200+ investors across seven Sri Lankan investment vehicles.
                             </div>
                         </div>
 
-                        {/* Inline stat pill — mobile only */}
-                        <div className="lg:hidden mt-4 flex items-center gap-4 bg-surface border border-line rounded-[14px] p-4 sm:p-5">
-                            <div className="font-display text-[32px] sm:text-[36px] leading-none tracking-tightish shrink-0">
-                                28<em className="serif-em">y</em>
+                        {/* Inline stat pill — mobile/tablet only */}
+                        <div className="lg:hidden mt-5 flex items-center gap-5 bg-surface border border-line rounded-[16px] p-5 sm:p-6 shadow-sm">
+                            <div className="font-display text-4xl xs:text-5xl leading-none tracking-tightish shrink-0 text-accent">
+                                14<em className="serif-em">y</em>
                             </div>
-                            <div className="text-[12.5px] sm:text-[13px] text-mute leading-relaxed">
-                                years of compounding patient capital across six Sri Lankan industries.
+                            <div className="text-[13px] xs:text-[14px] text-mute leading-relaxed font-light">
+                                years of compounding patient capital across seven Sri Lankan industries.
                             </div>
                         </div>
                     </div>
 
                     {/* Text */}
-                    <div className="col-span-12 lg:col-span-6 order-2 lg:order-2">
+                    <div className="col-span-12 lg:col-span-6 order-2">
                         <SectionEyebrow
                             index="02"
                             label="About the Group"
-                            className="flex items-center gap-3 mb-6 sm:mb-8"
-                            hairlineClassName="hairline-strong flex-1 max-w-[80px] sm:max-w-[120px]"
+                            className="flex items-center gap-2 xs:gap-3 mb-6 sm:mb-8"
+                            hairlineClassName="hairline-strong w-16 xs:w-20 sm:w-24 lg:w-[120px]"
                         />
 
-                        <h2 className="font-display text-[32px] sm:text-[42px] md:text-[52px] lg:text-[58px] xl:text-[68px] leading-[0.98] tracking-tightish">
-                            We invest in <em className="serif-em">land,</em>
+                        <h2 className="font-display text-3xl xs:text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[0.98] tracking-tightish text-ink">
+                            We invest in <em className="serif-em">real </em>
                             <br />
-                            in craft, and in
+                            operations and share the
                             <br />
-                            the long return.
+                            returns with you.
                         </h2>
 
-                        <div className="mt-7 sm:mt-10 grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-8 max-w-full sm:max-w-[640px]">
-                            <p className="text-[14px] sm:text-[15px] leading-[1.7] text-mute">
-                                Three generations of the Karunaratne family have built Prestige
-                                Glamour on a single conviction — that{' '}
-                                <span className="text-ink">
-                                    an island this small thrives when its smallest holders thrive
-                                </span>
-                                .
-                            </p>
-                            <p className="text-[14px] sm:text-[15px] leading-[1.7] text-mute">
-                                Our businesses run independently but share a single ledger of
-                                values: patient capital, slow harvests, and a refusal to cut a
-                                corner that future generations will pay for.
+                        <div className="mt-6 xs:mt-8 sm:mt-10 max-w-full sm:max-w-[640px]">
+                            <p className="text-[14.5px] xs:text-[15.5px] leading-relaxed text-mute font-light">
+                                Prestige Glamour Working Capital Solutions was founded in 2013 with one clear purpose: to give investors direct access to real, operating Sri Lankan businesses. We are actual operators — running seven productive divisions including plantation, microfinance, and gems. We open these operations to investors who want transparency and real assets.
                             </p>
                         </div>
 
-                        <div className="mt-7 sm:mt-10 flex flex-wrap gap-3">
-                            <a className="btn btn-ghost" href="#values">
-                                Our values <span className="arrow">→</span>
+                        <div className="mt-8 sm:mt-10 flex flex-wrap gap-3 sm:gap-4">
+                            <a className="btn btn-ghost w-full xs:w-auto justify-center" href="#services">
+                                Our Investment Options  <span className="arrow">→</span>
                             </a>
-                            <a className="btn btn-ghost" href="#impact">
-                                Impact report 2025 <span className="arrow">↗</span>
+                            <a className="btn btn-ghost w-full xs:w-auto justify-center" href="#impact">
+                                How to Invest  <span className="arrow">↗</span>
                             </a>
                         </div>
                     </div>

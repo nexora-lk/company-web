@@ -1,85 +1,94 @@
 export default function ProductsSection() {
+    const products = [
+        {
+            num: '01',
+            title: 'PGG Agri-preneurship Loans',
+            desc: "For smallholder farmers — funding for seedlings, tooling, and systems. Sealed off-take through PGG's export desk.",
+            ticket: 'LKR 25k — 500k',
+            term: '12 — 24 months',
+        },
+        {
+            num: '02',
+            title: 'PGG Working Capital Loans',
+            desc: 'For market traders and shop owners — recurring loans to cover inventory. Built to match seasonal cash flows.',
+            ticket: 'LKR 50k — 750k',
+            term: '6 — 12 months',
+        },
+        {
+            num: '03',
+            title: 'PGG Asset Finance',
+            desc: 'Equipment and machinery for micro-enterprises — from pumps to processing equipment. Secured against the asset.',
+            ticket: 'LKR 100k — 2M',
+            term: '24 — 48 months',
+        },
+        {
+            num: '04',
+            title: 'PGG Group Guarantee Loans',
+            desc: 'For co-ops and joint liability groups. Peer guarantees replace collateral, driving lower default rates.',
+            ticket: 'LKR 200k — 1.5M',
+            term: '12 — 36 months',
+        },
+    ];
+
     return (
-        <section id="products" className="py-16 sm:py-20 md:py-24 lg:py-28 xl:py-32 bg-bg">
-            <div className="max-w-content mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
-                <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 sm:gap-5 md:gap-6 lg:gap-8 mb-8 sm:mb-10 md:mb-12 lg:mb-16">
-                    <div>
-                        <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-5 md:mb-6">
-                            <span className="num text-[11px] sm:text-xs md:text-sm">[ 02 ]</span>
-                            <span className="hairline-strong w-20 sm:w-25 md:w-30"></span>
-                            <span className="eyebrow text-[10px] sm:text-[11px] md:text-sm">Financial Products</span>
+        <section id="products" className="py-16 xs:py-20 sm:py-24 lg:py-32 xl:py-40 bg-bg">
+            <div className="max-w-content mx-auto px-4 xs:px-6 lg:px-10">
+                <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 sm:gap-10 mb-12 sm:mb-16 lg:mb-20">
+                    <div className="max-w-full lg:max-w-3xl">
+                        <div className="flex items-center gap-2 xs:gap-3 mb-5 sm:mb-6">
+                            <span className="num text-[10px] xs:text-[11px] sm:text-xs">[ 02 ]</span>
+                            <span className="hairline-strong w-16 xs:w-20 sm:w-24 lg:w-[120px]"></span>
+                            <span className="eyebrow text-[10px] xs:text-xs">Financial Products</span>
                         </div>
-                        <h2 className="font-display text-[32px] sm:text-[40px] md:text-[48px] lg:text-[60px] xl:text-[72px] leading-[0.98] tracking-tightish">
-                            Four products. <em className="serif-em">One</em>
+                        <h2 className="font-display text-3xl xs:text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[0.98] tracking-tightish text-ink">
+                            Four products. <em className="serif-em text-accent">One</em>
                             <br />
                             field officer per ledger.
                         </h2>
                     </div>
-                    <p className="text-[13px] sm:text-[14px] md:text-[14.5px] text-mute leading-[1.6] sm:leading-[1.7] max-w-70 sm:max-w-80 md:max-w-85">
-                        Every loan has an officer who walks the borrower&apos;s site at least once before
-                        disbursement, and monthly thereafter. No call-centre underwriting.
-                    </p>
+                    <div className="max-w-full sm:max-w-[440px] lg:text-right">
+                        <p className="text-[14px] xs:text-[15px] sm:text-base text-mute leading-relaxed font-light">
+                            Every loan has an officer who walks the site. No call-centre underwriting — we believe 
+                            in the human relationship behind the ledger.
+                        </p>
+                    </div>
                 </div>
 
-                <div className="hairline-strong"></div>
+                <div className="hairline-strong opacity-20"></div>
 
                 <div className="space-y-0">
-                    {[
-                        {
-                            num: '01',
-                            title: 'PGG Agri-preneurship Loans',
-                            desc: "For smallholder farmers — funding for seedlings, tooling, irrigation systems and the first six months of operations. Sealed off-take through PGG's export desk where the crop fits.",
-                            ticket: 'LKR 25k — 500k',
-                            term: '12 — 24 months',
-                        },
-                        {
-                            num: '02',
-                            title: 'PGG Working Capital Loans',
-                            desc: 'For market traders, shop owners, and service businesses — recurring loans to cover inventory or operational gaps. Built to match seasonal cash flows.',
-                            ticket: 'LKR 50k — 750k',
-                            term: '6 — 12 months',
-                        },
-                        {
-                            num: '03',
-                            title: 'PGG Asset Finance',
-                            desc: 'Equipment and machinery for micro-enterprises — from motorised pumps to processing equipment. Secured against the asset itself.',
-                            ticket: 'LKR 100k — 2M',
-                            term: '24 — 48 months',
-                        },
-                        {
-                            num: '04',
-                            title: 'PGG Group Guarantee Loans',
-                            desc: 'For co-ops and joint liability groups. Peer guarantees replace collateral, and group repayment discipline drives lower default rates.',
-                            ticket: 'LKR 200k — 1.5M',
-                            term: '12 — 36 months',
-                        },
-                    ].map((product) => (
-                        <a
+                    {products.map((product) => (
+                        <div
                             key={product.num}
-                            href="#"
-                            className="product-row group border-b border-line last:border-0 py-4 sm:py-5 md:py-6 px-3 sm:px-4 md:px-6 lg:px-0 -mx-3 sm:-mx-4 md:-mx-6 lg:mx-0 hover:bg-surface/40 transition-colors"
+                            className="product-row group grid grid-cols-1 xs:grid-cols-[60px_1fr] sm:grid-cols-[80px_1.4fr_1fr_60px] items-start gap-6 sm:gap-8 py-8 sm:py-10 border-b border-line last:border-0 hover:bg-surface/30 transition-all duration-500 px-4 xs:px-0 -mx-4 xs:mx-0"
                         >
-                            <span className="num text-[11px] sm:text-xs md:text-sm">{product.num}</span>
-                            <div>
-                                <h3 className="font-display text-[22px] sm:text-[26px] md:text-[28px] lg:text-[30px] leading-tight">
+                            <span className="num text-accent font-semibold text-[11px] xs:text-xs lg:text-sm mt-1">
+                                {product.num}
+                            </span>
+                            <div className="flex flex-col">
+                                <h3 className="font-display text-[22px] xs:text-[24px] sm:text-[26px] lg:text-[30px] leading-tight text-ink group-hover:text-accent transition-colors duration-300">
                                     {product.title}
                                 </h3>
-                                <p className="mt-1 sm:mt-2 text-[12px] sm:text-[13px] md:text-[14px] text-mute leading-[1.6] md:leading-[1.7] max-w-130">
+                                <p className="mt-3 text-[13px] xs:text-[14px] text-mute leading-relaxed font-light max-w-full sm:max-w-md">
                                     {product.desc}
                                 </p>
                             </div>
-                            <dl className="text-[12px] sm:text-[13px]">
-                                <dt className="num text-[10px] sm:text-xs">Ticket</dt>
-                                <dd className="font-display text-[18px] sm:text-[20px] leading-tight">
-                                    {product.ticket}
-                                </dd>
-                                <dt className="num text-[10px] sm:text-xs mt-2 sm:mt-3">Term</dt>
-                                <dd className="font-display text-[18px] sm:text-[20px] leading-tight">
-                                    {product.term}
-                                </dd>
-                            </dl>
-                            <span className="arr font-display text-[24px] sm:text-[28px] mt-1">→</span>
-                        </a>
+                            <div className="grid grid-cols-2 sm:grid-cols-1 gap-4 sm:gap-6 mt-2 sm:mt-0">
+                                <div className="space-y-1">
+                                    <span className="num text-[9px] xs:text-[10px] uppercase tracking-widest text-mute/50">Ticket Range</span>
+                                    <p className="font-display text-[18px] xs:text-[20px] lg:text-[22px] text-ink">{product.ticket}</p>
+                                </div>
+                                <div className="space-y-1">
+                                    <span className="num text-[9px] xs:text-[10px] uppercase tracking-widest text-mute/50">Repayment Term</span>
+                                    <p className="font-display text-[18px] xs:text-[20px] lg:text-[22px] text-ink">{product.term}</p>
+                                </div>
+                            </div>
+                            <div className="hidden sm:flex justify-end mt-1">
+                                <span className="text-2xl lg:text-3xl text-accent/20 group-hover:text-accent transition-all duration-500 transform translate-x-[-10px] group-hover:translate-x-0">
+                                    →
+                                </span>
+                            </div>
+                        </div>
                     ))}
                 </div>
             </div>

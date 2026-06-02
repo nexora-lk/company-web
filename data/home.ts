@@ -1,5 +1,4 @@
 import type {
-  Certification,
   ContactRow,
   MarqueeItem,
   Stat,
@@ -18,39 +17,33 @@ export const marqueeItems: MarqueeItem[] = [
 export const values: Value[] = [
   {
     no: "01",
-    aside: "— Always",
-    title: ["Innovation, ", "tempered", "."],
-    body: "We adopt new methods only once they survive a generation of stewardship — then we deploy them at scale across every estate.",
+    title: "Transparency First.",
+    body: "Every investor receives quarterly audited reports. We publish what we earn, what we spend, and what we return. No exceptions.",
   },
   {
     no: "02",
-    aside: "— Soil first",
-    title: ["Sustainability as ", "policy", "."],
-    body: "Every operation budgets a regeneration line: water tables, soil carbon, and biodiversity audited against the year before.",
+    title: "Real Assets Only.",
+    body: "We do not invest in speculation. Every rupee you place with us goes into land, crops, gems, or operating businesses — things you can see and visit.",
   },
   {
     no: "03",
-    aside: "— No exceptions",
-    title: ["Quality, line by ", "line", "."],
-    body: "Every export carton, every loan ticket, every set stone is graded against a global benchmark — and the benchmark is ours.",
+    title: "Returns on Schedule.",
+    body: "We pay on time, every time. Our 14-year track record shows consistent returns across all seven investment divisions, regardless of market conditions.",
   },
   {
     no: "04",
-    aside: "— Listening loop",
-    title: ["Customers, in ", "conversation", "."],
-    body: "We answer the line, we visit the buyer, we walk the field. Reliability is a habit before it is a clause.",
+    title: "Investor Access.",
+    body: "You can visit any operation at any time. Walk the plantations, see the gem workshops, meet the microfinance teams. Your investment is never hidden behind a desk.",
   },
   {
     no: "05",
-    aside: "— Public ledger",
-    title: ["Integrity, on ", "paper", "."],
-    body: "Transparency isn't a virtue we claim — it's the audited disclosures we publish four times a year.",
+    title: "Audited Accounts.",
+    body: "Our financials are independently audited quarterly. Every investor receives the same report. Numbers are not rounded — they are exact.",
   },
   {
     no: "06",
-    aside: "— Outward",
-    title: ["Excellence, ", "global", "."],
-    body: "We measure ourselves against Geneva and Tokyo, not Colombo — and we take the island with us when we travel.",
+    title: "Global Quality, Local Heart.",
+    body: "We employ Sri Lankan people, grow Sri Lankan crops, and cut Sri Lankan gems — then deliver global-quality returns to investors from 30+ countries.",
   },
 ];
 
@@ -73,14 +66,6 @@ export const stats: Stat[] = [
     em: ".",
     note: "",
   },
-];
-
-export const certifications: Certification[] = [
-  { name: "KPMG", italic: false },
-  { name: "Rainforest Alliance", italic: true },
-  { name: "Fairtrade SL", italic: false },
-  { name: "GIA", italic: true },
-  { name: "ISO 9001:2015", italic: false },
 ];
 
 export const contactRows: ContactRow[] = [

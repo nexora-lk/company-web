@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
-import HeroSection from '@/components/sections/services/microfinance/hero';
+import ServiceHero from '@/components/sections/ServiceHero';
 import OverviewSection from '@/components/sections/services/microfinance/overview';
-import ProductsSection from '@/components/sections/services/microfinance/products';
 import ModelsSection from '@/components/sections/services/microfinance/models';
 
 export const metadata: Metadata = {
@@ -72,9 +71,31 @@ export default function MicrofinancePage() {
                     }),
                 }}
             />
-            <HeroSection />
+            <ServiceHero
+                backgroundImage="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780117535/microfinace-hero_qjut63.jpg"
+                ariaLabel="Microfinance Services"
+                eyebrow="PGG Microfinance · Next Investment (Pvt) Ltd · Est. 2013"
+                heading={
+                    <>
+                        Invest in rural
+                        <br />
+                        lending.<em className="serif-em">Earn</em>
+                        <br />
+                        steady monthly returns.
+                    </>
+                }
+                descriptions={[
+                    "PGG Microfinance — registered as Next Investment (Pvt) Ltd — operates a high-performance rural lending portfolio across 23 branches. " ,
+                    "With 11,200+ active borrowers, a 96.4% repayment rate, and consistent investor returns, it is one of our most reliable investment vehicles."
+                ]}
+                stats={[
+                    { label: "SMEs supported", value: "100", em: "+", note: "Cumulative since 2013" },
+                    { label: "Active borrowers", value: "11,200", em: ".", note: "Predominantly women" },
+                    { label: "Repayment rate", value: "96.4", em: "%", note: "Audited · KPMG SL" },
+                    { label: "Branch network", value: "23", em: ".", note: "Across nine provinces" }
+                ]}
+            />
             <OverviewSection />
-            {/* <ProductsSection /> */}
             <ModelsSection />
         </>
     );

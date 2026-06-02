@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import GallerySection from '@/components/sections/services/plantation/gallery';
-import HeroSection from '@/components/sections/services/plantation/hero';
+import ServiceHero from '@/components/sections/ServiceHero';
 import OverviewSection from '@/components/sections/services/plantation/overview';
 import PortfolioSection from '@/components/sections/services/plantation/portfolio';
 
@@ -72,7 +72,28 @@ export default function PlantationPage() {
                     }),
                 }}
             />
-            <HeroSection />
+            <ServiceHero
+                backgroundImage="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780117673/plantaation-hero_lcuoit.jpg"
+                ariaLabel="Our Plantation"
+                eyebrow="Our Plantation"
+                heading={
+                    <>
+                        Real land. Real crops.
+                        <em className="serif-em block sm:inline"> Real </em>
+                        returns from Sri Lanka's finest agro-zones.
+                    </>
+                }
+                descriptions={[
+                    "Prestige Glamour Working Capital Solutions owns and operates plantation estates across Sri Lanka's key agro-zones.",
+                    "Each estate is run by a regional manager, audited quarterly, and open to direct investor participation from LKR 200,000."
+                ]}
+                stats={[
+                    { label: "Estates", value: "07", note: "6 provinces" },
+                    { label: "Crops", value: "06", note: "Key varieties" },
+                    { label: "Scale", value: "2,450", em: "+", note: "Hectares" },
+                    { label: "Export", value: "40", em: "%", note: "Revenue focus" }
+                ]}
+            />
             <OverviewSection />
             <GallerySection />
             <PortfolioSection />

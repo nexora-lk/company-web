@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import HeroSection from '@/components/sections/services/fmcg/hero';
+import ServiceHero from '@/components/sections/ServiceHero';
 import OverviewSection from '@/components/sections/services/fmcg/overview';
 import FutureProductsSection from '@/components/sections/services/fmcg/future-products';
 
@@ -70,9 +70,33 @@ export default function FMCGPage() {
                     }),
                 }}
             />
-            <HeroSection />
+            <ServiceHero
+                backgroundImage="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780124967/fmcg-hero_ow6agn.jpg"
+                ariaLabel="FMCG Services"
+                eyebrow="PGG Fresh Foods · Farm to Fork · Est. 2019"
+                heading={
+                    <>
+                        From our own plantations.
+                        <br />
+                        <em className="serif-em">Processed.</em> Distributed.
+                        <br />
+                        Returning profits to investors.
+                    </>
+                }
+                descriptions={[
+                    "PGG Fresh Foods processes and distributes value-added products made from our own plantation harvests. This vertical integration ",
+                    "we grow it, we make it, we sell it — is what gives investors in this division a competitive edge. Min. LKR 500,000 | Returns: 40-55% annually."
+                ]}
+                stats={[
+                    { label: "Product lines", value: "18", em: "+", note: "Fresh & processed" },
+                    { label: "Retail partners", value: "240", em: ".", note: "Across Sri Lanka" },
+                    { label: "Processing", value: "5", em: "T", note: "Tonnes per day" },
+                    { label: "Export revenue", value: "42", em: "%", note: "Of total sales · 2025" }
+                ]}
+            />
             <OverviewSection />
             <FutureProductsSection />
         </>
     );
 }
+

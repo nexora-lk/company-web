@@ -10,6 +10,7 @@ const baseUrl = 'https://www.prestigeglamourgroupofcompany.com';
 const routes = [
     { path: '/', priority: 1.0, changeFrequency: 'weekly' as const },
     { path: '/about', priority: 0.9, changeFrequency: 'monthly' as const },
+    { path: '/about/careers', priority: 0.8, changeFrequency: 'monthly' as const },
     { path: '/corporate', priority: 0.8, changeFrequency: 'monthly' as const },
     { path: '/cultivation', priority: 0.8, changeFrequency: 'monthly' as const },
     { path: '/gallery', priority: 0.8, changeFrequency: 'weekly' as const },

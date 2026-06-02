@@ -5,7 +5,7 @@ import GallerySection from '@/components/sections/services/gems/gallery';
 import OverviewSection from '@/components/sections/services/gems/overview';
 import GemServicesSection from '@/components/sections/services/gems/services';
 import WhyChooseUsSection from '@/components/sections/services/gems/why-choose-us';
-import HeroSection from "@/components/sections/services/gems/hero";
+import ServiceHero from '@/components/sections/ServiceHero';
 
 export const metadata: Metadata = {
     title: 'Gems & Jewellery Services | Premium Sapphires | Sri Lanka',
@@ -76,7 +76,30 @@ export default function GemsPage() {
                     }),
                 }}
             />
-            <HeroSection/>
+            <ServiceHero
+                backgroundImage="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780117604/jacek-dylag-agsdDgRW2Ps-unsplash_v5jrs0.jpg"
+                ariaLabel="Gem & Jewelry Services"
+                eyebrow="PGG Gems · Ratnapura Heritage · Est. 2003"
+                heading={
+                    <>
+                        Invest in Sri Lankan gemstones.
+                        <br />
+                        <em className="serif-em">High-yield. Short-cycle.</em>
+                        <br />
+                        2,500 years of heritage.
+                    </>
+                }
+                descriptions={[
+                    "PGG Gems is a certified gem trading and export business sourcing, cutting, certifying, and exporting authentic Sri Lankan ",
+                    "gemstones to buyers in 14 countries. Investors co-fund gem sourcing and export cycles, receiving quarterly distributions. Min. LKR 1,000,000."
+                ]}
+                stats={[
+                    { label: "Export countries", value: "14", em: ".", note: "Across 4 continents" },
+                    { label: "Certified stones", value: "6,200", em: "+", note: "Since 2003" },
+                    { label: "Master cutters", value: "12", em: ".", note: "Ratnapura & Colombo" },
+                    { label: "Heritage", value: "22", em: "y", note: "Years of trading" }
+                ]}
+            />
             <OverviewSection />
             <GallerySection />
             <ProductCategoriesSection />

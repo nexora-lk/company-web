@@ -74,7 +74,7 @@ export default function NotFound() {
 
             {/* Content */}
             <div ref={containerRef} className="relative z-10">
-                <section className="max-w-content mx-auto px-6 lg:px-10 min-h-screen flex flex-col items-center justify-center py-20">
+                <section className="max-w-content mx-auto px-5 sm:px-6 md:px-8 lg:px-10 min-h-screen flex flex-col items-center justify-center py-16 sm:py-20 xl:py-24">
                     {/* Breadcrumb */}
                     <div className="flex items-center gap-3 mb-16">
                         <Link href="/" className="num ulink">
@@ -86,20 +86,20 @@ export default function NotFound() {
                     </div>
 
                     {/* Error code */}
-                    <div className="mb-12 text-center">
-                        <div className="font-display text-[180px] sm:text-[240px] lg:text-[300px] leading-none tracking-tightish text-accent/20 font-light">
+                    <div className="mb-8 sm:mb-10 lg:mb-12 text-center">
+                        <div className="font-display text-[120px] xs:text-[150px] sm:text-[200px] md:text-[240px] lg:text-[300px] xl:text-[360px] leading-none tracking-tightish text-accent/20 font-light">
                             404
                         </div>
                     </div>
 
                     {/* Heading */}
-                    <h1 className="font-display text-[48px] sm:text-[64px] lg:text-[84px] leading-[1.1] tracking-tightish text-center max-w-[600px] mb-6">
+                    <h1 className="font-display text-[40px] xs:text-[48px] sm:text-[56px] md:text-[68px] lg:text-[84px] xl:text-[96px] leading-[1.1] tracking-tightish text-center max-w-[90%] sm:max-w-[600px] lg:max-w-[700px] mb-6">
                         Page not <em className="serif-em">found</em>
                     </h1>
 
                     {/* Description */}
-                    <div className="error-desc max-w-[480px] text-center mb-12">
-                        <p className="text-[16px] lg:text-[18px] text-mute leading-[1.8]">
+                    <div className="error-desc max-w-[95%] xs:max-w-[85%] sm:max-w-[480px] md:max-w-[540px] text-center mb-10 sm:mb-12">
+                        <p className="text-[14.5px] xs:text-[15px] sm:text-[16px] md:text-[17px] lg:text-[18px] text-mute leading-[1.7] md:leading-[1.8]">
                             The page you're looking for seems to have taken a detour. Explore our
                             portfolio to discover what we're cultivating.
                         </p>
@@ -109,15 +109,15 @@ export default function NotFound() {
                     <div className="hairline w-16 mb-12"></div>
 
                     {/* Action buttons */}
-                    <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
-                        <Link href="/" className="error-button btn btn-primary text-sm">
+                    <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-stretch sm:items-center justify-center w-full sm:w-auto">
+                        <Link href="/" className="error-button btn btn-primary text-[14px] sm:text-[14.5px] justify-center py-3.5 sm:py-[0.85rem] px-6 sm:px-8">
                             <span>Return Home</span>
                             <span className="arrow">→</span>
                         </Link>
 
                         <button
                             onClick={() => window.history.back()}
-                            className="error-button btn btn-ghost text-sm"
+                            className="error-button btn btn-ghost text-[14px] sm:text-[14.5px] justify-center py-3.5 sm:py-[0.85rem] px-6 sm:px-8"
                         >
                             <span>Go Back</span>
                             <span className="arrow">←</span>
@@ -125,9 +125,9 @@ export default function NotFound() {
                     </div>
 
                     {/* Services links */}
-                    <div className="mt-20 text-center">
-                        <p className="eyebrow mb-8">Explore our services</p>
-                        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-[500px]">
+                    <div className="mt-16 sm:mt-20 md:mt-24 text-center w-full">
+                        <p className="eyebrow mb-6 sm:mb-8 text-[11px] sm:text-[12px]">Explore our services</p>
+                        <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 max-w-[280px] xs:max-w-[400px] md:max-w-[600px] mx-auto">
                             <Link
                                 href="/services/plantation"
                                 className="text-[14px] text-mute hover:text-accent transition-colors duration-300 ulink font-medium"

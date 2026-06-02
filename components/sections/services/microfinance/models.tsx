@@ -5,14 +5,13 @@ export default function ModelsSection() {
                 <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 sm:gap-5 md:gap-6 lg:gap-8 mb-8 sm:mb-10 md:mb-12 lg:mb-16">
                     <div>
                         <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-5 md:mb-6">
-                            <span className="num text-[11px] sm:text-xs md:text-sm">[ 03 ]</span>
                             <span className="hairline-strong w-20 sm:w-25 md:w-30"></span>
                             <span className="eyebrow text-[10px] sm:text-[11px] md:text-sm">Operating Models</span>
                         </div>
                         <h2 className="font-display text-[32px] sm:text-[40px] md:text-[48px] lg:text-[60px] xl:text-[72px] leading-[0.98] tracking-tightish">
-                            Four models. <em className="serif-em">Multiple</em>
+                            How investor <em className="serif-em">capital</em>
                             <br />
-                            paths to impact.
+                            is deployed.
                         </h2>
                     </div>
                     <p className="text-[13px] sm:text-[14px] md:text-[14.5px] text-mute leading-[1.6] sm:leading-[1.7] max-w-70 sm:max-w-80 md:max-w-85">

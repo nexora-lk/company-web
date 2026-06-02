@@ -29,9 +29,9 @@ export const dynamic = 'force-static';
 export const revalidate = 86400; // Never revalidate — rebuild to update
 
 export const metadata: Metadata = {
-    title: "Prestige Glamour — Cultivating Sri Lanka's enduring industries",
+    title: "Prestige Glamour — Sri Lanka's Trusted Investment Company | Real Returns Since 2013",
     description:
-        'Prestige Glamour Group steward six Sri Lankan businesses — plantation, micro-finance, gem & jewellery, hospitality, real estate and agri-export.',
+        "Prestige Glamour Working Capital Solutions — Sri Lanka's most transparent investment platform. Invest in plantation, gems, real estate, microfinance and FMCG. 40-60% annual returns. 3,200+ investors. Since 2013.",
     keywords: [
         'Sri Lanka conglomerate',
         'plantation',

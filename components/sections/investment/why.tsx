@@ -12,13 +12,13 @@ export default function WhySection() {
                         <h2 className="font-display text-[36px] sm:text-[48px] md:text-[56px] lg:text-[60px] leading-[0.98] tracking-tightish">
                             Three reasons
                             <br className="hidden sm:block" />
-                            we keep <em className="serif-em">writing</em>
+                            3,200+ <em className="serif-em">investors</em>
                             <br className="hidden sm:block" />
-                            the cheque.
+                            keep reinvesting.
                         </h2>
                         <p className="mt-4 sm:mt-6 text-mute text-[14px] sm:text-[14.5px] leading-[1.7] max-w-full sm:max-w-[420px]">
-                            We are stewards of patient capital — and we have been, for twenty-eight
-                            years. Here is the underwriting case, in plain language.
+                            We are operators of real businesses — and we have been since 2013.
+                            Here is why investors trust us with their capital, in plain language.
                         </p>
                     </div>
 
@@ -28,24 +28,12 @@ export default function WhySection() {
                             <span className="col-span-1 sm:col-span-2 num text-accent! sm:text-ink! text-[11px]">01</span>
                             <div className="col-span-1 sm:col-span-7">
                                 <h3 className="font-display text-[24px] sm:text-[28px] leading-tight">
-                                    High-growth <em className="serif-em">sectors</em>.
+                                    Real assets, not <em className="serif-em">speculation.</em>
                                 </h3>
                                 <p className="mt-2 text-mute text-[13.5px] sm:text-[14px] leading-[1.7]">
-                                    Agriculture, FMCG and exports — the three industries the Central
-                                    Bank flags as net dollar earners for Sri Lanka through 2030.
+                                    Your capital goes into land, plantations, gemstones, and loan books
+                                    — tangible assets you can visit and verify. Not funds, not derivatives, not promises.
                                 </p>
-                            </div>
-                            <div className="col-span-1 sm:col-span-3 mt-3 sm:mt-0">
-                                <div className="num mb-1 sm:mb-2 text-[10px] sm:text-[11px]">Sector IRR</div>
-                                <div className="irr">
-                                    <span className="on"></span>
-                                    <span className="on"></span>
-                                    <span className="on"></span>
-                                    <span className="on"></span>
-                                    <span className="on"></span>
-                                    <span></span>
-                                    <span></span>
-                                </div>
                             </div>
                         </div>
                         <div className="hairline"></div>
@@ -53,16 +41,13 @@ export default function WhySection() {
                             <span className="col-span-1 sm:col-span-2 num text-accent! sm:text-ink! text-[11px]">02</span>
                             <div className="col-span-1 sm:col-span-7">
                                 <h3 className="font-display text-[24px] sm:text-[28px] leading-tight">
-                                    Guaranteed <em className="serif-em">buy-back</em>.
+                                    Transparent  <em className="serif-em">reporting.</em>
                                 </h3>
                                 <p className="mt-2 text-mute text-[13.5px] sm:text-[14px] leading-[1.7]">
-                                    Off-take prices fixed at planting through PGG's export desk. You
-                                    know the cheque amount before the seed is in the ground.
+                                    Every investor receives the same quarterly financial report,
+                                    audited by KPMG. Returns are calculated on actual revenue
+                                    — not projections. You see exactly what your money earned.
                                 </p>
-                            </div>
-                            <div className="col-span-1 sm:col-span-3 mt-3 sm:mt-0">
-                                <div className="num mb-1 sm:mb-2 text-[10px] sm:text-[11px]">Price model</div>
-                                <div className="font-display text-[18px] sm:text-[20px]">Sealed-at-planting</div>
                             </div>
                         </div>
                         <div className="hairline"></div>
@@ -70,17 +55,13 @@ export default function WhySection() {
                             <span className="col-span-1 sm:col-span-2 num text-accent! sm:text-ink! text-[11px]">03</span>
                             <div className="col-span-1 sm:col-span-7">
                                 <h3 className="font-display text-[24px] sm:text-[28px] leading-tight">
-                                    Land-use <em className="serif-em">optimisation</em>.
+                                    Consistent payment <em className="serif-em">history.</em>
                                 </h3>
                                 <p className="mt-2 text-mute text-[13.5px] sm:text-[14px] leading-[1.7]">
-                                    Agronomy team selects the crop, the cycle, and the intercrop
-                                    pattern to squeeze every acre — without exhausting the soil for
-                                    the next investor.
+                                    14 years of operation. Returns paid on schedule every quarter and
+                                    every year — to investors ranging from LKR 200,000 first-timers to
+                                    multi-crore long-term partners.
                                 </p>
-                            </div>
-                            <div className="col-span-1 sm:col-span-3 mt-3 sm:mt-0">
-                                <div className="num mb-1 sm:mb-2 text-[10px] sm:text-[11px]">Yield uplift</div>
-                                <div className="font-display text-[18px] sm:text-[20px]">+18 — 32%</div>
                             </div>
                         </div>
                         <div className="hairline"></div>

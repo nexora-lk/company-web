@@ -6,22 +6,22 @@ import { useEffect, useRef, useState } from 'react';
 const BG_VIDEOS = [
     {
         // User's actual uploaded video
-        src: 'https://res.cloudinary.com/ddxvnb0nk/video/upload/q_auto/f_auto/v1779376708/samples/elephants.mp4',
+        src: 'https://res.cloudinary.com/ddxvnb0nk/video/upload/q_auto/f_auto/v1780332964/plantation_h4uxzp.mp4',
         label: 'Wildlife · Sri Lanka',
     },
     {
         // Demo placeholder video
-        src: 'https://res.cloudinary.com/demo/video/upload/q_auto/f_auto/v1712673000/samples/sea-turtle.mp4',
+        src: 'https://res.cloudinary.com/ddxvnb0nk/video/upload/q_auto/f_auto/v1780332129/gem_hlhxaz.mp4',
         label: 'Ocean · Coastal Life',
     },
     {
         // Demo placeholder video
-        src: 'https://res.cloudinary.com/demo/video/upload/q_auto/f_auto/v1712673000/samples/dance-2.mp4',
+        src: 'https://res.cloudinary.com/ddxvnb0nk/video/upload/q_auto/f_auto/v1780331821/real_estate_jrkcio.mp4',
         label: 'Culture · Heritage',
     },
     {
         // Demo placeholder video
-        src: 'https://res.cloudinary.com/demo/video/upload/q_auto/f_auto/v1712673000/samples/look-up.mp4',
+        src: 'https://res.cloudinary.com/ddxvnb0nk/video/upload/q_auto/f_auto/v1780331759/microfinance_rfyjc4.mp4',
         label: 'Landscape · Highlands',
     },
 ];
@@ -63,7 +63,7 @@ export default function HeroSection() {
             <div className="absolute inset-0 z-0">
                 {BG_VIDEOS.map((v, i) => (
                     <video
-                        key={v.src}
+                        key={`${v.src}-${i}`}
                         ref={(el) => { videoRefs.current[i] = el; }}
                         muted
                         playsInline
@@ -121,28 +121,19 @@ export default function HeroSection() {
                                    2xl:text-[128px]
                                    leading-[0.9] tracking-tight text-[#f1ece0]
                                    max-w-[13ch] sm:max-w-[14ch] md:max-w-[16ch] lg:max-w-[18ch] xl:max-w-none">
-                        Cultivating
+                        Invest in Sri Lanka.
                         <br />
-                        the{' '}
-                        <em className="serif-em" style={{ color: '#a8c5b5' }}>enduring</em>
-                        <br />
-                        industries of
-                        <br />
-                        a quiet island.
+                        Get Real Returns.
                     </h1>
 
                     {/* Sub-paragraph */}
                     <p className="mt-5 sm:mt-7 md:mt-8 lg:mt-9
-                                  max-w-[100%] xs:max-w-[95%] sm:max-w-[440px] md:max-w-[540px] lg:max-w-[640px] xl:max-w-[700px]
+                                  max-w-[100%] xs:max-w-[95%] sm:max-w-[480px] md:max-w-[560px] lg:max-w-[660px] xl:max-w-[720px]
                                   text-[#f1ece0]/75
-                                  text-[15px] xs:text-[16px] sm:text-[15.5px] md:text-[16px] lg:text-[17px] xl:text-[18px]
-                                  leading-[1.7] lg:leading-[1.75]">
-                        From highland plantations to gem ateliers, micro-finance to hospitality —
-                        employing{' '}
-                        <span className="text-[#f1ece0] font-medium">8,400 Sri Lankans</span>{' '}
-                        and serving 28,000 smallholder partners.
+                                  text-[15px] xs:text-[16px] sm:text-[16.5px] md:text-[17px] lg:text-[18px] xl:text-[19px]
+                                  leading-[1.7] sm:leading-[1.75] lg:leading-[1.8]">
+                        Prestige Glamour Working Capital Solutions is Sri Lanka&apos;s most transparent investment platform. We are not a fund manager — we are the actual operators. We run plantations, cut gemstones, finance entrepreneurs, develop real estate, and distribute consumer goods. When you invest with us, you invest in real assets, real operations, and real returns. Anyone with capital is welcome — from LKR 200,000 to LKR 200 million.
                     </p>
-
                 </div>
 
                 {/* Mobile bottom spacer to push buttons to the bottom */}
@@ -163,7 +154,7 @@ export default function HeroSection() {
                                    py-[0.9rem] sm:py-[0.85rem] lg:py-[0.9rem]
                                    shadow-lg sm:shadow-none"
                     >
-                        Explore our services <span className="arrow">→</span>
+                        Explore Investment Options <span className="arrow">→</span>
                     </a>
                     <a
                         href="#contact"
@@ -181,7 +172,7 @@ export default function HeroSection() {
                             backdropFilter: 'blur(10px)',
                         }}
                     >
-                        Speak with our team
+                        Calculate Your Returns
                     </a>
                 </div>
             </div>

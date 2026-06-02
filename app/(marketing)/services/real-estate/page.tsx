@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import HeroSection from '@/components/sections/services/real-estate/hero';
+import ServiceHero from '@/components/sections/ServiceHero';
 import OverviewSection from '@/components/sections/services/real-estate/overview';
 
 export const metadata: Metadata = {
@@ -71,8 +71,30 @@ export default function RealEstatePage() {
                     }),
                 }}
             />
-            <HeroSection />
+            <ServiceHero
+                backgroundImage="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780117668/real-estate-hero_z5rass.jpg"
+                ariaLabel="Real Estate Services"
+                eyebrow="PGG Properties · Land & Heritage · Est. 2008"
+                heading={
+                    <>
+                        Real land. Real<em className="serif-em"> development.</em>
+                        <br />
+                        Real returns from Sri Lankan property.
+                    </>
+                }
+                descriptions={[
+                    "PGG Properties specialises in acquiring undervalued agricultural and development land, improving it through infrastructure and development, ",
+                    "and selling to buyers at a premium. Your capital participates in specific land projects and receives a share of the sale profit. Min. LKR 500,000."
+                ]}
+                stats={[
+                    { label: "Total land bank", value: "840", em: "A", note: "Acres managed" },
+                    { label: "Heritage", value: "04", em: ".", note: "Colonial estates" },
+                    { label: "Developing", value: "100", em: "+", note: "Active properties" },
+                    { label: "Appreciation", value: "14", em: "%", note: "Avg. annual yield" }
+                ]}
+            />
             <OverviewSection />
         </>
     );
 }
+

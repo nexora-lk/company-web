@@ -7,9 +7,7 @@ export type MarqueeItem = {
 
 export type Value = {
   no: string;
-  aside: string;
-  /** [before, emphasised, after] — the middle part renders as a serif em. */
-  title: [string, string, string];
+  title: string;
   body: string;
 };
 
@@ -18,11 +16,6 @@ export type Stat = {
   value: string;
   em: string;
   note: string;
-};
-
-export type Certification = {
-  name: string;
-  italic: boolean;
 };
 
 export type ContactRow = {

@@ -11,9 +11,9 @@ export default function OverviewSection() {
                             <span className="eyebrow text-[10px] sm:text-[11px] md:text-sm">Real Estate Overview</span>
                         </div>
                         <h2 className="font-display text-[32px] sm:text-[40px] md:text-[48px] lg:text-[64px] xl:text-[72px] leading-[0.98] tracking-tightish">
-                            Curating the <em className="serif-em">island&apos;s</em>
+                            Buy low. <em className="serif-em">Develop.</em>
                             <br />
-                            most enduring spaces.
+                            Sell high. Share the returns.
                         </h2>
 
                         <div className="mt-6 sm:mt-7 md:mt-8 space-y-3 sm:space-y-4 md:space-y-5 text-[13px] sm:text-[14px] md:text-[15px] leading-[1.6] sm:leading-[1.7] md:leading-[1.75] text-mute max-w-155">
@@ -21,20 +21,12 @@ export default function OverviewSection() {
                                 <span className="font-display text-[28px] sm:text-[32px] md:text-[36px] text-ink float-left mr-2 leading-[0.85] mt-1">
                                     S
                                 </span>
-                                ri Lanka&apos;s real estate market requires patience, local knowledge,
-                                and an eye for hidden potential. PGG Properties identifies
-                                undervalued land—from agricultural plots ripe for high-yield crops
-                                to abandoned colonial planters&apos; bungalows—and develops them into
-                                high-performing assets.
-                            </p>
-                            <p>
-                                Our portfolio bridges{' '}
-                                <span className="text-ink">
-                                    commercial agriculture, eco-tourism, and heritage conservation
-                                </span>
-                                . We do not just hold land; we activate it, ensuring it generates
-                                sustainable returns while preserving the island&apos;s natural and
-                                historical integrity.
+                                ri Lanka&#39;s real estate market rewards patience and local knowledge.
+                                PGG Properties identifies undervalued land — from agricultural plots
+                                to undeveloped rural land — and develops them for sale at a significant
+                                premium. Investor capital is deployed into specific projects with a clearly
+                                defined development plan, target sale price, and expected return. Projects
+                                run 12-24 months, with profits distributed at completion.
                             </p>
                         </div>
 
@@ -42,18 +34,15 @@ export default function OverviewSection() {
                             Our <em className="serif-em">development</em> areas.
                         </h3>
                         <ul className="mt-4 sm:mt-5 md:mt-6 grid grid-cols-2 sm:grid-cols-3 gap-x-4 sm:gap-x-5 md:gap-x-6 gap-y-2 sm:gap-y-3 max-w-160">
-                            <li className="branch text-[12px] sm:text-[13px] md:text-[14px] lg:text-[14.5px]">Agri-commercial land</li>
-                            <li className="branch text-[12px] sm:text-[13px] md:text-[14px] lg:text-[14.5px]">Heritage bungalows</li>
-                            <li className="branch text-[12px] sm:text-[13px] md:text-[14px] lg:text-[14.5px]">Eco-tourism plots</li>
-                            <li className="branch text-[12px] sm:text-[13px] md:text-[14px] lg:text-[14.5px]">Industrial zones</li>
-                            <li className="branch text-[12px] sm:text-[13px] md:text-[14px] lg:text-[14.5px]">Logistics hubs</li>
+                            <li className="branch text-[12px] sm:text-[13px] md:text-[14px] lg:text-[14.5px]">Agricultural land</li>
+                            <li className="branch text-[12px] sm:text-[13px] md:text-[14px] lg:text-[14.5px]">Rural development plots</li>
                             <li className="branch text-[12px] sm:text-[13px] md:text-[14px] lg:text-[14.5px]">Plantation estates</li>
+                            <li className="branch text-[12px] sm:text-[13px] md:text-[14px] lg:text-[14.5px]">Commercial land</li>
+                            <li className="branch text-[12px] sm:text-[13px] md:text-[14px] lg:text-[14.5px]">Eco-tourism sites</li>
+                            <li className="branch text-[12px] sm:text-[13px] md:text-[14px] lg:text-[14.5px]">Infrastructure-ready land</li>
                         </ul>
 
                         <div className="mt-8 sm:mt-9 md:mt-10 flex flex-wrap gap-2 sm:gap-3">
-                            <a href="#properties" className="btn btn-ghost text-[13px] sm:text-[14px] md:text-base">
-                                View properties <span className="arrow">→</span>
-                            </a>
                             <a href="#enquire" className="btn btn-primary text-[13px] sm:text-[14px] md:text-base">
                                 Invest with us <span className="arrow">→</span>
                             </a>

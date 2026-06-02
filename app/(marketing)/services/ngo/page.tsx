@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import HeroSection from '@/components/sections/services/ngo/hero';
+import ServiceHero from '@/components/sections/ServiceHero';
 import OverviewSection from '@/components/sections/services/ngo/overview';
 import ProjectSudeesaSection from '@/components/sections/services/ngo/project-sudeesa';
 import FundSection from '@/components/sections/services/ngo/fund';
@@ -71,7 +71,30 @@ export default function NGOPage() {
                     }),
                 }}
             />
-            <HeroSection />
+            <ServiceHero
+                backgroundImage="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780117692/ngo-hero_yiba7x.jpg"
+                ariaLabel="NGO Projects"
+                eyebrow="PGG Foundation · Community Impact · Est. 2015"
+                heading={
+                    <>
+                        Investing in Sri Lanka&#39;s communities because
+                        <br />
+                        <em className="serif-em">growth </em> that doesn&#39;t
+                        <br />
+                        reach the village isn&#39;t real growth.
+                    </>
+                }
+                descriptions={[
+                    "The PGG Foundation was established in 2015 to channel 5% of group profits into rural Sri Lanka ",
+                    "funding education, plantation programmes, mangrove conservation, and community development projects across 7 districts."
+                ]}
+                stats={[
+                    { label: "Lives impacted", value: "28K", em: "+", note: "Since 2015" },
+                    { label: "Active projects", value: "14", em: ".", note: "Across 7 districts" },
+                    { label: "Global partners", value: "09", em: ".", note: "NGOs & foundations" },
+                    { label: "Schools built", value: "06", em: ".", note: "Rural education centres" }
+                ]}
+            />
             <OverviewSection />
             <ProjectSudeesaSection />
             <FundSection />

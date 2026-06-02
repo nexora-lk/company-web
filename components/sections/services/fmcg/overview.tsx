@@ -2,72 +2,66 @@ import Photo from '@/components/ui/Photo';
 
 export default function OverviewSection() {
     return (
-        <section className="py-16 sm:py-20 md:py-24 lg:py-28 xl:py-32">
-            <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-10">
-                <div className="grid grid-cols-12 gap-6 md:gap-8 lg:gap-12 items-start">
+        <section className="py-16 xs:py-20 sm:py-24 lg:py-32 xl:py-40">
+            <div className="max-w-content mx-auto px-4 xs:px-6 lg:px-10">
+                <div className="grid grid-cols-12 gap-8 lg:gap-16 xl:gap-24 items-start">
 
-                    {/* Left: Text — shown below image on mobile, left on lg+ */}
+                    {/* Left: Text */}
                     <div className="col-span-12 lg:col-span-7 order-2 lg:order-1">
-                        <div className="flex items-center gap-3 mb-5 sm:mb-6">
-                            <span className="hairline-strong w-[80px] sm:w-[120px]" />
-                            <span className="eyebrow">FMCG Overview</span>
+                        <div className="flex items-center gap-2 xs:gap-3 mb-5 sm:mb-6">
+                            <span className="hairline-strong w-16 xs:w-20 sm:w-24 lg:w-[120px]" />
+                            <span className="eyebrow text-[10px] xs:text-xs">FMCG Overview</span>
                         </div>
 
-                        <h2 className="font-display text-[32px] sm:text-[44px] md:text-[52px] lg:text-[58px] xl:text-[64px] leading-[0.98] tracking-tightish">
-                            Value-added <em className="serif-em">goodness</em>
+                        <h2 className="font-display text-3xl xs:text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[0.98] tracking-tightish text-ink">
+                            Our plantation grows it. <em className="serif-em">Our factory makes it.</em>
                             <br />
-                            from our own estates.
+                            You invest in the margin.
                         </h2>
 
-                        <div className="mt-6 sm:mt-8 space-y-4 sm:space-y-5 text-[14.5px] sm:text-[15px] leading-[1.75] text-mute max-w-full sm:max-w-[620px]">
+                        <div className="mt-8 xs:mt-10 space-y-4 xs:space-y-6 text-[14.5px] xs:text-[15.5px] leading-relaxed sm:leading-[1.75] text-mute max-w-full sm:max-w-[620px] font-light">
                             <p>
-                                <span className="font-display text-[28px] sm:text-[32px] md:text-[36px] text-ink float-left mr-2 leading-[0.85] mt-1">
+                                <span className="font-display text-4xl xs:text-5xl text-ink float-left mr-3 leading-[0.8] mt-1">
                                     P
                                 </span>
-                                GG Fresh Foods was born from a simple idea — the fruits and herbs
-                                growing on our own plantations deserve more than raw export. By
-                                processing, packaging and branding them ourselves, we capture more
-                                value for the island, create more jobs, and deliver a fresher
-                                product to the consumer.
-                            </p>
-                            <p>
-                                Today the division operates a{' '}
-                                <span className="text-ink">
-                                    5-tonne-per-day processing facility
-                                </span>{' '}
-                                in Horana, serving 240 retail partners across Sri Lanka and a
-                                growing export book to the Middle East, East Asia and the EU.
+                                GG Fresh Foods was built on a simple insight — the fruits and
+                                herbs on our own plantations create far more value when processed
+                                and branded than when exported raw. By controlling the full chain
+                                from field to shelf, we capture stronger margins and deliver more
+                                reliable returns. Today the division operates a 5-tonne-per-day
+                                processing facility in Horana, serving 240 retail partners across
+                                Sri Lanka and exporting to the Middle East, East Asia and the EU.
                             </p>
                         </div>
 
-                        <h3 className="font-display text-[22px] sm:text-[24px] md:text-[26px] mt-10 sm:mt-12">
-                            Our <em className="serif-em">product</em> categories.
+                        <h3 className="font-display text-2xl xs:text-[26px] md:text-[28px] mt-10 xs:mt-12 text-ink">
+                            Our <em className="serif-em text-accent">product</em> categories.
                         </h3>
-                        <ul className="mt-4 sm:mt-6 grid grid-cols-2 sm:grid-cols-3 gap-x-4 sm:gap-x-6 gap-y-2 sm:gap-y-3 max-w-full sm:max-w-[640px]">
-                            <li className="branch text-[13.5px] sm:text-[14.5px]">Fresh-cut fruit packs</li>
-                            <li className="branch text-[13.5px] sm:text-[14.5px]">Dried fruit &amp; snacks</li>
-                            <li className="branch text-[13.5px] sm:text-[14.5px]">Herbal teas</li>
-                            <li className="branch text-[13.5px] sm:text-[14.5px]">Cold-pressed juices</li>
-                            <li className="branch text-[13.5px] sm:text-[14.5px]">Ginger extracts</li>
-                            <li className="branch text-[13.5px] sm:text-[14.5px]">Coconut water</li>
-                            <li className="branch text-[13.5px] sm:text-[14.5px]">Fruit jams &amp; preserves</li>
-                            <li className="branch text-[13.5px] sm:text-[14.5px]">Spice blends</li>
-                            <li className="branch text-[13.5px] sm:text-[14.5px]">Organic honey</li>
+                        <ul className="mt-6 xs:mt-8 grid grid-cols-2 sm:grid-cols-3 gap-x-4 xs:gap-x-6 gap-y-3 xs:gap-y-4 max-w-full sm:max-w-[640px]">
+                            <li className="branch text-[13px] xs:text-[14px]">Fresh-cut fruit packs</li>
+                            <li className="branch text-[13px] xs:text-[14px]">Dried fruit &amp; snacks</li>
+                            <li className="branch text-[13px] xs:text-[14px]">Herbal teas</li>
+                            <li className="branch text-[13px] xs:text-[14px]">Cold-pressed juices</li>
+                            <li className="branch text-[13px] xs:text-[14px]">Ginger extracts</li>
+                            <li className="branch text-[13px] xs:text-[14px]">Coconut water</li>
+                            <li className="branch text-[13px] xs:text-[14px]">Fruit jams &amp; preserves</li>
+                            <li className="branch text-[13px] xs:text-[14px]">Spice blends</li>
+                            <li className="branch text-[13px] xs:text-[14px]">Organic honey</li>
                         </ul>
 
-                        <div className="mt-8 sm:mt-10 flex flex-wrap gap-3">
-                            <a href="#products" className="btn btn-ghost">
+                        <div className="mt-10 xs:mt-12 flex flex-wrap gap-4">
+                            <a href="#products" className="btn btn-ghost w-full xs:w-auto justify-center">
                                 View our products <span className="arrow">→</span>
                             </a>
-                            <a href="#enquire" className="btn btn-primary">
+                            <a href="#enquire" className="btn btn-primary w-full xs:w-auto justify-center">
                                 Become a distributor <span className="arrow">→</span>
                             </a>
                         </div>
                     </div>
 
-                    {/* Right: Image — shown on top on mobile */}
-                    <aside className="col-span-12 lg:col-span-5 order-1 lg:order-2 lg:sticky lg:top-24">
-                        <figure className="rounded-[14px] sm:rounded-[18px] overflow-hidden aspect-[3/2] sm:aspect-[4/3] lg:aspect-[4/5]">
+                    {/* Right: Image */}
+                    <aside className="col-span-12 lg:col-span-5 order-1 lg:order-2 lg:sticky lg:top-32 mt-4 lg:mt-0">
+                        <figure className="rounded-[18px] xs:rounded-[24px] overflow-hidden aspect-[3/2] xs:aspect-[4/3] lg:aspect-[4/5] shadow-2xl">
                             <Photo
                                 src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780117514/fmcg-overview_eyrmnl.jpg"
                                 alt="Fresh tropical fruits ready for processing"
@@ -75,6 +69,7 @@ export default function OverviewSection() {
                                 className="w-full h-full object-cover"
                             />
                         </figure>
+                        <div className="absolute -z-10 -top-6 -left-6 w-32 h-32 bg-accent/5 rounded-full blur-3xl hidden lg:block"></div>
                     </aside>
 
                 </div>

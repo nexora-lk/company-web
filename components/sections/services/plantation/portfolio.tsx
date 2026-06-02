@@ -7,19 +7,19 @@ export default function PortfolioSection() {
                 <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 sm:gap-5 md:gap-6 lg:gap-8 mb-8 sm:mb-10 md:mb-12 lg:mb-16">
                     <div>
                         <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-5 md:mb-6">
-                            <span className="num text-[11px] sm:text-xs md:text-sm">[ 02 ]</span>
                             <span className="hairline-strong w-[80px] sm:w-[100px] md:w-[120px]"></span>
                             <span className="eyebrow text-[10px] sm:text-[11px] md:text-sm">Estate Portfolio</span>
                         </div>
                         <h2 className="font-display text-[32px] sm:text-[40px] md:text-[48px] lg:text-[60px] xl:text-[72px] leading-[0.98] tracking-tightish">
-                            Eight estates. <em className="serif-em">One</em>
+                            Our estates. <em className="serif-em">One</em>
                             <br />
                             quarterly ledger.
                         </h2>
                     </div>
                     <p className="text-[13px] sm:text-[14px] md:text-[14.5px] text-mute leading-[1.6] sm:leading-[1.7] max-w-[280px] sm:max-w-[320px] md:max-w-[340px]">
                         Each estate is managed by a regional team and audited by KPMG on the same
-                        quarterly basis as our other business units.
+                        quarterly basis as all other investment divisions. Investors may visit any
+                        estate at any time.
                     </p>
                 </div>
 

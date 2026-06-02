@@ -48,55 +48,50 @@ export default function InvestmentContactForm() {
         <form
             ref={formRef}
             onSubmit={handleSubmit}
-            className="col-span-12 lg:col-span-7 bg-bg text-ink rounded-[16px] sm:rounded-[18px] p-5 sm:p-8 lg:p-10"
+            className="col-span-12 md:col-span-1 lg:col-span-7 bg-bg text-ink rounded-lg sm:rounded-xl md:rounded-2xl lg:rounded-2xl p-4 sm:p-5 md:p-7 lg:p-8 xl:p-10 shadow-lg"
         >
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-6 sm:mb-8 gap-4">
-                <div>
-                    <div className="num mb-1.5 sm:mb-0">Investment Inquiry · Form</div>
-                    <div className="font-display text-[24px] sm:text-[26px] leading-tight mt-1">
-                        Tell us where to start.
-                    </div>
-                </div>
-                <span className="pill self-start sm:self-auto text-[11px] sm:text-[12px]">
-                    <span className="dot"></span>Reply within 1 day
-                </span>
+            <div className="mb-6 sm:mb-7 md:mb-8 lg:mb-10">
+                <div className="num text-xs sm:text-sm md:text-sm lg:text-base uppercase tracking-wider font-semibold mb-2 sm:mb-3">Investment Inquiry Form</div>
+                <h3 className="font-display text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl leading-tight">
+                    Tell us where to start.
+                </h3>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 lg:gap-x-8 gap-y-3 sm:gap-y-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-3 sm:gap-x-4 md:gap-x-5 lg:gap-x-6 xl:gap-x-8 gap-y-4 sm:gap-y-5 md:gap-y-6 lg:gap-y-7">
                 <label className="block">
-                    <div className="num mb-1 text-[10px] sm:text-[11px]">01 — Name</div>
+                    <div className="num mb-2 sm:mb-2.5 text-[10px] sm:text-xs md:text-xs lg:text-sm uppercase tracking-wider font-semibold">01 — Name</div>
                     <input
                         name="user_name"
-                        className="field focus:outline-2 focus:outline-offset-2 focus:outline-accent text-[13px] sm:text-[14px]"
+                        className="field focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-1 text-xs sm:text-sm md:text-sm lg:text-base px-3 sm:px-4 py-2 sm:py-2.5 md:py-3 lg:py-3"
                         placeholder="Full name"
                         required
                     />
                 </label>
                 <label className="block">
-                    <div className="num mb-1 text-[10px] sm:text-[11px]">02 — Phone</div>
+                    <div className="num mb-2 sm:mb-2.5 text-[10px] sm:text-xs md:text-xs lg:text-sm uppercase tracking-wider font-semibold">02 — Phone</div>
                     <input
                         name="user_phone"
-                        className="field focus:outline-2 focus:outline-offset-2 focus:outline-accent text-[13px] sm:text-[14px]"
+                        className="field focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-1 text-xs sm:text-sm md:text-sm lg:text-base px-3 sm:px-4 py-2 sm:py-2.5 md:py-3 lg:py-3"
                         type="tel"
                         placeholder="+94 …"
                         required
                     />
                 </label>
                 <label className="block md:col-span-2">
-                    <div className="num mb-1 text-[10px] sm:text-[11px]">03 — Email</div>
+                    <div className="num mb-2 sm:mb-2.5 text-[10px] sm:text-xs md:text-xs lg:text-sm uppercase tracking-wider font-semibold">03 — Email</div>
                     <input
                         name="user_email"
-                        className="field focus:outline-2 focus:outline-offset-2 focus:outline-accent text-[13px] sm:text-[14px]"
+                        className="field focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-1 text-xs sm:text-sm md:text-sm lg:text-base px-3 sm:px-4 py-2 sm:py-2.5 md:py-3 lg:py-3"
                         type="email"
                         placeholder="you@company.com"
                         required
                     />
                 </label>
                 <label className="block">
-                    <div className="num mb-1 text-[10px] sm:text-[11px]">04 — Model of interest</div>
+                    <div className="num mb-2 sm:mb-2.5 text-[10px] sm:text-xs md:text-xs lg:text-sm uppercase tracking-wider font-semibold">04 — Model</div>
                     <select
                         name="user_model"
-                        className="field bg-transparent focus:outline-2 focus:outline-offset-2 focus:outline-accent text-[13px] sm:text-[14px]"
+                        className="field bg-transparent focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-1 text-xs sm:text-sm md:text-sm lg:text-base px-3 sm:px-4 py-2 sm:py-2.5 md:py-3 lg:py-3"
                         required
                     >
                         <option value="">Select model...</option>
@@ -108,10 +103,10 @@ export default function InvestmentContactForm() {
                     </select>
                 </label>
                 <label className="block">
-                    <div className="num mb-1 text-[10px] sm:text-[11px]">05 — Ticket size</div>
+                    <div className="num mb-2 sm:mb-2.5 text-[10px] sm:text-xs md:text-xs lg:text-sm uppercase tracking-wider font-semibold">05 — Ticket size</div>
                     <select
                         name="user_ticket_size"
-                        className="field bg-transparent focus:outline-2 focus:outline-offset-2 focus:outline-accent text-[13px] sm:text-[14px]"
+                        className="field bg-transparent focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-1 text-xs sm:text-sm md:text-sm lg:text-base px-3 sm:px-4 py-2 sm:py-2.5 md:py-3 lg:py-3"
                         required
                     >
                         <option value="">Select amount...</option>
@@ -121,40 +116,41 @@ export default function InvestmentContactForm() {
                         <option value="LKR 25M+">LKR 25M+</option>
                     </select>
                 </label>
-                <label className="block md:col-span-2 mt-2 sm:mt-3">
-                    <div className="num mb-1 text-[10px] sm:text-[11px]">06 — Message</div>
+                <label className="block md:col-span-2 mt-1 sm:mt-2 md:mt-3">
+                    <div className="num mb-2 sm:mb-2.5 text-[10px] sm:text-xs md:text-xs lg:text-sm uppercase tracking-wider font-semibold">06 — Message</div>
                     <textarea
                         name="user_message"
-                        className="field resize-none focus:outline-2 focus:outline-offset-2 focus:outline-accent text-[13px] sm:text-[14px]"
-                        rows={3}
-                        placeholder="A few lines on your investment goals."
+                        className="field resize-none focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-1 text-xs sm:text-sm md:text-sm lg:text-base px-3 sm:px-4 py-2 sm:py-2.5 md:py-3 lg:py-3"
+                        rows={4}
+                        placeholder="A few lines on your investment goals..."
                         required
                     ></textarea>
                 </label>
             </div>
 
             {status === 'success' && (
-                <div className="mt-5 sm:mt-6 p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[13px] sm:text-sm">
-                    Thank you! Your investment inquiry has been sent successfully. We will get back to you shortly.
+                <div className="mt-6 sm:mt-7 md:mt-8 lg:mt-9 p-3 sm:p-4 md:p-5 lg:p-6 rounded-lg sm:rounded-lg md:rounded-xl bg-emerald-500/10 border border-emerald-500/25 text-emerald-700 text-xs sm:text-sm md:text-sm lg:text-base leading-relaxed font-medium animate-in fade-in slide-in-from-top-2 duration-300">
+                    <span className="inline-block mr-2">✓</span>Thank you! Your investment inquiry has been sent successfully. We will get back to you shortly.
                 </div>
             )}
 
             {status === 'error' && (
-                <div className="mt-5 sm:mt-6 p-4 rounded-xl bg-rose-500/10 border border-rose-500/20 text-rose-400 text-[13px] sm:text-sm">
-                    {errorMessage}
+                <div className="mt-6 sm:mt-7 md:mt-8 lg:mt-9 p-3 sm:p-4 md:p-5 lg:p-6 rounded-lg sm:rounded-lg md:rounded-xl bg-rose-500/10 border border-rose-500/25 text-rose-700 text-xs sm:text-sm md:text-sm lg:text-base leading-relaxed font-medium animate-in fade-in slide-in-from-top-2 duration-300">
+                    <span className="inline-block mr-2">✕</span>{errorMessage}
                 </div>
             )}
 
-            <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4 sm:gap-3">
-                <span className="text-[11px] sm:text-[12px] text-mute order-2 sm:order-1 text-center sm:text-left">
-                    By submitting you agree to our quiet handling of your details.
+            <div className="mt-7 sm:mt-8 md:mt-10 lg:mt-11 flex flex-col-reverse sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 md:gap-5 lg:gap-6">
+                <span className="text-xs sm:text-xs md:text-sm lg:text-base text-mute text-center sm:text-left leading-relaxed font-light">
+                    By submitting, you agree to our quiet handling of your details.
                 </span>
                 <button
                     type="submit"
-                    className="btn btn-primary focus:outline-2 focus:outline-offset-2 focus:outline-accent w-full sm:w-auto order-1 sm:order-2 justify-center"
+                    className="btn btn-primary inline-flex items-center justify-center gap-2 w-full sm:w-auto focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 px-5 sm:px-6 md:px-7 lg:px-8 xl:px-9 py-2.5 sm:py-2.5 md:py-3 lg:py-3.5 text-xs sm:text-sm md:text-sm lg:text-base font-semibold transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed hover:shadow-lg active:scale-95"
                     disabled={status === 'submitting'}
                 >
-                    {status === 'submitting' ? 'Submitting...' : 'Submit enquiry'} <span className="arrow">→</span>
+                    <span className="whitespace-nowrap">{status === 'submitting' ? 'Submitting...' : 'Submit enquiry'}</span>
+                    <span className="arrow transition-transform duration-300 group-disabled:translate-x-0">→</span>
                 </button>
             </div>
         </form>

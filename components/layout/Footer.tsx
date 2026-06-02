@@ -24,21 +24,9 @@ export default function Footer() {
                             </div>
                         </div>
                         <p className="font-display text-[32px] sm:text-[36px] md:text-[40px] lg:text-[44px] xl:text-[48px] leading-[1.05] tracking-tightish max-w-110">
-                            Six businesses. One <em className="serif-em">island</em>.<br />
-                            Cultivating the long return since 1998.
+                            Six investment vehicles. One <em className="serif-em">island.</em>.<br />
+                            Building investor wealth since 2013.
                         </p>
-
-                        <div className="mt-8 sm:mt-10 xl:mt-12 flex flex-wrap gap-3">
-                            <Link className="btn bg-bg! text-ink!" href="/#contact">
-                                Speak with our team <span className="arrow">→</span>
-                            </Link>
-                            <a
-                                className="btn border-ondark/30! text-ondark! btn-ghost hover:border-ondark!"
-                                href="#"
-                            >
-                                2025 Impact Report <span className="arrow">↗</span>
-                            </a>
-                        </div>
                     </div>
 
                     {footerColumns.map((col) => (
@@ -109,7 +97,7 @@ export default function Footer() {
                 <div className="hairline mt-12 sm:mt-16 xl:mt-20 bg-[rgba(241,236,224,0.18)]!"></div>
 
                 <div className="mt-6 flex flex-wrap items-center justify-between gap-4 text-[12px] text-ondark/60">
-                    <div>© 1998 – 2026 Prestige Glamour Group (Pvt) Ltd. Colombo, Sri Lanka.</div>
+                    <div>© 2013 – 2026 Prestige Glamour Working Capital Solutions Group of Company (Pvt) Limited. Payagala, Sri Lanka.</div>
                     <div className="flex flex-wrap items-center gap-2 -mr-3">
                         {footerLegal.map((link) => (
                             <a

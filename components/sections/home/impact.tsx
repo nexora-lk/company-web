@@ -7,7 +7,7 @@ export default function ImpactSection() {
         <section id="impact" className="pb-20 xs:pb-24 sm:pb-32 lg:pb-40 xl:pb-48">
             <div className="max-w-content mx-auto px-4 xs:px-6 lg:px-10">
                 <div className="grid grid-cols-12 gap-8 md:gap-12 lg:gap-16 items-end mb-12 sm:mb-16 md:mb-20">
-                    <div className="col-span-12 lg:col-span-7">
+                    <div className="col-span-12 lg:col-span-7 reveal">
                         <SectionEyebrow 
                             index="06" 
                             label="Why partners choose us" 
@@ -20,7 +20,7 @@ export default function ImpactSection() {
                             in investor returns, not promises.
                         </h2>
                     </div>
-                    <div className="col-span-12 lg:col-span-5 lg:pb-2">
+                    <div className="col-span-12 lg:col-span-5 lg:pb-2 reveal">
                         <p className="text-[14px] xs:text-[15px] sm:text-base text-mute leading-relaxed max-w-full sm:max-w-[440px] font-light">
                             Independently audited by KPMG Sri Lanka. Numbers below are full-year 2025, presented in the same format shared with all 3,200+ active investors.
                         </p>

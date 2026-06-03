@@ -142,7 +142,7 @@ export default function HeroSection() {
                 {/* CTAs */}
                 <div className="mt-8 sm:mt-9 md:mt-11 mb-0 sm:mb-auto
                                 flex flex-col sm:flex-row
-                                items-center gap-3 sm:gap-4 w-full sm:w-auto">
+                                items-center gap-3 sm:gap-4 w-full sm:w-auto reveal">
                     <a
                         href="#services"
                         id="hero-cta-primary"
@@ -178,7 +178,7 @@ export default function HeroSection() {
             </div>
 
             {/* ── Video dot indicators — bottom centre ─────────────────── */}
-            <div className="absolute bottom-5 sm:bottom-7 md:bottom-8 left-0 right-0 z-20 flex justify-center gap-2">
+            <div className="absolute bottom-5 sm:bottom-7 md:bottom-8 left-0 right-0 z-20 flex justify-center gap-2 reveal">
                 {BG_VIDEOS.map((v, i) => (
                     <button
                         key={i}

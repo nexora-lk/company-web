@@ -5,7 +5,7 @@ export default function RoughGemsSection() {
                 <div className="grid grid-cols-12 gap-8 md:gap-10 lg:gap-12 items-start">
 
                     {/* Content */}
-                    <div className="col-span-12 lg:col-span-6 order-2 lg:order-1">
+                    <div className="col-span-12 lg:col-span-6 order-2 lg:order-1 reveal">
                         <div className="flex items-center gap-3 mb-5 sm:mb-6">
                             <span className="num">[ 03 ]</span>
                             <span className="hairline-strong w-[80px] sm:w-[120px]" />
@@ -24,7 +24,7 @@ export default function RoughGemsSection() {
                         </p>
 
                         {/* Benefits */}
-                        <div className="space-y-4 sm:space-y-5 mb-8 sm:mb-10">
+                        <div className="space-y-4 sm:space-y-5 mb-8 sm:mb-10 reveal">
                             {[
                                 {
                                     title: 'Direct-from-Mine Sourcing',
@@ -39,7 +39,7 @@ export default function RoughGemsSection() {
                                     desc: 'Each rough stone carries significant potential for cutting, trading, and investment purposes with complete traceability.',
                                 },
                             ].map((b, i) => (
-                                <div key={i} className="flex gap-3 sm:gap-4">
+                                <div key={i} className="flex gap-3 sm:gap-4 reveal">
                                     <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-accent/10 flex items-center justify-center shrink-0 mt-1">
                                         <span className="text-accent text-[13px] sm:text-[14px] font-semibold">✓</span>
                                     </div>
@@ -52,13 +52,13 @@ export default function RoughGemsSection() {
                         </div>
 
                         {/* Stats */}
-                        <div className="grid grid-cols-3 gap-2 sm:gap-3 md:gap-4 mb-8 sm:mb-10">
+                        <div className="grid grid-cols-3 gap-2 sm:gap-3 md:gap-4 mb-8 sm:mb-10 reveal">
                             {[
                                 { val: '100%', label: 'Uncut & Raw' },
                                 { val: 'Direct', label: 'From Miners' },
                                 { val: 'Verified', label: 'Quality' },
                             ].map((s, i) => (
-                                <div key={i} className="bg-white rounded-[12px] sm:rounded-[14px] p-3 sm:p-5 border border-line">
+                                <div key={i} className="bg-white rounded-[12px] sm:rounded-[14px] p-3 sm:p-5 border border-line reveal">
                                     <div className="font-display text-[20px] sm:text-[24px] md:text-[28px] text-accent leading-none mb-1 sm:mb-2">
                                         {s.val}
                                     </div>
@@ -69,16 +69,16 @@ export default function RoughGemsSection() {
                             ))}
                         </div>
 
-                        <button className="inline-flex items-center gap-2 sm:gap-2.5 px-5 sm:px-6 py-2.5 sm:py-3 bg-accent text-ondark font-semibold uppercase text-[11px] sm:text-[12px] tracking-widest rounded-lg hover:shadow-lg transition-all">
+                        <button className="inline-flex items-center gap-2 sm:gap-2.5 px-5 sm:px-6 py-2.5 sm:py-3 bg-accent text-ondark font-semibold uppercase text-[11px] sm:text-[12px] tracking-widest rounded-lg hover:shadow-lg transition-all reveal">
                             Explore Rough Gems
                             <span>→</span>
                         </button>
                     </div>
 
                     {/* Sidebar */}
-                    <div className="col-span-12 lg:col-span-6 order-1 lg:order-2">
+                    <div className="col-span-12 lg:col-span-6 order-1 lg:order-2 reveal">
                         {/* Sourcing Process */}
-                        <div className="bg-surface rounded-[16px] sm:rounded-[20px] p-5 sm:p-7 lg:p-8 border border-line mb-4 sm:mb-6">
+                        <div className="bg-surface rounded-[16px] sm:rounded-[20px] p-5 sm:p-7 lg:p-8 border border-line mb-4 sm:mb-6 reveal">
                             <h3 className="font-display text-[20px] sm:text-[22px] md:text-[24px] text-ink mb-5 sm:mb-6">
                                 Our <em className="serif-em">Sourcing</em> Process
                             </h3>
@@ -89,7 +89,7 @@ export default function RoughGemsSection() {
                                     { step: '03', title: 'Documentation & Testing', description: 'Complete documentation with testing and verification to ensure authenticity and origin.' },
                                     { step: '04', title: 'Secure Packaging & Delivery', description: 'Safe, insured packaging with worldwide shipping to ensure your rough gems arrive in perfect condition.' },
                                 ].map((item, idx) => (
-                                    <div key={idx} className="flex gap-3 sm:gap-4 pb-4 sm:pb-6 border-b border-line last:border-0 last:pb-0">
+                                    <div key={idx} className="flex gap-3 sm:gap-4 pb-4 sm:pb-6 border-b border-line last:border-0 last:pb-0 reveal">
                                         <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-accent/10 flex items-center justify-center shrink-0">
                                             <span className="font-display text-accent font-semibold text-[13px] sm:text-[14px]">
                                                 {item.step}

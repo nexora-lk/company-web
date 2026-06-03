@@ -33,7 +33,7 @@ function Row({
 
 export default function Marquee({ items }: { items: MarqueeItem[] }) {
   return (
-    <div className="border-y border-line bg-bg overflow-hidden">
+    <div className="border-y border-line bg-bg overflow-hidden reveal">
       <div className="flex marquee-track whitespace-nowrap py-4 xs:py-5 sm:py-6 md:py-8 text-mute">
         <Row items={items} />
         <Row items={items} hidden />

@@ -36,6 +36,7 @@ export default function ServiceHero({
                     src={backgroundImage}
                     alt=""
                     priority
+                    fill
                     className="w-full h-full object-cover opacity-60 lg:opacity-100"
                     sizes="100vw"
                 />
@@ -45,7 +46,7 @@ export default function ServiceHero({
 
             <div className="relative z-10 max-w-content mx-auto px-4 xs:px-6 sm:px-8 lg:px-12 pt-20 sm:pt-24 lg:pt-32 xl:pt-36 pb-12 sm:pb-20 lg:pb-24 xl:pb-28 w-full">
                 {/* Section label - improved hierarchy */}
-                <div className="flex items-center gap-3 mb-6 sm:mb-8 lg:mb-10 xl:mb-12">
+                <div className="flex items-center gap-3 mb-6 sm:mb-8 lg:mb-10 xl:mb-12 reveal">
                     <span className="hairline-strong flex-1 max-w-20 xs:max-w-30 ml-0 sm:ml-2 bg-white/50!"></span>
                     <span className="eyebrow text-white! text-[10px] xs:text-xs sm:text-sm tracking-[0.2em] font-semibold">
                         {eyebrow}
@@ -53,14 +54,14 @@ export default function ServiceHero({
                 </div>
 
                 {/* Main heading - responsive scaling and readability */}
-                <h1 className="font-display text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl leading-[1.1] sm:leading-[1.15] lg:leading-[1.1] xl:leading-[0.95] tracking-tight max-w-full sm:max-w-3xl lg:max-w-4xl xl:max-w-275 text-white! mb-8 xs:mb-10 sm:mb-12 lg:mb-14 xl:mb-16">
+                <h1 className="font-display text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl leading-[1.1] sm:leading-[1.15] lg:leading-[1.1] xl:leading-[0.95] tracking-tight max-w-full sm:max-w-3xl lg:max-w-4xl xl:max-w-275 text-white! mb-8 xs:mb-10 sm:mb-12 lg:mb-14 xl:mb-16 reveal">
                     {heading}
                 </h1>
 
                 {/* Content container - adjusted for start alignment on large screens */}
                 <div className="flex flex-col lg:flex-row items-start justify-start gap-10 sm:gap-12 lg:gap-16 xl:gap-20">
                     {/* Description paragraph - improved typography */}
-                    <div className="w-full max-w-full lg:max-w-120">
+                    <div className="w-full max-w-full lg:max-w-120 reveal">
                         {descriptions.map((desc, index) => (
                             <p
                                 key={index}
@@ -74,7 +75,7 @@ export default function ServiceHero({
                     </div>
 
                     {/* Stats grid - adaptive column layout */}
-                    <div className="w-full lg:max-w-200">
+                    <div className="w-full lg:max-w-200 reveal">
                         <div className="mt-6 xs:mt-8 sm:mt-10 lg:mt-0 mb-6 xs:mb-8 sm:mb-10 lg:mb-0 hairline bg-white/70!"></div>
                         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-0">
                             {stats.map((stat, index) => (
@@ -84,7 +85,7 @@ export default function ServiceHero({
                                         index % 2 === 0 ? 'px-0 pr-3 xs:pr-4 sm:pr-6 lg:pr-8 border-r' : 'px-3 xs:px-4 sm:px-6 lg:px-8 lg:border-r'
                                     } ${index >= stats.length - 2 ? 'md:border-b-0' : ''} ${
                                         index === stats.length - 1 ? 'lg:border-r-0' : ''
-                                    }`}
+                                    } reveal`}
                                 >
                                     <div className="num text-white/60! mb-1.5 xs:mb-2 sm:mb-3 text-[9px] xs:text-[10px] lg:text-xs uppercase tracking-widest font-semibold">
                                         {stat.label}

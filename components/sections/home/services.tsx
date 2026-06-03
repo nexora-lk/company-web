@@ -59,7 +59,7 @@ export default function ServicesSection() {
 
                 {/* Header */}
                 <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 sm:gap-10 mb-12 sm:mb-16 lg:mb-20">
-                    <div className="max-w-full lg:max-w-3xl">
+                    <div className="max-w-full lg:max-w-3xl reveal">
                         <SectionEyebrow 
                             index="04" 
                             label="Our Services" 
@@ -70,7 +70,7 @@ export default function ServicesSection() {
                             Six Ways to Invest <em className="serif-em text-accent">With Us</em>
                         </h2>
                     </div>
-                    <div className="max-w-full sm:max-w-[440px] lg:text-right">
+                    <div className="max-w-full sm:max-w-[440px] lg:text-right reveal">
                         <p className="text-[14px] xs:text-[15px] sm:text-base text-mute leading-relaxed font-light">
                             We operate seven active investment vehicles across Sri Lanka. Each division is
                             independently managed, audited quarterly, and open to direct investor participation.
@@ -84,11 +84,12 @@ export default function ServicesSection() {
                         <a
                             key={svc.href}
                             href={svc.href}
-                            className="svc-card group relative rounded-[20px] sm:rounded-[24px] overflow-hidden bg-surface min-h-[360px] xs:min-h-[400px] sm:min-h-[440px] md:min-h-[480px] shadow-sm hover:shadow-xl transition-all duration-700"
+                            className="svc-card group relative rounded-[20px] sm:rounded-[24px] overflow-hidden bg-surface min-h-[360px] xs:min-h-[400px] sm:min-h-[440px] md:min-h-[480px] shadow-sm hover:shadow-xl transition-all duration-700 reveal"
                         >
                             <Photo
                                 src={svc.img}
                                 alt={svc.alt}
+                                fill
                                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                                 className="absolute inset-0 w-full h-full object-cover"
                             />

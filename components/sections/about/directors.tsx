@@ -4,7 +4,7 @@ export default function DirectorsSection() {
     return (
         <section className="pb-20 sm:pb-24 lg:pb-36">
             <div className="max-w-content mx-auto px-4 xs:px-6 lg:px-10">
-                <div className="text-center max-w-[820px] mx-auto mb-10 sm:mb-14">
+                <div className="text-center max-w-[820px] mx-auto mb-10 sm:mb-14 reveal">
                     <div className="flex items-center gap-2 xs:gap-3 justify-center mb-5 sm:mb-6">
                         <span className="hairline-strong w-12 xs:w-16 sm:w-[60px]"></span>
                         <span className="eyebrow text-[10px] xs:text-xs">Meet our team</span>
@@ -20,11 +20,13 @@ export default function DirectorsSection() {
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 xs:gap-5">
-                    <article className="dir-card team-card">
+                    <article className="dir-card team-card reveal">
                         <figure className="portrait overflow-hidden">
                             <Photo
                                 src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780278288/yatawarasir-profile_wroc25.jpg"
                                 alt="Mr. Y. M. D. T. Yatawara"
+                                fill
+                                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                                 className="w-full h-full object-cover"
                             />
                         </figure>
@@ -45,11 +47,13 @@ export default function DirectorsSection() {
                         </div>
                     </article>
 
-                    <article className="dir-card team-card">
+                    <article className="dir-card team-card reveal">
                         <figure className="portrait overflow-hidden">
                             <Photo
                                 src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780278280/amunugammasirr-profile_tyvvsb.jpg"
                                 alt="Mr. Nilanga Amunugama"
+                                fill
+                                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                                 className="w-full h-full object-cover"
                             />
                         </figure>
@@ -70,11 +74,13 @@ export default function DirectorsSection() {
                         </div>
                     </article>
 
-                    <article className="dir-card team-card sm:col-span-2 lg:col-span-1">
+                    <article className="dir-card team-card sm:col-span-2 lg:col-span-1 reveal">
                         <figure className="portrait overflow-hidden sm:aspect-[21/9] lg:aspect-square">
                             <Photo
                                 src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780278294/madams-profile_vckxlg.jpg"
                                 alt="Director"
+                                fill
+                                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 33vw"
                                 className="w-full h-full object-cover"
                             />
                         </figure>

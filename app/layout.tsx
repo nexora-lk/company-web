@@ -4,6 +4,7 @@ import PageTransition from '@/components/layout/PageTransition';
 import SmoothScroll from '@/components/layout/SmoothScroll';
 import Script from 'next/script';
 import CookieConsent from '@/components/layout/CookieConsent';
+import WhatsAppButton from '@/components/layout/WhatsAppButton';
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata } from 'next';
@@ -197,6 +198,7 @@ export default function RootLayout({
                     <Navbar />
                     <PageTransition>{children}</PageTransition>
                     <Footer />
+                    <WhatsAppButton />
                 </SmoothScroll>
                 {GA_ID && (
                     <>

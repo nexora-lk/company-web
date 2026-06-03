@@ -4,7 +4,7 @@ export default function ModelsSection() {
     return (
         <section className="py-16 sm:py-20 md:py-24 lg:py-32 bg-bg">
             <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-10">
-                <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 sm:gap-6 mb-10 sm:mb-14">
+                <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 sm:gap-6 mb-10 sm:mb-14 reveal">
                     <div>
                         <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
                             <span className="num text-[10px] sm:text-[11px]">[ 02 ]</span>
@@ -24,7 +24,7 @@ export default function ModelsSection() {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
-                    <article className="model-card rounded-[16px] sm:rounded-[20px] bg-surface border border-line p-6 sm:p-8 lg:p-10 flex flex-col gap-4 sm:gap-6">
+                    <article className="model-card rounded-[16px] sm:rounded-[20px] bg-surface border border-line p-6 sm:p-8 lg:p-10 flex flex-col gap-4 sm:gap-6 reveal">
                         <div className="flex items-start justify-between">
                             <span className="num text-[10px] sm:text-[11px]">Model · 01</span>
                             <span className="num text-accent text-[10px] sm:text-[11px]">6 — 24 months</span>
@@ -60,7 +60,7 @@ export default function ModelsSection() {
                         </Link>
                     </article>
 
-                    <article className="model-card rounded-[16px] sm:rounded-[20px] bg-ink text-ondark p-6 sm:p-8 lg:p-10 flex flex-col gap-4 sm:gap-6">
+                    <article className="model-card rounded-[16px] sm:rounded-[20px] bg-ink text-ondark p-6 sm:p-8 lg:p-10 flex flex-col gap-4 sm:gap-6 reveal">
                         <div className="flex items-start justify-between">
                             <span className="num text-ondark/70! text-[10px] sm:text-[11px]">Model · 02</span>
                             <span className="num text-ondark/70! text-[10px] sm:text-[11px]">12 months</span>
@@ -93,7 +93,7 @@ export default function ModelsSection() {
                         </Link>
                     </article>
 
-                    <article className="model-card rounded-[16px] sm:rounded-[20px] bg-surface border border-line p-6 sm:p-8 lg:p-10 flex flex-col gap-4 sm:gap-6">
+                    <article className="model-card rounded-[16px] sm:rounded-[20px] bg-surface border border-line p-6 sm:p-8 lg:p-10 flex flex-col gap-4 sm:gap-6 reveal">
                         <div className="flex items-start justify-between">
                             <span className="num text-[10px] sm:text-[11px]">Model · 03</span>
                             <span className="num text-accent text-[10px] sm:text-[11px]">3 — 7 years</span>
@@ -126,7 +126,7 @@ export default function ModelsSection() {
                         </a>
                     </article>
 
-                    <article className="model-card rounded-[16px] sm:rounded-[20px] bg-accent2 p-6 sm:p-8 lg:p-10 flex flex-col gap-4 sm:gap-6">
+                    <article className="model-card rounded-[16px] sm:rounded-[20px] bg-accent2 p-6 sm:p-8 lg:p-10 flex flex-col gap-4 sm:gap-6 reveal">
                         <div className="flex items-start justify-between">
                             <span className="num text-[10px] sm:text-[11px]">Model · 04</span>
                             <span className="num text-accent text-[10px] sm:text-[11px]">Annual cycle</span>

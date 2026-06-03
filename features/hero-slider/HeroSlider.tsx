@@ -100,11 +100,11 @@ export default function HeroSlider() {
                 } else {
                     gsap.fromTo(
                         slide,
-                        { opacity: 0, scale: 1.08 },
+                        { opacity: 0, scale: 1.04 },
                         {
                             opacity: 1,
                             scale: 1,
-                            duration: 1.2,
+                            duration: 0.9,
                             ease: 'power3.out',
                         }
                     );
@@ -117,7 +117,7 @@ export default function HeroSlider() {
                 } else {
                     gsap.to(slide, {
                         opacity: 0,
-                        duration: 0.8,
+                        duration: 0.5,
                         ease: 'power2.inOut',
                         onComplete: () => {
                             gsap.set(slide, { zIndex: 1, visibility: 'hidden' });

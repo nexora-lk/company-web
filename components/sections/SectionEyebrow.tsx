@@ -8,7 +8,7 @@ type SectionEyebrowProps = {
 export default function SectionEyebrow({
   index,
   label,
-  className = "flex items-center gap-2 xs:gap-3 mb-5 sm:mb-6 lg:mb-8",
+  className = "flex items-center gap-2 xs:gap-3 mb-5 sm:mb-6 lg:mb-8 reveal",
   hairlineClassName = "hairline-strong w-16 xs:w-20 sm:w-24 lg:w-[120px]",
 }: SectionEyebrowProps) {
   return (

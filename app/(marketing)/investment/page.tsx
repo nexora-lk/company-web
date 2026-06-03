@@ -3,6 +3,7 @@ import HeroSection from '@/components/sections/investment/hero';
 import ModelsSection from '@/components/sections/investment/models';
 import CalculatorSection from '@/components/sections/investment/calculator';
 import WhySection from '@/components/sections/investment/why';
+import PlantationInvestmentBanner from '@/components/sections/services/plantation/InvestmentBanner';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {

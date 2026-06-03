@@ -51,32 +51,32 @@ export default function MobileMenu() {
                     defaults: { ease: 'power3.out' },
                 });
 
-                tl.fromTo(backdrop, { opacity: 0 }, { opacity: 1, duration: 0.35 })
+                tl.fromTo(backdrop, { opacity: 0 }, { opacity: 1, duration: 0.3 })
                     .fromTo(
                         panel,
-                        { y: -20, opacity: 0 },
-                        { y: 0, opacity: 1, duration: 0.45, ease: 'power4.out' },
+                        { y: -16, opacity: 0 },
+                        { y: 0, opacity: 1, duration: 0.4, ease: 'power4.out' },
                         '<0.05'
                     )
                     .fromTo(
                         links,
-                        { x: -30, opacity: 0 },
+                        { x: -20, opacity: 0 },
                         {
                             x: 0,
                             opacity: 1,
-                            duration: 0.5,
-                            stagger: 0.05,
+                            duration: 0.4,
+                            stagger: 0.04,
                             ease: 'power3.out',
                         },
-                        '<0.15'
+                        '<0.1'
                     );
 
                 if (bottomBar) {
                     tl.fromTo(
                         bottomBar,
-                        { opacity: 0, y: 10 },
-                        { opacity: 1, y: 0, duration: 0.4 },
-                        '<0.1'
+                        { opacity: 0, y: 8 },
+                        { opacity: 1, y: 0, duration: 0.35 },
+                        '<0.08'
                     );
                 }
 
@@ -94,9 +94,9 @@ export default function MobileMenu() {
                     },
                 });
 
-                tl.to(panel, { y: -12, opacity: 0, duration: 0.3 }).to(
+                tl.to(panel, { y: -8, opacity: 0, duration: 0.25 }).to(
                     backdrop,
-                    { opacity: 0, duration: 0.25 },
+                    { opacity: 0, duration: 0.2 },
                     '<'
                 );
 

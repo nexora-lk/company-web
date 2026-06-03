@@ -6,7 +6,7 @@ export default function GemServicesSection() {
             <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-10">
 
                 {/* Section Header */}
-                <div className="mb-10 sm:mb-12 md:mb-14 lg:mb-16">
+                <div className="mb-10 sm:mb-12 md:mb-14 lg:mb-16 reveal">
                     <div className="flex items-center gap-3 mb-5 sm:mb-6">
                         <span className="num">[ 04 ]</span>
                         <span className="hairline-strong w-[80px] sm:w-[120px]" />
@@ -27,7 +27,7 @@ export default function GemServicesSection() {
                     {gemServices.map((service, idx) => (
                         <div
                             key={idx}
-                            className="bg-bg rounded-[16px] sm:rounded-[18px] p-5 sm:p-6 lg:p-8 border border-line hover:border-accent/50 transition-all duration-300"
+                            className="bg-bg rounded-[16px] sm:rounded-[18px] p-5 sm:p-6 lg:p-8 border border-line hover:border-accent/50 transition-all duration-300 reveal"
                         >
                             <div className="flex items-start justify-between mb-3 sm:mb-4">
                                 <h3 className="font-display text-[18px] sm:text-[19px] md:text-[20px] leading-tight text-ink pr-2">

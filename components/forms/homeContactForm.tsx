@@ -48,22 +48,22 @@ export default function ContactForm() {
         <form
             ref={formRef}
             onSubmit={handleSubmit}
-            className="col-span-12 lg:col-span-7 bg-surface rounded-[16px] sm:rounded-[20px] border border-line p-5 sm:p-8 lg:p-12"
+            className="col-span-12 lg:col-span-7 bg-surface rounded-[16px] sm:rounded-[20px] border border-line p-5 sm:p-8 lg:p-12 reveal"
         >
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8 sm:mb-10 gap-4">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8 sm:mb-10 gap-4 reveal">
                 <div>
                     <div className="num mb-1.5 sm:mb-2">Inquiry</div>
                     <div className="font-display text-[24px] sm:text-[28px] leading-tight">
                         A quick form, hand-read.
                     </div>
                 </div>
-                <span className="pill self-start sm:self-auto text-[11px] sm:text-[12px]">
+                <span className="pill self-start sm:self-auto text-[11px] sm:text-[12px] reveal">
                     <span className="dot"></span>Reply within 1 working day
                 </span>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 lg:gap-x-8 gap-y-3 sm:gap-y-4">
-                <label className="block">
+                <label className="block reveal">
                     <div className="num mb-1 text-[10px] sm:text-[11px]">01 — Your name</div>
                     <input
                         name="user_name"
@@ -72,7 +72,7 @@ export default function ContactForm() {
                         required
                     />
                 </label>
-                <label className="block">
+                <label className="block reveal">
                     <div className="num mb-1 text-[10px] sm:text-[11px]">02 — Email</div>
                     <input
                         name="user_email"
@@ -82,7 +82,7 @@ export default function ContactForm() {
                         required
                     />
                 </label>
-                <label className="block">
+                <label className="block reveal">
                     <div className="num mb-1 text-[10px] sm:text-[11px]">03 — Country</div>
                     <input
                         name="user_country"
@@ -91,7 +91,7 @@ export default function ContactForm() {
                         required
                     />
                 </label>
-                <label className="block">
+                <label className="block reveal">
                     <div className="num mb-1 text-[10px] sm:text-[11px]">04 — I am a…</div>
                     <select
                         name="user_role"
@@ -106,7 +106,7 @@ export default function ContactForm() {
                         <option value="Other">Other</option>
                     </select>
                 </label>
-                <label className="block md:col-span-2 mt-2 sm:mt-4">
+                <label className="block md:col-span-2 mt-2 sm:mt-4 reveal">
                     <div className="num mb-1 text-[10px] sm:text-[11px]">05 — What would you like to discuss?</div>
                     <textarea
                         name="user_message"
@@ -118,14 +118,19 @@ export default function ContactForm() {
                 </label>
             </div>
 
+            {/* Hidden fields for optional inquiry variables */}
+            <input type="hidden" name="user_phone" value="" />
+            <input type="hidden" name="user_model" value="" />
+            <input type="hidden" name="user_ticket_size" value="" />
+
             {status === 'success' && (
-                <div className="mt-5 sm:mt-6 p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[13px] sm:text-sm">
+                <div className="form-success">
                     Thank you! Your enquiry has been sent successfully. We will get back to you shortly.
                 </div>
             )}
 
             {status === 'error' && (
-                <div className="mt-5 sm:mt-6 p-4 rounded-xl bg-rose-500/10 border border-rose-500/20 text-rose-400 text-[13px] sm:text-sm">
+                <div className="form-error">
                     {errorMessage}
                 </div>
             )}

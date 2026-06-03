@@ -8,7 +8,7 @@ export default function CollectionSection() {
             <div className="max-w-content mx-auto px-4 xs:px-6 lg:px-10">
 
                 {/* Header */}
-                <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 sm:gap-10 mb-12 sm:mb-16 lg:mb-20">
+                <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 sm:gap-10 mb-12 sm:mb-16 lg:mb-20 reveal">
                     <div className="max-w-full lg:max-w-3xl">
                         <div className="flex items-center gap-2 xs:gap-3 mb-5 sm:mb-6">
                             <span className="num text-[10px] xs:text-[11px]">[ 02 ]</span>
@@ -34,7 +34,7 @@ export default function CollectionSection() {
                     {displayedGems.map((gem, idx) => (
                         <div
                             key={gem.id}
-                            className="group bg-surface rounded-[20px] xs:rounded-[24px] overflow-hidden border border-line hover:border-accent/40 transition-all duration-700 hover:shadow-2xl flex flex-col h-full"
+                            className="group bg-surface rounded-[20px] xs:rounded-[24px] overflow-hidden border border-line hover:border-accent/40 transition-all duration-700 hover:shadow-2xl flex flex-col h-full reveal"
                         >
                             {/* Card Header with background accent */}
                             <div className="bg-linear-to-br from-accent/5 to-accent/10 p-6 xs:p-8 border-b border-line">

@@ -4,7 +4,7 @@ export default function PortfolioSection() {
     return (
         <section id="properties" className="py-16 sm:py-20 md:py-24 lg:py-28 xl:py-32 bg-bg">
             <div className="max-w-content mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
-                <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 sm:gap-5 md:gap-6 lg:gap-8 mb-8 sm:mb-10 md:mb-12 lg:mb-16">
+                <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 sm:gap-5 md:gap-6 lg:gap-8 mb-8 sm:mb-10 md:mb-12 lg:mb-16 reveal">
                     <div>
                         <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-5 md:mb-6">
                             <span className="hairline-strong w-[80px] sm:w-[100px] md:w-[120px]"></span>
@@ -46,11 +46,13 @@ export default function PortfolioSection() {
                     ].map((estate, idx) => (
                         <article
                             key={idx}
-                            className="svc-card group relative rounded-[14px] sm:rounded-[16px] md:rounded-[18px] lg:rounded-[20px] overflow-hidden bg-surface min-h-[300px] sm:min-h-[340px] md:min-h-[360px]"
+                            className="svc-card group relative rounded-[14px] sm:rounded-[16px] md:rounded-[18px] lg:rounded-[20px] overflow-hidden bg-surface min-h-[300px] sm:min-h-[340px] md:min-h-[360px] reveal"
                         >
                             <Photo
                                 src={estate.img}
                                 alt={estate.alt}
+                                fill
+                                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                                 className="absolute inset-0 w-full h-full object-cover"
                             />
                             <div className="absolute inset-0 bg-linear-to-t from-ink/85 via-ink/30 to-transparent"></div>

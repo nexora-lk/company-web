@@ -28,17 +28,17 @@ export default function NotFound() {
             // Stagger animation for elements
             tl.from(heading, {
                 opacity: 0,
-                y: 30,
-                duration: 0.8,
-                ease: 'power2.out',
+                y: 20,
+                duration: 0.6,
+                ease: 'power3.out',
             })
                 .from(
                     description,
                     {
                         opacity: 0,
-                        y: 20,
-                        duration: 0.6,
-                        ease: 'power2.out',
+                        y: 16,
+                        duration: 0.5,
+                        ease: 'power3.out',
                     },
                     '-=0.4'
                 )
@@ -46,10 +46,10 @@ export default function NotFound() {
                     buttons,
                     {
                         opacity: 0,
-                        y: 15,
-                        duration: 0.5,
-                        ease: 'power2.out',
-                        stagger: 0.15,
+                        y: 12,
+                        duration: 0.4,
+                        ease: 'power3.out',
+                        stagger: 0.08,
                     },
                     '-=0.3'
                 );

@@ -2,7 +2,7 @@ export default function ModelsSection() {
     return (
         <section id="models" className="py-16 sm:py-20 md:py-24 lg:py-28 xl:py-32 bg-bg">
             <div className="max-w-content mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
-                <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 sm:gap-5 md:gap-6 lg:gap-8 mb-8 sm:mb-10 md:mb-12 lg:mb-16">
+                <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 sm:gap-5 md:gap-6 lg:gap-8 mb-8 sm:mb-10 md:mb-12 lg:mb-16 reveal">
                     <div>
                         <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-5 md:mb-6">
                             <span className="hairline-strong w-20 sm:w-25 md:w-30"></span>

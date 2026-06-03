@@ -11,18 +11,18 @@ export default function ProjectSudeesaSection() {
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
-                    <div className="lg:col-span-8">
-                        <div className="mb-6">
+                    <div className="lg:col-span-8 reveal">
+                        <div className="mb-6 reveal">
                             <Photo
                                 src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780278268/ngo-ag-logo_nczhjo.png"
                                 alt="Sudeesa Logo"
                                 className="w-24 sm:w-28 md:w-32 rounded-lg object-contain"
                             />
                         </div>
-                        <h2 className="font-display text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] leading-[0.98] tracking-tightish mb-6">
+                        <h2 className="font-display text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] leading-[0.98] tracking-tightish mb-6 reveal">
                             Small Fishers Federation of Lanka <em className="serif-em">(Sudeesa)</em>
                         </h2>
-                        <div className="space-y-4 text-[14px] sm:text-[15px] md:text-[16px] text-mute leading-[1.6] sm:leading-[1.7] md:leading-[1.8]">
+                        <div className="space-y-4 text-[14px] sm:text-[15px] md:text-[16px] text-mute leading-[1.6] sm:leading-[1.7] md:leading-[1.8] reveal">
                             <p>
                                 The Small Fishers Federation (Sudeesa) was set up in 1992 as a development network of
                                 small-scale fishing and farming community organizations in Sri Lanka. Its headquarters
@@ -57,8 +57,8 @@ export default function ProjectSudeesaSection() {
                         </div>
                     </div>
 
-                    <div className="lg:col-span-4">
-                        <div className="sticky top-24 bg-bg rounded-[20px] p-6 sm:p-8 border border-line">
+                    <div className="lg:col-span-4 reveal">
+                        <div className="sticky top-24 bg-bg rounded-[20px] p-6 sm:p-8 border border-line reveal">
                             <h3 className="font-display text-[22px] sm:text-[24px] mb-6">Project Details</h3>
                             <dl className="space-y-4 text-[13px] sm:text-[14px]">
                                 <div className="border-b border-line pb-4 last:border-0 last:pb-0">

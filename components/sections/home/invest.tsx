@@ -9,13 +9,15 @@ export default function InvestSection() {
                         src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                         alt="Investment opportunity with Prestige Glamour Group"
                         className="absolute inset-0 w-full h-full object-cover"
+                        fill
+                        sizes="100vw"
                     />
                     <div className="absolute inset-0 bg-linear-to-tr from-ink/90 via-ink/60 to-ink/30" />
 
                     <div className="relative w-full p-6 xs:p-10 lg:p-14 xl:p-16 text-ondark">
-                        <div className="grid grid-cols-12 gap-8 md:gap-10 lg:gap-16 items-end">
+                        <div className="grid grid-cols-12 gap-8 md:gap-10 lg:gap-16 items-end reveal">
 
-                            <div className="col-span-12 lg:col-span-8">
+                            <div className="col-span-12 lg:col-span-8 reveal">
                                 <span className="num text-ondark/80! text-[10px] xs:text-[11px]">[ Invest with us ]</span>
                                 <h3 className="font-display text-3xl xs:text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[0.98] tracking-tightish mt-3 sm:mt-4">
                                     Grow alongside an <em className="serif-em">island</em>
@@ -28,7 +30,7 @@ export default function InvestSection() {
                                 </p>
                             </div>
 
-                            <div className="col-span-12 lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-4 lg:items-end mt-4 lg:mt-0">
+                            <div className="col-span-12 lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-4 lg:items-end mt-4 lg:mt-0 reveal">
                                 <a
                                     href="#contact"
                                     className="btn bg-bg! text-ink! hover:bg-accent! hover:text-ondark! w-full sm:w-auto justify-center text-[14px] px-8"

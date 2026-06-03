@@ -33,7 +33,7 @@ export default function ProductsSection() {
     return (
         <section id="products" className="py-16 xs:py-20 sm:py-24 lg:py-32 xl:py-40 bg-bg">
             <div className="max-w-content mx-auto px-4 xs:px-6 lg:px-10">
-                <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 sm:gap-10 mb-12 sm:mb-16 lg:mb-20">
+                <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 sm:gap-10 mb-12 sm:mb-16 lg:mb-20 reveal">
                     <div className="max-w-full lg:max-w-3xl">
                         <div className="flex items-center gap-2 xs:gap-3 mb-5 sm:mb-6">
                             <span className="num text-[10px] xs:text-[11px] sm:text-xs">[ 02 ]</span>
@@ -60,7 +60,7 @@ export default function ProductsSection() {
                     {products.map((product) => (
                         <div
                             key={product.num}
-                            className="product-row group grid grid-cols-1 xs:grid-cols-[60px_1fr] sm:grid-cols-[80px_1.4fr_1fr_60px] items-start gap-6 sm:gap-8 py-8 sm:py-10 border-b border-line last:border-0 hover:bg-surface/30 transition-all duration-500 px-4 xs:px-0 -mx-4 xs:mx-0"
+                            className="product-row group grid grid-cols-1 xs:grid-cols-[60px_1fr] sm:grid-cols-[80px_1.4fr_1fr_60px] items-start gap-6 sm:gap-8 py-8 sm:py-10 border-b border-line last:border-0 hover:bg-surface/30 transition-all duration-500 px-4 xs:px-0 -mx-4 xs:mx-0 reveal"
                         >
                             <span className="num text-accent font-semibold text-[11px] xs:text-xs lg:text-sm mt-1">
                                 {product.num}

@@ -8,18 +8,18 @@ export default function OverviewSection() {
 
                     {/* Left: Text */}
                     <div className="col-span-12 lg:col-span-7 order-2 lg:order-1">
-                        <div className="flex items-center gap-2 xs:gap-3 mb-5 sm:mb-6">
+                        <div className="flex items-center gap-2 xs:gap-3 mb-5 sm:mb-6 reveal">
                             <span className="hairline-strong w-16 xs:w-20 sm:w-24 lg:w-[120px]" />
                             <span className="eyebrow text-[10px] xs:text-xs">FMCG Overview</span>
                         </div>
 
-                        <h2 className="font-display text-3xl xs:text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[0.98] tracking-tightish text-ink">
+                        <h2 className="font-display text-3xl xs:text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[0.98] tracking-tightish text-ink reveal">
                             Our plantation grows it. <em className="serif-em">Our factory makes it.</em>
                             <br />
                             You invest in the margin.
                         </h2>
 
-                        <div className="mt-8 xs:mt-10 space-y-4 xs:space-y-6 text-[14.5px] xs:text-[15.5px] leading-relaxed sm:leading-[1.75] text-mute max-w-full sm:max-w-[620px] font-light">
+                        <div className="mt-8 xs:mt-10 space-y-4 xs:space-y-6 text-[14.5px] xs:text-[15.5px] leading-relaxed sm:leading-[1.75] text-mute max-w-full sm:max-w-[620px] font-light reveal">
                             <p>
                                 <span className="font-display text-4xl xs:text-5xl text-ink float-left mr-3 leading-[0.8] mt-1">
                                     P
@@ -34,10 +34,10 @@ export default function OverviewSection() {
                             </p>
                         </div>
 
-                        <h3 className="font-display text-2xl xs:text-[26px] md:text-[28px] mt-10 xs:mt-12 text-ink">
+                        <h3 className="font-display text-2xl xs:text-[26px] md:text-[28px] mt-10 xs:mt-12 text-ink reveal">
                             Our <em className="serif-em text-accent">product</em> categories.
                         </h3>
-                        <ul className="mt-6 xs:mt-8 grid grid-cols-2 sm:grid-cols-3 gap-x-4 xs:gap-x-6 gap-y-3 xs:gap-y-4 max-w-full sm:max-w-[640px]">
+                        <ul className="mt-6 xs:mt-8 grid grid-cols-2 sm:grid-cols-3 gap-x-4 xs:gap-x-6 gap-y-3 xs:gap-y-4 max-w-full sm:max-w-[640px] reveal">
                             <li className="branch text-[13px] xs:text-[14px]">Fresh-cut fruit packs</li>
                             <li className="branch text-[13px] xs:text-[14px]">Dried fruit &amp; snacks</li>
                             <li className="branch text-[13px] xs:text-[14px]">Herbal teas</li>
@@ -49,7 +49,7 @@ export default function OverviewSection() {
                             <li className="branch text-[13px] xs:text-[14px]">Organic honey</li>
                         </ul>
 
-                        <div className="mt-10 xs:mt-12 flex flex-wrap gap-4">
+                        <div className="mt-10 xs:mt-12 flex flex-wrap gap-4 reveal">
                             <a href="#products" className="btn btn-ghost w-full xs:w-auto justify-center">
                                 View our products <span className="arrow">→</span>
                             </a>
@@ -60,12 +60,14 @@ export default function OverviewSection() {
                     </div>
 
                     {/* Right: Image */}
-                    <aside className="col-span-12 lg:col-span-5 order-1 lg:order-2 lg:sticky lg:top-32 mt-4 lg:mt-0">
+                    <aside className="col-span-12 lg:col-span-5 order-1 lg:order-2 lg:sticky lg:top-32 mt-4 lg:mt-0 reveal">
                         <figure className="rounded-[18px] xs:rounded-[24px] overflow-hidden aspect-[3/2] xs:aspect-[4/3] lg:aspect-[4/5] shadow-2xl">
                             <Photo
                                 src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780117514/fmcg-overview_eyrmnl.jpg"
                                 alt="Fresh tropical fruits ready for processing"
                                 priority
+                                fill
+                                sizes="(max-width: 1024px) 100vw, 40vw"
                                 className="w-full h-full object-cover"
                             />
                         </figure>

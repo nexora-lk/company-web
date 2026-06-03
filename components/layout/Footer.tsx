@@ -12,11 +12,12 @@ export default function Footer() {
                         <div className="flex items-center gap-2.5 mb-8">
                             <div className="relative w-16 h-16 overflow-hidden flex items-center justify-center">
                                 <Photo
-                                    src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779442467/logo_eszhjw.png"
+                                    src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779442665/logo_eszhjw.png"
                                     alt={brand.name}
                                     width={60}
                                     height={60}
                                     className="w-full h-full object-contain"
+                                    sizes="60px"
                                 />
                             </div>
                             <div className="leading-tight">

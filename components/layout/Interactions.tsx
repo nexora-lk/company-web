@@ -54,7 +54,7 @@ export default function Interactions() {
 
           // Ensure transitions are set
           header.style.transition =
-            "transform 0.4s cubic-bezier(0.22, 0.68, 0, 1), box-shadow 0.35s ease";
+            "transform 0.3s cubic-bezier(0.22, 0.68, 0, 1), box-shadow 0.3s ease";
 
           const updateHeader = () => {
             const scrollY = window.scrollY;

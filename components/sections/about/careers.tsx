@@ -9,11 +9,13 @@ export default function CareersSection() {
                     <Photo
                         src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780154550/careers-about_phptqz.jpg"
                         alt="Join the Prestige Glamour team"
+                        fill
                         className="absolute inset-0 w-full h-full object-cover"
+                        sizes="100vw"
                     />
                     <div className="absolute inset-0 bg-linear-to-tr from-ink/90 via-ink/60 to-ink/30"></div>
 
-                    <div className="relative w-full p-6 xs:p-8 lg:p-14 text-ondark">
+                    <div className="relative w-full p-6 xs:p-8 lg:p-14 text-ondark reveal">
                         <div className="grid grid-cols-12 gap-6 lg:gap-8 items-end">
                             <div className="col-span-12 lg:col-span-8">
                                 <span className="num text-ondark/80! text-[10px] xs:text-[11px]">[ Join the team ]</span>

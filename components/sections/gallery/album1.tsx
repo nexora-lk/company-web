@@ -7,7 +7,7 @@ export default function Album1Section() {
 
                 {/* Album Header */}
                 <header className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 sm:gap-6 mb-8 sm:mb-10">
-                    <div>
+                    <div className="reveal">
                         <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
                             <span className="num text-[10px] sm:text-[11px]">[ Album 01 ]</span>
                             <span className="hairline-strong w-[80px] sm:w-[120px]" />
@@ -21,7 +21,7 @@ export default function Album1Section() {
                             years of files across town — 62 Maitland Crescent, December 2024.
                         </p>
                     </div>
-                    <div className="flex sm:flex-col items-center sm:items-end gap-3 sm:gap-2 shrink-0">
+                    <div className="flex sm:flex-col items-center sm:items-end gap-3 sm:gap-2 shrink-0 reveal">
                         <div className="num text-[10px] sm:text-[11px]">12 December 2024 · 24 photographs</div>
                         <a className="ulink text-[12px] sm:text-sm" href="#">
                             View all 24 <span className="arrow">→</span>
@@ -36,51 +36,108 @@ export default function Album1Section() {
                             src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
                             alt="Ribbon-cutting at the new head office"
                             priority
+                            fill
+                            sizes="(max-width: 768px) 100vw, 50vw"
                         />
                         <div className="ph-meta">01 · Ribbon cutting · Maitland Crescent</div>
                     </div>
                     <div className="ph col-span-1 row-span-1 md:col-span-3 md:row-span-2">
-                        <Photo src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg" alt="" />
+                        <Photo 
+                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg" 
+                            alt="Team group" 
+                            fill
+                            sizes="(max-width: 768px) 50vw, 25vw"
+                        />
                         <div className="ph-meta">02 · Team group</div>
                     </div>
                     <div className="ph col-span-1 row-span-1 md:col-span-3 md:row-span-2">
-                        <Photo src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg" alt="" />
+                        <Photo 
+                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg" 
+                            alt="Lamp lighting" 
+                            fill
+                            sizes="(max-width: 768px) 50vw, 25vw"
+                        />
                         <div className="ph-meta">03 · Lamp lighting</div>
                     </div>
                     <div className="ph col-span-1 row-span-1 md:col-span-3 md:row-span-2">
-                        <Photo src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg" alt="" />
+                        <Photo 
+                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg" 
+                            alt="Welcome desk" 
+                            fill
+                            sizes="(max-width: 768px) 50vw, 25vw"
+                        />
                         <div className="ph-meta">04 · Welcome desk</div>
                     </div>
                     <div className="ph col-span-1 row-span-1 md:col-span-3 md:row-span-2">
-                        <Photo src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg" alt="" />
+                        <Photo 
+                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg" 
+                            alt="The new boardroom" 
+                            fill
+                            sizes="(max-width: 768px) 50vw, 25vw"
+                        />
                         <div className="ph-meta">05 · The new boardroom</div>
                     </div>
                     <div className="ph col-span-1 row-span-1 md:col-span-4 md:row-span-3">
-                        <Photo src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg" alt="" />
+                        <Photo 
+                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg" 
+                            alt="East wing, ground floor" 
+                            fill
+                            sizes="(max-width: 768px) 50vw, 33vw"
+                        />
                         <div className="ph-meta">06 · East wing, ground floor</div>
                     </div>
                     <div className="ph col-span-1 row-span-1 md:col-span-4 md:row-span-3">
-                        <Photo src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg" alt="" />
+                        <Photo 
+                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg" 
+                            alt="Family of staff" 
+                            fill
+                            sizes="(max-width: 768px) 50vw, 33vw"
+                        />
                         <div className="ph-meta">07 · Family of staff</div>
                     </div>
                     <div className="ph col-span-2 row-span-1 md:col-span-4 md:row-span-3">
-                        <Photo src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg" alt="" />
+                        <Photo 
+                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg" 
+                            alt="Evening reception" 
+                            fill
+                            sizes="(max-width: 768px) 100vw, 33vw"
+                        />
                         <div className="ph-meta">08 · Evening reception</div>
                     </div>
                     <div className="ph col-span-1 row-span-1 md:col-span-3 md:row-span-2">
-                        <Photo src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg" alt="" />
+                        <Photo 
+                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg" 
+                            alt="Community partners" 
+                            fill
+                            sizes="(max-width: 768px) 50vw, 25vw"
+                        />
                         <div className="ph-meta">09 · Community partners</div>
                     </div>
                     <div className="ph col-span-1 row-span-1 md:col-span-3 md:row-span-2">
-                        <Photo src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg" alt="" />
+                        <Photo 
+                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg" 
+                            alt="Handshake" 
+                            fill
+                            sizes="(max-width: 768px) 50vw, 25vw"
+                        />
                         <div className="ph-meta">10 · Handshake</div>
                     </div>
                     <div className="ph col-span-1 row-span-1 md:col-span-3 md:row-span-2">
-                        <Photo src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg" alt="" />
+                        <Photo 
+                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg" 
+                            alt="Saree procession" 
+                            fill
+                            sizes="(max-width: 768px) 50vw, 25vw"
+                        />
                         <div className="ph-meta">11 · Saree procession</div>
                     </div>
                     <div className="ph col-span-1 row-span-1 md:col-span-3 md:row-span-2">
-                        <Photo src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg" alt="" />
+                        <Photo 
+                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg" 
+                            alt="Director's portrait" 
+                            fill
+                            sizes="(max-width: 768px) 50vw, 25vw"
+                        />
                         <div className="ph-meta">12 · Director's portrait</div>
                     </div>
                 </div>

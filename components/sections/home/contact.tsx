@@ -9,7 +9,7 @@ export default function ContactSection() {
                 <div className="grid grid-cols-12 gap-10 md:gap-12 lg:gap-16 xl:gap-24">
 
                     {/* Left: Contact info */}
-                    <div className="col-span-12 lg:col-span-5 xl:col-span-5">
+                    <div className="col-span-12 lg:col-span-5 xl:col-span-5 reveal">
                         <SectionEyebrow 
                             index="07" 
                             label="Contact" 
@@ -18,7 +18,7 @@ export default function ContactSection() {
                         />
 
                         <h2 className="font-display text-3xl xs:text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[1.0] tracking-tightish text-ink">
-                            Ready to <em className="serif-em">Invest?</em> Let&#39;s Talk.
+                            Ready to <em className="serif-em">Invest? </em> Let&#39;s Talk.
                         </h2>
 
                         <p className="mt-6 xs:mt-8 text-mute text-[14px] xs:text-[15px] sm:text-base leading-relaxed max-w-full sm:max-w-[480px] font-light">
@@ -30,7 +30,7 @@ export default function ContactSection() {
                             {contactRows.map((row) => (
                                 <div
                                     key={row.label}
-                                    className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-line pb-4 xs:pb-5 group"
+                                    className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-line pb-4 xs:pb-5 group reveal"
                                 >
                                     <span className="num text-accent font-medium mb-1 sm:mb-0 transition-colors group-hover:text-ink">{row.label}</span>
                                     <span className="text-[14px] xs:text-[15px] sm:text-base text-ink font-light">{row.value}</span>
@@ -40,7 +40,7 @@ export default function ContactSection() {
                     </div>
 
                     {/* Right: Form */}
-                    <div className="col-span-12 lg:col-span-7 xl:col-span-7 mt-8 lg:mt-0">
+                    <div className="col-span-12 lg:col-span-7 xl:col-span-7 mt-8 lg:mt-0 reveal">
                         <ContactForm />
                     </div>
 

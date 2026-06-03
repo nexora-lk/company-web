@@ -2,7 +2,7 @@ export default function TeemSection() {
     return (
         <section className="pb-24 lg:pb-36">
             <div className="max-w-content mx-auto px-6 lg:px-10">
-                <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-12">
+                <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-12 reveal">
                     <div>
                         <div className="flex items-center gap-3 mb-6">
                             <span className="hairline-strong w-[120px]"></span>
@@ -19,7 +19,7 @@ export default function TeemSection() {
                 </div>
 
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
-                    <article className="team-card">
+                    <article className="team-card reveal">
                         <div className="portrait">
                             <span className="mono">LM</span>
                         </div>
@@ -34,7 +34,7 @@ export default function TeemSection() {
                         </div>
                     </article>
 
-                    <article className="team-card">
+                    <article className="team-card reveal">
                         <div className="portrait">
                             <span className="mono">CF</span>
                         </div>
@@ -47,7 +47,7 @@ export default function TeemSection() {
                         </div>
                     </article>
 
-                    <article className="team-card">
+                    <article className="team-card reveal">
                         <div className="portrait">
                             <span className="mono">TS</span>
                         </div>
@@ -62,7 +62,7 @@ export default function TeemSection() {
                         </div>
                     </article>
 
-                    <article className="team-card">
+                    <article className="team-card reveal">
                         <div className="portrait">
                             <span className="mono">HL</span>
                         </div>
@@ -77,7 +77,7 @@ export default function TeemSection() {
                         </div>
                     </article>
 
-                    <article className="team-card">
+                    <article className="team-card reveal">
                         <div className="portrait">
                             <span className="mono">MS</span>
                         </div>
@@ -90,7 +90,7 @@ export default function TeemSection() {
                         </div>
                     </article>
 
-                    <article className="team-card">
+                    <article className="team-card reveal">
                         <div className="portrait">
                             <span className="mono">KM</span>
                         </div>
@@ -103,7 +103,7 @@ export default function TeemSection() {
                         </div>
                     </article>
 
-                    <article className="team-card">
+                    <article className="team-card reveal">
                         <div className="portrait">
                             <span className="mono">ST</span>
                         </div>
@@ -118,7 +118,7 @@ export default function TeemSection() {
                         </div>
                     </article>
 
-                    <article className="team-card">
+                    <article className="team-card reveal">
                         <div className="portrait">
                             <span className="mono">AK</span>
                         </div>
@@ -135,7 +135,7 @@ export default function TeemSection() {
                 </div>
 
                 <p className="mt-10 text-[12px] text-mute max-w-[420px]">
-                    Portraits are stand-ins. Replace each `portrait` block with the team member's
+                    Portraits are stand-ins. Replace each `portrait` block with the team member&apos;s
                     photograph — the layout is sized 4 : 5 to match a head-and-shoulders portrait.
                 </p>
             </div>

@@ -55,7 +55,7 @@ export default function ProductCategoriesSection() {
             <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-10">
 
                 {/* Section Header */}
-                <div className="mb-10 sm:mb-12 md:mb-14 lg:mb-16">
+                <div className="mb-10 sm:mb-12 md:mb-14 lg:mb-16 reveal">
                     <div className="flex items-center gap-3 mb-5 sm:mb-6">
                         <span className="num">[ 02 ]</span>
                         <span className="hairline-strong w-[80px] sm:w-[120px]" />
@@ -75,7 +75,7 @@ export default function ProductCategoriesSection() {
                     {categories.map((category, idx) => (
                         <div
                             key={idx}
-                            className="bg-linear-to-br from-surface to-bg rounded-[16px] sm:rounded-[18px] p-5 sm:p-7 lg:p-8 xl:p-10 border border-line hover:shadow-md hover:border-accent/40 transition-all duration-300"
+                            className="bg-linear-to-br from-surface to-bg rounded-[16px] sm:rounded-[18px] p-5 sm:p-7 lg:p-8 xl:p-10 border border-line hover:shadow-md hover:border-accent/40 transition-all duration-300 reveal"
                         >
                             <div className="mb-3 sm:mb-4">
                                 <h3 className="font-display text-[22px] sm:text-[25px] md:text-[26px] lg:text-[28px] leading-tight text-ink">

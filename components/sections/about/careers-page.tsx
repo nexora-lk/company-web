@@ -91,49 +91,6 @@ export default function CareersPageClient() {
         }
     }, [showForm, selectedRole]);
 
-    /* GSAP reveal animation */
-    useEffect(() => {
-        let cleanup: (() => void) | undefined;
-        let cancelled = false;
-
-        (async () => {
-            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-            const { gsap } = await import('gsap');
-            const { ScrollTrigger } = await import('gsap/ScrollTrigger');
-            if (cancelled) return;
-
-            gsap.registerPlugin(ScrollTrigger);
-
-            const reveals = document.querySelectorAll('.reveal');
-            reveals.forEach((el) => {
-                gsap.fromTo(
-                    el,
-                    { autoAlpha: 0, y: 14 },
-                    {
-                        autoAlpha: 1,
-                        y: 0,
-                        duration: 0.6,
-                        ease: 'power2.out',
-                        scrollTrigger: {
-                            trigger: el,
-                            start: 'top 90%',
-                            once: true,
-                        },
-                    }
-                );
-            });
-
-            cleanup = () => {
-                ScrollTrigger.getAll().forEach((t) => t.kill());
-            };
-        })();
-
-        return () => {
-            cancelled = true;
-            cleanup?.();
-        };
-    }, []);
-
     const handleApply = (roleId: string) => {
         setSelectedRole(roleId);
         setShowForm(true);
@@ -152,6 +109,8 @@ export default function CareersPageClient() {
                             alt="Join the Prestige Glamour team"
                             className="absolute inset-0 w-full h-full object-cover"
                             priority
+                            fill
+                            sizes="100vw"
                         />
                         <div className="absolute inset-0 bg-linear-to-tr from-ink/90 via-ink/60 to-ink/30"></div>
 

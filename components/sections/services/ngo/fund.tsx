@@ -2,8 +2,8 @@ export default function FundSection() {
     return (
         <section id="fund" className="py-16 sm:py-20 md:py-24 lg:py-28 xl:py-32 bg-bg border-t border-line">
             <div className="max-w-content mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
-                    <div className="lg:col-span-6">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start reveal">
+                    <div className="lg:col-span-6 reveal">
                         <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-5 md:mb-6">
                             <span className="hairline-strong w-20 sm:w-25 md:w-30"></span>
                             <span className="eyebrow text-[10px] sm:text-[11px] md:text-sm">Support Our Cause</span>
@@ -20,8 +20,8 @@ export default function FundSection() {
                         </p>
                     </div>
 
-                    <div className="lg:col-span-5 lg:col-start-8">
-                        <div className="bg-surface rounded-[20px] p-6 sm:p-8 border border-line">
+                    <div className="lg:col-span-5 lg:col-start-8 reveal">
+                        <div className="bg-surface rounded-[20px] p-6 sm:p-8 border border-line reveal">
                             <h3 className="font-display text-[22px] sm:text-[24px] mb-6">Bank Details</h3>
                             <p className="text-sm text-mute mb-6">
                                 For direct bank transfers or standing orders, please use the following account details.

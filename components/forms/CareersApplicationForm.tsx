@@ -98,15 +98,15 @@ export default function CareersApplicationForm({ roleTitle }: CareersApplication
                     />
                 </label>
                 <label className="block">
-                    <div className="num mb-1 text-[10px] sm:text-[11px]">04 — Position</div>
-                    <input
-                        name="user_position"
-                        className="field focus:outline-2 focus:outline-offset-2 focus:outline-accent text-[13px] sm:text-[14px]"
-                        placeholder="Role you're applying for"
-                        defaultValue={roleTitle || ''}
-                        required
-                    />
-                </label>
+                     <div className="num mb-1 text-[10px] sm:text-[11px]">04 — Position</div>
+                     <input
+                         name="applied_role"
+                         className="field focus:outline-2 focus:outline-offset-2 focus:outline-accent text-[13px] sm:text-[14px]"
+                         placeholder="Role you're applying for"
+                         defaultValue={roleTitle || ''}
+                         required
+                     />
+                 </label>
                 <label className="block">
                     <div className="num mb-1 text-[10px] sm:text-[11px]">05 — Years of experience</div>
                     <select
@@ -143,17 +143,15 @@ export default function CareersApplicationForm({ roleTitle }: CareersApplication
                 </label>
             </div>
 
-            {/* Hidden field to pass the role title to EmailJS */}
-            <input type="hidden" name="applied_role" value={roleTitle || 'General Application'} />
 
             {status === 'success' && (
-                <div className="mt-5 sm:mt-6 p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-700 text-[13px] sm:text-sm">
+                <div className="form-success">
                     Thank you! Your application has been received. We&apos;ll review it carefully and get back to you soon.
                 </div>
             )}
 
             {status === 'error' && (
-                <div className="mt-5 sm:mt-6 p-4 rounded-xl bg-rose-500/10 border border-rose-500/20 text-rose-600 text-[13px] sm:text-sm">
+                <div className="form-error">
                     {errorMessage}
                 </div>
             )}

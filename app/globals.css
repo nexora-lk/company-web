@@ -27,7 +27,7 @@
     --font-display: var(--font-display);
     --font-body: var(--font-body);
     --tracking-tightish: -0.022em;
-    --animate-marq: marq 38s linear infinite;
+    --animate-marq: marq 28s linear infinite;
 }
 
 /* Keyframes live outside cascade layers (per CSS spec). */
@@ -812,13 +812,54 @@
         display: block;
         transition: transform 1.4s cubic-bezier(0.2, 0.7, 0.2, 1);
     }
-    .split-img figure:hover img {
-        transform: scale(1.04);
-    }
-}
+     .split-img figure:hover img {
+         transform: scale(1.04);
+     }
 
-/* Performance: skip rendering below-fold sections until near viewport */
-section:nth-child(n + 3) {
-    content-visibility: auto;
-    contain-intrinsic-size: auto 800px;
-}
+     /* Form feedback messages */
+     .form-success {
+         margin-top: clamp(1.25rem, 2vw, 2.5rem);
+         padding: clamp(0.75rem, 1.5vw, 1.5rem);
+         border-radius: 0.75rem;
+         background: color-mix(in oklab, var(--c-accent) 15%, transparent);
+         border: 1px solid color-mix(in oklab, var(--c-accent) 35%, transparent);
+         color: var(--c-accent);
+         font-size: clamp(0.8125rem, 1.5vw, 0.95rem);
+         line-height: 1.5;
+         font-weight: 500;
+         display: flex;
+         align-items: flex-start;
+         gap: 0.75rem;
+     }
+     .form-success::before {
+         content: '✓';
+         flex-shrink: 0;
+         font-weight: 600;
+     }
+
+     .form-error {
+         margin-top: clamp(1.25rem, 2vw, 2.5rem);
+         padding: clamp(0.75rem, 1.5vw, 1.5rem);
+         border-radius: 0.75rem;
+         background: color-mix(in oklab, #dc2626 15%, transparent);
+         border: 1px solid color-mix(in oklab, #dc2626 35%, transparent);
+         color: #dc2626;
+         font-size: clamp(0.8125rem, 1.5vw, 0.95rem);
+         line-height: 1.5;
+         font-weight: 500;
+         display: flex;
+         align-items: flex-start;
+         gap: 0.75rem;
+     }
+     .form-error::before {
+         content: '✕';
+         flex-shrink: 0;
+         font-weight: 600;
+     }
+ }
+
+ /* Performance: skip rendering below-fold sections until near viewport */
+ section:nth-child(n + 3) {
+     content-visibility: auto;
+     contain-intrinsic-size: auto 800px;
+ }

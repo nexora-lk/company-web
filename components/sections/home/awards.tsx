@@ -8,7 +8,7 @@ export default function AwardsSection() {
                 <div className="grid grid-cols-12 gap-8 lg:gap-16 items-center">
 
                     {/* Text */}
-                    <div className="col-span-12 lg:col-span-5 order-2 lg:order-1">
+                    <div className="col-span-12 lg:col-span-5 order-2 lg:order-1 reveal">
                         <SectionEyebrow
                             index="05"
                             label="Recognition"
@@ -33,21 +33,25 @@ export default function AwardsSection() {
                     </div>
 
                     {/* Images */}
-                    <div className="col-span-12 lg:col-span-7 relative order-1 lg:order-2 flex items-center justify-center gap-4 xs:gap-6 sm:gap-8 mt-6 lg:mt-0 py-8 lg:py-12">
+                    <div className="col-span-12 lg:col-span-7 relative order-1 lg:order-2 flex items-center justify-center gap-4 xs:gap-6 sm:gap-8 mt-6 lg:mt-0 py-8 lg:py-12 reveal">
                         {/* Medal — large, no border/shadow, shifted up */}
-                        <figure className="w-[60%] xs:w-[55%] sm:w-[50%] lg:w-[60%] overflow-hidden aspect-[4/5] transform -translate-y-4 sm:-translate-y-8 lg:-translate-y-12 transition-transform duration-700 hover:-translate-y-14">
+                        <figure className="w-[60%] xs:w-[55%] sm:w-[50%] lg:w-[60%] overflow-hidden aspect-[4/5] transform -translate-y-4 sm:-translate-y-8 lg:-translate-y-12 transition-transform duration-700 hover:-translate-y-14 reveal">
                             <Photo
                                 src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780295757/cup-22_rk2avu.png"
                                 alt="Award Cup"
                                 className="w-full h-full object-contain"
+                                fill
+                                sizes="(max-width: 640px) 60vw, (max-width: 1024px) 40vw, 30vw"
                             />
                         </figure>
                         {/* Certificate — smaller, shifted down */}
-                        <figure className="w-[45%] xs:w-[40%] sm:w-[35%] lg:w-[45%] overflow-hidden aspect-[4/3] transform translate-y-4 sm:translate-y-8 lg:translate-y-12 shadow-2xl transition-transform duration-700 hover:translate-y-14">
+                        <figure className="w-[45%] xs:w-[40%] sm:w-[35%] lg:w-[45%] overflow-hidden aspect-[4/3] transform translate-y-4 sm:translate-y-8 lg:translate-y-12 shadow-2xl transition-transform duration-700 hover:translate-y-14 reveal">
                             <Photo
                                 src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780278251/IMG_20260601_022245_wy6vzu.jpg"
                                 alt="Certificate of Excellence"
                                 className="w-full h-full object-cover mix-blend-multiply rounded-sm"
+                                fill
+                                sizes="(max-width: 640px) 45vw, (max-width: 1024px) 30vw, 20vw"
                             />
                         </figure>
                         {/* Decorative blob for responsiveness fill */}

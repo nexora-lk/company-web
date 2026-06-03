@@ -27,7 +27,7 @@ export default function StatsBanner({
           return (
             <div
               key={s.label}
-              className={`p-6 xs:p-8 lg:p-10 ${borderClasses}`}
+              className={`p-6 xs:p-8 lg:p-10 reveal ${borderClasses}`}
             >
               <div className="num mb-4 xs:mb-6">{s.label}</div>
               <div className="stat-num text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl leading-none">

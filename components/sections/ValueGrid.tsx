@@ -17,7 +17,7 @@ export default function ValueGrid({ values }: { values: Value[] }) {
         return (
           <article
             key={v.no}
-            className={`group p-6 xs:p-8 lg:p-10 transition-colors duration-300 hover:bg-surface/50 ${borderClasses}`}
+            className={`group p-6 xs:p-8 lg:p-10 transition-colors duration-300 hover:bg-surface/50 reveal ${borderClasses}`}
           >
             <div className="flex items-center justify-between mb-8 xs:mb-10 lg:mb-12">
               <span className="num text-accent font-semibold">{v.no}</span>

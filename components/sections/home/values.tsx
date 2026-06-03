@@ -7,7 +7,7 @@ export default function ValuesSection() {
         <section id="values" className="pb-20 xs:pb-24 md:pb-32 lg:pb-40 xl:pb-48">
             <div className="max-w-content mx-auto px-4 xs:px-6 lg:px-10">
                 <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 sm:gap-10 mb-12 sm:mb-16 lg:mb-20">
-                    <div className="max-w-full lg:max-w-3xl">
+                    <div className="max-w-full lg:max-w-3xl reveal">
                         <SectionEyebrow 
                             index="03" 
                             label="Core Values" 
@@ -20,7 +20,7 @@ export default function ValuesSection() {
                             every return, every handshake.
                         </h2>
                     </div>
-                    <div className="max-w-full sm:max-w-[320px] lg:text-right">
+                    <div className="max-w-full sm:max-w-[320px] lg:text-right reveal">
                         <p className="text-[14px] xs:text-[15px] sm:text-base text-mute leading-relaxed font-light">
                             Our values are not marketing words — they are how we protect your investment
                             and our reputation at the same time.

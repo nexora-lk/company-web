@@ -3,6 +3,7 @@ import GallerySection from '@/components/sections/services/plantation/gallery';
 import ServiceHero from '@/components/sections/ServiceHero';
 import OverviewSection from '@/components/sections/services/plantation/overview';
 import PortfolioSection from '@/components/sections/services/plantation/portfolio';
+import PlantationInvestmentBanner from '@/components/sections/services/plantation/InvestmentBanner';
 
 export const metadata: Metadata = {
     title: 'Plantation Services | Premium Highland Crops | Prestige Glamour',
@@ -97,6 +98,7 @@ export default function PlantationPage() {
             <OverviewSection />
             <GallerySection />
             <PortfolioSection />
+            <PlantationInvestmentBanner />
         </>
     );
 }

@@ -12,6 +12,7 @@ const FADE_UP_SELECTOR = [
   "section h3",
   "section > div > div > p",
   "section .text-mute",
+  ".reveal",
   ".svc-card",
   ".team-card",
   ".dir-card",
@@ -98,47 +99,35 @@ export default function Reveal() {
           gsap.to(inners, {
             y: "0%",
             opacity: 1,
-            duration: 1.1,
+            duration: 1.0,
             ease: "power4.out",
-            stagger: 0.1,
-            delay: 0.3,
+            stagger: 0.08,
+            delay: 0.25,
             onComplete: () => gsap.set(inners, { clearProps: "willChange" }),
           });
         }
 
-        // Hero sub-paragraph fade
-        const heroSub = document.querySelector<HTMLElement>(
-          "section:first-child .text-mute",
-        );
-        if (heroSub) {
-          gsap.fromTo(
-            heroSub,
-            { autoAlpha: 0, y: 20 },
-            {
-              autoAlpha: 1,
-              y: 0,
-              duration: 0.9,
-              ease: "power3.out",
-              delay: 0.7,
-              clearProps: "willChange",
-            },
-          );
-        }
+        // Hero content reveals (descriptions, stats, buttons, etc.)
+        const heroContent = Array.from(
+          document.querySelectorAll<HTMLElement>(
+            "section:first-child .text-mute, section:first-child p, section:first-child .btn, section:first-child .reveal:not(h1)",
+          ),
+        ).filter((el) => {
+          // Avoid animating H1 children if they have .reveal
+          return !el.closest("h1");
+        });
 
-        // Hero buttons fade
-        const heroButtons = document.querySelector<HTMLElement>(
-          "section:first-child .flex.flex-wrap.items-center.gap-3",
-        );
-        if (heroButtons) {
+        if (heroContent.length) {
           gsap.fromTo(
-            heroButtons,
+            heroContent,
             { autoAlpha: 0, y: 16 },
             {
               autoAlpha: 1,
               y: 0,
               duration: 0.8,
               ease: "power3.out",
-              delay: 0.9,
+              stagger: 0.1,
+              delay: 0.6,
               clearProps: "willChange",
             },
           );
@@ -151,15 +140,15 @@ export default function Reveal() {
         if (heroFigures.length) {
           gsap.fromTo(
             heroFigures,
-            { autoAlpha: 0, y: 40, scale: 0.96 },
+            { autoAlpha: 0, y: 30, scale: 0.98 },
             {
               autoAlpha: 1,
               y: 0,
               scale: 1,
-              duration: 1.2,
+              duration: 1.1,
               ease: "power3.out",
-              stagger: 0.15,
-              delay: 0.4,
+              stagger: 0.1,
+              delay: 0.35,
               clearProps: "willChange",
             },
           );
@@ -172,14 +161,14 @@ export default function Reveal() {
         if (fieldReport) {
           gsap.fromTo(
             fieldReport,
-            { autoAlpha: 0, y: 20, scale: 0.95 },
+            { autoAlpha: 0, y: 16, scale: 0.96 },
             {
               autoAlpha: 1,
               y: 0,
               scale: 1,
-              duration: 0.9,
+              duration: 0.8,
               ease: "power3.out",
-              delay: 1.1,
+              delay: 1.0,
               clearProps: "willChange",
             },
           );
@@ -192,13 +181,13 @@ export default function Reveal() {
         if (heroEyebrow?.parentElement) {
           gsap.fromTo(
             heroEyebrow.parentElement,
-            { autoAlpha: 0, x: -20 },
+            { autoAlpha: 0, x: -16 },
             {
               autoAlpha: 1,
               x: 0,
-              duration: 0.7,
+              duration: 0.6,
               ease: "power3.out",
-              delay: 0.15,
+              delay: 0.1,
               clearProps: "willChange",
             },
           );
@@ -224,20 +213,20 @@ export default function Reveal() {
         if (fadeEls.length) {
           gsap.set(fadeEls, {
             autoAlpha: 0,
-            y: 24,
+            y: 20,
             willChange: "transform, opacity",
           });
 
           ScrollTrigger.batch(fadeEls, {
-            start: "top 90%",
+            start: "top 92%",
             once: true,
             onEnter: (batch) => {
               gsap.to(batch, {
                 autoAlpha: 1,
                 y: 0,
-                duration: 0.95,
+                duration: 0.8,
                 ease: "power3.out",
-                stagger: 0.06,
+                stagger: 0.05,
                 overwrite: true,
                 onComplete: () =>
                   gsap.set(batch, { clearProps: "willChange" }),
@@ -260,14 +249,14 @@ export default function Reveal() {
           });
 
           ScrollTrigger.batch(clipEls, {
-            start: "top 88%",
+            start: "top 90%",
             once: true,
             onEnter: (batch) => {
               gsap.to(batch, {
                 clipPath: "inset(0% 0% 0% 0%)",
-                duration: 1.1,
+                duration: 0.9,
                 ease: "power4.inOut",
-                stagger: 0.12,
+                stagger: 0.08,
                 overwrite: true,
                 onComplete: () =>
                   gsap.set(batch, { clearProps: "willChange,clipPath" }),
@@ -391,29 +380,29 @@ export default function Reveal() {
         /* ─────────────────────────────────────────────────────────
          * 8. FOOTER REVEAL
          * ───────────────────────────────────────────────────────── */
-        const footerChildren = document.querySelectorAll<HTMLElement>(
-          "footer > div > div > div",
+        const footerRows = document.querySelectorAll<HTMLElement>(
+          "footer > div > div",
         );
-        if (footerChildren.length) {
-          gsap.set(footerChildren, {
+        if (footerRows.length) {
+          gsap.set(footerRows, {
             autoAlpha: 0,
-            y: 30,
+            y: 20,
             willChange: "transform, opacity",
           });
 
           ScrollTrigger.create({
             trigger: "footer",
-            start: "top 85%",
+            start: "top 94%",
             once: true,
             onEnter: () => {
-              gsap.to(footerChildren, {
+              gsap.to(footerRows, {
                 autoAlpha: 1,
                 y: 0,
-                duration: 0.9,
+                duration: 0.8,
                 ease: "power3.out",
-                stagger: 0.08,
+                stagger: 0.06,
                 onComplete: () =>
-                  gsap.set(footerChildren, { clearProps: "willChange" }),
+                  gsap.set(footerRows, { clearProps: "all" }),
               });
             },
           });

@@ -2,8 +2,6 @@ import Album1Section from '@/components/sections/gallery/album1';
 import Album2Section from '@/components/sections/gallery/album2';
 import Album3Section from '@/components/sections/gallery/album3';
 import Album4Section from '@/components/sections/gallery/album4';
-import BanerSection from '@/components/sections/gallery/baner';
-import HeroSection from '@/components/sections/gallery/hero';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -63,7 +61,6 @@ export default function GalleryPage() {
                     }),
                 }}
             />
-            <HeroSection />
             <Album1Section />
             <div className="max-w-content mx-auto px-6 lg:px-10">
                 <div className="hairline"></div>
@@ -77,7 +74,6 @@ export default function GalleryPage() {
                 <div className="hairline"></div>
             </div>
             <Album4Section />
-            <BanerSection />
             <div className="lb" id="lb">
                 <span className="lb-close" id="lbClose">
                     ✕

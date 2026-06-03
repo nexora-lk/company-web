@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prestige Glamour Group of Company</title>
+    <style>
+        /* Email client resets */
+        body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+        table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+        img { -ms-interpolation-mode: bicubic; border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; }
+        table { border-collapse: collapse !important; }
+        body { height: 100% !important; margin: 0 !important; padding: 0 !important; width: 100% !important; }
+
+        /* Responsive Styles */
+        @media screen and (max-width: 600px) {
+            .container { width: 100% !important; border-radius: 0 !important; border-left: none !important; border-right: none !important; }
+            .content-padding { padding: 30px 20px !important; }
+            .header-padding { padding: 30px 15px !important; }
+            .label-cell { width: 100px !important; font-size: 10px !important; }
+            .data-cell { font-size: 14px !important; }
+            .h1-title { font-size: 24px !important; }
+            .cta-button { width: 100% !important; box-sizing: border-box !important; }
+            .investment-box { padding: 20px 15px !important; }
+        }
+    </style>
+</head>
+<body style="background-color: #f7f4ed; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; margin: 0; padding: 0;">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #f7f4ed;">
+        <tr>
+            <td align="center" style="padding: 40px 0;">
+                <table border="0" cellpadding="0" cellspacing="0" width="95%" class="container" style="max-width: 600px; background-color: #ffffff; border: 1px solid rgba(20, 24, 26, 0.1); border-radius: 20px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.03);">
+                    
+                    <!-- BRAND HEADER -->
+                    <tr>
+                        <td align="center" class="header-padding" style="background-color: #14181a; padding: 50px 30px;">
+                            <div style="color: #f1ece0; font-size: 20px; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 4px;">Prestige Glamour Group of Company</div>
+                            <div style="color: rgba(241,236,224,0.5); font-size: 9px; letter-spacing: 0.25em; text-transform: uppercase;">
+                                Working Capital Solutions
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- CONTENT BODY -->
+                    <tr>
+                        <td class="content-padding" style="padding: 50px 40px;">
+                            <div style="margin-bottom: 35px; border-bottom: 2px solid #2f5d4a; padding-bottom: 15px;">
+                                <div style="font-size: 10px; color: #5b6066; text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: 8px;">New Submission</div>
+                                <h1 class="h1-title" style="color: #14181a; font-size: 32px; font-weight: 400; line-height: 1.1; margin: 0; letter-spacing: -0.02em;">
+                                    Message from <span style="color: #2f5d4a;">{{user_name}}</span>
+                                </h1>
+                            </div>
+
+                            <!-- MAIN DATA TABLE -->
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 30px;">
+                                <tr>
+                                    <td class="label-cell" style="padding: 14px 0; border-bottom: 1px solid rgba(20, 24, 26, 0.08); width: 150px; font-size: 11px; color: #5b6066; text-transform: uppercase; letter-spacing: 0.05em;">Email</td>
+                                    <td class="data-cell" style="padding: 14px 0; border-bottom: 1px solid rgba(20, 24, 26, 0.08); font-size: 15px; color: #14181a;">{{user_email}}</td>
+                                </tr>
+                                <tr>
+                                    <td class="label-cell" style="padding: 12px 0; border-bottom: 1px solid rgba(20, 24, 26, 0.08); font-size: 11px; color: #5b6066; text-transform: uppercase; letter-spacing: 0.05em;">Phone</td>
+                                    <td class="data-cell" style="padding: 12px 0; border-bottom: 1px solid rgba(20, 24, 26, 0.08); font-size: 15px; color: #14181a;">{{user_phone}}</td>
+                                </tr>
+                                <tr>
+                                    <td class="label-cell" style="padding: 12px 0; border-bottom: 1px solid rgba(20, 24, 26, 0.08); font-size: 11px; color: #5b6066; text-transform: uppercase; letter-spacing: 0.05em;">Location</td>
+                                    <td class="data-cell" style="padding: 12px 0; border-bottom: 1px solid rgba(20, 24, 26, 0.08); font-size: 15px; color: #14181a;">{{user_country}}</td>
+                                </tr>
+                                <tr>
+                                    <td class="label-cell" style="padding: 12px 0; border-bottom: 1px solid rgba(20, 24, 26, 0.08); font-size: 11px; color: #5b6066; text-transform: uppercase; letter-spacing: 0.05em;">User Role</td>
+                                    <td class="data-cell" style="padding: 12px 0; border-bottom: 1px solid rgba(20, 24, 26, 0.08); font-size: 15px; color: #14181a;">{{user_role}}</td>
+                                </tr>
+                            </table>
+
+                            <!-- INVESTMENT BOX (Shows only if investment data exists) -->
+                            <div class="investment-box" style="background-color: #e6ede8; border-radius: 12px; padding: 25px; margin-bottom: 30px; border: 1px solid rgba(47, 93, 74, 0.1);">
+                                <div style="font-size: 10px; color: #2f5d4a; font-weight: 700; text-transform: uppercase; margin-bottom: 15px; letter-spacing: 0.1em;">Investment Selection</div>
+                                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tr>
+                                        <td style="padding: 4px 0; font-size: 13px; color: #5b6066; width: 100px;">Chosen Model:</td>
+                                        <td style="padding: 4px 0; font-size: 14px; font-weight: 500; color: #14181a;">{{user_model}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 4px 0; font-size: 13px; color: #5b6066;">Ticket Size:</td>
+                                        <td style="padding: 4px 0; font-size: 14px; font-weight: 500; color: #14181a;">{{user_ticket_size}}</td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <!-- MESSAGE -->
+                            <div style="background-color: #f7f4ed; border-radius: 12px; padding: 25px; border-left: 4px solid #14181a;">
+                                 <div style="font-size: 10px; color: #5b6066; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 10px;">Message Detail</div>
+                                 <div style="font-size: 14px; line-height: 1.7; color: #14181a;">
+                                     {{user_message}}
+                                 </div>
+                            </div>
+
+                            <!-- CTA -->
+                            <div style="margin-top: 40px; text-align: center;">
+                                <a href="mailto:{{user_email}}" class="cta-button" style="background-color: #14181a; color: #f7f4ed; padding: 18px 40px; text-decoration: none; border-radius: 100px; font-size: 14px; font-weight: 500; display: inline-block;">Reply to Sender &rarr;</a>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- FOOTER -->
+                    <tr>
+                        <td align="center" style="padding: 40px; background-color: rgba(20, 24, 26, 0.02); border-top: 1px solid rgba(20, 24, 26, 0.05);">
+                            <div style="color: #5b6066; font-size: 11px; letter-spacing: 0.04em;">
+                                &copy; 2026 Prestige Glamour Group · Real Returns, Real Operations.<br>
+                                Payagala, Sri Lanka.
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

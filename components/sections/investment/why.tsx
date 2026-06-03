@@ -3,7 +3,7 @@ export default function WhySection() {
         <section className="py-16 sm:py-20 md:py-24 lg:py-32">
             <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-10">
                 <div className="grid grid-cols-12 gap-8 lg:gap-12 items-start">
-                    <div className="col-span-12 lg:col-span-5">
+                    <div className="col-span-12 lg:col-span-5 reveal">
                         <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
                             <span className="num text-[10px] sm:text-[11px]">[ 01 ]</span>
                             <span className="hairline-strong w-[80px] sm:w-[120px]"></span>
@@ -24,7 +24,7 @@ export default function WhySection() {
 
                     <div className="col-span-12 lg:col-span-7 space-y-0">
                         <div className="hairline hidden lg:block"></div>
-                        <div className="py-6 sm:py-8 grid grid-cols-1 sm:grid-cols-12 gap-4 sm:gap-6 items-start">
+                        <div className="py-6 sm:py-8 grid grid-cols-1 sm:grid-cols-12 gap-4 sm:gap-6 items-start reveal">
                             <span className="col-span-1 sm:col-span-2 num text-accent! sm:text-ink! text-[11px]">01</span>
                             <div className="col-span-1 sm:col-span-7">
                                 <h3 className="font-display text-[24px] sm:text-[28px] leading-tight">
@@ -37,7 +37,7 @@ export default function WhySection() {
                             </div>
                         </div>
                         <div className="hairline"></div>
-                        <div className="py-6 sm:py-8 grid grid-cols-1 sm:grid-cols-12 gap-4 sm:gap-6 items-start">
+                        <div className="py-6 sm:py-8 grid grid-cols-1 sm:grid-cols-12 gap-4 sm:gap-6 items-start reveal">
                             <span className="col-span-1 sm:col-span-2 num text-accent! sm:text-ink! text-[11px]">02</span>
                             <div className="col-span-1 sm:col-span-7">
                                 <h3 className="font-display text-[24px] sm:text-[28px] leading-tight">
@@ -51,7 +51,7 @@ export default function WhySection() {
                             </div>
                         </div>
                         <div className="hairline"></div>
-                        <div className="py-6 sm:py-8 grid grid-cols-1 sm:grid-cols-12 gap-4 sm:gap-6 items-start">
+                        <div className="py-6 sm:py-8 grid grid-cols-1 sm:grid-cols-12 gap-4 sm:gap-6 items-start reveal">
                             <span className="col-span-1 sm:col-span-2 num text-accent! sm:text-ink! text-[11px]">03</span>
                             <div className="col-span-1 sm:col-span-7">
                                 <h3 className="font-display text-[24px] sm:text-[28px] leading-tight">

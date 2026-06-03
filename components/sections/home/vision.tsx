@@ -5,7 +5,7 @@ export default function VisionSection() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 xs:gap-5 lg:gap-8">
 
                     {/* Vision card */}
-                    <div className="rounded-[20px] sm:rounded-[24px] bg-accent2 p-8 xs:p-10 sm:p-12 lg:p-16 min-h-[260px] xs:min-h-[300px] sm:min-h-[340px] md:min-h-[380px] flex flex-col justify-center items-center text-center group hover:bg-accent2/80 transition-colors duration-500">
+                    <div className="rounded-[20px] sm:rounded-[24px] bg-accent2 p-8 xs:p-10 sm:p-12 lg:p-16 min-h-[260px] xs:min-h-[300px] sm:min-h-[340px] md:min-h-[380px] flex flex-col justify-center items-center text-center group hover:bg-accent2/80 transition-colors duration-500 reveal">
                         <div className="flex items-center justify-center mb-6 sm:mb-8">
                             <span className="eyebrow text-[10px] xs:text-[11px] sm:text-xs">Vision</span>
                             <span className="num text-[10px] xs:text-[11px] sm:text-xs text-accent"> — 2030</span>
@@ -19,7 +19,7 @@ export default function VisionSection() {
                     </div>
 
                     {/* Mission card */}
-                    <div className="rounded-[20px] sm:rounded-[24px] bg-ink text-ondark p-8 xs:p-10 sm:p-12 lg:p-16 min-h-[260px] xs:min-h-[300px] sm:min-h-[340px] md:min-h-[380px] flex flex-col justify-center items-center text-center group hover:bg-ink/95 transition-colors duration-500 shadow-2xl">
+                    <div className="rounded-[20px] sm:rounded-[24px] bg-ink text-ondark p-8 xs:p-10 sm:p-12 lg:p-16 min-h-[260px] xs:min-h-[300px] sm:min-h-[340px] md:min-h-[380px] flex flex-col justify-center items-center text-center group hover:bg-ink/95 transition-colors duration-500 shadow-2xl reveal">
                         <div className="flex items-center justify-center mb-6 sm:mb-8">
                             <span className="eyebrow text-ondark/70! text-[10px] xs:text-[11px] sm:text-xs">Mission</span>
                             <span className="num text-ondark/60! text-[10px] xs:text-[11px] sm:text-xs"> — Daily</span>

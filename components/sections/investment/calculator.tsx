@@ -96,7 +96,7 @@ export default function CalculatorSection() {
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 xl:gap-24 items-start justify-between">
           
           {/* Text block */}
-          <div className="w-full lg:w-5/12">
+          <div className="w-full lg:w-5/12 reveal">
             <div className="flex items-center gap-2 xs:gap-3 mb-5 sm:mb-6">
               <span className="num text-[10px] xs:text-[11px]">[ 04 ]</span>
               <span className="hairline-strong w-16 xs:w-20 sm:w-24"></span>
@@ -118,7 +118,7 @@ export default function CalculatorSection() {
           </div>
 
           {/* Calculator block */}
-          <div className="w-full lg:w-7/12 max-w-full sm:max-w-[540px]">
+          <div className="w-full lg:w-7/12 max-w-full sm:max-w-[540px] reveal">
             
             {/* Plan Toggle */}
             <div className="flex gap-1.5 bg-white/50 p-1.5 rounded-2xl border border-ink/10 shadow-sm mb-6 xs:mb-8 backdrop-blur-sm">

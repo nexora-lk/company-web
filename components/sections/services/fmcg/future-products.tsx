@@ -33,7 +33,7 @@ export default function FutureProductsSection() {
             <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-10">
 
                 {/* Header */}
-                <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-5 sm:gap-6 mb-10 sm:mb-12 md:mb-14 lg:mb-16">
+                <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-5 sm:gap-6 mb-10 sm:mb-12 md:mb-14 lg:mb-16 reveal">
                     <div>
                         <div className="flex items-center gap-3 mb-5 sm:mb-6">
                             <span className="hairline-strong w-[80px] sm:w-[120px]" />
@@ -56,13 +56,15 @@ export default function FutureProductsSection() {
                     {futureProducts.map((product, idx) => (
                         <article
                             key={idx}
-                            className="group relative flex flex-col justify-between overflow-hidden rounded-[20px] sm:rounded-[24px] bg-bg/40 border border-line/40 p-4 sm:p-5 transition-all duration-500 hover:-translate-y-2 hover:bg-surface hover:shadow-[0_24px_50px_rgba(47,93,74,0.06)] hover:border-accent/15"
+                            className="group relative flex flex-col justify-between overflow-hidden rounded-[20px] sm:rounded-[24px] bg-bg/40 border border-line/40 p-4 sm:p-5 transition-all duration-500 hover:-translate-y-2 hover:bg-surface hover:shadow-[0_24px_50px_rgba(47,93,74,0.06)] hover:border-accent/15 reveal"
                         >
                             {/* Image */}
                             <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[12px] sm:rounded-[16px] bg-bg/50">
                                 <Photo
                                     src={product.img}
                                     alt={product.alt}
+                                    fill
+                                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                                     className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                                 />
                                 <span className="absolute top-3 right-3 sm:top-4 sm:right-4 z-10 rounded-full bg-accent/90 px-2.5 sm:px-3 py-0.5 text-[9px] sm:text-[10px] font-medium tracking-wide text-ondark backdrop-blur-xs">

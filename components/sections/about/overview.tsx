@@ -6,18 +6,18 @@ export default function OverviewSection() {
             <div className="max-w-content mx-auto px-4 xs:px-6 lg:px-10">
                 <div className="grid grid-cols-12 gap-8 lg:gap-16 items-start">
                     <div className="col-span-12 lg:col-span-7">
-                        <div className="flex items-center gap-2 xs:gap-3 mb-5 sm:mb-6">
+                        <div className="flex items-center gap-2 xs:gap-3 mb-5 sm:mb-6 reveal">
                             <span className="hairline-strong w-16 xs:w-20 sm:w-24 lg:w-[120px]"></span>
                             <span className="eyebrow text-[10px] xs:text-xs">Overview · From the Chairman</span>
                         </div>
 
-                        <h2 className="font-display text-3xl xs:text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[0.98] tracking-tightish text-ink">
+                        <h2 className="font-display text-3xl xs:text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[0.98] tracking-tightish text-ink reveal">
                             A letter from <em className="serif-em">Mr. Y. M. D. T.</em>
                             <br />
                             Yatawara, Chairman.
                         </h2>
 
-                        <div className="mt-8 xs:mt-10 space-y-4 xs:space-y-6 text-[14px] xs:text-[15px] leading-relaxed sm:leading-[1.75] text-mute max-w-full sm:max-w-[640px] font-light">
+                        <div className="mt-8 xs:mt-10 space-y-4 xs:space-y-6 text-[14px] xs:text-[15px] leading-relaxed sm:leading-[1.75] text-mute max-w-full sm:max-w-[640px] font-light reveal">
                             <p>
                                 <span className="font-display text-4xl xs:text-5xl text-ink float-left mr-3 leading-[0.8] mt-1">
                                     P
@@ -43,7 +43,7 @@ export default function OverviewSection() {
                             </p>
                         </div>
 
-                        <div className="mt-8 xs:mt-10 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8">
+                        <div className="mt-8 xs:mt-10 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8 reveal">
                             <div>
                                 <div className="font-display text-2xl xs:text-[26px] leading-none text-ink">
                                     Y. M. D. T. Yatawara
@@ -57,11 +57,13 @@ export default function OverviewSection() {
                         </div>
                     </div>
 
-                    <div className="col-span-12 lg:col-span-5 relative mt-8 lg:mt-0">
+                    <div className="col-span-12 lg:col-span-5 relative mt-8 lg:mt-0 reveal">
                         <figure className="aspect-[4/5] rounded-[18px] sm:rounded-[24px] overflow-hidden shadow-2xl">
                             <Photo
                                 src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780278280/amunugammasirr-profile_tyvvsb.jpg"
                                 alt="Chairman Y. M. D. T. Yatawara"
+                                fill
+                                sizes="(max-width: 1024px) 100vw, 40vw"
                                 className="w-full h-full object-cover"
                             />
                         </figure>

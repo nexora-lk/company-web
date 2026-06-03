@@ -65,7 +65,7 @@ export default function Page() {
 
             <section className="relative overflow-hidden">
                 <div className="max-w-content mx-auto px-6 lg:px-10 pt-16 lg:pt-24 pb-12 lg:pb-16">
-                    <div className="flex items-center gap-3 mb-8">
+                    <div className="flex items-center gap-3 mb-8 reveal">
                         <Link href="/" className="num ulink">
                             [ Home ]
                         </Link>
@@ -75,35 +75,35 @@ export default function Page() {
                         <span className="eyebrow">Governance · Compliance</span>
                     </div>
 
-                    <h1 className="font-display text-[56px] sm:text-[78px] lg:text-[112px] leading-[0.95] tracking-tightish max-w-[1100px]">
+                    <h1 className="font-display text-[56px] sm:text-[78px] lg:text-[112px] leading-[0.95] tracking-tightish max-w-[1100px] reveal">
                         Corporate <em className="serif-em">Information</em>,<br />
                         and the ledger behind it.
                     </h1>
 
                     <div className="mt-10 grid grid-cols-12 gap-8 lg:gap-12 items-end">
-                        <p className="col-span-12 lg:col-span-7 text-mute text-[15.5px] leading-[1.7] max-w-[640px]">
+                        <p className="col-span-12 lg:col-span-7 text-mute text-[15.5px] leading-[1.7] max-w-[640px] reveal">
                             Learn about our legal structure, leadership, regulatory compliance, and
                             the strategic partnerships that drive the operations of Prestige Glamour
                             Group of Company across multiple sectors in Sri Lanka.
                         </p>
-                        <div className="col-span-12 lg:col-span-5">
+                        <div className="col-span-12 lg:col-span-5 reveal">
                             <div className="hairline mb-6"></div>
                             <div className="grid grid-cols-3 gap-6 text-[12.5px]">
-                                <div>
+                                <div className="reveal">
                                     <div className="num mb-2">Incorporated</div>
                                     <div className="font-display text-[28px] leading-none">
                                         1998
                                     </div>
                                     <div className="text-mute mt-2">Colombo 07</div>
                                 </div>
-                                <div>
+                                <div className="reveal">
                                     <div className="num mb-2">Auditors</div>
                                     <div className="font-display text-[28px] leading-none">
                                         KPMG
                                     </div>
                                     <div className="text-mute mt-2">Big-Four signed</div>
                                 </div>
-                                <div>
+                                <div className="reveal">
                                     <div className="num mb-2">Compliance</div>
                                     <div className="font-display text-[28px] leading-none">
                                         100%
@@ -120,31 +120,31 @@ export default function Page() {
                 <div className="max-w-content mx-auto px-6 lg:px-10">
                     <div className="grid grid-cols-12 gap-6 lg:gap-10 items-start">
                         <div className="col-span-12 lg:col-span-8 space-y-8">
-                            <div className="info-card p-8 lg:p-10">
-                                <div className="flex items-center gap-3 mb-6">
+                            <div className="info-card p-8 lg:p-10 reveal">
+                                <div className="flex items-center gap-3 mb-6 reveal">
                                     <span className="num">[ 01 ]</span>
                                     <span className="hairline-strong w-[80px]"></span>
                                     <span className="eyebrow">Corporate Information</span>
                                 </div>
-                                <h2 className="font-display text-[36px] lg:text-[48px] leading-[1] tracking-tightish">
+                                <h2 className="font-display text-[36px] lg:text-[48px] leading-[1] tracking-tightish reveal">
                                     Registered under <em className="serif-em">Sri Lanka</em>{' '}
                                     business law.
                                 </h2>
 
                                 <div className="mt-8">
-                                    <div className="info-row">
+                                    <div className="info-row reveal">
                                         <span className="k">Registered name</span>
                                         <span className="v">Prestige Glamour Group (Pvt) Ltd</span>
                                     </div>
-                                    <div className="info-row">
+                                    <div className="info-row reveal">
                                         <span className="k">Company number</span>
                                         <span className="v">PV 00112233</span>
                                     </div>
-                                    <div className="info-row">
+                                    <div className="info-row reveal">
                                         <span className="k">VAT / Tax ID</span>
                                         <span className="v">114-555-789-7000</span>
                                     </div>
-                                    <div className="info-row">
+                                    <div className="info-row reveal">
                                         <span className="k">Registered office</span>
                                         <span className="v">
                                             No. 42, Bauddhaloka Mawatha,
@@ -152,15 +152,15 @@ export default function Page() {
                                             Colombo 07, Sri Lanka
                                         </span>
                                     </div>
-                                    <div className="info-row">
+                                    <div className="info-row reveal">
                                         <span className="k">Auditors</span>
                                         <span className="v">KPMG Sri Lanka</span>
                                     </div>
-                                    <div className="info-row">
+                                    <div className="info-row reveal">
                                         <span className="k">Primary bankers</span>
                                         <span className="v">Commercial Bank of Ceylon · HNB</span>
                                     </div>
-                                    <div className="info-row">
+                                    <div className="info-row reveal">
                                         <span className="k">Regulatory bodies</span>
                                         <span className="v">
                                             SEC SL · CBSL Micro-finance · NGOS
@@ -169,45 +169,45 @@ export default function Page() {
                                 </div>
                             </div>
 
-                            <div className="info-card p-8 lg:p-10">
-                                <div className="flex items-center gap-3 mb-6">
+                            <div className="info-card p-8 lg:p-10 reveal">
+                                <div className="flex items-center gap-3 mb-6 reveal">
                                     <span className="num">[ 02 ]</span>
                                     <span className="hairline-strong w-[80px]"></span>
                                     <span className="eyebrow">Governance &amp; Compliance</span>
                                 </div>
-                                <h2 className="font-display text-[32px] lg:text-[44px] leading-[1.02] tracking-tightish">
+                                <h2 className="font-display text-[32px] lg:text-[44px] leading-[1.02] tracking-tightish reveal">
                                     How we hold ourselves <em className="serif-em">to account</em>.
                                 </h2>
 
-                                <ul className="check mt-8 grid sm:grid-cols-2 gap-x-8 gap-y-4 text-[14.5px] leading-[1.6]">
-                                    <li>Licensed under the Companies Act No. 07 of 2007</li>
-                                    <li>Independent board of directors with quarterly review</li>
-                                    <li>
+                                <ul className="check mt-8 grid sm:grid-cols-2 gap-x-8 gap-y-4 text-[14.5px] leading-[1.6] reveal">
+                                    <li className="reveal">Licensed under the Companies Act No. 07 of 2007</li>
+                                    <li className="reveal">Independent board of directors with quarterly review</li>
+                                    <li className="reveal">
                                         Big-Four audited financial statements, every fiscal year
                                     </li>
-                                    <li>SEC and CBSL regulatory filings kept current</li>
-                                    <li>
+                                    <li className="reveal">SEC and CBSL regulatory filings kept current</li>
+                                    <li className="reveal">
                                         Anti-Money Laundering &amp; KYC policy enforced group-wide
                                     </li>
-                                    <li>Internal audit reports tabled monthly with the Chairman</li>
-                                    <li>Whistle-blower channel routed to an external trustee</li>
-                                    <li>Data-protection compliance aligned to PDPA 2022</li>
+                                    <li className="reveal">Internal audit reports tabled monthly with the Chairman</li>
+                                    <li className="reveal">Whistle-blower channel routed to an external trustee</li>
+                                    <li className="reveal">Data-protection compliance aligned to PDPA 2022</li>
                                 </ul>
                             </div>
 
-                            <div className="info-card p-8 lg:p-10">
-                                <div className="flex items-center gap-3 mb-6">
+                            <div className="info-card p-8 lg:p-10 reveal">
+                                <div className="flex items-center gap-3 mb-6 reveal">
                                     <span className="num">[ 03 ]</span>
                                     <span className="hairline-strong w-[80px]"></span>
                                     <span className="eyebrow">
                                         CSR Policy &amp; NGO Involvement
                                     </span>
                                 </div>
-                                <h2 className="font-display text-[32px] lg:text-[44px] leading-[1.02] tracking-tightish">
+                                <h2 className="font-display text-[32px] lg:text-[44px] leading-[1.02] tracking-tightish reveal">
                                     The work outside <em className="serif-em">the ledger</em>.
                                 </h2>
 
-                                <p className="mt-6 text-mute text-[15px] leading-[1.75] max-w-[640px]">
+                                <p className="mt-6 text-mute text-[15px] leading-[1.75] max-w-[640px] reveal">
                                     Our NGO programmes focus on early-childhood development and on
                                     emerging a new generation of entrepreneurs from agriculture in
                                     the lowest-income rural corners of the island. Each programme is
@@ -215,19 +215,19 @@ export default function Page() {
                                     impact statement.
                                 </p>
 
-                                <ul className="check mt-8 grid sm:grid-cols-2 gap-x-8 gap-y-4 text-[14.5px] leading-[1.6]">
-                                    <li>Early-childhood centres in 12 rural districts</li>
-                                    <li>
+                                <ul className="check mt-8 grid sm:grid-cols-2 gap-x-8 gap-y-4 text-[14.5px] leading-[1.6] reveal">
+                                    <li className="reveal">Early-childhood centres in 12 rural districts</li>
+                                    <li className="reveal">
                                         Drug rehabilitation &amp; reintegration partnership with the
                                         Ministry of Health
                                     </li>
-                                    <li>Women's empowerment co-operatives across nine provinces</li>
-                                    <li>Agricultural micro-grants for first-generation growers</li>
-                                    <li>Annual impact statement, independently verified</li>
-                                    <li>Volunteer days for every group employee, quarterly</li>
+                                    <li className="reveal">Women's empowerment co-operatives across nine provinces</li>
+                                    <li className="reveal">Agricultural micro-grants for first-generation growers</li>
+                                    <li className="reveal">Annual impact statement, independently verified</li>
+                                    <li className="reveal">Volunteer days for every group employee, quarterly</li>
                                 </ul>
 
-                                <div className="mt-8 flex flex-wrap gap-3">
+                                <div className="mt-8 flex flex-wrap gap-3 reveal">
                                     <a href="#" className="btn btn-primary">
                                         Download Annual Report 2025 <span className="arrow">↓</span>
                                     </a>
@@ -238,23 +238,23 @@ export default function Page() {
                             </div>
                         </div>
 
-                        <aside className="col-span-12 lg:col-span-4 lg:sticky lg:top-24 space-y-6">
-                            <div className="sidebar-dark p-8 lg:p-10">
-                                <div className="flex items-center gap-3 mb-6">
+                        <aside className="col-span-12 lg:col-span-4 lg:sticky lg:top-24 space-y-6 reveal">
+                            <div className="sidebar-dark p-8 lg:p-10 reveal">
+                                <div className="flex items-center gap-3 mb-6 reveal">
                                     <span className="num text-ondark/70!">[ Contact ]</span>
                                     <span className="hairline-strong w-[60px] bg-[rgba(241,236,224,0.32)]!"></span>
                                 </div>
-                                <h3 className="font-display text-[32px] leading-[1.02] tracking-tightish">
+                                <h3 className="font-display text-[32px] leading-[1.02] tracking-tightish reveal">
                                     Connect with our <em className="serif-em">Investment</em> Team
                                     Today
                                 </h3>
-                                <p className="mt-4 text-[14px] leading-[1.7] opacity-80">
+                                <p className="mt-4 text-[14px] leading-[1.7] opacity-80 reveal">
                                     Speak to a director directly. We respond to investor enquiries
                                     within one working day, in person from the Colombo head office.
                                 </p>
 
-                                <div className="mt-8 space-y-4 text-[14px]">
-                                    <div className="flex items-start gap-3">
+                                <div className="mt-8 space-y-4 text-[14px] reveal">
+                                    <div className="flex items-start gap-3 reveal">
                                         <span className="grid place-items-center w-7 h-7 rounded-full bg-ondark/10 text-ondark text-xs">
                                             ✆
                                         </span>
@@ -265,7 +265,7 @@ export default function Page() {
                                             <div>+94 11 250 8800</div>
                                         </div>
                                     </div>
-                                    <div className="flex items-start gap-3">
+                                    <div className="flex items-start gap-3 reveal">
                                         <span className="grid place-items-center w-7 h-7 rounded-full bg-ondark/10 text-ondark text-xs">
                                             @
                                         </span>
@@ -276,7 +276,7 @@ export default function Page() {
                                             <div>invest@prestigeglamour.lk</div>
                                         </div>
                                     </div>
-                                    <div className="flex items-start gap-3">
+                                    <div className="flex items-start gap-3 reveal">
                                         <span className="grid place-items-center w-7 h-7 rounded-full bg-ondark/10 text-ondark text-xs">
                                             ⌖
                                         </span>
@@ -293,15 +293,17 @@ export default function Page() {
                                     </div>
                                 </div>
 
-                                <Link
-                                    href="/#contact"
-                                    className="btn bg-bg! text-ink! hover:bg-accent! hover:text-ondark! mt-8 w-full justify-center"
-                                >
-                                    Schedule a meeting <span className="arrow">→</span>
-                                </Link>
+                                <div className="reveal">
+                                    <Link
+                                        href="/#contact"
+                                        className="btn bg-bg! text-ink! hover:bg-accent! hover:text-ondark! mt-8 w-full justify-center"
+                                    >
+                                        Schedule a meeting <span className="arrow">→</span>
+                                    </Link>
+                                </div>
                             </div>
 
-                            <div className="info-card p-6">
+                            <div className="info-card p-6 reveal">
                                 <div className="num mb-3">Quick facts</div>
                                 <div className="font-display text-[22px] leading-tight">
                                     Six businesses.
@@ -310,19 +312,19 @@ export default function Page() {
                                 </div>
                                 <div className="hairline my-4"></div>
                                 <div className="grid grid-cols-2 gap-4 text-[12.5px]">
-                                    <div>
+                                    <div className="reveal">
                                         <div className="num">Founded</div>
                                         <div className="font-display text-[18px]">1998</div>
                                     </div>
-                                    <div>
+                                    <div className="reveal">
                                         <div className="num">Branches</div>
                                         <div className="font-display text-[18px]">29</div>
                                     </div>
-                                    <div>
+                                    <div className="reveal">
                                         <div className="num">Headcount</div>
                                         <div className="font-display text-[18px]">8,400</div>
                                     </div>
-                                    <div>
+                                    <div className="reveal">
                                         <div className="num">Provinces</div>
                                         <div className="font-display text-[18px]">9</div>
                                     </div>
@@ -335,18 +337,19 @@ export default function Page() {
 
             <section className="pb-24 lg:pb-36">
                 <div className="max-w-content mx-auto px-6 lg:px-10">
-                    <div className="relative rounded-[24px] overflow-hidden min-h-[320px] flex items-end">
+                    <div className="relative rounded-[24px] overflow-hidden min-h-[320px] flex items-end reveal">
                         <Photo
                             src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779442665/corporate-office_lq3x7m.jpg"
-                            alt=""
-                            priority
+                            alt="Corporate Office"
+                            fill
                             className="absolute inset-0 w-full h-full object-cover"
+                            sizes="100vw"
                         />
                         <div className="absolute inset-0 bg-linear-to-tr from-ink/85 via-ink/55 to-ink/30"></div>
 
-                        <div className="relative w-full p-8 lg:p-14 text-ondark">
+                        <div className="relative w-full p-8 lg:p-14 text-ondark reveal">
                             <div className="grid grid-cols-12 gap-8 items-end">
-                                <div className="col-span-12 lg:col-span-8">
+                                <div className="col-span-12 lg:col-span-8 reveal">
                                     <span className="num text-ondark/80!">[ Disclosure ]</span>
                                     <h3 className="font-display text-[40px] lg:text-[56px] leading-[0.98] tracking-tightish mt-4">
                                         Full disclosure, on <em className="serif-em">request</em>.
@@ -357,7 +360,7 @@ export default function Page() {
                                         NDA.
                                     </p>
                                 </div>
-                                <div className="col-span-12 lg:col-span-4 flex flex-col gap-3 lg:items-end">
+                                <div className="col-span-12 lg:col-span-4 flex flex-col gap-3 lg:items-end reveal">
                                     <Link
                                         href="/#contact"
                                         className="btn bg-bg! text-ink! hover:bg-accent! hover:text-ondark!"

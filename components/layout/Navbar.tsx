@@ -16,12 +16,13 @@ export default function Navbar() {
                 <Link href="/" className="flex items-center gap-2 sm:gap-2.5 group shrink-0">
                     <div className="relative w-9 sm:w-10 xl:w-11 h-9 sm:h-10 xl:h-11 overflow-hidden flex items-center justify-center p-0.5 sm:p-1">
                         <Photo
-                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779442467/logo_eszhjw.png"
+                            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779442665/logo_eszhjw.png"
                             alt={brand.name}
                             width={32}
                             height={32}
                             className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"
                             priority
+                            sizes="32px"
                         />
                     </div>
                     <span className="hidden sm:flex flex-col leading-none">

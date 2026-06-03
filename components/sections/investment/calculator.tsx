@@ -5,6 +5,12 @@ import { useState, useEffect, useCallback } from 'react';
 const MIN = 200_000;
 const FALLBACK_RATE = 320;
 
+// Return rates by year and plan type
+const RETURN_RATES = {
+  annual: { 1: 60, 2: 70, 3: 80, 4: 90, 5: 100 },
+  monthly: { 1: 40, 2: 41, 3: 42, 4: 43, 5: 45 },
+};
+
 function fmtRs(n: number) {
   return 'Rs. ' + Math.round(n).toLocaleString('en-US');
 }
@@ -28,6 +34,7 @@ function ResultRow({ label, rs, usd }: { label: string, rs: string, usd: string 
 
 export default function CalculatorSection() {
   const [plan, setPlan]       = useState('annual');
+  const [year, setYear]       = useState(1);
   const [raw, setRaw]         = useState('200,000');
   const [rate, setRate]       = useState<number | null>(null);
   const [rateLabel, setLabel] = useState('Fetching rate…');
@@ -76,10 +83,17 @@ export default function CalculatorSection() {
   const isValid = amount >= MIN;
   const n       = isValid ? amount : MIN;
 
-  const annualProfit    = n * 0.60;
+  // Get return rate based on plan and year
+  const returnRate = plan === 'annual'
+    ? RETURN_RATES.annual[year as keyof typeof RETURN_RATES.annual]
+    : RETURN_RATES.monthly[year as keyof typeof RETURN_RATES.monthly];
+
+  const returnPercent = returnRate / 100;
+
+  const annualProfit    = n * returnPercent;
   const annualTotal     = n + annualProfit;
-  const monthlyPayout  = (n * 0.40) / 12;
-  const monthlyAnnual  = n * 0.40;
+  const monthlyPayout  = (n * returnPercent) / 12;
+  const monthlyAnnual  = n * returnPercent;
   const monthlyTotal   = n + monthlyAnnual;
 
   const handleInput = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
@@ -143,6 +157,26 @@ export default function CalculatorSection() {
               ))}
             </div>
 
+            {/* Year Toggle */}
+            <div className="grid grid-cols-5 gap-1.5 bg-white/50 p-1.5 rounded-2xl border border-ink/10 shadow-sm mb-6 xs:mb-8 backdrop-blur-sm">
+              {[1, 2, 3, 4, 5].map((y) => (
+                <button
+                  key={y}
+                  onClick={() => setYear(y)}
+                  className={`py-3 px-2 xs:px-3 rounded-xl text-[13px] xs:text-[14px] font-semibold transition-all duration-300 flex flex-col items-center justify-center gap-0.5 ${
+                    year === y
+                      ? 'bg-accent text-white shadow-xl scale-[1.02]'
+                      : 'text-mute hover:text-ink hover:bg-white'
+                  }`}
+                >
+                  <span className="font-display text-[13px] xs:text-[14px]">{y}Y</span>
+                  <span className={`text-[9px] xs:text-[10px] ${year === y ? 'text-white/80' : 'opacity-60'}`}>
+                    {plan === 'annual' ? `${RETURN_RATES.annual[y as keyof typeof RETURN_RATES.annual]}%` : `${RETURN_RATES.monthly[y as keyof typeof RETURN_RATES.monthly]}%`}
+                  </span>
+                </button>
+              ))}
+            </div>
+
             {/* Input & Results Card */}
             <div className="bg-white rounded-3xl border border-ink/5 p-6 xs:p-8 sm:p-10 shadow-2xl space-y-8 xs:space-y-10">
               {/* Amount Input */}
@@ -175,7 +209,7 @@ export default function CalculatorSection() {
                     {plan === 'annual' ? 'Annual Payout' : 'Monthly Distribution'}
                    </h3>
                    <span className="px-4 py-1.5 rounded-full bg-accent/10 text-accent text-[10px] xs:text-[11px] font-bold uppercase tracking-widest whitespace-nowrap">
-                    {plan === 'annual' ? '60% Net Yield' : '40% Annualized'}
+                    {plan === 'annual' ? `${returnRate}% Net Yield` : `${returnRate}% Annualized`}
                    </span>
                 </div>
                 <div className="bg-bg/40 rounded-2xl p-6 xs:p-8 space-y-2">

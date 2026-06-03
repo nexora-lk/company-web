@@ -55,7 +55,7 @@ export default function OverviewSection() {
 
                     {/* Right: Image — stacks on top on mobile */}
                     <aside className="col-span-12 lg:col-span-5 order-1 lg:order-2 space-y-4 xs:gap-6 lg:sticky lg:top-32 mt-4 lg:mt-0 reveal">
-                        <figure className="rounded-[18px] xs:rounded-[24px] overflow-hidden aspect-[3/2] xs:aspect-[4/3] lg:aspect-[4/5] shadow-2xl transition-transform duration-700 hover:scale-[1.02] reveal">
+                        <figure className="relative rounded-[18px] xs:rounded-[24px] overflow-hidden aspect-[3/2] xs:aspect-[4/3] lg:aspect-[4/5] shadow-2xl transition-transform duration-700 hover:scale-[1.02] reveal">
                             <Photo
                                 src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780117658/sabrianna-Talnaz9Bug0-unsplash_fx4qzs.jpg"
                                 alt="Premium sapphire gemstones"

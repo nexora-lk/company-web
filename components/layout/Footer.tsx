@@ -98,7 +98,15 @@ export default function Footer() {
                 <div className="hairline mt-12 sm:mt-16 xl:mt-20 bg-[rgba(241,236,224,0.18)]!"></div>
 
                 <div className="mt-6 flex flex-wrap items-center justify-between gap-4 text-[12px] text-ondark/60">
-                    <div>© 2013 – 2026 Prestige Glamour Working Capital Solutions Group of Company (Pvt) Limited. Payagala, Sri Lanka.</div>
+                    <a
+                        href="https://nextora.lk"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="ulink hover:opacity-100 opacity-90"
+                        aria-label="Visit Nextora homepage"
+                    >
+                        © 2026.nextora.lk - All Right Reserved
+                    </a>
                     <div className="flex flex-wrap items-center gap-2 -mr-3">
                         {footerLegal.map((link) => (
                             <a

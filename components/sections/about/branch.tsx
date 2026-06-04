@@ -9,13 +9,15 @@ export default function BranchSection() {
                             <span className="eyebrow text-[10px] xs:text-xs">Our Branch Network</span>
                         </div>
                         <h2 className="font-display text-3xl xs:text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[0.98] tracking-tightish">
-                            Twenty-three offices, <em className="serif-em">one</em> island.
+                            Twenty-three offices, <em className="serif-em">Always</em> open.
                         </h2>
                     </div>
                     <div className="col-span-12 lg:col-span-5 reveal">
                         <p className="text-[13.5px] xs:text-[14px] sm:text-[14.5px] lg:text-base text-mute leading-[1.7] max-w-full sm:max-w-[420px]">
-                            From the head office in Payagala through to the Northern frontier, here is
-                            where we keep doors open for clients, growers and co-operative members.
+                            One in Kalutara. Operations in every major region—Eastern Province, Southern,
+                            Central Highlands, North. If you invest with us, you can visit. Walk the plantations.
+                            See the microfinance borrowers. Meet the gem cutters. Meet our teams managing your
+                            capital. Twenty-three locations. One mission: Earn your trust through transparency.
                         </p>
                     </div>
                 </div>

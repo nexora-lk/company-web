@@ -123,13 +123,13 @@ export default function CareersPageClient() {
                             </Link>
                             <span className="num text-ondark/80! block text-[10px] sm:text-[11px]">[ Careers ]</span>
                             <h1 className="font-display text-[36px] sm:text-[48px] md:text-[60px] lg:text-[72px] leading-[0.96] tracking-tightish mt-3 sm:mt-4">
-                                Build your <em className="serif-em">future</em>
+                                Build Your <em className="serif-em">Career</em> in Capital Deployment
                                 <br />
                                 with us.
                             </h1>
                             <p className="mt-4 sm:mt-6 text-ondark/70 max-w-full sm:max-w-lg text-[14px] sm:text-base lg:text-lg leading-relaxed">
-                                We&apos;re looking for curious, driven people to join a conglomerate that&apos;s
-                                shaping Sri Lanka&apos;s enduring industries. Explore our open positions below.
+                                Join 800+ professionals managing investor capital across seven divisions. Work
+                                where your impact generates real returns.
                             </p>
                         </div>
                     </div>
@@ -140,7 +140,11 @@ export default function CareersPageClient() {
             <section className="pb-16 sm:pb-20 md:pb-24 lg:pb-28 xl:pb-32">
                 <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-10">
                     <div className="reveal">
-                        <span className="num text-[10px] sm:text-[11px]">[ Why join us ]</span>
+                        {/*<span className="num text-[10px] sm:text-[11px]">[ Why join us ]</span>*/}
+                        <div className="flex items-center gap-2 xs:gap-3 mb-5 sm:mb-6 reveal">
+                            <span className="hairline-strong w-16 xs:w-20 sm:w-24 lg:w-[120px]"></span>
+                            <span className="eyebrow text-[10px] xs:text-xs">Why join us</span>
+                        </div>
                         <h2 className="font-display text-[30px] sm:text-[38px] md:text-[44px] lg:text-[48px] leading-tight tracking-tightish mt-2 sm:mt-3 mb-8 sm:mb-10 lg:mb-12">
                             A place to <em className="serif-em">grow</em>
                         </h2>
@@ -149,18 +153,18 @@ export default function CareersPageClient() {
                         {[
                             {
                                 num: '01',
-                                title: 'Diverse Industries',
-                                desc: 'Work across plantation, microfinance, gems, hospitality, real estate, and agri-export — all under one roof.',
+                                title: 'Real Capital, Real Impact',
+                                desc: "You're not pushing papers. You\'re managing capital that generates 60% annual returns for 3,200+ investors. Plantation operations, real estate development, gems exports, microfinance — every role impacts real business outcomes.",
                             },
                             {
                                 num: '02',
-                                title: 'Real Impact',
-                                desc: 'Contribute to businesses that shape communities, employ 8,400+ people, and drive sustainable growth across Sri Lanka.',
+                                title: 'Six Career Paths',
+                                desc: "Plantation manager, real estate coordinator, microfinance officer, gem trader, FMCG operator, share market analyst, or education manager. Pick your division. Grow your expertise. One company, multiple specialties.",
                             },
                             {
                                 num: '03',
-                                title: 'Growth & Learning',
-                                desc: 'Access mentorship, cross-division exposure, and hands-on leadership opportunities from day one.',
+                                title: 'Growth in a Growing Company',
+                                desc: "14 years of operations. 800+ employees. 23 branches. 3,200+ investors. We\'re scaling. Leadership opportunities exist across all levels. From coordinator to manager to division head — clear progression.",
                             },
                         ].map((v) => (
                             <div
@@ -184,68 +188,76 @@ export default function CareersPageClient() {
                         <h2 className="font-display text-[30px] sm:text-[38px] md:text-[44px] lg:text-[48px] leading-tight tracking-tightish mt-2 sm:mt-3 mb-3 sm:mb-4">
                             Current <em className="serif-em">openings</em>
                         </h2>
-                        <p className="text-mute text-[13.5px] sm:text-sm mb-8 sm:mb-10 lg:mb-12 max-w-full sm:max-w-xl">
-                            {OPEN_ROLES.length} roles across our group. Click &quot;Apply&quot; on any role to fill
-                            out a quick application form.
-                        </p>
+                        {OPEN_ROLES.length > 0 ? (
+                            <p className="text-mute text-[13.5px] sm:text-sm mb-8 sm:mb-10 lg:mb-12 max-w-full sm:max-w-xl">
+                                {OPEN_ROLES.length} roles across our group. Click &quot;Apply&quot; on any role to fill
+                                out a quick application form.
+                            </p>
+                        ) : (
+                            <p className="text-mute text-[13.5px] sm:text-sm mb-8 sm:mb-10 lg:mb-12 max-w-full sm:max-w-xl">
+                                We don&apos;t have any open positions at the moment. Check back soon or send your CV to our HR team below.
+                            </p>
+                        )}
                     </div>
 
-                    <div className="space-y-3 sm:space-y-4">
-                        {OPEN_ROLES.map((role, i) => (
-                            <div
-                                key={role.id}
-                                className="reveal info-card p-5 sm:p-6 lg:p-8 group transition-all duration-300 hover:-translate-y-0.5"
-                            >
-                                <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 sm:gap-6">
-                                    <div className="flex-1 min-w-0">
-                                        <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-2">
-                                            <span className="num text-accent! text-[10px] sm:text-[11px]">
-                                                {String(i + 1).padStart(2, '0')}
-                                            </span>
-                                            <span
-                                                className={`inline-flex items-center px-2 py-0.5 rounded-full text-[10px] sm:text-[11px] font-medium border ${getDeptColor(role.department)}`}
-                                            >
-                                                {role.department}
-                                            </span>
-                                            <span className="text-[10px] sm:text-[11px] text-mute">{role.type}</span>
+                    {OPEN_ROLES.length > 0 && (
+                        <div className="space-y-3 sm:space-y-4">
+                            {OPEN_ROLES.map((role, i) => (
+                                <div
+                                    key={role.id}
+                                    className="reveal info-card p-5 sm:p-6 lg:p-8 group transition-all duration-300 hover:-translate-y-0.5"
+                                >
+                                    <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 sm:gap-6">
+                                        <div className="flex-1 min-w-0">
+                                            <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-2">
+                                                <span className="num text-accent! text-[10px] sm:text-[11px]">
+                                                    {String(i + 1).padStart(2, '0')}
+                                                </span>
+                                                <span
+                                                    className={`inline-flex items-center px-2 py-0.5 rounded-full text-[10px] sm:text-[11px] font-medium border ${getDeptColor(role.department)}`}
+                                                >
+                                                    {role.department}
+                                                </span>
+                                                <span className="text-[10px] sm:text-[11px] text-mute">{role.type}</span>
+                                            </div>
+                                            <h3 className="font-display text-[18px] sm:text-[20px] lg:text-[22px] leading-tight">
+                                                {role.title}
+                                            </h3>
+                                            <p className="text-mute text-[13px] sm:text-sm mt-2 leading-relaxed max-w-full lg:max-w-2xl">
+                                                {role.description}
+                                            </p>
+                                            <div className="flex items-center gap-2 mt-3 sm:mt-4 text-mute text-[11px] sm:text-[12px]">
+                                                <svg
+                                                    width="14"
+                                                    height="14"
+                                                    viewBox="0 0 24 24"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    strokeWidth="1.5"
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                    className="shrink-0"
+                                                >
+                                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                                    <circle cx="12" cy="10" r="3" />
+                                                </svg>
+                                                {role.location}
+                                            </div>
                                         </div>
-                                        <h3 className="font-display text-[18px] sm:text-[20px] lg:text-[22px] leading-tight">
-                                            {role.title}
-                                        </h3>
-                                        <p className="text-mute text-[13px] sm:text-sm mt-2 leading-relaxed max-w-full lg:max-w-2xl">
-                                            {role.description}
-                                        </p>
-                                        <div className="flex items-center gap-2 mt-3 sm:mt-4 text-mute text-[11px] sm:text-[12px]">
-                                            <svg
-                                                width="14"
-                                                height="14"
-                                                viewBox="0 0 24 24"
-                                                fill="none"
-                                                stroke="currentColor"
-                                                strokeWidth="1.5"
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                                className="shrink-0"
+                                        <div className="flex-shrink-0 w-full lg:w-auto mt-2 lg:mt-0">
+                                            <button
+                                                onClick={() => handleApply(role.id)}
+                                                className={`btn w-full lg:w-auto justify-center ${selectedRole === role.id && showForm ? 'bg-accent! text-ondark!' : 'btn-primary'} text-[12px] sm:text-sm`}
                                             >
-                                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                                                <circle cx="12" cy="10" r="3" />
-                                            </svg>
-                                            {role.location}
+                                                {selectedRole === role.id && showForm ? 'Selected' : 'Apply'}
+                                                <span className="arrow">→</span>
+                                            </button>
                                         </div>
-                                    </div>
-                                    <div className="flex-shrink-0 w-full lg:w-auto mt-2 lg:mt-0">
-                                        <button
-                                            onClick={() => handleApply(role.id)}
-                                            className={`btn w-full lg:w-auto justify-center ${selectedRole === role.id && showForm ? 'bg-accent! text-ondark!' : 'btn-primary'} text-[12px] sm:text-sm`}
-                                        >
-                                            {selectedRole === role.id && showForm ? 'Selected' : 'Apply'}
-                                            <span className="arrow">→</span>
-                                        </button>
                                     </div>
                                 </div>
-                            </div>
-                        ))}
-                    </div>
+                            ))}
+                        </div>
+                    )}
                 </div>
             </section>
 
@@ -330,10 +342,10 @@ export default function CareersPageClient() {
                             file and reach out when the right opportunity opens.
                         </p>
                         <a
-                            href="mailto:careers@prestigeglamour.lk"
+                            href="mailto:careers@prestigeglamourgroupofcompany.com"
                             className="btn btn-primary text-[12px] sm:text-sm w-full sm:w-auto justify-center"
                         >
-                            Email careers@prestigeglamour.lk <span className="arrow">→</span>
+                            Email careers@prestigeglamourgroupofcompany.com <span className="arrow">→</span>
                         </a>
                     </div>
                 </div>

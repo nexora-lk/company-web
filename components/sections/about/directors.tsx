@@ -14,39 +14,14 @@ export default function DirectorsSection() {
                         Directors <em className="serif-em">Board</em>.
                     </h2>
                     <p className="mt-4 xs:mt-6 text-mute text-[14px] xs:text-[15px] leading-[1.7] max-w-full sm:max-w-[480px] mx-auto font-light">
-                        The stewards who hold every quarterly review and sign every line of the
-                        audited statement. Supporting sustainable growth and the people who tend the soil.
+                        Three leaders who personally oversee capital deployment across all divisions.
+                        Quarterly audits. Full financial transparency. Direct investor access.
+                        They don&#39;t hide behind corporate structures—they sign every statement,
+                        approve every investment, and stake their reputations on consistent returns.
                     </p>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 xs:gap-5">
-                    <article className="dir-card team-card reveal">
-                        <figure className="portrait overflow-hidden">
-                            <Photo
-                                src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780278288/yatawarasir-profile_wroc25.jpg"
-                                alt="Mr. Y. M. D. T. Yatawara"
-                                fill
-                                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                                className="w-full h-full object-cover"
-                            />
-                        </figure>
-                        <div className="p-6 xs:p-8 lg:p-10 flex flex-col flex-1">
-                            <div className="flex items-center justify-between mb-4">
-                                <span className="num text-ondark/70! text-[10px] xs:text-[11px]">Chairman / Director</span>
-                            </div>
-                            <h3 className="font-display text-[26px] xs:text-[30px] lg:text-[34px] leading-tight">
-                                Mr. Y. M. D. T. <em className="serif-em">Yatawara</em>
-                            </h3>
-                            <div className="mt-2 text-[13px] xs:text-[14px] text-accent font-medium">Founder & CEO</div>
-                            <div className="hairline my-5 bg-white/10!"></div>
-                            <p className="text-[13px] xs:text-[13.5px] leading-[1.7] opacity-80 font-light">
-                                BSc (Sp) in Marketing Management, MBA — University of Mainz.
-                                Specialist in International Business & Entrepreneurship. Sourcing
-                                expertise in gems and high-yield agricultural investments.
-                            </p>
-                        </div>
-                    </article>
-
                     <article className="dir-card team-card reveal">
                         <figure className="portrait overflow-hidden">
                             <Photo
@@ -64,7 +39,6 @@ export default function DirectorsSection() {
                             <h3 className="font-display text-[26px] xs:text-[30px] lg:text-[34px] leading-tight">
                                 Mr. Nilanga <em className="serif-em">Amunugama</em>
                             </h3>
-                            <div className="mt-2 text-[13px] xs:text-[14px] text-accent font-medium">Executive Head of Marketing</div>
                             <div className="hairline my-5 bg-white/10!"></div>
                             <p className="text-[13px] xs:text-[13.5px] leading-[1.7] opacity-80 font-light">
                                 BCom Specialist, Chartered Accountant. Responsible for group-wide 
@@ -91,12 +65,37 @@ export default function DirectorsSection() {
                             <h3 className="font-display text-[26px] xs:text-[30px] lg:text-[34px] leading-tight">
                                 Mrs. L. Manisha <em className="serif-em">Amaratunga</em>
                             </h3>
-                            <div className="mt-2 text-[13px] xs:text-[14px] text-accent font-medium">Head of HR & Corporate Operations</div>
                             <div className="hairline my-5 bg-white/10!"></div>
                             <p className="text-[13px] xs:text-[13.5px] leading-[1.7] opacity-80 font-light">
                                 Specialist in Labour Productivity and Human Resource Management. 
                                 Oversees the group&apos;s 800+ employee direct-payroll structure across 
                                 23 national branch locations.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article className="dir-card team-card reveal">
+                        <figure className="portrait overflow-hidden">
+                            <Photo
+                                src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780278288/yatawarasir-profile_wroc25.jpg"
+                                alt="Mr. Y. M. D. T. Yatawara"
+                                fill
+                                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                className="w-full h-full object-cover"
+                            />
+                        </figure>
+                        <div className="p-6 xs:p-8 lg:p-10 flex flex-col flex-1">
+                            <div className="flex items-center justify-between mb-4">
+                                <span className="num text-ondark/70! text-[10px] xs:text-[11px]">Director</span>
+                            </div>
+                            <h3 className="font-display text-[26px] xs:text-[30px] lg:text-[34px] leading-tight">
+                                Mr. Y. M. D. T. <em className="serif-em">Yatawara</em>
+                            </h3>
+                            <div className="hairline my-5 bg-white/10!"></div>
+                            <p className="text-[13px] xs:text-[13.5px] leading-[1.7] opacity-80 font-light">
+                                BSc (Sp) in Marketing Management, MBA — University of Mainz.
+                                Specialist in International Business & Entrepreneurship. Sourcing
+                                expertise in gems and high-yield agricultural investments.
                             </p>
                         </div>
                     </article>

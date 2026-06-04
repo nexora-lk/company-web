@@ -5,22 +5,18 @@ import { useEffect, useRef, useState } from 'react';
 // ── Background video playlist ───────────────────────────────────────────────
 const BG_VIDEOS = [
     {
-        // User's actual uploaded video
         src: 'https://res.cloudinary.com/ddxvnb0nk/video/upload/q_auto/f_auto/v1780332964/plantation_h4uxzp.mp4',
         label: 'Wildlife · Sri Lanka',
     },
     {
-        // Demo placeholder video
         src: 'https://res.cloudinary.com/ddxvnb0nk/video/upload/q_auto/f_auto/v1780332129/gem_hlhxaz.mp4',
         label: 'Ocean · Coastal Life',
     },
     {
-        // Demo placeholder video
         src: 'https://res.cloudinary.com/ddxvnb0nk/video/upload/q_auto/f_auto/v1780331821/real_estate_jrkcio.mp4',
         label: 'Culture · Heritage',
     },
     {
-        // Demo placeholder video
         src: 'https://res.cloudinary.com/ddxvnb0nk/video/upload/q_auto/f_auto/v1780331759/microfinance_rfyjc4.mp4',
         label: 'Landscape · Highlands',
     },
@@ -30,17 +26,13 @@ export default function HeroSection() {
     const [current, setCurrent] = useState(0);
     const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
 
-    // Advance to next video — wraps back to 0 (infinite loop)
     const advance = (from: number) => {
         setCurrent((prev) => {
-            // Only advance if the event came from the currently active video.
-            // This prevents background videos with 404 errors from skipping the active video.
             if (prev !== from) return prev;
             return (prev + 1) % BG_VIDEOS.length;
         });
     };
 
-    // Pause all → play active whenever current changes
     useEffect(() => {
         BG_VIDEOS.forEach((_, i) => {
             const el = videoRefs.current[i];

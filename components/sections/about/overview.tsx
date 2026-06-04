@@ -8,13 +8,13 @@ export default function OverviewSection() {
                     <div className="col-span-12 lg:col-span-7">
                         <div className="flex items-center gap-2 xs:gap-3 mb-5 sm:mb-6 reveal">
                             <span className="hairline-strong w-16 xs:w-20 sm:w-24 lg:w-[120px]"></span>
-                            <span className="eyebrow text-[10px] xs:text-xs">Overview · From the Chairman</span>
+                            <span className="eyebrow text-[10px] xs:text-xs">From The Executive Head</span>
                         </div>
 
                         <h2 className="font-display text-3xl xs:text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[0.98] tracking-tightish text-ink reveal">
-                            A letter from <em className="serif-em">Mr. Y. M. D. T.</em>
+                            A letter from
                             <br />
-                            Yatawara, Chairman.
+                            Mr. Nilanga Amunugama , Executive Head.
                         </h2>
 
                         <div className="mt-8 xs:mt-10 space-y-4 xs:space-y-6 text-[14px] xs:text-[15px] leading-relaxed sm:leading-[1.75] text-mute max-w-full sm:max-w-[640px] font-light reveal">
@@ -22,37 +22,44 @@ export default function OverviewSection() {
                                 <span className="font-display text-4xl xs:text-5xl text-ink float-left mr-3 leading-[0.8] mt-1">
                                     P
                                 </span>
-                                restige Glamour Working Capital Solutions was built on a simple belief:
-                                that investors deserve to see exactly where their money goes,
-                                and to receive returns that reflect real business performance — not projections or
-                                promises. Since 2013, we have operated seven divisions with full financial transparency,
-                                quarterly audits, and a commitment to paying every investor on time.
+                                restige Glamour Working Capital Solutions was built on a simple belief: investors
+                                deserve to see exactly where their money goes, and to receive returns that reflect
+                                real business performance — not projections or promises.
                             </p>
                             <p>
-                                Our 23 branches across 8 provinces are not just offices — they are the proof that
-                                we operate at scale, on the ground, with real people and real assets.
-                                Every investment with us is backed by land you can visit, crops you can see growing,
-                                gems you can hold in your hand, and loan books you can audit.
-                                That is our commitment to you.
+                                Since 2013, I have worked alongside our leadership to deploy capital across seven
+                                divisions with complete financial transparency, quarterly audits, and a commitment
+                                to paying every investor on time. As Executive Head of Finance and Operations, I
+                                oversee the systems that make this possible.
                             </p>
                             <p>
-                                By bringing overseas investment into Sri Lankan agriculture, gems, and enterprise,
-                                we increase the inflow of foreign exchange to the island while delivering strong
-                                returns to our investors. That is the work — and we do it openly, every quarter,
-                                with audited numbers.
+                                Our 23 branches across 8 provinces are not just offices — they are proof that we
+                                operate at scale, on the ground, with real people managing real assets. Every
+                                investor payment flows through our financial controls. Every division's performance
+                                is verified by my team. Every quarterly audit bears my signature.
+                            </p>
+                            <p>
+                                By bringing overseas investment into Sri Lankan agriculture, gems, real estate,
+                                and enterprise, we increase foreign exchange to the island while delivering
+                                strong returns to our investors. We do this openly, every quarter, with audited
+                                numbers.
+                            </p>
+                            <p>
+                                That is the work. That is my commitment to you.
                             </p>
                         </div>
 
                         <div className="mt-8 xs:mt-10 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8 reveal">
                             <div>
                                 <div className="font-display text-2xl xs:text-[26px] leading-none text-ink">
-                                    Y. M. D. T. Yatawara
+                                    Nilanga Amunugama
                                 </div>
-                                <div className="num mt-2 text-accent">Chairman · Prestige Glamour Group</div>
+                                <div className="num mt-2 text-accent">Executive Head · Finance & Operations</div>
+                                <div className="num mt-2 text-accent">Prestige Glamour Group of Company</div>
                             </div>
                             <div className="hidden md:block hairline-strong w-16"></div>
                             <div className="hidden sm:block font-display italic text-xl xs:text-[22px] text-mute/60">
-                                — Colombo, 2026
+                                Kaluthara, 2026
                             </div>
                         </div>
                     </div>

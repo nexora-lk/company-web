@@ -3,6 +3,8 @@
 import { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { getEmailJsConfig } from '@/lib/emailjs';
+import { careersApplicationSchema, extractFieldErrors } from '@/lib/form-schemas';
+import { ZodError } from 'zod';
 
 interface CareersApplicationFormProps {
     roleTitle?: string;
@@ -12,6 +14,7 @@ export default function CareersApplicationForm({ roleTitle }: CareersApplication
     const formRef = useRef<HTMLFormElement>(null);
     const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
     const [errorMessage, setErrorMessage] = useState('');
+    const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -19,6 +22,31 @@ export default function CareersApplicationForm({ roleTitle }: CareersApplication
 
         setStatus('submitting');
         setErrorMessage('');
+        setFieldErrors({});
+
+        // Extract form data
+        const formData = new FormData(formRef.current);
+        const data: Record<string, unknown> = {
+            user_name: formData.get('user_name'),
+            user_email: formData.get('user_email'),
+            user_phone: formData.get('user_phone'),
+            applied_role: formData.get('applied_role'),
+            user_experience: formData.get('user_experience'),
+            user_location: formData.get('user_location'),
+            user_message: formData.get('user_message'),
+        };
+
+        // Validate with Zod
+        try {
+            await careersApplicationSchema.parseAsync(data);
+        } catch (error) {
+            if (error instanceof ZodError) {
+                setFieldErrors(extractFieldErrors(error));
+                setStatus('error');
+                setErrorMessage('Please correct the errors in the form.');
+                return;
+            }
+        }
 
         const { serviceId, templateId, publicKey } = getEmailJsConfig('careers');
 
@@ -76,6 +104,7 @@ export default function CareersApplicationForm({ roleTitle }: CareersApplication
                         placeholder="Your full name"
                         required
                     />
+                    {fieldErrors.user_name && <p className="text-red-500 text-xs mt-1">{fieldErrors.user_name}</p>}
                 </label>
                 <label className="block">
                     <div className="num mb-1 text-[10px] sm:text-[11px]">02 — Email</div>
@@ -86,6 +115,7 @@ export default function CareersApplicationForm({ roleTitle }: CareersApplication
                         placeholder="you@example.com"
                         required
                     />
+                    {fieldErrors.user_email && <p className="text-red-500 text-xs mt-1">{fieldErrors.user_email}</p>}
                 </label>
                 <label className="block">
                     <div className="num mb-1 text-[10px] sm:text-[11px]">03 — Phone</div>
@@ -96,6 +126,7 @@ export default function CareersApplicationForm({ roleTitle }: CareersApplication
                         placeholder="+94 …"
                         required
                     />
+                    {fieldErrors.user_phone && <p className="text-red-500 text-xs mt-1">{fieldErrors.user_phone}</p>}
                 </label>
                 <label className="block">
                      <div className="num mb-1 text-[10px] sm:text-[11px]">04 — Position</div>
@@ -106,6 +137,7 @@ export default function CareersApplicationForm({ roleTitle }: CareersApplication
                          defaultValue={roleTitle || ''}
                          required
                      />
+                     {fieldErrors.applied_role && <p className="text-red-500 text-xs mt-1">{fieldErrors.applied_role}</p>}
                  </label>
                 <label className="block">
                     <div className="num mb-1 text-[10px] sm:text-[11px]">05 — Years of experience</div>
@@ -121,6 +153,7 @@ export default function CareersApplicationForm({ roleTitle }: CareersApplication
                         <option value="5–10 years">5–10 years</option>
                         <option value="10+ years">10+ years</option>
                     </select>
+                    {fieldErrors.user_experience && <p className="text-red-500 text-xs mt-1">{fieldErrors.user_experience}</p>}
                 </label>
                 <label className="block">
                     <div className="num mb-1 text-[10px] sm:text-[11px]">06 — Current location</div>
@@ -130,6 +163,7 @@ export default function CareersApplicationForm({ roleTitle }: CareersApplication
                         placeholder="City, Country"
                         required
                     />
+                    {fieldErrors.user_location && <p className="text-red-500 text-xs mt-1">{fieldErrors.user_location}</p>}
                 </label>
                 <label className="block md:col-span-2 mt-2 sm:mt-4">
                     <div className="num mb-1 text-[10px] sm:text-[11px]">07 — Why do you want to join us?</div>
@@ -140,6 +174,7 @@ export default function CareersApplicationForm({ roleTitle }: CareersApplication
                         placeholder="Share a bit about your background, what excites you about this role, and what you&apos;d bring to the team."
                         required
                     ></textarea>
+                    {fieldErrors.user_message && <p className="text-red-500 text-xs mt-1">{fieldErrors.user_message}</p>}
                 </label>
             </div>
 

@@ -12,10 +12,12 @@ export default function ModelsSection() {
                             How investor <em className="serif-em">capital</em>
                             <br />
                             is deployed.
+
                         </h2>
                     </div>
                     <p className="text-[13px] sm:text-[14px] md:text-[14.5px] text-mute leading-[1.6] sm:leading-[1.7] max-w-70 sm:max-w-80 md:max-w-85">
-                        We leverage various operational structures to ensure that our financial services reach the communities that need them most, partnering where it accelerates our mission.
+                        We don&#39;t take your capital and hope for results. We deploy it into seven proven operational models: agricultural production, real estate development, secured lending,
+                        commodity export, retail distribution, securities trading, and education. Each model is designed, tested, and optimized for consistent returns to our investors.
                     </p>
                 </div>
 

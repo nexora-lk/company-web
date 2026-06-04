@@ -3,11 +3,14 @@
 import { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { getEmailJsConfig } from '@/lib/emailjs';
+import { investmentContactFormSchema, extractFieldErrors } from '@/lib/form-schemas';
+import { ZodError } from 'zod';
 
 export default function InvestmentContactForm() {
     const formRef = useRef<HTMLFormElement>(null);
     const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
     const [errorMessage, setErrorMessage] = useState('');
+    const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -15,6 +18,32 @@ export default function InvestmentContactForm() {
 
         setStatus('submitting');
         setErrorMessage('');
+        setFieldErrors({});
+
+        // Extract form data
+        const formData = new FormData(formRef.current);
+        const data: Record<string, unknown> = {
+            user_name: formData.get('user_name'),
+            user_phone: formData.get('user_phone'),
+            user_email: formData.get('user_email'),
+            user_model: formData.get('user_model'),
+            user_ticket_size: formData.get('user_ticket_size'),
+            user_message: formData.get('user_message'),
+            user_country: formData.get('user_country') || undefined,
+            user_role: formData.get('user_role') || undefined,
+        };
+
+        // Validate with Zod
+        try {
+            await investmentContactFormSchema.parseAsync(data);
+        } catch (error) {
+            if (error instanceof ZodError) {
+                setFieldErrors(extractFieldErrors(error));
+                setStatus('error');
+                setErrorMessage('Please correct the errors in the form.');
+                return;
+            }
+        }
 
         const { serviceId, templateId, publicKey } = getEmailJsConfig('investment');
 
@@ -66,6 +95,7 @@ export default function InvestmentContactForm() {
                         placeholder="Full name"
                         required
                     />
+                    {fieldErrors.user_name && <p className="text-red-500 text-xs mt-1">{fieldErrors.user_name}</p>}
                 </label>
                 <label className="block reveal">
                     <div className="num mb-2 sm:mb-2.5 text-[10px] sm:text-xs md:text-xs lg:text-sm uppercase tracking-wider font-semibold">02 — Phone</div>
@@ -76,6 +106,7 @@ export default function InvestmentContactForm() {
                         placeholder="+94 …"
                         required
                     />
+                    {fieldErrors.user_phone && <p className="text-red-500 text-xs mt-1">{fieldErrors.user_phone}</p>}
                 </label>
                 <label className="block md:col-span-2 reveal">
                     <div className="num mb-2 sm:mb-2.5 text-[10px] sm:text-xs md:text-xs lg:text-sm uppercase tracking-wider font-semibold">03 — Email</div>
@@ -86,6 +117,7 @@ export default function InvestmentContactForm() {
                         placeholder="you@company.com"
                         required
                     />
+                    {fieldErrors.user_email && <p className="text-red-500 text-xs mt-1">{fieldErrors.user_email}</p>}
                 </label>
                 <label className="block reveal">
                     <div className="num mb-2 sm:mb-2.5 text-[10px] sm:text-xs md:text-xs lg:text-sm uppercase tracking-wider font-semibold">04 — Model</div>
@@ -101,6 +133,7 @@ export default function InvestmentContactForm() {
                         <option value="04 — Partner in FMCG Distribution & Processing">04 — Partner in FMCG Distribution &amp; Processing</option>
                         <option value="Mixed / please advise">Mixed / please advise</option>
                     </select>
+                    {fieldErrors.user_model && <p className="text-red-500 text-xs mt-1">{fieldErrors.user_model}</p>}
                 </label>
                 <label className="block reveal">
                     <div className="num mb-2 sm:mb-2.5 text-[10px] sm:text-xs md:text-xs lg:text-sm uppercase tracking-wider font-semibold">05 — Ticket size</div>
@@ -115,6 +148,7 @@ export default function InvestmentContactForm() {
                         <option value="LKR 5M — 25M">LKR 5M — 25M</option>
                         <option value="LKR 25M+">LKR 25M+</option>
                     </select>
+                    {fieldErrors.user_ticket_size && <p className="text-red-500 text-xs mt-1">{fieldErrors.user_ticket_size}</p>}
                 </label>
                 <label className="block md:col-span-2 mt-1 sm:mt-2 md:mt-3 reveal">
                     <div className="num mb-2 sm:mb-2.5 text-[10px] sm:text-xs md:text-xs lg:text-sm uppercase tracking-wider font-semibold">06 — Message</div>
@@ -125,6 +159,7 @@ export default function InvestmentContactForm() {
                         placeholder="A few lines on your investment goals..."
                         required
                     ></textarea>
+                    {fieldErrors.user_message && <p className="text-red-500 text-xs mt-1">{fieldErrors.user_message}</p>}
                 </label>
             </div>
 

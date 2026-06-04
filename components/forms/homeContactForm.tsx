@@ -3,11 +3,14 @@
 import { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { getEmailJsConfig } from '@/lib/emailjs';
+import { homeContactFormSchema, extractFieldErrors } from '@/lib/form-schemas';
+import { ZodError } from 'zod';
 
 export default function ContactForm() {
     const formRef = useRef<HTMLFormElement>(null);
     const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
     const [errorMessage, setErrorMessage] = useState('');
+    const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -15,6 +18,32 @@ export default function ContactForm() {
 
         setStatus('submitting');
         setErrorMessage('');
+        setFieldErrors({});
+
+        // Extract form data
+        const formData = new FormData(formRef.current);
+        const data: Record<string, unknown> = {
+            user_name: formData.get('user_name'),
+            user_email: formData.get('user_email'),
+            user_country: formData.get('user_country'),
+            user_role: formData.get('user_role'),
+            user_message: formData.get('user_message'),
+            user_phone: formData.get('user_phone') || undefined,
+            user_model: formData.get('user_model') || undefined,
+            user_ticket_size: formData.get('user_ticket_size') || undefined,
+        };
+
+        // Validate with Zod
+        try {
+            await homeContactFormSchema.parseAsync(data);
+        } catch (error) {
+            if (error instanceof ZodError) {
+                setFieldErrors(extractFieldErrors(error));
+                setStatus('error');
+                setErrorMessage('Please correct the errors in the form.');
+                return;
+            }
+        }
 
         const { serviceId, templateId, publicKey } = getEmailJsConfig('home');
 
@@ -71,6 +100,7 @@ export default function ContactForm() {
                         placeholder="Full name"
                         required
                     />
+                    {fieldErrors.user_name && <p className="text-red-500 text-xs mt-1">{fieldErrors.user_name}</p>}
                 </label>
                 <label className="block reveal">
                     <div className="num mb-1 text-[10px] sm:text-[11px]">02 — Email</div>
@@ -81,6 +111,7 @@ export default function ContactForm() {
                         placeholder="you@company.com"
                         required
                     />
+                    {fieldErrors.user_email && <p className="text-red-500 text-xs mt-1">{fieldErrors.user_email}</p>}
                 </label>
                 <label className="block reveal">
                     <div className="num mb-1 text-[10px] sm:text-[11px]">03 — Country</div>
@@ -90,6 +121,7 @@ export default function ContactForm() {
                         placeholder="Where are you writing from?"
                         required
                     />
+                    {fieldErrors.user_country && <p className="text-red-500 text-xs mt-1">{fieldErrors.user_country}</p>}
                 </label>
                 <label className="block reveal">
                     <div className="num mb-1 text-[10px] sm:text-[11px]">04 — I am a…</div>
@@ -105,6 +137,7 @@ export default function ContactForm() {
                         <option value="Journalist">Journalist</option>
                         <option value="Other">Other</option>
                     </select>
+                    {fieldErrors.user_role && <p className="text-red-500 text-xs mt-1">{fieldErrors.user_role}</p>}
                 </label>
                 <label className="block md:col-span-2 mt-2 sm:mt-4 reveal">
                     <div className="num mb-1 text-[10px] sm:text-[11px]">05 — What would you like to discuss?</div>
@@ -115,6 +148,7 @@ export default function ContactForm() {
                         placeholder="A few lines is enough — we'll pick up the phone."
                         required
                     ></textarea>
+                    {fieldErrors.user_message && <p className="text-red-500 text-xs mt-1">{fieldErrors.user_message}</p>}
                 </label>
             </div>
 

@@ -1,4 +1,4 @@
-import type { NavLink, FooterColumn } from "@/types/navigation";
+import type { NavLink, FooterColumn, SocialLink } from "@/types/navigation";
 
 export const brand = {
   name: "PGGC",
@@ -16,7 +16,7 @@ export const primaryNav: NavLink[] = [
     children: [
       { label: "Plantation", href: "/services/plantation" },
       { label: "Micro Finance", href: "/services/microfinance" },
-      { label: "Gem & Jewelry", href: "/services/gems" },
+      { label: "Gems", href: "/services/gems" },
       { label: "FMCG", href: "/services/fmcg" },
       { label: "NGO Projects", href: "/services/ngo" },
       { label: "Real Estate", href: "/services/real-estate" },
@@ -28,29 +28,24 @@ export const primaryNav: NavLink[] = [
 
 export const footerColumns: FooterColumn[] = [
   {
-    title: "Portfolio",
+    title: "Services",
     links: [
       { label: "Plantation", href: "/services/plantation" },
       { label: "Micro Finance", href: "/services/microfinance" },
-      { label: "Gem & Jewelry", href: "/services/gems" },
+      { label: "Gems", href: "/services/gems" },
       { label: "FMCG", href: "/services/fmcg" },
       { label: "NGO Projects", href: "/services/ngo" },
       { label: "Real Estate", href: "/services/real-estate" },
     ],
   },
   {
-    title: "Group",
+    title: "Pages",
     links: [
+      { label: "Home", href: "/" },
       { label: "About", href: "/about" },
-      { label: "Leadership", href: "/corporate" },
-      { label: "Careers", href: "/corporate" },
-      { label: "Investor relations", href: "/investment" },
+      { label: "Gallery", href: "/gallery" },
+      { label: "Careers", href: "/about/careers" },
+      { label: "Investment Plans", href: "/investment" },
     ],
   },
-];
-
-export const footerLegal: NavLink[] = [
-  { label: "Privacy", href: "#" },
-  { label: "Cookies", href: "#" },
-  { label: "Modern Slavery Statement", href: "#" },
 ];

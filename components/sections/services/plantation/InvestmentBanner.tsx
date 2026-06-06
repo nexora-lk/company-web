@@ -2,10 +2,13 @@
 
 import Photo from '@/components/ui/Photo';
 import Link from 'next/link';
+import ArrowIcon from '@/components/ui/ArrowIcon';
+import Leaf from "@/components/ui/Leaf";
 
 export default function PlantationInvestmentBanner() {
     return (
-        <section className="pb-20 xs:pb-24 md:pb-32 lg:pb-36 xl:pb-40">
+        <section className="pb-20 xs:pb-24 md:pb-32 lg:pb-36 xl:pb-40 bg-surface">
+            <Leaf variant="tr" />
             <div className="max-w-content mx-auto px-4 xs:px-6 lg:px-10">
                 <div className="relative rounded-[20px] sm:rounded-[28px] lg:rounded-[32px] overflow-hidden min-h-[400px] xs:min-h-[460px] sm:min-h-[540px] flex items-end reveal">
                     <Photo
@@ -36,7 +39,7 @@ export default function PlantationInvestmentBanner() {
                                     href="/investment"
                                     className="btn bg-bg! text-ink! hover:bg-accent! hover:text-ondark! w-full sm:w-auto justify-center text-[14px] sm:text-[15px] px-8 py-4 sm:py-5"
                                 >
-                                    Explore Opportunities <span className="arrow">→</span>
+                                    Explore Opportunities <ArrowIcon size={14} className="ml-1" />
                                 </Link>
                                 <p className="text-ondark/60 text-xs sm:text-[13px] leading-relaxed max-w-[280px] lg:text-right reveal">
                                     Strategic partnerships available for landholders and institutional partners.

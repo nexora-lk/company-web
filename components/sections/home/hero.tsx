@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import ArrowIcon from '@/components/ui/ArrowIcon';
 
 // ── Background video playlist ───────────────────────────────────────────────
 const BG_VIDEOS = [
@@ -136,18 +137,18 @@ export default function HeroSection() {
                                 flex flex-col sm:flex-row
                                 items-center gap-3 sm:gap-4 w-full sm:w-auto reveal">
                     <a
-                        href="#services"
-                        id="hero-cta-primary"
-                        className="btn btn-primary
-                                   w-full sm:w-auto
-                                   min-w-0 sm:min-w-[200px] lg:min-w-[220px]
-                                   justify-center
-                                   text-[15.5px] sm:text-[15px] lg:text-[15.5px]
-                                   py-[0.9rem] sm:py-[0.85rem] lg:py-[0.9rem]
-                                   shadow-lg sm:shadow-none"
-                    >
-                        Explore Investment Options <span className="arrow">→</span>
-                    </a>
+                         href="#services"
+                         id="hero-cta-primary"
+                         className="btn btn-primary
+                                    w-full sm:w-auto
+                                    min-w-0 sm:min-w-[200px] lg:min-w-[220px]
+                                    justify-center
+                                    text-[15.5px] sm:text-[15px] lg:text-[15.5px]
+                                    py-[0.9rem] sm:py-[0.85rem] lg:py-[0.9rem]
+                                    shadow-lg sm:shadow-none"
+                     >
+                         Explore Investment Options <ArrowIcon size={15} className="ml-1" />
+                     </a>
                     <a
                         href="#contact"
                         id="hero-cta-secondary"

@@ -1,6 +1,10 @@
+import Leaf from "@/components/ui/Leaf";
+
 export default function VisionSection() {
     return (
-        <section className="pb-20 xs:pb-24 md:pb-32 lg:pb-36 xl:pb-40">
+        <section className="py-10 xs:py-12 md:py-16 lg:py-18 xl:py-20">
+            <Leaf variant="tr" />
+            <Leaf variant="bl" />
             <div className="max-w-content mx-auto px-4 xs:px-6 lg:px-10">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 xs:gap-5 lg:gap-8">
 

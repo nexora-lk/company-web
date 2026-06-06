@@ -1,10 +1,12 @@
 import SectionEyebrow from '@/components/sections/SectionEyebrow';
 import ValueGrid from '@/components/sections/ValueGrid';
 import { values } from '@/data/home';
+import Leaf from "@/components/ui/Leaf";
 
 export default function ValuesSection() {
     return (
-        <section id="values" className="pb-20 xs:pb-24 md:pb-32 lg:pb-40 xl:pb-48">
+        <section id="values" className="pb-10 xs:pb-12 md:pb-16 lg:pb-20 xl:pb-24 pt-10 xs:pt-12 md:pt-16 lg:pt-20 xl:pt-24 bg-surface">
+            <Leaf variant="bl" />
             <div className="max-w-content mx-auto px-4 xs:px-6 lg:px-10">
                 <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 sm:gap-10 mb-12 sm:mb-16 lg:mb-20">
                     <div className="max-w-full lg:max-w-3xl reveal">

@@ -5,6 +5,7 @@ import Photo from '@/components/ui/Photo';
 import { brand, primaryNav } from '@/data/navigation';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { ChevronDown, ArrowRight } from 'lucide-react';
 
 export default function Navbar() {
     const pathname = usePathname();
@@ -60,22 +61,10 @@ export default function Navbar() {
                                         }`}
                                     >
                                         {link.label}
-                                        <svg
-                                            width="10"
-                                            height="10"
-                                            viewBox="0 0 12 12"
-                                            fill="none"
-                                            xmlns="http://www.w3.org/2000/svg"
+                                        <ChevronDown
+                                            size={10}
                                             className="opacity-50 transition-transform duration-300 group-hover:rotate-180"
-                                        >
-                                            <path
-                                                d="M2.5 4.5L6 8L9.5 4.5"
-                                                stroke="currentColor"
-                                                strokeWidth="1.5"
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                            />
-                                        </svg>
+                                        />
                                     </button>
                                     {/* Dropdown */}
                                     <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 opacity-0 translate-y-1 pointer-events-none transition-all duration-200 group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto">
@@ -126,22 +115,10 @@ export default function Navbar() {
                     className="hidden lg:inline-flex items-center justify-center gap-3 whitespace-nowrap btn btn-primary !min-h-0 h-[40px] xl:h-[46px] text-[13px] xl:text-[13.5px] font-semibold px-5 xl:px-6 rounded-full transition-all duration-200 hover:gap-4 group"
                 >
                     <span>Get in touch</span>
-                    <svg
-                        width="15"
-                        height="11"
-                        viewBox="0 0 16 12"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
+                    <ArrowRight
+                        size={15}
                         className="transform transition-transform duration-200 group-hover:translate-x-1"
-                    >
-                        <path
-                            d="M10 1L15 6M15 6L10 11M15 6H1"
-                            stroke="currentColor"
-                            strokeWidth="1.6"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                        />
-                    </svg>
+                    />
                 </Link>
 
                 <MobileMenu />

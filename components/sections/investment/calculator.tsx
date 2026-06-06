@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
+import Leaf from "@/components/ui/Leaf";
 
 const MIN = 200_000;
 const FALLBACK_RATE = 320;
@@ -105,6 +106,7 @@ export default function CalculatorSection() {
 
   return (
     <section className="py-16 xs:py-20 sm:py-24 lg:py-32 xl:py-40 bg-[rgba(241,236,224,0.3)] overflow-hidden">
+      <Leaf variant="tr" />
       <div className="max-w-content mx-auto px-4 xs:px-6 lg:px-10">
         
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 xl:gap-24 items-start justify-between">

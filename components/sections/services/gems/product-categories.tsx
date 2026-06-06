@@ -1,3 +1,5 @@
+import Leaf from "@/components/ui/Leaf";
+
 export default function ProductCategoriesSection() {
     const categories = [
         {
@@ -52,6 +54,7 @@ export default function ProductCategoriesSection() {
 
     return (
         <section className="py-16 sm:py-20 md:py-24 lg:py-28 xl:py-32 bg-surface">
+            <Leaf variant="bl" />
             <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-10">
 
                 {/* Section Header */}
@@ -66,7 +69,7 @@ export default function ProductCategoriesSection() {
                     </h2>
                     <p className="mt-4 sm:mt-6 text-[13.5px] sm:text-[15px] text-mute leading-[1.7] max-w-full sm:max-w-md lg:max-w-xl">
                         Discover our curated selection of premium Sri Lankan gemstones, handpicked
-                        and certified by nature's finest artistry.
+                        and certified by nature&#39;s finest artistry.
                     </p>
                 </div>
 

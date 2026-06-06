@@ -81,7 +81,7 @@ export default function PlantationPage() {
                     <>
                         Real land. Real crops.
                         <em className="serif-em block sm:inline"> Real </em>
-                        returns from Sri Lanka's finest agro-zones.
+                        returns from Sri Lanka&#39;s finest agro-zones.
                     </>
                 }
                 descriptions={[
@@ -89,10 +89,10 @@ export default function PlantationPage() {
                     "Each estate is run by a regional manager, audited quarterly, and open to direct investor participation from LKR 200,000."
                 ]}
                 stats={[
-                    { label: "Estates", value: "07", note: "6 provinces" },
-                    { label: "Crops", value: "06", note: "Key varieties" },
-                    { label: "Scale", value: "2,450", em: "+", note: "Hectares" },
-                    { label: "Export", value: "40", em: "%", note: "Revenue focus" }
+                    { label: "Estates", value: "07", note: "Currently Operating" },
+                    { label: "Crops", value: "06", note: "In production" },
+                    { label: "Scale", value: "2.4K", em: "", note: "Currently" },
+                    { label: "Export Focus", value: "Primary", em: "", note: "Revenue focus" }
                 ]}
             />
             <OverviewSection />

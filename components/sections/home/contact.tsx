@@ -1,10 +1,13 @@
 import ContactForm from '@/components/forms/homeContactForm';
 import { contactRows } from '@/data/home';
 import SectionEyebrow from '@/components/sections/SectionEyebrow';
+import Leaf from "@/components/ui/Leaf";
 
 export default function ContactSection() {
     return (
-        <section id="contact" className="pb-20 xs:pb-24 sm:pb-32 lg:pb-36 xl:pb-40">
+        <section id="contact" className="py-10 xs:py-12 md:py-16 lg:py-20 xl:py-24">
+            <Leaf variant="tr" />
+            <Leaf variant="bl" />
             <div className="max-w-content mx-auto px-4 xs:px-6 lg:px-10">
                 <div className="grid grid-cols-12 gap-10 md:gap-12 lg:gap-16 xl:gap-24">
 

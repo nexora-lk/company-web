@@ -5,6 +5,7 @@ import emailjs from '@emailjs/browser';
 import { getEmailJsConfig } from '@/lib/emailjs';
 import { careersApplicationSchema, extractFieldErrors } from '@/lib/form-schemas';
 import { ZodError } from 'zod';
+import ArrowIcon from '@/components/ui/ArrowIcon';
 
 interface CareersApplicationFormProps {
     roleTitle?: string;
@@ -90,9 +91,6 @@ export default function CareersApplicationForm({ roleTitle }: CareersApplication
                         Tell us about yourself.
                     </div>
                 </div>
-                <span className="pill self-start sm:self-auto text-[11px] sm:text-[12px]">
-                    <span className="dot"></span>We review every application
-                </span>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 lg:gap-x-8 gap-y-3 sm:gap-y-4">
@@ -171,7 +169,7 @@ export default function CareersApplicationForm({ roleTitle }: CareersApplication
                         name="user_message"
                         className="field resize-none focus:outline-2 focus:outline-offset-2 focus:outline-accent text-[13px] sm:text-[14px]"
                         rows={4}
-                        placeholder="Share a bit about your background, what excites you about this role, and what you&apos;d bring to the team."
+                        placeholder="background, what excites you about working in capital deployment, and what you'd bring to our team managing investor capital."
                         required
                     ></textarea>
                     {fieldErrors.user_message && <p className="text-red-500 text-xs mt-1">{fieldErrors.user_message}</p>}
@@ -200,7 +198,7 @@ export default function CareersApplicationForm({ roleTitle }: CareersApplication
                     className="btn btn-primary focus:outline-2 focus:outline-offset-2 focus:outline-accent w-full sm:w-auto order-1 sm:order-2 justify-center"
                     disabled={status === 'submitting'}
                 >
-                    {status === 'submitting' ? 'Sending…' : 'Submit application'} <span className="arrow">→</span>
+                    {status === 'submitting' ? 'Sending…' : 'Submit application'} <ArrowIcon size={14} className="ml-1" />
                 </button>
             </div>
         </form>

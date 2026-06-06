@@ -1,8 +1,11 @@
 import Photo from '@/components/ui/Photo';
+import ArrowIcon from '@/components/ui/ArrowIcon';
+import Leaf from "@/components/ui/Leaf";
 
 export default function OverviewSection() {
     return (
         <section className="py-16 sm:py-20 md:py-24 lg:py-28 xl:py-32">
+            <Leaf variant="tr" />
             <div className="max-w-content mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
                 <div className="grid grid-cols-12 gap-4 sm:gap-5 md:gap-6 lg:gap-8 xl:gap-12 items-start">
                     <div className="col-span-12 lg:col-span-7 reveal">
@@ -54,10 +57,10 @@ export default function OverviewSection() {
                         </ul>
 
                         <div className="mt-8 sm:mt-9 md:mt-10 flex flex-wrap gap-2 sm:gap-3 reveal">
-                            <a href="#fund" className="btn btn-primary text-[13px] sm:text-[14px] md:text-base">
-                                Support our work <span className="arrow">→</span>
-                            </a>
-                        </div>
+                             <a href="#fund" className="btn btn-primary text-[13px] sm:text-[14px] md:text-base">
+                                 Support our work <ArrowIcon size={14} className="ml-1" />
+                             </a>
+                         </div>
                     </div>
 
                     <aside className="col-span-12 lg:col-span-5 space-y-3 sm:space-y-4 lg:sticky lg:top-24 reveal">

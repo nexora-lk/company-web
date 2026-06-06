@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import ArrowIcon from '@/components/ui/ArrowIcon';
 
 export default function BanerSection() {
     return (
@@ -26,7 +27,7 @@ export default function BanerSection() {
                                     href="/#contact"
                                     className="btn bg-bg! text-ink! hover:bg-accent! hover:text-ondark! text-[11px] sm:text-[13px]"
                                 >
-                                    Submit a photograph <span className="arrow">→</span>
+                                    Submit a photograph <ArrowIcon size={12} className="ml-1" />
                                 </Link>
                                 <Link href="/#contact" className="text-ondark text-[11px] sm:text-sm ulink self-center lg:self-auto">
                                     archive@prestigeglamour.lk

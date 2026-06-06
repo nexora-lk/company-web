@@ -1,8 +1,10 @@
 import Photo from '@/components/ui/Photo';
+import Leaf from "@/components/ui/Leaf";
 
 export default function OverviewSection() {
     return (
         <section className="pb-20 pt-20 lg:pb-36 lg:pt-32">
+            <Leaf variant="bl" />
             <div className="max-w-content mx-auto px-4 xs:px-6 lg:px-10">
                 <div className="grid grid-cols-12 gap-8 lg:gap-16 items-start">
                     <div className="col-span-12 lg:col-span-7">

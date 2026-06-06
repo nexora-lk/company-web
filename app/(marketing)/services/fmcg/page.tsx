@@ -88,10 +88,10 @@ export default function FMCGPage() {
                     "we grow it, we make it, we sell it — is what gives investors in this division a competitive edge. Min. LKR 500,000 | Returns: 40-55% annually."
                 ]}
                 stats={[
-                    { label: "Product lines", value: "18", em: "+", note: "Fresh & processed" },
-                    { label: "Retail partners", value: "240", em: ".", note: "Across Sri Lanka" },
-                    { label: "Processing", value: "5", em: "T", note: "Tonnes per day" },
-                    { label: "Export revenue", value: "42", em: "%", note: "Of total sales · 2025" }
+                    { label: "Product lines", value: "18", em: "+", note: "Fresh & natural products" },
+                    { label: "Retail partners", value: "20", em: "", note: "Across Sri Lanka" },
+                    { label: "Processing", value: "5", em: "", note: "tonnes/day" },
+                    { label: "Export revenue", value: "42", em: "", note: "Of total sales · 2025" }
                 ]}
             />
             <OverviewSection />

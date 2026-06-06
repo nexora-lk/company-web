@@ -1,9 +1,12 @@
 import Photo from '@/components/ui/Photo';
 import Link from 'next/link';
+import ArrowIcon from '@/components/ui/ArrowIcon';
+import Leaf from "@/components/ui/Leaf";
 
 export default function CareersSection() {
     return (
-        <section className="pb-20 sm:pb-24 lg:pb-36">
+        <section className="pb-10 sm:pb-12 lg:pb-18">
+            <Leaf variant="tr" />
             <div className="max-w-content mx-auto px-4 xs:px-6 lg:px-10">
                 <div className="relative rounded-[16px] sm:rounded-[24px] overflow-hidden min-h-[320px] sm:min-h-[360px] flex items-end">
                     <Photo
@@ -29,7 +32,7 @@ export default function CareersSection() {
                                     href="/about/careers"
                                     className="btn bg-bg! text-ink! hover:bg-accent! hover:text-ondark! w-full sm:w-auto justify-center"
                                 >
-                                    Open roles <span className="arrow">→</span>
+                                    Open roles <ArrowIcon size={14} className="ml-1" />
                                 </Link>
                                 <p className="text-ondark/70 text-xs sm:text-[13px] leading-relaxed max-w-md lg:text-right">
                                     We are always looking for people who want to work in real

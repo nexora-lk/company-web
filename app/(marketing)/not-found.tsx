@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useEffect, useRef } from 'react';
+import ArrowIcon from '@/components/ui/ArrowIcon';
 
 export default function NotFound() {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -110,19 +111,19 @@ export default function NotFound() {
 
                     {/* Action buttons */}
                     <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-stretch sm:items-center justify-center w-full sm:w-auto">
-                        <Link href="/" className="error-button btn btn-primary text-[14px] sm:text-[14.5px] justify-center py-3.5 sm:py-[0.85rem] px-6 sm:px-8">
-                            <span>Return Home</span>
-                            <span className="arrow">→</span>
-                        </Link>
+                         <Link href="/" className="error-button btn btn-primary text-[14px] sm:text-[14.5px] justify-center py-3.5 sm:py-[0.85rem] px-6 sm:px-8">
+                             <span>Return Home</span>
+                             <ArrowIcon size={14} className="ml-1" />
+                         </Link>
 
-                        <button
-                            onClick={() => window.history.back()}
-                            className="error-button btn btn-ghost text-[14px] sm:text-[14.5px] justify-center py-3.5 sm:py-[0.85rem] px-6 sm:px-8"
-                        >
-                            <span>Go Back</span>
-                            <span className="arrow">←</span>
-                        </button>
-                    </div>
+                         <button
+                             onClick={() => window.history.back()}
+                             className="error-button btn btn-ghost text-[14px] sm:text-[14.5px] justify-center py-3.5 sm:py-[0.85rem] px-6 sm:px-8"
+                         >
+                             <span>Go Back</span>
+                             <ArrowIcon type="left" size={14} className="ml-1" />
+                         </button>
+                     </div>
 
                     {/* Services links */}
                     <div className="mt-16 sm:mt-20 md:mt-24 text-center w-full">

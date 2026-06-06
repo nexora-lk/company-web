@@ -1,4 +1,5 @@
 import Photo from '@/components/ui/Photo';
+import Leaf from "@/components/ui/Leaf";
 
 export default function FutureProductsSection() {
     const futureProducts = [
@@ -30,6 +31,7 @@ export default function FutureProductsSection() {
 
     return (
         <section id="future-products" className="py-16 sm:py-20 md:py-24 lg:py-28 xl:py-32 bg-surface border-t border-line">
+            <Leaf variant="bl" />
             <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-10">
 
                 {/* Header */}

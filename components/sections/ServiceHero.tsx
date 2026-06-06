@@ -76,16 +76,22 @@ export default function ServiceHero({
 
                     {/* Stats grid - adaptive column layout */}
                     <div className="w-full lg:max-w-200 reveal">
-                        <div className="mt-6 xs:mt-8 sm:mt-10 lg:mt-0 mb-6 xs:mb-8 sm:mb-10 lg:mb-0 hairline bg-white/70!"></div>
+                        <div className="mt-6 xs:mt-8 sm:mt-10 lg:mt-0 mb-0 xs:mb-0 sm:mb-0 lg:mb-0 hairline bg-white/20!"></div>
                         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-0">
                             {stats.map((stat, index) => (
                                 <div
                                     key={index}
-                                    className={`py-5 xs:py-6 sm:py-8 lg:py-10 border-b border-white/20 sm:border-white/70 ${
-                                        index % 2 === 0 ? 'px-0 pr-3 xs:pr-4 sm:pr-6 lg:pr-8 border-r' : 'px-3 xs:px-4 sm:px-6 lg:px-8 lg:border-r'
-                                    } ${index >= stats.length - 2 ? 'md:border-b-0' : ''} ${
+                                    className={`py-5 xs:py-6 sm:py-8 lg:py-10 border-b border-white/20 sm:border-white/20 ${
+                                        index % 2 === 0
+                                            ? `pl-0 pr-3 xs:pr-4 sm:pr-6 border-r ${
+                                                  index === 0 ? 'lg:pl-0 lg:pr-8' : 'lg:pl-8 lg:pr-8'
+                                              }`
+                                            : `pl-3 xs:pl-4 sm:pl-6 pr-0 lg:border-r ${
+                                                  index === stats.length - 1 ? 'lg:pl-8 lg:pr-0' : 'lg:pl-8 lg:pr-8'
+                                              }`
+                                    } ${index >= stats.length - 2 ? 'border-b-0' : ''} ${
                                         index === stats.length - 1 ? 'lg:border-r-0' : ''
-                                    } reveal`}
+                                    } lg:border-b-0 reveal`}
                                 >
                                     <div className="num text-white/60! mb-1.5 xs:mb-2 sm:mb-3 text-[9px] xs:text-[10px] lg:text-xs uppercase tracking-widest font-semibold">
                                         {stat.label}
@@ -104,7 +110,7 @@ export default function ServiceHero({
                                 </div>
                             ))}
                         </div>
-                        <div className="hairline bg-white/70! hidden lg:block mt-8 sm:mt-10 lg:mt-0"></div>
+                        <div className="hairline bg-white/20! hidden lg:block mt-8 sm:mt-10 lg:mt-0"></div>
                     </div>
                 </div>
             </div>

@@ -1,10 +1,12 @@
 import SectionEyebrow from '@/components/sections/SectionEyebrow';
 import { stats } from '@/data/home';
 import StatsBanner from '@/components/sections/StatsBanner';
+import Leaf from "@/components/ui/Leaf";
 
 export default function ImpactSection() {
     return (
-        <section id="impact" className="pb-20 xs:pb-24 sm:pb-32 lg:pb-40 xl:pb-48">
+        <section id="impact" className="py-10 xs:py-12 md:py-16 lg:py-20 xl:py-24 bg-surface">
+            <Leaf variant="tr" />
             <div className="max-w-content mx-auto px-4 xs:px-6 lg:px-10">
                 <div className="grid grid-cols-12 gap-8 md:gap-12 lg:gap-16 items-end mb-12 sm:mb-16 md:mb-20">
                     <div className="col-span-12 lg:col-span-7 reveal">

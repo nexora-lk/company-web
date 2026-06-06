@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import ArrowIcon from '@/components/ui/ArrowIcon';
 
 export default function HeroSection() {
     return (
@@ -54,7 +55,7 @@ export default function HeroSection() {
                         Easter Charity <span className="ct">· 18</span>
                     </button>
                     <span className="chip ml-auto border-ink! text-ink! text-[11px] sm:text-[12px] hidden sm:inline-flex">
-                        Download archive (3.4 GB) <span className="arrow">↗</span>
+                        Download archive (3.4 GB) <ArrowIcon type="up-right" size={12} className="ml-1" />
                     </span>
                 </div>
             </div>

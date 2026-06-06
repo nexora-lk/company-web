@@ -1,9 +1,12 @@
 import InvestmentContactForm from '@/components/forms/InvestmentContactForm';
 import Photo from '@/components/ui/Photo';
+import Leaf from "@/components/ui/Leaf";
 
 export default function ContactSection() {
     return (
-        <section id="enquire" className="py-10 sm:py-14 md:py-18 lg:py-28 xl:py-32">
+        <section id="enquire" className="py-10 sm:py-14 md:py-18 lg:py-28 xl:py-32 bg-surface">
+            <Leaf variant="tr" />
+            <Leaf variant="bl" />
             <div className="max-w-content mx-auto px-3 sm:px-5 md:px-8 lg:px-10 xl:px-12">
                 <div className="relative rounded-lg sm:rounded-xl md:rounded-2xl lg:rounded-3xl xl:rounded-4xl overflow-hidden bg-ink text-ondark">
                     <Photo

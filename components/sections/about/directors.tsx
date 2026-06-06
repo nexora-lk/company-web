@@ -1,8 +1,10 @@
 import Photo from '@/components/ui/Photo';
+import Leaf from "@/components/ui/Leaf";
 
 export default function DirectorsSection() {
     return (
-        <section className="pb-20 sm:pb-24 lg:pb-36">
+        <section className="pb-10 pt-10 sm:pb-12 lg:pb-18 sm:pt12 lg:pt-18 bg-surface">
+            <Leaf variant="tr" />
             <div className="max-w-content mx-auto px-4 xs:px-6 lg:px-10">
                 <div className="text-center max-w-[820px] mx-auto mb-10 sm:mb-14 reveal">
                     <div className="flex items-center gap-2 xs:gap-3 justify-center mb-5 sm:mb-6">

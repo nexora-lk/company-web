@@ -1,8 +1,10 @@
 import Photo from '@/components/ui/Photo';
+import Leaf from "@/components/ui/Leaf";
 
 export default function ProjectSudeesaSection() {
     return (
-        <section id="featured-project" className="py-16 sm:py-20 md:py-24 lg:py-28 bg-bg">
+        <section id="featured-project" className="py-16 sm:py-20 md:py-24 lg:py-28 bg-surface">
+            <Leaf variant="bl" />
             <div className="max-w-content mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
                 <div className="flex items-center gap-2 sm:gap-3 mb-6 sm:mb-8">
                     <span className="num text-[11px] sm:text-xs md:text-sm">[ Featured Project ]</span>

@@ -89,9 +89,9 @@ export default function MicrofinancePage() {
                     "With 11,200+ active borrowers, a 96.4% repayment rate, and consistent investor returns, it is one of our most reliable investment vehicles."
                 ]}
                 stats={[
-                    { label: "SMEs supported", value: "100", em: "+", note: "Cumulative since 2013" },
-                    { label: "Active borrowers", value: "11,200", em: ".", note: "Predominantly women" },
-                    { label: "Repayment rate", value: "96.4", em: "%", note: "Audited · KPMG SL" },
+                    { label: "SMEs supported", value: "100", em: "+", note: "Target by 2026" },
+                    { label: "Active borrowers", value: "11.2K", em: "", note: "Deployment goal" },
+                    { label: "Borrower focus", value: "Predominantly women", em: "", note: "" },
                     { label: "Branch network", value: "23", em: ".", note: "Across nine provinces" }
                 ]}
             />

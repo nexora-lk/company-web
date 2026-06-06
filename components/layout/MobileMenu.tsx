@@ -4,6 +4,7 @@ import { primaryNav } from '@/data/navigation';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useCallback, useEffect, useRef, useState } from 'react';
+import ArrowIcon from '@/components/ui/ArrowIcon';
 
 export default function MobileMenu() {
     const pathname = usePathname();
@@ -17,7 +18,6 @@ export default function MobileMenu() {
         if (typeof window === 'undefined') return;
 
         let cancelled = false;
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         let cleanup: (() => void) | undefined;
 
         (async () => {
@@ -38,9 +38,6 @@ export default function MobileMenu() {
             }
 
             if (open) {
-                // Lock body scroll
-                document.body.style.overflow = 'hidden';
-
                 // Make elements visible for animation
                 panel.style.visibility = 'visible';
                 panel.style.pointerEvents = 'auto';
@@ -90,7 +87,6 @@ export default function MobileMenu() {
                         panel.style.pointerEvents = 'none';
                         backdrop.style.visibility = 'hidden';
                         backdrop.style.pointerEvents = 'none';
-                        document.body.style.overflow = '';
                     },
                 });
 
@@ -117,14 +113,30 @@ export default function MobileMenu() {
         };
     }, [open]);
 
-    // Escape to close
+    // Escape to close & Auto-close on scroll
     useEffect(() => {
         if (!open) return;
+
+        const initialScroll = window.scrollY;
+        
+        const onScroll = () => {
+            // Close if user scrolls more than 20px in either direction
+            if (Math.abs(window.scrollY - initialScroll) > 20) {
+                setOpen(false);
+            }
+        };
+
         const onKey = (e: KeyboardEvent) => {
             if (e.key === 'Escape') setOpen(false);
         };
+
+        window.addEventListener('scroll', onScroll, { passive: true });
         document.addEventListener('keydown', onKey);
-        return () => document.removeEventListener('keydown', onKey);
+
+        return () => {
+            window.removeEventListener('scroll', onScroll);
+            document.removeEventListener('keydown', onKey);
+        };
     }, [open]);
 
     const close = useCallback(() => setOpen(false), []);
@@ -163,7 +175,7 @@ export default function MobileMenu() {
                 ref={backdropRef}
                 onClick={close}
                 aria-hidden="true"
-                className="fixed inset-0 top-16 xl:top-20 z-40 bg-ink/70 backdrop-blur-[2px]"
+                className="fixed inset-0 top-16 xl:top-20 z-40 bg-ink/85 backdrop-blur-[20px]"
                 style={{ visibility: 'hidden', pointerEvents: 'none', opacity: 0 }}
             />
 
@@ -198,11 +210,10 @@ export default function MobileMenu() {
                                             }`}
                                         >
                                             {link.label}
-                                            <span
-                                                className={`arrow ${isActive ? 'text-accent' : 'text-mute'}`}
-                                            >
-                                                →
-                                            </span>
+                                            <ArrowIcon
+                                                size={20}
+                                                className={`${isActive ? 'text-accent' : 'text-mute'}`}
+                                            />
                                         </Link>
                                         {link.children && (
                                             <ul className="pl-4 pb-4 space-y-2">
@@ -231,7 +242,7 @@ export default function MobileMenu() {
                             onClick={close}
                             className="btn btn-primary text-[14px] md:text-[15px] py-2! px-4! md:py-2.5! md:px-5!"
                         >
-                            Get in touch <span className="arrow">→</span>
+                            Get in touch <ArrowIcon size={14} className="ml-1" />
                         </Link>
                     </div>
                 </div>

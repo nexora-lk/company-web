@@ -1,6 +1,9 @@
+import Leaf from "@/components/ui/Leaf";
+
 export default function FundSection() {
     return (
         <section id="fund" className="py-16 sm:py-20 md:py-24 lg:py-28 xl:py-32 bg-bg border-t border-line">
+            <Leaf variant="tr" />
             <div className="max-w-content mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start reveal">
                     <div className="lg:col-span-6 reveal">

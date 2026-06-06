@@ -1,6 +1,9 @@
+import Leaf from "@/components/ui/Leaf";
+
 export default function BranchSection() {
     return (
-        <section className="pb-20 sm:pb-24 lg:pb-36">
+        <section className="pb-10 pt-10 sm:pb-12 lg:pb-18 sm:pt12 lg:pt-18">
+            <Leaf variant="bl" />
             <div className="max-w-content mx-auto px-4 xs:px-6 lg:px-10">
                 <div className="grid grid-cols-12 gap-6 xs:gap-8 lg:gap-12 items-end mb-10 sm:mb-12">
                     <div className="col-span-12 lg:col-span-7 reveal">

@@ -1,5 +1,7 @@
 import SectionEyebrow from '@/components/sections/SectionEyebrow';
 import Photo from '@/components/ui/Photo';
+import ArrowIcon from '@/components/ui/ArrowIcon';
+import Leaf from "@/components/ui/Leaf";
 
 const services = [
     {
@@ -54,7 +56,8 @@ const services = [
 
 export default function ServicesSection() {
     return (
-        <section id="services" className="pb-20 xs:pb-24 md:pb-32 lg:pb-40 xl:pb-48">
+        <section id="services" className="py-10 xs:py-12 md:py-16 lg:py-20 xl:py-24 bg-surface">
+            <Leaf variant="tr" />
             <div className="max-w-content mx-auto px-4 xs:px-6 lg:px-10">
 
                 {/* Header */}
@@ -99,7 +102,7 @@ export default function ServicesSection() {
                                     Service Tier
                                 </span>
                                 <div>
-                                    <h3 className="font-display text-[28px] xs:text-[32px] sm:text-[36px] leading-[0.98] tracking-tightish group-hover:text-accent transition-colors duration-300">
+                                    <h3 className="font-display text-[28px] xs:text-[32px] sm:text-[36px] leading-[0.98] tracking-tightish">
                                         {svc.h3}
                                     </h3>
                                     <p className="mt-4 text-[13px] xs:text-[14px] text-ondark/80 leading-relaxed font-light max-w-[320px]">
@@ -109,7 +112,7 @@ export default function ServicesSection() {
                                         <span className="text-[13px] xs:text-[14px] text-white font-semibold uppercase tracking-widest border-b border-white/20 pb-0.5 group-hover/btn:border-white transition-colors">
                                             {svc.cta}
                                         </span>
-                                        <span className="arrow text-xl transition-transform duration-300 group-hover/btn:translate-x-2">→</span>
+                                        <ArrowIcon size={20} className="transition-transform duration-300 group-hover/btn:translate-x-2" />
                                     </div>
                                 </div>
                             </div>

@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useEffect, useRef } from 'react';
+import ArrowIcon from '@/components/ui/ArrowIcon';
 
 export default function NotFound() {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -101,19 +102,19 @@ export default function NotFound() {
 
                     {/* Action buttons */}
                     <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
-                        <Link href="/" className="error-button btn btn-primary text-sm">
-                            <span>Return Home</span>
-                            <span className="arrow">→</span>
-                        </Link>
+                         <Link href="/" className="error-button btn btn-primary text-sm">
+                             <span>Return Home</span>
+                             <ArrowIcon size={14} className="ml-1" />
+                         </Link>
 
-                        <button
-                            onClick={() => window.history.back()}
-                            className="error-button btn btn-ghost text-sm"
-                        >
-                            <span>Go Back</span>
-                            <span className="arrow">←</span>
-                        </button>
-                    </div>
+                         <button
+                             onClick={() => window.history.back()}
+                             className="error-button btn btn-ghost text-sm"
+                         >
+                             <span>Go Back</span>
+                             <ArrowIcon type="left" size={14} className="ml-1" />
+                         </button>
+                     </div>
 
                     {/* Footer suggestion */}
                     <div className="mt-20 text-center">

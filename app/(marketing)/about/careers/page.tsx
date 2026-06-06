@@ -1,5 +1,8 @@
-import CareersPageClient from '@/components/sections/about/careers-page';
 import type { Metadata } from 'next';
+import HeroBanner from "@/components/sections/about/careers/HeroBanner";
+import CultureValues from "@/components/sections/about/careers/CultureValues";
+import OpenRoles from "@/components/sections/about/careers/OpenRoles";
+import BottomCTA from "@/components/sections/about/careers/BottomCTA";
 
 export const metadata: Metadata = {
     title: 'Careers | Join Prestige Glamour Group — Open Roles in Sri Lanka',
@@ -74,7 +77,10 @@ export default function CareersPage() {
                     }),
                 }}
             />
-            <CareersPageClient />
+            <HeroBanner/>
+            <CultureValues/>
+            <OpenRoles/>
+            <BottomCTA/>
         </>
     );
 }

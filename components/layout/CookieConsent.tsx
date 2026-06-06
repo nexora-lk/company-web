@@ -90,7 +90,7 @@ export default function CookieConsent() {
         <>
             {/* Backdrop — subtle, doesn't block page */}
             <div
-                className="fixed inset-0 bg-black/35 z-[9998] backdrop-blur-[2px]"
+                className="fixed inset-0 bg-black/35 z-[9998] backdrop-blur-[2px] pointer-events-none"
                 aria-hidden="true"
             />
 
@@ -99,7 +99,7 @@ export default function CookieConsent() {
                 role="dialog"
                 aria-modal="true"
                 aria-label="Cookie consent"
-                className="fixed bottom-0 left-0 right-0 z-[9999] bg-ink border-t border-ondark/10 shadow-[0_-8px_40px_rgba(0,0,0,0.5)] font-body reveal"
+                className="fixed bottom-0 left-0 right-0 z-[9999] bg-ink border-t border-ondark/10 shadow-[0_-8px_40px_rgba(0,0,0,0.5)] font-body"
             >
                 <div className="max-w-content mx-auto px-6 py-6 md:px-8 lg:px-10 xl:px-12">
                     {/* ── Main row ── */}

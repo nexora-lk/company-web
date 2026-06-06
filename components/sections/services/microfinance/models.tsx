@@ -1,6 +1,9 @@
+import Leaf from "@/components/ui/Leaf";
+
 export default function ModelsSection() {
     return (
-        <section id="models" className="py-16 sm:py-20 md:py-24 lg:py-28 xl:py-32 bg-bg">
+        <section id="models" className="py-16 sm:py-20 md:py-24 lg:py-28 xl:py-32 bg-surface">
+            <Leaf variant="bl" />
             <div className="max-w-content mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
                 <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 sm:gap-5 md:gap-6 lg:gap-8 mb-8 sm:mb-10 md:mb-12 lg:mb-16 reveal">
                     <div>
@@ -20,8 +23,6 @@ export default function ModelsSection() {
                         commodity export, retail distribution, securities trading, and education. Each model is designed, tested, and optimized for consistent returns to our investors.
                     </p>
                 </div>
-
-                <div className="hairline-strong"></div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mt-12 sm:mt-16">
                     {[

@@ -1,8 +1,10 @@
 import Photo from '@/components/ui/Photo';
+import Leaf from "@/components/ui/Leaf";
 
 export default function OverviewSection() {
     return (
         <section className="py-16 xs:py-20 sm:py-24 lg:py-32 xl:py-40">
+            <Leaf variant="tr" />
             <div className="max-w-content mx-auto px-4 xs:px-6 lg:px-10">
                 <div className="grid grid-cols-12 gap-8 lg:gap-16 xl:gap-24 items-start">
 
@@ -48,15 +50,6 @@ export default function OverviewSection() {
                             <li className="branch text-[13px] xs:text-[14px]">Spice blends</li>
                             <li className="branch text-[13px] xs:text-[14px]">Organic honey</li>
                         </ul>
-
-                        <div className="mt-10 xs:mt-12 flex flex-wrap gap-4 reveal">
-                            <a href="#products" className="btn btn-ghost w-full xs:w-auto justify-center">
-                                View our products <span className="arrow">→</span>
-                            </a>
-                            <a href="#enquire" className="btn btn-primary w-full xs:w-auto justify-center">
-                                Become a distributor <span className="arrow">→</span>
-                            </a>
-                        </div>
                     </div>
 
                     {/* Right: Image */}

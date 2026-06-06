@@ -1,14 +1,16 @@
 import SectionEyebrow from '@/components/sections/SectionEyebrow';
 import Photo from '@/components/ui/Photo';
+import Leaf from "@/components/ui/Leaf";
 
 export default function AwardsSection() {
     return (
-        <section className="pb-20 xs:pb-24 md:pb-32 lg:pb-40 xl:pb-48 overflow-hidden">
+        <section className="py-10 xs:py-6 md:py-14 lg:py-5 xl:py-6 overflow-hidden">
+            <Leaf variant="bl" />
             <div className="max-w-content mx-auto px-4 xs:px-6 lg:px-10">
                 <div className="grid grid-cols-12 gap-8 lg:gap-16 items-center">
 
                     {/* Text */}
-                    <div className="col-span-12 lg:col-span-5 order-2 lg:order-1 reveal">
+                    <div className="col-span-12 lg:col-span-5 order-1 lg:order-1 reveal">
                         <SectionEyebrow
                             index="05"
                             label="Recognition"
@@ -32,16 +34,16 @@ export default function AwardsSection() {
                         </div>
                     </div>
 
-                    {/* Images */}
-                    <div className="col-span-12 lg:col-span-7 relative order-1 lg:order-2 flex items-center justify-center gap-4 xs:gap-6 sm:gap-8 mt-6 lg:mt-0 py-8 lg:py-12 reveal">
-                        {/* Medal — large, no border/shadow, shifted up */}
-                        <figure className="w-[60%] xs:w-[55%] sm:w-[50%] lg:w-[60%] overflow-hidden aspect-[4/5] transform -translate-y-4 sm:-translate-y-8 lg:-translate-y-12 transition-transform duration-700 hover:-translate-y-14 reveal">
+                    {/* Images — maximized sizes for extreme presence */}
+                    <div className="col-span-12 lg:col-span-7 relative order-2 lg:order-2 flex items-center justify-center gap-4 xs:gap-6 sm:gap-8 mt-8 sm:mt-12 lg:mt-0 py-16 lg:py-24 reveal">
+                        {/* Medal — maximized, no border/shadow, shifted up */}
+                        <figure className="w-[95%] xs:w-[90%] sm:w-[85%] lg:w-[90%] overflow-hidden aspect-[4/5] transform -translate-y-4 sm:-translate-y-6 lg:-translate-y-16 transition-transform duration-700 hover:-translate-y-20 reveal">
                             <Photo
                                 src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780295757/cup-22_rk2avu.png"
                                 alt="Award Cup"
                                 className="w-full h-full object-contain"
                                 fill
-                                sizes="(max-width: 640px) 60vw, (max-width: 1024px) 40vw, 30vw"
+                                sizes="(max-width: 640px) 95vw, (max-width: 1024px) 70vw, 55vw"
                             />
                         </figure>
                         {/* Certificate — smaller, shifted down */}

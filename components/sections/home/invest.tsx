@@ -1,4 +1,5 @@
 import Photo from '@/components/ui/Photo';
+import ArrowIcon from '@/components/ui/ArrowIcon';
 
 export default function InvestSection() {
     return (
@@ -35,7 +36,7 @@ export default function InvestSection() {
                                     href="#contact"
                                     className="btn bg-bg! text-ink! hover:bg-accent! hover:text-ondark! w-full sm:w-auto justify-center text-[14px] px-8"
                                 >
-                                    Request prospectus <span className="arrow">→</span>
+                                    Request prospectus <ArrowIcon size={14} className="ml-1" />
                                 </a>
                                 <p className="text-ondark/60 text-xs sm:text-[13px] leading-relaxed max-w-[280px] lg:text-right">
                                     Speak with our investor relations lead <span className="text-ondark font-medium">Aravinda Karunaratne</span>

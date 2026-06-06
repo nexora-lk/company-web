@@ -5,6 +5,7 @@ import emailjs from '@emailjs/browser';
 import { getEmailJsConfig } from '@/lib/emailjs';
 import { homeContactFormSchema, extractFieldErrors } from '@/lib/form-schemas';
 import { ZodError } from 'zod';
+import ArrowIcon from '@/components/ui/ArrowIcon';
 
 export default function ContactForm() {
     const formRef = useRef<HTMLFormElement>(null);
@@ -83,12 +84,9 @@ export default function ContactForm() {
                 <div>
                     <div className="num mb-1.5 sm:mb-2">Inquiry</div>
                     <div className="font-display text-[24px] sm:text-[28px] leading-tight">
-                        A quick form, hand-read.
+                        Have a Question? Let&#39;s Talk
                     </div>
                 </div>
-                <span className="pill self-start sm:self-auto text-[11px] sm:text-[12px] reveal">
-                    <span className="dot"></span>Reply within 1 working day
-                </span>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 lg:gap-x-8 gap-y-3 sm:gap-y-4">
@@ -131,11 +129,10 @@ export default function ContactForm() {
                         required
                     >
                         <option value="">Select...</option>
-                        <option value="Investor">Investor</option>
-                        <option value="Trade buyer">Trade buyer</option>
-                        <option value="Co-operative partner">Co-operative partner</option>
-                        <option value="Journalist">Journalist</option>
-                        <option value="Other">Other</option>
+                        <option value="Potential Investor">Investor</option>
+                        <option value="Business Partner">Trade buyer</option>
+                        <option value="Media/Press">Co-operative partner</option>
+                        <option value="Other">Journalist</option>
                     </select>
                     {fieldErrors.user_role && <p className="text-red-500 text-xs mt-1">{fieldErrors.user_role}</p>}
                 </label>
@@ -145,7 +142,7 @@ export default function ContactForm() {
                         name="user_message"
                         className="field resize-none focus:outline-2 focus:outline-offset-2 focus:outline-accent text-[13px] sm:text-[14px]"
                         rows={3}
-                        placeholder="A few lines is enough — we'll pick up the phone."
+                        placeholder="A few lines is enough — we'll pick up the phone to continue the conversation. Tell us about your interest or question."
                         required
                     ></textarea>
                     {fieldErrors.user_message && <p className="text-red-500 text-xs mt-1">{fieldErrors.user_message}</p>}
@@ -178,7 +175,7 @@ export default function ContactForm() {
                     className="btn btn-primary focus:outline-2 focus:outline-offset-2 focus:outline-accent w-full sm:w-auto order-1 sm:order-2 justify-center"
                     disabled={status === 'submitting'}
                 >
-                    {status === 'submitting' ? 'Sending...' : 'Send enquiry'} <span className="arrow">→</span>
+                    {status === 'submitting' ? 'Sending...' : 'Send enquiry'} <ArrowIcon size={14} className="ml-1" />
                 </button>
             </div>
         </form>

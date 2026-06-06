@@ -5,6 +5,7 @@ import emailjs from '@emailjs/browser';
 import { getEmailJsConfig } from '@/lib/emailjs';
 import { investmentContactFormSchema, extractFieldErrors } from '@/lib/form-schemas';
 import { ZodError } from 'zod';
+import ArrowIcon from '@/components/ui/ArrowIcon';
 
 export default function InvestmentContactForm() {
     const formRef = useRef<HTMLFormElement>(null);
@@ -120,43 +121,43 @@ export default function InvestmentContactForm() {
                     {fieldErrors.user_email && <p className="text-red-500 text-xs mt-1">{fieldErrors.user_email}</p>}
                 </label>
                 <label className="block reveal">
-                    <div className="num mb-2 sm:mb-2.5 text-[10px] sm:text-xs md:text-xs lg:text-sm uppercase tracking-wider font-semibold">04 — Model</div>
+                    <div className="num mb-2 sm:mb-2.5 text-[10px] sm:text-xs md:text-xs lg:text-sm uppercase tracking-wider font-semibold">04 — WHICH DIVISION INTERESTS YOU? </div>
                     <select
                         name="user_model"
                         className="field bg-transparent focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-1 text-xs sm:text-sm md:text-sm lg:text-base px-3 sm:px-4 py-2 sm:py-2.5 md:py-3 lg:py-3"
                         required
                     >
                         <option value="">Select model...</option>
-                        <option value="01 — Cultivation Contribution Projects">01 — Cultivation Contribution Projects</option>
-                        <option value="02 — Gold Spirits of Landing Scheme">02 — Gold Spirits of Landing Scheme</option>
-                        <option value="03 — Real Estate Land Value Appreciation">03 — Real Estate Land Value Appreciation</option>
-                        <option value="04 — Partner in FMCG Distribution & Processing">04 — Partner in FMCG Distribution &amp; Processing</option>
-                        <option value="Mixed / please advise">Mixed / please advise</option>
+                        <option value="01 — Plantation Operations">01 — Plantation Operations</option>
+                        <option value="02 — Real Estate Development">02 — Real Estate Development</option>
+                        <option value="03 — Gems & Precious Stones">03 — Gems & Precious Stones</option>
+                        <option value="04 — Consumer Goods - FMCG">04 — Consumer Goods - FMCG</option>
+                        <option value="Not sure yet - guide me">Not sure yet - guide me</option>
                     </select>
                     {fieldErrors.user_model && <p className="text-red-500 text-xs mt-1">{fieldErrors.user_model}</p>}
                 </label>
                 <label className="block reveal">
-                    <div className="num mb-2 sm:mb-2.5 text-[10px] sm:text-xs md:text-xs lg:text-sm uppercase tracking-wider font-semibold">05 — Ticket size</div>
+                    <div className="num mb-2 sm:mb-2.5 text-[10px] sm:text-xs md:text-xs lg:text-sm uppercase tracking-wider font-semibold">05 — HOW MUCH WOULD YOU LIKE TO INVEST?</div>
                     <select
                         name="user_ticket_size"
                         className="field bg-transparent focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-1 text-xs sm:text-sm md:text-sm lg:text-base px-3 sm:px-4 py-2 sm:py-2.5 md:py-3 lg:py-3"
                         required
                     >
                         <option value="">Select amount...</option>
-                        <option value="LKR 250,000 — 1M">LKR 250,000 — 1M</option>
-                        <option value="LKR 1M — 5M">LKR 1M — 5M</option>
-                        <option value="LKR 5M — 25M">LKR 5M — 25M</option>
-                        <option value="LKR 25M+">LKR 25M+</option>
+                        <option value="LKR 200,000 - 500,000 (Entry level)">LKR 200,000 - 500,000 (Entry level)</option>
+                        <option value="LKR 500,000 - 1 Million">LKR 500,000 - 1 Million</option>
+                        <option value="LKR 5 Million+">LKR 5 Million+</option>
+                        <option value="Prefer to discuss">Prefer to discuss</option>
                     </select>
                     {fieldErrors.user_ticket_size && <p className="text-red-500 text-xs mt-1">{fieldErrors.user_ticket_size}</p>}
                 </label>
                 <label className="block md:col-span-2 mt-1 sm:mt-2 md:mt-3 reveal">
-                    <div className="num mb-2 sm:mb-2.5 text-[10px] sm:text-xs md:text-xs lg:text-sm uppercase tracking-wider font-semibold">06 — Message</div>
+                    <div className="num mb-2 sm:mb-2.5 text-[10px] sm:text-xs md:text-xs lg:text-sm uppercase tracking-wider font-semibold">06 — YOUR INVESTMENT GOALS</div>
                     <textarea
                         name="user_message"
                         className="field resize-none focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-1 text-xs sm:text-sm md:text-sm lg:text-base px-3 sm:px-4 py-2 sm:py-2.5 md:py-3 lg:py-3"
                         rows={4}
-                        placeholder="A few lines on your investment goals..."
+                        placeholder="investment goals, timeline, preferred return model (annual or monthly), and any questions we should address. We'll be in touch within 24 hours."
                         required
                     ></textarea>
                     {fieldErrors.user_message && <p className="text-red-500 text-xs mt-1">{fieldErrors.user_message}</p>}
@@ -189,7 +190,7 @@ export default function InvestmentContactForm() {
                     disabled={status === 'submitting'}
                 >
                     <span className="whitespace-nowrap">{status === 'submitting' ? 'Submitting...' : 'Submit enquiry'}</span>
-                    <span className="arrow transition-transform duration-300 group-disabled:translate-x-0">→</span>
+                    <ArrowIcon size={14} className="transition-transform duration-300" />
                 </button>
             </div>
         </form>

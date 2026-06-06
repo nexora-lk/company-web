@@ -1,9 +1,12 @@
 import SectionEyebrow from '@/components/sections/SectionEyebrow';
 import Photo from '@/components/ui/Photo';
+import ArrowIcon from '@/components/ui/ArrowIcon';
+import Leaf from '@/components/ui/Leaf';
 
 export default function AboutSection() {
     return (
-        <section id="about" className="py-16 xs:py-20 sm:py-24 lg:py-32 xl:py-40">
+        <section id="about" className="relative overflow-hidden py-8 xs:py-10 sm:py-12 lg:py-16 xl:py-20">
+            <Leaf variant="tr" />
             <div className="max-w-content mx-auto px-4 xs:px-6 lg:px-10">
                 <div className="grid grid-cols-12 gap-8 md:gap-10 lg:gap-16 items-center">
 
@@ -35,12 +38,12 @@ export default function AboutSection() {
                         </div>
 
                         {/* Inline stat pill — mobile/tablet only */}
-                        <div className="lg:hidden mt-5 flex items-center gap-5 bg-surface border border-line rounded-[16px] p-5 sm:p-6 shadow-sm reveal">
-                            <div className="font-display text-4xl xs:text-5xl leading-none tracking-tightish shrink-0 text-accent">
+                        <div className="lg:hidden absolute right-0 bottom-0 w-24 xs:w-28 sm:w-32 aspect-square bg-accent text-ondark flex flex-col items-center justify-center shadow-xl reveal z-10">
+                            <div className="font-display text-4xl xs:text-5xl leading-none tracking-tightish">
                                 14<em className="serif-em">y</em>
                             </div>
-                            <div className="text-[13px] xs:text-[14px] text-mute leading-relaxed font-light">
-                                years of compounding patient capital across seven Sri Lankan industries.
+                            <div className="text-[10px] xs:text-[11px] uppercase tracking-widest mt-1.5 font-medium opacity-80">
+                                Experience
                             </div>
                         </div>
                     </div>
@@ -49,7 +52,6 @@ export default function AboutSection() {
                     <div className="col-span-12 lg:col-span-6 order-2">
                         <div className="reveal">
                             <SectionEyebrow
-                                index="02"
                                 label="About the Group"
                                 className="flex items-center gap-2 xs:gap-3 mb-6 sm:mb-8"
                                 hairlineClassName="hairline-strong w-16 xs:w-20 sm:w-24 lg:w-[120px]"
@@ -70,12 +72,12 @@ export default function AboutSection() {
                             </p>
                         </div>
 
-                        <div className="mt-8 sm:mt-10 flex flex-wrap gap-3 sm:gap-4 reveal">
-                            <a className="btn btn-ghost w-full xs:w-auto justify-center" href="#services">
-                                Our Investment Options  <span className="arrow">→</span>
+                        <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4 reveal">
+                            <a className="btn btn-ghost w-full sm:w-max justify-center px-6 xl:px-8" href="#services">
+                                Our Investment Options  <ArrowIcon size={16} className="ml-1" />
                             </a>
-                            <a className="btn btn-ghost w-full xs:w-auto justify-center" href="#impact">
-                                How to Invest  <span className="arrow">↗</span>
+                            <a className="btn btn-primary w-full sm:w-max justify-center px-6 xl:px-8" href="#impact">
+                                How to Invest  <ArrowIcon type="up-right" size={16} className="ml-1" />
                             </a>
                         </div>
                     </div>

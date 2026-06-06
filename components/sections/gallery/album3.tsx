@@ -1,4 +1,5 @@
 import Photo from '@/components/ui/Photo';
+import ArrowIcon from '@/components/ui/ArrowIcon';
 
 export default function Album3Section() {
     return (
@@ -24,7 +25,7 @@ export default function Album3Section() {
                     <div className="flex sm:flex-col items-center sm:items-end gap-3 sm:gap-2 shrink-0 reveal">
                         <div className="num text-[10px] sm:text-[11px]">21 July 2025 · 22 photographs</div>
                         <a className="ulink text-[12px] sm:text-sm" href="#">
-                            View all 22 <span className="arrow">→</span>
+                            View all 22 <ArrowIcon size={12} className="ml-1" />
                         </a>
                     </div>
                 </header>

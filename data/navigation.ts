@@ -1,4 +1,4 @@
-import type { NavLink, FooterColumn, SocialLink } from "@/types/navigation";
+import type { NavLink, FooterColumn } from "@/types/navigation";
 
 export const brand = {
   name: "PGGC",
@@ -22,7 +22,7 @@ export const primaryNav: NavLink[] = [
       { label: "Real Estate", href: "/services/real-estate" },
     ]
   },
-  { label: "Gallery", href: "/gallery" },
+  // { label: "Gallery", href: "/gallery" },
   { label: "Investment Plans", href: "/investment" },
 ];
 
@@ -43,7 +43,7 @@ export const footerColumns: FooterColumn[] = [
     links: [
       { label: "Home", href: "/" },
       { label: "About", href: "/about" },
-      { label: "Gallery", href: "/gallery" },
+      // { label: "Gallery", href: "/gallery" },
       { label: "Careers", href: "/about/careers" },
       { label: "Investment Plans", href: "/investment" },
     ],

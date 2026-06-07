@@ -10,9 +10,9 @@ export default function ImpactSection() {
             <div className="max-w-content mx-auto px-4 xs:px-6 lg:px-10">
                 <div className="grid grid-cols-12 gap-8 md:gap-12 lg:gap-16 items-end mb-12 sm:mb-16 md:mb-20">
                     <div className="col-span-12 lg:col-span-7 reveal">
-                        <SectionEyebrow 
-                            index="06" 
-                            label="Why partners choose us" 
+                        <SectionEyebrow
+                            index="06"
+                            label="Why partners choose us"
                             className="flex items-center gap-2 xs:gap-3 mb-6 sm:mb-8"
                             hairlineClassName="hairline-strong w-16 xs:w-20 sm:w-24 lg:w-[120px]"
                         />

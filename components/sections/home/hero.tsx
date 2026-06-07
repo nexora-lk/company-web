@@ -7,7 +7,7 @@ import ArrowIcon from '@/components/ui/ArrowIcon';
 const BG_VIDEOS = [
     {
         src: 'https://res.cloudinary.com/ddxvnb0nk/video/upload/q_auto/f_auto/v1780332964/plantation_h4uxzp.mp4',
-        label: 'Wildlife · Sri Lanka',
+        label: 'Plantation',
     },
     {
         src: 'https://res.cloudinary.com/ddxvnb0nk/video/upload/q_auto/f_auto/v1780332129/gem_hlhxaz.mp4',
@@ -40,7 +40,7 @@ export default function HeroSection() {
             if (!el) return;
             if (i === current) {
                 el.currentTime = 0;
-                el.play().catch(() => {});
+                el.play().catch(() => { });
             } else {
                 el.pause();
             }
@@ -120,7 +120,7 @@ export default function HeroSection() {
                     </h1>
 
                     {/* Sub-paragraph */}
-                    <p className="mt-5 sm:mt-7 md:mt-8 lg:mt-9
+                    <p className="mt-10 sm:mt-12 md:mt-15 lg:mt-20
                                   max-w-[100%] xs:max-w-[95%] sm:max-w-[480px] md:max-w-[560px] lg:max-w-[660px] xl:max-w-[720px]
                                   text-[#f1ece0]/75
                                   text-[15px] xs:text-[16px] sm:text-[16.5px] md:text-[17px] lg:text-[18px] xl:text-[19px]
@@ -137,18 +137,18 @@ export default function HeroSection() {
                                 flex flex-col sm:flex-row
                                 items-center gap-3 sm:gap-4 w-full sm:w-auto reveal">
                     <a
-                         href="#services"
-                         id="hero-cta-primary"
-                         className="btn btn-primary
+                        href="#services"
+                        id="hero-cta-primary"
+                        className="btn btn-primary
                                     w-full sm:w-auto
                                     min-w-0 sm:min-w-[200px] lg:min-w-[220px]
                                     justify-center
                                     text-[15.5px] sm:text-[15px] lg:text-[15.5px]
                                     py-[0.9rem] sm:py-[0.85rem] lg:py-[0.9rem]
                                     shadow-lg sm:shadow-none"
-                     >
-                         Explore Investment Options <ArrowIcon size={15} className="ml-1" />
-                     </a>
+                    >
+                        Explore Investment Options <ArrowIcon size={15} className="ml-1" />
+                    </a>
                     <a
                         href="#contact"
                         id="hero-cta-secondary"
@@ -178,11 +178,10 @@ export default function HeroSection() {
                         id={`hero-video-dot-${i}`}
                         aria-label={`Play video: ${v.label}`}
                         onClick={() => setCurrent(i)}
-                        className={`h-1.5 rounded-full transition-all duration-300 no-min-target ${
-                            i === current
-                                ? 'bg-[#f1ece0] w-6 sm:w-7'
-                                : 'bg-[#f1ece0]/35 w-1.5 hover:bg-[#f1ece0]/60'
-                        }`}
+                        className={`h-1.5 rounded-full transition-all duration-300 no-min-target ${i === current
+                            ? 'bg-[#f1ece0] w-6 sm:w-7'
+                            : 'bg-[#f1ece0]/35 w-1.5 hover:bg-[#f1ece0]/60'
+                            }`}
                     />
                 ))}
             </div>

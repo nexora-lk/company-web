@@ -22,6 +22,7 @@
 }
 
 @theme inline {
+    --breakpoint-xs: 30rem;
     --color-bg: var(--c-bg);
     --color-surface: var(--c-surface);
     --color-ink: var(--c-ink);

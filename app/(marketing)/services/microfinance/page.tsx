@@ -91,7 +91,7 @@ export default function MicrofinancePage() {
                 stats={[
                     { label: "SMEs supported", value: "100", em: "+", note: "Target by 2026" },
                     { label: "Active borrowers", value: "11.2K", em: "", note: "Deployment goal" },
-                    { label: "Repayment rate", value: "96", em: "%", note: "As of 2023" },
+                    { label: "Customer support", value: "24/7", em: "", note: "" },
                     { label: "Branch network", value: "23", em: ".", note: "Across nine provinces" }
                 ]}
             />

@@ -15,7 +15,7 @@ export default function OverviewSection() {
                         <h2 className="font-display text-3xl xs:text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[0.98] tracking-tightish text-ink reveal">
                             Invest in Sri Lanka&#39;s <em className="serif-em text-accent">most transparent </em>
                             <br />
-                             plantation operation.
+                            plantation operation.
                         </h2>
                         <p className="mt-6 xs:mt-8 text-[14px] xs:text-[15px] text-mute leading-relaxed sm:leading-[1.75] max-w-full sm:max-w-[620px] font-light reveal">
                             Our plantation division manages a growing portfolio of owned and
@@ -107,28 +107,28 @@ export default function OverviewSection() {
                                 <div className="overflow-x-auto">
                                     <table className="w-full min-w-[500px] xs:min-w-full">
                                         <thead>
-                                        <tr className="border-b border-line/50 bg-bg/30">
-                                            <th className="px-5 xs:px-8 py-4 text-left text-[10px] xs:text-[11px] uppercase tracking-widest font-bold text-mute/70">Estate Name</th>
-                                            <th className="px-5 xs:px-8 py-4 text-left text-[10px] xs:text-[11px] uppercase tracking-widest font-bold text-mute/70 whitespace-nowrap">Area (Ha)</th>
-                                            <th className="px-5 xs:px-8 py-4 text-left text-[10px] xs:text-[11px] uppercase tracking-widest font-bold text-mute/70">Cultivated Crops</th>
-                                        </tr>
+                                            <tr className="border-b border-line/50 bg-bg/30">
+                                                <th className="px-5 xs:px-8 py-4 text-left text-[10px] xs:text-[11px] uppercase tracking-widest font-bold text-mute/70">Estate Name</th>
+                                                <th className="px-5 xs:px-8 py-4 text-left text-[10px] xs:text-[11px] uppercase tracking-widest font-bold text-mute/70 whitespace-nowrap">Area (Ha)</th>
+                                                <th className="px-5 xs:px-8 py-4 text-left text-[10px] xs:text-[11px] uppercase tracking-widest font-bold text-mute/70">Cultivated Crops</th>
+                                            </tr>
                                         </thead>
                                         <tbody className="divide-y divide-line/30">
-                                        <tr className="hover:bg-accent/5 transition-colors duration-300">
-                                            <td className="px-5 xs:px-8 py-5 font-semibold text-[14px] xs:text-[15px] text-ink">Bingiriya</td>
-                                            <td className="px-5 xs:px-8 py-5 text-[14px] xs:text-[15px] text-mute font-medium">100</td>
-                                            <td className="px-5 xs:px-8 py-5 text-[14px] xs:text-[15px] text-ink font-light">Ginger</td>
-                                        </tr>
-                                        <tr className="hover:bg-accent/5 transition-colors duration-300">
-                                            <td className="px-5 xs:px-8 py-5 font-semibold text-[14px] xs:text-[15px] text-ink">Kuliyapitiya</td>
-                                            <td className="px-5 xs:px-8 py-5 text-[14px] xs:text-[15px] text-mute font-medium">16</td>
-                                            <td className="px-5 xs:px-8 py-5 text-[14px] xs:text-[15px] text-ink font-light">Bulath</td>
-                                        </tr>
-                                        <tr className="hover:bg-accent/5 transition-colors duration-300">
-                                            <td className="px-5 xs:px-8 py-5 font-semibold text-[14px] xs:text-[15px] text-ink">Wanathawilluwa</td>
-                                            <td className="px-5 xs:px-8 py-5 text-[14px] xs:text-[15px] text-mute font-medium">-</td>
-                                            <td className="px-5 xs:px-8 py-5 text-[14px] xs:text-[15px] text-ink font-light">-</td>
-                                        </tr>
+                                            <tr className="hover:bg-accent/5 transition-colors duration-300">
+                                                <td className="px-5 xs:px-8 py-5 font-semibold text-[14px] xs:text-[15px] text-ink">Bingiriya</td>
+                                                <td className="px-5 xs:px-8 py-5 text-[14px] xs:text-[15px] text-mute font-medium">100</td>
+                                                <td className="px-5 xs:px-8 py-5 text-[14px] xs:text-[15px] text-ink font-light">Ginger</td>
+                                            </tr>
+                                            <tr className="hover:bg-accent/5 transition-colors duration-300">
+                                                <td className="px-5 xs:px-8 py-5 font-semibold text-[14px] xs:text-[15px] text-ink">Kuliyapitiya</td>
+                                                <td className="px-5 xs:px-8 py-5 text-[14px] xs:text-[15px] text-mute font-medium">16</td>
+                                                <td className="px-5 xs:px-8 py-5 text-[14px] xs:text-[15px] text-ink font-light">Bulath</td>
+                                            </tr>
+                                            <tr className="hover:bg-accent/5 transition-colors duration-300">
+                                                <td className="px-5 xs:px-8 py-5 font-semibold text-[14px] xs:text-[15px] text-ink">Wanathawilluwa</td>
+                                                <td className="px-5 xs:px-8 py-5 text-[14px] xs:text-[15px] text-mute font-medium">-</td>
+                                                <td className="px-5 xs:px-8 py-5 text-[14px] xs:text-[15px] text-ink font-light">-</td>
+                                            </tr>
                                         </tbody>
                                     </table>
                                 </div>
@@ -151,12 +151,12 @@ export default function OverviewSection() {
                             <div className="num text-ondark/60! mb-5 text-[10px] xs:text-[11px] uppercase tracking-widest">Leadership Quote</div>
                             <p className="font-display text-[22px] xs:text-[24px] sm:text-[28px] leading-tight">
                                 &ldquo;Every kilo we grow at home is a dollar that{' '}
-                                <em className="serif-em text-accent">does not leave</em> the country.&rdquo;
+                                <em className="serif-em text-accent">does not leave </em> the country.&rdquo;
                             </p>
                             <div className="hairline mt-8 bg-white/10!"></div>
                             <div className="mt-5 flex items-center justify-between text-[11px] xs:text-[12px] text-ondark/50 font-light italic">
-                                <span>— Y. M. D. T. Yatawara</span>
-                                <span>Chairman, PGG</span>
+                                <span>— Mr. Nilanga Amunugama</span>
+                                <span>Director, PGGC</span>
                             </div>
                         </div>
                     </aside>

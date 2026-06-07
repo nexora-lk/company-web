@@ -4,7 +4,7 @@ import Leaf from "@/components/ui/Leaf";
 
 export default function ContactSection() {
     return (
-        <section id="enquire" className="py-10 sm:py-14 md:py-18 lg:py-28 xl:py-32 bg-surface">
+        <section id="enquire" className="py-10 sm:py-14 md:py-18 lg:py-28 xl:py-32 bg-bg">
             <Leaf variant="tr" />
             <Leaf variant="bl" />
             <div className="max-w-content mx-auto px-3 sm:px-5 md:px-8 lg:px-10 xl:px-12">

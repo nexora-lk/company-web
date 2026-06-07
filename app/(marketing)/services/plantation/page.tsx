@@ -92,7 +92,7 @@ export default function PlantationPage() {
                     { label: "Estates", value: "07", note: "Currently Operating" },
                     { label: "Crops", value: "06", note: "In production" },
                     { label: "Scale", value: "2.4K", em: "", note: "Currently" },
-                    { label: "Export Focus", value: "Primary", em: "", note: "Revenue focus" }
+                    { label: "Export Focus", value: "40", em: "%", note: "Revenue focus" }
                 ]}
             />
             <OverviewSection />

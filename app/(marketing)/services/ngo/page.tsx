@@ -91,8 +91,8 @@ export default function NGOPage() {
                 stats={[
                     { label: "Lives impacted", value: "28K", em: "+", note: "Since 2015" },
                     { label: "Active projects", value: "14", em: ".", note: "Across 7 districts" },
-                    { label: "Global partners", value: "09", em: ".", note: "NGOs & foundations" },
-                    { label: "Schools built", value: "06", em: ".", note: "Rural education centres" }
+                    { label: "Global partners", value: "09", em: "", note: "NGOs & foundations" },
+                    { label: "Schools built", value: "06", em: "", note: "Rural centres" }
                 ]}
             />
             <OverviewSection />

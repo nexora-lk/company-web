@@ -89,9 +89,9 @@ export default function FMCGPage() {
                 ]}
                 stats={[
                     { label: "Product lines", value: "18", em: "+", note: "Fresh & natural products" },
-                    { label: "Retail partners", value: "20", em: "", note: "Across Sri Lanka" },
+                    { label: "Retail", value: "20", em: "", note: "Across Sri Lanka" },
                     { label: "Processing", value: "5", em: "", note: "tonnes/day" },
-                    { label: "Export revenue", value: "42", em: "", note: "Of total sales · 2025" }
+                    { label: "Export", value: "42", em: "", note: "Of total sales · 2025" }
                 ]}
             />
             <OverviewSection />

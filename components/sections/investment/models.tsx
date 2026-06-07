@@ -1,6 +1,5 @@
-import Link from 'next/link';
-import ArrowIcon from '@/components/ui/ArrowIcon';
 import Leaf from "@/components/ui/Leaf";
+import ModelCard from "@/components/sections/ModelCard";
 
 export default function ModelsSection() {
     return (
@@ -15,7 +14,7 @@ export default function ModelsSection() {
                             <span className="eyebrow text-[10px] sm:text-[11px]">Investment Models</span>
                         </div>
                         <h2 className="font-display text-[36px] sm:text-[48px] md:text-[56px] lg:text-[60px] leading-[0.98] tracking-tightish max-w-[820px]">
-                            Six investment vehicles. <em className="serif-em">One</em>
+                            Six investment vehicles. <em className="serif-em">One </em>
                             <br className="hidden sm:block" />
                             standard of transparency.
                         </h2>
@@ -27,74 +26,24 @@ export default function ModelsSection() {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
-                    <article className="model-card rounded-[16px] sm:rounded-[20px] bg-bg border border-line p-6 sm:p-8 lg:p-10 flex flex-col gap-4 sm:gap-6 reveal">
-                        <div className="flex items-start justify-between">
-                            <span className="num text-[10px] sm:text-[11px]">Model · 01</span>
-                            <span className="num text-accent text-[10px] sm:text-[11px]">6 — 24 months</span>
-                        </div>
-                        <h3 className="font-display text-[28px] sm:text-[32px] lg:text-[36px] leading-[1.05] tracking-tightish">
-                            Cultivation <em className="serif-em">Contribution</em> Projects.
-                        </h3>
-                        <p className="text-mute text-[13.5px] sm:text-[14.5px] leading-[1.7]">
-                            Direct contribution into a single crop cycle on PGG-managed land —
-                            watermelon, ginger, mango, pomegranate. Quarterly progress reports,
-                            off-take at sealed price.
-                        </p>
-                        <div className="hairline my-2 sm:my-0"></div>
-                        <dl className="grid grid-cols-2 sm:grid-cols-3 gap-y-3 gap-x-2 text-[13px] sm:text-[13.5px]">
-                            <div className="col-span-1 sm:contents">
-                                <dt className="text-mute sm:col-span-1">Min. ticket</dt>
-                                <dd className="font-display text-[16px] sm:text-[18px] sm:col-span-2">LKR 250,000</dd>
-                            </div>
-                            <div className="col-span-1 sm:contents">
-                                <dt className="text-mute sm:col-span-1">Target IRR</dt>
-                                <dd className="font-display text-[16px] sm:text-[18px] sm:col-span-2">22 — 28%</dd>
-                            </div>
-                            <div className="col-span-2 sm:contents">
-                                <dt className="text-mute sm:col-span-1">Liquidity</dt>
-                                <dd className="font-display text-[16px] sm:text-[18px] sm:col-span-2">At harvest</dd>
-                            </div>
-                        </dl>
-                        <Link
-                             href="/cultivation#short"
-                             className="ulink text-[12px] sm:text-[13px] mt-1 sm:mt-2 text-accent"
-                         >
-                             See cultivation plans <ArrowIcon size={12} className="ml-1" />
-                         </Link>
-                    </article>
+                    <ModelCard
+                        num="01"
+                        duration=""
+                        title={<>Monthly Returns</>}
+                        description="Need regular monthly income? Choose monthly payouts. Invest for 1 year and receive 40% of your investment divided by 12 months. Paid to your bank account every month. No waiting. Predictable income. After 1 year, withdraw your capital or reinvest for another year."
+                        minTicket="LKR 200,000"
+                        targetIrr="40%"
+                    />
 
-                    <article className="model-card rounded-[16px] sm:rounded-[20px] bg-ink text-ondark p-6 sm:p-8 lg:p-10 flex flex-col gap-4 sm:gap-6 reveal">
-                        <div className="flex items-start justify-between">
-                            <span className="num text-ondark/70! text-[10px] sm:text-[11px]">Model · 02</span>
-                            <span className="num text-ondark/70! text-[10px] sm:text-[11px]">12 months</span>
-                        </div>
-                        <h3 className="font-display text-[28px] sm:text-[32px] lg:text-[36px] leading-[1.05] tracking-tightish">
-                            Gold Spirits of <em className="serif-em">Landing</em>.
-                        </h3>
-                        <p className="opacity-80 text-[13.5px] sm:text-[14.5px] leading-[1.7]">
-                            You bring the land or the capital; PGG operates the cultivation cycle.
-                            Designed for stakeholder landholders under two acres — fertiliser,
-                            irrigation, agronomy and off-take all included.
-                        </p>
-                        <div className="hairline bg-[rgba(241,236,224,0.18)]! my-2 sm:my-0"></div>
-                        <dl className="grid grid-cols-2 sm:grid-cols-3 gap-y-3 gap-x-2 text-[13px] sm:text-[13.5px]">
-                            <div className="col-span-1 sm:contents">
-                                <dt className="opacity-60 sm:col-span-1">Min. ticket</dt>
-                                <dd className="font-display text-[16px] sm:text-[18px] sm:col-span-2">LKR 1,200,000</dd>
-                            </div>
-                            <div className="col-span-1 sm:contents">
-                                <dt className="opacity-60 sm:col-span-1">Target IRR</dt>
-                                <dd className="font-display text-[16px] sm:text-[18px] sm:col-span-2">28 — 36%</dd>
-                            </div>
-                            <div className="col-span-2 sm:contents">
-                                <dt className="opacity-60 sm:col-span-1">Land</dt>
-                                <dd className="font-display text-[16px] sm:text-[18px] sm:col-span-2">Below 2 acres</dd>
-                            </div>
-                        </dl>
-                         <Link href="/cultivation#mid" className="ulink text-[12px] sm:text-[13px] mt-1 sm:mt-2 opacity-90">
-                             Read the Gold Spirits plan <ArrowIcon size={12} className="ml-1" />
-                         </Link>
-                    </article>
+                    <ModelCard
+                        num="02"
+                        duration=""
+                        title={<>Annual Returns</>}
+                        description="Want maximum compounding? Choose annual payout. Invest for 1 year and receive your full 60% return at the end of 12 months. Your capital works the entire year. You get paid once, big. After 1 year, withdraw everything or reinvest to compound your wealth."
+                        minTicket="LKR 200,000"
+                        targetIrr="60%"
+                        dark
+                    />
                 </div>
             </div>
         </section>

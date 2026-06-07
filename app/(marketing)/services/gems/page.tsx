@@ -95,7 +95,7 @@ export default function GemsPage() {
                 ]}
                 stats={[
                     { label: "Export countries", value: "14", em: ".", note: "Across 4 continents" },
-                    { label: "Certified stones", value: "6,200", em: "+", note: "Since 2003" },
+                    { label: "Certified stones", value: "6.2K", em: "+", note: "Since 2003" },
                     { label: "Master cutters", value: "12", em: ".", note: "Ratnapura & Colombo" },
                     { label: "Heritage", value: "22", em: "y", note: "Years of trading" }
                 ]}

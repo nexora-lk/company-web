@@ -45,11 +45,11 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
 
                 const lenis = new Lenis({
                     autoRaf: false,
-                    lerp: 0.04, // Extremely low lerp for maximum gliding smoothness
+                    lerp: 0.08,
                     smoothWheel: true,
-                    wheelMultiplier: 0.9, // Slightly heavier scroll feel
-                    touchMultiplier: 2,
-                    syncTouch: true, // Syncs touch and scroll logic
+                    wheelMultiplier: 0.9,
+                    touchMultiplier: 1,
+                    syncTouch: false, // Use native scroll speed on touch/mobile
                 });
 
                 lenisRef.current = lenis;

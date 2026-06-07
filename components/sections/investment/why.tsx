@@ -8,7 +8,6 @@ export default function WhySection() {
                 <div className="grid grid-cols-12 gap-8 lg:gap-12 items-start">
                     <div className="col-span-12 lg:col-span-5 reveal">
                         <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
-                            <span className="num text-[10px] sm:text-[11px]">[ 01 ]</span>
                             <span className="hairline-strong w-[80px] sm:w-[120px]"></span>
                             <span className="eyebrow text-[10px] sm:text-[11px]">Why Invest with PGG?</span>
                         </div>

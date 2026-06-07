@@ -9,7 +9,6 @@ export default function ModelsSection() {
                 <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 sm:gap-6 mb-10 sm:mb-14 reveal">
                     <div>
                         <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
-                            <span className="num text-[10px] sm:text-[11px]">[ 02 ]</span>
                             <span className="hairline-strong w-[80px] sm:w-[120px]"></span>
                             <span className="eyebrow text-[10px] sm:text-[11px]">Investment Models</span>
                         </div>

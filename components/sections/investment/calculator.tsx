@@ -114,7 +114,6 @@ export default function CalculatorSection() {
           {/* Text block */}
           <div className="w-full lg:w-5/12 reveal">
             <div className="flex items-center gap-2 sm:gap-3 mb-5 sm:mb-6">
-              <span className="num text-[10px] sm:text-[11px]">[ 04 ]</span>
               <span className="hairline-strong w-16 sm:w-24"></span>
               <span className="eyebrow text-[10px] sm:text-[11px] uppercase tracking-widest text-mute">Investment Calculator</span>
             </div>

@@ -95,7 +95,7 @@ export default function AboutPage() {
                 ]}
                 stats={[
                     { label: "Founded", value: "2013", note: "Year established" },
-                    { label: "Branches", value: "23", em: "+", note: "Across 8 provinces" },
+                    { label: "Branches", value: "27", em: "+", note: "Across 8 provinces" },
                     { label: "Employees", value: "800", em: "", note: "Direct payroll" },
                     { label: "Investors", value: "3.2K", em: "+", note: "Active worldwide" }
                 ]}

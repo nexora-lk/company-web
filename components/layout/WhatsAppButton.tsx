@@ -5,7 +5,7 @@ import Photo from '@/components/ui/Photo';
 export default function WhatsAppButton() {
     return (
         <a
-            href="https://wa.me/message/STOET4IYSPY4B1"
+            href="https://wa.me/message/STOET4IYSPY4"
             target="_blank"
             rel="noopener noreferrer"
             className="fixed z-50 right-5 bottom-5 sm:right-6 sm:bottom-6 lg:right-10 lg:bottom-10 

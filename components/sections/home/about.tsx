@@ -1,4 +1,5 @@
 import SectionEyebrow from '@/components/sections/SectionEyebrow';
+import Link from 'next/link';
 import Photo from '@/components/ui/Photo';
 import ArrowIcon from '@/components/ui/ArrowIcon';
 import Leaf from '@/components/ui/Leaf';
@@ -73,12 +74,12 @@ export default function AboutSection() {
                         </div>
 
                         <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4 reveal">
-                            <a className="btn btn-ghost w-full sm:w-max justify-center px-6 xl:px-8" href="#services">
+                            <Link className="btn btn-ghost w-full sm:w-max justify-center px-6 xl:px-8" href="#services">
                                 Our Investment Options  <ArrowIcon size={16} className="ml-1" />
-                            </a>
-                            <a className="btn btn-primary w-full sm:w-max justify-center px-6 xl:px-8" href="#impact">
+                            </Link>
+                            <Link className="btn btn-primary w-full sm:w-max justify-center px-6 xl:px-8" href="/investment#process">
                                 How to Invest  <ArrowIcon type="up-right" size={16} className="ml-1" />
-                            </a>
+                            </Link>
                         </div>
                     </div>
 

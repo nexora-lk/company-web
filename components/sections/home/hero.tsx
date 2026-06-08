@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import Link from 'next/link';
 import ArrowIcon from '@/components/ui/ArrowIcon';
 
 // ── Background video playlist ───────────────────────────────────────────────
@@ -125,7 +126,7 @@ export default function HeroSection() {
                                   text-[#f1ece0]/75
                                   text-[15px] xs:text-[16px] sm:text-[16.5px] md:text-[17px] lg:text-[18px] xl:text-[19px]
                                   leading-[1.7] sm:leading-[1.75] lg:leading-[1.8]">
-                        Prestige Glamour Working Capital Solutions is Sri Lanka&apos;s most transparent investment platform. We are not a fund manager — we are the actual operators. We run plantations, cut gemstones, finance entrepreneurs, develop real estate, and distribute consumer goods. When you invest with us, you invest in real assets, real operations, and real returns. Anyone with capital is welcome — from LKR 200,000 to LKR 200 million.
+                        Prestige Glamour Working Capital Solutions is Sri Lanka&apos;s most transparent investment platform. We are not a fund manager — we are the actual operators. We run plantations, operate gem mines, finance entrepreneurs, develop real estate, and distribute consumer goods. When you invest with us, you invest in real assets, real operations, and real returns. Anyone with capital is welcome — from LKR 200,000 to LKR 200 million.
                     </p>
                 </div>
 
@@ -136,7 +137,7 @@ export default function HeroSection() {
                 <div className="mt-8 sm:mt-9 md:mt-11 mb-0 sm:mb-auto
                                 flex flex-col sm:flex-row
                                 items-center gap-3 sm:gap-4 w-full sm:w-auto reveal">
-                    <a
+                    <Link
                         href="#services"
                         id="hero-cta-primary"
                         className="btn btn-primary
@@ -148,9 +149,9 @@ export default function HeroSection() {
                                     shadow-lg sm:shadow-none"
                     >
                         Explore Investment Options <ArrowIcon size={15} className="ml-1" />
-                    </a>
-                    <a
-                        href="#contact"
+                    </Link>
+                    <Link
+                        href="/investment#calculator"
                         id="hero-cta-secondary"
                         className="btn
                                    w-full sm:w-auto
@@ -166,7 +167,7 @@ export default function HeroSection() {
                         }}
                     >
                         Calculate Your Returns
-                    </a>
+                    </Link>
                 </div>
             </div>
 

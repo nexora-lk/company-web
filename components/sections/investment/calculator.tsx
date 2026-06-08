@@ -105,7 +105,7 @@ export default function CalculatorSection() {
   }, []);
 
   return (
-    <section className="py-16 sm:py-20 md:py-24 lg:py-32 bg-surface relative overflow-hidden">
+    <section id="calculator" className="py-16 sm:py-20 md:py-24 lg:py-32 bg-surface relative overflow-hidden">
       <Leaf variant="tr" />
       <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
 

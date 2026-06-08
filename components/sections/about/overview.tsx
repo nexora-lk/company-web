@@ -16,7 +16,7 @@ export default function OverviewSection() {
                         <h2 className="font-display text-3xl xs:text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[0.98] tracking-tightish text-ink reveal">
                             A letter from
                             <br />
-                            Mr. Nilanga Amunugama , Executive Head.
+                            Mr. Nilanga Amunugama , Managing Director.
                         </h2>
 
                         <div className="mt-8 xs:mt-10 space-y-4 xs:space-y-6 text-[14px] xs:text-[15px] leading-relaxed sm:leading-[1.75] text-mute max-w-full sm:max-w-[640px] font-light reveal">
@@ -30,24 +30,20 @@ export default function OverviewSection() {
                             </p>
                             <p>
                                 Since 2013, I have worked alongside our leadership to deploy capital across seven
-                                divisions with complete financial transparency, quarterly audits, and a commitment
-                                to paying every investor on time. As Executive Head of Finance and Operations, I
-                                oversee the systems that make this possible.
+                                divisions with complete financial transparency, audits, and a commitment to paying
+                                every investor on time. As Managing Director, I oversee the systems that make this
+                                possible.
                             </p>
                             <p>
                                 Our 23 branches across 8 provinces are not just offices — they are proof that we
                                 operate at scale, on the ground, with real people managing real assets. Every
                                 investor payment flows through our financial controls. Every division's performance
-                                is verified by my team. Every quarterly audit bears my signature.
+                                is verified by my team. Every audit bears my signature.
                             </p>
                             <p>
                                 By bringing overseas investment into Sri Lankan agriculture, gems, real estate,
                                 and enterprise, we increase foreign exchange to the island while delivering
-                                strong returns to our investors. We do this openly, every quarter, with audited
-                                numbers.
-                            </p>
-                            <p>
-                                That is the work. That is my commitment to you.
+                                strong returns to our investors. We do this openly, with audited numbers.
                             </p>
                         </div>
 
@@ -56,12 +52,12 @@ export default function OverviewSection() {
                                 <div className="font-display text-2xl xs:text-[26px] leading-none text-ink">
                                     Nilanga Amunugama
                                 </div>
-                                <div className="num mt-2 text-accent">Executive Head · Finance & Operations</div>
+                                <div className="num mt-2 text-accent">Managing Director · Finance & Operations</div>
                                 <div className="num mt-2 text-accent">Prestige Glamour Group of Company</div>
                             </div>
                             <div className="hidden md:block hairline-strong w-16"></div>
                             <div className="hidden sm:block font-display italic text-xl xs:text-[22px] text-mute/60">
-                                Kaluthara, 2026
+                                Kaluthara
                             </div>
                         </div>
                     </div>

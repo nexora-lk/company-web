@@ -87,14 +87,51 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
         };
     }, [pathname]);
 
-    // Scroll to top on route change.
+    // Scroll to top or hash on route change.
     useEffect(() => {
         const lenis = lenisRef.current;
-        if (lenis) {
-            lenis.scrollTo(0, { immediate: true });
+        const hash = window.location.hash;
+
+        // 1. Handle cross-page navigation with hash
+        if (hash && hash !== '#') {
+            setTimeout(() => {
+                const target = document.querySelector(hash);
+                if (target) {
+                    if (lenis) {
+                        lenis.scrollTo(target, { offset: -100, duration: 1.5 });
+                    } else {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            }, 600); // Slightly longer delay to ensure full render
         } else {
-            window.scrollTo(0, 0);
+            // No hash? Scroll to top
+            if (lenis) {
+                lenis.scrollTo(0, { immediate: true });
+            } else {
+                window.scrollTo(0, 0);
+            }
         }
+
+        // 2. Handle same-page hash clicks (e.g., #contact, #services)
+        const handleHashClick = (e: MouseEvent) => {
+            const target = e.target as HTMLElement;
+            const anchor = target.closest('a');
+            if (!anchor) return;
+
+            const href = anchor.getAttribute('href');
+            if (href?.startsWith('#') && href.length > 1) {
+                const targetEl = document.querySelector(href);
+                if (targetEl && lenis) {
+                    e.preventDefault();
+                    lenis.scrollTo(targetEl, { offset: -80, duration: 1.2 });
+                    window.history.pushState(null, '', href);
+                }
+            }
+        };
+
+        document.addEventListener('click', handleHashClick);
+        return () => document.removeEventListener('click', handleHashClick);
     }, [pathname]);
 
     return (

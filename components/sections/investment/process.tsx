@@ -58,7 +58,7 @@ const steps = [
 
 export default function ProcessSection() {
     return (
-        <section className="py-16 sm:py-20 md:py-24 lg:py-32 bg-bg relative overflow-hidden">
+        <section id="process" className="py-16 sm:py-20 md:py-24 lg:py-32 bg-bg relative overflow-hidden">
             <Leaf variant="tr" />
             <Leaf variant="bl" />
             <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-10 relative z-10">

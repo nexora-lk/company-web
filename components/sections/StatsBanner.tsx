@@ -1,11 +1,5 @@
 import type { Stat } from "@/types/content";
 
-const STAT_BORDER_BY_INDEX = [
-  "border-b md:border-b-0 md:border-r border-line",
-  "border-b lg:border-b-0 lg:border-r border-line",
-  "border-b md:border-b-0 md:border-r lg:border-r-0 border-line", // For 4th stat if any
-];
-
 export default function StatsBanner({
   stats,
 }: {

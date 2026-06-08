@@ -17,7 +17,7 @@ export default function DirectorsSection() {
                     </h2>
                     <p className="mt-4 xs:mt-6 text-mute text-[14px] xs:text-[15px] leading-[1.7] max-w-full sm:max-w-[480px] mx-auto font-light">
                         Three leaders who personally oversee capital deployment across all divisions.
-                        Quarterly audits. Full financial transparency. Direct investor access.
+                        Continuous audits. Full financial transparency. Direct investor access.
                         They don&#39;t hide behind corporate structures—they sign every statement,
                         approve every investment, and stake their reputations on consistent returns.
                     </p>
@@ -36,16 +36,14 @@ export default function DirectorsSection() {
                         </figure>
                         <div className="p-6 xs:p-8 lg:p-10 flex flex-col flex-1">
                             <div className="flex items-center justify-between mb-4">
-                                <span className="num text-ondark/70! text-[10px] xs:text-[11px]">Director / Head of Finance</span>
+                                <span className="num text-ondark/70! text-[10px] xs:text-[11px]">Managing Director / Head of Finance</span>
                             </div>
                             <h3 className="font-display text-[26px] xs:text-[30px] lg:text-[34px] leading-tight">
                                 Mr. Nilanga <em className="serif-em">Amunugama</em>
                             </h3>
                             <div className="hairline my-5 bg-white/10!"></div>
                             <p className="text-[13px] xs:text-[13.5px] leading-[1.7] opacity-80 font-light">
-                                BCom Specialist, Chartered Accountant. Responsible for group-wide 
-                                financial governance, quarterly reporting, and coordination with 
-                                KPMG Big-Four auditing standards.
+                                BCom Specialist, Chartered Accountant.
                             </p>
                         </div>
                     </article>
@@ -69,9 +67,7 @@ export default function DirectorsSection() {
                             </h3>
                             <div className="hairline my-5 bg-white/10!"></div>
                             <p className="text-[13px] xs:text-[13.5px] leading-[1.7] opacity-80 font-light">
-                                Specialist in Labour Productivity and Human Resource Management. 
-                                Oversees the group&apos;s 800+ employee direct-payroll structure across 
-                                23 national branch locations.
+                                Specialist in Labour Productivity and Human Resource Management.
                             </p>
                         </div>
                     </article>
@@ -96,8 +92,7 @@ export default function DirectorsSection() {
                             <div className="hairline my-5 bg-white/10!"></div>
                             <p className="text-[13px] xs:text-[13.5px] leading-[1.7] opacity-80 font-light">
                                 BSc (Sp) in Marketing Management, MBA — University of Mainz.
-                                Specialist in International Business & Entrepreneurship. Sourcing
-                                expertise in gems and high-yield agricultural investments.
+                                Specialist in International Business & Entrepreneurship.
                             </p>
                         </div>
                     </article>

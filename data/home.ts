@@ -62,7 +62,7 @@ export const stats: Stat[] = [
   },
   {
     label: "Number of branches",
-    value: "23",
+    value: "27",
     em: ".",
     note: "",
   },

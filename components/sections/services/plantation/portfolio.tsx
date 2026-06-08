@@ -111,7 +111,7 @@ export default function PortfolioSection() {
     };
 
     return (
-        <section id="properties" className="py-16 xs:py-20 sm:py-24 lg:py-32 xl:py-40 bg-surface relative overflow-hidden">
+        <section id="properties" className="py-8 xs:py-10 sm:py-12 lg:py-16 xl:py-20 bg-surface relative overflow-hidden">
             <Leaf variant="bl" />
 
             <div className="max-w-content mx-auto px-4 xs:px-6 lg:px-10 relative z-10">

@@ -7,8 +7,9 @@ import Leaf from "@/components/ui/Leaf";
 
 export default function PlantationInvestmentBanner() {
     return (
-        <section className="pb-16 sm:pb-24 md:pb-32 lg:pb-36 xl:pb-40 bg-surface">
+        <section className="py-8 sm:py-12 md:py-16 lg:py-18 xl:py-20 bg-bg">
             <Leaf variant="tr" />
+            <Leaf variant="bl" />
             <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-10">
                 <div className="relative rounded-[20px] sm:rounded-[28px] lg:rounded-[32px] overflow-hidden min-h-[360px] sm:min-h-[480px] md:min-h-[540px] lg:min-h-[600px] flex items-end reveal">
                     <Photo

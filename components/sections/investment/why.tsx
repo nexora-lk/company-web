@@ -60,7 +60,7 @@ export default function WhySection() {
                                     Consistent payment <em className="serif-em">history.</em>
                                 </h3>
                                 <p className="mt-2 text-mute text-[13.5px] sm:text-[14px] leading-[1.7]">
-                                    14 years of operation. Returns paid on schedule every quarter and
+                                    14 years of operation.Every month and
                                     every year — to investors ranging from LKR 200,000 first-timers to
                                     multi-crore long-term partners.
                                 </p>

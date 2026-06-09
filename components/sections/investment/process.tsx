@@ -1,58 +1,103 @@
 import Leaf from "@/components/ui/Leaf";
-import { MessageSquare, FileText, Landmark, Scale, TrendingUp, CheckCircle2 } from "lucide-react";
+import { 
+    FileText, 
+    Landmark, 
+    Scale, 
+    CheckCircle2, 
+    Receipt, 
+    Users, 
+    ClipboardCheck, 
+    PenTool, 
+    ShieldCheck,
+    AlertCircle,
+    type LucideIcon
+} from "lucide-react";
 
-const steps = [
+type Step = {
+    num: string;
+    title: string;
+    icon: LucideIcon;
+    youDo: string;
+    weDo: string;
+    youGet?: string;
+    youGetList?: string[];
+    requiredDocs?: string[];
+    timeline?: string;
+};
+
+const steps: Step[] = [
     {
         num: "01",
-        title: "Inquiry & Consultation",
-        icon: MessageSquare,
-        youDo: "Submit your investment details through the form above. Tell us your amount, division choice, and preferred return model.",
-        weDo: "Review your inquiry and respond within 24 hours with a personalized investment proposal.",
-        youGet: "Investment proposal + financial disclosures",
+        title: "Quotation",
+        icon: FileText,
+        youDo: "Request a quotation for your preferred investment model. Choose your investment amount and division.",
+        weDo: "Prepare a personalized quote based on your investment amount and selected model.",
+        youGet: "Personalized Investment Quotation",
     },
     {
         num: "02",
-        title: "Quotation & Agreement",
-        icon: FileText,
-        youDo: "Review the quotation and Investment Agreement we send you. Ask questions. Request clarifications.",
-        weDo: "Prepare your customized Investment Agreement with your exact returns, timeline, and payment schedule.",
-        youGet: "Signed Investment Agreement + Investment Certificate",
+        title: "Deposit",
+        icon: Landmark,
+        youDo: "Make the deposit as per the agreed quotation to confirm and initiate the investment.",
+        weDo: "Confirm receipt of your deposit and initiate the onboarding process.",
+        youGet: "Deposit confirmation",
     },
     {
         num: "03",
-        title: "Deposit Capital",
-        icon: Landmark,
-        youDo: "Transfer your investment amount to our bank account using the reference number we provide.",
-        weDo: "Confirm receipt of your capital within 24 hours.",
-        requiredDocs: [
-            "NIC copy",
-            "Bank book front page",
-            "Nominee details",
-            "Proof of funds"
-        ],
-        youGet: "Deposit receipt + official confirmation",
+        title: "Company Bill Issued",
+        icon: Receipt,
+        youDo: "Await your official bill after deposit receipt.",
+        weDo: "Issue an official bill to you within 2 hours of receiving the deposit.",
+        youGet: "Official Company Bill",
     },
     {
         num: "04",
-        title: "Legal Verification",
-        icon: Scale,
-        youDo: "Sign final documents in front of a lawyer (or provide digital signature).",
-        weDo: "Submit all documents to our legal team for review and registration.",
-        youGet: "Lawyer-verified documents + legal completion certificate",
+        title: "RM Visit & Document Collection",
+        icon: Users,
+        youDo: "Meet with your assigned Relationship Manager and provide required documents.",
+        weDo: "Your assigned RM/BM/GM visits you, presents a formal proposal, and collects documents.",
+        requiredDocs: [
+            "NIC copy",
+            "Bank book front page copy",
+            "Nominee details",
+            "NIC copy (nominee)",
+            "Bank front page copy (nominee)",
+            "Bank details",
+            "Original deposit receipt"
+        ],
+        youGet: "Formal Investment Proposal",
     },
     {
         num: "05",
-        title: "Investment Active & Returns Begin",
-        icon: TrendingUp,
-        youDo: "Sit back. Monitor your returns through the investor dashboard.",
-        weDo: "Deploy your capital. Generate returns. Pay you on schedule.",
-        timeline: "Ongoing (monthly or annually, based on your model)",
-        youGetList: [
-            "Monthly/Annual returns paid to your bank",
-            "Quarterly investor reports",
-            "Access to investor dashboard",
-            "24/7 investor support"
-        ],
+        title: "Agreement Process",
+        icon: ClipboardCheck,
+        youDo: "Review the investment agreement with your Relationship Manager.",
+        weDo: "Visit you again to review and proceed with the investment agreement based on collected documents.",
+        youGet: "Agreement review session",
+    },
+    {
+        num: "06",
+        title: "Agreement Signing & Certificate Issued",
+        icon: PenTool,
+        youDo: "Sign the investment agreement.",
+        weDo: "Counter-sign the agreement and issue an official investment certificate.",
+        youGet: "Official Investment Certificate",
+    },
+    {
+        num: "07",
+        title: "Legal Verification",
+        icon: ShieldCheck,
+        youDo: "No action required during this phase.",
+        weDo: "Forward signed agreement and documents to company lawyer for thorough verification.",
+        youGet: "Legal verification & certification",
+    },
+    {
+        num: "08",
+        title: "Final Signing & Completion",
+        icon: Scale,
+        youDo: "Sign the final documents in the presence of the company lawyer.",
+        weDo: "Complete the process, provide a copy of the signed agreement, and secure original documents.",
+        youGet: "Signed Investment Agreement copy",
     }
 ];
 
@@ -70,7 +115,7 @@ export default function ProcessSection() {
                     </div>
                     <h2 className="font-display text-[36px] sm:text-[48px] md:text-[56px] lg:text-[60px] leading-[0.98] tracking-tightish max-w-[800px]">
                         Your Investment Journey — <br className="hidden sm:block" />
-                        <em className="serif-em text-accent">Five Simple Steps</em>
+                        <em className="serif-em text-accent">Eight Simple Steps</em>
                     </h2>
                 </div>
 
@@ -168,6 +213,21 @@ export default function ProcessSection() {
                                 </div>
                             );
                         })}
+                    </div>
+                </div>
+
+                {/* Important Note */}
+                <div className="mt-20 sm:mt-24 lg:mt-32 max-w-3xl mx-auto reveal">
+                    <div className="bg-surface border border-accent/20 rounded-[24px] p-8 sm:p-10 flex flex-col sm:flex-row items-center sm:items-start gap-6 text-center sm:text-left">
+                        <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
+                            <AlertCircle className="w-6 h-6 text-accent" />
+                        </div>
+                        <div>
+                            <h4 className="font-display text-[20px] sm:text-[24px] mb-3">Important Note for Investors</h4>
+                            <p className="text-ink leading-[1.6] text-[14.5px] sm:text-[15.5px]">
+                                When claiming your returns, you must present your <span className="font-semibold">original investment agreement</span> and <span className="font-semibold">company certificate</span> at least one week before the scheduled return date.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>

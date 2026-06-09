@@ -13,14 +13,14 @@ export default function ModelsSection() {
                             <span className="eyebrow text-[10px] sm:text-[11px]">Investment Models</span>
                         </div>
                         <h2 className="font-display text-[36px] sm:text-[48px] md:text-[56px] lg:text-[60px] leading-[0.98] tracking-tightish max-w-[820px]">
-                            Six investment vehicles. <em className="serif-em">One </em>
+                            Two investment vehicles. <em className="serif-em">One </em>
                             <br className="hidden sm:block" />
                             standard of transparency.
                         </h2>
                     </div>
                     <p className="text-[13.5px] sm:text-[14.5px] text-mute leading-[1.7] max-w-full sm:max-w-[340px] mt-2 lg:mt-0">
-                        Mix-and-match permitted — many of our investors hold positions across two
-                        or three vehicles at once for diversified returns.
+                        Mix-and-match permitted — many of our investors hold positions across both
+                        vehicles at once for diversified returns.
                     </p>
                 </div>
 

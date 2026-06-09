@@ -89,8 +89,8 @@ export default function InvestmentPage() {
             />
             <WhySection />
             <ModelsSection />
-            <ProcessSection />
             <CalculatorSection />
+            <ProcessSection />
             <ContactSection />
         </>
     );

@@ -105,7 +105,7 @@ export default function CalculatorSection() {
   }, []);
 
   return (
-    <section id="calculator" className="py-16 sm:py-20 md:py-24 lg:py-32 bg-surface relative overflow-hidden">
+    <section id="calculator" className="py-16 sm:py-20 md:py-24 lg:py-32 bg-bg relative overflow-hidden">
       <Leaf variant="tr" />
       <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
 
@@ -126,7 +126,7 @@ export default function CalculatorSection() {
             </p>
 
             {/* Live rate badge */}
-            <div className="mt-8 sm:mt-10 flex items-center gap-3 bg-bg border border-line rounded-full px-5 py-2.5 text-[11px] sm:text-[12px] text-mute w-fit">
+            <div className="mt-8 sm:mt-10 flex items-center gap-3 bg-surface border border-line rounded-full px-5 py-2.5 text-[11px] sm:text-[12px] text-mute w-fit">
               <span className={`w-2 h-2 rounded-full shrink-0 ${dataSource === 'fresh' ? 'bg-emerald-500' : 'bg-amber-500 animate-pulse'}`} />
               <span className="num tracking-normal font-medium">{rateLabel}</span>
             </div>
@@ -136,7 +136,7 @@ export default function CalculatorSection() {
           <div className="w-full lg:w-7/12 max-w-full sm:max-w-[540px] lg:max-w-none lg:ml-auto reveal delay-100">
 
             {/* Plan Toggle */}
-            <div className="flex gap-1.5 bg-bg p-1.5 rounded-[18px] border border-line mb-6 sm:mb-8 shadow-sm">
+            <div className="flex gap-1.5 bg-surface p-1.5 rounded-[18px] border border-line mb-6 sm:mb-8 shadow-sm">
               {[
                 { key: 'annual', label: 'Annual', sub: '60% / year' },
                 { key: 'monthly', label: 'Monthly', sub: '40% / year' },
@@ -146,7 +146,7 @@ export default function CalculatorSection() {
                   onClick={() => setPlan(key)}
                   className={`flex-1 py-4 px-4 rounded-[14px] text-[14px] sm:text-[15px] transition-all duration-300 flex flex-col items-center justify-center gap-1 ${plan === key
                     ? 'bg-ink text-bg shadow-md'
-                    : 'text-mute hover:text-ink hover:bg-surface'
+                    : 'text-mute hover:text-ink hover:bg-bg'
                     }`}
                 >
                   <span className="font-medium">{label}</span>
@@ -158,14 +158,14 @@ export default function CalculatorSection() {
             </div>
 
             {/* Year Toggle */}
-            <div className="grid grid-cols-5 gap-1.5 bg-bg p-1.5 rounded-[18px] border border-line mb-6 sm:mb-8 shadow-sm">
+            <div className="grid grid-cols-5 gap-1.5 bg-surface p-1.5 rounded-[18px] border border-line mb-6 sm:mb-8 shadow-sm">
               {[1, 2, 3, 4, 5].map((y) => (
                 <button
                   key={y}
                   onClick={() => setYear(y)}
                   className={`py-3 sm:py-4 px-2 sm:px-3 rounded-[14px] transition-all duration-300 flex flex-col items-center justify-center gap-1 ${year === y
                     ? 'bg-accent text-bg shadow-md'
-                    : 'text-mute hover:text-ink hover:bg-surface'
+                    : 'text-mute hover:text-ink hover:bg-bg'
                     }`}
                 >
                   <span className="font-display text-[14px] sm:text-[16px]">{y}Y</span>
@@ -177,7 +177,7 @@ export default function CalculatorSection() {
             </div>
 
             {/* Input & Results Card */}
-            <div className="bg-bg rounded-[24px] sm:rounded-[32px] border border-line p-6 sm:p-8 lg:p-10 shadow-lg space-y-8 sm:space-y-10">
+            <div className="bg-surface rounded-[24px] sm:rounded-[32px] border border-line p-6 sm:p-8 lg:p-10 shadow-lg space-y-8 sm:space-y-10">
               
               {/* Amount Input */}
               <div className="space-y-5">
@@ -214,7 +214,7 @@ export default function CalculatorSection() {
                   </span>
                 </div>
                 
-                <div className="bg-surface rounded-[20px] p-6 sm:p-8 space-y-1 sm:space-y-2 border border-line/50">
+                <div className="bg-bg rounded-[20px] p-6 sm:p-8 space-y-1 sm:space-y-2 border border-line/50">
                   {plan === 'annual' ? (
                     <>
                       <ResultRow label="Projected profit" rs={fmtRs(annualProfit)} usd={fmtUSD(annualProfit, rate)} />

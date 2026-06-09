@@ -103,7 +103,7 @@ const steps: Step[] = [
 
 export default function ProcessSection() {
     return (
-        <section id="process" className="py-16 sm:py-20 md:py-24 lg:py-32 bg-bg relative overflow-hidden">
+        <section id="process" className="py-16 sm:py-20 md:py-24 lg:py-32 bg-surface relative overflow-hidden">
             <Leaf variant="tr" />
             <Leaf variant="bl" />
             <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
@@ -137,13 +137,13 @@ export default function ProcessSection() {
                                     )}
 
                                     {/* Timeline Node */}
-                                    <div className="absolute left-4 sm:left-1/2 sm:-translate-x-1/2 flex items-center justify-center w-10 h-10 sm:w-14 sm:h-14 rounded-full bg-bg border border-accent text-accent shadow-[0_0_0_8px_var(--c-bg)] z-10 hover:scale-110 hover:bg-accent/5 transition-transform duration-300">
+                                    <div className="absolute left-4 sm:left-1/2 sm:-translate-x-1/2 flex items-center justify-center w-10 h-10 sm:w-14 sm:h-14 rounded-full bg-bg border border-accent text-accent shadow-[0_0_0_8px_var(--c-surface)] z-10 hover:scale-110 hover:bg-accent/5 transition-transform duration-300">
                                         <Icon className="w-4 h-4 sm:w-6 sm:h-6" strokeWidth={1.5} />
                                     </div>
 
                                     {/* Content Card */}
                                     <div className={`w-full sm:w-1/2 pl-[4.5rem] sm:pl-0 ${isEven ? 'sm:pr-12 lg:pr-16 text-left' : 'sm:pl-12 lg:pl-16 text-left'}`}>
-                                        <div className="bg-surface border border-line rounded-[20px] sm:rounded-[24px] p-6 sm:p-8 lg:p-10 shadow-sm hover:shadow-xl transition-all duration-500 relative group">
+                                        <div className="bg-bg border border-line rounded-[20px] sm:rounded-[24px] p-6 sm:p-8 lg:p-10 shadow-sm hover:shadow-xl transition-all duration-500 relative group">
 
                                             <div className="flex items-start justify-between mb-4 sm:mb-5">
                                                 <span className="num text-mute text-[10px] sm:text-[11px]">Step · {step.num}</span>
@@ -218,7 +218,7 @@ export default function ProcessSection() {
 
                 {/* Important Note */}
                 <div className="mt-20 sm:mt-24 lg:mt-32 max-w-3xl mx-auto reveal">
-                    <div className="bg-surface border border-accent/20 rounded-[24px] p-8 sm:p-10 flex flex-col sm:flex-row items-center sm:items-start gap-6 text-center sm:text-left">
+                    <div className="bg-bg border border-accent/20 rounded-[24px] p-8 sm:p-10 flex flex-col sm:flex-row items-center sm:items-start gap-6 text-center sm:text-left">
                         <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
                             <AlertCircle className="w-6 h-6 text-accent" />
                         </div>

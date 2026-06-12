@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import GallerySection from '@/components/sections/services/plantation/gallery';
 import ServiceHero from '@/components/sections/ServiceHero';
 import OverviewSection from '@/components/sections/services/plantation/overview';
 import PortfolioSection from '@/components/sections/services/plantation/portfolio';
@@ -96,7 +95,6 @@ export default function PlantationPage() {
                 ]}
             />
             <OverviewSection />
-            <GallerySection />
             <PortfolioSection />
             <PlantationInvestmentBanner />
         </>

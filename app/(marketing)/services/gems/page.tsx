@@ -91,7 +91,7 @@ export default function GemsPage() {
                 }
                 descriptions={[
                     "PGG Gems is a certified gem trading and export business sourcing, cutting, certifying, and exporting authentic Sri Lankan ",
-                    "gemstones to buyers in 14 countries. Investors co-fund gem sourcing and export cycles, receiving quarterly distributions. Min. LKR 1,000,000."
+                    "gemstones to buyers in 14 countries. Investors co-fund gem sourcing and export cycles, receiving quarterly distributions."
                 ]}
                 stats={[
                     { label: "Export countries", value: "14", em: ".", note: "Across 4 continents" },

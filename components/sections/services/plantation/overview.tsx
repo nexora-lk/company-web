@@ -52,11 +52,16 @@ export default function OverviewSection() {
                                             <tr className="hover:bg-accent/5 transition-colors duration-300">
                                                 <td className="px-5 xs:px-8 py-5 font-semibold text-[14px] xs:text-[15px] text-ink">Walachchean</td>
                                                 <td className="px-5 xs:px-8 py-5 text-[14px] xs:text-[15px] text-mute font-medium">10, 3, 8, 60</td>
-                                                <td className="px-5 xs:px-8 py-5 text-[14px] xs:text-[15px] text-ink font-light">Ginger, Watermelon</td>
+                                                <td className="px-5 xs:px-8 py-5 text-[14px] xs:text-[15px] text-ink font-light">Ginger, Watermelon, Sesame, Cassava</td>
                                             </tr>
                                             <tr className="hover:bg-accent/5 transition-colors duration-300">
                                                 <td className="px-5 xs:px-8 py-5 font-semibold text-[14px] xs:text-[15px] text-ink">Batticlo</td>
                                                 <td className="px-5 xs:px-8 py-5 text-[14px] xs:text-[15px] text-mute font-medium">2.5, 14</td>
+                                                <td className="px-5 xs:px-8 py-5 text-[14px] xs:text-[15px] text-ink font-light">Ginger</td>
+                                            </tr>
+                                            <tr className="hover:bg-accent/5 transition-colors duration-300">
+                                                <td className="px-5 xs:px-8 py-5 font-semibold text-[14px] xs:text-[15px] text-ink">Andankulam</td>
+                                                <td className="px-5 xs:px-8 py-5 text-[14px] xs:text-[15px] text-mute font-medium">-</td>
                                                 <td className="px-5 xs:px-8 py-5 text-[14px] xs:text-[15px] text-ink font-light">Ginger</td>
                                             </tr>
                                         </tbody>
@@ -82,7 +87,7 @@ export default function OverviewSection() {
                                             <tr className="hover:bg-accent/5 transition-colors duration-300">
                                                 <td className="px-5 xs:px-8 py-5 font-semibold text-[14px] xs:text-[15px] text-ink">Wellwaya</td>
                                                 <td className="px-5 xs:px-8 py-5 text-[14px] xs:text-[15px] text-mute font-medium">258</td>
-                                                <td className="px-5 xs:px-8 py-5 text-[14px] xs:text-[15px] text-ink font-light">Sheshery, Mango</td>
+                                                <td className="px-5 xs:px-8 py-5 text-[14px] xs:text-[15px] text-ink font-light">Sesame, TJC Mango, Durian, Oried</td>
                                             </tr>
                                             <tr className="hover:bg-accent/5 transition-colors duration-300">
                                                 <td className="px-5 xs:px-8 py-5 font-semibold text-[14px] xs:text-[15px] text-ink">Mundalama</td>
@@ -93,6 +98,16 @@ export default function OverviewSection() {
                                                 <td className="px-5 xs:px-8 py-5 font-semibold text-[14px] xs:text-[15px] text-ink">Walachchean</td>
                                                 <td className="px-5 xs:px-8 py-5 text-[14px] xs:text-[15px] text-mute font-medium">-</td>
                                                 <td className="px-5 xs:px-8 py-5 text-[14px] xs:text-[15px] text-ink font-light">Ginger, Watermelon</td>
+                                            </tr>
+                                            <tr className="hover:bg-accent/5 transition-colors duration-300">
+                                                <td className="px-5 xs:px-8 py-5 font-semibold text-[14px] xs:text-[15px] text-ink">Pullumalai</td>
+                                                <td className="px-5 xs:px-8 py-5 text-[14px] xs:text-[15px] text-mute font-medium">60</td>
+                                                <td className="px-5 xs:px-8 py-5 text-[14px] xs:text-[15px] text-ink font-light">Moringa</td>
+                                            </tr>
+                                            <tr className="hover:bg-accent/5 transition-colors duration-300">
+                                                <td className="px-5 xs:px-8 py-5 font-semibold text-[14px] xs:text-[15px] text-ink">Pasikuda</td>
+                                                <td className="px-5 xs:px-8 py-5 text-[14px] xs:text-[15px] text-mute font-medium">-</td>
+                                                <td className="px-5 xs:px-8 py-5 text-[14px] xs:text-[15px] text-ink font-light">Watermelon, Chili</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -129,6 +144,11 @@ export default function OverviewSection() {
                                                 <td className="px-5 xs:px-8 py-5 text-[14px] xs:text-[15px] text-mute font-medium">-</td>
                                                 <td className="px-5 xs:px-8 py-5 text-[14px] xs:text-[15px] text-ink font-light">-</td>
                                             </tr>
+                                            <tr className="hover:bg-accent/5 transition-colors duration-300">
+                                                <td className="px-5 xs:px-8 py-5 font-semibold text-[14px] xs:text-[15px] text-ink">Batticaloa</td>
+                                                <td className="px-5 xs:px-8 py-5 text-[14px] xs:text-[15px] text-mute font-medium">2.5</td>
+                                                <td className="px-5 xs:px-8 py-5 text-[14px] xs:text-[15px] text-ink font-light">-</td>
+                                            </tr>
                                         </tbody>
                                     </table>
                                 </div>
@@ -139,7 +159,7 @@ export default function OverviewSection() {
                     <aside className="col-span-12 lg:col-span-5 order-1 lg:order-2 space-y-5 lg:sticky lg:top-32 mt-4 lg:mt-0 reveal">
                         <figure className="rounded-[18px] xs:rounded-[24px] overflow-hidden aspect-[4/3] shadow-2xl reveal">
                             <Photo
-                                src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780120160/pexels-gilmerdiaz-27097318_qzthhz.jpg"
+                                src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781101305/pexels-ian-panelo-20234958_fwntmb.jpg"
                                 alt="Fresh produce, just out of the field"
                                 priority
                                 fill

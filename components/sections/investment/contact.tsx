@@ -32,16 +32,12 @@ export default function ContactSection() {
 
                                 <div className="mt-8 sm:mt-10 md:mt-12 lg:mt-14 xl:mt-16 space-y-2.5 sm:space-y-3 md:space-y-4 lg:space-y-5 text-xs sm:text-sm md:text-base lg:text-base xl:text-lg">
                                     <div className="flex items-start sm:items-center gap-3 sm:gap-4 lg:gap-5 reveal">
-                                        <span className="num text-ondark/65! w-12 sm:w-14 lg:w-16 shrink-0 text-xs sm:text-sm">Phone</span>
-                                        <span className="font-medium text-ondark/95">034 223 3669</span>
+                                        <span className="num text-ondark/65! w-12 sm:w-14 lg:w-16 shrink-0 text-xs sm:text-sm">Mobile</span>
+                                        <span className="font-medium text-ondark/95">075 903 5083</span>
                                     </div>
                                     <div className="flex items-start sm:items-center gap-3 sm:gap-4 lg:gap-5 reveal">
                                         <span className="num text-ondark/65! w-12 sm:w-14 lg:w-16 shrink-0 text-xs sm:text-sm">Mobile</span>
-                                        <span className="font-medium text-ondark/95">075 203 8613</span>
-                                    </div>
-                                    <div className="flex items-start sm:items-center gap-3 sm:gap-4 lg:gap-5 reveal">
-                                        <span className="num text-ondark/65! w-12 sm:w-14 lg:w-16 shrink-0 text-xs sm:text-sm">Mobile</span>
-                                        <span className="font-medium text-ondark/95">075 169 3138</span>
+                                        <span className="font-medium text-ondark/95">074 041 6159</span>
                                     </div>
                                     <div className="flex items-start sm:items-center gap-3 sm:gap-4 lg:gap-5 reveal">
                                         <span className="num text-ondark/65! w-12 sm:w-14 lg:w-16 shrink-0 text-xs sm:text-sm">Email</span>

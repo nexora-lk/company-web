@@ -6,7 +6,7 @@ import Leaf from "@/components/ui/Leaf";
 export default function CareersSection() {
     return (
         <section className="pb-10 sm:pb-12 lg:pb-18">
-            <Leaf variant="tr" />
+            <Leaf variant="bl" />
             <div className="max-w-content mx-auto px-4 xs:px-6 lg:px-10">
                 <div className="relative rounded-[16px] sm:rounded-[24px] overflow-hidden min-h-[320px] sm:min-h-[360px] flex items-end">
                     <Photo

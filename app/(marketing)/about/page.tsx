@@ -1,4 +1,4 @@
-import BranchSection from '@/components/sections/about/branch';
+import BranchLocatorSection from '@/components/sections/about/branch-locator';
 import CareersSection from '@/components/sections/about/careers';
 import DirectorsSection from '@/components/sections/about/directors';
 import OverviewSection from '@/components/sections/about/overview';
@@ -86,23 +86,23 @@ export default function AboutPage() {
                     <>
                         An investment company built on
                         <em className="serif-em block sm:inline"> real </em>
-                        operations 14 years, 23 branches, 3,200+ investors.
+                        operations 14 years, 27 branches, 3,200+ investors.
                     </>
                 }
                 descriptions={[
                     "Prestige Glamour Working Capital Solutions was founded in 2013 with a clear mandate: to create direct investment opportunities in real Sri Lankan businesses — for anyone, from anywhere, with capital to deploy.",
-                    "Today we operate 7 active divisions from our head office in Payagala, with 23 branches across 8 provinces and 800+ employees on direct payroll."
+                    "Today we operate 7 active divisions from our head office in Payagala, with 27 branches across 9 provinces and 800+ employees on direct payroll."
                 ]}
                 stats={[
                     { label: "Founded", value: "2013", note: "Year established" },
-                    { label: "Branches", value: "27", em: "+", note: "Across 8 provinces" },
+                    { label: "Branches", value: "27", em: "+", note: "Across 9 provinces" },
                     { label: "Employees", value: "800", em: "", note: "Direct payroll" },
                     { label: "Investors", value: "3.2K", em: "+", note: "Active worldwide" }
                 ]}
             />
             <OverviewSection />
             <DirectorsSection />
-            <BranchSection />
+            <BranchLocatorSection />
             <CareersSection />
         </>
     );

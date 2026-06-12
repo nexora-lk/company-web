@@ -74,7 +74,7 @@ export default function MicrofinancePage() {
             <ServiceHero
                 backgroundImage="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780117535/microfinace-hero_qjut63.jpg"
                 ariaLabel="Microfinance Services"
-                eyebrow="PGG Microfinance · Next Investment (Pvt) Ltd · Est. 2013"
+                eyebrow="PGG Microfinance · Next Investment Private Limited · Est. 2013"
                 heading={
                     <>
                         Invest in rural
@@ -85,14 +85,14 @@ export default function MicrofinancePage() {
                     </>
                 }
                 descriptions={[
-                    "PGG Microfinance — registered as Next Investment (Pvt) Ltd — operates a high-performance rural lending portfolio across 23 branches. " ,
+                    "PGG Microfinance — registered as Next Investment Private Limited — operates a high-performance rural lending portfolio across 27 branches. " ,
                     "With 11,200+ active borrowers, a 96.4% repayment rate, and consistent investor returns, it is one of our most reliable investment vehicles."
                 ]}
                 stats={[
                     { label: "SMEs supported", value: "100", em: "+", note: "Target by 2026" },
                     { label: "Active borrowers", value: "11.2K", em: "", note: "Deployment goal" },
                     { label: "Customer support", value: "24/7", em: "", note: "" },
-                    { label: "Branch network", value: "23", em: ".", note: "Across nine provinces" }
+                    { label: "Branch network", value: "27", em: ".", note: "Across nine provinces" }
                 ]}
             />
             <OverviewSection />

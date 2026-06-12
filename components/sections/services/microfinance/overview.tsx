@@ -27,7 +27,7 @@ export default function OverviewSection() {
                                 </span>
                                 PGG Microfinance was established in 2013 as the group&#39;s rural
                                 lending division. We serve estate workers, cooperative secretaries,
-                                market traders, and small farmers across 23 branches — providing
+                                market traders, and small farmers across 27 branches — providing
                                 working capital on fair terms with a field officer at the door,
                                 not a desk in Colombo.
                             </p>
@@ -36,7 +36,7 @@ export default function OverviewSection() {
                                 share held by women entrepreneurs. Investors co-fund this loan
                                 portfolio and receive monthly interest income, with principal
                                 returned at the end of the investment period. Minimum investment:
-                                LKR 250,000.
+                                LKR 200,000.
                             </p>
                         </div>
                     </div>

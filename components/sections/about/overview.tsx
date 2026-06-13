@@ -65,7 +65,7 @@ export default function OverviewSection() {
                     <div className="col-span-12 lg:col-span-5 relative mt-8 lg:mt-0 reveal">
                         <figure className="aspect-[4/5] rounded-[18px] sm:rounded-[24px] overflow-hidden shadow-2xl">
                             <Photo
-                                src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780278280/amunugammasirr-profile_tyvvsb.jpg"
+                                src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781330022/sir_s_profile_zzzj27.png"
                                 alt="Chairman Y. M. D. T. Yatawara"
                                 fill
                                 sizes="(max-width: 1024px) 100vw, 40vw"

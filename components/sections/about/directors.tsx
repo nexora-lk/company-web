@@ -27,7 +27,7 @@ export default function DirectorsSection() {
                     <article className="dir-card team-card reveal">
                         <figure className="portrait overflow-hidden">
                             <Photo
-                                src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780278280/amunugammasirr-profile_tyvvsb.jpg"
+                                src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781330036/amunugama_sir_derector_profile_gyqktg.png"
                                 alt="Mr. Nilanga Amunugama"
                                 fill
                                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -51,7 +51,7 @@ export default function DirectorsSection() {
                     <article className="dir-card team-card sm:col-span-2 lg:col-span-1 reveal">
                         <figure className="portrait overflow-hidden sm:aspect-[21/9] lg:aspect-square">
                             <Photo
-                                src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781318220/madam-profilerrrr_jrwfeo.jpg"
+                                src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781330025/maneesha_madam_director_profile_fis1p7.png"
                                 alt="Director"
                                 fill
                                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 33vw"
@@ -75,7 +75,7 @@ export default function DirectorsSection() {
                     <article className="dir-card team-card reveal">
                         <figure className="portrait overflow-hidden">
                             <Photo
-                                src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780278288/yatawarasir-profile_wroc25.jpg"
+                                src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781330035/yatawara_sir_director_profile_e4hvgg.png"
                                 alt="Mr. Y. M. D. T. Yatawara"
                                 fill
                                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"

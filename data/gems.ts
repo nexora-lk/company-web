@@ -207,16 +207,12 @@ export const gemServices = [
         ],
     },
     {
-        title: 'Cut & Polish Services',
+        title: 'Mine-to-Market Cycles',
         description:
-            'Our skilled craftsmen professionally cut and polish rough stones to enhance brilliance, clarity, and overall aesthetic appeal using advanced techniques and traditional craftsmanship.',
+            'Deploy capital into gem mining extraction cycles.From pit to certified stones ready for global export.Fast 90-180 day returns on completed mining cycles.',
         details: [
-            'Expert cutters with years of experience',
-            'Advanced cutting techniques',
-            'Precision polishing',
-            'Enhanced brilliance & clarity',
-            'Perfect symmetry & finish',
-            'Quality guaranteed',
+            'Active mining operations across 10+ locations',
+            '90-180 day extraction cycles'
         ],
     },
     {

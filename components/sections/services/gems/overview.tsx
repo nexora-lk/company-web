@@ -26,20 +26,18 @@ export default function OverviewSection() {
                                 <span className="font-display text-4xl xs:text-5xl text-ink float-left mr-3 leading-[0.8] mt-1">
                                     S
                                 </span>
-                                ri Lanka's gem history spans over 2,500 years. Ancient texts and foreign
-                                traders — from Romans to Arabs — chronicled the island's wealth in sapphires,
-                                rubies, and cat's eyes. These 'Ratnadweepa' (Island of Gems) stones adorned
-                                royal crowns and defined the island's identity for centuries. PGG Gems carries
-                                that heritage forward — with modern certification, global export, and transparent
-                                investor participation.
+                                ri Lanka&#39;s gem history spans over 2,500 years. Ancient texts and foreign
+                                traders — from Romans to Arabs — chronicled the island&#39;s wealth in sapphires,
+                                rubies, and cat&#39;s eyes. These &#39;Ratnadweepa&#39; (Island of Gems) stones adorned
+                                royal crowns and defined the island&#39;s identity for centuries. PGG Gems carries
+                                that heritage forward through certified mining and investor co-funding.
                             </p>
 
                             <p>
-                                Traditional mining using simple pits called 'illam' has persisted for
-                                generations. Today, Sri Lanka remains the world's premier source for
-                                fine blue sapphires, padparadscha, and unique blue moonstone. PGG Gems
-                                sources directly from licensed miners, employs master cutters in Ratnapura
-                                and Colombo, and exports to certified buyers across 14 countries.
+                                Traditional mining using simple pits called &#39;illam&#39; has persisted for generations.
+                                Today, Sri Lanka remains the world&#39;s premier source for fine blue sapphires, padparadscha,
+                                and unique blue moonstone. PGG Gems operates across 6 active mining locations, sources
+                                directly from licensed mining operations, and exports certified stones to 14 countries.
                             </p>
                         </div>
 

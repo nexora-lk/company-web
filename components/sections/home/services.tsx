@@ -9,7 +9,7 @@ const services = [
         img: 'https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780117630/plantation-home_dqqa3t.jpg',
         alt: 'Lush green plantation fields at sunrise',
         h3: <>01 - Plantation</>,
-        body: 'Invest in ginger, mango, and specialty crop cultivation across owned and leased estates. Quarterly returns from harvest cycles. Min. LKR 200,000 | Returns: 45-60% annually.',
+        body: 'Prestige Glamour owns and operates plantation estates across Sri Lanka\'s key agro-zones. Each estate is run by a regional manager and open to direct investor participation.',
         cta: 'Learn more',
     },
     {
@@ -33,7 +33,7 @@ const services = [
         img: 'https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780117605/fmcg-home_m25qif.jpg',
         alt: 'Fresh tropical fruits and herbal products',
         h3: <>04 - FMCG</>,
-        body: 'Co-invest in our plantation-to-shelf FMCG division. Products made from our own estate harvests. Quarterly profit distributions. Min. LKR 500,000 | Returns: 40-55% annually.',
+        body: 'PGG Fresh Foods processes and distributes value-added products made from our own plantation harvests. Vertical integration from cultivation to retail distribution across Sri Lanka.',
         cta: 'Learn more',
     },
     {
@@ -49,7 +49,7 @@ const services = [
         img: 'https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780117535/realstate-home_dxn1qj.jpg',
         alt: 'Modern commercial real estate development',
         h3: <>06 - Real Estate</>,
-        body: 'Invest in land acquisition, value-add development, and sale. Buy low, develop, sell high. Fast capital cycles. Min. LKR 500,000 | Returns: 40-55% annually.',
+        body: 'Deploy capital in land acquisition, value-add development, and sale. Fast capital cycles from strategic real estate projects.',
         cta: 'Learn more',
     },
 ];

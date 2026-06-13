@@ -80,12 +80,12 @@ export default function FMCGPage() {
                         <br />
                         <em className="serif-em">Processed.</em> Distributed.
                         <br />
-                        Returning profits to investors.
+                        Fresh & natural products.
                     </>
                 }
                 descriptions={[
-                    "PGG Fresh Foods processes and distributes value-added products made from our own plantation harvests. This vertical integration ",
-                    "we grow it, we make it, we sell it — is what gives investors in this division a competitive edge. Min. LKR 500,000 | Returns: 40-55% annually."
+                    "PGG Fresh Foods processes and distributes value-added products made from our own plantation harvests. " +
+                    "Vertical integration from cultivation to retail distribution across Sri Lanka."
                 ]}
                 stats={[
                     { label: "Product lines", value: "18", em: "+", note: "Fresh & natural products" },

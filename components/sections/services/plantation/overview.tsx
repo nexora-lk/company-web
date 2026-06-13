@@ -18,11 +18,11 @@ export default function OverviewSection() {
                             plantation operation.
                         </h2>
                         <p className="mt-6 xs:mt-8 text-[14px] xs:text-[15px] text-mute leading-relaxed sm:leading-[1.75] max-w-full sm:max-w-[620px] font-light reveal">
-                            Our plantation division manages a growing portfolio of owned and
-                            leased agricultural land, producing high-value export crops including
-                            ginger, mango, watermelon, and specialty produce. Investor capital is
-                            deployed directly into specific crop cycles, with returns paid at harvest.
-                            Every plot is tracked on the same quarterly ledger as our other divisions.
+                            Our plantation division manages a growing portfolio of owned
+                            and leased agricultural land, producing high-value export crops
+                            including ginger, mango, watermelon, and specialty produce. Investor
+                            capital is deployed directly into specific crop cycles. Every plot
+                            is tracked transparently across all operations.
                         </p>
 
                         <h3 className="font-display text-2xl xs:text-[26px] md:text-[28px] mt-10 xs:mt-12 text-ink reveal">
@@ -92,7 +92,7 @@ export default function OverviewSection() {
                                             <tr className="hover:bg-accent/5 transition-colors duration-300">
                                                 <td className="px-5 xs:px-8 py-5 font-semibold text-[14px] xs:text-[15px] text-ink">Mundalama</td>
                                                 <td className="px-5 xs:px-8 py-5 text-[14px] xs:text-[15px] text-mute font-medium">60</td>
-                                                <td className="px-5 xs:px-8 py-5 text-[14px] xs:text-[15px] text-ink font-light">Mango</td>
+                                                <td className="px-5 xs:px-8 py-5 text-[14px] xs:text-[15px] text-ink font-light">TJC Mango</td>
                                             </tr>
                                             <tr className="hover:bg-accent/5 transition-colors duration-300">
                                                 <td className="px-5 xs:px-8 py-5 font-semibold text-[14px] xs:text-[15px] text-ink">Walachchean</td>

@@ -85,8 +85,8 @@ export default function MicrofinancePage() {
                     </>
                 }
                 descriptions={[
-                    "PGG Microfinance — registered as Next Investment Private Limited — operates a high-performance rural lending portfolio across 27 branches. " ,
-                    "With 11,200+ active borrowers, a 96.4% repayment rate, and consistent investor returns, it is one of our most reliable investment vehicles."
+                    "PGG Microfinance operates a high-performance rural lending portfolio across 27+ branches. With 11,200+ active borrowers," +
+                    "24/7 investor support, and consistent returns, it is one of our most reliable investment vehicles."
                 ]}
                 stats={[
                     { label: "SMEs supported", value: "100", em: "+", note: "Target by 2026" },

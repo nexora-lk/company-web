@@ -18,7 +18,7 @@ export const values: Value[] = [
   {
     no: "01",
     title: "Transparency First.",
-    body: "Every investor receives quarterly audited reports. We publish what we earn, what we spend, and what we return. No exceptions.",
+    body: "Every investor receives audited reports. We publish what we earn, what we spend, and what we return. No exceptions.",
   },
   {
     no: "02",
@@ -38,7 +38,7 @@ export const values: Value[] = [
   {
     no: "05",
     title: "Audited Accounts.",
-    body: "Our financials are independently audited quarterly. Every investor receives the same report. Numbers are not rounded — they are exact.",
+    body: "Our financials are independently audited. Every investor receives the same report. Numbers are exact.",
   },
   {
     no: "06",

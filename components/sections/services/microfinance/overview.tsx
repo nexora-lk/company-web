@@ -16,8 +16,6 @@ export default function OverviewSection() {
                             Steady income. <em className="serif-em text-accent">Real loan book.</em>
                             <br />
                             Real loan book.
-                            <br />
-                            96.4% repayment rate.
                         </h2>
 
                         <div className="mt-8 xs:mt-10 space-y-4 xs:space-y-6 text-[14px] xs:text-[15px] leading-relaxed sm:leading-[1.75] text-mute max-w-full sm:max-w-[620px] font-light reveal">
@@ -25,18 +23,15 @@ export default function OverviewSection() {
                                 <span className="font-display text-4xl xs:text-5xl text-ink float-left mr-3 leading-[0.8] mt-1">
                                     P
                                 </span>
-                                PGG Microfinance was established in 2013 as the group&#39;s rural
-                                lending division. We serve estate workers, cooperative secretaries,
-                                market traders, and small farmers across 27 branches — providing
-                                working capital on fair terms with a field officer at the door,
-                                not a desk in Colombo.
+                                PGG Microfinance was established in 2013 as the group's rural lending
+                                division. We serve estate workers, cooperative secretaries, market traders,
+                                and small farmers across 27+ branches — providing working capital on fair
+                                terms with a field officer at the door, not a desk in Colombo.
                             </p>
                             <p>
-                                Today our loan book covers 11,200+ active borrowers, with a growing
-                                share held by women entrepreneurs. Investors co-fund this loan
-                                portfolio and receive monthly interest income, with principal
-                                returned at the end of the investment period. Minimum investment:
-                                LKR 200,000.
+                                Today our loan book covers 11,200+ active borrowers, with a growing share
+                                held by women entrepreneurs. Investors co-fund this loan portfolio and receive
+                                monthly interest income, with principal returned at the end of the investment period.
                             </p>
                         </div>
                     </div>

@@ -84,21 +84,21 @@ export default function GemsPage() {
                     <>
                         Invest in Sri Lankan gemstones.
                         <br />
-                        <em className="serif-em">High-yield. Short-cycle.</em>
+                        <em className="serif-em">High-yield. Short-cycle. </em>
                         <br />
                         2,500 years of heritage.
                     </>
                 }
                 descriptions={[
-                    "PGG Gems is a certified gem trading and export business sourcing, cutting, certifying, and exporting authentic Sri Lankan ",
-                    "gemstones to buyers in 14 countries. Investors co-fund gem sourcing and export cycles, receiving quarterly distributions."
+                    "PGG Gems is a certified gem mining and export business serving 14 countries globally. Investors co-fund gem mining " +
+                    "and export cycles, receiving distributions on completion.",
                 ]}
                 stats={[
                     { label: "Export countries", value: "14", em: ".", note: "Across 4 continents" },
                     { label: "Certified stones", value: "6.2K", em: "+", note: "Since 2003" },
-                    { label: "Master cutters", value: "12", em: ".", note: "Ratnapura & Colombo" },
-                    { label: "Heritage", value: "22", em: "y", note: "Years of trading" }
-                ]}
+                    { label: "Mining Operations", value: "10", em: "+", note: "Active sites" },
+                    { label: "Heritage", value: "22", em: "y", note: "Years of trading since 2003" },
+                    ]}
             />
             <OverviewSection />
             <GallerySection />

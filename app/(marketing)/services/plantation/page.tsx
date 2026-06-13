@@ -84,8 +84,8 @@ export default function PlantationPage() {
                     </>
                 }
                 descriptions={[
-                    "Prestige Glamour Working Capital Solutions owns and operates plantation estates across Sri Lanka's key agro-zones.",
-                    "Each estate is run by a regional manager, audited quarterly, and open to direct investor participation from LKR 200,000."
+                    "Prestige Glamour owns and operates plantation estates across Sri Lanka's key agro-zones. " +
+                    "Each estate is run by a regional manager and open to direct investor participation."
                 ]}
                 stats={[
                     { label: "Estates", value: "07", note: "Currently Operating" },

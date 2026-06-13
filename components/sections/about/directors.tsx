@@ -51,7 +51,7 @@ export default function DirectorsSection() {
                     <article className="dir-card team-card sm:col-span-2 lg:col-span-1 reveal">
                         <figure className="portrait overflow-hidden sm:aspect-[21/9] lg:aspect-square">
                             <Photo
-                                src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780278294/madams-profile_vckxlg.jpg"
+                                src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781318220/madam-profilerrrr_jrwfeo.jpg"
                                 alt="Director"
                                 fill
                                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 33vw"

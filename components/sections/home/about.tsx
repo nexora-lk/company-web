@@ -15,7 +15,7 @@ export default function AboutSection() {
                     <div className="col-span-12 lg:col-span-6 relative order-1 reveal">
                         <figure className="rounded-[16px] xs:rounded-[20px] sm:rounded-[24px] overflow-hidden aspect-[4/3] xs:aspect-[1/1] lg:aspect-[4/5] shadow-xl">
                             <Photo
-                                src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780117526/about-hero_lvrtcj.jpg"
+                                src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781318381/logo_background_part_2_rmstrv.png"
                                 alt="Colonial estate house in the Sri Lankan highlands"
                                 className="w-full h-full object-cover"
                                 priority

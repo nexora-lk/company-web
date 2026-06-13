@@ -79,7 +79,7 @@ export default function AboutPage() {
                 }}
             />
             <ServiceHero
-                backgroundImage="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780762811/uy_hkd4mb.png"
+                backgroundImage="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781318324/IMG_20260613_075829_ourg1p.png"
                 ariaLabel="About Prestige Glamour"
                 eyebrow="Who We Are"
                 heading={

@@ -60,11 +60,8 @@ export default function Interactions() {
             const scrollY = window.scrollY;
             const delta = scrollY - lastScroll;
 
-            // Shadow when scrolled
-            header.style.boxShadow =
-              scrollY > 8
-                ? "0 10px 30px -18px rgba(20,24,26,0.45)"
-                : "none";
+            // Shadow when scrolled removed to eliminate 'blur' effect
+            header.style.boxShadow = "none";
 
             // Hide/show with a threshold to prevent flicker
             if (delta > 5 && scrollY > 120 && !headerHidden) {

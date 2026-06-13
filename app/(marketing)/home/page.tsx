@@ -17,7 +17,7 @@ export default function HomePage() {
             <ServicesSection />
             <AwardsSection />
             <ImpactSection />
-            <ContactSection />x
+            <ContactSection />
         </div>
     );
 }

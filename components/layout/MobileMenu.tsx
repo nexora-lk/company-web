@@ -149,7 +149,7 @@ export default function MobileMenu() {
                 aria-label={open ? 'Close menu' : 'Open menu'}
                 aria-expanded={open}
                 aria-controls="mobile-nav"
-                className="grid place-items-center w-9 sm:w-10 h-9 sm:h-10 rounded-full border border-line text-ink"
+                className="grid place-items-center w-9 sm:w-10 h-9 sm:h-10 rounded-full border border-line text-midnight-blue"
             >
                 <span className="relative block w-4.5 h-3.5">
                     <span
@@ -175,7 +175,7 @@ export default function MobileMenu() {
                 ref={backdropRef}
                 onClick={close}
                 aria-hidden="true"
-                className="fixed inset-0 top-16 xl:top-20 z-40 bg-ink/85 backdrop-blur-[20px]"
+                className="fixed inset-0 top-16 xl:top-20 z-40 bg-ink/85"
                 style={{ visibility: 'hidden', pointerEvents: 'none', opacity: 0 }}
             />
 
@@ -186,7 +186,7 @@ export default function MobileMenu() {
                 role="dialog"
                 aria-modal="true"
                 aria-label="Site navigation"
-                className="fixed inset-x-0 top-16 xl:top-20 z-40 origin-top border-b border-line bg-bg nav-blur"
+                className="fixed inset-x-0 top-16 xl:top-20 z-40 origin-top border-b border-line bg-bg"
                 style={{ visibility: 'hidden', pointerEvents: 'none', opacity: 0 }}
             >
                 <div className="max-w-content mx-auto px-6 md:px-8 py-6 md:py-8 overflow-y-auto max-h-[calc(100vh-120px)] xl:max-h-[calc(100vh-140px)]">
@@ -205,14 +205,14 @@ export default function MobileMenu() {
                                             onClick={close}
                                             className={`flex items-center justify-between py-3.5 md:py-4 font-display text-[22px] md:text-[26px] tracking-tightish transition-colors duration-200 ${
                                                 isActive
-                                                    ? 'text-accent font-medium'
-                                                    : 'text-ink hover:text-accent'
+                                                    ? 'text-sapphire-blue font-medium'
+                                                    : 'text-midnight-blue hover:text-sapphire-blue'
                                             }`}
                                         >
                                             {link.label}
                                             <ArrowIcon
                                                 size={20}
-                                                className={`${isActive ? 'text-accent' : 'text-mute'}`}
+                                                className={`${isActive ? 'text-midnight-blue' : 'text-mute'}`}
                                             />
                                         </Link>
                                         {link.children && (

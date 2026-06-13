@@ -6,7 +6,7 @@ import Leaf from '@/components/ui/Leaf';
 
 export default function AboutSection() {
     return (
-        <section id="about" className="relative overflow-hidden py-8 xs:py-10 sm:py-12 lg:py-16 xl:py-20">
+        <section id="about" className="relative overflow-hidden py-10 xs:py-12 md:py-12 lg:py-13 xl:py-14 bg-bg">
             <Leaf variant="tr" />
             <div className="max-w-content mx-auto px-4 xs:px-6 lg:px-10">
                 <div className="grid grid-cols-12 gap-8 md:gap-10 lg:gap-16 items-center">
@@ -17,7 +17,7 @@ export default function AboutSection() {
                             <Photo
                                 src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781318381/logo_background_part_2_rmstrv.png"
                                 alt="Colonial estate house in the Sri Lankan highlands"
-                                className="w-full h-full object-cover"
+                                className="w-full h-full object-cover rounded-2xl"
                                 priority
                                 fill
                                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -25,13 +25,13 @@ export default function AboutSection() {
                         </figure>
 
                         {/* Floating stat — desktop only */}
-                        <div className="hidden lg:block absolute -right-6 bottom-10 w-[240px] xl:w-[280px] rounded-2xl bg-surface border border-line p-6 shadow-2xl reveal">
+                        <div className="hidden lg:block absolute -right-6 bottom-10 w-[240px] xl:w-[280px] rounded-2xl bg-light-gold border border-line p-6 shadow-2xl reveal">
                             <div className="flex items-center justify-between mb-3">
                                 <span className="num">Since</span>
                                 <span className="num">2013</span>
                             </div>
-                            <div className="font-display text-[36px] xl:text-[42px] leading-none tracking-tightish text-ink">
-                                14<em className="serif-em text-accent">y</em>ears
+                            <div className="font-display text-[36px] xl:text-[42px] leading-none tracking-tightish text-midnight-blue">
+                                14<em className="serif-em text-sapphire-blue">y</em>ears
                             </div>
                             <div className="mt-4 text-[13px] xl:text-[14px] text-mute leading-relaxed font-light">
                                 of delivering real returns to 3,200+ investors across seven Sri Lankan investment vehicles.
@@ -39,9 +39,9 @@ export default function AboutSection() {
                         </div>
 
                         {/* Inline stat pill — mobile/tablet only */}
-                        <div className="lg:hidden absolute right-0 bottom-0 w-24 xs:w-28 sm:w-32 aspect-square bg-accent text-ondark flex flex-col items-center justify-center shadow-xl reveal z-10">
+                        <div className="lg:hidden absolute right-0 bottom-0 w-24 xs:w-28 sm:w-32 aspect-square bg-light-gold text-midnight-blue flex flex-col items-center justify-center shadow-xl reveal z-10 rounded-tl-[16px] rounded-br-[16px]">
                             <div className="font-display text-4xl xs:text-5xl leading-none tracking-tightish">
-                                14<em className="serif-em">y</em>
+                                14<em className="serif-em text-sapphire-blue" >y</em>
                             </div>
                             <div className="text-[10px] xs:text-[11px] uppercase tracking-widest mt-1.5 font-medium opacity-80">
                                 Experience
@@ -59,8 +59,8 @@ export default function AboutSection() {
                             />
                         </div>
 
-                        <h2 className="font-display text-3xl xs:text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[0.98] tracking-tightish text-ink reveal">
-                            We invest in <em className="serif-em">real </em>
+                        <h2 className="font-display text-3xl xs:text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[0.98] tracking-tightish text-midnight-blue reveal">
+                            We invest in <em className="serif-em text-sapphire-blue">real </em>
                             <br />
                             operations and share the
                             <br />
@@ -74,7 +74,7 @@ export default function AboutSection() {
                         </div>
 
                         <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4 reveal">
-                            <Link className="btn btn-ghost w-full sm:w-max justify-center px-6 xl:px-8" href="#services">
+                            <Link className="btn text-midnight-blue border border-1 hover:border-midnight-blue w-full sm:w-max justify-center px-6 xl:px-8" href="#services">
                                 Our Investment Options  <ArrowIcon size={16} className="ml-1" />
                             </Link>
                             <Link className="btn btn-primary w-full sm:w-max justify-center px-6 xl:px-8" href="/investment#process">

@@ -83,7 +83,7 @@ export default function ContactForm() {
             <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-7 sm:mb-10 gap-3 sm:gap-4">
                 <div>
                     <div className="num text-[10px] sm:text-[11px] mb-1.5 sm:mb-2">Inquiry</div>
-                    <div className="font-display text-[22px] sm:text-[26px] md:text-[28px] leading-[1.1] sm:leading-tight">
+                    <div className="font-display text-[22px] sm:text-[26px] md:text-[28px] leading-[1.1] sm:leading-tight text-midnight-blue">
                         Have a Question? Let&#39;s Talk
                     </div>
                 </div>
@@ -128,7 +128,7 @@ export default function ContactForm() {
                     <div className="num mb-1.5 text-[10px] sm:text-[11px]">04 — I am a…</div>
                     <select
                         name="user_role"
-                        className="field w-full bg-transparent focus:outline-2 focus:outline-offset-2 focus:outline-accent text-[13px] sm:text-[14px]"
+                        className="field w-full bg-transparent focus:outline-2 focus:outline-offset-2 focus:outline-accent text-[13px] sm:text-[14px]  text-gray-40"
                         required
                     >
                         <option value="">Select...</option>

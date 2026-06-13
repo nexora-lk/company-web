@@ -56,7 +56,7 @@ const services = [
 
 export default function ServicesSection() {
     return (
-        <section id="services" className="py-10 xs:py-12 md:py-16 lg:py-20 xl:py-24 bg-surface">
+        <section id="services" className="py-10 xs:py-12 md:py-12 lg:py-13 xl:py-14 bg-[#f6e9c6]/60">
             <Leaf variant="tr" />
             <div className="max-w-content mx-auto px-4 xs:px-6 lg:px-10">
 
@@ -69,8 +69,8 @@ export default function ServicesSection() {
                             className="flex items-center gap-2 xs:gap-3 mb-6 sm:mb-8"
                             hairlineClassName="hairline-strong w-16 xs:w-20 sm:w-24 lg:w-[120px]"
                         />
-                        <h2 className="font-display text-3xl xs:text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[0.98] tracking-tightish text-ink">
-                            Six Ways to Invest <em className="serif-em text-accent">With Us</em>
+                        <h2 className="font-display text-3xl xs:text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[0.98] tracking-tightish text-black">
+                            <em className="serif-em text-ink">Six Ways</em> to Invest With Us
                         </h2>
                     </div>
                     <div className="max-w-full sm:max-w-[440px] lg:text-right reveal">
@@ -96,7 +96,7 @@ export default function ServicesSection() {
                                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                                 className="absolute inset-0 w-full h-full object-cover"
                             />
-                            <div className="absolute inset-0 bg-linear-to-t from-ink/95 via-ink/40 to-transparent" />
+                            <div className="absolute inset-0 bg-linear-to-t from-sapphire-blue/60 via-sapphire-blue/25 to-transparent" />
                             <div className="relative h-full p-6 xs:p-8 sm:p-10 flex flex-col justify-between text-ondark">
                                 <span className="num text-white/60 font-medium text-[10px] xs:text-[11px] uppercase tracking-widest">
                                     Service Tier

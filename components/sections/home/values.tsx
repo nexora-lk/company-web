@@ -5,7 +5,7 @@ import Leaf from "@/components/ui/Leaf";
 
 export default function ValuesSection() {
     return (
-        <section id="values" className="pb-10 xs:pb-12 md:pb-16 lg:pb-20 xl:pb-24 pt-10 xs:pt-12 md:pt-16 lg:pt-20 xl:pt-24 bg-surface">
+        <section id="values" className="py-10 xs:py-12 md:py-12 lg:py-13 xl:py-14 bg-[#f6e9c6]/60">
             <Leaf variant="bl" />
             <div className="max-w-content mx-auto px-4 xs:px-6 lg:px-10">
                 <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 sm:gap-10 mb-12 sm:mb-16 lg:mb-20">
@@ -16,8 +16,8 @@ export default function ValuesSection() {
                             className="flex items-center gap-2 xs:gap-3 mb-6 sm:mb-8"
                             hairlineClassName="hairline-strong w-16 xs:w-20 sm:w-24 lg:w-[120px]"
                         />
-                        <h2 className="font-display text-3xl xs:text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[0.98] tracking-tightish text-ink">
-                            Six principles. Behind <em className="serif-em text-accent">every</em> investment,
+                        <h2 className="font-display text-3xl xs:text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[0.98] tracking-tightish text-midnight-blue">
+                            Six principles. Behind <em className="serif-em text-sapphire-blue">every</em> investment,
                             <br className="hidden sm:block" />
                             every return, every handshake.
                         </h2>

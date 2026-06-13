@@ -4,7 +4,18 @@
 :root {
     --c-bg: #f7f4ed;
     --c-surface: #ffffff;
-    --c-ink: #14181a;
+    /*--c-ink: #14181a;*/
+
+    --c-ink: #132074;
+
+    --c-sapphire-blue: #132074;
+    --c-royal-blue: #0a0e4d;
+    --c-midnight-blue: #070b29;
+
+    --c-normal-gold: #d4af37;
+    --c-light-gold: #f5d98b;
+    --c-antique-gold: #b8860b;
+
     --c-mute: #5b6066;
     --c-line: rgba(20, 24, 26, 0.1);
     --c-accent: #2f5d4a;
@@ -35,6 +46,14 @@
     --font-body: var(--font-body);
     --tracking-tightish: -0.022em;
     --animate-marq: marq 28s linear infinite;
+
+    --color-royal-blue: var(--c-royal-blue);
+    --color-sapphire-blue: var(--c-sapphire-blue);
+    --color-midnight-blue: var(--c-midnight-blue);
+
+    --color-normal-gold: var(--c-normal-gold);
+    --color-light-gold: var(--c-light-gold);
+    --color-antique-gold: var(--c-antique-gold);
 }
 
 /* Keyframes live outside cascade layers (per CSS spec). */
@@ -131,14 +150,6 @@
     height: 1px;
     background: rgba(20, 24, 26, 0.32); 
 }
-@utility nav-blur {
-    background: transparent;
-    @media (max-width: 1023px) {
-        backdrop-filter: blur(24px) saturate(160%);
-        -webkit-backdrop-filter: blur(24px) saturate(160%);
-        background: color-mix(in oklab, var(--c-bg) 96%, transparent);
-    }
-}
 @utility num {
     font-family: var(--font-body);
     font-weight: 400;
@@ -221,17 +232,18 @@
             border-color 0.25s;
     }
     .btn-primary {
-        background: var(--c-ink);
+        background: var(--c-sapphire-blue);
         color: var(--c-bg);
     }
     .btn-primary:hover {
         transform: translateY(-1px);
-        background: var(--c-accent);
+        background: var(--c-normal-gold);
+        opacity: 50%;
         color: #fff;
     }
     .btn-ghost {
         background: transparent;
-        color: var(--c-ink);
+        color: var(--c-midnight-blue);
         border: 1px solid var(--c-line);
     }
     .btn-ghost:hover {
@@ -369,6 +381,32 @@
     .reveal.in {
         opacity: 1;
         transform: none;
+    }
+
+    /* ── Interactive value cards ─────────────────────────── */
+    .value-card {
+        transition:
+            background-color 0.45s cubic-bezier(0.2, 0.7, 0.2, 1);
+    }
+    /* Accent top-bar that grows on hover */
+    .value-bar {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 2px;
+        width: 100%;
+        background: var(--c-ink);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.55s cubic-bezier(0.2, 0.7, 0.2, 1);
+    }
+    .value-card:hover .value-bar {
+        transform: scaleX(1);
+    }
+    @media (prefers-reduced-motion: reduce) {
+        .value-bar {
+            transition: none;
+        }
     }
 
     /* Hero line animation (word-split) */

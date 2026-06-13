@@ -24,9 +24,9 @@ export default function StatsBanner({
               className={`p-6 xs:p-8 lg:p-10 reveal ${borderClasses}`}
             >
               <div className="num mb-4 xs:mb-6">{s.label}</div>
-              <div className="stat-num text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl leading-none">
+              <div className="stat-num text-midnight-blue text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl leading-none">
                 {s.value}
-                <em className="serif-em text-accent ml-1">{s.em}</em>
+                <em className="serif-em text-sapphire-blue ml-1">{s.em}</em>
               </div>
               <div className="text-[11px] xs:text-[12px] lg:text-[13px] text-mute mt-2 xs:mt-3 font-light">
                 {s.note}

@@ -75,13 +75,13 @@ export default function HeroSection() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#14181a]/90 via-[#14181a]/20 to-[#14181a]/25" />
             </div>
 
-            {/* ── Live scene badge — hidden on xs, visible sm+ ───────────── */}
-            <div className="absolute top-4 right-4 sm:top-6 sm:right-6 z-20 hidden sm:flex items-center gap-2 px-2.5 py-1.5 sm:px-3 rounded-full bg-[#f1ece0]/10 backdrop-blur-sm border border-[#f1ece0]/15">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#2f5d4a] shrink-0 animate-pulse" />
-                <span className="text-[10px] sm:text-[11px] font-medium text-[#f1ece0]/80 tracking-widest uppercase">
-                    {BG_VIDEOS[current].label}
-                </span>
-            </div>
+            {/*/!* ── Live scene badge — hidden on xs, visible sm+ ───────────── *!/*/}
+            {/*<div className="absolute top-4 right-4 sm:top-6 sm:right-6 z-20 hidden sm:flex items-center gap-2 px-2.5 py-1.5 sm:px-3 rounded-full bg-[#f1ece0]/10 backdrop-blur-sm border border-[#f1ece0]/15">*/}
+            {/*    <span className="w-1.5 h-1.5 rounded-full bg-[#2f5d4a] shrink-0 animate-pulse" />*/}
+            {/*    /!*<span className="text-[10px] sm:text-[11px] font-medium text-[#f1ece0]/80 tracking-widest uppercase">*!/*/}
+            {/*    /!*    {BG_VIDEOS[current].label}*!/*/}
+            {/*    /!*</span>*!/*/}
+            {/*</div>*/}
 
             {/* ── Hero content — vertically fills viewport ─────── */}
             <div className="relative z-10 flex-1 flex flex-col items-center text-center
@@ -154,16 +154,16 @@ export default function HeroSection() {
                         href="/investment#calculator"
                         id="hero-cta-secondary"
                         className="btn
+                        btn-ghost
                                    w-full sm:w-auto
                                    min-w-0 sm:min-w-[200px] lg:min-w-[220px]
                                    justify-center
                                    text-[15.5px] sm:text-[15px] lg:text-[15.5px]
                                    py-[0.9rem] sm:py-[0.85rem] lg:py-[0.9rem]"
                         style={{
-                            background: 'rgba(20,24,26,0.3)',
                             color: '#f1ece0',
                             border: '1px solid rgba(241,236,224,0.15)',
-                            backdropFilter: 'blur(10px)',
+                            backdropFilter: 'blur(200px)',
                         }}
                     >
                         Calculate Your Returns

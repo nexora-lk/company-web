@@ -5,7 +5,7 @@ import Leaf from "@/components/ui/Leaf";
 
 export default function ContactSection() {
     return (
-        <section id="contact" className="py-12 sm:py-16 md:py-20 lg:py-24 xl:py-28">
+        <section id="contact" className="py-12 sm:py-16 md:py-12 lg:py-13 xl:py-14 bg-bg">
             <Leaf variant="tr" />
             <Leaf variant="bl" />
             <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-10">
@@ -20,8 +20,8 @@ export default function ContactSection() {
                             hairlineClassName="hairline-strong w-16 sm:w-20 md:w-24 lg:w-[120px]"
                         />
 
-                        <h2 className="font-display text-[32px] sm:text-[44px] md:text-[52px] lg:text-[60px] xl:text-[72px] leading-[1.0] tracking-tightish text-ink">
-                            Ready to <em className="serif-em">Invest? </em> Let&#39;s Talk.
+                        <h2 className="font-display text-[32px] sm:text-[44px] md:text-[52px] lg:text-[60px] xl:text-[72px] leading-[1.0] tracking-tightish text-midnight-blue">
+                            Ready to <em className="serif-em text-sapphire-blue">Invest? </em> Let&#39;s Talk.
                         </h2>
 
                         <p className="mt-5 sm:mt-7 text-mute text-[14px] sm:text-[15px] md:text-base leading-[1.7] max-w-full sm:max-w-[480px]">

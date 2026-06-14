@@ -560,7 +560,7 @@
         text-align: right;
     }
     .sidebar-dark {
-        background: var(--c-ink);
+        background: var(--c-midnight-blue);
         color: var(--c-ondark);
         border-radius: 20px;
     }

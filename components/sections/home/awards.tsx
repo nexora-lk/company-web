@@ -1,7 +1,6 @@
 import SectionEyebrow from '@/components/sections/SectionEyebrow';
 import Photo from '@/components/ui/Photo';
 import Leaf from "@/components/ui/Leaf";
-import { Award } from "lucide-react";
 
 export default function AwardsSection() {
     return (

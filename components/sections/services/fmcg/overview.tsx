@@ -3,7 +3,7 @@ import Leaf from "@/components/ui/Leaf";
 
 export default function OverviewSection() {
     return (
-        <section className="py-16 xs:py-20 sm:py-24 lg:py-32 xl:py-40">
+        <section className="py-10 xs:py-12 md:py-12 lg:py-13 xl:py-14 bg-bg">
             <Leaf variant="tr" />
             <div className="max-w-content mx-auto px-4 xs:px-6 lg:px-10">
                 <div className="grid grid-cols-12 gap-8 lg:gap-16 xl:gap-24 items-start">

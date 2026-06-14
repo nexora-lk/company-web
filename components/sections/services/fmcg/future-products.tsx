@@ -30,7 +30,7 @@ export default function FutureProductsSection() {
     ];
 
     return (
-        <section id="future-products" className="py-16 sm:py-20 md:py-24 lg:py-28 xl:py-32 bg-surface border-t border-line">
+        <section id="future-products" className="py-10 xs:py-12 md:py-12 lg:py-13 xl:py-14 bg-bg-alt border-t border-line">
             <Leaf variant="bl" />
             <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-10">
 
@@ -58,7 +58,7 @@ export default function FutureProductsSection() {
                     {futureProducts.map((product, idx) => (
                         <article
                             key={idx}
-                            className="group relative flex flex-col justify-between overflow-hidden rounded-[20px] sm:rounded-[24px] bg-bg/40 border border-line/40 p-4 sm:p-5 transition-all duration-500 hover:-translate-y-2 hover:bg-surface hover:shadow-[0_24px_50px_rgba(47,93,74,0.06)] hover:border-accent/15 reveal"
+                            className="group relative flex flex-col justify-between overflow-hidden rounded-[20px] sm:rounded-[24px] bg-surface border border-line/40 p-4 sm:p-5 transition-all duration-500 hover:-translate-y-2 hover:bg-bg-alt hover:shadow-[0_24px_50px_rgba(47,93,74,0.06)] hover:border-accent/15 reveal"
                         >
                             {/* Image */}
                             <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[12px] sm:rounded-[16px] bg-bg/50">
@@ -80,7 +80,7 @@ export default function FutureProductsSection() {
                                     <span className="num text-[10px] sm:text-[11px] text-accent/80 block mb-1.5 sm:mb-2">
                                         {product.metric}
                                     </span>
-                                    <h3 className="font-display text-[22px] sm:text-[24px] lg:text-[26px] leading-[1.1] text-ink transition-colors duration-300 group-hover:text-midnight-blue">
+                                    <h3 className="font-display text-[22px] sm:text-[24px] lg:text-[26px] leading-[1.1] text-midnight-blue transition-colors duration-300 group-hover:text-sapphire-blue">
                                         {product.title}
                                     </h3>
                                     <p className="mt-2 sm:mt-3 text-[13px] sm:text-[13.5px] md:text-[14px] leading-[1.6] text-mute">

@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback } from 'react';
 import Leaf from "@/components/ui/Leaf";
 
 const MIN = 200_000;
+const SLIDER_MAX = 10_000_000;
 const FALLBACK_RATE = 320;
 
 // Return rates by year and plan type
@@ -11,6 +12,14 @@ const RETURN_RATES = {
   annual: { 1: 60, 2: 70, 3: 80, 4: 90, 5: 100 },
   monthly: { 1: 40, 2: 41, 3: 42, 4: 43, 5: 45 },
 };
+
+const QUICK_AMOUNTS = [
+  { value: 200_000, label: '200K' },
+  { value: 500_000, label: '500K' },
+  { value: 1_000_000, label: '1M' },
+  { value: 2_500_000, label: '2.5M' },
+  { value: 5_000_000, label: '5M' },
+];
 
 function fmtRs(n: number) {
   return 'Rs. ' + Math.round(n).toLocaleString('en-US');
@@ -21,14 +30,12 @@ function fmtUSD(n: number, rate: number | null) {
   return '≈ $' + val.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' USD';
 }
 
-function ResultRow({ label, rs, usd }: { label: string, rs: string, usd: string | null }) {
+function Stat({ label, rs, usd }: { label: string; rs: string; usd: string | null }) {
   return (
-    <div className="flex items-center justify-between py-4 sm:py-5 border-b border-line last:border-0 last:pb-0">
-      <span className="text-[13.5px] sm:text-[14.5px] text-mute">{label}</span>
-      <div className="text-right">
-        <p className="font-display text-[18px] sm:text-[22px] text-midnight-blue m-0 leading-none">{rs}</p>
-        {usd && <p className="num text-[10px] sm:text-[11px] text-mute/70 mt-1.5">{usd}</p>}
-      </div>
+    <div>
+      <div className="eyebrow text-white/45 text-[9px] mb-1.5">{label}</div>
+      <div className="font-display text-[18px] sm:text-[20px] text-white leading-none">{rs}</div>
+      {usd && <div className="num text-white/40 text-[10px] mt-1.5">{usd}</div>}
     </div>
   );
 }
@@ -97,6 +104,10 @@ export default function CalculatorSection() {
   const monthlyAnnual = n * returnPercent;
   const monthlyTotal = n + monthlyAnnual;
 
+  const setAmount = useCallback((v: number) => {
+    setRaw(v.toLocaleString('en-US'));
+  }, []);
+
   const handleInput = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     const val = e.target.value.replace(/,/g, '');
     if (val === '') { setRaw(''); return; }
@@ -104,15 +115,13 @@ export default function CalculatorSection() {
     if (!isNaN(num)) { setRaw(num.toLocaleString('en-US')); }
   }, []);
 
+  const sliderVal = Math.min(Math.max(n, MIN), SLIDER_MAX);
+  const sliderPct = ((sliderVal - MIN) / (SLIDER_MAX - MIN)) * 100;
+
   return (
-    <section 
-      id="calculator" 
+    <section
+      id="calculator"
       className="py-12 sm:py-16 md:py-12 lg:py-13 xl:py-14 bg-bg relative overflow-hidden"
-      style={{
-        '--color-royal-blue': 'var(--c-royal-blue)',
-        '--color-sapphire-blue': 'var(--c-sapphire-blue)',
-        '--color-midnight-blue': 'var(--c-midnight-blue)',
-      } as React.CSSProperties}
     >
       <Leaf variant="tr" />
       <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
@@ -120,7 +129,7 @@ export default function CalculatorSection() {
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 xl:gap-24 items-start justify-between">
 
           {/* Text block */}
-          <div className="w-full lg:w-5/12 reveal">
+          <div className="w-full lg:w-5/12 lg:sticky lg:top-24 reveal">
             <div className="flex items-center gap-2 sm:gap-3 mb-5 sm:mb-6">
               <span className="hairline-strong w-16 sm:w-24"></span>
               <span className="eyebrow text-[10px] sm:text-[11px] uppercase tracking-widest text-mute">Investment Calculator</span>
@@ -130,7 +139,8 @@ export default function CalculatorSection() {
               <em className="serif-em text-sapphire-blue">returns</em>.
             </h2>
             <p className="text-mute text-[14px] sm:text-[15px] leading-[1.7] max-w-full sm:max-w-[420px]">
-              Minimum Rs. 200,000 for Sri Lankan operations. Play with the numbers and see our dual-plan payout model in action.
+              Minimum Rs. 200,000 for Sri Lankan operations. Slide, tap a preset, or type your own
+              amount and watch our dual-plan payout model update in real time.
             </p>
 
             {/* Live rate badge */}
@@ -144,16 +154,16 @@ export default function CalculatorSection() {
           <div className="w-full lg:w-7/12 max-w-full sm:max-w-[540px] lg:max-w-none lg:ml-auto reveal delay-100">
 
             {/* Plan Toggle */}
-            <div className="flex gap-1.5 bg-surface p-1.5 rounded-[18px] border border-line mb-6 sm:mb-8 shadow-sm">
+            <div className="flex gap-1.5 bg-surface p-1.5 rounded-[18px] border border-line mb-3.5 shadow-sm">
               {[
-                { key: 'annual', label: 'Annual', sub: '60% / year' },
-                { key: 'monthly', label: 'Monthly', sub: '40% / year' },
+                { key: 'annual', label: 'Annual', sub: 'Paid once at maturity' },
+                { key: 'monthly', label: 'Monthly', sub: 'Paid every month' },
               ].map(({ key, label, sub }) => (
                 <button
                   key={key}
                   onClick={() => setPlan(key)}
-                  className={`flex-1 py-4 px-4 rounded-[14px] text-[14px] sm:text-[15px] transition-all duration-300 flex flex-col items-center justify-center gap-1 ${plan === key
-                    ? 'bg-midnight-blue text-white shadow-md'
+                  className={`flex-1 py-3.5 px-4 rounded-[14px] text-[14px] sm:text-[15px] transition-all duration-300 flex flex-col items-center justify-center gap-1 ${plan === key
+                    ? 'bg-royal-blue text-white shadow-md'
                     : 'text-mute hover:text-midnight-blue hover:bg-bg'
                     }`}
                 >
@@ -185,11 +195,17 @@ export default function CalculatorSection() {
             </div>
 
             {/* Input & Results Card */}
-            <div className="bg-surface rounded-[24px] sm:rounded-[32px] border border-line p-6 sm:p-8 lg:p-10 shadow-lg space-y-8 sm:space-y-10">
-              
+            <div className="bg-surface rounded-[24px] sm:rounded-[32px] border border-line p-6 sm:p-8 lg:p-10 shadow-lg space-y-7 sm:space-y-8">
+
               {/* Amount Input */}
               <div className="space-y-5">
-                <label htmlFor="investment-amount" className="eyebrow text-[10px] sm:text-[11px] uppercase tracking-widest text-mute block">Investment amount</label>
+                <div className="flex items-center justify-between">
+                  <label htmlFor="investment-amount" className="eyebrow text-[10px] sm:text-[11px] uppercase tracking-widest text-mute block">Investment amount</label>
+                  <p className="num text-[11px] sm:text-[12px] text-mute">
+                    {rate ? `≈ $${(n / rate).toLocaleString('en-US', { maximumFractionDigits: 0 })} USD` : '≈ $… USD'}
+                  </p>
+                </div>
+
                 <div className="flex items-baseline gap-3 border-b border-line focus-within:border-sapphire-blue pb-3 sm:pb-4 transition-colors duration-500">
                   <span className="font-display text-[24px] sm:text-[32px] text-mute/50">Rs.</span>
                   <input
@@ -198,45 +214,91 @@ export default function CalculatorSection() {
                     inputMode="numeric"
                     value={raw}
                     onChange={handleInput}
-                    className="flex-1 font-display text-[36px] sm:text-[48px] lg:text-[56px] text-midnight-blue bg-transparent border-none outline-none p-0 focus:ring-0 leading-none"
+                    className="flex-1 w-full font-display text-[34px] sm:text-[46px] lg:text-[52px] text-midnight-blue bg-transparent border-none outline-none p-0 focus:ring-0 leading-none"
                   />
                 </div>
-                <div className="flex items-center justify-between">
-                  {!isValid && amount > 0 ? (
-                    <p className="text-[11px] sm:text-[12px] text-red-500/80 font-medium">Min. Rs. 200,000</p>
-                  ) : <span />}
-                  <p className="num text-[11px] sm:text-[12px] text-mute">
-                    {rate ? `≈ $${(n / rate).toLocaleString('en-US', { maximumFractionDigits: 0 })} USD` : '≈ $… USD'}
-                  </p>
+
+                {!isValid && amount > 0 && (
+                  <p className="text-[11px] sm:text-[12px] text-red-500/80 font-medium">Minimum investment is Rs. 200,000</p>
+                )}
+
+                {/* Slider */}
+                <input
+                  type="range"
+                  min={MIN}
+                  max={SLIDER_MAX}
+                  step={50_000}
+                  value={sliderVal}
+                  onChange={(e) => setAmount(parseInt(e.target.value, 10))}
+                  aria-label="Investment amount slider"
+                  className="w-full h-1.5 rounded-full appearance-none cursor-pointer accent-sapphire-blue"
+                  style={{ background: `linear-gradient(to right, var(--c-sapphire-blue) ${sliderPct}%, var(--c-line) ${sliderPct}%)` }}
+                />
+                <div className="flex justify-between num text-[10px] text-mute/60">
+                  <span>Rs. 200K</span>
+                  <span>Rs. 10M</span>
+                </div>
+
+                {/* Quick amounts */}
+                <div className="flex flex-wrap gap-2">
+                  {QUICK_AMOUNTS.map((q) => {
+                    const active = n === q.value;
+                    return (
+                      <button
+                        key={q.value}
+                        onClick={() => setAmount(q.value)}
+                        className={`px-3.5 py-1.5 rounded-full text-[12px] font-medium border transition-all duration-200 ${active
+                          ? 'bg-sapphire-blue text-white border-sapphire-blue'
+                          : 'bg-bg text-mute border-line hover:border-sapphire-blue/40 hover:text-midnight-blue'
+                          }`}
+                      >
+                        {q.label}
+                      </button>
+                    );
+                  })}
                 </div>
               </div>
 
-              {/* Payout Details */}
-              <div className="space-y-6">
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                  <h3 className="font-display text-[22px] sm:text-[26px] text-midnight-blue">
-                    {plan === 'annual' ? 'Annual Payout' : 'Monthly Distribution'}
-                  </h3>
-                  <span className="px-3.5 py-1.5 rounded-full bg-sapphire-blue/10 text-sapphire-blue text-[10px] sm:text-[11px] font-bold uppercase tracking-widest whitespace-nowrap">
-                    {plan === 'annual' ? `${returnRate}% Net Yield` : `${returnRate}% Annualized`}
+              {/* Hero result */}
+              <div className="relative overflow-hidden rounded-[20px] sm:rounded-[24px] bg-royal-blue p-6 sm:p-8 text-white">
+                <span aria-hidden className="pointer-events-none absolute -top-12 -right-12 h-40 w-40 rounded-full bg-normal-gold/20 blur-3xl" />
+
+                <div className="relative flex items-center justify-between gap-3 mb-4">
+                  <span className="eyebrow text-light-gold text-[10px] sm:text-[11px]">
+                    {plan === 'annual' ? 'Projected profit' : 'You receive each month'}
+                  </span>
+                  <span className="px-3 py-1 rounded-full bg-white/10 text-white text-[10px] font-bold uppercase tracking-widest whitespace-nowrap">
+                    {plan === 'annual' ? `${returnRate}% net yield` : `${returnRate}% annualized`}
                   </span>
                 </div>
-                
-                <div className="bg-bg rounded-[20px] p-6 sm:p-8 space-y-1 sm:space-y-2 border border-line/50">
+
+                <div className="relative font-display text-[40px] sm:text-[52px] lg:text-[58px] leading-[0.9] tracking-tightish">
+                  {fmtRs(plan === 'annual' ? annualProfit : monthlyPayout)}
+                </div>
+                {rate && (
+                  <div className="relative num text-white/55 text-[11px] sm:text-[12px] mt-2.5">
+                    {fmtUSD(plan === 'annual' ? annualProfit : monthlyPayout, rate)}
+                  </div>
+                )}
+
+                <div className="relative mt-6 pt-6 border-t border-white/10 grid grid-cols-2 gap-5 sm:gap-6">
                   {plan === 'annual' ? (
                     <>
-                      <ResultRow label="Projected profit" rs={fmtRs(annualProfit)} usd={fmtUSD(annualProfit, rate)} />
-                      <ResultRow label="Total at maturity" rs={fmtRs(annualTotal)} usd={fmtUSD(annualTotal, rate)} />
+                      <Stat label="Capital invested" rs={fmtRs(n)} usd={fmtUSD(n, rate)} />
+                      <Stat label="Total at maturity" rs={fmtRs(annualTotal)} usd={fmtUSD(annualTotal, rate)} />
                     </>
                   ) : (
                     <>
-                      <ResultRow label="Monthly distribution" rs={fmtRs(monthlyPayout)} usd={fmtUSD(monthlyPayout, rate)} />
-                      <ResultRow label="Total annual profit" rs={fmtRs(monthlyAnnual)} usd={fmtUSD(monthlyAnnual, rate)} />
-                      <ResultRow label="Total return" rs={fmtRs(monthlyTotal)} usd={fmtUSD(monthlyTotal, rate)} />
+                      <Stat label="Total annual profit" rs={fmtRs(monthlyAnnual)} usd={fmtUSD(monthlyAnnual, rate)} />
+                      <Stat label="Total return (yr 1)" rs={fmtRs(monthlyTotal)} usd={fmtUSD(monthlyTotal, rate)} />
                     </>
                   )}
                 </div>
               </div>
+
+              <p className="num text-[10px] text-mute/60 text-center">
+                Illustrative projection based on the selected plan & term. Not a guarantee of future returns.
+              </p>
 
             </div>
           </div>

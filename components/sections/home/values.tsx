@@ -6,7 +6,7 @@ export default function ValuesSection() {
     return (
         <section
             id="values"
-            className="relative py-12 xs:py-14 md:py-16 lg:py-20 xl:py-24 bg-[#f6e9c6]/60"
+            className="relative py-12 xs:py-14 md:py-16 lg:py-20 xl:py-24 bg-bg-alt"
         >
             <Leaf variant="bl" />
 

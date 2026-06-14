@@ -5,7 +5,7 @@ import Leaf from "@/components/ui/Leaf";
 
 export default function ImpactSection() {
     return (
-        <section id="impact" className="py-10 xs:py-12 md:py-12 lg:py-13 xl:py-14 bg-[#f6e9c6]/60">
+        <section id="impact" className="py-10 xs:py-12 md:py-12 lg:py-13 xl:py-14 bg-bg-alt">
             <Leaf variant="tr" />
             <div className="max-w-content mx-auto px-4 xs:px-6 lg:px-10">
                 <div className="grid grid-cols-12 gap-8 md:gap-12 lg:gap-16 items-end mb-12 sm:mb-16 md:mb-20">

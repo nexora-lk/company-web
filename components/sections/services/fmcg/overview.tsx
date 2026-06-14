@@ -15,8 +15,8 @@ export default function OverviewSection() {
                             <span className="eyebrow text-[10px] xs:text-xs">FMCG Overview</span>
                         </div>
 
-                        <h2 className="font-display text-3xl xs:text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[0.98] tracking-tightish text-ink reveal">
-                            Our plantation grows it. <em className="serif-em">Our factory makes it.</em>
+                        <h2 className="font-display text-3xl xs:text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[0.98] tracking-tightish text-midnight-blue reveal">
+                            Our plantation grows it. <em className="serif-em text-sapphire-blue">Our factory makes it.</em>
                             <br />
                             You invest in the margin.
                         </h2>
@@ -36,8 +36,8 @@ export default function OverviewSection() {
                             </p>
                         </div>
 
-                        <h3 className="font-display text-2xl xs:text-[26px] md:text-[28px] mt-10 xs:mt-12 text-ink reveal">
-                            Our <em className="serif-em text-accent">product</em> categories.
+                        <h3 className="font-display text-2xl xs:text-[26px] md:text-[28px] mt-10 xs:mt-12 text-midnight-blue reveal">
+                            Our <em className="serif-em text-sapphire-blue">product</em> categories.
                         </h3>
                         <ul className="mt-6 xs:mt-8 grid grid-cols-2 sm:grid-cols-3 gap-x-4 xs:gap-x-6 gap-y-3 xs:gap-y-4 max-w-full sm:max-w-[640px] reveal">
                             <li className="branch text-[13px] xs:text-[14px]">Fresh-cut fruit packs</li>
@@ -61,12 +61,11 @@ export default function OverviewSection() {
                                 priority
                                 fill
                                 sizes="(max-width: 1024px) 100vw, 40vw"
-                                className="w-full h-full object-cover"
+                                className="w-full h-full object-cover rounded-2xl"
                             />
                         </figure>
                         <div className="absolute -z-10 -top-6 -left-6 w-32 h-32 bg-accent/5 rounded-full blur-3xl hidden lg:block"></div>
                     </aside>
-
                 </div>
             </div>
         </section>

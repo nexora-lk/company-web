@@ -18,16 +18,15 @@ export default function HeroBanner() {
                             fill
                             sizes="100vw"
                         />
-                        <div className="absolute inset-0 bg-linear-to-tr from-ink/90 via-ink/60 to-ink/30"></div>
+                        <div className="absolute inset-0 bg-linear-to-tr from-sapphire-blue/60 via-sapphire-blue/40 to-sapphire-blue/20"></div>
 
                         <div className="relative w-full p-6 sm:p-8 lg:p-14 text-ondark">
                             <Link
                                 href="/about"
-                                className="inline-flex items-center gap-2 text-ondark/70 text-[13px] sm:text-sm mb-4 sm:mb-6 hover:text-ondark transition-colors"
+                                className="inline-flex items-center gap-2 text-white text-[13px] sm:text-sm mb-4 sm:mb-6 hover:text-ondark transition-colors"
                             >
                                 ← Back to About
                             </Link>
-                            <span className="num text-ondark/80! block text-[10px] sm:text-[11px]">[ Careers ]</span>
                             <h1 className="font-display text-[36px] sm:text-[48px] md:text-[60px] lg:text-[72px] leading-[0.96] tracking-tightish mt-3 sm:mt-4">
                                 Build Your <em className="serif-em">Career</em> in Capital Deployment
                                 <br />

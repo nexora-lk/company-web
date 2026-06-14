@@ -41,8 +41,8 @@ export default function FutureProductsSection() {
                             <span className="hairline-strong w-[80px] sm:w-[120px]" />
                             <span className="eyebrow">Future Development</span>
                         </div>
-                        <h2 className="font-display text-[30px] sm:text-[40px] md:text-[48px] lg:text-[54px] xl:text-[60px] leading-[0.98] tracking-tightish text-ink">
-                            New products in <em className="serif-em">development</em>
+                        <h2 className="font-display text-[30px] sm:text-[40px] md:text-[48px] lg:text-[54px] xl:text-[60px] leading-[0.98] tracking-tightish text-midnight-blue">
+                            New products in <em className="serif-em text-sapphire-blue">development</em>
                             <br />
                             launching Q4 2026.
                         </h2>
@@ -80,7 +80,7 @@ export default function FutureProductsSection() {
                                     <span className="num text-[10px] sm:text-[11px] text-accent/80 block mb-1.5 sm:mb-2">
                                         {product.metric}
                                     </span>
-                                    <h3 className="font-display text-[22px] sm:text-[24px] lg:text-[26px] leading-[1.1] text-ink transition-colors duration-300 group-hover:text-accent">
+                                    <h3 className="font-display text-[22px] sm:text-[24px] lg:text-[26px] leading-[1.1] text-ink transition-colors duration-300 group-hover:text-midnight-blue">
                                         {product.title}
                                     </h3>
                                     <p className="mt-2 sm:mt-3 text-[13px] sm:text-[13.5px] md:text-[14px] leading-[1.6] text-mute">
@@ -98,7 +98,6 @@ export default function FutureProductsSection() {
                         </article>
                     ))}
                 </div>
-
             </div>
         </section>
     );

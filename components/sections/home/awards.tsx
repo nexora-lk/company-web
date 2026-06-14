@@ -1,16 +1,17 @@
 import SectionEyebrow from '@/components/sections/SectionEyebrow';
 import Photo from '@/components/ui/Photo';
 import Leaf from "@/components/ui/Leaf";
+import { Award } from "lucide-react";
 
 export default function AwardsSection() {
     return (
-        <section className="py-8 xs:py-8 md:py-8 lg:py-8 xl:py-8 overflow-hidden bg-bg">
+        <section className="py-12 sm:py-16 md:py-12 lg:py-13 xl:py-14 overflow-hidden bg-bg">
             <Leaf variant="bl" />
             <div className="max-w-content mx-auto px-4 xs:px-6 lg:px-10">
-                <div className="grid grid-cols-12 gap-6 lg:gap-12 items-center">
+                <div className="grid grid-cols-12 gap-8 lg:gap-12 xl:gap-16 items-center">
 
-                    {/* Text */}
-                    <div className="col-span-12 lg:col-span-5 order-1 lg:order-1 reveal">
+                    {/* ── Text ── */}
+                    <div className="col-span-12 lg:col-span-5 reveal">
                         <SectionEyebrow
                             index="05"
                             label="Recognition"
@@ -26,42 +27,63 @@ export default function AwardsSection() {
 
                         <div className="mt-5 xs:mt-6 md:mt-8 max-w-full sm:max-w-[600px] lg:max-w-none">
                             <p className="text-[14px] xs:text-[15px] leading-relaxed text-mute mb-4 xs:mb-5 font-light">
-                                Our financials are independently audited quarterly by KPMG Sri Lanka. Every investor receives the same disclosure — no selective reporting, no smoothed numbers.
+                                Our financials are independently audited every quarter by KPMG Sri Lanka. Every investor sees the same disclosure — no selective reporting, no smoothed numbers.
                             </p>
                             <p className="text-[14px] xs:text-[15px] leading-relaxed text-mute font-light">
-                                The certifications and recognition we have received are a result of doing things properly, not promoting ourselves.
+                                The certifications and recognition we hold come from doing things properly — not from promoting ourselves.
                             </p>
                         </div>
                     </div>
 
-                    {/* Images — maximized sizes for extreme presence */}
-                    <div className="col-span-12 lg:col-span-7 relative order-2 lg:order-2 flex items-center justify-center gap-4 xs:gap-6 sm:gap-8 mt-6 sm:mt-10 lg:mt-0 py-5 lg:py-8 reveal">
-                        {/* Medal — maximized, no border/shadow, shifted up */}
-                        <figure className="w-[65%] xs:w-[60%] sm:w-[45%] lg:w-[60%] overflow-hidden aspect-[4/5] transform -translate-y-4 sm:-translate-y-6 lg:-translate-y-16 transition-transform duration-700 hover:-translate-y-20 reveal">
-                            <Photo
-                                src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781369027/cup-original_umz1vp.png"
-                                alt="Award Cup"
-                                className="w-full h-full object-contain"
-                                fill
-                                sizes="(max-width: 640px) 95vw, (max-width: 1024px) 70vw, 55vw"
-                            />
+                    {/* ── Visual showcase — award presentation ── */}
+                    <div className="col-span-12 lg:col-span-7 relative pb-12 sm:pb-14 mt-4 lg:mt-0 reveal">
+                        {/* Stage */}
+                        <div className="group relative aspect-[5/4] sm:aspect-[16/11]">
+
+                            {/* Trophy — focal hero */}
+                            <div className="absolute inset-0 grid place-items-center pb-[14%]">
+                                <figure className="relative w-[50%] xs:w-[46%] sm:w-[42%] aspect-[4/5] transition-transform duration-700 group-hover:-translate-y-2.5">
+                                    <Photo
+                                        src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781369027/cup-original_umz1vp.png"
+                                        alt="Award trophy won by Prestige Glamour"
+                                        className="w-full h-full object-contain drop-shadow-[0_26px_34px_rgba(7,11,41,0.28)]"
+                                        fill
+                                        sizes="(max-width: 640px) 60vw, (max-width: 1024px) 40vw, 30vw"
+                                    />
+                                </figure>
+                            </div>
+
+                            {/* pedestal base */}
+                            <span aria-hidden className="absolute bottom-[15%] left-1/2 -translate-x-1/2 w-[46%] h-3 bg-midnight-blue/15 rounded-[50%] blur-md" />
+                            <span aria-hidden className="absolute bottom-[15%] left-1/2 -translate-x-1/2 w-[34%] h-px bg-linear-to-r from-transparent via-normal-gold/60 to-transparent" />
+                        </div>
+
+                        {/* Certificate — framed, overlapping */}
+                        <figure className="absolute bottom-0 right-4 sm:right-8 w-[42%] max-w-[230px] rounded-xl bg-surface p-2 shadow-[0_24px_50px_-20px_rgba(7,11,41,0.45)] border border-line rotate-[-3deg] transition-transform duration-500 hover:rotate-0 hover:-translate-y-1 reveal">
+                            <div className="relative aspect-[4/3] overflow-hidden rounded-md">
+                                <Photo
+                                    src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780278251/IMG_20260601_022245_wy6vzu.jpg"
+                                    alt="Certificate of Excellence"
+                                    className="w-full h-full object-cover"
+                                    fill
+                                    sizes="(max-width: 640px) 45vw, (max-width: 1024px) 30vw, 20vw"
+                                />
+                            </div>
+                            <figcaption className="px-1 pt-2 pb-0.5 text-[10px] eyebrow text-mute">
+                                Certificate of Excellence
+                            </figcaption>
                         </figure>
-                        {/* Certificate — smaller, shifted down */}
-                        <figure className="w-[45%] xs:w-[40%] sm:w-[35%] lg:w-[45%] overflow-hidden aspect-[4/3] transform translate-y-4 sm:translate-y-8 lg:translate-y-12 shadow-2xl transition-transform duration-700 hover:translate-y-14 reveal">
-                            <Photo
-                                src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780278251/IMG_20260601_022245_wy6vzu.jpg"
-                                alt="Certificate of Excellence"
-                                className="w-full h-full object-cover mix-blend-multiply rounded-sm"
-                                fill
-                                sizes="(max-width: 640px) 45vw, (max-width: 1024px) 30vw, 20vw"
-                            />
-                        </figure>
-                        {/* Decorative blob for responsiveness fill */}
-                        <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-accent/3 rounded-full blur-[100px] pointer-events-none"></div>
                     </div>
 
                 </div>
             </div>
+
+            <style>{`
+                @media (prefers-reduced-motion: no-preference) {
+                    @keyframes sealSpin { to { transform: rotate(360deg); } }
+                    .award-seal-ring { animation: sealSpin 18s linear infinite; }
+                }
+            `}</style>
         </section>
     );
 }

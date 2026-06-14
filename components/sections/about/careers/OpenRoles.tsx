@@ -16,60 +16,60 @@ interface OpenRole {
 }
 
 const OPEN_ROLES: OpenRole[] = [
-    // {
-    //     id: 'plantation-mgr',
-    //     title: 'Plantation Manager',
-    //     department: 'Plantation',
-    //     location: 'Badulla, Sri Lanka',
-    //     type: 'Full-time',
-    //     description:
-    //         'Oversee daily operations of highland plantation estates, manage field teams, and ensure sustainable cultivation practices across tea and cinnamon crops.',
-    // },
-    // {
-    //     id: 'finance-analyst',
-    //     title: 'Financial Analyst',
-    //     department: 'Microfinance',
-    //     location: 'Colombo, Sri Lanka',
-    //     type: 'Full-time',
-    //     description:
-    //         'Analyse loan portfolios, prepare financial reports, and support credit risk assessment for our growing microfinance division.',
-    // },
-    // {
-    //     id: 'gem-grader',
-    //     title: 'Gemstone Grader',
-    //     department: 'Gems & Jewellery',
-    //     location: 'Ratnapura, Sri Lanka',
-    //     type: 'Full-time',
-    //     description:
-    //         'Grade and certify precious gemstones, maintain quality standards, and provide expert valuation for sapphires, rubies, and other fine gems.',
-    // },
-    // {
-    //     id: 'hospitality-ops',
-    //     title: 'Hospitality Operations Lead',
-    //     department: 'Hospitality',
-    //     location: 'Kandy, Sri Lanka',
-    //     type: 'Full-time',
-    //     description:
-    //         'Lead guest experience operations, coordinate front-of-house teams, and drive service excellence across our hospitality properties.',
-    // },
-    // {
-    //     id: 'marketing-exec',
-    //     title: 'Marketing Executive',
-    //     department: 'Corporate',
-    //     location: 'Colombo, Sri Lanka',
-    //     type: 'Full-time',
-    //     description:
-    //         'Develop and execute brand campaigns, manage digital channels, and support the group\'s corporate communication strategy.',
-    // },
-    // {
-    //     id: 'agri-export-coord',
-    //     title: 'Agri-Export Coordinator',
-    //     department: 'Agri-Export',
-    //     location: 'Colombo, Sri Lanka',
-    //     type: 'Full-time',
-    //     description:
-    //         'Coordinate export shipments, manage international buyer relationships, and ensure compliance with global trade regulations for agricultural products.',
-    // },
+    {
+        id: 'plantation-mgr',
+        title: 'Plantation Manager',
+        department: 'Plantation',
+        location: 'Badulla, Sri Lanka',
+        type: 'Full-time',
+        description:
+            'Oversee daily operations of highland plantation estates, manage field teams, and ensure sustainable cultivation practices across tea and cinnamon crops.',
+    },
+    {
+        id: 'finance-analyst',
+        title: 'Financial Analyst',
+        department: 'Microfinance',
+        location: 'Colombo, Sri Lanka',
+        type: 'Full-time',
+        description:
+            'Analyse loan portfolios, prepare financial reports, and support credit risk assessment for our growing microfinance division.',
+    },
+    {
+        id: 'gem-grader',
+        title: 'Gemstone Grader',
+        department: 'Gems & Jewellery',
+        location: 'Ratnapura, Sri Lanka',
+        type: 'Full-time',
+        description:
+            'Grade and certify precious gemstones, maintain quality standards, and provide expert valuation for sapphires, rubies, and other fine gems.',
+    },
+    {
+        id: 'hospitality-ops',
+        title: 'Hospitality Operations Lead',
+        department: 'Hospitality',
+        location: 'Kandy, Sri Lanka',
+        type: 'Full-time',
+        description:
+            'Lead guest experience operations, coordinate front-of-house teams, and drive service excellence across our hospitality properties.',
+    },
+    {
+        id: 'marketing-exec',
+        title: 'Marketing Executive',
+        department: 'Corporate',
+        location: 'Colombo, Sri Lanka',
+        type: 'Full-time',
+        description:
+            'Develop and execute brand campaigns, manage digital channels, and support the group\'s corporate communication strategy.',
+    },
+    {
+        id: 'agri-export-coord',
+        title: 'Agri-Export Coordinator',
+        department: 'Agri-Export',
+        location: 'Colombo, Sri Lanka',
+        type: 'Full-time',
+        description:
+            'Coordinate export shipments, manage international buyer relationships, and ensure compliance with global trade regulations for agricultural products.',
+    },
 ];
 
 /* ─── Department badge color mapping ──────────────────────────────── */

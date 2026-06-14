@@ -30,7 +30,7 @@ export default function CareersSection() {
                             <div className="col-span-12 lg:col-span-4 flex flex-col gap-3 lg:items-end">
                                 <Link
                                     href="/about/careers"
-                                    className="btn bg-bg! text-ink! hover:bg-accent! hover:text-ondark! w-full sm:w-auto justify-center"
+                                    className="btn bg-sapphire-blue text-white hover:bg-normal-gold hover:text-midnight-blue w-full sm:w-auto justify-center"
                                 >
                                     Open roles <ArrowIcon size={14} className="ml-1" />
                                 </Link>

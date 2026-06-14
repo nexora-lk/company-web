@@ -1,15 +1,17 @@
 import Leaf from "@/components/ui/Leaf";
-import { 
-    FileText, 
-    Landmark, 
-    Scale, 
-    CheckCircle2, 
-    Receipt, 
-    Users, 
-    ClipboardCheck, 
-    PenTool, 
+import {
+    FileText,
+    Landmark,
+    Scale,
+    CheckCircle2,
+    Receipt,
+    Users,
+    ClipboardCheck,
+    PenTool,
     ShieldCheck,
     AlertCircle,
+    User,
+    Building2,
     type LucideIcon
 } from "lucide-react";
 
@@ -103,19 +105,16 @@ const steps: Step[] = [
 
 export default function ProcessSection() {
     return (
-        <section 
-            id="process" 
+        <section
+            id="process"
             className="py-12 sm:py-16 md:py-12 lg:py-13 xl:py-14 bg-[#f6e9c6]/60 relative overflow-hidden"
-            style={{
-                '--color-royal-blue': 'var(--c-royal-blue)',
-                '--color-sapphire-blue': 'var(--c-sapphire-blue)',
-                '--color-midnight-blue': 'var(--c-midnight-blue)',
-            } as React.CSSProperties}
         >
             <Leaf variant="tr" />
             <Leaf variant="bl" />
+
             <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
-                <div className="flex flex-col items-center text-center mb-16 sm:mb-20 lg:mb-24 reveal">
+                {/* ── Header ── */}
+                <div className="flex flex-col items-center text-center mb-12 sm:mb-16 reveal">
                     <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
                         <span className="hairline-strong w-12 sm:w-16"></span>
                         <span className="eyebrow text-[10px] sm:text-[11px] uppercase tracking-widest text-mute">Investment Process Guide</span>
@@ -125,113 +124,139 @@ export default function ProcessSection() {
                         Your Investment Journey — <br className="hidden sm:block" />
                         <em className="serif-em text-sapphire-blue">Eight Simple Steps</em>
                     </h2>
-                </div>
 
-                <div className="relative max-w-4xl mx-auto">
-                    {/* Vertical Connecting Line (Desktop) */}
-                    <div className="absolute left-9 sm:left-1/2 top-0 bottom-0 w-[1px] bg-line transform sm:-translate-x-1/2 hidden sm:block"></div>
-
-                    <div className="space-y-12 sm:space-y-24">
-                        {steps.map((step, idx) => {
-                            const isEven = idx % 2 !== 0;
-                            const Icon = step.icon;
-
-                            return (
-                                <div key={idx} className={`relative flex flex-col sm:flex-row items-start sm:items-center gap-6 sm:gap-12 reveal ${isEven ? 'sm:flex-row-reverse' : ''}`}>
-
-                                    {/* Mobile Vertical Line */}
-                                    {idx !== steps.length - 1 && (
-                                        <div className="absolute left-9 top-14 bottom-[-3rem] w-[1px] bg-line sm:hidden"></div>
-                                    )}
-
-                                    {/* Timeline Node */}
-                                    <div className="absolute left-4 sm:left-1/2 sm:-translate-x-1/2 flex items-center justify-center w-10 h-10 sm:w-14 sm:h-14 rounded-full bg-surface border border-sapphire-blue text-sapphire-blue shadow-[0_0_0_8px_rgba(246,233,198,0.5)] z-10 hover:scale-110 hover:bg-sapphire-blue/5 transition-transform duration-300">
-                                        <Icon className="w-4 h-4 sm:w-6 sm:h-6" strokeWidth={1.5} />
-                                    </div>
-
-                                    {/* Content Card */}
-                                    <div className={`w-full sm:w-1/2 pl-[4.5rem] sm:pl-0 ${isEven ? 'sm:pr-12 lg:pr-16 text-left' : 'sm:pl-12 lg:pl-16 text-left'}`}>
-                                        <div className="bg-surface/60 backdrop-blur-sm border border-line rounded-[20px] sm:rounded-[24px] p-6 sm:p-8 lg:p-10 shadow-sm hover:shadow-xl transition-all duration-500 relative group">
-
-                                            <div className="flex items-start justify-between mb-4 sm:mb-5">
-                                                <span className="num text-mute text-[10px] sm:text-[11px] font-medium tracking-wider uppercase">Step · {step.num}</span>
-                                            </div>
-
-                                            <h3 className="font-display text-[24px] sm:text-[28px] lg:text-[32px] leading-[1.05] tracking-tightish mb-6 sm:mb-8 text-midnight-blue">
-                                                {step.title}
-                                            </h3>
-
-                                            <div className="space-y-5 sm:space-y-6 text-[13.5px] sm:text-[14.5px]">
-                                                <div className="flex flex-col gap-1 sm:gap-1.5">
-                                                    <span className="eyebrow text-[10px] text-mute mb-0.5 font-semibold tracking-wider uppercase">What You Do</span>
-                                                    <p className="text-ink leading-[1.7] font-light">{step.youDo}</p>
-                                                </div>
-
-                                                <div className="flex flex-col gap-1 sm:gap-1.5">
-                                                    <span className="eyebrow text-[10px] text-mute mb-0.5 font-semibold tracking-wider uppercase">What We Do</span>
-                                                    <p className="text-ink leading-[1.7] font-light">{step.weDo}</p>
-                                                </div>
-
-                                                {step.timeline && (
-                                                    <div className="flex flex-col gap-1 sm:gap-1.5">
-                                                        <span className="eyebrow text-[10px] text-mute mb-0.5 font-semibold tracking-wider uppercase">Timeline</span>
-                                                        <p className="text-ink leading-[1.7] font-light">{step.timeline}</p>
-                                                    </div>
-                                                )}
-
-                                                {step.requiredDocs && (
-                                                    <div className="flex flex-col gap-2 pt-1 sm:pt-2">
-                                                        <span className="eyebrow text-[10px] text-mute mb-0.5 font-semibold tracking-wider uppercase">Required Documents</span>
-                                                        <ul className="space-y-1.5 sm:space-y-2">
-                                                            {step.requiredDocs.map((doc, i) => (
-                                                                <li key={i} className="flex items-start gap-2.5 text-ink leading-[1.6] font-light">
-                                                                    <div className="w-[5px] h-[5px] rounded-full bg-sapphire-blue/40 mt-[7px] flex-shrink-0"></div>
-                                                                    {doc}
-                                                                </li>
-                                                            ))}
-                                                        </ul>
-                                                    </div>
-                                                )}
-
-                                                <div className="hairline !my-5 sm:!my-6"></div>
-
-                                                <div className="flex flex-col gap-2.5 sm:gap-3">
-                                                    <span className="eyebrow text-[10px] text-sapphire-blue mb-0.5 font-semibold tracking-wider uppercase">What You Get</span>
-                                                    {step.youGet && (
-                                                        <div className="flex items-start gap-3 bg-surface/80 rounded-xl sm:rounded-2xl p-4 sm:p-5 border border-sapphire-blue/10">
-                                                            <CheckCircle2 className="w-4.5 h-4.5 sm:w-5 sm:h-5 text-sapphire-blue mt-0.5 flex-shrink-0" />
-                                                            <span className="text-midnight-blue font-medium leading-[1.6]">{step.youGet}</span>
-                                                        </div>
-                                                    )}
-                                                    {step.youGetList && (
-                                                        <ul className="space-y-3 bg-surface/80 rounded-xl sm:rounded-2xl p-5 sm:p-6 border border-sapphire-blue/10">
-                                                            {step.youGetList.map((item, i) => (
-                                                                <li key={i} className="flex items-start gap-3">
-                                                                    <CheckCircle2 className="w-4.5 h-4.5 sm:w-5 sm:h-5 text-sapphire-blue mt-0.5 flex-shrink-0" />
-                                                                    <span className="text-midnight-blue font-medium leading-[1.6]">{item}</span>
-                                                                </li>
-                                                            ))}
-                                                        </ul>
-                                                    )}
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            );
-                        })}
+                    {/* Legend — explains the colour coding */}
+                    <div className="flex flex-wrap items-center justify-center gap-3 mt-7 sm:mt-8">
+                        <span className="inline-flex items-center gap-2 rounded-full border border-normal-gold/30 bg-normal-gold/[0.06] px-3.5 py-1.5 text-[11px] font-medium text-antique-gold">
+                            <span className="w-2 h-2 rounded-full bg-antique-gold"></span>
+                            Your action
+                        </span>
+                        <span className="inline-flex items-center gap-2 rounded-full border border-sapphire-blue/20 bg-sapphire-blue/[0.05] px-3.5 py-1.5 text-[11px] font-medium text-sapphire-blue">
+                            <span className="w-2 h-2 rounded-full bg-sapphire-blue"></span>
+                            PGGC handles
+                        </span>
                     </div>
                 </div>
 
-                {/* Important Note */}
-                <div className="mt-20 sm:mt-24 lg:mt-32 max-w-3xl mx-auto reveal">
-                    <div className="bg-surface/80 backdrop-blur-sm border border-sapphire-blue/20 rounded-[24px] p-8 sm:p-10 flex flex-col sm:flex-row items-center sm:items-start gap-6 text-center sm:text-left">
+                {/* ── Timeline ── */}
+                <div className="max-w-3xl mx-auto">
+                    {steps.map((step, idx) => {
+                        const Icon = step.icon;
+                        const isLast = idx === steps.length - 1;
+
+                        return (
+                            <div
+                                key={idx}
+                                className="group relative grid grid-cols-[auto_1fr] gap-x-4 sm:gap-x-7 reveal"
+                            >
+                                {/* Rail: connecting line + node */}
+                                <div className="relative flex flex-col items-center">
+                                    {!isLast && (
+                                        <span className="absolute left-1/2 -translate-x-1/2 top-12 sm:top-16 bottom-0 w-px bg-linear-to-b from-sapphire-blue/30 to-line" />
+                                    )}
+                                    <div className="relative z-10 grid place-items-center w-11 h-11 sm:w-14 sm:h-14 rounded-full bg-surface border border-sapphire-blue/40 text-sapphire-blue shadow-[0_0_0_6px_rgba(246,233,198,0.7)] transition-all duration-300 group-hover:bg-sapphire-blue group-hover:text-white group-hover:border-sapphire-blue group-hover:scale-105">
+                                        <Icon className="w-4.5 h-4.5 sm:w-6 sm:h-6" strokeWidth={1.5} />
+                                    </div>
+                                </div>
+
+                                {/* Card */}
+                                <div className="pb-8 sm:pb-12">
+                                    <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl border border-line bg-surface/70 backdrop-blur-sm p-5 sm:p-7 lg:p-8 transition-all duration-500 group-hover:border-sapphire-blue/30 group-hover:shadow-[0_24px_60px_-32px_rgba(7,11,41,0.4)]">
+                                        {/* ghost number */}
+                                        <span className="pointer-events-none absolute top-3 right-5 font-display text-5xl sm:text-6xl leading-none tabular-nums text-sapphire-blue/[0.06] select-none">
+                                            {step.num}
+                                        </span>
+
+                                        <div className="relative">
+                                            <span className="eyebrow text-sapphire-blue text-[10px] tracking-widest">Step {step.num}</span>
+                                            <h3 className="font-display text-[22px] sm:text-[26px] lg:text-[28px] leading-[1.08] tracking-tightish text-midnight-blue mt-1.5">
+                                                {step.title}
+                                            </h3>
+
+                                            {/* Two-party lanes */}
+                                            <div className="mt-5 grid sm:grid-cols-2 gap-px rounded-2xl overflow-hidden border border-line bg-line">
+                                                <div className="bg-surface p-4 sm:p-5">
+                                                    <div className="flex items-center gap-2 mb-2.5">
+                                                        <span className="grid place-items-center w-6 h-6 rounded-full bg-normal-gold/15 text-antique-gold">
+                                                            <User className="w-3 h-3" strokeWidth={2} />
+                                                        </span>
+                                                        <span className="eyebrow text-antique-gold text-[10px]">You</span>
+                                                    </div>
+                                                    <p className="text-ink text-[13px] sm:text-[13.5px] leading-[1.65] font-light">{step.youDo}</p>
+                                                </div>
+                                                <div className="bg-surface p-4 sm:p-5">
+                                                    <div className="flex items-center gap-2 mb-2.5">
+                                                        <span className="grid place-items-center w-6 h-6 rounded-full bg-sapphire-blue/10 text-sapphire-blue">
+                                                            <Building2 className="w-3 h-3" strokeWidth={2} />
+                                                        </span>
+                                                        <span className="eyebrow text-sapphire-blue text-[10px]">PGGC</span>
+                                                    </div>
+                                                    <p className="text-ink text-[13px] sm:text-[13.5px] leading-[1.65] font-light">{step.weDo}</p>
+                                                </div>
+                                            </div>
+
+                                            {/* Timeline note */}
+                                            {step.timeline && (
+                                                <p className="mt-4 text-[12.5px] text-mute font-light">
+                                                    <span className="eyebrow text-mute text-[10px] mr-1.5">Timeline</span>
+                                                    {step.timeline}
+                                                </p>
+                                            )}
+
+                                            {/* Required documents as chips */}
+                                            {step.requiredDocs && (
+                                                <div className="mt-4">
+                                                    <span className="eyebrow text-mute text-[10px]">Documents to bring</span>
+                                                    <div className="mt-2.5 flex flex-wrap gap-2">
+                                                        {step.requiredDocs.map((doc, i) => (
+                                                            <span
+                                                                key={i}
+                                                                className="inline-flex items-center gap-1.5 rounded-full border border-sapphire-blue/15 bg-sapphire-blue/[0.04] px-3 py-1.5 text-[12px] text-ink font-light"
+                                                            >
+                                                                <span className="w-1 h-1 rounded-full bg-sapphire-blue/50"></span>
+                                                                {doc}
+                                                            </span>
+                                                        ))}
+                                                    </div>
+                                                </div>
+                                            )}
+
+                                            {/* Outcome — reward chip */}
+                                            {step.youGet && (
+                                                <div className="mt-5 flex items-start gap-3 rounded-xl sm:rounded-2xl border border-normal-gold/25 bg-linear-to-r from-normal-gold/[0.1] to-light-gold/[0.05] p-3.5 sm:p-4">
+                                                    <CheckCircle2 className="w-5 h-5 text-antique-gold mt-0.5 flex-shrink-0" strokeWidth={1.75} />
+                                                    <div>
+                                                        <span className="eyebrow text-antique-gold text-[9px] block mb-0.5">You receive</span>
+                                                        <span className="text-midnight-blue font-medium text-[14px] leading-[1.5]">{step.youGet}</span>
+                                                    </div>
+                                                </div>
+                                            )}
+                                            {step.youGetList && (
+                                                <ul className="mt-5 space-y-2.5 rounded-2xl border border-normal-gold/25 bg-linear-to-r from-normal-gold/[0.1] to-light-gold/[0.05] p-4 sm:p-5">
+                                                    {step.youGetList.map((item, i) => (
+                                                        <li key={i} className="flex items-start gap-3">
+                                                            <CheckCircle2 className="w-5 h-5 text-antique-gold mt-0.5 flex-shrink-0" strokeWidth={1.75} />
+                                                            <span className="text-midnight-blue font-medium text-[14px] leading-[1.5]">{item}</span>
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            )}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        );
+                    })}
+                </div>
+
+                {/* ── Important Note ── */}
+                <div className="mt-10 sm:mt-14 max-w-3xl mx-auto reveal">
+                    <div className="bg-surface/80 backdrop-blur-sm border border-sapphire-blue/20 rounded-[24px] p-7 sm:p-9 flex flex-col sm:flex-row items-center sm:items-start gap-5 sm:gap-6 text-center sm:text-left">
                         <div className="w-12 h-12 rounded-full bg-sapphire-blue/10 flex items-center justify-center flex-shrink-0">
                             <AlertCircle className="w-6 h-6 text-sapphire-blue" />
                         </div>
                         <div>
-                            <h4 className="font-display text-[20px] sm:text-[24px] mb-3 text-midnight-blue">Important Note for Investors</h4>
+                            <h4 className="font-display text-[20px] sm:text-[24px] mb-2.5 text-midnight-blue">Important Note for Investors</h4>
                             <p className="text-ink leading-[1.6] text-[14.5px] sm:text-[15.5px] font-light">
                                 When claiming your returns, you must present your <span className="font-semibold text-midnight-blue">original investment agreement</span> and <span className="font-semibold text-midnight-blue">company certificate</span> at least one week before the scheduled return date.
                             </p>

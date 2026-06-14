@@ -3,6 +3,7 @@
 /* ─── Design tokens (palette + fonts) ─────────────────────────────────── */
 :root {
     --c-bg: #f7f4ed;
+    --c-bg-alt: #f4edd8;        /* warm alternating band (subtler than gold accent) */
     --c-surface: #ffffff;
     /*--c-ink: #14181a;*/
 
@@ -35,6 +36,7 @@
 @theme inline {
     --breakpoint-xs: 30rem;
     --color-bg: var(--c-bg);
+    --color-bg-alt: var(--c-bg-alt);
     --color-surface: var(--c-surface);
     --color-ink: var(--c-ink);
     --color-mute: var(--c-mute);

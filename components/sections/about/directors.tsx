@@ -12,8 +12,8 @@ export default function DirectorsSection() {
                         <span className="eyebrow text-[10px] xs:text-xs">Meet our team</span>
                         <span className="hairline-strong w-12 xs:w-16 sm:w-[60px]"></span>
                     </div>
-                    <h2 className="font-display text-3xl xs:text-4xl sm:text-5xl lg:text-6xl leading-[0.98] tracking-tightish text-ink">
-                        Directors <em className="serif-em">Board</em>.
+                    <h2 className="font-display text-3xl xs:text-4xl sm:text-5xl lg:text-6xl leading-[0.98] tracking-tightish text-midnight-blue">
+                        Directors Board.
                     </h2>
                     <p className="mt-4 xs:mt-6 text-mute text-[14px] xs:text-[15px] leading-[1.7] max-w-full sm:max-w-[480px] mx-auto font-light">
                         Three leaders who personally oversee capital deployment across all divisions.
@@ -27,7 +27,7 @@ export default function DirectorsSection() {
                     <article className="dir-card team-card reveal">
                         <figure className="portrait overflow-hidden">
                             <Photo
-                                src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781330036/amunugama_sir_derector_profile_gyqktg.png"
+                                src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781332267/amunugama_sir_derector_profile_ykhpb8.png"
                                 alt="Mr. Nilanga Amunugama"
                                 fill
                                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"

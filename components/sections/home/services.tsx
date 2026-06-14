@@ -96,7 +96,7 @@ export default function ServicesSection() {
                                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                                 className="absolute inset-0 w-full h-full object-cover"
                             />
-                            <div className="absolute inset-0 bg-linear-to-t from-sapphire-blue/60 via-sapphire-blue/25 to-transparent" />
+                            <div className="absolute inset-0 bg-linear-to-t from-sapphire-blue/50 via-sapphire-blue/20 to-transparent" />
                             <div className="relative h-full p-6 xs:p-8 sm:p-10 flex flex-col justify-between text-ondark">
                                 <span className="num text-white/60 font-medium text-[10px] xs:text-[11px] uppercase tracking-widest">
                                     Service Tier

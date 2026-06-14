@@ -48,4 +48,13 @@ export const footerColumns: FooterColumn[] = [
       { label: "Investment Plans", href: "/investment" },
     ],
   },
+  {
+    title: "Social",
+    links: [
+      { label: "Facebook", href: "https://www.facebook.com/prestigeglamourgroup" },
+      { label: "Instagram", href: "https://www.instagram.com/prestigeglamourgroup" },
+      { label: "LinkedIn", href: "https://www.linkedin.com/company/prestigeglamourgroup" },
+      { label: "WhatsApp", href: "https://wa.me/message/VEY2QR5CQY6OJ1" },
+    ],
+  },
 ];

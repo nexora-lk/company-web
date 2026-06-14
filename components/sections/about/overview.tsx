@@ -13,7 +13,7 @@ export default function OverviewSection() {
                             <span className="eyebrow text-[10px] xs:text-xs">From The Executive Head</span>
                         </div>
 
-                        <h2 className="font-display text-3xl xs:text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[0.98] tracking-tightish text-ink reveal">
+                        <h2 className="font-display text-3xl xs:text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[0.98] tracking-tightish text-midnight-blue reveal">
                             A letter from
                             <br />
                             Mr. Nilanga Amunugama , Managing Director.
@@ -49,11 +49,11 @@ export default function OverviewSection() {
 
                         <div className="mt-8 xs:mt-10 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8 reveal">
                             <div>
-                                <div className="font-display text-2xl xs:text-[26px] leading-none text-ink">
+                                <div className="font-display text-2xl xs:text-[26px] leading-none text-midnight-blue">
                                     Nilanga Amunugama
                                 </div>
-                                <div className="num mt-2 text-accent">Managing Director · Finance & Operations</div>
-                                <div className="num mt-2 text-accent">Prestige Glamour Group of Company</div>
+                                <div className="num mt-2 text-sapphire-blue">Managing Director · Finance & Operations</div>
+                                <div className="num mt-2 text-sapphire-blue">Prestige Glamour Group of Company</div>
                             </div>
                             <div className="hidden md:block hairline-strong w-16"></div>
                             <div className="hidden sm:block font-display italic text-xl xs:text-[22px] text-mute/60">
@@ -63,13 +63,13 @@ export default function OverviewSection() {
                     </div>
 
                     <div className="col-span-12 lg:col-span-5 relative mt-8 lg:mt-0 reveal">
-                        <figure className="aspect-[4/5] rounded-[18px] sm:rounded-[24px] overflow-hidden shadow-2xl">
+                        <figure className="aspect-[4/5] sm:rounded-[24px] overflow-hidden shadow-2xl">
                             <Photo
-                                src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781330022/sir_s_profile_zzzj27.png"
+                                src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781332210/sir_new_face_gost0x.png"
                                 alt="Chairman Y. M. D. T. Yatawara"
                                 fill
                                 sizes="(max-width: 1024px) 100vw, 40vw"
-                                className="w-full h-full object-cover"
+                                className="w-full h-full object-cover rounded-2xl"
                             />
                         </figure>
                         {/* Decorative background element for desktop */}

@@ -33,16 +33,30 @@ export default function Footer() {
                         <div key={col.title} className="col-span-6 md:col-span-3 lg:col-span-2">
                             <div className="num text-ondark/60! mb-5">{col.title}</div>
                             <ul className="space-y-1.5 text-[14px]">
-                                {col.links.map((link) => (
-                                    <li key={link.label}>
-                                        <Link
-                                            className="ulink hover:opacity-100 opacity-90 py-2 inline-block"
-                                            href={link.href}
-                                        >
-                                            {link.label}
-                                        </Link>
-                                    </li>
-                                ))}
+                                {col.links.map((link) => {
+                                    const isExternal = link.href.startsWith('http');
+                                    return (
+                                        <li key={link.label}>
+                                            {isExternal ? (
+                                                <a
+                                                    className="ulink hover:opacity-100 opacity-90 py-2 inline-block"
+                                                    href={link.href}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                >
+                                                    {link.label}
+                                                </a>
+                                            ) : (
+                                                <Link
+                                                    className="ulink hover:opacity-100 opacity-90 py-2 inline-block"
+                                                    href={link.href}
+                                                >
+                                                    {link.label}
+                                                </Link>
+                                            )}
+                                        </li>
+                                    );
+                                })}
                             </ul>
                         </div>
                     ))}

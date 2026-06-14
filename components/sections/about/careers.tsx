@@ -16,12 +16,12 @@ export default function CareersSection() {
                         className="absolute inset-0 w-full h-full object-cover"
                         sizes="100vw"
                     />
-                    <div className="absolute inset-0 bg-linear-to-tr from-ink/90 via-ink/60 to-ink/30"></div>
+                    <div className="absolute inset-0 bg-linear-to-tr from-sapphire-blue/90 via-sapphire-blue/40 to-sapphire-blue/30"></div>
 
                     <div className="relative w-full p-6 xs:p-8 lg:p-14 text-ondark reveal">
                         <div className="grid grid-cols-12 gap-6 lg:gap-8 items-end">
                             <div className="col-span-12 lg:col-span-8">
-                                <span className="num text-ondark/80! text-[10px] xs:text-[11px]">[ Join the team ]</span>
+                                <span className="num text-ondark/80! text-[10px] xs:text-[11px]">Join the team</span>
                                 <h3 className="font-display text-3xl xs:text-4xl sm:text-5xl lg:text-5xl xl:text-6xl leading-[0.96] tracking-tightish mt-3 sm:mt-4 max-w-lg">
                                     <span className="block">Looking to grow with us?</span>
                                     <span className="block font-semibold mt-1">We are hiring.</span>

@@ -166,7 +166,7 @@ export default function BranchLocatorSection() {
                             <span className="hairline-strong w-16 xs:w-20 sm:w-24 lg:w-[120px]"></span>
                             <span className="eyebrow text-[10px] xs:text-xs">Find a Branch</span>
                         </div>
-                        <h2 className="font-display text-3xl xs:text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[0.98] tracking-tightish text-ink">
+                        <h2 className="font-display text-3xl xs:text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[0.98] tracking-tightish text-midnight-blue">
                             Locate your <em className="serif-em">nearest</em> office.
                         </h2>
                     </div>
@@ -180,7 +180,7 @@ export default function BranchLocatorSection() {
                 </div>
 
                 {/* Locator card */}
-                <div className="reveal grid grid-cols-1 lg:grid-cols-12 border border-line bg-surface overflow-hidden">
+                <div className="reveal grid grid-cols-1 lg:grid-cols-12 border border-none bg-surface overflow-hidden rounded-2xl">
                     {/* ── Left: tabs + list + detail ─────────────────────────── */}
                     <div className="lg:col-span-5 xl:col-span-4 flex flex-col border-b lg:border-b-0 lg:border-r border-line">
                         {/* Province tabs */}
@@ -196,8 +196,8 @@ export default function BranchLocatorSection() {
                                             aria-pressed={on}
                                             className={`px-2.5 xs:px-3 py-1 xs:py-1.5 text-[10.5px] xs:text-[11px] sm:text-xs rounded-full border transition-all duration-200 ${
                                                 on
-                                                    ? "bg-accent text-white border-transparent shadow-sm"
-                                                    : "border-line text-mute hover:bg-accent2 hover:text-ink hover:border-transparent"
+                                                    ? "bg-sapphire-blue text-white border-transparent shadow-sm"
+                                                    : "border-line text-mute hover:bg-sapphire-blue/10 hover:text-ink hover:border-transparent"
                                             }`}
                                         >
                                             {prov.name}
@@ -213,7 +213,7 @@ export default function BranchLocatorSection() {
                                 <em className="serif-em">{activeProvince.name}</em> Province
                             </h3>
                             <span className="pill ml-auto text-[10px] xs:text-[11px]! py-1! px-2.5!">
-                                <span className="dot" />
+                                <span className="dot text-midnight-blue" />
                                 {activeProvince.branches.length}
                             </span>
                         </div>
@@ -228,19 +228,19 @@ export default function BranchLocatorSection() {
                                             onClick={() => setActiveBranch(b)}
                                             aria-pressed={on}
                                             className={`w-full flex items-center gap-2.5 xs:gap-3 px-2.5 xs:px-3 py-2 xs:py-2.5 rounded-md text-left transition-colors duration-150 ${
-                                                on ? "bg-accent2" : "hover:bg-accent2/60"
+                                                on ? "bg-sapphire-blue" : "hover:bg-sapphire-blue/60"
                                             }`}
                                         >
                                             <span
-                                                className={`w-1.5 h-1.5 rounded-full shrink-0 transition-colors ${
-                                                    on ? "bg-accent" : "bg-accent/40"
+                                                className={`w-1.5 h-1.5 rounded-full shr ink-0 transition-colors ${
+                                                    on ? "bg-sapphire-blue" : "bg-sapphire-blue/40"
                                                 }`}
                                             />
                                             <span className="flex flex-col min-w-0">
-                                                <span className="text-[13px] xs:text-[13.5px] sm:text-[14px] text-ink leading-tight truncate">
+                                                <span className="text-[13px] xs:text-[13.5px] sm:text-[14px] text-white leading-tight truncate">
                                                     {b.name}
                                                 </span>
-                                                <span className="text-[10.5px] xs:text-[11px] text-mute">
+                                                <span className="text-[10.5px] xs:text-[11px] text-gray-400">
                                                     {b.district} District
                                                 </span>
                                             </span>

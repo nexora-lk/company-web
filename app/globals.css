@@ -504,7 +504,7 @@
         transform: translateY(-3px);
     }
     .dir-card {
-        background: var(--c-ink);
+        background: var(--c-midnight-blue);
         color: var(--c-ondark);
         border-radius: 20px;
         overflow: hidden;

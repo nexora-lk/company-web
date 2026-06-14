@@ -99,7 +99,7 @@ export default function ServiceHero({
                                     <div className="font-display text-2xl xs:text-3xl sm:text-4xl lg:text-4xl xl:text-5xl leading-none tracking-tight text-white! mb-1.5 xs:mb-2 sm:mb-3">
                                         {stat.value}
                                         {stat.em && (
-                                            <em className="serif-em text-accent text-lg xs:text-xl sm:text-2xl lg:text-2xl xl:text-3xl">
+                                            <em className="serif-em text-sapphire-blue text-lg xs:text-xl sm:text-2xl lg:text-2xl xl:text-3xl">
                                                 {stat.em}
                                             </em>
                                         )}

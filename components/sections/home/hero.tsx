@@ -71,8 +71,8 @@ export default function HeroSection() {
                     </video>
                 ))}
                 {/* Layered dark overlays for all screen sizes */}
-                <div className="absolute inset-0 bg-[#14181a]/55 sm:bg-[#14181a]/50" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#14181a]/90 via-[#14181a]/20 to-[#14181a]/25" />
+                <div className="absolute inset-0 bg-[#14181a]/45 sm:bg-[#14181a]/40" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#14181a]/80 via-[#14181a]/20 to-[#14181a]/25" />
             </div>
 
             {/*/!* ── Live scene badge — hidden on xs, visible sm+ ───────────── *!/*/}

@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import Photo from '@/components/ui/Photo';
 import Leaf from "@/components/ui/Leaf";
-import { X, ZoomIn, ChevronLeft, ChevronRight } from 'lucide-react';
+import { X, ZoomIn, ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 
 const estates = [
     {
@@ -111,7 +111,7 @@ export default function PortfolioSection() {
     };
 
     return (
-        <section id="properties" className="py-8 xs:py-10 sm:py-12 lg:py-16 xl:py-20 bg-surface relative overflow-hidden">
+        <section id="properties" className="py-10 xs:py-12 md:py-12 lg:py-13 xl:py-14 bg-bg-alt relative overflow-hidden">
             <Leaf variant="bl" />
 
             <div className="max-w-content mx-auto px-4 xs:px-6 lg:px-10 relative z-10">
@@ -122,8 +122,8 @@ export default function PortfolioSection() {
                             <span className="hairline-strong w-12 xs:w-16 sm:w-24 lg:w-[120px]"></span>
                             <span className="eyebrow text-[10px] xs:text-xs">Estate Portfolio</span>
                         </div>
-                        <h2 className="font-display leading-[0.98] tracking-tightish text-ink" style={{ fontSize: 'clamp(1.75rem, 5vw, 4.5rem)' }}>
-                            Our estates. <em className="serif-em text-accent">One</em>
+                        <h2 className="font-display leading-[0.98] tracking-tightish text-midnight-blue" style={{ fontSize: 'clamp(1.75rem, 5vw, 4.5rem)' }}>
+                            Our estates. <em className="serif-em text-sapphire-blue">One</em>
                             <br />
                             quarterly ledger.
                         </h2>
@@ -156,31 +156,39 @@ export default function PortfolioSection() {
                             />
 
                             {/* Gradient overlay */}
-                            <div className="absolute inset-0 bg-linear-to-t from-ink/95 via-ink/40 to-transparent transition-opacity duration-500 group-hover:opacity-90"></div>
+                            <div className="absolute inset-0 bg-linear-to-t from-midnight-blue/95 via-midnight-blue/45 to-midnight-blue/5 transition-opacity duration-500"></div>
 
-                            {/* Hover reveal */}
-                            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 bg-ink/10 backdrop-blur-[2px]">
-                                <div className="p-3 xs:p-4 rounded-full bg-surface/20 backdrop-blur-md text-white border border-white/30 shadow-2xl transform scale-90 group-hover:scale-100 transition-transform duration-500">
-                                    <ZoomIn className="w-5 h-5 xs:w-6 xs:h-6" />
-                                </div>
-                            </div>
-
-                            {/* Multi-image badge */}
-                            {estate.images.length > 1 && (
-                                <div className="absolute top-3.5 right-3.5 xs:top-4 xs:right-4 sm:top-5 sm:right-5 flex items-center gap-1.5 px-2.5 py-1 xs:px-3 xs:py-1.5 rounded-full bg-ink/50 backdrop-blur-md border border-white/20 shadow-sm z-10 transition-transform duration-500 group-hover:-translate-y-1">
-                                    <span className="num text-white font-medium text-[9px] xs:text-[10px] tracking-widest uppercase">{estate.images.length} photos</span>
-                                </div>
-                            )}
+                            {/* top accent bar */}
+                            <span aria-hidden className="absolute left-0 top-0 h-0.5 w-full bg-normal-gold origin-left scale-x-0 transition-transform duration-500 group-hover:scale-x-100 z-10" />
 
                             {/* Card content */}
-                            <div className="relative h-full p-5 xs:p-6 sm:p-8 lg:p-10 flex flex-col justify-between text-ondark pointer-events-none z-10 transition-transform duration-500 group-hover:translate-y-1">
-                                <span className="num text-white/60 font-medium text-[10px] xs:text-[11px] uppercase tracking-widest">
-                                    Zone {estate.zone}
-                                </span>
+                            <div className="relative h-full p-5 xs:p-6 sm:p-7 lg:p-8 flex flex-col justify-between text-ondark pointer-events-none z-10">
+                                {/* top row: zone + photo count */}
+                                <div className="flex items-center justify-between">
+                                    <span className="inline-flex items-center rounded-full bg-white/15 backdrop-blur-sm border border-white/20 px-2.5 py-1 num text-white font-medium text-[9px] xs:text-[10px] uppercase tracking-widest">
+                                        Zone {estate.zone}
+                                    </span>
+                                    {estate.images.length > 1 && (
+                                        <span className="inline-flex items-center rounded-full bg-white/15 backdrop-blur-sm border border-white/20 px-2.5 py-1 num text-white font-medium text-[9px] xs:text-[10px] uppercase tracking-widest">
+                                            {estate.images.length} photos
+                                        </span>
+                                    )}
+                                </div>
+
+                                {/* bottom: title + actions */}
                                 <div>
                                     <h3 className="font-display text-[22px] xs:text-[26px] sm:text-[30px] lg:text-[36px] leading-[0.98] tracking-tightish">
                                         {estate.title}
                                     </h3>
+                                    <div className="mt-3 sm:mt-4 flex items-center justify-between">
+                                        <span className="inline-flex items-center gap-1.5 text-[11px] xs:text-[12px] text-light-gold font-medium uppercase tracking-widest">
+                                            View gallery
+                                            <ArrowRight className="w-3.5 h-3.5 transition-transform duration-500 group-hover:translate-x-1" strokeWidth={2} />
+                                        </span>
+                                        <span className="grid place-items-center w-9 h-9 rounded-full bg-white/15 backdrop-blur-sm border border-white/20 text-white transition-all duration-500 group-hover:bg-white/25 group-hover:scale-105">
+                                            <ZoomIn className="w-4 h-4" />
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
                         </article>
@@ -193,11 +201,11 @@ export default function PortfolioSection() {
             {/* ─────────────────────────────────────────────────────────── */}
             {selected && !fullscreen && (
                 <div
-                    className="fixed inset-0 z-50 flex items-center justify-center p-2.5 xs:p-4 sm:p-6 md:p-8"
+                    className="fixed inset-0 z-50 flex items-stretch sm:items-center justify-center p-0 sm:p-6 md:p-8"
                     style={{
-                        background: 'color-mix(in oklab, var(--c-bg) 88%, transparent)',
-                        backdropFilter: 'blur(12px) saturate(130%)',
-                        WebkitBackdropFilter: 'blur(12px) saturate(130%)',
+                        background: 'rgba(7,11,41,0.72)',
+                        backdropFilter: 'blur(8px) saturate(120%)',
+                        WebkitBackdropFilter: 'blur(8px) saturate(120%)',
                         animation: 'popIn 0.3s cubic-bezier(0.16,1,0.3,1) both',
                     }}
                     onClick={closeAll}
@@ -213,16 +221,14 @@ export default function PortfolioSection() {
 
                     <div
                         ref={dialogRef}
-                        className="relative bg-surface rounded-2xl xs:rounded-[20px] sm:rounded-[22px] w-full max-w-[600px] flex flex-col overflow-hidden"
-                        style={{
-                            maxHeight: 'min(90dvh, 90vh)',
-                            boxShadow: '0 1px 0 0 var(--c-line), 0 24px 68px -12px rgba(20,24,26,0.18), 0 8px 20px -8px rgba(20,24,26,0.08)',
-                            border: '1px solid var(--c-line)',
-                        }}
+                        className="relative bg-surface w-full max-w-none sm:max-w-[600px] h-[100dvh] sm:h-auto sm:max-h-[90dvh] rounded-none sm:rounded-[22px] flex flex-col overflow-hidden sm:border sm:border-line sm:shadow-[0_24px_68px_-12px_rgba(7,11,41,0.5)]"
                         onClick={e => e.stopPropagation()}
                     >
                         {/* ── Header ── */}
-                        <div className="px-3.5 xs:px-5 sm:px-6 py-3 xs:py-4 sm:py-5 flex items-center justify-between shrink-0 gap-2">
+                        <div
+                            className="px-4 sm:px-6 py-3.5 sm:py-5 flex items-center justify-between shrink-0 gap-2"
+                            style={{ paddingTop: 'max(0.875rem, env(safe-area-inset-top, 0.875rem))' }}
+                        >
                             <div className="flex items-center gap-2 xs:gap-2.5 sm:gap-3 min-w-0">
                                 <span className="flex items-center justify-center w-7 h-7 xs:w-8 xs:h-8 rounded-lg xs:rounded-xl bg-accent/8 text-accent shrink-0">
                                     <span className="text-[10px] xs:text-[11px] sm:text-xs font-semibold">{selected.zone}</span>
@@ -273,8 +279,11 @@ export default function PortfolioSection() {
                         </div>
 
                         {/* ── Footer ── */}
-                        <div className="mx-3.5 xs:mx-5 sm:mx-6 hairline shrink-0"></div>
-                        <div className="px-3.5 xs:px-5 sm:px-6 py-2.5 xs:py-3 sm:py-3.5 flex items-center justify-between shrink-0">
+                        <div className="mx-4 sm:mx-6 hairline shrink-0"></div>
+                        <div
+                            className="px-4 sm:px-6 py-3 sm:py-3.5 flex items-center justify-between shrink-0"
+                            style={{ paddingBottom: 'max(0.75rem, env(safe-area-inset-bottom, 0.75rem))' }}
+                        >
                             <span className="num text-mute text-[9px] xs:text-[10px] sm:text-[11px] uppercase tracking-wider">
                                 Tap a photo to expand
                             </span>
@@ -296,11 +305,11 @@ export default function PortfolioSection() {
             {/* ─────────────────────────────────────────────────────────── */}
             {selected && fullscreen && (
                 <div
-                    className="fixed inset-0 z-[60] flex flex-col items-center justify-center select-none"
+                    className="fixed inset-0 z-60 flex flex-col items-center justify-center select-none"
                     style={{
-                        background: 'color-mix(in oklab, var(--c-bg) 94%, transparent)',
-                        backdropFilter: 'blur(24px) saturate(140%)',
-                        WebkitBackdropFilter: 'blur(24px) saturate(140%)',
+                        background: 'rgba(7,11,41,0.94)',
+                        backdropFilter: 'blur(16px) saturate(120%)',
+                        WebkitBackdropFilter: 'blur(16px) saturate(120%)',
                         animation: 'zoomIn 0.35s cubic-bezier(0.16,1,0.3,1) both',
                     }}
                     onClick={() => { setFullscreen(false); setZoomed(false); }}
@@ -309,96 +318,91 @@ export default function PortfolioSection() {
                 >
                     {/* ── Top bar ── */}
                     <div
-                        className="absolute top-0 left-0 right-0 z-20 flex items-center justify-between px-2.5 xs:px-4 sm:px-6 md:px-8 py-2.5 xs:py-3 sm:py-5 pointer-events-none gap-2"
-                        style={{ paddingTop: 'max(0.625rem, env(safe-area-inset-top, 0.625rem))' }}
+                        className="absolute top-0 left-0 right-0 z-20 flex items-center justify-between px-3 xs:px-4 sm:px-6 md:px-8 py-3 sm:py-5 pointer-events-none gap-2"
+                        style={{ paddingTop: 'max(0.75rem, env(safe-area-inset-top, 0.75rem))' }}
                     >
-                        <div className="flex items-center gap-1.5 xs:gap-2 pointer-events-auto bg-surface/80 backdrop-blur-md rounded-lg xs:rounded-xl p-1 xs:p-1.5 pr-2.5 xs:pr-3 border border-line/50 shadow-sm">
-                            <span className="flex items-center justify-center w-6 h-6 xs:w-7 xs:h-7 sm:w-8 sm:h-8 rounded-md xs:rounded-lg bg-accent/10 text-accent shrink-0">
-                                <span className="text-[9px] xs:text-[10px] sm:text-[11px] font-semibold">{selected.zone}</span>
+                        <div className="flex items-center gap-2 pointer-events-auto bg-white/10 backdrop-blur-md rounded-xl p-1 pr-3 border border-white/15">
+                            <span className="flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-white/15 text-ondark shrink-0">
+                                <span className="text-[10px] sm:text-[11px] font-semibold">{selected.zone}</span>
                             </span>
-                            <div className="min-w-0">
-                                <span className="eyebrow text-ink/80 text-[8px] xs:text-[9px] sm:text-[10px] truncate block leading-tight max-w-[100px] xs:max-w-[140px] sm:max-w-none">{selected.title}</span>
-                            </div>
+                            <span className="eyebrow text-ondark/90 text-[9px] xs:text-[10px] truncate block leading-tight max-w-[120px] xs:max-w-[180px] sm:max-w-none">{selected.title}</span>
                         </div>
                         <button
                             onClick={() => { setFullscreen(false); setZoomed(false); }}
-                            className="pointer-events-auto p-1.5 xs:p-2 sm:p-2.5 shrink-0 rounded-lg xs:rounded-xl bg-surface/80 backdrop-blur-md border border-line/50 text-mute hover:text-ink transition-all duration-200 cursor-pointer shadow-sm"
+                            className="no-min-target pointer-events-auto shrink-0 grid place-items-center w-11 h-11 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-ondark/85 hover:text-ondark hover:bg-white/20 active:scale-95 transition-all duration-200 cursor-pointer"
                             aria-label="Close viewer"
                         >
-                            <X className="w-4.5 h-4.5 xs:w-5 xs:h-5" />
+                            <X className="w-5 h-5" />
                         </button>
                     </div>
 
                     {/* ── Image area ── */}
                     <div
-                        className="relative flex items-center justify-center w-full h-full max-w-6xl px-0 sm:px-14 md:px-20 py-14 xs:py-16 sm:py-20 md:py-24"
+                        className="relative flex items-center justify-center w-full h-full max-w-6xl px-3 sm:px-16 md:px-24 py-16 sm:py-20 md:py-24"
                         onClick={e => e.stopPropagation()}
                     >
-                        {/* Prev */}
+                        {/* Prev — desktop/tablet only (mobile uses swipe + dots) */}
                         {selected.images.length > 1 && (
                             <button
                                 onClick={e => { e.stopPropagation(); setZoomed(false); setActiveIdx(p => (p - 1 + selected.images.length) % selected.images.length); }}
-                                className="absolute left-1 xs:left-2 sm:left-3 md:left-5 top-1/2 -translate-y-1/2 z-20 p-1.5 xs:p-2 sm:p-3 rounded-full bg-surface/80 backdrop-blur-md border border-line/50 text-ink/70 hover:text-ink transition-all duration-200 cursor-pointer shadow-sm sm:hover:-translate-x-0.5"
+                                className="no-min-target hidden sm:grid place-items-center absolute left-3 md:left-5 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-ondark/80 hover:text-ondark hover:bg-white/20 active:scale-95 transition-all duration-200 cursor-pointer"
                                 aria-label="Previous photo"
                             >
-                                <ChevronLeft className="w-4.5 h-4.5 xs:w-5 xs:h-5 sm:w-5 sm:h-5" />
+                                <ChevronLeft className="w-6 h-6" />
                             </button>
                         )}
 
                         {/* Image frame */}
-                        <div
-                            className="w-full h-full flex items-center justify-center overflow-hidden rounded-none sm:rounded-2xl md:rounded-[20px] sm:border border-line relative"
-                            style={{ boxShadow: '0 24px 68px -12px rgba(20,24,26,0.16), 0 8px 20px -8px rgba(20,24,26,0.06)' }}
-                        >
+                        <div className="w-full h-full flex items-center justify-center overflow-hidden rounded-2xl relative">
                             <div
-                                className={`w-full h-full flex items-center justify-center transition-transform duration-500 ease-out ${zoomed ? 'scale-[1.35] xs:scale-[1.5] sm:scale-[1.6] md:scale-[1.8] cursor-zoom-out' : 'cursor-zoom-in'}`}
+                                className={`w-full h-full flex items-center justify-center transition-transform duration-500 ease-out ${zoomed ? 'scale-[1.6] sm:scale-[1.8] cursor-zoom-out' : 'cursor-zoom-in'}`}
                                 onClick={() => setZoomed(z => !z)}
                             >
                                 <img
                                     src={selected.images[activeIdx]}
                                     alt={`${selected.title} — view ${activeIdx + 1}`}
-                                    className="max-w-full max-h-full object-contain block select-none px-1 xs:px-2 sm:px-0"
+                                    className="max-w-full max-h-full object-contain block select-none rounded-lg sm:rounded-2xl shadow-2xl"
                                     draggable={false}
                                 />
                             </div>
                         </div>
 
-                        {/* Next */}
+                        {/* Next — desktop/tablet only (mobile uses swipe + dots) */}
                         {selected.images.length > 1 && (
                             <button
                                 onClick={e => { e.stopPropagation(); setZoomed(false); setActiveIdx(p => (p + 1) % selected.images.length); }}
-                                className="absolute right-1 xs:right-2 sm:right-3 md:right-5 top-1/2 -translate-y-1/2 z-20 p-1.5 xs:p-2 sm:p-3 rounded-full bg-surface/80 backdrop-blur-md border border-line/50 text-ink/70 hover:text-ink transition-all duration-200 cursor-pointer shadow-sm sm:hover:translate-x-0.5"
+                                className="no-min-target hidden sm:grid place-items-center absolute right-3 md:right-5 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-ondark/80 hover:text-ondark hover:bg-white/20 active:scale-95 transition-all duration-200 cursor-pointer"
                                 aria-label="Next photo"
                             >
-                                <ChevronRight className="w-4.5 h-4.5 xs:w-5 xs:h-5 sm:w-5 sm:h-5" />
+                                <ChevronRight className="w-6 h-6" />
                             </button>
                         )}
                     </div>
 
                     {/* ── Bottom bar ── */}
                     <div
-                        className="absolute bottom-3 xs:bottom-4 sm:bottom-6 z-20 flex flex-col items-center gap-1.5 xs:gap-2"
+                        className="absolute bottom-4 sm:bottom-6 z-20 flex flex-col items-center gap-2"
                         style={{ paddingBottom: 'env(safe-area-inset-bottom, 0px)' }}
                         onClick={e => e.stopPropagation()}
                     >
                         {/* Dot navigation */}
                         {selected.images.length > 1 && (
-                            <div className="flex items-center gap-1.5 xs:gap-2 px-2.5 xs:px-3 py-1.5 xs:py-2 rounded-full bg-surface/80 backdrop-blur-md border border-line/50 pointer-events-auto shadow-sm">
+                            <div className="flex items-center gap-2 px-3 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/15 pointer-events-auto">
                                 {selected.images.map((_, i) => (
                                     <button
                                         key={i}
                                         onClick={() => { setZoomed(false); setActiveIdx(i); }}
                                         className={`no-min-target rounded-full transition-all duration-300 cursor-pointer ${i === activeIdx
-                                            ? 'w-4 xs:w-5 h-[5px] xs:h-[6px] bg-accent'
-                                            : 'w-[5px] xs:w-[6px] h-[5px] xs:h-[6px] bg-ink/20 hover:bg-ink/40'
+                                            ? 'w-5 h-1.5 bg-light-gold'
+                                            : 'w-1.5 h-1.5 bg-white/30 hover:bg-white/50'
                                             }`}
                                         aria-label={`Photo ${i + 1}`}
                                     />
                                 ))}
                             </div>
                         )}
-                        <p className="num text-ink/60 text-[8px] xs:text-[9px] sm:text-[11px] bg-surface/50 backdrop-blur-md px-2 py-0.5 rounded-full">
-                            {activeIdx + 1} / {selected.images.length} · {zoomed ? 'tap to reset' : 'swipe or tap to zoom'}
+                        <p className="num text-ondark/70 text-[9px] sm:text-[11px] bg-white/10 backdrop-blur-md border border-white/10 px-2.5 py-1 rounded-full">
+                            {activeIdx + 1} / {selected.images.length} · {zoomed ? 'tap to reset' : 'tap to zoom · swipe to browse'}
                         </p>
                     </div>
                 </div>

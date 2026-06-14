@@ -1,5 +1,18 @@
 import Photo from '@/components/ui/Photo';
 import Leaf from "@/components/ui/Leaf";
+import { Check } from "lucide-react";
+
+const CATEGORIES = [
+    'Fresh-cut fruit packs',
+    'Dried fruit & snacks',
+    'Herbal teas',
+    'Cold-pressed juices',
+    'Ginger extracts',
+    'Coconut water',
+    'Fruit jams & preserves',
+    'Spice blends',
+    'Organic honey',
+];
 
 export default function OverviewSection() {
     return (
@@ -40,30 +53,31 @@ export default function OverviewSection() {
                             Our <em className="serif-em text-sapphire-blue">product</em> categories.
                         </h3>
                         <ul className="mt-6 xs:mt-8 grid grid-cols-2 sm:grid-cols-3 gap-x-4 xs:gap-x-6 gap-y-3 xs:gap-y-4 max-w-full sm:max-w-[640px] reveal">
-                            <li className="branch text-[13px] xs:text-[14px]">Fresh-cut fruit packs</li>
-                            <li className="branch text-[13px] xs:text-[14px]">Dried fruit &amp; snacks</li>
-                            <li className="branch text-[13px] xs:text-[14px]">Herbal teas</li>
-                            <li className="branch text-[13px] xs:text-[14px]">Cold-pressed juices</li>
-                            <li className="branch text-[13px] xs:text-[14px]">Ginger extracts</li>
-                            <li className="branch text-[13px] xs:text-[14px]">Coconut water</li>
-                            <li className="branch text-[13px] xs:text-[14px]">Fruit jams &amp; preserves</li>
-                            <li className="branch text-[13px] xs:text-[14px]">Spice blends</li>
-                            <li className="branch text-[13px] xs:text-[14px]">Organic honey</li>
+                            {CATEGORIES.map((c) => (
+                                <li key={c} className="branch flex items-center gap-2 text-[13px] xs:text-[14px] text-ink/85">
+                                    <span className="grid place-items-center w-4 h-4 rounded-full bg-accent/10 shrink-0">
+                                        <Check className="w-2.5 h-2.5 text-accent" strokeWidth={3} />
+                                    </span>
+                                    {c}
+                                </li>
+                            ))}
                         </ul>
                     </div>
 
                     {/* Right: Image */}
-                    <aside className="col-span-12 lg:col-span-5 order-1 lg:order-2 lg:sticky lg:top-32 mt-4 lg:mt-0 reveal">
-                        <figure className="rounded-[18px] xs:rounded-[24px] overflow-hidden aspect-[3/2] xs:aspect-[4/3] lg:aspect-[4/5] shadow-2xl">
+                    <aside className="col-span-12 lg:col-span-5 order-1 lg:order-2 lg:sticky lg:top-32 mt-4 lg:mt-0 relative reveal">
+                        <figure className="relative rounded-[18px] xs:rounded-[24px] overflow-hidden aspect-[3/2] xs:aspect-[4/3] lg:aspect-[4/5] shadow-2xl">
                             <Photo
                                 src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780117514/fmcg-overview_eyrmnl.jpg"
                                 alt="Fresh tropical fruits ready for processing"
                                 priority
                                 fill
                                 sizes="(max-width: 1024px) 100vw, 40vw"
-                                className="w-full h-full object-cover rounded-2xl"
+                                className="w-full h-full object-cover"
                             />
+                            <div className="absolute inset-0 bg-linear-to-t from-midnight-blue/40 to-transparent" />
                         </figure>
+
                         <div className="absolute -z-10 -top-6 -left-6 w-32 h-32 bg-accent/5 rounded-full blur-3xl hidden lg:block"></div>
                     </aside>
                 </div>

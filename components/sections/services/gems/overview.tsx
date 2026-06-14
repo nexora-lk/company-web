@@ -3,7 +3,7 @@ import Leaf from "@/components/ui/Leaf";
 
 export default function OverviewSection() {
     return (
-        <section className="py-16 xs:py-20 sm:py-24 lg:py-32 xl:py-40 overflow-hidden">
+        <section className="py-10 xs:py-12 md:py-12 lg:py-13 xl:py-14 bg-bg overflow-hidden">
             <Leaf variant="tr" />
             <div className="max-w-content mx-auto px-4 xs:px-6 lg:px-10">
                 <div className="grid grid-cols-12 gap-8 lg:gap-16 xl:gap-24 items-center">
@@ -15,8 +15,8 @@ export default function OverviewSection() {
                             <span className="eyebrow text-[10px] xs:text-xs">Gem Heritage</span>
                         </div>
 
-                        <h2 className="font-display text-3xl xs:text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[0.98] tracking-tightish text-ink reveal">
-                            2,500 years of Sri Lankan <em className="serif-em text-accent">gem heritage </em>
+                        <h2 className="font-display text-3xl xs:text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[0.98] tracking-tightish text-midnight-blue reveal">
+                            2,500 years of Sri Lankan <em className="serif-em text-sapphire-blue">gem heritage </em>
                             <br />
                             and a 14-year investment track record.
                         </h2>
@@ -40,41 +40,31 @@ export default function OverviewSection() {
                                 directly from licensed mining operations, and exports certified stones to 14 countries.
                             </p>
                         </div>
-
-                        <div className="mt-10 xs:mt-12 p-6 xs:p-8 bg-accent2 rounded-[20px] xs:rounded-[24px] border border-accent/15 shadow-sm hover:shadow-md transition-shadow duration-500 reveal">
-                            <p className="font-display text-lg xs:text-xl text-accent mb-2 sm:mb-3">
-                                Ethical & Sustainable
-                            </p>
-                            <p className="text-[13px] xs:text-[14px] text-ink leading-relaxed font-light">
-                                Our mining operations follow ethical and sustainable practices.
-                                Every gemstone is traceable from mine to market, ensuring
-                                responsible sourcing and environmental respect.
-                            </p>
-                        </div>
                     </div>
 
                     {/* Right: Image — stacks on top on mobile */}
                     <aside className="col-span-12 lg:col-span-5 order-1 lg:order-2 space-y-4 xs:gap-6 lg:sticky lg:top-32 mt-4 lg:mt-0 reveal">
                         <figure className="relative rounded-[18px] xs:rounded-[24px] overflow-hidden aspect-[3/2] xs:aspect-[4/3] lg:aspect-[4/5] shadow-2xl transition-transform duration-700 hover:scale-[1.02] reveal">
                             <Photo
-                                src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780117658/sabrianna-Talnaz9Bug0-unsplash_fx4qzs.jpg"
+                                src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780117672/sameer-ali-kRymlml5s7g-unsplash_hqflxo.jpg"
                                 alt="Premium sapphire gemstones"
                                 priority
                                 fill
                                 sizes="(max-width: 1024px) 100vw, 40vw"
                                 className="w-full h-full object-cover"
                             />
+                            <div className="absolute inset-0 bg-linear-to-t from-midnight-blue/45 to-transparent" />
                         </figure>
-                        <div className="rounded-[18px] xs:rounded-[24px] bg-ink text-ondark p-6 xs:p-8 lg:p-10 shadow-2xl relative overflow-hidden reveal">
+                        <div className="rounded-[18px] xs:rounded-[24px] bg-royal-blue text-ondark p-6 xs:p-8 lg:p-10 shadow-2xl relative overflow-hidden reveal">
                             {/* Decorative background number */}
                             <div className="absolute -right-4 -bottom-8 font-display text-[120px] xs:text-[140px] text-white/5 pointer-events-none select-none">
                                 75
                             </div>
                             <div className="num text-ondark/60! mb-4 xs:mb-5 text-[10px] xs:text-[11px] uppercase tracking-widest">Statistical Insight</div>
                             <p className="font-display text-[22px] xs:text-[24px] sm:text-[26px] leading-[1.1] relative z-10">
-                                "The island holds{' '}
+                                &ldquo;The island holds{' '}
                                 <em className="serif-em text-accent">over 75 gem varieties</em>
-                                {' '}in a landmass smaller than Tasmania."
+                                {' '}in a landmass smaller than Tasmania.&rdquo;
                             </p>
                             <div className="hairline mt-6 xs:mt-8 bg-white/10! relative z-10" />
                             <div className="mt-4 xs:mt-5 text-[11px] xs:text-[12px] opacity-60 font-light italic relative z-10">

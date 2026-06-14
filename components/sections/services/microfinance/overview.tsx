@@ -3,7 +3,7 @@ import Leaf from "@/components/ui/Leaf";
 
 export default function OverviewSection() {
     return (
-        <section className="py-16 xs:py-20 sm:py-24 lg:py-32 xl:py-40 overflow-hidden">
+        <section className="py-10 xs:py-12 md:py-12 lg:py-13 xl:py-14 bg-bg overflow-hidden">
             <Leaf variant="tr" />
             <div className="max-w-content mx-auto px-4 xs:px-6 lg:px-10">
                 <div className="grid grid-cols-12 gap-8 lg:gap-16 xl:gap-24 items-start">
@@ -12,10 +12,10 @@ export default function OverviewSection() {
                             <span className="hairline-strong w-16 xs:w-20 sm:w-24 lg:w-[120px]"></span>
                             <span className="eyebrow text-[10px] xs:text-xs">Microfinance Overview</span>
                         </div>
-                        <h2 className="font-display text-3xl xs:text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[0.98] tracking-tightish text-ink reveal">
-                            Steady income. <em className="serif-em text-accent">Real loan book.</em>
+                        <h2 className="font-display text-3xl xs:text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[0.98] tracking-tightish text-midnight-blue reveal">
+                            Steady income.
                             <br />
-                            Real loan book.
+                            <em className="serif-em text-sapphire-blue">Real loan book.</em>
                         </h2>
 
                         <div className="mt-8 xs:mt-10 space-y-4 xs:space-y-6 text-[14px] xs:text-[15px] leading-relaxed sm:leading-[1.75] text-mute max-w-full sm:max-w-[620px] font-light reveal">
@@ -23,7 +23,7 @@ export default function OverviewSection() {
                                 <span className="font-display text-4xl xs:text-5xl text-ink float-left mr-3 leading-[0.8] mt-1">
                                     P
                                 </span>
-                                PGG Microfinance was established in 2013 as the group's rural lending
+                                PGG Microfinance was established in 2013 as the group&apos;s rural lending
                                 division. We serve estate workers, cooperative secretaries, market traders,
                                 and small farmers across 27+ branches — providing working capital on fair
                                 terms with a field officer at the door, not a desk in Colombo.
@@ -36,8 +36,8 @@ export default function OverviewSection() {
                         </div>
                     </div>
 
-                    <aside className="col-span-12 lg:col-span-5 order-1 lg:order-2 lg:sticky lg:top-32 mt-4 lg:mt-0 reveal">
-                        <figure className="rounded-[18px] xs:rounded-[24px] overflow-hidden aspect-[4/3] xs:aspect-[1/1] lg:aspect-[4/5] shadow-2xl transition-transform duration-700 hover:scale-[1.02] reveal">
+                    <aside className="col-span-12 lg:col-span-5 order-1 lg:order-2 lg:sticky lg:top-32 mt-4 lg:mt-0 relative reveal">
+                        <figure className="relative rounded-[18px] xs:rounded-[24px] overflow-hidden aspect-[4/3] xs:aspect-[1/1] lg:aspect-[4/5] shadow-2xl">
                             <Photo
                                 src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780120332/microfinace-overview_fs7rza.jpg"
                                 alt="A seedling growing from a glass jar of coins — the Microfinance icon"
@@ -46,7 +46,10 @@ export default function OverviewSection() {
                                 sizes="(max-width: 1024px) 100vw, 40vw"
                                 className="w-full h-full object-cover"
                             />
+                            <div className="absolute inset-0 bg-linear-to-t from-midnight-blue/40 to-transparent" />
                         </figure>
+
+                        <div className="absolute -z-10 -top-6 -left-6 w-32 h-32 bg-accent/5 rounded-full blur-3xl hidden lg:block"></div>
                     </aside>
                 </div>
             </div>

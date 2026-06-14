@@ -53,29 +53,6 @@ export default function RoughGemsSection() {
                                 </div>
                             ))}
                         </div>
-
-                        {/* Stats */}
-                        <div className="grid grid-cols-3 gap-2 sm:gap-3 md:gap-4 mb-8 sm:mb-10 reveal">
-                            {[
-                                { val: '100%', label: 'Uncut & Raw' },
-                                { val: 'Direct', label: 'From Miners' },
-                                { val: 'Verified', label: 'Quality' },
-                            ].map((s, i) => (
-                                <div key={i} className="bg-surface rounded-[12px] sm:rounded-[14px] p-3 sm:p-5 border border-line transition-all duration-300 hover:-translate-y-0.5 hover:border-accent/30 reveal">
-                                    <div className="font-display text-[20px] sm:text-[24px] md:text-[28px] text-accent leading-none mb-1 sm:mb-2">
-                                        {s.val}
-                                    </div>
-                                    <div className="text-[9px] sm:text-[11px] text-mute uppercase tracking-widest font-medium">
-                                        {s.label}
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-
-                        <button className="group inline-flex items-center gap-2 sm:gap-2.5 px-5 sm:px-6 py-2.5 sm:py-3 bg-accent text-ondark font-semibold uppercase text-[11px] sm:text-[12px] tracking-widest rounded-lg hover:shadow-lg transition-all reveal">
-                            Explore Rough Gems
-                            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" strokeWidth={2} />
-                        </button>
                     </div>
 
                     {/* Sidebar */}

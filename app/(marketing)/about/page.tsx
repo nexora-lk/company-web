@@ -1,6 +1,7 @@
 import BranchLocatorSection from '@/components/sections/about/branch-locator';
 import CareersSection from '@/components/sections/about/careers';
 import DirectorsSection from '@/components/sections/about/directors';
+import HierarchySection from '@/components/sections/about/hierarchy';
 import OverviewSection from '@/components/sections/about/overview';
 import type { Metadata } from 'next';
 import ServiceHero from "@/components/sections/ServiceHero";
@@ -102,6 +103,7 @@ export default function AboutPage() {
             />
             <OverviewSection />
             <DirectorsSection />
+            {/*<HierarchySection />*/}
             <BranchLocatorSection />
             <CareersSection />
         </>

@@ -84,21 +84,6 @@ export default function WhyChooseUsSection() {
                         );
                     })}
                 </div>
-
-                {/* Trust Indicators: 2→4(lg) */}
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 reveal">
-                    {TRUST.map((t, i) => (
-                        <div key={i} className="bg-accent2/40 rounded-[12px] sm:rounded-[14px] p-4 sm:p-5 lg:p-6 border border-accent/20 text-center transition-all duration-300 hover:-translate-y-0.5 hover:border-accent/40 reveal">
-                            <div className="font-display text-[26px] sm:text-[32px] lg:text-[38px] text-accent mb-1 leading-none">
-                                {t.val}
-                            </div>
-                            <div className="text-[10px] sm:text-[11px] text-mute uppercase tracking-widest font-medium">
-                                {t.label}
-                            </div>
-                        </div>
-                    ))}
-                </div>
-
             </div>
         </section>
     );

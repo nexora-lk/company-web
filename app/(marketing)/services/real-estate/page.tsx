@@ -74,7 +74,7 @@ export default function RealEstatePage() {
             <ServiceHero
                 backgroundImage="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780117668/real-estate-hero_z5rass.jpg"
                 ariaLabel="Real Estate Services"
-                eyebrow="PGG Properties · Land & Heritage · Est. 2008"
+                eyebrow="PGG Properties · Land & Heritage · Est. 2013"
                 heading={
                     <>
                         Real land. Real<em className="serif-em"> development.</em>
@@ -83,8 +83,8 @@ export default function RealEstatePage() {
                     </>
                 }
                 descriptions={[
-                    "PGG Properties specialises in acquiring undervalued agricultural and development land, improving it through infrastructure and development, ",
-                    "and selling to buyers at a premium. Your capital participates in specific land projects and receives a share of the sale profit. Min. LKR 500,000."
+                    "PGG Properties acquires underdeveloped Sri Lankan land, improves it through infrastructure and development, " +
+                    "and sells at a premium. Your capital backs specific projects and shares in the gain."
                 ]}
                 stats={[
                     { label: "Total land bank", value: "840", em: "A", note: "Acres managed" },

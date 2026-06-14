@@ -57,7 +57,7 @@ const steps: Step[] = [
         title: "RM Visit & Document Collection",
         icon: Users,
         youDo: "Meet with your assigned Relationship Manager and provide required documents.",
-        weDo: "Your assigned RM/BM/GM visits you, presents a formal proposal, and collects documents.",
+        weDo: "Your assigned representative visits you, presents a formal proposal, and collects your documents.",
         requiredDocs: [
             "NIC copy",
             "Bank book front page copy",

@@ -63,7 +63,7 @@ export default function OverviewSection() {
                     </div>
 
                     <div className="col-span-12 lg:col-span-5 relative mt-8 lg:mt-0 reveal">
-                        <figure className="aspect-[4/5] sm:rounded-[24px] overflow-hidden shadow-2xl">
+                        <figure className="relative aspect-[4/5] sm:rounded-[24px] overflow-hidden shadow-2xl">
                             <Photo
                                 src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781332210/sir_new_face_gost0x.png"
                                 alt="Chairman Y. M. D. T. Yatawara"

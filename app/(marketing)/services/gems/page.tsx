@@ -78,7 +78,7 @@ export default function GemsPage() {
             <ServiceHero
                 backgroundImage="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780117604/jacek-dylag-agsdDgRW2Ps-unsplash_v5jrs0.jpg"
                 ariaLabel="Gem & Jewelry Services"
-                eyebrow="PGG Gems · Ratnapura Heritage · Est. 2003"
+                eyebrow="PGGC Gems · Est. 2013"
                 heading={
                     <>
                         Invest in Sri Lankan gemstones.
@@ -94,9 +94,9 @@ export default function GemsPage() {
                 ]}
                 stats={[
                     { label: "Export countries", value: "14", em: ".", note: "Across 4 continents" },
-                    { label: "Certified stones", value: "6.2K", em: "+", note: "Since 2003" },
+                    { label: "Certified stones", value: "6.2K", em: "+", note: "Since 2013" },
                     { label: "Mining Operations", value: "10", em: "+", note: "Active sites" },
-                    { label: "Heritage", value: "22", em: "y", note: "Years of trading since 2003" },
+                    { label: "Heritage", value: "14", em: "y", note: "Years of trading since 2013" },
                     ]}
             />
             <OverviewSection />

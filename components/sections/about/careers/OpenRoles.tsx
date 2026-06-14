@@ -89,12 +89,12 @@ export default function OpenRoles() {
                                         {/* left accent bar */}
                                         <span
                                             aria-hidden
-                                            className={`absolute left-0 top-0 h-full w-[3px] bg-normal-gold origin-top transition-transform duration-400 ${isSelected ? 'scale-y-100 bg-accent!' : 'scale-y-0 group-hover:scale-y-100'}`}
+                                            className={`absolute left-0 top-0 h-full w-[3px] bg-normal-gold origin-top transition-transform duration-400 ${isSelected ? 'scale-y-100 bg-sapphire-blue' : 'scale-y-0 group-hover:scale-y-100'}`}
                                         />
                                         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 sm:gap-6">
                                             <div className="flex-1 min-w-0">
                                                 <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-2">
-                                                    <span className="num text-accent! text-[10px] sm:text-[11px]">
+                                                    <span className="num text-sapphire-blue text-[10px] sm:text-[11px]">
                                                         {String(i + 1).padStart(2, '0')}
                                                     </span>
                                                     <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] sm:text-[11px] font-medium border bg-sapphire-blue/[0.08] text-sapphire-blue border-sapphire-blue/15">
@@ -117,7 +117,7 @@ export default function OpenRoles() {
                                             <div className="flex-shrink-0 w-full lg:w-auto mt-2 lg:mt-0">
                                                 <button
                                                     onClick={() => handleApply(role.id)}
-                                                    className={`btn group w-full lg:w-auto justify-center ${isSelected ? 'bg-accent! text-ondark!' : 'btn-primary'} text-[12px] sm:text-sm`}
+                                                    className={`btn group w-full lg:w-auto justify-center ${isSelected ? 'bg-sapphire-blue text-ondark!' : 'btn-primary'} text-[12px] sm:text-sm`}
                                                 >
                                                     {isSelected ? 'Selected' : 'Apply'}
                                                     <ArrowIcon size={12} className="ml-1 group-hover:translate-x-1" />

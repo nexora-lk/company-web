@@ -1,9 +1,10 @@
 'use client';
 
-import { primaryNav } from '@/data/navigation';
+import { brand, primaryNav } from '@/data/navigation';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useCallback, useEffect, useRef, useState } from 'react';
+import type { gsap as GsapType } from 'gsap';
 import ArrowIcon from '@/components/ui/ArrowIcon';
 
 export default function MobileMenu() {
@@ -11,7 +12,7 @@ export default function MobileMenu() {
     const [open, setOpen] = useState(false);
     const panelRef = useRef<HTMLElement>(null);
     const backdropRef = useRef<HTMLDivElement>(null);
-    const tlRef = useRef<any>(null);
+    const tlRef = useRef<ReturnType<typeof GsapType.timeline> | null>(null);
 
     // Build or update the GSAP timeline on state change.
     useEffect(() => {
@@ -186,64 +187,118 @@ export default function MobileMenu() {
                 role="dialog"
                 aria-modal="true"
                 aria-label="Site navigation"
-                className="fixed inset-x-0 top-16 xl:top-20 z-40 origin-top border-b border-line bg-bg"
+                className="fixed inset-x-0 top-16 xl:top-20 z-40 origin-top border-b border-line bg-bg shadow-[0_24px_60px_-28px_rgba(7,11,41,0.45)]"
                 style={{ visibility: 'hidden', pointerEvents: 'none', opacity: 0 }}
             >
-                <div className="max-w-content mx-auto px-6 md:px-8 py-6 md:py-8 overflow-y-auto max-h-[calc(100vh-120px)] xl:max-h-[calc(100vh-140px)]">
+                <div className="max-w-content mx-auto px-6 md:px-8 py-5 md:py-7 overflow-y-auto max-h-[calc(100vh-120px)] xl:max-h-[calc(100vh-140px)]">
+                    {/* ── Eyebrow rule ── */}
+                    <div className="mobile-link flex items-center gap-4 pb-3">
+                        <span className="eyebrow">Navigate</span>
+                        <span className="h-px flex-1 bg-line" />
+                        <span className="text-[10px] tracking-[0.2em] uppercase text-sapphire-blue/55 font-medium">
+                            {brand.tagline}
+                        </span>
+                    </div>
+
                     <ul className="flex flex-col">
-                        {primaryNav.map((link) => {
+                        {primaryNav.map((link, i) => {
                             const isActive =
-                                pathname === link.href || (link.href === '/' && pathname === '/');
+                                pathname === link.href ||
+                                pathname.startsWith(link.href + '/') ||
+                                (link.href === '/' && pathname === '/');
                             return (
                                 <li
                                     key={link.label}
                                     className="mobile-link border-b border-line last:border-0"
                                 >
-                                    <div className="flex flex-col">
-                                        <Link
-                                            href={link.href}
-                                            onClick={close}
-                                            className={`flex items-center justify-between py-3.5 md:py-4 font-display text-[22px] md:text-[26px] tracking-tightish transition-colors duration-200 ${
+                                    <Link
+                                        href={link.href}
+                                        onClick={close}
+                                        aria-current={isActive ? 'page' : undefined}
+                                        className="group relative flex items-center gap-4 py-3.5 md:py-4"
+                                    >
+                                        {/* active / hover left rail */}
+                                        <span
+                                            className={`absolute -left-3 md:-left-4 top-1/2 -translate-y-1/2 w-[3px] rounded-full bg-accent transition-all duration-300 ${
+                                                isActive
+                                                    ? 'h-5 opacity-100'
+                                                    : 'h-0 opacity-0 group-hover:h-4 group-hover:opacity-60'
+                                            }`}
+                                        />
+                                        <span className="num shrink-0 w-7 text-mute/55 transition-colors group-hover:text-accent">
+                                            {String(i + 1).padStart(2, '0')}
+                                        </span>
+                                        <span
+                                            className={`flex-1 font-display text-[22px] md:text-[26px] tracking-tightish transition-colors duration-200 ${
                                                 isActive
                                                     ? 'text-sapphire-blue font-medium'
-                                                    : 'text-midnight-blue hover:text-sapphire-blue'
+                                                    : 'text-midnight-blue group-hover:text-sapphire-blue'
                                             }`}
                                         >
                                             {link.label}
-                                            <ArrowIcon
-                                                size={20}
-                                                className={`${isActive ? 'text-midnight-blue' : 'text-mute'}`}
-                                            />
-                                        </Link>
-                                        {link.children && (
-                                            <ul className="pl-4 pb-4 space-y-2">
-                                                {link.children.map((child) => (
+                                        </span>
+                                        <ArrowIcon
+                                            size={18}
+                                            className={`arrow shrink-0 transition-colors ${
+                                                isActive
+                                                    ? 'text-sapphire-blue'
+                                                    : 'text-mute/60 group-hover:text-sapphire-blue'
+                                            }`}
+                                        />
+                                    </Link>
+
+                                    {link.children && (
+                                        <ul className="grid grid-cols-2 gap-1.5 pb-4 -mt-0.5">
+                                            {link.children.map((child) => {
+                                                const childActive =
+                                                    pathname === child.href ||
+                                                    pathname.startsWith(child.href + '/');
+                                                return (
                                                     <li key={child.label}>
                                                         <Link
                                                             href={child.href}
                                                             onClick={close}
-                                                            className="text-[15px] md:text-[16px] text-mute hover:text-ink transition-colors block py-1.5 md:py-2"
+                                                            aria-current={
+                                                                childActive ? 'page' : undefined
+                                                            }
+                                                            className={`group/c flex items-center gap-2 rounded-xl px-3 py-2 text-[13.5px] md:text-[14px] transition-colors ${
+                                                                childActive
+                                                                    ? 'bg-sapphire-blue/[0.07] text-sapphire-blue font-medium'
+                                                                    : 'text-mute hover:bg-sapphire-blue/[0.05] hover:text-sapphire-blue'
+                                                            }`}
                                                         >
-                                                            — {child.label}
+                                                            <span
+                                                                className={`h-1.5 w-1.5 shrink-0 rounded-full transition-colors ${
+                                                                    childActive
+                                                                        ? 'bg-accent'
+                                                                        : 'bg-line group-hover/c:bg-accent'
+                                                                }`}
+                                                            />
+                                                            {child.label}
                                                         </Link>
                                                     </li>
-                                                ))}
-                                            </ul>
-                                        )}
-                                    </div>
+                                                );
+                                            })}
+                                        </ul>
+                                    )}
                                 </li>
                             );
                         })}
                     </ul>
 
-                    <div className="mobile-bottom mt-6 flex items-center justify-between">
+                    {/* ── Footer CTA ── */}
+                    <div className="mobile-bottom mt-6 flex flex-col gap-3">
                         <Link
                             href="/#contact"
                             onClick={close}
-                            className="btn btn-primary text-[14px] md:text-[15px] py-2! px-4! md:py-2.5! md:px-5!"
+                            className="btn btn-primary w-full justify-center text-[14px] md:text-[15px]"
                         >
-                            Get in touch <ArrowIcon size={14} className="ml-1" />
+                            Get in touch
+                            <ArrowIcon size={15} className="arrow ml-0.5" />
                         </Link>
+                        <p className="text-center text-[11px] tracking-[0.16em] uppercase text-mute/70">
+                            {brand.name} · Est. 2013
+                        </p>
                     </div>
                 </div>
             </nav>

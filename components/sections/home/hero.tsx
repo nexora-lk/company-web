@@ -26,7 +26,7 @@ const BG_VIDEOS = [
 
 // ── Trust metrics ───────────────────────────────────────────────────────────
 const TRUST = [
-    { value: '5', label: 'Operating sectors' },
+    { value: '6', label: 'Operating sectors' },
     { value: '100%', label: 'Operator-owned' },
     { value: 'LKR 200K+', label: 'Minimum entry' },
 ];
@@ -108,11 +108,11 @@ export default function HeroSection() {
                                text-[50px] xs:text-[58px] sm:text-[66px] md:text-[78px] lg:text-[94px] xl:text-[112px]
                                leading-[0.92] tracking-tight text-[#f1ece0]
                                max-w-[13ch] sm:max-w-[15ch] md:max-w-[17ch] lg:max-w-[20ch] xl:max-w-none">
-                    Invest in Sri Lanka.
+                    Invest in Sri Lanka
                     <br />
                     Get{' '}
                     <span className="bg-gradient-to-r from-[#f5d98b] via-[#d4af37] to-[#f5d98b] bg-clip-text text-transparent">
-                        Real Returns.
+                        Real Returns
                     </span>
                 </h1>
 
@@ -125,12 +125,6 @@ export default function HeroSection() {
                     Sri Lanka&apos;s most transparent investment platform — and we&apos;re not fund
                     managers. We operate the assets ourselves: plantations, gem mines, real estate,
                     microfinance, and consumer goods. Real operations, real returns.
-                </p>
-
-                {/* Investor range */}
-                <p className="mt-4 sm:mt-5 flex items-center gap-2 text-[12px] sm:text-[13px] text-[#f1ece0]/55">
-                    <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#2f5d4a]" />
-                    Open to every investor · LKR 200,000 to LKR 200 million
                 </p>
 
                 {/* CTAs */}

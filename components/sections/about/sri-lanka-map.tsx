@@ -32,7 +32,7 @@ export default function SriLankaMap({ activeProvinceId, activeBranch, pins, onSe
                     <path
                         key={`${d.prov}-${d.dist}`}
                         d={d.d}
-                        fill={active ? "var(--c-accent)" : "#cdd6cf"}
+                        fill={active ? "var(--color-sapphire-blue)" : "#cdd6cf"}
                         fillOpacity={active ? 0.82 : 0.45}
                         stroke="#ffffff"
                         strokeWidth={active ? 4 : 3}
@@ -55,7 +55,7 @@ export default function SriLankaMap({ activeProvinceId, activeBranch, pins, onSe
                     >
                         {/* Pulsing ring on the active pin */}
                         {isActive && (
-                            <circle cx={0} cy={-28} r={35} fill="var(--c-accent)" opacity={0.45}>
+                            <circle cx={0} cy={-28} r={35} fill="var(--color-royal-blue)" opacity={0.45}>
                                 <animate attributeName="r" from="32" to="72" dur="1.3s" repeatCount="indefinite" />
                                 <animate attributeName="opacity" from="0.45" to="0" dur="1.3s" repeatCount="indefinite" />
                             </circle>
@@ -63,13 +63,13 @@ export default function SriLankaMap({ activeProvinceId, activeBranch, pins, onSe
                         {/* Shadow */}
                         <ellipse cx={0} cy={50} rx={22} ry={8} fill="rgba(0,0,0,.14)" />
                         {/* Stem */}
-                        <line x1={0} y1={0} x2={0} y2={44} stroke="var(--c-accent)" strokeWidth={8} />
+                        <line x1={0} y1={0} x2={0} y2={44} stroke="var(--color-royal-blue)" strokeWidth={8} />
                         {/* Head */}
                         <circle
                             cx={0}
                             cy={-28}
                             r={isActive ? 36 : 28}
-                            fill="var(--c-accent)"
+                            fill="var(--color-sapphire-blue)"
                             stroke="#ffffff"
                             strokeWidth={6}
                             className="transition-[r] duration-150"

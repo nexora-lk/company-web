@@ -26,7 +26,7 @@ function ResultRow({ label, rs, usd }: { label: string, rs: string, usd: string 
     <div className="flex items-center justify-between py-4 sm:py-5 border-b border-line last:border-0 last:pb-0">
       <span className="text-[13.5px] sm:text-[14.5px] text-mute">{label}</span>
       <div className="text-right">
-        <p className="font-display text-[18px] sm:text-[22px] text-ink m-0 leading-none">{rs}</p>
+        <p className="font-display text-[18px] sm:text-[22px] text-midnight-blue m-0 leading-none">{rs}</p>
         {usd && <p className="num text-[10px] sm:text-[11px] text-mute/70 mt-1.5">{usd}</p>}
       </div>
     </div>
@@ -105,7 +105,15 @@ export default function CalculatorSection() {
   }, []);
 
   return (
-    <section id="calculator" className="py-16 sm:py-20 md:py-24 lg:py-32 bg-bg relative overflow-hidden">
+    <section 
+      id="calculator" 
+      className="py-12 sm:py-16 md:py-12 lg:py-13 xl:py-14 bg-bg relative overflow-hidden"
+      style={{
+        '--color-royal-blue': 'var(--c-royal-blue)',
+        '--color-sapphire-blue': 'var(--c-sapphire-blue)',
+        '--color-midnight-blue': 'var(--c-midnight-blue)',
+      } as React.CSSProperties}
+    >
       <Leaf variant="tr" />
       <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
 
@@ -117,9 +125,9 @@ export default function CalculatorSection() {
               <span className="hairline-strong w-16 sm:w-24"></span>
               <span className="eyebrow text-[10px] sm:text-[11px] uppercase tracking-widest text-mute">Investment Calculator</span>
             </div>
-            <h2 className="font-display text-[36px] sm:text-[48px] md:text-[56px] lg:text-[60px] leading-[0.98] tracking-tightish mb-6">
+            <h2 className="font-display text-[36px] sm:text-[48px] md:text-[56px] lg:text-[60px] leading-[0.98] tracking-tightish mb-6 text-midnight-blue">
               Project your <br className="hidden sm:block" />
-              <em className="serif-em text-accent">returns</em>.
+              <em className="serif-em text-sapphire-blue">returns</em>.
             </h2>
             <p className="text-mute text-[14px] sm:text-[15px] leading-[1.7] max-w-full sm:max-w-[420px]">
               Minimum Rs. 200,000 for Sri Lankan operations. Play with the numbers and see our dual-plan payout model in action.
@@ -145,12 +153,12 @@ export default function CalculatorSection() {
                   key={key}
                   onClick={() => setPlan(key)}
                   className={`flex-1 py-4 px-4 rounded-[14px] text-[14px] sm:text-[15px] transition-all duration-300 flex flex-col items-center justify-center gap-1 ${plan === key
-                    ? 'bg-ink text-bg shadow-md'
-                    : 'text-mute hover:text-ink hover:bg-bg'
+                    ? 'bg-midnight-blue text-white shadow-md'
+                    : 'text-mute hover:text-midnight-blue hover:bg-bg'
                     }`}
                 >
                   <span className="font-medium">{label}</span>
-                  <span className={`text-[10px] sm:text-[11px] ${plan === key ? 'text-accent' : 'opacity-60'}`}>
+                  <span className={`text-[10px] sm:text-[11px] ${plan === key ? 'text-light-gold' : 'opacity-60'}`}>
                     {sub}
                   </span>
                 </button>
@@ -164,12 +172,12 @@ export default function CalculatorSection() {
                   key={y}
                   onClick={() => setYear(y)}
                   className={`py-3 sm:py-4 px-2 sm:px-3 rounded-[14px] transition-all duration-300 flex flex-col items-center justify-center gap-1 ${year === y
-                    ? 'bg-accent text-bg shadow-md'
-                    : 'text-mute hover:text-ink hover:bg-bg'
+                    ? 'bg-sapphire-blue text-white shadow-md'
+                    : 'text-mute hover:text-midnight-blue hover:bg-bg'
                     }`}
                 >
                   <span className="font-display text-[14px] sm:text-[16px]">{y}Y</span>
-                  <span className={`num text-[9px] sm:text-[10px] ${year === y ? 'text-bg/80' : 'opacity-60'}`}>
+                  <span className={`num text-[9px] sm:text-[10px] ${year === y ? 'text-white/80' : 'opacity-60'}`}>
                     {plan === 'annual' ? `${RETURN_RATES.annual[y as keyof typeof RETURN_RATES.annual]}%` : `${RETURN_RATES.monthly[y as keyof typeof RETURN_RATES.monthly]}%`}
                   </span>
                 </button>
@@ -182,7 +190,7 @@ export default function CalculatorSection() {
               {/* Amount Input */}
               <div className="space-y-5">
                 <label htmlFor="investment-amount" className="eyebrow text-[10px] sm:text-[11px] uppercase tracking-widest text-mute block">Investment amount</label>
-                <div className="flex items-baseline gap-3 border-b border-line focus-within:border-accent pb-3 sm:pb-4 transition-colors duration-500">
+                <div className="flex items-baseline gap-3 border-b border-line focus-within:border-sapphire-blue pb-3 sm:pb-4 transition-colors duration-500">
                   <span className="font-display text-[24px] sm:text-[32px] text-mute/50">Rs.</span>
                   <input
                     id="investment-amount"
@@ -190,7 +198,7 @@ export default function CalculatorSection() {
                     inputMode="numeric"
                     value={raw}
                     onChange={handleInput}
-                    className="flex-1 font-display text-[36px] sm:text-[48px] lg:text-[56px] text-ink bg-transparent border-none outline-none p-0 focus:ring-0 leading-none"
+                    className="flex-1 font-display text-[36px] sm:text-[48px] lg:text-[56px] text-midnight-blue bg-transparent border-none outline-none p-0 focus:ring-0 leading-none"
                   />
                 </div>
                 <div className="flex items-center justify-between">
@@ -206,10 +214,10 @@ export default function CalculatorSection() {
               {/* Payout Details */}
               <div className="space-y-6">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                  <h3 className="font-display text-[22px] sm:text-[26px] text-ink">
+                  <h3 className="font-display text-[22px] sm:text-[26px] text-midnight-blue">
                     {plan === 'annual' ? 'Annual Payout' : 'Monthly Distribution'}
                   </h3>
-                  <span className="px-3.5 py-1.5 rounded-full bg-accent/10 text-accent text-[10px] sm:text-[11px] font-bold uppercase tracking-widest whitespace-nowrap">
+                  <span className="px-3.5 py-1.5 rounded-full bg-sapphire-blue/10 text-sapphire-blue text-[10px] sm:text-[11px] font-bold uppercase tracking-widest whitespace-nowrap">
                     {plan === 'annual' ? `${returnRate}% Net Yield` : `${returnRate}% Annualized`}
                   </span>
                 </div>

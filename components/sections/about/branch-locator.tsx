@@ -156,7 +156,14 @@ export default function BranchLocatorSection() {
     };
 
     return (
-        <section className="pb-10 pt-10 sm:pb-16 sm:pt-16 lg:pb-24 lg:pt-24 relative overflow-hidden">
+        <section 
+            className="pb-10 pt-10 sm:pb-16 sm:pt-16 lg:pb-24 lg:pt-24 relative overflow-hidden"
+            style={{
+                '--color-royal-blue': 'var(--c-royal-blue)',
+                '--color-sapphire-blue': 'var(--c-sapphire-blue)',
+                '--color-midnight-blue': 'var(--c-midnight-blue)',
+            } as React.CSSProperties}
+        >
             <Leaf variant="tr" />
             <div className="max-w-content mx-auto px-4 xs:px-6 lg:px-10">
                 {/* Heading */}
@@ -197,7 +204,7 @@ export default function BranchLocatorSection() {
                                             className={`px-2.5 xs:px-3 py-1 xs:py-1.5 text-[10.5px] xs:text-[11px] sm:text-xs rounded-full border transition-all duration-200 ${
                                                 on
                                                     ? "bg-sapphire-blue text-white border-transparent shadow-sm"
-                                                    : "border-line text-mute hover:bg-sapphire-blue/10 hover:text-ink hover:border-transparent"
+                                                    : "border-line text-mute hover:bg-royal-blue/10 hover:text-ink hover:border-transparent"
                                             }`}
                                         >
                                             {prov.name}
@@ -228,19 +235,23 @@ export default function BranchLocatorSection() {
                                             onClick={() => setActiveBranch(b)}
                                             aria-pressed={on}
                                             className={`w-full flex items-center gap-2.5 xs:gap-3 px-2.5 xs:px-3 py-2 xs:py-2.5 rounded-md text-left transition-colors duration-150 ${
-                                                on ? "bg-sapphire-blue" : "hover:bg-sapphire-blue/60"
+                                                on ? "bg-sapphire-blue" : "hover:bg-royal-blue/10"
                                             }`}
                                         >
                                             <span
                                                 className={`w-1.5 h-1.5 rounded-full shr ink-0 transition-colors ${
-                                                    on ? "bg-sapphire-blue" : "bg-sapphire-blue/40"
+                                                    on ? "bg-white" : "bg-sapphire-blue/40"
                                                 }`}
                                             />
                                             <span className="flex flex-col min-w-0">
-                                                <span className="text-[13px] xs:text-[13.5px] sm:text-[14px] text-white leading-tight truncate">
+                                                <span className={`text-[13px] xs:text-[13.5px] sm:text-[14px] leading-tight truncate transition-colors ${
+                                                    on ? "text-white" : "text-midnight-blue"
+                                                }`}>
                                                     {b.name}
                                                 </span>
-                                                <span className="text-[10.5px] xs:text-[11px] text-gray-400">
+                                                <span className={`text-[10.5px] xs:text-[11px] transition-colors ${
+                                                    on ? "text-white/70" : "text-gray-400"
+                                                }`}>
                                                     {b.district} District
                                                 </span>
                                             </span>
@@ -251,7 +262,7 @@ export default function BranchLocatorSection() {
                         </ul>
 
                         {/* Selected branch detail + map preview */}
-                        <div className="mt-auto p-4 xs:p-5 sm:p-6 lg:p-7 border-t border-line bg-bg/40">
+                        <div className="mt-auto p-4 xs:p-5 sm:p-6 lg:p-7 border-t border-line bg-surface">
                             {activeBranch ? (
                                 <>
                                     <span className="eyebrow text-[9px] xs:text-[10px] block mb-2">Selected branch</span>
@@ -262,7 +273,7 @@ export default function BranchLocatorSection() {
                                         {activeBranch.district} District, {activeProvince.name} Province,
                                         Sri&nbsp;Lanka
                                     </p>
-                                    <div className="relative mt-3 xs:mt-4 rounded-md overflow-hidden border border-line aspect-[16/9] bg-accent2">
+                                    <div className="relative mt-3 xs:mt-4 rounded-md overflow-hidden border border-line aspect-[16/9] bg-sapphire-blue/5">
                                         <iframe
                                             key={activeBranch.name}
                                             title={`Map preview of ${activeBranch.name}`}
@@ -280,7 +291,7 @@ export default function BranchLocatorSection() {
                                         href={googleMapsUrl(activeBranch)}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="group mt-3 inline-flex items-center gap-1.5 text-[11.5px] xs:text-[12px] text-accent font-medium"
+                                        className="group mt-3 inline-flex items-center gap-1.5 text-[11.5px] xs:text-[12px] text-royal-blue font-medium"
                                     >
                                         <span className="ulink">Open full map</span>
                                         <span className="arrow" aria-hidden>→</span>

@@ -82,7 +82,7 @@ export default function InvestmentContactForm() {
         >
             <div className="mb-6 sm:mb-7 md:mb-8 lg:mb-10 reveal">
                 <div className="num text-xs sm:text-sm md:text-sm lg:text-base uppercase tracking-wider font-semibold mb-2 sm:mb-3">Investment Inquiry Form</div>
-                <h3 className="font-display text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl leading-tight">
+                <h3 className="font-display text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl leading-tight text-midnight-blue">
                     Tell us where to start.
                 </h3>
             </div>

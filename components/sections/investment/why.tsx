@@ -2,7 +2,7 @@ import Leaf from "@/components/ui/Leaf";
 
 export default function WhySection() {
     return (
-        <section className="py-16 sm:py-20 md:py-24 lg:py-32">
+        <section className="py-12 sm:py-16 md:py-12 lg:py-13 xl:py-14">
             <Leaf variant="tr" />
             <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-10">
                 <div className="grid grid-cols-12 gap-8 lg:gap-12 items-start">
@@ -11,7 +11,7 @@ export default function WhySection() {
                             <span className="hairline-strong w-[80px] sm:w-[120px]"></span>
                             <span className="eyebrow text-[10px] sm:text-[11px]">Why Invest with PGG?</span>
                         </div>
-                        <h2 className="font-display text-[36px] sm:text-[48px] md:text-[56px] lg:text-[60px] leading-[0.98] tracking-tightish">
+                        <h2 className="font-display text-[36px] sm:text-[48px] md:text-[56px] lg:text-[60px] leading-[0.98] tracking-tightish text-midnight-blue">
                             Three reasons
                             <br className="hidden sm:block" />
                             3,200+ <em className="serif-em">investors</em>

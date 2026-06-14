@@ -3,7 +3,7 @@ import ModelCard from "@/components/sections/ModelCard";
 
 export default function ModelsSection() {
     return (
-        <section className="py-16 sm:py-20 md:py-24 lg:py-32 bg-surface">
+        <section className="py-12 sm:py-16 md:py-12 lg:py-13 xl:py-14 bg-[#f6e9c6]/60">
             <Leaf variant="bl" />
             <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-10">
                 <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 sm:gap-6 mb-10 sm:mb-14 reveal">
@@ -12,8 +12,8 @@ export default function ModelsSection() {
                             <span className="hairline-strong w-[80px] sm:w-[120px]"></span>
                             <span className="eyebrow text-[10px] sm:text-[11px]">Investment Models</span>
                         </div>
-                        <h2 className="font-display text-[36px] sm:text-[48px] md:text-[56px] lg:text-[60px] leading-[0.98] tracking-tightish max-w-[820px]">
-                            Two investment vehicles. <em className="serif-em">One </em>
+                        <h2 className="font-display text-[36px] sm:text-[48px] md:text-[56px] lg:text-[60px] leading-[0.98] tracking-tightish max-w-[820px] text-midnight-blue">
+                            Two investment vehicles. <em className="serif-em text-sapphire-blue">One </em>
                             <br className="hidden sm:block" />
                             standard of transparency.
                         </h2>

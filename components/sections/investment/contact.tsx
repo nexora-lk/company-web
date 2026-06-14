@@ -1,23 +1,13 @@
 import InvestmentContactForm from '@/components/forms/InvestmentContactForm';
-import Photo from '@/components/ui/Photo';
 import Leaf from "@/components/ui/Leaf";
 
 export default function ContactSection() {
     return (
-        <section id="enquire" className="py-10 sm:py-14 md:py-18 lg:py-28 xl:py-32 bg-bg">
+        <section id="enquire" className="py-12 sm:py-16 md:py-12 lg:py-13 xl:py-14 bg-bg">
             <Leaf variant="tr" />
             <Leaf variant="bl" />
             <div className="max-w-content mx-auto px-3 sm:px-5 md:px-8 lg:px-10 xl:px-12">
-                <div className="relative rounded-lg sm:rounded-xl md:rounded-2xl lg:rounded-3xl xl:rounded-4xl overflow-hidden bg-ink text-ondark">
-                    <Photo
-                        src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1779376704/samples/landscapes/beach-boat.jpg"
-                        alt="Investment team office"
-                        fill
-                        className="absolute inset-0 w-full h-full object-cover opacity-15 sm:opacity-20 md:opacity-25 lg:opacity-30 xl:opacity-35"
-                        sizes="100vw"
-                    />
-                    <div className="absolute inset-0 bg-linear-to-b sm:bg-linear-to-r from-ink via-ink/90 to-ink/40"></div>
-
+                <div className="relative rounded-lg sm:rounded-xl md:rounded-2xl lg:rounded-3xl xl:rounded-4xl overflow-hidden bg-midnight-blue text-ondark">
                     <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-5 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-14 p-4 sm:p-6 md:p-8 lg:p-10 xl:p-14">
                         {/* Left Column - Contact Info */}
                         <div className="md:col-span-1 lg:col-span-5 flex flex-col reveal">

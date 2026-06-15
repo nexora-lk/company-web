@@ -22,7 +22,7 @@ export const primaryNav: NavLink[] = [
       { label: "Real Estate", href: "/services/real-estate" },
     ]
   },
-  // { label: "Gallery", href: "/gallery" },
+  { label: "Gallery", href: "/gallery" },
   { label: "Investment Plans", href: "/investment" },
 ];
 

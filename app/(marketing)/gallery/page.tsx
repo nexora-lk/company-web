@@ -1,7 +1,4 @@
-import Album1Section from '@/components/sections/gallery/album1';
-import Album2Section from '@/components/sections/gallery/album2';
-import Album3Section from '@/components/sections/gallery/album3';
-import Album4Section from '@/components/sections/gallery/album4';
+import GalleryGrid from '@/components/sections/gallery/grid';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -61,26 +58,7 @@ export default function GalleryPage() {
                     }),
                 }}
             />
-            <Album1Section />
-            <div className="max-w-content mx-auto px-6 lg:px-10">
-                <div className="hairline"></div>
-            </div>
-            <Album2Section />
-            <div className="max-w-content mx-auto px-6 lg:px-10">
-                <div className="hairline"></div>
-            </div>
-            <Album3Section />
-            <div className="max-w-content mx-auto px-6 lg:px-10">
-                <div className="hairline"></div>
-            </div>
-            <Album4Section />
-            <div className="lb" id="lb">
-                <span className="lb-close" id="lbClose">
-                    ✕
-                </span>
-                <img loading="lazy" decoding="async" id="lbImg" alt="" />
-                <div className="lb-cap" id="lbCap"></div>
-            </div>
+            <GalleryGrid />
         </>
     );
 }

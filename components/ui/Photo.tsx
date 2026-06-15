@@ -9,6 +9,7 @@ type PhotoProps = {
     priority?: boolean;
     quality?: number;
     fetchPriority?: 'high' | 'low' | 'auto';
+    loading?: 'lazy' | 'eager';
     sizes?: string;
     className?: string;
 };
@@ -26,12 +27,16 @@ export default function Photo({
     priority = false,
     quality,
     fetchPriority,
+    loading,
     sizes = '(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw',
     className,
 }: PhotoProps) {
     // If not using 'fill', we need either dimensions or a very large default to maintain aspect ratio
     const finalWidth = !fill ? (width || 1600) : undefined;
     const finalHeight = !fill ? (height || 1067) : undefined;
+
+    // next/image lazy-loads by default; `loading` and `priority` are mutually exclusive.
+    const finalLoading = priority ? undefined : (loading ?? 'lazy');
 
     return (
         <Image
@@ -43,6 +48,7 @@ export default function Photo({
             priority={priority}
             quality={quality}
             fetchPriority={fetchPriority}
+            loading={finalLoading}
             sizes={sizes}
             className={className}
         />

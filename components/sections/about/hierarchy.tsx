@@ -12,18 +12,34 @@ function initials(name?: string): string {
   return (first + last).toUpperCase();
 }
 
+// Rounded-square photo cards (portrait aspect) so the full face stays visible.
+// Enlarged across the board so every employee — especially the field staff —
+// reads clearly.
 const SIZE: Record<OrgLevel["variant"], string> = {
-  feature: "w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32",
-  named: "w-16 h-16 sm:w-20 sm:h-20 lg:w-[84px] lg:h-[84px]",
-  team: "w-12 h-12 sm:w-14 sm:h-14",
+  feature: "w-32 sm:w-36 lg:w-40",
+  named: "w-28 sm:w-32 lg:w-34",
+  team: "w-24 sm:w-28 lg:w-30",
+};
+
+const RADIUS: Record<OrgLevel["variant"], string> = {
+  feature: "rounded-2xl",
+  named: "rounded-2xl",
+  team: "rounded-xl",
+};
+
+// How wide the surrounding name/role card may grow per variant.
+const CARD_W: Record<OrgLevel["variant"], string> = {
+  feature: "w-40 sm:w-44 lg:w-48",
+  named: "w-36 sm:w-40 lg:w-42",
+  team: "w-32 sm:w-36 lg:w-38",
 };
 
 function Avatar({ member, variant }: { member: OrgMember; variant: OrgLevel["variant"] }) {
   const ring =
     variant === "feature"
-      ? "ring-2 ring-normal-gold/45"
-      : "ring-2 ring-bg";
-  const base = `${SIZE[variant]} ${ring} relative shrink-0 rounded-full overflow-hidden shadow-[0_10px_28px_-12px_rgba(7,11,41,0.45)] transition-transform duration-300 group-hover:-translate-y-1`;
+      ? "ring-1 ring-normal-gold/55"
+      : "ring-1 ring-sapphire-blue/15";
+  const base = `${SIZE[variant]} ${RADIUS[variant]} ${ring} relative aspect-[4/5] shrink-0 overflow-hidden bg-bg-alt`;
 
   if (member.img) {
     return (
@@ -32,8 +48,8 @@ function Avatar({ member, variant }: { member: OrgMember; variant: OrgLevel["var
           src={member.img}
           alt={member.name ?? "Team member"}
           fill
-          sizes="128px"
-          className="object-cover"
+          sizes="180px"
+          className="object-cover object-top transition-transform duration-300 group-hover:scale-[1.04]"
         />
       </div>
     );
@@ -46,34 +62,43 @@ function Avatar({ member, variant }: { member: OrgMember; variant: OrgLevel["var
       title={member.name}
     >
       {initials(member.name) ? (
-        <span className="font-display font-medium text-midnight-blue/85 text-[13px] sm:text-[15px] lg:text-base tracking-tightish">
+        <span className="font-display font-medium text-midnight-blue/85 text-lg sm:text-xl lg:text-2xl tracking-tightish">
           {initials(member.name)}
         </span>
       ) : (
-        <span className="h-2 w-2 rounded-full bg-midnight-blue/25" />
+        <span className="h-2.5 w-2.5 rounded-full bg-midnight-blue/25" />
       )}
     </div>
   );
 }
 
 function Node({ member, variant }: { member: OrgMember; variant: OrgLevel["variant"] }) {
+  const featured = variant === "feature";
   return (
     <div className="group relative flex flex-col items-center text-center">
       {/* stub connecting the node up to the bus line */}
       <span className="absolute -top-4 sm:-top-5 h-4 sm:h-5 w-px bg-sapphire-blue/20" aria-hidden />
-      <Avatar member={member} variant={variant} />
-      {variant !== "team" && member.name && (
-        <div className="mt-3 max-w-[140px] sm:max-w-[160px]">
-          <p className="font-display text-[13.5px] sm:text-[15px] leading-tight tracking-tightish text-midnight-blue">
-            {member.name}
-          </p>
-          {member.role && (
-            <p className="mt-1 text-[11px] sm:text-[12px] leading-snug text-accent">
-              {member.role}
+
+      {/* Each employee sits in a soft card so name + face stay legible and pop. */}
+      <div
+        className={`${CARD_W[variant]} flex flex-col items-center gap-3 rounded-2xl bg-surface px-3 pt-3 pb-3.5 ring-1 shadow-[0_12px_30px_-16px_rgba(7,11,41,0.45)] transition-all duration-300 group-hover:-translate-y-1.5 group-hover:shadow-[0_22px_44px_-16px_rgba(7,11,41,0.5)] ${
+          featured ? "ring-normal-gold/35 group-hover:ring-normal-gold/60" : "ring-sapphire-blue/10 group-hover:ring-sapphire-blue/30"
+        }`}
+      >
+        <Avatar member={member} variant={variant} />
+        {member.name && (
+          <div className="w-full">
+            <p className={`font-display leading-tight tracking-tightish text-midnight-blue ${variant === "team" ? "text-[12.5px] sm:text-[13.5px]" : "text-[14px] sm:text-[15.5px]"}`}>
+              {member.name}
             </p>
-          )}
-        </div>
-      )}
+            {member.role && (
+              <p className={`mt-1.5 inline-block rounded-full bg-accent2 px-2.5 py-0.5 font-medium leading-snug text-accent ${variant === "team" ? "text-[9.5px] sm:text-[10.5px]" : "text-[10.5px] sm:text-[11.5px]"}`}>
+                {member.role}
+              </p>
+            )}
+          </div>
+        )}
+      </div>
     </div>
   );
 }
@@ -96,11 +121,16 @@ function Level({ level, index }: { level: OrgLevel; index: number }) {
           {String(index + 1).padStart(2, "0")}
         </span>
         <span className="eyebrow text-[10px] sm:text-[11px]">{level.label}</span>
+        {multi && (
+          <span className="rounded-full bg-sapphire-blue/10 px-2 py-0.5 text-[9.5px] font-medium text-sapphire-blue">
+            {level.members.length}
+          </span>
+        )}
       </div>
 
       {/* node row — the top border acts as the branch "bus" for multi-node levels */}
       <div
-        className={`mt-4 inline-flex max-w-full flex-wrap items-start justify-center gap-x-5 gap-y-8 px-4 pt-1 sm:gap-x-8 ${
+        className={`mt-5 inline-flex max-w-full flex-wrap items-start justify-center gap-x-5 gap-y-9 px-4 pt-5 sm:gap-x-7 ${
           multi ? "border-t border-sapphire-blue/15" : ""
         }`}
       >

@@ -14,7 +14,7 @@ interface ServiceHeroProps {
     eyebrow: string;
     heading: ReactNode;
     descriptions: string[];
-    stats: Stat[];
+    stats?: Stat[];
 }
 
 export default function ServiceHero({
@@ -75,6 +75,7 @@ export default function ServiceHero({
                     </div>
 
                     {/* Stats grid - adaptive column layout */}
+                    {stats && stats.length > 0 && (
                     <div className="w-full lg:max-w-200 reveal">
                         <div className="mt-6 xs:mt-8 sm:mt-10 lg:mt-0 mb-0 xs:mb-0 sm:mb-0 lg:mb-0 hairline bg-white/20!"></div>
                         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-0">
@@ -112,6 +113,7 @@ export default function ServiceHero({
                         </div>
                         <div className="hairline bg-white/20! hidden lg:block mt-8 sm:mt-10 lg:mt-0"></div>
                     </div>
+                    )}
                 </div>
             </div>
         </section>

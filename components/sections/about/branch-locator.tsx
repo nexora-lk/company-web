@@ -157,7 +157,7 @@ export default function BranchLocatorSection() {
 
     return (
         <section 
-            className="pb-10 pt-10 sm:pb-16 sm:pt-16 lg:pb-24 lg:pt-24 relative overflow-hidden"
+            className="pb-10 pt-10 sm:pb-16 sm:pt-16 lg:pb-24 lg:pt-24 relative overflow-hidden bg-surface"
             style={{
                 '--color-royal-blue': 'var(--c-royal-blue)',
                 '--color-sapphire-blue': 'var(--c-sapphire-blue)',
@@ -187,11 +187,11 @@ export default function BranchLocatorSection() {
                 </div>
 
                 {/* Locator card */}
-                <div className="reveal grid grid-cols-1 lg:grid-cols-12 border border-none bg-surface overflow-hidden rounded-2xl">
+                <div className="reveal grid grid-cols-1 lg:grid-cols-12 border border-sapphire-blue/15 bg-bg-alt overflow-hidden rounded-2xl shadow-[0_18px_50px_-24px_rgba(7,11,41,0.28)]">
                     {/* ── Left: tabs + list + detail ─────────────────────────── */}
-                    <div className="lg:col-span-5 xl:col-span-4 flex flex-col border-b lg:border-b-0 lg:border-r border-line">
+                    <div className="lg:col-span-5 xl:col-span-4 flex flex-col border-b lg:border-b-0 lg:border-r border-sapphire-blue/15">
                         {/* Province tabs */}
-                        <div className="p-4 xs:p-5 sm:p-6 lg:p-7 border-b border-line">
+                        <div className="p-4 xs:p-5 sm:p-6 lg:p-7 border-b border-sapphire-blue/15">
                             <span className="eyebrow text-[9px] xs:text-[10px] block mb-3">Provinces</span>
                             <div className="flex flex-wrap gap-1.5 xs:gap-2">
                                 {provinces.map((prov) => {
@@ -204,7 +204,7 @@ export default function BranchLocatorSection() {
                                             className={`px-2.5 xs:px-3 py-1 xs:py-1.5 text-[10.5px] xs:text-[11px] sm:text-xs rounded-full border transition-all duration-200 ${
                                                 on
                                                     ? "bg-sapphire-blue text-white border-transparent shadow-sm"
-                                                    : "border-line text-mute hover:bg-royal-blue/10 hover:text-ink hover:border-transparent"
+                                                    : "border-sapphire-blue/15 text-mute hover:bg-royal-blue/10 hover:text-ink hover:border-transparent"
                                             }`}
                                         >
                                             {prov.name}
@@ -215,7 +215,7 @@ export default function BranchLocatorSection() {
                         </div>
 
                         {/* Province header */}
-                        <div className="px-4 xs:px-5 sm:px-6 lg:px-7 pt-4 xs:pt-5 sm:pt-6 pb-3 flex items-center gap-3 border-b border-line">
+                        <div className="px-4 xs:px-5 sm:px-6 lg:px-7 pt-4 xs:pt-5 sm:pt-6 pb-3 flex items-center gap-3 border-b border-sapphire-blue/15">
                             <h3 className="font-display text-lg xs:text-xl sm:text-2xl leading-tight text-ink">
                                 <em className="serif-em">{activeProvince.name}</em> Province
                             </h3>
@@ -250,7 +250,7 @@ export default function BranchLocatorSection() {
                                                     {b.name}
                                                 </span>
                                                 <span className={`text-[10.5px] xs:text-[11px] transition-colors ${
-                                                    on ? "text-white/70" : "text-gray-400"
+                                                    on ? "text-white/70" : "text-mute/80"
                                                 }`}>
                                                     {b.district} District
                                                 </span>
@@ -262,7 +262,7 @@ export default function BranchLocatorSection() {
                         </ul>
 
                         {/* Selected branch detail + map preview */}
-                        <div className="mt-auto p-4 xs:p-5 sm:p-6 lg:p-7 border-t border-line bg-surface">
+                        <div className="mt-auto p-4 xs:p-5 sm:p-6 lg:p-7 border-t border-sapphire-blue/15 bg-bg-alt">
                             {activeBranch ? (
                                 <>
                                     <span className="eyebrow text-[9px] xs:text-[10px] block mb-2">Selected branch</span>
@@ -273,7 +273,7 @@ export default function BranchLocatorSection() {
                                         {activeBranch.district} District, {activeProvince.name} Province,
                                         Sri&nbsp;Lanka
                                     </p>
-                                    <div className="relative mt-3 xs:mt-4 rounded-md overflow-hidden border border-line aspect-[16/9] bg-sapphire-blue/5">
+                                    <div className="relative mt-3 xs:mt-4 rounded-md overflow-hidden border border-sapphire-blue/15 aspect-video bg-bg-alt">
                                         <iframe
                                             key={activeBranch.name}
                                             title={`Map preview of ${activeBranch.name}`}

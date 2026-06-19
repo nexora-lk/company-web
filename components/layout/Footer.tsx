@@ -72,7 +72,7 @@ export default function Footer() {
                         className="ulink hover:opacity-100 opacity-90"
                         aria-label="Visit Nextora homepage"
                     >
-                        © 2026.nextora.lk - All Right Reserved
+                        © 2026.nextora.lk - All Rights Reserved
                     </a>
                 </div>
             </div>

@@ -113,6 +113,8 @@ export const orgHierarchy: OrgLevel[] = [
       { name: "Baskaran", role: "Regeonal Manager" ,img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842811/RM12.jpg_ycgz0t.png"},
       { name: "Pathuma", role: "Regeonal Manager" ,img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842790/RM13.jpg_a3klzf.png"},
       { name: "Balasundram Chandreswaran", role: "Regeonal Manager" ,img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842785/RM15.jpg_fx99tf.png"},
+      { name: "Tariq Bongso", role: "Regeonal Manager" ,img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781875828/IMG_20260619_165915_czrvjq.png"},
+
 
     ],
   },

@@ -96,6 +96,12 @@ function Node({ member, variant }: { member: OrgMember; variant: OrgLevel["varia
                 {member.role}
               </p>
             )}
+            {member.region && (
+              <p className={`mt-1.5 flex items-center justify-center gap-1 font-medium leading-snug text-sapphire-blue ${variant === "team" ? "text-[9.5px] sm:text-[10.5px]" : "text-[10.5px] sm:text-[11.5px]"}`}>
+                <span className="h-1 w-1 rounded-full bg-sapphire-blue/50" aria-hidden />
+                {member.region}
+              </p>
+            )}
           </div>
         )}
       </div>

@@ -10,6 +10,8 @@
 export type OrgMember = {
   name?: string;
   role?: string;
+  /** Region / area this person covers — shown for Regional Managers & Micro Finance Head. */
+  region?: string;
   /** Cloudinary URL — leave undefined to render the gold placeholder. */
   img?: string;
 };
@@ -26,22 +28,22 @@ export type OrgLevel = {
 export const orgHierarchy: OrgLevel[] = [
   {
     id: "directors",
-    label: "Board of Directors",
+    label: "Directors Board - Board of Directors",
     variant: "named",
     members: [
       {
         name: "Nilanga Amunugama",
-        role: "Managing Director / Head of Finance",
+        role: "Managing Director / Head of Marketing",
         img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781332267/amunugama_sir_derector_profile_ykhpb8.png",
       },
       {
         name: "L. Manisha Amaratunga",
-        role: "Director / HR",
+        role: "Director / HR & Finance",
         img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781330025/maneesha_madam_director_profile_fis1p7.png",
       },
       {
         name: "Y. M. D. T. Yatawara",
-        role: "Director",
+        role: "Director / Foreign Affairs",
         img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781330035/yatawara_sir_director_profile_e4hvgg.png",
       },
     ],
@@ -69,23 +71,29 @@ export const orgHierarchy: OrgLevel[] = [
     label: "Provincial Head",
     variant: "named",
     members: [
-      { name: "Thurai Athithan", role: "Provincial Head" ,img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842779/PH.jpg_yiuksc.png"},
-      { name: "K. Mathikumar", role: "Provincial Head",img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842806/PH4.jpg_sybzst.png" },
-      { name: "Deeptha Leelaratne", role: "Provincial Head",img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781846142/PH2_tcrtrv.png" },
-      { name: "D S Solamon", role: "Provincial Head" ,img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842814/PH3.jpg_vca1r5.png"},
+      { name: "Thurai Athithan", role: "Provincial Head" , region: "North East ", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842779/PH.jpg_yiuksc.png"},
+      { name: "K. Mathikumar", role: "Provincial Head", region: "North East", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842806/PH4.jpg_sybzst.png" },
+      { name: "Deeptha Leelaratne", role: "Provincial Head", region: "North West/ North Central", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781846142/PH2_tcrtrv.png" },
+      { name: "D S Solamon", role: "Provincial Head 02" , region: "North East", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842814/PH3.jpg_vca1r5.png"},
     ],
+  },
+  {
+    id: "Micro Finance Unit Head",
+    label: "Micro Finance Head",
+    variant: "named",
+    members: [{ name: "K.p. sampath kumara", role: "Micro Finance Head" , region: "Kalutara", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842779/RM14.jpg_nvwb5f.png"}],
   },
   {
     id: "Deputy Provincial Head",
     label: "Deputy Provincial Head",
     variant: "named",
     members: [
-      { name: "B V A D Chandan", role: "Deputy Provincial Head" ,img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842790/DPH6.jpg_w9x9sv.png"},
-      { name: "R M S A K Kumara", role: "Deputy Provincial Head" ,img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842787/DPH5.jpg_xscnb6.png"},
-      { name: "S Mathimaran", role: "Deputy Provincial Head" ,img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842794/DPH4.jpg_qsc2xl.png"},
-      { name: "MR.Balenthiran Vithushan", role: "Deputy Provincial Head" ,img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842789/DPH3.jpg_uxjo9c.png"},
-      { name: "S C R Thisera", role: "Deputy Provincial Head" ,img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842780/DPH2.jpg_cruybe.png"},
-      { name: "P P janaka Prasad", role: "Deputy Provincial Head" ,img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842779/DPH.jpg_ecdb5n.png"},
+      { name: "B V A D Chandana", role: "Deputy Provincial Head 03" , region: "North Western", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842790/DPH6.jpg_w9x9sv.png"},
+      { name: "R M S A K Kumara", role: "Deputy Provincial Head  01" , region: "North West / North Central", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842787/DPH5.jpg_xscnb6.png"},
+      { name: "S Mathimaran", role: "Deputy Provincial Head" , region: "North & East", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842794/DPH4.jpg_qsc2xl.png"},
+      { name: "MR.Balenthiran Vithushan", role: "Deputy Provincial Head" , region: "North and East", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842789/DPH3.jpg_uxjo9c.png"},
+      { name: "S C R Thisera", role: "Deputy Provincial Head" , region: "", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842780/DPH2.jpg_cruybe.png"},
+      { name: "P P Kanaka Prasad", role: "Deputy Provincial Head" , region: "Southern", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842779/DPH.jpg_ecdb5n.png"},
     ],
   },
   {
@@ -93,29 +101,26 @@ export const orgHierarchy: OrgLevel[] = [
     label: "Regional Manager",
     variant: "team",
     members: [
-      { name: "K.p. sampath kumara", role: "Regeonal Manager" ,img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842779/RM14.jpg_nvwb5f.png"},
-      { name: "Dammika Gunasekara", role: "Regeonal Manager" ,img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842803/RM4.jpg_yi5dwm.png"},
-      { name: "Kingsly.G.R", role: "Regeonal Manager" ,img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842794/RM.jpg_nl9q1w.png"},
-      { name: "Sumith", role: "Regeonal Manager" ,img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842802/RM2.jpg_jmurzr.png"},
-      { name: "Senarath Gamage", role: "Regeonal Manager" ,img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842798/RM3.jpg_rfibzu.png"},
-      { name: "Suzuthaharan", role: "Regeonal Manager" ,img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842798/RM5.jpg_n4cam6.png"},
-      { name: "Ms Suzanna Stephanie Mahesan", role: "Regeonal Manager" ,img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842800/RM16_twppom.png"},
-      { name: "Mohammed Aslam", role: "Regeonal Manager" ,img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842790/RM6.jpg_aztleo.png"},
-      { name: "Indika Kalyani Naotunna", role: "Regeonal Manager" ,img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842806/RM20_sjvdwl.png"},
-      { name: "Karmegam Sadeskumar", role: "Regeonal Manager" ,img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842812/RM7.jpg_sn8frj.png"},
-      { name: "V. Jude Abishek", role: "Regeonal Manager" ,img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842782/RM8.jpg_s1oev4.png"},
-      { name: "S. Kajana", role: "Regeonal Manager" ,img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842806/RM19_iqms4e.png"},
-      { name: "Mrs. Preetha", role: "Regeonal Manager" ,img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842802/RM18_nopdkq.png"},
-      { name: "Arumugam Gunalan", role: "Regeonal Manager" ,img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842784/RM9.jpg_acz8sm.png"},
-      { name: "Mohamed Mureed Cassim", role: "Regeonal Manager" ,img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842790/RM10.jpg_jmblax.png"},
-      { name: "Kumudu Senanayaka", role: "Regeonal Manager" ,img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842798/RM17_yuz2xp.png"},
-      { name: "A D K N Dasanayaka", role: "Regeonal Manager" ,img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842809/RM11.jpg_jkzhfm.png"},
-      { name: "Baskaran", role: "Regeonal Manager" ,img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842811/RM12.jpg_ycgz0t.png"},
-      { name: "Pathuma", role: "Regeonal Manager" ,img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842790/RM13.jpg_a3klzf.png"},
-      { name: "Balasundram Chandreswaran", role: "Regeonal Manager" ,img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842785/RM15.jpg_fx99tf.png"},
-      { name: "Tariq Bongso", role: "Regeonal Manager" ,img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781875828/IMG_20260619_165915_czrvjq.png"},
-
-
+      { name: "D D  S A Gunasekara", role: "Regeonal Manager" , region: "Kurunegala 03", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842803/RM4.jpg_yi5dwm.png"},
+      { name: "K G Rajasingham", role: "Regeonal Manager" , region: "Batticoloa 01", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842794/RM.jpg_nl9q1w.png"},
+      { name: "W S P Kumara", role: "Regeonal Manager" , region: "Kuliyapitiya 01", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842802/RM2.jpg_jmurzr.png"},
+      { name: "M M G A S Gamage", role: "Regeonal Manager" , region: "Galewela", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842798/RM3.jpg_rfibzu.png"},
+      { name: "M Szuthskaran", role: "Regeonal Manager" , region: "Batticaloa 02", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842798/RM5.jpg_n4cam6.png"},
+      { name: "Suzanna Stephanie Mahesan", role: "Regeonal Manager" , region: "", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842800/RM16_twppom.png"},
+      { name: " M J M Aslam", role: "Regeonal Manager" , region: "Valachenai", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842790/RM6.jpg_aztleo.png"},
+      { name: "N B Kalyani", role: "Regeonal Manager" , region: "Kurunegala 01", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842806/RM20_sjvdwl.png"},
+      { name: "K Sadeskumar", role: "Regeonal Manager" , region: "Kandy", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842812/RM7.jpg_sn8frj.png"},
+      { name: "V.Jude Abishek", role: "Regeonal Manager" , region: "Jaffna 01", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842782/RM8.jpg_s1oev4.png"},
+      { name: "Kajana Sathiyanshsn", role: "Regeonal Manager" , region: "Jaffna 02", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842806/RM19_iqms4e.png"},
+      { name: "S Pireetha", role: "Regeonal Manager" , region: "Jaffna 03", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842802/RM18_nopdkq.png"},
+      { name: "A Gunalan", role: "Regeonal Manager" , region: "Batticaloa", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842784/RM9.jpg_acz8sm.png"},
+      { name: " M M Cassim", role: "Regeonal Manager" , region: "Kandana", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842790/RM10.jpg_jmblax.png"},
+      { name: "Kumudu Senanayaka", role: "Regeonal Manager" , region: "Mathara", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842798/RM17_yuz2xp.png"},
+      { name: "A D K N Dasanayaka", role: "Regeonal Manager" , region: "Kuliyapitiya", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842809/RM11.jpg_jkzhfm.png"},
+      { name: "P. Basakaran", role: "Regeonal Manager" , region: "Batticoloa", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842811/RM12.jpg_ycgz0t.png"},
+      { name: "Pathuma", role: "Regeonal Manager" , region: "", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842790/RM13.jpg_a3klzf.png"},
+      { name: "Balasundram Chandreswaran", role: "Regeonal Manager" , region: "Kalmunai", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842785/RM15.jpg_fx99tf.png"},
+      { name: "Tariq Bongso", role: "Regeonal Manager" , region: "Kabdana", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781875828/IMG_20260619_165915_czrvjq.png"},
     ],
   },
 ];

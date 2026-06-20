@@ -43,7 +43,7 @@ export const values: Value[] = [
   {
     no: "06",
     title: "Global Quality, Local Heart.",
-    body: "We employ Sri Lankan people, grow Sri Lankan crops, and cut Sri Lankan gems — then deliver global-quality returns to investors from 30+ countries.",
+    body: "We empower Sri Lankan communities, grow Sri Lankan crops, and responsibly mine Sri Lankan gems — delivering world-class returns to investors worldwide.",
   },
 ];
 

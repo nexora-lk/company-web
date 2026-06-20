@@ -36,7 +36,7 @@ export default function DirectorsSection() {
                         </figure>
                         <div className="p-6 xs:p-8 lg:p-10 flex flex-col flex-1">
                             <div className="flex items-center justify-between mb-4">
-                                <span className="num text-ondark/70! text-[10px] xs:text-[11px]">Managing Director / Head of Finance</span>
+                                <span className="num text-ondark/70! text-[10px] xs:text-[11px]">Managing Director / Head of Marketing</span>
                             </div>
                             <h3 className="font-display text-[26px] xs:text-[30px] lg:text-[34px] leading-tight">
                                 Mr. Nilanga <em className="serif-em">Amunugama</em>
@@ -60,7 +60,7 @@ export default function DirectorsSection() {
                         </figure>
                         <div className="p-6 xs:p-8 lg:p-10 flex flex-col flex-1">
                             <div className="flex items-center justify-between mb-4">
-                                <span className="num text-ondark/70! text-[10px] xs:text-[11px]">Director / HR</span>
+                                <span className="num text-ondark/70! text-[10px] xs:text-[11px]">Director / HR & Finance</span>
                             </div>
                             <h3 className="font-display text-[26px] xs:text-[30px] lg:text-[34px] leading-tight">
                                 Mrs. L. Manisha <em className="serif-em">Amaratunga</em>
@@ -84,7 +84,7 @@ export default function DirectorsSection() {
                         </figure>
                         <div className="p-6 xs:p-8 lg:p-10 flex flex-col flex-1">
                             <div className="flex items-center justify-between mb-4">
-                                <span className="num text-ondark/70! text-[10px] xs:text-[11px]">Director</span>
+                                <span className="num text-ondark/70! text-[10px] xs:text-[11px]">Director / Foreign Affairs</span>
                             </div>
                             <h3 className="font-display text-[26px] xs:text-[30px] lg:text-[34px] leading-tight">
                                 Mr. Y. M. D. T. <em className="serif-em">Yatawara</em>

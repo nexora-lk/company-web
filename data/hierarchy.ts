@@ -58,7 +58,7 @@ export const orgHierarchy: OrgLevel[] = [
     id: "Asst General Manager",
     label: "Senior Management",
     variant: "named",
-    members: [{ name: "M. Shahjhan Samsudren", role: "Asst. General Manager", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842778/AGM.jpg_lhw8x5.png" }],
+    members: [{ name: "M Shahjhan Samsudern", role: "Asst. General Manager", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842778/AGM.jpg_lhw8x5.png" }],
   },
   {
     id: "Gemmologist",
@@ -92,7 +92,7 @@ export const orgHierarchy: OrgLevel[] = [
       { name: "R M S A K Kumara", role: "Deputy Provincial Head  01" , region: "North West / North Central", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842787/DPH5.jpg_xscnb6.png"},
       { name: "S Mathimaran", role: "Deputy Provincial Head" , region: "North & East", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842794/DPH4.jpg_qsc2xl.png"},
       { name: "MR.Balenthiran Vithushan", role: "Deputy Provincial Head" , region: "North and East", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842789/DPH3.jpg_uxjo9c.png"},
-      { name: "P P Kanaka Prasad", role: "Deputy Provincial Head" , region: "Southern", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842779/DPH.jpg_ecdb5n.png"},
+      { name: "P P Janaka Prasad", role: "Deputy Provincial Head" , region: "Southern", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842779/DPH.jpg_ecdb5n.png"},
     ],
   },
   {

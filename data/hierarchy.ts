@@ -99,7 +99,7 @@ export const orgHierarchy: OrgLevel[] = [
     id: "Micro Finance Unit Head",
     label: "Micro Finance Unit Head",
     variant: "named",
-    members: [{ name: "S C R Thisera", role: "Deputy Provincial Head" , region: "", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842780/DPH2.jpg_cruybe.png"},],
+    members: [{ name: "S C R Thisera", role: "Micro Finance Unit Head" , region: "Kuliyapitiya", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842780/DPH2.jpg_cruybe.png"},],
   },
   {
     id: "Regeonal Manager",

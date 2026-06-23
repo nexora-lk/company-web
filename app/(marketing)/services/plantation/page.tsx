@@ -85,7 +85,7 @@ export default function PlantationPage() {
                 }
                 descriptions={[
                     "Prestige Glamour owns and operates plantation estates across Sri Lanka's key agro-zones. " +
-                    "Each estate is run by a regional manager and open to direct investor participation."
+                    "Each estate is run by a regional manager and open to direct partner participation."
                 ]}
                 stats={[
                     { label: "Estates", value: "07", note: "Currently Operating" },

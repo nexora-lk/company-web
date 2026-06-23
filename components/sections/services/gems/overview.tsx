@@ -18,7 +18,7 @@ export default function OverviewSection() {
                         <h2 className="font-display text-3xl xs:text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[0.98] tracking-tightish text-midnight-blue reveal">
                             2,500 years of Sri Lankan <em className="serif-em text-sapphire-blue">gem heritage </em>
                             <br />
-                            and a 14-year investment track record.
+                            and a 14-year working capital track record.
                         </h2>
 
                         <div className="mt-8 xs:mt-10 space-y-5 xs:space-y-6 text-[14.5px] xs:text-[15.5px] text-mute leading-relaxed sm:leading-[1.75] font-light max-w-full sm:max-w-[640px] reveal">

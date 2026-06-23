@@ -86,7 +86,7 @@ export default function MicrofinancePage() {
                 }
                 descriptions={[
                     "PGG Microfinance operates a high-performance rural lending portfolio across 27+ branches. With 11,200+ active borrowers," +
-                    "24/7 investor support, and consistent returns, it is one of our most reliable solutions vehicles."
+                    "24/7 partner support, and consistent returns, it is one of our most reliable solutions vehicles."
                 ]}
                 stats={[
                     { label: "SMEs supported", value: "100", em: "+", note: "Target by 2026" },

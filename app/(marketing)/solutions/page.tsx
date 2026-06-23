@@ -77,7 +77,7 @@ export default function InvestmentPage() {
                     </>
                 }
                 descriptions={[
-                    "Seven working capital vehicles across plantation, microfinance, gems, FMCG, real estate, share market, and education — delivering 40-60% annual returns to 3,200+ active investors.",
+                    "Seven working capital vehicles across plantation, microfinance, gems, FMCG, real estate, share market, and education — delivering 40-60% annual returns to 3,200+ active partners.",
                     "Underwritten by Prestige Glamour Working Capital Solutions, audited by KPMG to ensure transparency and security."
                 ]}
                 stats={[

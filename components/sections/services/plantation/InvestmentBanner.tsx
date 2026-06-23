@@ -32,7 +32,7 @@ export default function PlantationInvestmentBanner() {
                                     & Joint Ventures.
                                 </h2>
                                 <p className="mt-4 sm:mt-6 max-w-full sm:max-w-[540px] text-ondark/75 text-[14px] sm:text-[16px] md:text-[17px] leading-[1.7] reveal">
-                                    Maximizing value through strategic plantation investments and sustainable growth. Join our 2026 expansion round today.
+                                    Maximizing value through strategic plantation working capital and sustainable growth. Join our 2026 expansion round today.
                                 </p>
                             </div>
 

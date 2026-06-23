@@ -36,7 +36,7 @@ export default function ValuesSection() {
 
                             <p className="relative mt-6 sm:mt-7 text-[14px] sm:text-[15px] text-white/60 leading-relaxed font-light max-w-md">
                                 Our values are not marketing words — they are how we protect your
-                                investment and our reputation at the same time.
+                                capital and our reputation at the same time.
                             </p>
 
                             <div className="relative mt-9 sm:mt-10 flex items-end justify-between border-t border-white/10 pt-6">

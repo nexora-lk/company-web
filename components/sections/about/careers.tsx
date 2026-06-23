@@ -36,7 +36,7 @@ export default function CareersSection() {
                                 </Link>
                                 <p className="text-ondark/70 text-xs sm:text-[13px] leading-relaxed max-w-md lg:text-right">
                                     We are always looking for people who want to work in real
-                                    operations — plantation, investment, finance, and management.
+                                    operations — plantation, finance, and management.
                                     <br />
                                     <span className="text-ondark font-medium">careers@prestigeglamour.lk</span>
                                 </p>

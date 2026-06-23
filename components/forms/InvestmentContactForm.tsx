@@ -81,7 +81,7 @@ export default function InvestmentContactForm() {
             className="col-span-12 md:col-span-1 lg:col-span-7 bg-bg text-ink rounded-lg sm:rounded-xl md:rounded-2xl lg:rounded-2xl p-4 sm:p-5 md:p-7 lg:p-8 xl:p-10 shadow-lg reveal"
         >
             <div className="mb-6 sm:mb-7 md:mb-8 lg:mb-10 reveal">
-                <div className="num text-xs sm:text-sm md:text-sm lg:text-base uppercase tracking-wider font-semibold mb-2 sm:mb-3">Investment Inquiry Form</div>
+                <div className="num text-xs sm:text-sm md:text-sm lg:text-base uppercase tracking-wider font-semibold mb-2 sm:mb-3">Working Capital Inquiry Form</div>
                 <h3 className="font-display text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl leading-tight text-midnight-blue">
                     Tell us where to start.
                 </h3>
@@ -137,7 +137,7 @@ export default function InvestmentContactForm() {
                     {fieldErrors.user_model && <p className="text-red-500 text-xs mt-1">{fieldErrors.user_model}</p>}
                 </label>
                 <label className="block reveal">
-                    <div className="num mb-2 sm:mb-2.5 text-[10px] sm:text-xs md:text-xs lg:text-sm uppercase tracking-wider font-semibold">05 — HOW MUCH WOULD YOU LIKE TO INVEST?</div>
+                    <div className="num mb-2 sm:mb-2.5 text-[10px] sm:text-xs md:text-xs lg:text-sm uppercase tracking-wider font-semibold">05 — HOW MUCH WOULD YOU LIKE TO WORKING CAPITAL?</div>
                     <select
                         name="user_ticket_size"
                         className="field bg-transparent focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-1 text-xs sm:text-sm md:text-sm lg:text-base px-3 sm:px-4 py-2 sm:py-2.5 md:py-3 lg:py-3"
@@ -152,7 +152,7 @@ export default function InvestmentContactForm() {
                     {fieldErrors.user_ticket_size && <p className="text-red-500 text-xs mt-1">{fieldErrors.user_ticket_size}</p>}
                 </label>
                 <label className="block md:col-span-2 mt-1 sm:mt-2 md:mt-3 reveal">
-                    <div className="num mb-2 sm:mb-2.5 text-[10px] sm:text-xs md:text-xs lg:text-sm uppercase tracking-wider font-semibold">06 — YOUR INVESTMENT GOALS</div>
+                    <div className="num mb-2 sm:mb-2.5 text-[10px] sm:text-xs md:text-xs lg:text-sm uppercase tracking-wider font-semibold">06 — YOUR WORKING CAPITAL GOALS</div>
                     <textarea
                         name="user_message"
                         className="field resize-none focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-1 text-xs sm:text-sm md:text-sm lg:text-base px-3 sm:px-4 py-2 sm:py-2.5 md:py-3 lg:py-3"

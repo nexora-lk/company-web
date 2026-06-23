@@ -30,8 +30,8 @@ export default function OverviewSection() {
                             </p>
                             <p>
                                 Today our loan book covers 11,200+ active borrowers, with a growing share
-                                held by women entrepreneurs. Investors co-fund this loan portfolio and receive
-                                monthly interest income, with principal returned at the end of the investment period.
+                                held by women entrepreneurs. Partners co-fund this loan portfolio and receive
+                                monthly working capital income, with principal returned at the end of the working capital period.
                             </p>
                         </div>
                     </div>

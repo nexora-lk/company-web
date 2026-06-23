@@ -81,7 +81,7 @@ export default function GemsPage() {
                 eyebrow="PGGC Gems · Est. 2013"
                 heading={
                     <>
-                        Invest in Sri Lankan gemstones.
+                        Working Capital in Sri Lankan gemstones.
                         <br />
                         <em className="serif-em">High-yield. Short-cycle. </em>
                         <br />
@@ -89,7 +89,7 @@ export default function GemsPage() {
                     </>
                 }
                 descriptions={[
-                    "PGG Gems is a certified gem mining and export business serving 14 countries globally. Investors co-fund gem mining " +
+                    "PGG Gems is a certified gem mining and export business serving 14 countries globally. Partners co-fund gem mining " +
                     "and export cycles, receiving distributions on completion.",
                 ]}
                 stats={[

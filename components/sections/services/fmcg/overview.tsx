@@ -31,7 +31,7 @@ export default function OverviewSection() {
                         <h2 className="font-display text-3xl xs:text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[0.98] tracking-tightish text-midnight-blue reveal">
                             Our plantation grows it. <em className="serif-em text-sapphire-blue">Our factory makes it.</em>
                             <br />
-                            You invest in the margin.
+                            You working capital in the margin.
                         </h2>
 
                         <div className="mt-8 xs:mt-10 space-y-4 xs:space-y-6 text-[14.5px] xs:text-[15.5px] leading-relaxed sm:leading-[1.75] text-mute max-w-full sm:max-w-[620px] font-light reveal">

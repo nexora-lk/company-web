@@ -180,7 +180,7 @@ export default function BranchLocatorSection() {
                     <div className="col-span-12 lg:col-span-5 reveal">
                         <p className="text-[13.5px] xs:text-[14px] sm:text-[14.5px] lg:text-base text-mute leading-[1.7] max-w-full sm:max-w-[440px] font-light">
                             Choose a province, pick a branch, and see its exact location on the map.
-                            All 27 offices are open to the investors whose capital we
+                            All 27 offices are open to the partners whose capital we
                             steward—walk in any time.
                         </p>
                     </div>

@@ -85,20 +85,20 @@ export default function AboutPage() {
                 eyebrow="Who We Are"
                 heading={
                     <>
-                        An investment company built on
+                        An working capital company built on
                         <em className="serif-em block sm:inline"> real </em>
-                        operations 14 years, 27 branches, 3,200+ investors.
+                        operations 14 years, 27 branches, 3,200+ partners.
                     </>
                 }
                 descriptions={[
                     "Prestige Glamour Working Capital Solutions was founded in 2013 with a clear mandate: to create direct solutions opportunities in real Sri Lankan businesses — for anyone, from anywhere, with capital to deploy.",
-                    "Today we operate 7 active divisions from our head office in Payagala, with 27 branches across 9 provinces and 800+ employees on direct payroll."
+                    "Today we operate 24 active divisions from our head office in Payagala, with 27 branches across 9 provinces and 800+ employees on direct payroll."
                 ]}
                 stats={[
                     { label: "Founded", value: "2013", note: "Year established" },
                     { label: "Branches", value: "27", em: "+", note: "Across 9 provinces" },
                     { label: "Employees", value: "800", em: "", note: "Direct payroll" },
-                    { label: "Investors", value: "3.2K", em: "+", note: "Active worldwide" }
+                    { label: "partners", value: "3.2K", em: "+", note: "Active worldwide" }
                 ]}
             />
             <OverviewSection />

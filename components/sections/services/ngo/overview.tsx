@@ -21,7 +21,7 @@ export default function OverviewSection() {
                             <span className="eyebrow text-[10px] sm:text-[11px] md:text-sm">Foundation Overview</span>
                         </div>
                         <h2 className="font-display text-[32px] sm:text-[40px] md:text-[48px] lg:text-[64px] xl:text-[72px] leading-[0.98] tracking-tightish text-midnight-blue">
-                            5% of group profits. <em className="serif-em text-sapphire-blue">Invested</em>
+                            5% of group profits. <em className="serif-em text-sapphire-blue">Funded</em>
                             <br />
                             in the communities that sustain us.
                         </h2>

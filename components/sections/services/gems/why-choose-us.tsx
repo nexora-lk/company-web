@@ -55,7 +55,7 @@ export default function WhyChooseUsSection() {
                         <span className="eyebrow">Why Choose PGG Gems</span>
                     </div>
                     <h2 className="font-display text-midnight-blue text-[30px] sm:text-[40px] md:text-[48px] lg:text-[54px] xl:text-[60px] leading-[0.98] tracking-tightish max-w-full md:max-w-4xl">
-                        Why investors <em className="serif-em text-sapphire-blue">choose</em>
+                        Why partners <em className="serif-em text-sapphire-blue">choose</em>
                         <br />
                         PGG Gems.
                     </h2>

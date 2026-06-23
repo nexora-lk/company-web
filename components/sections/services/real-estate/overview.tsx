@@ -2,6 +2,7 @@ import Photo from '@/components/ui/Photo';
 import ArrowIcon from '@/components/ui/ArrowIcon';
 import Leaf from "@/components/ui/Leaf";
 import { Check } from "lucide-react";
+import Link from "next/link";
 
 const DEV_AREAS = [
     'Agricultural land',
@@ -38,7 +39,7 @@ export default function OverviewSection() {
                                 ri Lanka&apos;s real estate market rewards patience and local knowledge.
                                 PGG Properties identifies undervalued land — from agricultural plots
                                 to undeveloped rural land — and develops them for sale at a significant
-                                premium. Investor capital is deployed into specific projects with a clearly
+                                premium. Partner capital is deployed into specific projects with a clearly
                                 defined development plan, target sale price, and expected return. Projects
                                 run 12–24 months, with profits distributed at completion.
                             </p>
@@ -59,9 +60,9 @@ export default function OverviewSection() {
                         </ul>
 
                         <div className="mt-8 sm:mt-9 md:mt-10 flex flex-wrap gap-2 sm:gap-3 reveal">
-                            <a href="#enquire" className="btn btn-primary text-[13px] sm:text-[14px] md:text-base">
+                            <Link href="/solutions" className="btn btn-primary text-[13px] sm:text-[14px] md:text-base">
                                 Invest with us <ArrowIcon size={14} className="ml-1" />
-                            </a>
+                            </Link>
                         </div>
                     </div>
 

@@ -24,26 +24,26 @@ export default function OverviewSection() {
                                 <span className="font-display text-4xl xs:text-5xl text-ink float-left mr-3 leading-[0.8] mt-1">
                                     P
                                 </span>
-                                restige Glamour Working Capital Solutions was built on a simple belief: investors
+                                restige Glamour Working Capital Solutions was built on a simple belief: partners
                                 deserve to see exactly where their money goes, and to receive returns that reflect
                                 real business performance — not projections or promises.
                             </p>
                             <p>
                                 Since 2013, I have worked alongside our leadership to deploy capital across seven
                                 divisions with complete financial transparency, audits, and a commitment to paying
-                                every investor on time. As Managing Director, I oversee the systems that make this
+                                every partner on time. As Managing Director, I oversee the systems that make this
                                 possible.
                             </p>
                             <p>
-                                Our 23 branches across 8 provinces are not just offices — they are proof that we
+                                Our 27 branches across 9 provinces are not just offices — they are proof that we
                                 operate at scale, on the ground, with real people managing real assets. Every
-                                investor payment flows through our financial controls. Every division's performance
+                                partner payment flows through our financial controls. Every division&#39;s performance
                                 is verified by my team. Every audit bears my signature.
                             </p>
                             <p>
-                                By bringing overseas investment into Sri Lankan agriculture, gems, real estate,
+                                By bringing overseas working capital into Sri Lankan agriculture, gems, real estate,
                                 and enterprise, we increase foreign exchange to the island while delivering
-                                strong returns to our investors. We do this openly, with audited numbers.
+                                strong returns to our partners. We do this openly, with audited numbers.
                             </p>
                         </div>
 
@@ -52,7 +52,7 @@ export default function OverviewSection() {
                                 <div className="font-display text-2xl xs:text-[26px] leading-none text-midnight-blue">
                                     Nilanga Amunugama
                                 </div>
-                                <div className="num mt-2 text-sapphire-blue">Managing Director · Finance & Operations</div>
+                                <div className="num mt-2 text-sapphire-blue">Managing Director / Head of Marketing</div>
                                 <div className="num mt-2 text-sapphire-blue">Prestige Glamour Group of Company</div>
                             </div>
                             <div className="hidden md:block hairline-strong w-16"></div>

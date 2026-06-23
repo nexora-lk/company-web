@@ -77,7 +77,7 @@ export default function NGOPage() {
                 eyebrow="PGG Foundation · Community Impact · Est. 2015"
                 heading={
                     <>
-                        Investing in Sri Lanka&#39;s communities because
+                        Working Capital in Sri Lanka&#39;s communities because
                         <br />
                         <em className="serif-em">growth </em> that doesn&#39;t
                         <br />

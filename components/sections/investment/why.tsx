@@ -22,14 +22,14 @@ const reasons: Reason[] = [
         num: "02",
         icon: FileCheck2,
         title: <>Transparent <em className="serif-em text-sapphire-blue">reporting.</em></>,
-        body: "Every investor receives the same quarterly financial report, audited by KPMG. Returns are calculated on actual revenue — not projections. You see exactly what your money earned.",
+        body: "Every partner receives the same quarterly financial report, audited by KPMG. Returns are calculated on actual revenue — not projections. You see exactly what your money earned.",
         proof: "Audited quarterly by KPMG",
     },
     {
         num: "03",
         icon: BadgeCheck,
         title: <>Consistent payment <em className="serif-em text-sapphire-blue">history.</em></>,
-        body: "14 years of operation, paying every month and every year — to investors ranging from LKR 200,000 first-timers to multi-crore long-term partners.",
+        body: "14 years of operation, paying every month and every year — to partners ranging from LKR 200,000 first-timers to multi-crore long-term partners.",
         proof: "14 years · paid on schedule",
     },
 ];
@@ -44,15 +44,15 @@ export default function WhySection() {
                 <div className="max-w-2xl mx-auto text-center mb-12 sm:mb-16 reveal">
                     <div className="flex items-center justify-center gap-2 sm:gap-3 mb-5 sm:mb-6">
                         <span className="hairline-strong w-10 sm:w-14"></span>
-                        <span className="eyebrow text-[10px] sm:text-[11px]">Why Invest with PGGC?</span>
+                        <span className="eyebrow text-[10px] sm:text-[11px]">Why Partner with PGGC?</span>
                         <span className="hairline-strong w-10 sm:w-14"></span>
                     </div>
                     <h2 className="font-display text-[34px] sm:text-[46px] md:text-[54px] lg:text-[58px] leading-[0.99] tracking-tightish text-midnight-blue">
-                        Three reasons 3,200+ <em className="serif-em text-sapphire-blue">investors</em> keep reinvesting.
+                        Three reasons 3,200+ <em className="serif-em text-sapphire-blue">partners</em> keep growing with us.
                     </h2>
                     <p className="mt-5 sm:mt-6 text-mute text-[14px] sm:text-[15px] leading-[1.7] max-w-xl mx-auto">
                         We are operators of real businesses — and we have been since 2013.
-                        Here is why investors trust us with their capital, in plain language.
+                        Here is why partners trust us with their capital, in plain language.
                     </p>
                 </div>
 

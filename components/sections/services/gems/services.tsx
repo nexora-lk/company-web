@@ -20,7 +20,7 @@ export default function GemServicesSection() {
                     <p className="mt-4 sm:mt-6 text-[13.5px] sm:text-[15px] text-mute leading-[1.7] max-w-full sm:max-w-md lg:max-w-xl">
                         From sourcing and certification to cutting, polishing, and worldwide
                         shipping— complete gemstone services for collectors, jewelers, and
-                        investors.
+                        partners.
                     </p>
                 </div>
 

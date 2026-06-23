@@ -130,7 +130,7 @@ export default function PortfolioSection() {
                     </div>
                     <div className="max-w-full sm:max-w-[440px] lg:text-right">
                         <p className="text-[13px] xs:text-[14px] sm:text-[15px] md:text-base text-mute leading-relaxed font-light">
-                            Each estate is managed by a regional team and audited by KPMG on the same quarterly basis. Investors may visit any estate at any time.
+                            Each estate is managed by a regional team and audited by KPMG on the same quarterly basis. Partners may visit any estate at any time.
                         </p>
                     </div>
                 </div>

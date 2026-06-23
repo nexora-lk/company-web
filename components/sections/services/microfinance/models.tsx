@@ -47,7 +47,7 @@ export default function ModelsSection() {
                             <span className="eyebrow text-[10px] sm:text-[11px] md:text-sm">Operating Models</span>
                         </div>
                         <h2 className="font-display text-[32px] sm:text-[40px] md:text-[48px] lg:text-[60px] xl:text-[72px] leading-[0.98] tracking-tightish text-midnight-blue">
-                            How investor <em className="serif-em text-sapphire-blue">capital</em>
+                            How partner <em className="serif-em text-sapphire-blue">capital</em>
                             <br />
                             is deployed.
                         </h2>
@@ -55,7 +55,7 @@ export default function ModelsSection() {
                     <p className="text-[13px] sm:text-[14px] md:text-[14.5px] text-mute leading-[1.6] sm:leading-[1.7] max-w-70 sm:max-w-80 md:max-w-85">
                         We don&apos;t take your capital and hope for results. We deploy it through proven
                         lending structures — each designed, tested, and optimised for consistent,
-                        recoverable returns to our investors.
+                        recoverable returns to our partners.
                     </p>
                 </div>
 

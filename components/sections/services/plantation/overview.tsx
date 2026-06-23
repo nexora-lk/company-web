@@ -46,14 +46,14 @@ export default function OverviewSection() {
                             <span className="eyebrow text-[10px] xs:text-xs">Plantation Overview</span>
                         </div>
                         <h2 className="font-display text-3xl xs:text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[0.98] tracking-tightish text-midnight-blue reveal">
-                            Invest in Sri Lanka&apos;s <em className="serif-em text-sapphire-blue">most transparent </em>
+                            Working Capital in Sri Lanka&apos;s <em className="serif-em text-sapphire-blue">most transparent </em>
                             <br />
                             plantation operation.
                         </h2>
                         <p className="mt-6 xs:mt-8 text-[14px] xs:text-[15px] text-mute leading-relaxed sm:leading-[1.75] max-w-full sm:max-w-[620px] font-light reveal">
                             Our plantation division manages a growing portfolio of owned
                             and leased agricultural land, producing high-value export crops
-                            including ginger, mango, watermelon, and specialty produce. Investor
+                            including ginger, mango, watermelon, and specialty produce. partner
                             capital is deployed directly into specific crop cycles. Every plot
                             is tracked transparently across all operations.
                         </p>

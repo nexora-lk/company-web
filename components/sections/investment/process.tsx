@@ -34,7 +34,7 @@ const steps: Step[] = [
         icon: FileText,
         youDo: "Request a quotation for your preferred solutions model. Choose your solutions amount and division.",
         weDo: "Prepare a personalized quote based on your solutions amount and selected model.",
-        youGet: "Personalized Investment Quotation",
+        youGet: "Personalized Working Capital Quotation",
     },
     {
         num: "02",
@@ -67,7 +67,7 @@ const steps: Step[] = [
             "Bank details",
             "Original deposit receipt"
         ],
-        youGet: "Formal Investment Proposal",
+        youGet: "Formal Working Capital Proposal",
     },
     {
         num: "05",
@@ -83,7 +83,7 @@ const steps: Step[] = [
         icon: PenTool,
         youDo: "Sign the solutions agreement.",
         weDo: "Counter-sign the agreement and issue an official solutions certificate.",
-        youGet: "Official Investment Certificate",
+        youGet: "Official Working Capital Certificate",
     },
     {
         num: "07",
@@ -99,7 +99,7 @@ const steps: Step[] = [
         icon: Scale,
         youDo: "Sign the final documents in the presence of the company lawyer.",
         weDo: "Complete the process, provide a copy of the signed agreement, and secure original documents.",
-        youGet: "Signed Investment Agreement copy",
+        youGet: "Signed Working Capital Agreement copy",
     }
 ];
 
@@ -117,11 +117,11 @@ export default function ProcessSection() {
                 <div className="flex flex-col items-center text-center mb-12 sm:mb-16 reveal">
                     <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
                         <span className="hairline-strong w-12 sm:w-16"></span>
-                        <span className="eyebrow text-[10px] sm:text-[11px] uppercase tracking-widest text-mute">Investment Process Guide</span>
+                        <span className="eyebrow text-[10px] sm:text-[11px] uppercase tracking-widest text-mute">Working Capital Process Guide</span>
                         <span className="hairline-strong w-12 sm:w-16"></span>
                     </div>
                     <h2 className="font-display text-[36px] sm:text-[48px] md:text-[56px] lg:text-[60px] leading-[0.98] tracking-tightish max-w-[800px] text-midnight-blue">
-                        Your Investment Journey — <br className="hidden sm:block" />
+                        Your Working Capital Journey<br className="hidden sm:block" />
                         <em className="serif-em text-sapphire-blue">Eight Simple Steps</em>
                     </h2>
 
@@ -256,7 +256,7 @@ export default function ProcessSection() {
                             <AlertCircle className="w-6 h-6 text-sapphire-blue" />
                         </div>
                         <div>
-                            <h4 className="font-display text-[20px] sm:text-[24px] mb-2.5 text-midnight-blue">Important Note for Investors</h4>
+                            <h4 className="font-display text-[20px] sm:text-[24px] mb-2.5 text-midnight-blue">Important Note for Partners</h4>
                             <p className="text-ink leading-[1.6] text-[14.5px] sm:text-[15.5px] font-light">
                                 When claiming your returns, you must present your <span className="font-semibold text-midnight-blue">original investment agreement</span> and <span className="font-semibold text-midnight-blue">company certificate</span> at least one week before the scheduled return date.
                             </p>

@@ -132,7 +132,7 @@ export default function CalculatorSection() {
           <div className="w-full lg:w-5/12 lg:sticky lg:top-24 reveal">
             <div className="flex items-center gap-2 sm:gap-3 mb-5 sm:mb-6">
               <span className="hairline-strong w-16 sm:w-24"></span>
-              <span className="eyebrow text-[10px] sm:text-[11px] uppercase tracking-widest text-mute">Investment Calculator</span>
+              <span className="eyebrow text-[10px] sm:text-[11px] uppercase tracking-widest text-mute">Working Capital Calculator</span>
             </div>
             <h2 className="font-display text-[36px] sm:text-[48px] md:text-[56px] lg:text-[60px] leading-[0.98] tracking-tightish mb-6 text-midnight-blue">
               Project your <br className="hidden sm:block" />

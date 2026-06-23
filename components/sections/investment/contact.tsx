@@ -14,10 +14,10 @@ export default function ContactSection() {
                             <div className="flex-1">
                                 <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight sm:leading-[1.15] md:leading-[1.1] lg:leading-[1.05] xl:leading-[0.95] tracking-tight mt-1 sm:mt-2 md:mt-3 lg:mt-4 xl:mt-6">
                                     Speak directly
-                                    <span className="block">with our <em className="serif-em">investment</em> team.</span>
+                                    <span className="block">with our <em className="serif-em">working capital </em> team.</span>
                                 </h2>
                                 <p className="mt-4 sm:mt-5 md:mt-6 lg:mt-8 xl:mt-10 max-w-full lg:max-w-md text-ondark/85 text-xs sm:text-sm md:text-base lg:text-base xl:text-lg leading-relaxed sm:leading-[1.65] md:leading-[1.7] lg:leading-[1.75] xl:leading-[1.8]">
-                                    Submit the form below or call us directly. We respond on the same working day. Overseas investors can reach us via WhatsApp or video call — we serve investors from 30+ countries.
+                                    Submit the form below or call us directly. We respond on the same working day. Overseas partners can reach us via WhatsApp or video call — we serve partners from 30+ countries.
                                 </p>
 
                                 <div className="mt-8 sm:mt-10 md:mt-12 lg:mt-14 xl:mt-16 space-y-2.5 sm:space-y-3 md:space-y-4 lg:space-y-5 text-xs sm:text-sm md:text-base lg:text-base xl:text-lg">
@@ -42,7 +42,7 @@ export default function ContactSection() {
                                     2026 Round <em className="serif-em">open</em>
                                 </div>
                                 <div className="text-xs sm:text-sm md:text-base lg:text-base xl:text-lg text-ondark/75 mt-2 sm:mt-3 md:mt-4 leading-relaxed font-light">
-                                    Accepting new investors worldwide. Contact us for availability by division.
+                                    Accepting new partners worldwide. Contact us for availability by division.
                                 </div>
                             </div>
                         </div>

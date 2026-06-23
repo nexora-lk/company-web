@@ -36,7 +36,7 @@ const models: Model[] = [
             { icon: Banknote, label: "Min. ticket", value: "LKR 200,000" },
             { icon: RefreshCw, label: "After 1 year", value: "Withdraw or reinvest" },
         ],
-        bestFor: "Best for investors who want regular cash flow",
+        bestFor: "Best for partners who want regular cash flow",
     },
     {
         num: "02",
@@ -51,7 +51,7 @@ const models: Model[] = [
             { icon: Banknote, label: "Min. ticket", value: "LKR 200,000" },
             { icon: RefreshCw, label: "After 1 year", value: "Withdraw or compound" },
         ],
-        bestFor: "Best for investors maximising long-term growth",
+        bestFor: "Best for partners maximising long-term growth",
         highlight: "Highest yield",
         dark: true,
     },
@@ -67,16 +67,16 @@ export default function ModelsSection() {
                     <div>
                         <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
                             <span className="hairline-strong w-[80px] sm:w-[120px]"></span>
-                            <span className="eyebrow text-[10px] sm:text-[11px]">Investment Models</span>
+                            <span className="eyebrow text-[10px] sm:text-[11px]">Working Capital Models</span>
                         </div>
                         <h2 className="font-display text-[36px] sm:text-[48px] md:text-[56px] lg:text-[60px] leading-[0.98] tracking-tightish max-w-[820px] text-midnight-blue">
-                            Two investment vehicles. <em className="serif-em text-sapphire-blue">One </em>
+                            Two pathways. <em className="serif-em text-sapphire-blue">One </em>
                             <br className="hidden sm:block" />
                             standard of transparency.
                         </h2>
                     </div>
                     <p className="text-[13.5px] sm:text-[14.5px] text-mute leading-[1.7] max-w-full sm:max-w-[340px] mt-2 lg:mt-0">
-                        Mix-and-match permitted — many of our investors hold positions across both
+                        Mix-and-match permitted — many of our partners hold positions across both
                         vehicles at once for diversified returns.
                     </p>
                 </div>

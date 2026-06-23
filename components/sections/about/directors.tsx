@@ -13,13 +13,13 @@ export default function DirectorsSection() {
                         <span className="hairline-strong w-12 xs:w-16 sm:w-[60px]"></span>
                     </div>
                     <h2 className="font-display text-3xl xs:text-4xl sm:text-5xl lg:text-6xl leading-[0.98] tracking-tightish text-midnight-blue">
-                        Directors Board.
+                        Board of Directors
                     </h2>
                     <p className="mt-4 xs:mt-6 text-mute text-[14px] xs:text-[15px] leading-[1.7] max-w-full sm:max-w-[480px] mx-auto font-light">
                         Three leaders who personally oversee capital deployment across all divisions.
-                        Continuous audits. Full financial transparency. Direct investor access.
+                        Continuous audits. Full financial transparency. Direct partner access.
                         They don&#39;t hide behind corporate structures—they sign every statement,
-                        approve every investment, and stake their reputations on consistent returns.
+                        approve every working capital, and stake their reputations on consistent returns.
                     </p>
                 </div>
 

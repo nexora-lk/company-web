@@ -108,11 +108,11 @@ export default function HeroSection() {
                                text-[50px] xs:text-[58px] sm:text-[66px] md:text-[78px] lg:text-[94px] xl:text-[112px]
                                leading-[0.92] tracking-tight text-[#f1ece0]
                                max-w-[13ch] sm:max-w-[15ch] md:max-w-[17ch] lg:max-w-[20ch] xl:max-w-none">
-                    Invest in Sri Lanka
+                    Working Capital for
                     <br />
-                    Get{' '}
+                    Sri Lanka&#39;s{' '}
                     <span className="bg-gradient-to-r from-[#f5d98b] via-[#d4af37] to-[#f5d98b] bg-clip-text text-transparent">
-                        Real Returns
+                        Real Operations
                     </span>
                 </h1>
 
@@ -122,7 +122,7 @@ export default function HeroSection() {
                               text-[#f1ece0]/75
                               text-[15px] sm:text-[16.5px] md:text-[17.5px]
                               leading-[1.65] sm:leading-[1.7]">
-                    Sri Lanka&apos;s most transparent investment platform — and we&apos;re not fund
+                    Sri Lanka&apos;s most transparent working capital solutions provider — and we&apos;re not fund
                     managers. We operate the assets ourselves: plantations, gem mines, real estate,
                     microfinance, and consumer goods. Real operations, real returns.
                 </p>
@@ -139,11 +139,11 @@ export default function HeroSection() {
                                    hover:-translate-y-0.5 hover:bg-[#d4af37] hover:text-[#0a0e4d]
                                    hover:shadow-2xl hover:shadow-[#d4af37]/20"
                     >
-                        Explore Investment Options
+                        Explore Our Solutions
                         <ArrowIcon size={15} className="ml-0.5 group-hover:translate-x-1" />
                     </Link>
                     <Link
-                        href="/investment#calculator"
+                        href="/solutions#calculator"
                         id="hero-cta-secondary"
                         className="btn w-full sm:w-auto min-w-0 sm:min-w-[210px] justify-center
                                    text-[#f1ece0] bg-[#f1ece0]/5 backdrop-blur-md

@@ -51,7 +51,7 @@ export const gemstoneCollection = [
             'Exceptional clarity in premium grades',
             'Strong fluorescence',
             'Collectible quality',
-            'High investment value',
+            'High solutions value',
         ],
         applications: [
             'Premium jewelry',

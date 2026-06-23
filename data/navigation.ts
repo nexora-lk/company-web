@@ -23,7 +23,7 @@ export const primaryNav: NavLink[] = [
     ]
   },
   { label: "Gallery", href: "/gallery" },
-  { label: "Investment Plans", href: "/investment" },
+  { label: "Our Solutions", href: "/solutions" },
 ];
 
 export const footerColumns: FooterColumn[] = [
@@ -43,9 +43,9 @@ export const footerColumns: FooterColumn[] = [
     links: [
       { label: "Home", href: "/" },
       { label: "About", href: "/about" },
-      // { label: "Gallery", href: "/gallery" },
+      { label: "Gallery", href: "/gallery" },
       { label: "Careers", href: "/about/careers" },
-      { label: "Investment Plans", href: "/investment" },
+      { label: "Our Solutions", href: "/solutions" },
     ],
   },
   {

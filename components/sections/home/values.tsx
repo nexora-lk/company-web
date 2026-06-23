@@ -30,7 +30,7 @@ export default function ValuesSection() {
 
                             <h2 className="relative font-display text-3xl xs:text-4xl sm:text-5xl lg:text-[3.1rem] leading-none tracking-tightish text-white">
                                 Six principles. Behind{' '}
-                                <em className="serif-em text-light-gold">every</em> investment,
+                                <em className="serif-em text-light-gold">every</em> facility,
                                 every return, every handshake.
                             </h2>
 

@@ -21,12 +21,12 @@ export default function ContactSection() {
                         />
 
                         <h2 className="font-display text-[32px] sm:text-[44px] md:text-[52px] lg:text-[60px] xl:text-[72px] leading-[1.0] tracking-tightish text-midnight-blue">
-                            Ready to <em className="serif-em text-sapphire-blue">Invest? </em> Let&#39;s Talk.
+                            Ready to <em className="serif-em text-sapphire-blue">Partner? </em> Let&#39;s Talk.
                         </h2>
 
                         <p className="mt-5 sm:mt-7 text-mute text-[14px] sm:text-[15px] md:text-base leading-[1.7] max-w-full sm:max-w-[480px]">
-                            Whether you have LKR 200,000 or LKR 200 million, we have an investment vehicle for you.
-                            Tell us your investment amount and interests, and our team will respond within one working day.
+                            Whether you have LKR 200,000 or LKR 200 million, we have a working capital solution for you.
+                            Tell us your requirement and interests, and our team will respond within one working day.
                         </p>
 
                         <div className="mt-8 sm:mt-10 md:mt-12 space-y-4 sm:space-y-5">

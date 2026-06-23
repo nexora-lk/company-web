@@ -34,7 +34,7 @@ export default function AboutSection() {
                                 14<em className="serif-em text-sapphire-blue">y</em>ears
                             </div>
                             <div className="mt-4 text-[13px] xl:text-[14px] text-mute leading-relaxed font-light">
-                                of delivering real returns to 3,200+ investors across seven Sri Lankan investment vehicles.
+                                of delivering real returns to 3,200+ partners across seven Sri Lankan working capital divisions
                             </div>
                         </div>
 
@@ -60,25 +60,24 @@ export default function AboutSection() {
                         </div>
 
                         <h2 className="font-display text-3xl xs:text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[0.98] tracking-tightish text-midnight-blue reveal">
-                            We invest in <em className="serif-em text-sapphire-blue">real </em>
+                            We deploy capital into <em className="serif-em text-sapphire-blue">real </em>
                             <br />
-                            operations and share the
-                            <br />
-                            returns with you.
+                            operations.
                         </h2>
 
                         <div className="mt-6 xs:mt-8 sm:mt-10 max-w-full sm:max-w-[640px] reveal">
                             <p className="text-[14.5px] xs:text-[15.5px] leading-relaxed text-mute font-light">
-                                Prestige Glamour Working Capital Solutions was founded in 2013 with one clear purpose: to give investors direct access to real, operating Sri Lankan businesses. We are actual operators — running seven productive divisions including plantation, microfinance, and gems. We open these operations to investors who want transparency and real assets.
+                                Prestige Glamour Working Capital Solutions was founded in 2013 with one clear purpose: to give partners direct access to real, operating Sri Lankan businesses.
+                                We are actual operators — running seven productive divisions including plantation, microfinance, and gems. We open these operations to partners who want transparency and real assets.
                             </p>
                         </div>
 
                         <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4 reveal">
                             <Link className="btn text-midnight-blue border border-1 hover:border-midnight-blue w-full sm:w-max justify-center px-6 xl:px-8" href="#services">
-                                Our Investment Options  <ArrowIcon size={16} className="ml-1" />
+                                Our Solutions <ArrowIcon size={16} className="ml-1" />
                             </Link>
-                            <Link className="btn btn-primary w-full sm:w-max justify-center px-6 xl:px-8" href="/investment#process">
-                                How to Invest  <ArrowIcon type="up-right" size={16} className="ml-1" />
+                            <Link className="btn btn-primary w-full sm:w-max justify-center px-6 xl:px-8" href="/solutions#process">
+                                How to Partner <ArrowIcon type="up-right" size={16} className="ml-1" />
                             </Link>
                         </div>
                     </div>

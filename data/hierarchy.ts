@@ -74,7 +74,7 @@ export const orgHierarchy: OrgLevel[] = [
       { name: "Thurai Athithan", role: "Provincial Head" , region: "North East ", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842779/PH.jpg_yiuksc.png"},
       { name: "K. Mathikumar", role: "Provincial Head", region: "North East", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842806/PH4.jpg_sybzst.png" },
       { name: "Deeptha Leelaratne", role: "Provincial Head", region: "North West/ North Central", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781846142/PH2_tcrtrv.png" },
-      { name: "D S Solamon", role: "Provincial Head 02" , region: "North East", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842814/PH3.jpg_vca1r5.png"},
+      { name: "D S Solamon", role: "Provincial Head" , region: "North East", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842814/PH3.jpg_vca1r5.png"},
     ],
   },
   {
@@ -123,9 +123,9 @@ export const orgHierarchy: OrgLevel[] = [
       { name: "Kumudu Senanayaka", role: "Regeonal Manager" , region: "Mathara", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842798/RM17_yuz2xp.png"},
       { name: "A D K N Dasanayaka", role: "Regeonal Manager" , region: "Kuliyapitiya", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842809/RM11.jpg_jkzhfm.png"},
       { name: "P. Basakaran", role: "Regeonal Manager" , region: "Batticoloa", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842811/RM12.jpg_ycgz0t.png"},
-      { name: "Pathuma", role: "Regeonal Manager" , region: "", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842790/RM13.jpg_a3klzf.png"},
+      { name: "Balaiya Vinayagamoorthy", role: "Regeonal Manager" , region: "Ampara", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842790/RM13.jpg_a3klzf.png"},
       { name: "Balasundram Chandreswaran", role: "Regeonal Manager" , region: "Kalmunai", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842785/RM15.jpg_fx99tf.png"},
-      { name: "Tariq Bongso", role: "Regeonal Manager" , region: "Kabdana", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781875828/IMG_20260619_165915_czrvjq.png"},
+      { name: "Tariq Bongso", role: "Regeonal Manager" , region: "Kandana", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781875828/IMG_20260619_165915_czrvjq.png"},
     ],
   },
 ];

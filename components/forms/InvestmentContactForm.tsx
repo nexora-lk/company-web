@@ -164,7 +164,7 @@ export default function InvestmentContactForm() {
                 </label>
             </div>
 
-            {/* Hidden fields for inquiry variables not in investment form */}
+            {/* Hidden fields for inquiry variables not in solutions form */}
             <input type="hidden" name="user_country" value="" />
             <input type="hidden" name="user_role" value="" />
 

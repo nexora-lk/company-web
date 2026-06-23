@@ -39,7 +39,7 @@ export default function RoughGemsSection() {
                                 },
                                 {
                                     title: 'Investment Grade Specimens',
-                                    desc: 'Each rough stone carries significant potential for cutting, trading, and investment purposes with complete traceability.',
+                                    desc: 'Each rough stone carries significant potential for cutting, trading, and solutions purposes with complete traceability.',
                                 },
                             ].map((b, i) => (
                                 <div key={i} className="flex gap-3 sm:gap-4 reveal">

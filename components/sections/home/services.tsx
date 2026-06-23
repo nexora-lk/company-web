@@ -11,7 +11,7 @@ const services = [
         num: '01',
         title: 'Plantation',
         tag: 'Agriculture · Estates',
-        body: 'We own and operate plantation estates across Sri Lanka\'s key agro-zones. Each estate is run by a regional manager and open to direct investor participation.',
+        body: 'We own and operate plantation estates across Sri Lanka\'s key agro-zones. Each estate is run by a regional manager and open to direct partner participation.',
     },
     {
         href: '/services/microfinance',
@@ -20,7 +20,7 @@ const services = [
         num: '02',
         title: 'Micro Finance',
         tag: '11,200+ borrowers',
-        body: 'Co-invest in our growing microfinance network across Sri Lanka. Build financial inclusion for 11,200+ active borrowers while earning steady returns.',
+        body: 'Partner in our growing microfinance network across Sri Lanka. Build financial inclusion for 11,200+ active borrowers while earning steady returns.',
     },
     {
         href: '/services/gems',
@@ -29,7 +29,7 @@ const services = [
         num: '03',
         title: 'Gems',
         tag: 'Export · 14 countries',
-        body: 'Gem mining and export operations serving 14 countries globally. High-value, short-cycle investments with direct access to distribution networks.',
+        body: 'Gem mining and export operations serving 14 countries globally. High-value, short-cycle facilities with direct access to distribution networks.',
     },
     {
         href: '/services/fmcg',
@@ -76,13 +76,13 @@ export default function ServicesSection() {
                             hairlineClassName="hairline-strong w-16 xs:w-20 sm:w-24 lg:w-[120px]"
                         />
                         <h2 className="font-display text-3xl xs:text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[0.98] tracking-tightish text-midnight-blue">
-                            <em className="serif-em text-sapphire-blue">Six Ways</em> to Invest With Us
+                            <em className="serif-em text-sapphire-blue">Six Ways</em> We Deploy Capital
                         </h2>
                     </div>
                     <div className="max-w-full sm:max-w-[440px] lg:text-right reveal">
                         <p className="text-[14px] xs:text-[15px] sm:text-base text-mute leading-relaxed font-light">
-                            We operate six active investment vehicles across Sri Lanka. Each division is
-                            independently managed, audited quarterly, and open to direct investor participation.
+                            We operate six active working capital divisions across Sri Lanka. Each division is
+                            independently managed, audited quarterly, and open to direct partner participation.
                         </p>
                     </div>
                 </div>

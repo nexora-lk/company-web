@@ -19,14 +19,14 @@ export default function AwardsSection() {
                         />
 
                         <h2 className="font-display text-3xl xs:text-4xl sm:text-5xl lg:text-6xl leading-[0.98] tracking-tightish text-midnight-blue">
-                            Trusted by 3,200+ <em className="serif-em text-sapphire-blue">Investors.</em>
+                            Trusted by 3,200+ <em className="serif-em text-sapphire-blue">Partners.</em>
                             <br />
                             Audited by KPMG.
                         </h2>
 
                         <div className="mt-5 xs:mt-6 md:mt-8 max-w-full sm:max-w-[600px] lg:max-w-none">
                             <p className="text-[14px] xs:text-[15px] leading-relaxed text-mute mb-4 xs:mb-5 font-light">
-                                Our financials are independently audited every quarter by KPMG Sri Lanka. Every investor sees the same disclosure — no selective reporting, no smoothed numbers.
+                                Our financials are independently audited every quarter by KPMG Sri Lanka. Every partner sees the same disclosure — no selective reporting, no smoothed numbers.
                             </p>
                             <p className="text-[14px] xs:text-[15px] leading-relaxed text-mute font-light">
                                 The certifications and recognition we hold come from doing things properly — not from promoting ourselves.

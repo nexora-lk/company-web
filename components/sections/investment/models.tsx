@@ -29,7 +29,7 @@ const models: Model[] = [
         rate: "40",
         title: "Monthly Returns",
         description:
-            "Need regular income? Receive 40% of your investment split across 12 monthly payouts, deposited straight to your bank — predictable cash flow, no waiting.",
+            "Need regular income? Receive 40% of your solutions split across 12 monthly payouts, deposited straight to your bank — predictable cash flow, no waiting.",
         features: [
             { icon: CalendarClock, label: "Payout", value: "Every month" },
             { icon: Wallet, label: "Annual return", value: "40% / year" },

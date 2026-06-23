@@ -132,7 +132,7 @@ export default function ContactForm() {
                         required
                     >
                         <option value="">Select...</option>
-                        <option value="Potential Investor">Investor</option>
+                        <option value="Potential Investor">Partner</option>
                         <option value="Business Partner">Trade buyer</option>
                         <option value="Media/Press">Co-operative partner</option>
                         <option value="Other">Journalist</option>

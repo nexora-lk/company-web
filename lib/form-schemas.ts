@@ -33,7 +33,7 @@ export const investmentContactFormSchema = z.object({
     user_name: z.string().min(2, 'Name must be at least 2 characters').max(100),
     user_phone: z.string().min(10, 'Phone number must be at least 10 digits'),
     user_email: z.string().email('Invalid email address'),
-    user_model: z.string().min(1, 'Please select an investment model'),
+    user_model: z.string().min(1, 'Please select an solutions model'),
     user_ticket_size: z.string().min(1, 'Please select a ticket size'),
     user_message: z.string().min(10, 'Message must be at least 10 characters').max(2000),
     user_country: z.string().optional(),

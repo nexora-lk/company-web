@@ -9,14 +9,14 @@ import ServiceHero from "@/components/sections/ServiceHero";
 export const metadata: Metadata = {
     title: 'Investment Opportunities | Prestige Glamour Group',
     description:
-        'Invest with Prestige Glamour Group. Explore proven investment models across plantation, microfinance, gems, hospitality, real estate, and agri-export sectors.',
+        'Invest with Prestige Glamour Group. Explore proven solutions models across plantation, microfinance, gems, hospitality, real estate, and agri-export sectors.',
     alternates: {
-        canonical: 'https://www.prestigeglamourgroupofcompany.com/investment',
+        canonical: 'https://www.prestigeglamourgroupofcompany.com/our-solutions',
     },
     openGraph: {
-        title: 'Investment Opportunities',
-        description: 'Multiple investment models across six strategic sectors with proven returns.',
-        url: 'https://www.prestigeglamourgroupofcompany.com/investment',
+        title: 'Our Solutions',
+        description: 'Multiple solutions models across six strategic sectors with proven returns.',
+        url: 'https://www.prestigeglamourgroupofcompany.com/our-solutions',
         type: 'website',
     },
 };
@@ -65,8 +65,8 @@ export default function InvestmentPage() {
             />
             <ServiceHero
                 backgroundImage="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1780117505/investment-hero_xust91.jpg"
-                ariaLabel="Investment Plans"
-                eyebrow="For investors · 2026 Round"
+                ariaLabel="Our Solutions"
+                eyebrow="For Partners · 2026 Round"
                 heading={
                     <>
                         Real Returns From Real
@@ -77,7 +77,7 @@ export default function InvestmentPage() {
                     </>
                 }
                 descriptions={[
-                    "Seven investment vehicles across plantation, microfinance, gems, FMCG, real estate, share market, and education — delivering 40-60% annual returns to 3,200+ active investors.",
+                    "Seven working capital vehicles across plantation, microfinance, gems, FMCG, real estate, share market, and education — delivering 40-60% annual returns to 3,200+ active investors.",
                     "Underwritten by Prestige Glamour Working Capital Solutions, audited by KPMG to ensure transparency and security."
                 ]}
                 stats={[

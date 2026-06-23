@@ -19,12 +19,12 @@ export default function ImpactSection() {
                         <h2 className="font-display text-3xl xs:text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[0.98] tracking-tightish text-midnight-blue">
                             Fourteen years <em className="serif-em text-sapphire-blue">measured</em>
                             <br />
-                            in investor returns, not promises.
+                            in partner outcomes.
                         </h2>
                     </div>
                     <div className="col-span-12 lg:col-span-5 lg:pb-2 reveal">
                         <p className="text-[14px] xs:text-[15px] sm:text-base text-mute leading-relaxed max-w-full sm:max-w-[440px] font-light">
-                            Independently audited by KPMG Sri Lanka. Numbers below are full-year 2025, presented in the same format shared with all 3,200+ active investors.
+                            Independently audited by KPMG Sri Lanka. Numbers below are full-year 2025, presented in the same format shared with all 3,200+ active partners.
                         </p>
                     </div>
                 </div>

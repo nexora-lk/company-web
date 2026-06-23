@@ -142,7 +142,7 @@ export const InvestmentContactForm = ({
     if (!formData.email.includes('@')) newErrors.email = 'Valid email required'
     if (!formData.phone.trim()) newErrors.phone = 'Phone is required'
     if (formData.investmentAmount < 10000) {
-      newErrors.investmentAmount = 'Minimum investment is LKR 10,000'
+      newErrors.investmentAmount = 'Minimum solutions is LKR 10,000'
     }
     if (!formData.sector) newErrors.sector = 'Please select a sector'
 
@@ -248,7 +248,7 @@ import { InvestmentContactForm } from '../InvestmentContactForm'
 
 describe('InvestmentContactForm', () => {
   describe('Form Fields', () => {
-    it('renders all investment form fields', () => {
+    it('renders all solutions form fields', () => {
       render(<InvestmentContactForm />)
 
       expect(screen.getByPlaceholderText('Full Name')).toBeInTheDocument()
@@ -272,7 +272,7 @@ describe('InvestmentContactForm', () => {
       expect(screen.getByText(/minimum investment/i)).toBeInTheDocument()
     })
 
-    it('enforces minimum investment amount', async () => {
+    it('enforces minimum solutions amount', async () => {
       const user = userEvent.setup()
       render(<InvestmentContactForm />)
 
@@ -295,7 +295,7 @@ describe('InvestmentContactForm', () => {
   })
 
   describe('Submission', () => {
-    it('submits valid investment proposal', async () => {
+    it('submits valid solutions proposal', async () => {
       const user = userEvent.setup()
       const handleSuccess = jest.fn()
 
@@ -540,7 +540,7 @@ import { renderHook, act } from '@testing-library/react';
 import { useInvestmentCalculator } from '../useInvestmentCalculator';
 
 describe('useInvestmentCalculator', () => {
-    it('calculates investment returns correctly', () => {
+    it('calculates solutions returns correctly', () => {
         const { result } = renderHook(() => useInvestmentCalculator());
 
         act(() => {

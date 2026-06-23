@@ -459,7 +459,7 @@ test.describe('Contact Form', () => {
 #### Pattern 3: Investment Flow (Multi-step)
 
 ```typescript
-// e2e/investment-flow.spec.ts
+// e2e/solutions-flow.spec.ts
 import { test, expect } from '@playwright/test';
 
 test.describe('Investment Flow', () => {

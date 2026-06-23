@@ -24,8 +24,8 @@ export default function Footer() {
                             </div>
                         </div>
                         <p className="font-display text-[32px] sm:text-[36px] md:text-[40px] lg:text-[44px] xl:text-[48px] leading-[1.05] tracking-tightish max-w-110">
-                            Two investment vehicles. One <em className="serif-em">standard</em>.<br />
-                            Building investor wealth since 2013.
+                            Two working capital divisions. One <em className="serif-em">standard</em>.<br />
+                            Building  partner businesses since 2013.
                         </p>
                     </div>
 

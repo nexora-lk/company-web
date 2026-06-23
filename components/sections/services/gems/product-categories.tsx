@@ -9,7 +9,7 @@ export default function ProductCategoriesSection() {
             subtitle: "Sri Lanka's Flagship Gemstone",
             image: 'https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781433148/Blue-Sapphire_mniify.jpg',
             description:
-                'The crown jewel of Sri Lankan gems. Our blue sapphires from Ratnapura deposits are renowned globally for exceptional deep blue hues, transparency, and investment-grade quality.',
+                'The crown jewel of Sri Lankan gems. Our blue sapphires from Ratnapura deposits are renowned globally for exceptional deep blue hues, transparency, and solutions-grade quality.',
             highlights: [
                 'Cornflower to deep blue hues',
                 'Exceptional transparency',
@@ -40,7 +40,7 @@ export default function ProductCategoriesSection() {
                 'Saturated red to deep crimson',
                 'Vibrant green emeralds',
                 'Exceptional clarity',
-                'High investment value',
+                'High solutions value',
             ],
         },
         {

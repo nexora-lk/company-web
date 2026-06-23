@@ -34,7 +34,7 @@ export default function VisionSection() {
                         </div>
 
                         <p className="relative font-display text-2xl xs:text-3xl sm:text-[32px] lg:text-[36px] xl:text-[40px] leading-[1.12] tracking-tightish text-midnight-blue mt-8 sm:mt-10">
-                            To be Sri Lanka&#39;s <em className="serif-em text-sapphire-blue">most trusted</em> investment company
+                            To be Sri Lanka&#39;s <em className="serif-em text-sapphire-blue">most trusted</em> working capital company
                             and proof that real operations deliver real returns.
                         </p>
 
@@ -62,7 +62,7 @@ export default function VisionSection() {
                         </div>
 
                         <p className="relative font-display text-2xl xs:text-3xl sm:text-[32px] lg:text-[36px] xl:text-[40px] leading-[1.12] tracking-tightish mt-8 sm:mt-10">
-                            To deliver consistent, <em className="serif-em text-light-gold">audited</em> returns to every investor — while employing 800+ Sri Lankans.
+                            To deliver consistent, <em className="serif-em text-light-gold">audited</em> returns to every partner — while employing 800+ Sri Lankans.
                         </p>
 
                         <div className="relative mt-auto pt-8 flex items-center gap-3">

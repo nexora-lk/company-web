@@ -275,43 +275,43 @@ describe('useContactForm', () => {
 
 ```typescript
 // __tests__/integration/InvestmentFlow.test.tsx
-import { render, screen, waitFor } from '@testing-library/react'
+import {render, screen, waitFor} from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import InvestmentPage from '@/app/(marketing)/investment/page'
-import { server } from '__tests__/setup/mswServer'
+import InvestmentPage from './solutions/page'
+import {server} from '__tests__/setup/mswServer'
 
 describe('Investment Flow', () => {
-  beforeAll(() => server.listen())
-  afterEach(() => server.resetHandlers())
-  afterAll(() => server.close())
+    beforeAll(() => server.listen())
+    afterEach(() => server.resetHandlers())
+    afterAll(() => server.close())
 
-  it('completes full investment inquiry', async () => {
-    render(<InvestmentPage />)
+    it('completes full solutions inquiry', async () => {
+        render(<InvestmentPage / >)
 
-    // User fills form
-    await userEvent.type(
-      screen.getByLabelText(/name/i),
-      'John Investor'
-    )
-    await userEvent.type(
-      screen.getByLabelText(/email/i),
-      'john@example.com'
-    )
-    await userEvent.type(
-      screen.getByLabelText(/amount/i),
-      '100000'
-    )
+        // User fills form
+        await userEvent.type(
+            screen.getByLabelText(/name/i),
+            'John Investor'
+        )
+        await userEvent.type(
+            screen.getByLabelText(/email/i),
+            'john@example.com'
+        )
+        await userEvent.type(
+            screen.getByLabelText(/amount/i),
+            '100000'
+        )
 
-    // Submit form
-    await userEvent.click(
-      screen.getByRole('button', { name: /submit/i })
-    )
+        // Submit form
+        await userEvent.click(
+            screen.getByRole('button', {name: /submit/i})
+        )
 
-    // Verify success
-    await waitFor(() => {
-      expect(screen.getByText(/thank you/i)).toBeInTheDocument()
+        // Verify success
+        await waitFor(() => {
+            expect(screen.getByText(/thank you/i)).toBeInTheDocument()
+        })
     })
-  })
 })
 ```
 

@@ -18,32 +18,32 @@ export const values: Value[] = [
   {
     no: "01",
     title: "Transparency First.",
-    body: "Every investor receives audited reports. We publish what we earn, what we spend, and what we return. No exceptions.",
+    body: "Every partner receives audited reports. We publish what we earn, what we spend, and what we return. No exceptions.",
   },
   {
     no: "02",
     title: "Real Assets Only.",
-    body: "We do not invest in speculation. Every rupee you place with us goes into land, crops, gems, or operating businesses — things you can see and visit.",
+    body: "We do not speculate. Every rupee you place with us goes into land, crops, gems, or operating businesses — things you can see and visit.",
   },
   {
     no: "03",
     title: "Returns on Schedule.",
-    body: "We pay on time, every time. Our 14-year track record shows consistent returns across all seven investment divisions, regardless of market conditions.",
+    body: "We pay on time, every time. Our 14-year track record shows consistent returns across all seven operating divisions, regardless of market conditions.",
   },
   {
     no: "04",
-    title: "Investor Access.",
-    body: "You can visit any operation at any time. Walk the plantations, see the gem workshops, meet the microfinance teams. Your investment is never hidden behind a desk.",
+    title: "Partner Access.",
+    body: "You can visit any operation at any time. Walk the plantations, see the gem workshops, meet the microfinance teams. Your capital is never hidden behind a desk.",
   },
   {
     no: "05",
     title: "Audited Accounts.",
-    body: "Our financials are independently audited. Every investor receives the same report. Numbers are exact.",
+    body: "Our financials are independently audited. Every partner receives the same report Numbers are exact.",
   },
   {
     no: "06",
     title: "Global Quality, Local Heart.",
-    body: "We empower Sri Lankan communities, grow Sri Lankan crops, and responsibly mine Sri Lankan gems — delivering world-class returns to investors worldwide.",
+    body: "We empower Sri Lankan communities, grow Sri Lankan crops, and responsibly mine Sri Lankan gems — delivering worldclass results to partners worldwide.",
   },
 ];
 

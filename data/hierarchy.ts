@@ -131,6 +131,7 @@ export const orgHierarchy: OrgLevel[] = [
       { name: "Balasundram Chandreswaran", role: "Regeonal Manager" , region: "Kalmunai", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842785/RM15.jpg_fx99tf.png"},
       { name: "Tariq Bongso", role: "Regeonal Manager" , region: "Kandana", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781875828/IMG_20260619_165915_czrvjq.png"},
       { name: "C M Wijesinghe", role: "Regeonal Manager" , region: "Horana", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/v1782224381/RM_kena_qwk273.png"},
+      { name: "J M P S Jayabahu", role: "Regeonal Manager" , region: "Bingiriya", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/v1782361505/WhatsApp_Image_2026-06-25_at_09.49.41_syp2dp.jpg"},
     ],
   },
 ];

@@ -41,11 +41,11 @@ export const orgHierarchy: OrgLevel[] = [
         role: "Director / HR & Finance",
         img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781330025/maneesha_madam_director_profile_fis1p7.png",
       },
-      {
-        name: "Y. M. D. T. Yatawara",
-        role: "Director / Foreign Affairs",
-        img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781330035/yatawara_sir_director_profile_e4hvgg.png",
-      },
+      // {
+      //   name: "Y. M. D. T. Yatawara",
+      //   role: "Director / Foreign Affairs",
+      //   img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781330035/yatawara_sir_director_profile_e4hvgg.png",
+      // },
     ],
   },
   {

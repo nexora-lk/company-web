@@ -23,7 +23,7 @@ export default function DirectorsSection() {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 xs:gap-5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 xs:gap-5">
                     <article className="dir-card team-card reveal">
                         <figure className="portrait overflow-hidden">
                             <Photo
@@ -72,30 +72,30 @@ export default function DirectorsSection() {
                         </div>
                     </article>
 
-                    <article className="dir-card team-card reveal">
-                        <figure className="portrait overflow-hidden">
-                            <Photo
-                                src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781330035/yatawara_sir_director_profile_e4hvgg.png"
-                                alt="Mr. Y. M. D. T. Yatawara"
-                                fill
-                                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                                className="w-full h-full object-cover"
-                            />
-                        </figure>
-                        <div className="p-6 xs:p-8 lg:p-10 flex flex-col flex-1">
-                            <div className="flex items-center justify-between mb-4">
-                                <span className="num text-ondark/70! text-[10px] xs:text-[11px]">Director / Foreign Affairs</span>
-                            </div>
-                            <h3 className="font-display text-[26px] xs:text-[30px] lg:text-[34px] leading-tight">
-                                Mr. Y. M. D. T. <em className="serif-em">Yatawara</em>
-                            </h3>
-                            <div className="hairline my-5 bg-white/10!"></div>
-                            <p className="text-[13px] xs:text-[13.5px] leading-[1.7] opacity-80 font-light">
-                                BSc (Sp) in Marketing Management, MBA — University of Mainz.
-                                Specialist in International Business & Entrepreneurship.
-                            </p>
-                        </div>
-                    </article>
+                    {/*<article className="dir-card team-card reveal">*/}
+                    {/*    <figure className="portrait overflow-hidden">*/}
+                    {/*        <Photo*/}
+                    {/*            src="https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781330035/yatawara_sir_director_profile_e4hvgg.png"*/}
+                    {/*            alt="Mr. Y. M. D. T. Yatawara"*/}
+                    {/*            fill*/}
+                    {/*            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"*/}
+                    {/*            className="w-full h-full object-cover"*/}
+                    {/*        />*/}
+                    {/*    </figure>*/}
+                    {/*    <div className="p-6 xs:p-8 lg:p-10 flex flex-col flex-1">*/}
+                    {/*        <div className="flex items-center justify-between mb-4">*/}
+                    {/*            <span className="num text-ondark/70! text-[10px] xs:text-[11px]">Director / Foreign Affairs</span>*/}
+                    {/*        </div>*/}
+                    {/*        <h3 className="font-display text-[26px] xs:text-[30px] lg:text-[34px] leading-tight">*/}
+                    {/*            Mr. Y. M. D. T. <em className="serif-em">Yatawara</em>*/}
+                    {/*        </h3>*/}
+                    {/*        <div className="hairline my-5 bg-white/10!"></div>*/}
+                    {/*        <p className="text-[13px] xs:text-[13.5px] leading-[1.7] opacity-80 font-light">*/}
+                    {/*            BSc (Sp) in Marketing Management, MBA — University of Mainz.*/}
+                    {/*            Specialist in International Business & Entrepreneurship.*/}
+                    {/*        </p>*/}
+                    {/*    </div>*/}
+                    {/*</article>*/}
                 </div>
             </div>
         </section>

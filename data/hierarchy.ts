@@ -48,12 +48,13 @@ export const orgHierarchy: OrgLevel[] = [
       // },
     ],
   },
-  {
-    id: "General Manager",
-    label: "Senior Management",
-    variant: "named",
-    members: [{ name: "M. Clement Fernando", role: "General Manager", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842807/GM_o4pa4x.png" }],
-  },
+  // {
+  //   id: "General Manager",
+  //   label: "Senior Management",
+  //   variant: "named",
+  //   members: [{ name: "M. Clement Fernando", role: "General Manager", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842807/GM_o4pa4x.png" }],
+  // },
+
   {
     id: "Asst General Manager",
     label: "Senior Management",

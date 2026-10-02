@@ -65,7 +65,7 @@ export const orgHierarchy: OrgLevel[] = [
     id: "Gemmologist",
     label: "Senior Management",
     variant: "named",
-    members: [{ name: "Saman Andra Hannadi", role: "Gemmologist", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842782/Gemlogist.jpg_jqsot1.png" }],
+    members: [{ name: "Saman Andra Hannadi", role: "Gemmologist & Head Of Real East", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842782/Gemlogist.jpg_jqsot1.png" }],
   },
   {
     id: "Provincial Head",

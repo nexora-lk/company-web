@@ -108,7 +108,7 @@ export const orgHierarchy: OrgLevel[] = [
   },
   {
     id: "Regional Manager",
-    label: "Regional Manager",
+    label: "Project Regional Manager",
     variant: "team",
     members: [
       { name: "D D  S A Gunasekara", role: "Regional Manager" , region: "Kurunegala", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842803/RM4.jpg_yi5dwm.png"},

@@ -86,7 +86,7 @@ export const orgHierarchy: OrgLevel[] = [
   },
   {
     id: "Deputy Provincial Head",
-    label: "Deputy Provincial Head",
+    label: "Project Provincial Head",
     variant: "named",
     members: [
       { name: "B V A D Chandana", role: "Deputy Provincial Head" , region: "North Western Province", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/q_auto/f_auto/v1781842790/DPH6.jpg_w9x9sv.png"},

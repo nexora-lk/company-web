@@ -26,7 +26,7 @@ const models: Model[] = [
     {
         num: "01",
         tag: "Steady Income",
-        rate: "40",
+        rate: "30",
         title: "Monthly Returns",
         description:
             "Need regular income? Receive 40% of your solutions split across 12 monthly payouts, deposited straight to your bank — predictable cash flow, no waiting.",
@@ -41,7 +41,7 @@ const models: Model[] = [
     {
         num: "02",
         tag: "Maximum Growth",
-        rate: "60",
+        rate: "40",
         title: "Annual Returns",
         description:
             "Want maximum compounding? Your capital works the full year and pays your entire 60% return at the 12-month mark — one larger payout, built to grow your wealth.",

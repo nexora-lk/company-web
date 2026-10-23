@@ -32,7 +32,7 @@ const models: Model[] = [
             "Need regular income? Receive 40% of your solutions split across 12 monthly payouts, deposited straight to your bank — predictable cash flow, no waiting.",
         features: [
             { icon: CalendarClock, label: "Payout", value: "Every month" },
-            { icon: Wallet, label: "Annual return", value: "40% / year" },
+            { icon: Wallet, label: "Annual return", value: "30% / year" },
             { icon: Banknote, label: "Min. ticket", value: "LKR 200,000" },
             { icon: RefreshCw, label: "After 1 year", value: "Withdraw or reinvest" },
         ],
@@ -47,7 +47,7 @@ const models: Model[] = [
             "Want maximum compounding? Your capital works the full year and pays your entire 60% return at the 12-month mark — one larger payout, built to grow your wealth.",
         features: [
             { icon: CalendarClock, label: "Payout", value: "Once at maturity" },
-            { icon: TrendingUp, label: "Annual return", value: "60% / year" },
+            { icon: TrendingUp, label: "Annual return", value: "40% / year" },
             { icon: Banknote, label: "Min. ticket", value: "LKR 200,000" },
             { icon: RefreshCw, label: "After 1 year", value: "Withdraw or compound" },
         ],

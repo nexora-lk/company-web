@@ -32,7 +32,7 @@ export const revalidate = 86400; // Never revalidate — rebuild to update
 export const metadata: Metadata = {
     title: "Prestige Glamour — Sri Lanka's Trusted Working Capital Company | Real Returns Since 2013",
     description:
-        "Prestige Glamour Working Capital Solutions — Sri Lanka's most transparent working capital solutions provider. Invest in plantation, gems, real estate, microfinance and FMCG. 40-60% annual returns. 3,200+ investors. Since 2013.",
+        "Prestige Glamour Working Capital Solutions — Sri Lanka's most transparent working capital solutions provider. Invest in plantation, gems, real estate, microfinance and FMCG. 30-40% annual returns. 3,200+ investors. Since 2013.",
     keywords: [
         'Sri Lanka conglomerate',
         'plantation',

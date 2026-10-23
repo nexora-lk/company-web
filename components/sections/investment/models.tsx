@@ -29,7 +29,7 @@ const models: Model[] = [
         rate: "30",
         title: "Monthly Returns",
         description:
-            "Need regular income? Receive 40% of your solutions split across 12 monthly payouts, deposited straight to your bank — predictable cash flow, no waiting.",
+            "Need regular income? Receive 30% of your solutions split across 12 monthly payouts, deposited straight to your bank — predictable cash flow, no waiting.",
         features: [
             { icon: CalendarClock, label: "Payout", value: "Every month" },
             { icon: Wallet, label: "Annual return", value: "30% / year" },
@@ -44,7 +44,7 @@ const models: Model[] = [
         rate: "40",
         title: "Annual Returns",
         description:
-            "Want maximum compounding? Your capital works the full year and pays your entire 60% return at the 12-month mark — one larger payout, built to grow your wealth.",
+            "Want maximum compounding? Your capital works the full year and pays your entire 40% return at the 12-month mark — one larger payout, built to grow your wealth.",
         features: [
             { icon: CalendarClock, label: "Payout", value: "Once at maturity" },
             { icon: TrendingUp, label: "Annual return", value: "40% / year" },

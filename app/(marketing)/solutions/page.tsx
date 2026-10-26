@@ -84,7 +84,7 @@ export default function InvestmentPage() {
                     { label: "Target Returns", value: "60", em: "%", note: "Annually" },
                     { label: "Entry level min", value: "2", em: "", note: "Lakhs LKR" },
                     { label: "Compounding", value: "14", em: ".", note: "Founded 2013" },
-                    { label: "Independent audit", value: "KPMG", em: " ", note: "Quarterly disclosure SL" }
+                    { label: "Independent audit", value: "KPMG", em: " ", note: "Quarterly disclosure SL" } 
                 ]}
             />
             <WhySection />

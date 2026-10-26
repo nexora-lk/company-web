@@ -4,7 +4,7 @@ const VALUES = [
     {
         num: '01',
         title: 'Real Capital, Real Impact',
-        desc: "You're not pushing papers. You're managing capital that generates 60% annual returns for 3,200+ investors. Plantation operations, real estate development, gems exports, microfinance — every role impacts real business outcomes.",
+        desc: "You're not pushing papers. You're managing capital that generates 40% annual returns for 3,200+ investors. Plantation operations, real estate development, gems exports, microfinance — every role impacts real business outcomes.",
     },
     {
         num: '02',

@@ -81,7 +81,7 @@ export default function InvestmentPage() {
                     "Underwritten by Prestige Glamour Working Capital Solutions, audited by KPMG to ensure transparency and security."
                 ]}
                 stats={[
-                    { label: "Target Returns", value: "60", em: "%", note: "Annually" },
+                    { label: "Target Returns", value: "40", em: "%", note: "Annually" },
                     { label: "Entry level min", value: "2", em: "", note: "Lakhs LKR" },
                     { label: "Compounding", value: "14", em: ".", note: "Founded 2013" },
                     { label: "Independent audit", value: "KPMG", em: " ", note: "Quarterly disclosure SL" } 

@@ -1,6 +1,6 @@
 import ContactSection from '@/components/sections/investment/contact';
 import ModelsSection from '@/components/sections/investment/models';
-import CalculatorSection from '@/components/sections/investment/calculator';
+// import CalculatorSection from '@/components/sections/investment/calculator';
 import WhySection from '@/components/sections/investment/why';
 import ProcessSection from '@/components/sections/investment/process';
 import type { Metadata } from 'next';
@@ -89,7 +89,7 @@ export default function InvestmentPage() {
             />
             <WhySection />
             <ModelsSection />
-            <CalculatorSection />
+            {/* <CalculatorSection /> */}
             <ProcessSection />
             <ContactSection />
         </>

@@ -31,7 +31,7 @@ export default function ContactSection() {
                                     </div>
                                     <div className="flex items-start sm:items-center gap-3 sm:gap-4 lg:gap-5 reveal">
                                         <span className="num text-ondark/65! w-12 sm:w-14 lg:w-16 shrink-0 text-xs sm:text-sm">Email</span>
-                                        <span className="font-medium text-ondark/95 break-all sm:break-normal">info@prestigeglamour.lk</span>
+                                        <span className="font-medium text-ondark/95 break-all sm:break-normal">info@prestigeglamourgroupofcompany.com</span>
                                     </div>
                                 </div>
                             </div>

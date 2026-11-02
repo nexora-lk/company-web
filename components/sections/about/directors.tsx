@@ -16,7 +16,7 @@ export default function DirectorsSection() {
                         Board of Directors
                     </h2>
                     <p className="mt-4 xs:mt-6 text-mute text-[14px] xs:text-[15px] leading-[1.7] max-w-full sm:max-w-[480px] mx-auto font-light">
-                        Three leaders who personally oversee capital deployment across all divisions.
+                        Two leaders who personally oversee capital deployment across all divisions.
                         Continuous audits. Full financial transparency. Direct partner access.
                         They don&#39;t hide behind corporate structures—they sign every statement,
                         approve every working capital, and stake their reputations on consistent returns.

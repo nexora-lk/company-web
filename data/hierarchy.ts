@@ -60,7 +60,7 @@ export const orgHierarchy: OrgLevel[] = [
     variant: "named",
     members: [
       { name: "Saman Andra Hannadi",
-        role: "Gemologist & Head Of Real Estate",
+        role: "Gemologist ",
         img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/v1781842782/Gemlogist.jpg_jqsot1.png"
       },
       { name: "F.H.S.C. Silva",

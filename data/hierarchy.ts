@@ -63,18 +63,18 @@ export const orgHierarchy: OrgLevel[] = [
         role: "Gemologist ",
         img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/v1781842782/Gemlogist.jpg_jqsot1.png"
       },
-      { name: "F.H.S.C. Silva",
-        role: "Head Of Cabana Project",
-        img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/v1793021130/F_H_S_C_Silva_mpzcy1.jpg"
-      },
+      // { name: "F.H.S.C. Silva",
+      //   role: "Head Of Cabana Project",
+      //   img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/v1793021130/F_H_S_C_Silva_mpzcy1.jpg"
+      // },
       { name: "K.P. Sampath Kumara",
         role: "Head Of Micro Finance",
         img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/v1793021130/Sampath_Kumara_timptz.jpg"
       },
-      { name: "Rumy Hussain",
-        role: "Head Of Sharia Project",
-        img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/v1793021132/Rumy_Hussain_ixdtp6.jpg"
-      },
+      // { name: "Rumy Hussain",
+      //   role: "Head Of Sharia Project",
+      //   img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/v1793021132/Rumy_Hussain_ixdtp6.jpg"
+      // },
     ],
   },
   {
@@ -98,6 +98,29 @@ export const orgHierarchy: OrgLevel[] = [
         role: "Project Asst. General Manager",
         img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/v1793021582/K_Mathikumar_eibtoo.jpg"
       }
+    ],
+  },
+  {
+    id: " Project Manager",
+    label: "Project  Managers",
+    variant: "named",
+    members: [
+      // { name: "Saman Andra Hannadi",
+      //   role: "Gemologist ",
+      //   img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/v1781842782/Gemlogist.jpg_jqsot1.png"
+      // },
+      { name: "F.H.S.C. Silva",
+        role: "Head Of Cabana Project",
+        img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/v1793021130/F_H_S_C_Silva_mpzcy1.jpg"
+      },
+      // { name: "K.P. Sampath Kumara",
+      //   role: "Head Of Micro Finance",
+      //   img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/v1793021130/Sampath_Kumara_timptz.jpg"
+      // },
+      { name: "Rumy Hussain",
+        role: "Head Of Sharia Project",
+        img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/v1793021132/Rumy_Hussain_ixdtp6.jpg"
+      },
     ],
   },
   {

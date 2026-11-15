@@ -82,10 +82,10 @@ export const orgHierarchy: OrgLevel[] = [
     label: "Project Assistant General Manager",
     variant: "named",
     members: [
-      { name: "M Shahjhan Samsudeen",
-        role: "Project Asst. General Manager",
-        img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/v1793021578/M_Shahjhan_Samsudeen_jpuacz.png"
-      },
+      // { name: "M Shahjhan Samsudeen",
+      //   role: "Project Asst. General Manager",
+      //   img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/v1793021578/M_Shahjhan_Samsudeen_jpuacz.png"
+      // },
       { name: "D S Solamon",
         role: "Project Asst. General Manager",
         img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/v1793021584/D_S_Solamon_jjmtbp.jpg"

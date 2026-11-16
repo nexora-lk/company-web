@@ -109,10 +109,10 @@ export const orgHierarchy: OrgLevel[] = [
       //   role: "Gemologist ",
       //   img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/v1781842782/Gemlogist.jpg_jqsot1.png"
       // },
-      { name: "F.H.S.C. Silva",
-        role: "Head Of Cabana Project",
-        img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/v1793021130/F_H_S_C_Silva_mpzcy1.jpg"
-      },
+      // { name: "F.H.S.C. Silva",
+      //   role: "Head Of Cabana Project",
+      //   img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/v1793021130/F_H_S_C_Silva_mpzcy1.jpg"
+      // },
       // { name: "K.P. Sampath Kumara",
       //   role: "Head Of Micro Finance",
       //   img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/v1793021130/Sampath_Kumara_timptz.jpg"
@@ -130,7 +130,7 @@ export const orgHierarchy: OrgLevel[] = [
     members: [
       { name: "Thurai Athithan", role: "Project Provincial Head" , region: "", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/v1793022522/athitan_y2b53u.jpg"},
       { name: "MR.Balenthiran Vithushan", role: "Project Provincial Head", region: "", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/v1781842789/DPH3.jpg_uxjo9c.png" },
-      { name: "M M Cassim", role: "Project Provincial Head", region: "", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/v1793022681/cassim_udvehy.jpg" },
+      // { name: "M M Cassim", role: "Project Provincial Head", region: "", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/v1793022681/cassim_udvehy.jpg" },
       { name: "B V A D Chandana", role: "Project Provincial Head" , region: "", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/v1781842790/DPH6.jpg_w9x9sv.png"},
       { name: "R M S A K Kumara", role: "Project Provincial Head" , region: "", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/v1781842787/DPH5.jpg_xscnb6.png"},
       { name: "J M P S Jayabahu", role: "Project Provincial Head" , region: "", img: "https://res.cloudinary.com/ddxvnb0nk/image/upload/v1793022896/pubudu_wmgf7k.jpg"},
